@@ -113,6 +113,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     func repetitionCountStepperValueChanged(sender: AnyObject) {
         let cellIndexPath = workoutEditorTableView.indexPathForCell(((sender as! SnappingStepper).superview!) as! UITableViewCell)
         currentWorkout?.movesList![(cellIndexPath?.row)!].quantity = Int((sender as! SnappingStepper).value)
+        ((sender as! SnappingStepper).superview! as! WorkoutEditorTableViewCell).repetitionQuantityLabel.text = String(currentWorkout?.movesList![(cellIndexPath?.row)!].quantity)
     }
     
     func repetitionTypeSwitchValueChanged(sender: AnyObject) {

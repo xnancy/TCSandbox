@@ -10,6 +10,8 @@ import UIKit
 
 class WorkoutEditorTableViewCell: UITableViewCell {
 
+    /* ---------- OUTLETS ---------- */
+    @IBOutlet weak var repetitionQuantityLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
