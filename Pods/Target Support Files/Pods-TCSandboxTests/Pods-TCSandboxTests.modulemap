@@ -1,0 +1,6 @@
+framework module Pods_TCSandboxTests {
+  umbrella header "Pods-TCSandboxTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

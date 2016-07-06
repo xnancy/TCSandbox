@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "28AA355B1F1876E1C658A726FCCA14905DA691F5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "28AA355B1F1876E1C658A726FCCA14905DA691F5" : 0,
+    "14893C9031ED71962219A52CC25DF20CE9DE748C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AFA07F5C-89F7-43CB-BE12-5CDDC33AA206",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "28AA355B1F1876E1C658A726FCCA14905DA691F5" : "TCSandbox\/",
+    "14893C9031ED71962219A52CC25DF20CE9DE748C" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TCSandbox",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TCSandbox.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xnancy\/TCSandbox.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "14893C9031ED71962219A52CC25DF20CE9DE748C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xnancy\/TCSandbox.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "28AA355B1F1876E1C658A726FCCA14905DA691F5"
+    }
+  ]
+}

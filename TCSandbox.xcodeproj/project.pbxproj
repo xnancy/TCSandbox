@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309A1D2DAAC200F6B59F /* Workout.swift */; };
+		9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309C1D2DAB1A00F6B59F /* Move.swift */; };
 		925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E581D2D79C1000F44F7 /* AppDelegate.swift */; };
 		925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E5A1D2D79C1000F44F7 /* ViewController.swift */; };
 		925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925D8E5C1D2D79C1000F44F7 /* Main.storyboard */; };
@@ -14,6 +16,11 @@
 		925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925D8E611D2D79C1000F44F7 /* LaunchScreen.storyboard */; };
 		925D8E6E1D2D79C1000F44F7 /* TCSandboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E6D1D2D79C1000F44F7 /* TCSandboxTests.swift */; };
 		925D8E791D2D79C1000F44F7 /* TCSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E781D2D79C1000F44F7 /* TCSandboxUITests.swift */; };
+		925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */; };
+		925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */; };
+		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
+		D600F4FB8CA321C8E23A66B0 /* Pods_TCSandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */; };
+		E296B86C9D9CCC0E9BA3A7FF /* Pods_TCSandboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B0507BB17BC28B44DE92A8E /* Pods-TCSandboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0E1EBCA27C2AB4BCA7406669 /* Pods-TCSandbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandbox.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandbox/Pods-TCSandbox.release.xcconfig"; sourceTree = "<group>"; };
+		486A2DEC270724D45C6424D7 /* Pods-TCSandbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandbox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandbox/Pods-TCSandbox.debug.xcconfig"; sourceTree = "<group>"; };
+		4E6527A0FFB4200130D4B799 /* Pods-TCSandboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests.release.xcconfig"; sourceTree = "<group>"; };
+		679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9214309A1D2DAAC200F6B59F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		9214309C1D2DAB1A00F6B59F /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		925D8E551D2D79C1000F44F7 /* TCSandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCSandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D8E581D2D79C1000F44F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925D8E5A1D2D79C1000F44F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +63,10 @@
 		925D8E741D2D79C1000F44F7 /* TCSandboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCSandboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D8E781D2D79C1000F44F7 /* TCSandboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSandboxUITests.swift; sourceTree = "<group>"; };
 		925D8E7A1D2D79C1000F44F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorViewController.swift; sourceTree = "<group>"; };
+		925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorTableViewCell.swift; sourceTree = "<group>"; };
+		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D600F4FB8CA321C8E23A66B0 /* Pods_TCSandbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E296B86C9D9CCC0E9BA3A7FF /* Pods_TCSandboxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +90,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AC8AF55EE578986F4F763FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */,
+				F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */,
+				679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		925D8E4C1D2D79C1000F44F7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +114,8 @@
 				925D8E6C1D2D79C1000F44F7 /* TCSandboxTests */,
 				925D8E771D2D79C1000F44F7 /* TCSandboxUITests */,
 				925D8E561D2D79C1000F44F7 /* Products */,
+				BB48B6A1CD1C408D9EFC48D2 /* Pods */,
+				0AC8AF55EE578986F4F763FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +132,9 @@
 		925D8E571D2D79C1000F44F7 /* TCSandbox */ = {
 			isa = PBXGroup;
 			children = (
+				925D8E8B1D2DA8F0000F44F7 /* Data Objects */,
+				925D8E8A1D2DA8EC000F44F7 /* Views */,
+				925D8E881D2DA8E0000F44F7 /* View Controllers */,
 				925D8E581D2D79C1000F44F7 /* AppDelegate.swift */,
 				925D8E5A1D2D79C1000F44F7 /* ViewController.swift */,
 				925D8E5C1D2D79C1000F44F7 /* Main.storyboard */,
@@ -125,6 +163,44 @@
 			path = TCSandboxUITests;
 			sourceTree = "<group>";
 		};
+		925D8E881D2DA8E0000F44F7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		925D8E8A1D2DA8EC000F44F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		925D8E8B1D2DA8F0000F44F7 /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9214309A1D2DAAC200F6B59F /* Workout.swift */,
+				9214309C1D2DAB1A00F6B59F /* Move.swift */,
+			);
+			name = "Data Objects";
+			sourceTree = "<group>";
+		};
+		BB48B6A1CD1C408D9EFC48D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				486A2DEC270724D45C6424D7 /* Pods-TCSandbox.debug.xcconfig */,
+				0E1EBCA27C2AB4BCA7406669 /* Pods-TCSandbox.release.xcconfig */,
+				0B0507BB17BC28B44DE92A8E /* Pods-TCSandboxTests.debug.xcconfig */,
+				4E6527A0FFB4200130D4B799 /* Pods-TCSandboxTests.release.xcconfig */,
+				91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */,
+				8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 925D8E7D1D2D79C1000F44F7 /* Build configuration list for PBXNativeTarget "TCSandbox" */;
 			buildPhases = (
+				E1929204914A27733F49DDA3 /* [CP] Check Pods Manifest.lock */,
 				925D8E511D2D79C1000F44F7 /* Sources */,
 				925D8E521D2D79C1000F44F7 /* Frameworks */,
 				925D8E531D2D79C1000F44F7 /* Resources */,
+				926B165A5DEE44049DF390ED /* [CP] Embed Pods Frameworks */,
+				22428F61DABC2B0B3320E8FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 925D8E801D2D79C1000F44F7 /* Build configuration list for PBXNativeTarget "TCSandboxTests" */;
 			buildPhases = (
+				57E7F05F294FEFBFE304B3DE /* [CP] Check Pods Manifest.lock */,
 				925D8E651D2D79C1000F44F7 /* Sources */,
 				925D8E661D2D79C1000F44F7 /* Frameworks */,
 				925D8E671D2D79C1000F44F7 /* Resources */,
+				B8F0F05E57185AC12579FCD1 /* [CP] Embed Pods Frameworks */,
+				B8A40EE0AC8685D809863E88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 925D8E831D2D79C1000F44F7 /* Build configuration list for PBXNativeTarget "TCSandboxUITests" */;
 			buildPhases = (
+				080C8C7CBE7EFDE89D54FA8D /* [CP] Check Pods Manifest.lock */,
 				925D8E701D2D79C1000F44F7 /* Sources */,
 				925D8E711D2D79C1000F44F7 /* Frameworks */,
 				925D8E721D2D79C1000F44F7 /* Resources */,
+				7C47120855E7B2EC017CB48E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +335,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		080C8C7CBE7EFDE89D54FA8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22428F61DABC2B0B3320E8FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCSandbox/Pods-TCSandbox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57E7F05F294FEFBFE304B3DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C47120855E7B2EC017CB48E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		926B165A5DEE44049DF390ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCSandbox/Pods-TCSandbox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8A40EE0AC8685D809863E88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8F0F05E57185AC12579FCD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1929204914A27733F49DDA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		925D8E511D2D79C1000F44F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */,
 				925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */,
+				925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */,
+				9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */,
+				9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +608,7 @@
 		};
 		925D8E7E1D2D79C1000F44F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 486A2DEC270724D45C6424D7 /* Pods-TCSandbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCSandbox/Info.plist;
@@ -408,6 +620,7 @@
 		};
 		925D8E7F1D2D79C1000F44F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E1EBCA27C2AB4BCA7406669 /* Pods-TCSandbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCSandbox/Info.plist;
@@ -419,6 +632,7 @@
 		};
 		925D8E811D2D79C1000F44F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B0507BB17BC28B44DE92A8E /* Pods-TCSandboxTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TCSandboxTests/Info.plist;
@@ -431,6 +645,7 @@
 		};
 		925D8E821D2D79C1000F44F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E6527A0FFB4200130D4B799 /* Pods-TCSandboxTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TCSandboxTests/Info.plist;
@@ -443,6 +658,7 @@
 		};
 		925D8E841D2D79C1000F44F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TCSandboxUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +670,7 @@
 		};
 		925D8E851D2D79C1000F44F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TCSandboxUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +699,7 @@
 				925D8E7F1D2D79C1000F44F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		925D8E801D2D79C1000F44F7 /* Build configuration list for PBXNativeTarget "TCSandboxTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +708,7 @@
 				925D8E821D2D79C1000F44F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		925D8E831D2D79C1000F44F7 /* Build configuration list for PBXNativeTarget "TCSandboxUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +717,7 @@
 				925D8E851D2D79C1000F44F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

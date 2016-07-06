@@ -1,0 +1,18 @@
+PODS:
+  - DGRunkeeperSwitch (1.1.1)
+  - DynamicColor (2.4.0)
+  - SnappingStepper (2.3.0):
+    - DynamicColor (~> 2.4)
+
+DEPENDENCIES:
+  - DGRunkeeperSwitch (~> 1.1)
+  - SnappingStepper (~> 2.3.0)
+
+SPEC CHECKSUMS:
+  DGRunkeeperSwitch: da12f199532a99958a1e87ec0a5af61efdba11ec
+  DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
+  SnappingStepper: 8472746edf41bc848e7b72db2b4fd722798f13f5
+
+PODFILE CHECKSUM: 22568148534ce17da92833afbbdd275c41019021
+
+COCOAPODS: 1.0.1
