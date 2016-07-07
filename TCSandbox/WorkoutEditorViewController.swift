@@ -45,7 +45,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = workoutEditorTableView.dequeueReusableCellWithIdentifier("workoutEditorTableCell") as! WorkoutEditorTableViewCell
         
         // Add gif to imageview
-        //let gif = UIImage(gifName:git  "Gifs/steps.gif")
+        let gif = UIImage(gifName: "Gifs/steps.gif")
         //cell.gifImageView.setGifImage(gif, manager: gifmanager, loopCount: 20)
         // Ad stepper and switch to imageview
         UIHomeElementMaker.workoutEditorTableView = workoutEditorTableView
