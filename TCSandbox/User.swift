@@ -13,5 +13,5 @@ class User: AnyObject {
     var profileImageURL: NSURL?
     var email: String?
     var friends: [User]?
-    var currentChallenges: [Challenges]?
+    var currentChallenges: [Challenge]?
 }

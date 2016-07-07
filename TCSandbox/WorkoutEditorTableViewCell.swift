@@ -12,6 +12,7 @@ class WorkoutEditorTableViewCell: UITableViewCell {
 
     /* ---------- OUTLETS ---------- */
     @IBOutlet weak var repetitionQuantityLabel: UILabel!
+    @IBOutlet weak var gifImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
