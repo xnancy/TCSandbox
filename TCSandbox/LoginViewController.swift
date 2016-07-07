@@ -18,7 +18,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if FBSDKAccessToken.currentAccessToken() == nil
         {
-            //NOBODY IS LOGGED IN
+            User.currentUser = nil
         }
         
         else
@@ -69,7 +69,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         
         //USER LOGGED OUT
-        
+        User.currentUser = nil
     }
 
 }
