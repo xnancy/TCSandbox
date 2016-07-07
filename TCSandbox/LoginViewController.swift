@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         else
         {
-            //SOMEBODY IS LOGGED IN
+            User.updateCurrentUser()
         }
         
         
@@ -54,12 +54,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         {
             //LOGIN WAS SUCCESSFUL
             
-            let req = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: FBSDKAccessToken.currentAccessToken().tokenString, version: nil, HTTPMethod: "GET")
-            req.startWithCompletionHandler({ (connection, result, error : NSError!) -> Void in
-                    print("result \(result)")
-            })
             
             performSegueWithIdentifier("loginSegue", sender: self)
+            User.updateCurrentUser()
         }
         
         else
@@ -74,6 +71,5 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         //USER LOGGED OUT
         
     }
-    
 
 }

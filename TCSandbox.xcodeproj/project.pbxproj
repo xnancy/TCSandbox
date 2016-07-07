@@ -23,7 +23,6 @@
 		925D8E791D2D79C1000F44F7 /* TCSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E781D2D79C1000F44F7 /* TCSandboxUITests.swift */; };
 		925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */; };
 		925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */; };
-		929A02A31D2ECA1500FC1E96 /* steps.gif in Resources */ = {isa = PBXBuildFile; fileRef = 929A02A21D2ECA1500FC1E96 /* steps.gif */; };
 		929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A41D2ECA8A00FC1E96 /* User.swift */; };
 		929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A61D2ECAD800FC1E96 /* Challenge.swift */; };
 		929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */; };
@@ -80,7 +79,6 @@
 		925D8E7A1D2D79C1000F44F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorViewController.swift; sourceTree = "<group>"; };
 		925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorTableViewCell.swift; sourceTree = "<group>"; };
-		929A02A21D2ECA1500FC1E96 /* steps.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = steps.gif; path = ../../../../Downloads/steps.gif; sourceTree = "<group>"; };
 		929A02A41D2ECA8A00FC1E96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		929A02A61D2ECAD800FC1E96 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipLibrary.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				929A02AA1D2ECC8000FC1E96 /* Helper Classes */,
-				929A029F1D2EC99600FC1E96 /* Gifs */,
 				9214309E1D2DCAF000F6B59F /* API Clients */,
 				925D8E8B1D2DA8F0000F44F7 /* Data Objects */,
 				925D8E8A1D2DA8EC000F44F7 /* Views */,
@@ -227,14 +224,6 @@
 				929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */,
 			);
 			name = "Data Objects";
-			sourceTree = "<group>";
-		};
-		929A029F1D2EC99600FC1E96 /* Gifs */ = {
-			isa = PBXGroup;
-			children = (
-				929A02A21D2ECA1500FC1E96 /* steps.gif */,
-			);
-			name = Gifs;
 			sourceTree = "<group>";
 		};
 		929A02AA1D2ECC8000FC1E96 /* Helper Classes */ = {
@@ -370,7 +359,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929A02A31D2ECA1500FC1E96 /* steps.gif in Resources */,
 				925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
 				925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */,

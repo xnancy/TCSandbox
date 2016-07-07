@@ -34,6 +34,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>SwiftyGif.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -52,12 +57,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>46ADA8D76115D95148D32AB1B67A27FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>717BFF836502C5A1191DFEE081B3440D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>86BA6CC9DF4AE9FB9A599FCC446A0B89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9C5EEF61FC1E11B3F0FDD36F00F8A300</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B15C8C6D4CB3140CB7FEFEC4FA0D74E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B1BD2CBB5D0170DBF1EFAC2CC3F364CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD9B358B431A1451EBCC4F4F29FE93BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
