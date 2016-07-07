@@ -8,11 +8,13 @@ target 'TCSandbox' do
   # Pods for TCSandbox
 pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
+pod 'SwiftyGif'
   target 'TCSandboxTests' do
     inherit! :search_paths
     # Pods for testing
 pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
+pod 'SwiftyGif'
   end
 
   target 'TCSandboxUITests' do
@@ -20,6 +22,7 @@ pod "DGRunkeeperSwitch", "~> 1.1"
     # Pods for testing
 pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
+pod 'SwiftyGif'
   end
 
 end

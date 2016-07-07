@@ -16,7 +16,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     {
         super.viewDidLoad()
         
-        
         if FBSDKAccessToken.currentAccessToken() == nil
         {
             //NOBODY IS LOGGED IN

@@ -3,16 +3,19 @@ PODS:
   - DynamicColor (2.4.0)
   - SnappingStepper (2.3.0):
     - DynamicColor (~> 2.4)
+  - SwiftyGif (1.2.2)
 
 DEPENDENCIES:
   - DGRunkeeperSwitch (~> 1.1)
   - SnappingStepper (~> 2.3.0)
+  - SwiftyGif
 
 SPEC CHECKSUMS:
   DGRunkeeperSwitch: da12f199532a99958a1e87ec0a5af61efdba11ec
   DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
   SnappingStepper: 8472746edf41bc848e7b72db2b4fd722798f13f5
+  SwiftyGif: 5b93bed65ed6df90796dff11fea231d7119da460
 
-PODFILE CHECKSUM: 22568148534ce17da92833afbbdd275c41019021
+PODFILE CHECKSUM: a352c2e2731c311f27e68507e3375557fc731548
 
 COCOAPODS: 1.0.1

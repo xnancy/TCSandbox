@@ -7,207 +7,226 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06720CD7705F71178390FE16A75D419A /* DGRunkeeperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20D5A68F578A063749ABC809EA7C2FA /* DGRunkeeperSwitch.swift */; };
+		038ED4E9C1F74F24A7EDBA0363D5ABB6 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42AA593FFF278A89259E7DF712CC70 /* UIImage+SwiftyGif.swift */; };
+		04A9D5998698BE50382C965D28809495 /* SnappingStepper+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4629D96C9EA5B041CC350B3C4C80A8 /* SnappingStepper+Internal.swift */; };
+		06720CD7705F71178390FE16A75D419A /* DGRunkeeperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5546E080F499074AD5DA61F7169CB9 /* DGRunkeeperSwitch.swift */; };
+		0796037A66F519F5C8C957C181AC9632 /* CustomShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C953ECEFE1E36FA10320E4757C4D754 /* CustomShapeLayer.swift */; };
 		1516896C6C14A90DBF17755D2C5CE345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
-		15E90435DA860BA1EDDC632B4A060A19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */; };
-		16CF668269BFA335310AF9F33D84E117 /* SnappingStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C122EFF85378518BCB1037A11445E3 /* SnappingStepper.swift */; };
-		18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F5C5FA861F550338E3F0AC99F0EA991 /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A171D5F4F2A3C81587F07B9570AEB34 /* SnappingStepper+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCC31ADFB0A57B8F5161DE7A5BC8A79 /* SnappingStepper+Internal.swift */; };
-		291AC12F70BF65B3688FCB2262727CEF /* UIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F719405A73BD9D77E0B6031D0330B1C /* UIBuilder.swift */; };
-		2FE4200C9DA8F4CE0120E63C255AE977 /* Pods-TCSandbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01A2B0A84BCF8A81DBD02F6F8F1DA5 /* Pods-TCSandbox-dummy.m */; };
-		3A31C7435E2BBE530606572B4594A8D7 /* AutoRepeatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7E1AEB6383FF405865B4544AE750D /* AutoRepeatHelper.swift */; };
-		53B108CD7723FD5E0E60DA81A473F7B6 /* UITouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5EAA855551A22E3F8D1A249DBA2A3 /* UITouchGestureRecognizer.swift */; };
-		560643B27617038512AA64E271DD78C3 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EAA2CEAA204F2FA7EBC181A50C9CA /* HSL.swift */; };
-		5D8CC81D38FFCFD3A5745E8C2F86F40B /* DGRunkeeperSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE45E370D12D34D928F33C6B1A0DA3C /* DGRunkeeperSwitch-dummy.m */; };
+		162D5CD99A811710E381968CF3250E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
+		18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B01CF2A21774AF4716AE28148F48C817 /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B518EA988AE51B418EC37A8D3104C49 /* SnappingStepperBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629C96829447B15EB842D9F30350D182 /* SnappingStepperBehavior.swift */; };
+		1D1AEA8AE1E78CDE50EFF598EE4A82F8 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EB638C59FD253015531EA2CCB9451 /* SwiftyGifManager.swift */; };
+		30D800E4F509DC9053B5D0A714F0E5FB /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840EA7711A20397BAEAA8BAFB996483 /* UIImageView+SwiftyGif.swift */; };
+		3FD7E94D9B6B3CB2509AD7C4D700577D /* Pods-TCSandboxUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 516243C17D8CAFC92D8EFFC17ACC0E08 /* Pods-TCSandboxUITests-dummy.m */; };
+		50D4C38178D3144288FFAD06DB4D46D9 /* Pods-TCSandbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE11CC6B46966F7A64831671C116CDDF /* Pods-TCSandbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5362F95BF7DB725BD9E28723917D8709 /* Pods-TCSandboxUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18143586CEF35B3119E44DDED5AD19F6 /* Pods-TCSandboxUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		560643B27617038512AA64E271DD78C3 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59EF78004307EE8C509DD6265A602D /* HSL.swift */; };
+		5D8CC81D38FFCFD3A5745E8C2F86F40B /* DGRunkeeperSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0936ACF8D7A29D0F7E419E0D93C592 /* DGRunkeeperSwitch-dummy.m */; };
 		5E8BB815DD73E3E2CF54643B2A191789 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */; };
-		62E29425E2735EDFB2FEB127813F4D33 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D81687DAE231AC176BE3D78BA0FEC6 /* DynamicColor.swift */; };
-		77529F0291AA126B9BB0A583158ABABE /* SnappingStepperBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C5C794951811242A93C1F96EB25B62 /* SnappingStepperBehavior.swift */; };
-		8431F9E6C18614D7057936B71504F5E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
+		613A5FE3751692D7C084A0A904E8F949 /* SnappingStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D962EB4C4D90C7FE645A1434D353729 /* SnappingStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62E29425E2735EDFB2FEB127813F4D33 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE164E6BC5577566BC0215EC8925BB1 /* DynamicColor.swift */; };
+		6354C9869F822DDDFED61FE26461286B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
+		6640B91B2D48BE49ABEAF8A8552523B1 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E9EFFFF47EDCC7AC0A46D7652AEB0C /* StyledLabel.swift */; };
+		6968C586D88DFDF5E886092CEF9B069C /* DynamicColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DDC93F13ED79859A8F8A4E307B73DC /* DynamicColor.framework */; };
+		6DCD1290D30BD8732000257868224767 /* ShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE78A670471514FB2DB37BB6DD9D04B /* ShapeStyle.swift */; };
+		70D539D95464081704AB1908CA2D76B4 /* SnappingStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F77356DD2F0DB79657CA926ACB4B3ED5 /* SnappingStepper-dummy.m */; };
+		7A6E1EAE00D9A02AF18C7027E944CB7B /* SwiftyGif-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E0C4BDC22A9FF85CF6F7632D863FAD /* SwiftyGif-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83B13B676574FCF9247DF4C2FB0E5263 /* UITouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D7E17A7C78829EFEAEAB1F308113A /* UITouchGestureRecognizer.swift */; };
 		851E0387E4EB02E5DCCCCAADFE01445B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */; };
-		85F56ADC3E692425680DC6792E6533BD /* Pods-TCSandboxUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 516243C17D8CAFC92D8EFFC17ACC0E08 /* Pods-TCSandboxUITests-dummy.m */; };
-		8F4D38C514BD5809722E402B61CF95D3 /* SnappingStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8DB9B3EE46BF5D88DD322596F5EBA6 /* SnappingStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F865341AB289FFD057E7F1EC6727C7C /* ShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0836F46C85A85E4CE2D6AEA429919DD /* ShapeStyle.swift */; };
-		95C964A510948E546AB8A72D3F1AACFA /* CustomShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CEB46955C699B60B795C9ED65ED674 /* CustomShapeLayer.swift */; };
-		B76B2A38CCC8BB9A1DAC0DD70027797C /* DynamicColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DDC93F13ED79859A8F8A4E307B73DC /* DynamicColor.framework */; };
-		C530794324C223796E96F6FBA7F1E514 /* Pods-TCSandboxTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E226FAD8D2BDBE7F04989FAE744492F /* Pods-TCSandboxTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB1C62E7061BC9C87F9C25F5776AFD78 /* Pods-TCSandbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE11CC6B46966F7A64831671C116CDDF /* Pods-TCSandbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEDB724342476CBE063FFB437D7EE973 /* DGRunkeeperSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B52458DC6F5D462E696CC7C9612A19 /* DGRunkeeperSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9BC764234124F7F4AA2F118A891E0C /* DynamicColor-dummy.m */; };
-		DE8F3E1F57387987DC6A6B11A0F946E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
-		DFC0770EC1563FDD09B6A95C5A0B9D3C /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5C9BD6E9205F92D13B8A3817A7A25 /* StyledLabel.swift */; };
-		E18757959078ABA6CF78492B5D13C8BE /* Pods-TCSandboxUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18143586CEF35B3119E44DDED5AD19F6 /* Pods-TCSandboxUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E437AF04CD8992DC3238A22860F3D923 /* SnappingStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762EBE5C0D1FD020A7DF651761822C5 /* SnappingStepper-dummy.m */; };
-		E73D2ADDD2E91E0EFE476C90854D37C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
-		EA09EA7E417CE5AB3DC63CFB8F4038DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
+		91F5DD60A0E64FD9A2CDC59DC102432A /* AutoRepeatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D44AE6E55CE09DDDBD9556567D2C52 /* AutoRepeatHelper.swift */; };
+		9AC59BEC4909846DA63777F9EADD1BBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
+		A5ECFB5F213D4D5F2033E6438A246758 /* Pods-TCSandbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01A2B0A84BCF8A81DBD02F6F8F1DA5 /* Pods-TCSandbox-dummy.m */; };
+		B63F56C886B511EBD4E9EFC19B8621CE /* SnappingStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A0CAD4ED8A6A4C289BA36022CF675 /* SnappingStepper.swift */; };
+		CB86E23DE35C17A5E8CA55E23CE8A1DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */; };
+		CC6BACAF2E2BCF29207171C8E934EFD6 /* UIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4CA6600730DC473D687C9AB399ED9E /* UIBuilder.swift */; };
+		CEDB724342476CBE063FFB437D7EE973 /* DGRunkeeperSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CA09BDDAF5F2FFA7615B4DB850FFAE /* DGRunkeeperSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D072E2D9BFAD7C617D9A6F2830BB6672 /* SwiftyGif-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C9E579F7E75A2AEC95CC3CE1FE0AC8 /* SwiftyGif-dummy.m */; };
+		D247CA1E455E1FF8FA97ACFFF9282D13 /* Pods-TCSandboxTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E226FAD8D2BDBE7F04989FAE744492F /* Pods-TCSandboxTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8DFEF4988798D00D18FA59910C5C185 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
+		DBB1636BF20D08BB80E03510E4D5F826 /* Pods-TCSandboxTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E622B9178A1271D696478AA9AB85205B /* Pods-TCSandboxTests-dummy.m */; };
+		DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5C2486C2F12ABA478D184B966C92B8 /* DynamicColor-dummy.m */; };
+		EAB215B97DB22CCC5715C39DDFE1F3E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
 		EEEB710A6F2BF621D014CC1909D9540D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
-		F81CBE16F2F8A612505660EA3CFD819D /* Pods-TCSandboxTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E622B9178A1271D696478AA9AB85205B /* Pods-TCSandboxTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1B84EC660AA1211DC49BD05A040F9085 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03EA3ECBAB81EF59223CD6006407E74A;
-			remoteInfo = SnappingStepper;
-		};
-		3ED2C6A41DFA780732761F0EA75F8827 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
-			remoteInfo = DynamicColor;
-		};
-		59C737B81594B1231F8BD45EE62F86D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
-			remoteInfo = DynamicColor;
-		};
-		62D1B46FC4D4AD9421A743B8C91E7CDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
-			remoteInfo = DynamicColor;
-		};
-		64CE998AEE5ABC6874CD89D5BD64B754 /* PBXContainerItemProxy */ = {
+		06DEE373C422AE534D2A28AC238D8CBC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EF89A4DA92CC0D0F76CF983AB2A6F4F1;
 			remoteInfo = DGRunkeeperSwitch;
 		};
-		7DF1278A54F0C36821DF355178D6DDAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF89A4DA92CC0D0F76CF983AB2A6F4F1;
-			remoteInfo = DGRunkeeperSwitch;
-		};
-		97DE9B32455FA48251A50B903977DBE8 /* PBXContainerItemProxy */ = {
+		0CBD81B56CD1261F2EB78C03D546BFD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
 			remoteInfo = DynamicColor;
 		};
-		9BBE013171DD711D143B467A030F9828 /* PBXContainerItemProxy */ = {
+		4408F979620133F8EA537129FF45A209 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46ADA8D76115D95148D32AB1B67A27FE;
+			remoteInfo = SnappingStepper;
+		};
+		5BA0D5CC594320B55C8E3B16824E156E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
+			remoteInfo = DynamicColor;
+		};
+		8BA1113A06DB17B1A18C82ADD165C971 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
+			remoteInfo = DynamicColor;
+		};
+		B32C68C4C0B9265B437AB1C7A644E230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
+			remoteInfo = DynamicColor;
+		};
+		B7F0AAAFBF8AE7DDF7A0176F0BB58DE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EF89A4DA92CC0D0F76CF983AB2A6F4F1;
 			remoteInfo = DGRunkeeperSwitch;
 		};
-		FE128A3C4BB18678D5563D92A62FC54B /* PBXContainerItemProxy */ = {
+		C22D8C636CCED87C44F4FD7454AD8E84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 03EA3ECBAB81EF59223CD6006407E74A;
+			remoteGlobalIDString = EF89A4DA92CC0D0F76CF983AB2A6F4F1;
+			remoteInfo = DGRunkeeperSwitch;
+		};
+		DA99901ED1C41858A02D4B6F06CEF885 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9B358B431A1451EBCC4F4F29FE93BA;
+			remoteInfo = SwiftyGif;
+		};
+		DF7224D2EFF1BF2D0F90B0239CA1AD47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46ADA8D76115D95148D32AB1B67A27FE;
 			remoteInfo = SnappingStepper;
 		};
-		FE87C3C34BAF079691F73E23FB2C451A /* PBXContainerItemProxy */ = {
+		EA349B2EC0DFD41D4047663A2B08ACF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 03EA3ECBAB81EF59223CD6006407E74A;
+			remoteGlobalIDString = DD9B358B431A1451EBCC4F4F29FE93BA;
+			remoteInfo = SwiftyGif;
+		};
+		F341883B21EA6EF6375D59608252F6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46ADA8D76115D95148D32AB1B67A27FE;
 			remoteInfo = SnappingStepper;
+		};
+		F38545B0E8A9E814B1F57182642B6C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9B358B431A1451EBCC4F4F29FE93BA;
+			remoteInfo = SwiftyGif;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E7CFC2D6E25F8BFD099DEF7DB7F4FE /* DGRunkeeperSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGRunkeeperSwitch.modulemap; sourceTree = "<group>"; };
 		02DDC93F13ED79859A8F8A4E307B73DC /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		058C17654A7730505236460081A20D16 /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
-		0762EBE5C0D1FD020A7DF651761822C5 /* SnappingStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnappingStepper-dummy.m"; sourceTree = "<group>"; };
+		06A267E6B507A3A4B1D848CF6EA68C50 /* DGRunkeeperSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-prefix.pch"; sourceTree = "<group>"; };
 		07FE9EFBF00D21E91B6B5D677153D329 /* Pods-TCSandbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandbox.release.xcconfig"; sourceTree = "<group>"; };
+		088DD30691A7E0C6F3D079E78F720BAE /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09CA09BDDAF5F2FFA7615B4DB850FFAE /* DGRunkeeperSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-umbrella.h"; sourceTree = "<group>"; };
 		0B06ADC759DF6C341659AF7C7AA514F8 /* Pods-TCSandbox-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCSandbox-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0D3DC78F516CFC2A123063A326C2AE47 /* SnappingStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-prefix.pch"; sourceTree = "<group>"; };
+		0D4629D96C9EA5B041CC350B3C4C80A8 /* SnappingStepper+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SnappingStepper+Internal.swift"; path = "Sources/SnappingStepper+Internal.swift"; sourceTree = "<group>"; };
 		0E31FF7C312023CF69BBEA57C269CECF /* Pods-TCSandboxUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TCSandboxUITests.modulemap"; sourceTree = "<group>"; };
-		15A7E1AEB6383FF405865B4544AE750D /* AutoRepeatHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoRepeatHelper.swift; path = Sources/AutoRepeatHelper.swift; sourceTree = "<group>"; };
+		0F4CA6600730DC473D687C9AB399ED9E /* UIBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBuilder.swift; path = Sources/UIBuilder.swift; sourceTree = "<group>"; };
+		114A0CAD4ED8A6A4C289BA36022CF675 /* SnappingStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepper.swift; path = Sources/SnappingStepper.swift; sourceTree = "<group>"; };
+		17D44AE6E55CE09DDDBD9556567D2C52 /* AutoRepeatHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoRepeatHelper.swift; path = Sources/AutoRepeatHelper.swift; sourceTree = "<group>"; };
 		18143586CEF35B3119E44DDED5AD19F6 /* Pods-TCSandboxUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCSandboxUITests-umbrella.h"; sourceTree = "<group>"; };
+		1D9FFE37210A2A9BC23160B17B670874 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
 		1E2E0662F9B805FE1E773462BB33EFD9 /* Pods-TCSandbox-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCSandbox-acknowledgements.plist"; sourceTree = "<group>"; };
-		20C122EFF85378518BCB1037A11445E3 /* SnappingStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepper.swift; path = Sources/SnappingStepper.swift; sourceTree = "<group>"; };
-		27B52458DC6F5D462E696CC7C9612A19 /* DGRunkeeperSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-umbrella.h"; sourceTree = "<group>"; };
 		287DFA2121087373B137CF813F3D0C60 /* Pods-TCSandboxUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCSandboxUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2CA3F316AD2D0AA37C852A174AC54FAF /* DGRunkeeperSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-prefix.pch"; sourceTree = "<group>"; };
 		2DB7EC87C20B4C6928A9F5C80A3942D2 /* Pods-TCSandboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2F5C5FA861F550338E3F0AC99F0EA991 /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
+		2FC6E7A6061FAE0223A07FE9353FC1F5 /* Pods_TCSandboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CEFFBE2CEC13522C5D931D57227DFB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C72198B4D3B949E8BFAA4CE62F86B5 /* Pods-TCSandboxTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCSandboxTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3738AC1D45F762C359C27616011AA04E /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
+		3840EA7711A20397BAEAA8BAFB996483 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		3907502FBDA883F4261A7A08A5270E15 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
-		3B8DB9B3EE46BF5D88DD322596F5EBA6 /* SnappingStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-umbrella.h"; sourceTree = "<group>"; };
-		3C47D67AE85ED0CBEC1B88B40FB215A0 /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B42AA593FFF278A89259E7DF712CC70 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "SwiftyGif/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		3CE78A670471514FB2DB37BB6DD9D04B /* ShapeStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeStyle.swift; path = Sources/ShapeStyle.swift; sourceTree = "<group>"; };
+		3D962EB4C4D90C7FE645A1434D353729 /* SnappingStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-umbrella.h"; sourceTree = "<group>"; };
 		3E226FAD8D2BDBE7F04989FAE744492F /* Pods-TCSandboxTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCSandboxTests-umbrella.h"; sourceTree = "<group>"; };
 		3F3F789959ECA6429B8374C84E5E982E /* Pods-TCSandboxTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TCSandboxTests.modulemap"; sourceTree = "<group>"; };
-		45D81687DAE231AC176BE3D78BA0FEC6 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
+		4BE164E6BC5577566BC0215EC8925BB1 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
+		4C5546E080F499074AD5DA61F7169CB9 /* DGRunkeeperSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGRunkeeperSwitch.swift; path = DGRunkeeperSwitch/DGRunkeeperSwitch.swift; sourceTree = "<group>"; };
 		516243C17D8CAFC92D8EFFC17ACC0E08 /* Pods-TCSandboxUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TCSandboxUITests-dummy.m"; sourceTree = "<group>"; };
 		520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5C3571AC7E8F30A5F78C8B7113CEAA90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6069D1AE3DEBA63D0C0587C4768E5F8D /* Pods-TCSandboxTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxTests-resources.sh"; sourceTree = "<group>"; };
-		6FF5B7006B474AA4AF8C9DAAD7D6D547 /* Pods_TCSandboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7801660D9BA37307732C702C131897A2 /* SnappingStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnappingStepper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		793EAA2CEAA204F2FA7EBC181A50C9CA /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
-		7A9BC764234124F7F4AA2F118A891E0C /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
-		7BA38BD71C65455F0C9538CD4E457554 /* DGRunkeeperSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGRunkeeperSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629C96829447B15EB842D9F30350D182 /* SnappingStepperBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepperBehavior.swift; path = Sources/SnappingStepperBehavior.swift; sourceTree = "<group>"; };
+		68B423367D8DE5A22A4CD750794C3594 /* DGRunkeeperSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGRunkeeperSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C953ECEFE1E36FA10320E4757C4D754 /* CustomShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomShapeLayer.swift; path = Sources/CustomShapeLayer.swift; sourceTree = "<group>"; };
 		7DE97B4693AB78F64E30689EECC01D84 /* Pods-TCSandbox-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandbox-resources.sh"; sourceTree = "<group>"; };
-		7F719405A73BD9D77E0B6031D0330B1C /* UIBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBuilder.swift; path = Sources/UIBuilder.swift; sourceTree = "<group>"; };
+		80D3AF600D3CA9026DDDA764BEE97B63 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		827AC7CB8AB7649BF12D95AA216AA630 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E0C4BDC22A9FF85CF6F7632D863FAD /* SwiftyGif-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-umbrella.h"; sourceTree = "<group>"; };
+		843D7E17A7C78829EFEAEAB1F308113A /* UITouchGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITouchGestureRecognizer.swift; path = Sources/UITouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		896749D4A9E562496986823FDAB251BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A484C8860ADE4199ED653DDD1AE5794 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8C797A3F1A61856DDEE7EA9366B5C0 /* Pods-TCSandbox-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandbox-frameworks.sh"; sourceTree = "<group>"; };
-		8FC1FD5CD9B0882E2389EBCD61D6D891 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB922DEC6668A947968D4968307259D /* SnappingStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnappingStepper.modulemap; sourceTree = "<group>"; };
+		8E2B9221F1EECCF4F1F339EF7F364BBD /* SnappingStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnappingStepper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9BCC31ADFB0A57B8F5161DE7A5BC8A79 /* SnappingStepper+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SnappingStepper+Internal.swift"; path = "Sources/SnappingStepper+Internal.swift"; sourceTree = "<group>"; };
+		99C9E579F7E75A2AEC95CC3CE1FE0AC8 /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
 		9D115EF5DFE0A9D612297FE46265B309 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EBEFBD3ECB5F9A083BE9D4BCB7933EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1BAB64CBAFEEB1005548C9C542C2BD9 /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2923EF45721F694DA11061997870139 /* Pods-TCSandbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TCSandbox.modulemap"; sourceTree = "<group>"; };
+		A2961E9118E861DFAA845315C1FE0C30 /* SnappingStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnappingStepper.xcconfig; sourceTree = "<group>"; };
 		A4426236A7CECA4C4EB70127C90A3F75 /* Pods-TCSandboxUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxUITests-frameworks.sh"; sourceTree = "<group>"; };
-		A5CEB46955C699B60B795C9ED65ED674 /* CustomShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomShapeLayer.swift; path = Sources/CustomShapeLayer.swift; sourceTree = "<group>"; };
-		A7809EE3CE0F411056FA886E58A0B121 /* SnappingStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnappingStepper.modulemap; sourceTree = "<group>"; };
+		A76EB638C59FD253015531EA2CCB9451 /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
 		A92F85ACEF840CC9E9BF3C265A055B54 /* Pods-TCSandboxTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCSandboxTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		AB0936ACF8D7A29D0F7E419E0D93C592 /* DGRunkeeperSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGRunkeeperSwitch-dummy.m"; sourceTree = "<group>"; };
+		AD8D342AD867D0881129F859C7AF5F73 /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
 		AE11CC6B46966F7A64831671C116CDDF /* Pods-TCSandbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCSandbox-umbrella.h"; sourceTree = "<group>"; };
-		AF91329E5643D85D5141C744738BE8EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B34B97268A7C503C70F61BF01DE72A4E /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6F44381EEA5348FF9FC52485F120082 /* SnappingStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnappingStepper.xcconfig; sourceTree = "<group>"; };
-		BBA5C9BD6E9205F92D13B8A3817A7A25 /* StyledLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyledLabel.swift; path = Sources/StyledLabel.swift; sourceTree = "<group>"; };
-		BC7D05EA14B35C09F4147C15385022F4 /* SnappingStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-prefix.pch"; sourceTree = "<group>"; };
+		B01CF2A21774AF4716AE28148F48C817 /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
+		B70200DF67F57832DD011AE8C3A43234 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C072E08B9D2125C4199EAA33A27826E5 /* Pods-TCSandbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandbox.debug.xcconfig"; sourceTree = "<group>"; };
-		C270EA3B8A49C189884743D015285F17 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
-		CBE45E370D12D34D928F33C6B1A0DA3C /* DGRunkeeperSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGRunkeeperSwitch-dummy.m"; sourceTree = "<group>"; };
-		D4E5EAA855551A22E3F8D1A249DBA2A3 /* UITouchGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITouchGestureRecognizer.swift; path = Sources/UITouchGestureRecognizer.swift; sourceTree = "<group>"; };
-		D5B2A40585AD71E7F08EB0D8D64201B4 /* DGRunkeeperSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGRunkeeperSwitch.xcconfig; sourceTree = "<group>"; };
-		D7C5C794951811242A93C1F96EB25B62 /* SnappingStepperBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepperBehavior.swift; path = Sources/SnappingStepperBehavior.swift; sourceTree = "<group>"; };
+		C57D6F5CD683346ADB047C5017C34087 /* SwiftyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyGif.modulemap; sourceTree = "<group>"; };
+		CB5C2486C2F12ABA478D184B966C92B8 /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
+		CFEA9786E767F74C724437E37317126C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7F643D31B4C1D0E5E3D4446A6C28CAB /* DGRunkeeperSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGRunkeeperSwitch.modulemap; sourceTree = "<group>"; };
 		DAAB18B55B380D69F8FD73D59B4654FC /* Pods-TCSandboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxTests.release.xcconfig"; sourceTree = "<group>"; };
-		E0836F46C85A85E4CE2D6AEA429919DD /* ShapeStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeStyle.swift; path = Sources/ShapeStyle.swift; sourceTree = "<group>"; };
-		E20D5A68F578A063749ABC809EA7C2FA /* DGRunkeeperSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGRunkeeperSwitch.swift; path = DGRunkeeperSwitch/DGRunkeeperSwitch.swift; sourceTree = "<group>"; };
+		E41E5279E5EF575CBE295B4CBEF0932C /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
 		E4E4E6A99E2C97D0DC7406340D4E4403 /* Pods-TCSandboxTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxTests-frameworks.sh"; sourceTree = "<group>"; };
 		E622B9178A1271D696478AA9AB85205B /* Pods-TCSandboxTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TCSandboxTests-dummy.m"; sourceTree = "<group>"; };
 		E630B740B1A3EC7FB90765FCA8A7FE10 /* Pods-TCSandboxUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCSandboxUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E67B27C5FE8D9D300944535E7C2EE056 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E9EFFFF47EDCC7AC0A46D7652AEB0C /* StyledLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyledLabel.swift; path = Sources/StyledLabel.swift; sourceTree = "<group>"; };
+		EAB22EE27EF7E76C701600EAEBAE2BBE /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB59EF78004307EE8C509DD6265A602D /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
+		F324567D6C59B1E6DD2E29A89C64F781 /* SwiftyGif.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.xcconfig; sourceTree = "<group>"; };
+		F583BF20FD97A65602518B1713C59CFE /* DGRunkeeperSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGRunkeeperSwitch.xcconfig; sourceTree = "<group>"; };
+		F77356DD2F0DB79657CA926ACB4B3ED5 /* SnappingStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnappingStepper-dummy.m"; sourceTree = "<group>"; };
 		F91242C8C09857B43AA76877C51FAC63 /* Pods-TCSandboxUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxUITests-resources.sh"; sourceTree = "<group>"; };
 		FA01A2B0A84BCF8A81DBD02F6F8F1DA5 /* Pods-TCSandbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TCSandbox-dummy.m"; sourceTree = "<group>"; };
+		FE4FC9138139BDDAA6CE0FF9FEBEAAC0 /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0490F59CB2CA9762D6097446B6F94A1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA09EA7E417CE5AB3DC63CFB8F4038DB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1790D4F382064E9118AA8E17E594329B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B76B2A38CCC8BB9A1DAC0DD70027797C /* DynamicColor.framework in Frameworks */,
-				E73D2ADDD2E91E0EFE476C90854D37C0 /* Foundation.framework in Frameworks */,
-				15E90435DA860BA1EDDC632B4A060A19 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2238FCD94A4DA0978EF3DBA51EAB157A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,11 +236,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A1EA74DACD635BB6461D131986F26AF /* Frameworks */ = {
+		323EDC9B933693A43522D140009AE907 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE8F3E1F57387987DC6A6B11A0F946E6 /* Foundation.framework in Frameworks */,
+				D8DFEF4988798D00D18FA59910C5C185 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,11 +253,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77CC3D7873329584A3B0EE665090781B /* Frameworks */ = {
+		590B23AAB07E7A4FFCBD45B35AAAA951 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8431F9E6C18614D7057936B71504F5E3 /* Foundation.framework in Frameworks */,
+				EAB215B97DB22CCC5715C39DDFE1F3E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CEE284E8C9D7AC023AB815401ADD75E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6968C586D88DFDF5E886092CEF9B069C /* DynamicColor.framework in Frameworks */,
+				9AC59BEC4909846DA63777F9EADD1BBD /* Foundation.framework in Frameworks */,
+				CB86E23DE35C17A5E8CA55E23CE8A1DD /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A40B29D95ECD8AFB35F0A8AE085B03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6354C9869F822DDDFED61FE26461286B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFB5D361D1300BDCE802EF4F1BA8541 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162D5CD99A811710E381968CF3250E1E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +308,28 @@
 			path = "Target Support Files/Pods-TCSandboxUITests";
 			sourceTree = "<group>";
 		};
+		0D440618910147473C1DBAE6EEC335AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F39D97BE55ACCE2F223DE44F975271A1 /* DGRunkeeperSwitch */,
+				982F38118CF148755639D2400E1436E2 /* DynamicColor */,
+				FECFAB29550C87507692E61E33ACEB12 /* SnappingStepper */,
+				15125FF3063DA69F6E08F208D252A6ED /* SwiftyGif */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		15125FF3063DA69F6E08F208D252A6ED /* SwiftyGif */ = {
+			isa = PBXGroup;
+			children = (
+				A76EB638C59FD253015531EA2CCB9451 /* SwiftyGifManager.swift */,
+				3B42AA593FFF278A89259E7DF712CC70 /* UIImage+SwiftyGif.swift */,
+				3840EA7711A20397BAEAA8BAFB996483 /* UIImageView+SwiftyGif.swift */,
+				6A86E3FDC8926733A83CCEEC8FF41ECF /* Support Files */,
+			);
+			path = SwiftyGif;
+			sourceTree = "<group>";
+		};
 		2150923625428DF8531EF52624E75F0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,17 +339,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3244B2759FB557AE27C489C01364A07E /* Products */ = {
+		3DB61AB02D0331511B4B243885D47E84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BA38BD71C65455F0C9538CD4E457554 /* DGRunkeeperSwitch.framework */,
-				E67B27C5FE8D9D300944535E7C2EE056 /* DynamicColor.framework */,
-				B34B97268A7C503C70F61BF01DE72A4E /* Pods_TCSandbox.framework */,
-				3C47D67AE85ED0CBEC1B88B40FB215A0 /* Pods_TCSandboxTests.framework */,
-				6FF5B7006B474AA4AF8C9DAAD7D6D547 /* Pods_TCSandboxUITests.framework */,
-				7801660D9BA37307732C702C131897A2 /* SnappingStepper.framework */,
+				68B423367D8DE5A22A4CD750794C3594 /* DGRunkeeperSwitch.framework */,
+				EAB22EE27EF7E76C701600EAEBAE2BBE /* DynamicColor.framework */,
+				827AC7CB8AB7649BF12D95AA216AA630 /* Pods_TCSandbox.framework */,
+				088DD30691A7E0C6F3D079E78F720BAE /* Pods_TCSandboxTests.framework */,
+				2FC6E7A6061FAE0223A07FE9353FC1F5 /* Pods_TCSandboxUITests.framework */,
+				8E2B9221F1EECCF4F1F339EF7F364BBD /* SnappingStepper.framework */,
+				80D3AF600D3CA9026DDDA764BEE97B63 /* SwiftyGif.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		43643FCEBD52E08DC0E6974F0BFBFF44 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A484C8860ADE4199ED653DDD1AE5794 /* Info.plist */,
+				8CB922DEC6668A947968D4968307259D /* SnappingStepper.modulemap */,
+				A2961E9118E861DFAA845315C1FE0C30 /* SnappingStepper.xcconfig */,
+				F77356DD2F0DB79657CA926ACB4B3ED5 /* SnappingStepper-dummy.m */,
+				0D3DC78F516CFC2A123063A326C2AE47 /* SnappingStepper-prefix.pch */,
+				3D962EB4C4D90C7FE645A1434D353729 /* SnappingStepper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnappingStepper";
 			sourceTree = "<group>";
 		};
 		516A3A234D3F3D20D75785B1A3A31FAD /* Targets Support Files */ = {
@@ -295,21 +377,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		669B310FAF4F438BB30347F5289BB50B /* SnappingStepper */ = {
+		6A86E3FDC8926733A83CCEEC8FF41ECF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				15A7E1AEB6383FF405865B4544AE750D /* AutoRepeatHelper.swift */,
-				A5CEB46955C699B60B795C9ED65ED674 /* CustomShapeLayer.swift */,
-				E0836F46C85A85E4CE2D6AEA429919DD /* ShapeStyle.swift */,
-				20C122EFF85378518BCB1037A11445E3 /* SnappingStepper.swift */,
-				9BCC31ADFB0A57B8F5161DE7A5BC8A79 /* SnappingStepper+Internal.swift */,
-				D7C5C794951811242A93C1F96EB25B62 /* SnappingStepperBehavior.swift */,
-				BBA5C9BD6E9205F92D13B8A3817A7A25 /* StyledLabel.swift */,
-				7F719405A73BD9D77E0B6031D0330B1C /* UIBuilder.swift */,
-				D4E5EAA855551A22E3F8D1A249DBA2A3 /* UITouchGestureRecognizer.swift */,
-				D0B45562861889A41C34F66AB2EB7604 /* Support Files */,
+				CFEA9786E767F74C724437E37317126C /* Info.plist */,
+				C57D6F5CD683346ADB047C5017C34087 /* SwiftyGif.modulemap */,
+				F324567D6C59B1E6DD2E29A89C64F781 /* SwiftyGif.xcconfig */,
+				99C9E579F7E75A2AEC95CC3CE1FE0AC8 /* SwiftyGif-dummy.m */,
+				FE4FC9138139BDDAA6CE0FF9FEBEAAC0 /* SwiftyGif-prefix.pch */,
+				83E0C4BDC22A9FF85CF6F7632D863FAD /* SwiftyGif-umbrella.h */,
 			);
-			path = SnappingStepper;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyGif";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -317,8 +396,8 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				2150923625428DF8531EF52624E75F0A /* Frameworks */,
-				BBF6CF2F491A569EFA06906D4314B120 /* Pods */,
-				3244B2759FB557AE27C489C01364A07E /* Products */,
+				0D440618910147473C1DBAE6EEC335AA /* Pods */,
+				3DB61AB02D0331511B4B243885D47E84 /* Products */,
 				516A3A234D3F3D20D75785B1A3A31FAD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -350,47 +429,14 @@
 			path = "Target Support Files/Pods-TCSandbox";
 			sourceTree = "<group>";
 		};
-		B6E0E141EB5BBD51252FF82D1D6AC396 /* Support Files */ = {
+		982F38118CF148755639D2400E1436E2 /* DynamicColor */ = {
 			isa = PBXGroup;
 			children = (
-				058C17654A7730505236460081A20D16 /* DynamicColor.modulemap */,
-				C270EA3B8A49C189884743D015285F17 /* DynamicColor.xcconfig */,
-				7A9BC764234124F7F4AA2F118A891E0C /* DynamicColor-dummy.m */,
-				3738AC1D45F762C359C27616011AA04E /* DynamicColor-prefix.pch */,
-				2F5C5FA861F550338E3F0AC99F0EA991 /* DynamicColor-umbrella.h */,
-				5C3571AC7E8F30A5F78C8B7113CEAA90 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DynamicColor";
-			sourceTree = "<group>";
-		};
-		B8207C7EA512434C86617843825C21E6 /* DynamicColor */ = {
-			isa = PBXGroup;
-			children = (
-				45D81687DAE231AC176BE3D78BA0FEC6 /* DynamicColor.swift */,
-				793EAA2CEAA204F2FA7EBC181A50C9CA /* HSL.swift */,
-				B6E0E141EB5BBD51252FF82D1D6AC396 /* Support Files */,
+				4BE164E6BC5577566BC0215EC8925BB1 /* DynamicColor.swift */,
+				EB59EF78004307EE8C509DD6265A602D /* HSL.swift */,
+				D4F1C75667BBC6AE7D2FF993C8570C65 /* Support Files */,
 			);
 			path = DynamicColor;
-			sourceTree = "<group>";
-		};
-		BBF6CF2F491A569EFA06906D4314B120 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BE96E5079808F7FBDFD97AF7AB5FC97C /* DGRunkeeperSwitch */,
-				B8207C7EA512434C86617843825C21E6 /* DynamicColor */,
-				669B310FAF4F438BB30347F5289BB50B /* SnappingStepper */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BE96E5079808F7FBDFD97AF7AB5FC97C /* DGRunkeeperSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				E20D5A68F578A063749ABC809EA7C2FA /* DGRunkeeperSwitch.swift */,
-				CBB67425065A30103059F9C966B52C3A /* Support Files */,
-			);
-			path = DGRunkeeperSwitch;
 			sourceTree = "<group>";
 		};
 		BEEA33C114DD3503B84D81A14ED3E587 /* Pods-TCSandboxTests */ = {
@@ -411,50 +457,84 @@
 			path = "Target Support Files/Pods-TCSandboxTests";
 			sourceTree = "<group>";
 		};
-		CBB67425065A30103059F9C966B52C3A /* Support Files */ = {
+		D4F1C75667BBC6AE7D2FF993C8570C65 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				00E7CFC2D6E25F8BFD099DEF7DB7F4FE /* DGRunkeeperSwitch.modulemap */,
-				D5B2A40585AD71E7F08EB0D8D64201B4 /* DGRunkeeperSwitch.xcconfig */,
-				CBE45E370D12D34D928F33C6B1A0DA3C /* DGRunkeeperSwitch-dummy.m */,
-				2CA3F316AD2D0AA37C852A174AC54FAF /* DGRunkeeperSwitch-prefix.pch */,
-				27B52458DC6F5D462E696CC7C9612A19 /* DGRunkeeperSwitch-umbrella.h */,
-				8FC1FD5CD9B0882E2389EBCD61D6D891 /* Info.plist */,
+				E41E5279E5EF575CBE295B4CBEF0932C /* DynamicColor.modulemap */,
+				1D9FFE37210A2A9BC23160B17B670874 /* DynamicColor.xcconfig */,
+				CB5C2486C2F12ABA478D184B966C92B8 /* DynamicColor-dummy.m */,
+				AD8D342AD867D0881129F859C7AF5F73 /* DynamicColor-prefix.pch */,
+				B01CF2A21774AF4716AE28148F48C817 /* DynamicColor-umbrella.h */,
+				9EBEFBD3ECB5F9A083BE9D4BCB7933EA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DynamicColor";
+			sourceTree = "<group>";
+		};
+		DD23E05B53929997D7AA81C09A12B124 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7F643D31B4C1D0E5E3D4446A6C28CAB /* DGRunkeeperSwitch.modulemap */,
+				F583BF20FD97A65602518B1713C59CFE /* DGRunkeeperSwitch.xcconfig */,
+				AB0936ACF8D7A29D0F7E419E0D93C592 /* DGRunkeeperSwitch-dummy.m */,
+				06A267E6B507A3A4B1D848CF6EA68C50 /* DGRunkeeperSwitch-prefix.pch */,
+				09CA09BDDAF5F2FFA7615B4DB850FFAE /* DGRunkeeperSwitch-umbrella.h */,
+				B70200DF67F57832DD011AE8C3A43234 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DGRunkeeperSwitch";
 			sourceTree = "<group>";
 		};
-		D0B45562861889A41C34F66AB2EB7604 /* Support Files */ = {
+		F39D97BE55ACCE2F223DE44F975271A1 /* DGRunkeeperSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				AF91329E5643D85D5141C744738BE8EC /* Info.plist */,
-				A7809EE3CE0F411056FA886E58A0B121 /* SnappingStepper.modulemap */,
-				B6F44381EEA5348FF9FC52485F120082 /* SnappingStepper.xcconfig */,
-				0762EBE5C0D1FD020A7DF651761822C5 /* SnappingStepper-dummy.m */,
-				BC7D05EA14B35C09F4147C15385022F4 /* SnappingStepper-prefix.pch */,
-				3B8DB9B3EE46BF5D88DD322596F5EBA6 /* SnappingStepper-umbrella.h */,
+				4C5546E080F499074AD5DA61F7169CB9 /* DGRunkeeperSwitch.swift */,
+				DD23E05B53929997D7AA81C09A12B124 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SnappingStepper";
+			path = DGRunkeeperSwitch;
+			sourceTree = "<group>";
+		};
+		FECFAB29550C87507692E61E33ACEB12 /* SnappingStepper */ = {
+			isa = PBXGroup;
+			children = (
+				17D44AE6E55CE09DDDBD9556567D2C52 /* AutoRepeatHelper.swift */,
+				7C953ECEFE1E36FA10320E4757C4D754 /* CustomShapeLayer.swift */,
+				3CE78A670471514FB2DB37BB6DD9D04B /* ShapeStyle.swift */,
+				114A0CAD4ED8A6A4C289BA36022CF675 /* SnappingStepper.swift */,
+				0D4629D96C9EA5B041CC350B3C4C80A8 /* SnappingStepper+Internal.swift */,
+				629C96829447B15EB842D9F30350D182 /* SnappingStepperBehavior.swift */,
+				E6E9EFFFF47EDCC7AC0A46D7652AEB0C /* StyledLabel.swift */,
+				0F4CA6600730DC473D687C9AB399ED9E /* UIBuilder.swift */,
+				843D7E17A7C78829EFEAEAB1F308113A /* UITouchGestureRecognizer.swift */,
+				43643FCEBD52E08DC0E6974F0BFBFF44 /* Support Files */,
+			);
+			path = SnappingStepper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2ED44C39CD0E206CF5D540872181D60B /* Headers */ = {
+		20FC346AA66A3B9008ADA0DC1B948310 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18757959078ABA6CF78492B5D13C8BE /* Pods-TCSandboxUITests-umbrella.h in Headers */,
+				D247CA1E455E1FF8FA97ACFFF9282D13 /* Pods-TCSandboxTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85FA455F53EB98F2DDD3261603B7E45C /* Headers */ = {
+		37DB89EA67A9E26FEE84234A484CCE9D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C530794324C223796E96F6FBA7F1E514 /* Pods-TCSandboxTests-umbrella.h in Headers */,
+				50D4C38178D3144288FFAD06DB4D46D9 /* Pods-TCSandbox-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		625C5AB009A290DFD5B1EC9C3DAFE0B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A6E1EAE00D9A02AF18C7027E944CB7B /* SwiftyGif-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,11 +546,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5CE19295C81CA2944AFECB439A7603C /* Headers */ = {
+		B25BC1B4443E5E6702386C2E8B76742F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB1C62E7061BC9C87F9C25F5776AFD78 /* Pods-TCSandbox-umbrella.h in Headers */,
+				5362F95BF7DB725BD9E28723917D8709 /* Pods-TCSandboxUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B374B0411F2756E6875119CBAD90C456 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613A5FE3751692D7C084A0A904E8F949 /* SnappingStepper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,35 +570,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB3D38F18D8DC1EFEDA0E5564F45C6C4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F4D38C514BD5809722E402B61CF95D3 /* SnappingStepper-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		03EA3ECBAB81EF59223CD6006407E74A /* SnappingStepper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E0A9293D0F0B478FB1D441720BDC2426 /* Build configuration list for PBXNativeTarget "SnappingStepper" */;
-			buildPhases = (
-				49451191CE64AEEE813A127BF7E46F67 /* Sources */,
-				1790D4F382064E9118AA8E17E594329B /* Frameworks */,
-				DB3D38F18D8DC1EFEDA0E5564F45C6C4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0630AA52E220DD2D80243F6ABC8C8210 /* PBXTargetDependency */,
-			);
-			name = SnappingStepper;
-			productName = SnappingStepper;
-			productReference = 7801660D9BA37307732C702C131897A2 /* SnappingStepper.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC4702B144C514B41D51E60E93CA52C5 /* Build configuration list for PBXNativeTarget "DynamicColor" */;
@@ -525,67 +587,105 @@
 			);
 			name = DynamicColor;
 			productName = DynamicColor;
-			productReference = E67B27C5FE8D9D300944535E7C2EE056 /* DynamicColor.framework */;
+			productReference = EAB22EE27EF7E76C701600EAEBAE2BBE /* DynamicColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		231EB84C1EE3E59E4426A9E6F0E194BA /* Pods-TCSandboxTests */ = {
+		46ADA8D76115D95148D32AB1B67A27FE /* SnappingStepper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 242DB3D56E91B8EAE93F2C7E6B8D1742 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxTests" */;
+			buildConfigurationList = 4335183BD90575C0EBBCFA5AB24C6E1C /* Build configuration list for PBXNativeTarget "SnappingStepper" */;
 			buildPhases = (
-				F1B53BBF8D13DD0004E6BD604777A0BA /* Sources */,
-				0490F59CB2CA9762D6097446B6F94A1A /* Frameworks */,
-				85FA455F53EB98F2DDD3261603B7E45C /* Headers */,
+				FE462468F9D8003D4C786000DDBB9810 /* Sources */,
+				9CEE284E8C9D7AC023AB815401ADD75E /* Frameworks */,
+				B374B0411F2756E6875119CBAD90C456 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB89E316FD960F357E809E4F012B0BF0 /* PBXTargetDependency */,
-				AE4E6ABF2DB10DDBAE9249E837C7A5B7 /* PBXTargetDependency */,
-				0306F497EDDF02EFF38F03C1C97011B0 /* PBXTargetDependency */,
+				602370463BCFD672D87A9586E3291914 /* PBXTargetDependency */,
 			);
-			name = "Pods-TCSandboxTests";
-			productName = "Pods-TCSandboxTests";
-			productReference = 3C47D67AE85ED0CBEC1B88B40FB215A0 /* Pods_TCSandboxTests.framework */;
+			name = SnappingStepper;
+			productName = SnappingStepper;
+			productReference = 8E2B9221F1EECCF4F1F339EF7F364BBD /* SnappingStepper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		86BA6CC9DF4AE9FB9A599FCC446A0B89 /* Pods-TCSandbox */ = {
+		717BFF836502C5A1191DFEE081B3440D /* Pods-TCSandboxUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DFDD0ACBC00BD8A3507470A235F1D80 /* Build configuration list for PBXNativeTarget "Pods-TCSandbox" */;
+			buildConfigurationList = 5CF1620F63FA6BC25599173F77815702 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxUITests" */;
 			buildPhases = (
-				7CB5C55F65824F9DC77A01792536B53F /* Sources */,
-				77CC3D7873329584A3B0EE665090781B /* Frameworks */,
-				B5CE19295C81CA2944AFECB439A7603C /* Headers */,
+				CF667B2A0F7E8CC0C4640C3C26A167EC /* Sources */,
+				323EDC9B933693A43522D140009AE907 /* Frameworks */,
+				B25BC1B4443E5E6702386C2E8B76742F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BAE0507F89CA0158B43CC339A2B23319 /* PBXTargetDependency */,
-				860234692BBC459847AD745A0A69906C /* PBXTargetDependency */,
-				2D2DF544CFDDA879B94F1C1F2A6BF48E /* PBXTargetDependency */,
-			);
-			name = "Pods-TCSandbox";
-			productName = "Pods-TCSandbox";
-			productReference = B34B97268A7C503C70F61BF01DE72A4E /* Pods_TCSandbox.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B1BD2CBB5D0170DBF1EFAC2CC3F364CD /* Pods-TCSandboxUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDC68F6268F54C27FE1C217E32E97911 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxUITests" */;
-			buildPhases = (
-				C0392C8F8C4D4B6508DB812DAE299F00 /* Sources */,
-				2A1EA74DACD635BB6461D131986F26AF /* Frameworks */,
-				2ED44C39CD0E206CF5D540872181D60B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				29443F7A271F456EEF3BE38B4812021F /* PBXTargetDependency */,
-				A13CBBFD421BF32C02E2E20A3FC03AAA /* PBXTargetDependency */,
-				F41D83C0DA2DC9866F457BAEFFA873B6 /* PBXTargetDependency */,
+				EA88752607E6914FA0EF9D5E0615C86A /* PBXTargetDependency */,
+				748F8B43C6A3F322EEFE22B632BF41A0 /* PBXTargetDependency */,
+				E5728C77981F615D5249EAB2E084468B /* PBXTargetDependency */,
+				6917481D57197AD8B452E48DEE35EC56 /* PBXTargetDependency */,
 			);
 			name = "Pods-TCSandboxUITests";
 			productName = "Pods-TCSandboxUITests";
-			productReference = 6FF5B7006B474AA4AF8C9DAAD7D6D547 /* Pods_TCSandboxUITests.framework */;
+			productReference = 2FC6E7A6061FAE0223A07FE9353FC1F5 /* Pods_TCSandboxUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C5EEF61FC1E11B3F0FDD36F00F8A300 /* Pods-TCSandboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A459EE423A08F848C745F9CB7E847052 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxTests" */;
+			buildPhases = (
+				B67958EF4C601756CF86215FACC557A5 /* Sources */,
+				CFFB5D361D1300BDCE802EF4F1BA8541 /* Frameworks */,
+				20FC346AA66A3B9008ADA0DC1B948310 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AFE06C0BD5EA3C198922D40AB636581 /* PBXTargetDependency */,
+				E844BE8CA3FFBDA49E6ADD6EA8AFF253 /* PBXTargetDependency */,
+				1C61FBC662F88436CD0496C0A06C61E8 /* PBXTargetDependency */,
+				8434FE56A0B692FD6626485ED0771BBA /* PBXTargetDependency */,
+			);
+			name = "Pods-TCSandboxTests";
+			productName = "Pods-TCSandboxTests";
+			productReference = 088DD30691A7E0C6F3D079E78F720BAE /* Pods_TCSandboxTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B15C8C6D4CB3140CB7FEFEC4FA0D74E8 /* Pods-TCSandbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C722815BA72F0C0C8CF25EA01B6E287 /* Build configuration list for PBXNativeTarget "Pods-TCSandbox" */;
+			buildPhases = (
+				18CEB4A8E9890324C922FBEDECA0DB5D /* Sources */,
+				B8A40B29D95ECD8AFB35F0A8AE085B03 /* Frameworks */,
+				37DB89EA67A9E26FEE84234A484CCE9D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DCA90D8273ED4D2269B786CBA1C206B /* PBXTargetDependency */,
+				721882EC197546571CD4FE356D335720 /* PBXTargetDependency */,
+				18C29D15A1A57550FEB88EE01FAAEAF9 /* PBXTargetDependency */,
+				FC9CFAA12362043383903683A697119E /* PBXTargetDependency */,
+			);
+			name = "Pods-TCSandbox";
+			productName = "Pods-TCSandbox";
+			productReference = 827AC7CB8AB7649BF12D95AA216AA630 /* Pods_TCSandbox.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD9B358B431A1451EBCC4F4F29FE93BA /* SwiftyGif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B7E3FD633DB2E2A9C8AF6DDA22B578C /* Build configuration list for PBXNativeTarget "SwiftyGif" */;
+			buildPhases = (
+				397708AEC964A2E9131AA761B332FACE /* Sources */,
+				590B23AAB07E7A4FFCBD45B35AAAA951 /* Frameworks */,
+				625C5AB009A290DFD5B1EC9C3DAFE0B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyGif;
+			productName = SwiftyGif;
+			productReference = 80D3AF600D3CA9026DDDA764BEE97B63 /* SwiftyGif.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EF89A4DA92CC0D0F76CF983AB2A6F4F1 /* DGRunkeeperSwitch */ = {
@@ -602,7 +702,7 @@
 			);
 			name = DGRunkeeperSwitch;
 			productName = DGRunkeeperSwitch;
-			productReference = 7BA38BD71C65455F0C9538CD4E457554 /* DGRunkeeperSwitch.framework */;
+			productReference = 68B423367D8DE5A22A4CD750794C3594 /* DGRunkeeperSwitch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -622,21 +722,41 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3244B2759FB557AE27C489C01364A07E /* Products */;
+			productRefGroup = 3DB61AB02D0331511B4B243885D47E84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EF89A4DA92CC0D0F76CF983AB2A6F4F1 /* DGRunkeeperSwitch */,
 				08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */,
-				86BA6CC9DF4AE9FB9A599FCC446A0B89 /* Pods-TCSandbox */,
-				231EB84C1EE3E59E4426A9E6F0E194BA /* Pods-TCSandboxTests */,
-				B1BD2CBB5D0170DBF1EFAC2CC3F364CD /* Pods-TCSandboxUITests */,
-				03EA3ECBAB81EF59223CD6006407E74A /* SnappingStepper */,
+				B15C8C6D4CB3140CB7FEFEC4FA0D74E8 /* Pods-TCSandbox */,
+				9C5EEF61FC1E11B3F0FDD36F00F8A300 /* Pods-TCSandboxTests */,
+				717BFF836502C5A1191DFEE081B3440D /* Pods-TCSandboxUITests */,
+				46ADA8D76115D95148D32AB1B67A27FE /* SnappingStepper */,
+				DD9B358B431A1451EBCC4F4F29FE93BA /* SwiftyGif */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18CEB4A8E9890324C922FBEDECA0DB5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5ECFB5F213D4D5F2033E6438A246758 /* Pods-TCSandbox-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		397708AEC964A2E9131AA761B332FACE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D072E2D9BFAD7C617D9A6F2830BB6672 /* SwiftyGif-dummy.m in Sources */,
+				1D1AEA8AE1E78CDE50EFF598EE4A82F8 /* SwiftyGifManager.swift in Sources */,
+				038ED4E9C1F74F24A7EDBA0363D5ABB6 /* UIImage+SwiftyGif.swift in Sources */,
+				30D800E4F509DC9053B5D0A714F0E5FB /* UIImageView+SwiftyGif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F70216E96FADB6650A523C5B0D82ABA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -646,36 +766,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49451191CE64AEEE813A127BF7E46F67 /* Sources */ = {
+		B67958EF4C601756CF86215FACC557A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A31C7435E2BBE530606572B4594A8D7 /* AutoRepeatHelper.swift in Sources */,
-				95C964A510948E546AB8A72D3F1AACFA /* CustomShapeLayer.swift in Sources */,
-				8F865341AB289FFD057E7F1EC6727C7C /* ShapeStyle.swift in Sources */,
-				1A171D5F4F2A3C81587F07B9570AEB34 /* SnappingStepper+Internal.swift in Sources */,
-				E437AF04CD8992DC3238A22860F3D923 /* SnappingStepper-dummy.m in Sources */,
-				16CF668269BFA335310AF9F33D84E117 /* SnappingStepper.swift in Sources */,
-				77529F0291AA126B9BB0A583158ABABE /* SnappingStepperBehavior.swift in Sources */,
-				DFC0770EC1563FDD09B6A95C5A0B9D3C /* StyledLabel.swift in Sources */,
-				291AC12F70BF65B3688FCB2262727CEF /* UIBuilder.swift in Sources */,
-				53B108CD7723FD5E0E60DA81A473F7B6 /* UITouchGestureRecognizer.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7CB5C55F65824F9DC77A01792536B53F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2FE4200C9DA8F4CE0120E63C255AE977 /* Pods-TCSandbox-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0392C8F8C4D4B6508DB812DAE299F00 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85F56ADC3E692425680DC6792E6533BD /* Pods-TCSandboxUITests-dummy.m in Sources */,
+				DBB1636BF20D08BB80E03510E4D5F826 /* Pods-TCSandboxTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,149 +784,118 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1B53BBF8D13DD0004E6BD604777A0BA /* Sources */ = {
+		CF667B2A0F7E8CC0C4640C3C26A167EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81CBE16F2F8A612505660EA3CFD819D /* Pods-TCSandboxTests-dummy.m in Sources */,
+				3FD7E94D9B6B3CB2509AD7C4D700577D /* Pods-TCSandboxUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE462468F9D8003D4C786000DDBB9810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F5DD60A0E64FD9A2CDC59DC102432A /* AutoRepeatHelper.swift in Sources */,
+				0796037A66F519F5C8C957C181AC9632 /* CustomShapeLayer.swift in Sources */,
+				6DCD1290D30BD8732000257868224767 /* ShapeStyle.swift in Sources */,
+				04A9D5998698BE50382C965D28809495 /* SnappingStepper+Internal.swift in Sources */,
+				70D539D95464081704AB1908CA2D76B4 /* SnappingStepper-dummy.m in Sources */,
+				B63F56C886B511EBD4E9EFC19B8621CE /* SnappingStepper.swift in Sources */,
+				1B518EA988AE51B418EC37A8D3104C49 /* SnappingStepperBehavior.swift in Sources */,
+				6640B91B2D48BE49ABEAF8A8552523B1 /* StyledLabel.swift in Sources */,
+				CC6BACAF2E2BCF29207171C8E934EFD6 /* UIBuilder.swift in Sources */,
+				83B13B676574FCF9247DF4C2FB0E5263 /* UITouchGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0306F497EDDF02EFF38F03C1C97011B0 /* PBXTargetDependency */ = {
+		18C29D15A1A57550FEB88EE01FAAEAF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnappingStepper;
-			target = 03EA3ECBAB81EF59223CD6006407E74A /* SnappingStepper */;
-			targetProxy = FE87C3C34BAF079691F73E23FB2C451A /* PBXContainerItemProxy */;
+			target = 46ADA8D76115D95148D32AB1B67A27FE /* SnappingStepper */;
+			targetProxy = F341883B21EA6EF6375D59608252F6A4 /* PBXContainerItemProxy */;
 		};
-		0630AA52E220DD2D80243F6ABC8C8210 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DynamicColor;
-			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
-			targetProxy = 3ED2C6A41DFA780732761F0EA75F8827 /* PBXContainerItemProxy */;
-		};
-		29443F7A271F456EEF3BE38B4812021F /* PBXTargetDependency */ = {
+		1AFE06C0BD5EA3C198922D40AB636581 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DGRunkeeperSwitch;
 			target = EF89A4DA92CC0D0F76CF983AB2A6F4F1 /* DGRunkeeperSwitch */;
-			targetProxy = 7DF1278A54F0C36821DF355178D6DDAA /* PBXContainerItemProxy */;
+			targetProxy = 06DEE373C422AE534D2A28AC238D8CBC /* PBXContainerItemProxy */;
 		};
-		2D2DF544CFDDA879B94F1C1F2A6BF48E /* PBXTargetDependency */ = {
+		1C61FBC662F88436CD0496C0A06C61E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnappingStepper;
-			target = 03EA3ECBAB81EF59223CD6006407E74A /* SnappingStepper */;
-			targetProxy = 1B84EC660AA1211DC49BD05A040F9085 /* PBXContainerItemProxy */;
+			target = 46ADA8D76115D95148D32AB1B67A27FE /* SnappingStepper */;
+			targetProxy = DF7224D2EFF1BF2D0F90B0239CA1AD47 /* PBXContainerItemProxy */;
 		};
-		860234692BBC459847AD745A0A69906C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DynamicColor;
-			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
-			targetProxy = 62D1B46FC4D4AD9421A743B8C91E7CDB /* PBXContainerItemProxy */;
-		};
-		A13CBBFD421BF32C02E2E20A3FC03AAA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DynamicColor;
-			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
-			targetProxy = 97DE9B32455FA48251A50B903977DBE8 /* PBXContainerItemProxy */;
-		};
-		AE4E6ABF2DB10DDBAE9249E837C7A5B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DynamicColor;
-			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
-			targetProxy = 59C737B81594B1231F8BD45EE62F86D3 /* PBXContainerItemProxy */;
-		};
-		BAE0507F89CA0158B43CC339A2B23319 /* PBXTargetDependency */ = {
+		5DCA90D8273ED4D2269B786CBA1C206B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DGRunkeeperSwitch;
 			target = EF89A4DA92CC0D0F76CF983AB2A6F4F1 /* DGRunkeeperSwitch */;
-			targetProxy = 9BBE013171DD711D143B467A030F9828 /* PBXContainerItemProxy */;
+			targetProxy = B7F0AAAFBF8AE7DDF7A0176F0BB58DE3 /* PBXContainerItemProxy */;
 		};
-		BB89E316FD960F357E809E4F012B0BF0 /* PBXTargetDependency */ = {
+		602370463BCFD672D87A9586E3291914 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicColor;
+			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
+			targetProxy = 8BA1113A06DB17B1A18C82ADD165C971 /* PBXContainerItemProxy */;
+		};
+		6917481D57197AD8B452E48DEE35EC56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyGif;
+			target = DD9B358B431A1451EBCC4F4F29FE93BA /* SwiftyGif */;
+			targetProxy = DA99901ED1C41858A02D4B6F06CEF885 /* PBXContainerItemProxy */;
+		};
+		721882EC197546571CD4FE356D335720 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicColor;
+			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
+			targetProxy = B32C68C4C0B9265B437AB1C7A644E230 /* PBXContainerItemProxy */;
+		};
+		748F8B43C6A3F322EEFE22B632BF41A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicColor;
+			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
+			targetProxy = 0CBD81B56CD1261F2EB78C03D546BFD7 /* PBXContainerItemProxy */;
+		};
+		8434FE56A0B692FD6626485ED0771BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyGif;
+			target = DD9B358B431A1451EBCC4F4F29FE93BA /* SwiftyGif */;
+			targetProxy = F38545B0E8A9E814B1F57182642B6C00 /* PBXContainerItemProxy */;
+		};
+		E5728C77981F615D5249EAB2E084468B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnappingStepper;
+			target = 46ADA8D76115D95148D32AB1B67A27FE /* SnappingStepper */;
+			targetProxy = 4408F979620133F8EA537129FF45A209 /* PBXContainerItemProxy */;
+		};
+		E844BE8CA3FFBDA49E6ADD6EA8AFF253 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicColor;
+			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
+			targetProxy = 5BA0D5CC594320B55C8E3B16824E156E /* PBXContainerItemProxy */;
+		};
+		EA88752607E6914FA0EF9D5E0615C86A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DGRunkeeperSwitch;
 			target = EF89A4DA92CC0D0F76CF983AB2A6F4F1 /* DGRunkeeperSwitch */;
-			targetProxy = 64CE998AEE5ABC6874CD89D5BD64B754 /* PBXContainerItemProxy */;
+			targetProxy = C22D8C636CCED87C44F4FD7454AD8E84 /* PBXContainerItemProxy */;
 		};
-		F41D83C0DA2DC9866F457BAEFFA873B6 /* PBXTargetDependency */ = {
+		FC9CFAA12362043383903683A697119E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SnappingStepper;
-			target = 03EA3ECBAB81EF59223CD6006407E74A /* SnappingStepper */;
-			targetProxy = FE128A3C4BB18678D5563D92A62FC54B /* PBXContainerItemProxy */;
+			name = SwiftyGif;
+			target = DD9B358B431A1451EBCC4F4F29FE93BA /* SwiftyGif */;
+			targetProxy = EA349B2EC0DFD41D4047663A2B08ACF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0D428B28621C046842F7D3385931DDC4 /* Release */ = {
+		2711ED4045E3A4C2B4F06DA54ECC99A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07FE9EFBF00D21E91B6B5D677153D329 /* Pods-TCSandbox.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TCSandbox/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TCSandbox/Pods-TCSandbox.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TCSandbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		218F3DD4CE931354ED342A3299A4C885 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAAB18B55B380D69F8FD73D59B4654FC /* Pods-TCSandboxTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TCSandboxTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TCSandboxTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		28082A3B2E43CFEF79F57855AC4BC981 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C072E08B9D2125C4199EAA33A27826E5 /* Pods-TCSandbox.debug.xcconfig */;
+			baseConfigurationReference = A2961E9118E861DFAA845315C1FE0C30 /* SnappingStepper.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -842,18 +906,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TCSandbox/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SnappingStepper/SnappingStepper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnappingStepper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TCSandbox/Pods-TCSandbox.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SnappingStepper/SnappingStepper.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TCSandbox;
+				PRODUCT_NAME = SnappingStepper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -862,6 +922,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		279CCC889DA735ECE42837F7E4C4D8B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3907502FBDA883F4261A7A08A5270E15 /* Pods-TCSandboxUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TCSandboxUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TCSandboxUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -903,7 +996,7 @@
 		};
 		4EAFBD7452B51CA2B62271C00487978B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C270EA3B8A49C189884743D015285F17 /* DynamicColor.xcconfig */;
+			baseConfigurationReference = 1D9FFE37210A2A9BC23160B17B670874 /* DynamicColor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -973,9 +1066,9 @@
 			};
 			name = Debug;
 		};
-		70473FDC98F3200E181E9D36815FD21D /* Release */ = {
+		6669CE0BD3B10612B5183304379C5236 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6F44381EEA5348FF9FC52485F120082 /* SnappingStepper.xcconfig */;
+			baseConfigurationReference = DAAB18B55B380D69F8FD73D59B4654FC /* Pods-TCSandboxTests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -986,14 +1079,51 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnappingStepper/SnappingStepper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnappingStepper/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TCSandboxTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnappingStepper/SnappingStepper.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SnappingStepper;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TCSandboxTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7284A89A64AEEAAC1649CA5F2CDCDF17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FE9EFBF00D21E91B6B5D677153D329 /* Pods-TCSandbox.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TCSandbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TCSandbox/Pods-TCSandbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TCSandbox;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1004,7 +1134,7 @@
 		};
 		788662EB83B90E3F18010FEA113A2C21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5B2A40585AD71E7F08EB0D8D64201B4 /* DGRunkeeperSwitch.xcconfig */;
+			baseConfigurationReference = F583BF20FD97A65602518B1713C59CFE /* DGRunkeeperSwitch.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1031,9 +1161,38 @@
 			};
 			name = Release;
 		};
+		79D8DA4FD5A9B8AB9874B39C7B86C62E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F324567D6C59B1E6DD2E29A89C64F781 /* SwiftyGif.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyGif;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		877BD561A9E0EF6440EBABA9B63673FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C270EA3B8A49C189884743D015285F17 /* DynamicColor.xcconfig */;
+			baseConfigurationReference = 1D9FFE37210A2A9BC23160B17B670874 /* DynamicColor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1060,13 +1219,13 @@
 			};
 			name = Release;
 		};
-		8D3211281F7783F5A6DE83330C302952 /* Debug */ = {
+		8817E04FE9B10895034629F938C68FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6F44381EEA5348FF9FC52485F120082 /* SnappingStepper.xcconfig */;
+			baseConfigurationReference = A2961E9118E861DFAA845315C1FE0C30 /* SnappingStepper.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1079,8 +1238,37 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnappingStepper/SnappingStepper.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SnappingStepper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C0F497C73B3810A49658FAF045AB01E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F324567D6C59B1E6DD2E29A89C64F781 /* SwiftyGif.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyGif;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1090,7 +1278,7 @@
 			};
 			name = Debug;
 		};
-		8D677D92DFF04769186FF02DF9BC201B /* Debug */ = {
+		A1513CC64E4FB904542E0462A149B117 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DB7EC87C20B4C6928A9F5C80A3942D2 /* Pods-TCSandboxTests.debug.xcconfig */;
 			buildSettings = {
@@ -1124,7 +1312,7 @@
 			};
 			name = Debug;
 		};
-		B5E2B05A44A8C50123C6563BC48FCF41 /* Debug */ = {
+		C4F7A772AB12478FF1D5D3A69E1BA12D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1BAB64CBAFEEB1005548C9C542C2BD9 /* Pods-TCSandboxUITests.debug.xcconfig */;
 			buildSettings = {
@@ -1160,7 +1348,7 @@
 		};
 		CD8A3BE4AE2CEF50203E4F7910B3CC2F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5B2A40585AD71E7F08EB0D8D64201B4 /* DGRunkeeperSwitch.xcconfig */;
+			baseConfigurationReference = F583BF20FD97A65602518B1713C59CFE /* DGRunkeeperSwitch.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1188,47 +1376,48 @@
 			};
 			name = Debug;
 		};
-		DA70568C5AB14D1150E25FE4A6834EC1 /* Release */ = {
+		F48E6FA4D099C3A355233EEBCD9D8AC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3907502FBDA883F4261A7A08A5270E15 /* Pods-TCSandboxUITests.release.xcconfig */;
+			baseConfigurationReference = C072E08B9D2125C4199EAA33A27826E5 /* Pods-TCSandbox.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TCSandboxUITests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TCSandbox/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Pods-TCSandbox/Pods-TCSandbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TCSandboxUITests;
+				PRODUCT_NAME = Pods_TCSandbox;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		242DB3D56E91B8EAE93F2C7E6B8D1742 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxTests" */ = {
+		0B7E3FD633DB2E2A9C8AF6DDA22B578C /* Build configuration list for PBXNativeTarget "SwiftyGif" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8D677D92DFF04769186FF02DF9BC201B /* Debug */,
-				218F3DD4CE931354ED342A3299A4C885 /* Release */,
+				8C0F497C73B3810A49658FAF045AB01E /* Debug */,
+				79D8DA4FD5A9B8AB9874B39C7B86C62E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1242,11 +1431,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DFDD0ACBC00BD8A3507470A235F1D80 /* Build configuration list for PBXNativeTarget "Pods-TCSandbox" */ = {
+		4335183BD90575C0EBBCFA5AB24C6E1C /* Build configuration list for PBXNativeTarget "SnappingStepper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28082A3B2E43CFEF79F57855AC4BC981 /* Debug */,
-				0D428B28621C046842F7D3385931DDC4 /* Release */,
+				2711ED4045E3A4C2B4F06DA54ECC99A7 /* Debug */,
+				8817E04FE9B10895034629F938C68FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C722815BA72F0C0C8CF25EA01B6E287 /* Build configuration list for PBXNativeTarget "Pods-TCSandbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48E6FA4D099C3A355233EEBCD9D8AC6 /* Debug */,
+				7284A89A64AEEAAC1649CA5F2CDCDF17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CF1620F63FA6BC25599173F77815702 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F7A772AB12478FF1D5D3A69E1BA12D /* Debug */,
+				279CCC889DA735ECE42837F7E4C4D8B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1260,20 +1467,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDC68F6268F54C27FE1C217E32E97911 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxUITests" */ = {
+		A459EE423A08F848C745F9CB7E847052 /* Build configuration list for PBXNativeTarget "Pods-TCSandboxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5E2B05A44A8C50123C6563BC48FCF41 /* Debug */,
-				DA70568C5AB14D1150E25FE4A6834EC1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E0A9293D0F0B478FB1D441720BDC2426 /* Build configuration list for PBXNativeTarget "SnappingStepper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8D3211281F7783F5A6DE83330C302952 /* Debug */,
-				70473FDC98F3200E181E9D36815FD21D /* Release */,
+				A1513CC64E4FB904542E0462A149B117 /* Debug */,
+				6669CE0BD3B10612B5183304379C5236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

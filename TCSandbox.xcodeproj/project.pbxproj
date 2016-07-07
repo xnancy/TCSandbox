@@ -13,6 +13,7 @@
 		82C6654D1D2DC18D00D642CA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */; };
 		9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309A1D2DAAC200F6B59F /* Workout.swift */; };
 		9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309C1D2DAB1A00F6B59F /* Move.swift */; };
+		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
 		925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E581D2D79C1000F44F7 /* AppDelegate.swift */; };
 		925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E5A1D2D79C1000F44F7 /* ViewController.swift */; };
 		925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925D8E5C1D2D79C1000F44F7 /* Main.storyboard */; };
@@ -22,6 +23,10 @@
 		925D8E791D2D79C1000F44F7 /* TCSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E781D2D79C1000F44F7 /* TCSandboxUITests.swift */; };
 		925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */; };
 		925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */; };
+		929A02A31D2ECA1500FC1E96 /* steps.gif in Resources */ = {isa = PBXBuildFile; fileRef = 929A02A21D2ECA1500FC1E96 /* steps.gif */; };
+		929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A41D2ECA8A00FC1E96 /* User.swift */; };
+		929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A61D2ECAD800FC1E96 /* Challenge.swift */; };
+		929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
 		D600F4FB8CA321C8E23A66B0 /* Pods_TCSandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */; };
 		E296B86C9D9CCC0E9BA3A7FF /* Pods_TCSandboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */; };
@@ -58,6 +63,7 @@
 		91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9214309A1D2DAAC200F6B59F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		9214309C1D2DAB1A00F6B59F /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
 		925D8E551D2D79C1000F44F7 /* TCSandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCSandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D8E581D2D79C1000F44F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925D8E5A1D2D79C1000F44F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +79,10 @@
 		925D8E7A1D2D79C1000F44F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorViewController.swift; sourceTree = "<group>"; };
 		925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorTableViewCell.swift; sourceTree = "<group>"; };
+		929A02A21D2ECA1500FC1E96 /* steps.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = steps.gif; path = ../../../../Downloads/steps.gif; sourceTree = "<group>"; };
+		929A02A41D2ECA8A00FC1E96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		929A02A61D2ECAD800FC1E96 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipLibrary.swift; sourceTree = "<group>"; };
 		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +131,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9214309E1D2DCAF000F6B59F /* API Clients */ = {
+			isa = PBXGroup;
+			children = (
+				9214309F1D2DCB0900F6B59F /* FBClient.swift */,
+			);
+			name = "API Clients";
+			sourceTree = "<group>";
+		};
 		925D8E4C1D2D79C1000F44F7 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +164,8 @@
 		925D8E571D2D79C1000F44F7 /* TCSandbox */ = {
 			isa = PBXGroup;
 			children = (
+				929A029F1D2EC99600FC1E96 /* Gifs */,
+				9214309E1D2DCAF000F6B59F /* API Clients */,
 				925D8E8B1D2DA8F0000F44F7 /* Data Objects */,
 				925D8E8A1D2DA8EC000F44F7 /* Views */,
 				925D8E881D2DA8E0000F44F7 /* View Controllers */,
@@ -199,8 +219,19 @@
 			children = (
 				9214309A1D2DAAC200F6B59F /* Workout.swift */,
 				9214309C1D2DAB1A00F6B59F /* Move.swift */,
+				929A02A41D2ECA8A00FC1E96 /* User.swift */,
+				929A02A61D2ECAD800FC1E96 /* Challenge.swift */,
+				929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */,
 			);
 			name = "Data Objects";
+			sourceTree = "<group>";
+		};
+		929A029F1D2EC99600FC1E96 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				929A02A21D2ECA1500FC1E96 /* steps.gif */,
+			);
+			name = Gifs;
 			sourceTree = "<group>";
 		};
 		BB48B6A1CD1C408D9EFC48D2 /* Pods */ = {
@@ -328,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929A02A31D2ECA1500FC1E96 /* steps.gif in Resources */,
 				925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
 				925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */,
@@ -478,13 +510,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */,
 				925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */,
 				925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */,
 				925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */,
+				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
+				929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */,
 				9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */,
 				9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
+				929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
