@@ -10,6 +10,8 @@ pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
 pod 'SwiftyGif'
 pod 'Firebase'
+pod 'Firebase/Database' 
+pod 'Firebase/Auth'
   target 'TCSandboxTests' do
     inherit! :search_paths
     # Pods for testing
@@ -17,6 +19,8 @@ pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
 pod 'SwiftyGif'
 pod 'Firebase'
+pod 'Firebase/Database' 
+pod 'Firebase/Auth'
   end
 
   target 'TCSandboxUITests' do
@@ -26,6 +30,8 @@ pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
 pod 'SwiftyGif'
 pod 'Firebase'
+pod 'Firebase/Database' 
+pod 'Firebase/Auth'
   end
 
 end
