@@ -9,8 +9,12 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+
 
     override func viewDidLoad()
     {
@@ -23,7 +27,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         else
         {
-            User.updateCurrentUser()
+            if User.currentUser == nil
+            {
+                //check if this user exists on firebase, if not
+                //then add them to firebase and initialize a new user
+                //otherwise, pull their info from firebase and initialize
+                //a new user
+            }
         }
         
         
@@ -52,11 +62,14 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if error == nil
         {
-            //LOGIN WAS SUCCESSFUL
+            //check if this user exists on firebase, if not
+            //then add them to firebase and initialize a new user
+            //otherwise, pull their info from firebase and initialize
+            //a new user
             
             
             performSegueWithIdentifier("loginSegue", sender: self)
-            User.updateCurrentUser()
+            FBClient.saveUser()
         }
         
         else

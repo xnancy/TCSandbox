@@ -12,20 +12,49 @@ import FBSDKLoginKit
 
 class User: AnyObject {
     var FBID: String?
-    var profileImageURL: NSURL?
+    var profileImageURLString: String?
     var email: String?
     var friends: [User]?
     var currentChallenges: [Challenge]?
     
+    static var currentUser: User?
+    
  
-    init(FBID: String?, email: String?, profileImageURL: NSURL?)
+    init(FBID: String?, email: String?, profileImageURLString: String?)
     {
         self.FBID = FBID
         self.email = email
-        self.profileImageURL = profileImageURL
+        self.profileImageURLString = profileImageURLString
+        self.friends = []
+        self.currentChallenges = []
     }
     
-    static var currentUser: User?
+    
+    func upload(challenge: Challenge)
+    {
+        
+    }
+    
+    func remove(challenge: Challenge)
+    {
+        
+    }
+    
+    func addFriend(friend: User)
+    {
+        self.friends?.append(friend)
+    }
+    
+    func removeFriend(friend: User)
+    {
+        
+    }
+    
+    func sendChallenge(challenge: Challenge, friend: User)
+    {
+        
+    }
+    
     
     
     class func updateCurrentUser()
@@ -48,10 +77,10 @@ class User: AnyObject {
             
             let FBID = user["id"] as! String
             let email = user["email"] as! String
-            let profileImageURL = NSURL(fileURLWithPath: pictureUrl)
+            let profileImageURLString = pictureUrl
             
             
-            User.currentUser = User(FBID: FBID, email: email, profileImageURL: profileImageURL)
+            User.currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString)
         })
     }
 }
