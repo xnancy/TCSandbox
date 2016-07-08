@@ -9,6 +9,7 @@
 class Workout: AnyObject {
     var name: String?
     var movesList: [Move]?
+    var ownerID: String?
     
     init() {
         name = ""

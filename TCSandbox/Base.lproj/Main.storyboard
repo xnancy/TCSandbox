@@ -17,15 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="193" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRX-yt-sA8">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRX-yt-sA8">
+                                <rect key="frame" x="0.0" y="10" width="320" height="509"/>
+                                <color key="backgroundColor" red="0.71764705882352942" green="1" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.71764705882352942" green="1" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.71764705882352942" green="1" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutEditorTableCell" rowHeight="193" id="MGB-im-TUS" customClass="WorkoutEditorTableViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="193"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutEditorTableCell" rowHeight="87" id="MGB-im-TUS" customClass="WorkoutEditorTableViewCell" customModule="TCSandbox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MGB-im-TUS" id="imf-4l-Y2w">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="192.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="86.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6V-uw-Oah">
@@ -34,14 +36,26 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-Z3-Kds" customClass="SnappingStepper" customModule="SnappingStepper">
+                                                    <rect key="frame" x="105" y="46" width="74" height="27"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-ya-yx9">
-                                                    <rect key="frame" x="13" y="46" width="94" height="101"/>
+                                                    <rect key="frame" x="8" y="0.0" width="81" height="78.5"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Put-kR-A1D" customClass="DGRunkeeperSwitch" customModule="DGRunkeeperSwitch">
+                                                    <rect key="frame" x="197" y="46" width="85" height="27"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.76011141592178699" green="1" blue="0.90683656843979699" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.71764705882352942" green="1" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="gifImageView" destination="TOi-ya-yx9" id="abK-x4-sZN"/>
                                             <outlet property="repetitionQuantityLabel" destination="i6V-uw-Oah" id="fmC-EW-RTH"/>
+                                            <outlet property="repetitionQuantityStepper" destination="sCQ-Z3-Kds" id="RfY-d3-0Hb"/>
+                                            <outlet property="repetitionTypeSwitch" destination="Put-kR-A1D" id="OVG-T9-4Ks"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -49,9 +63,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Make a Workout" id="Iff-pL-WZ6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0b6-o3-udv"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Make a Workout" id="Iff-pL-WZ6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="workoutEditorTableView" destination="YRX-yt-sA8" id="2MC-yK-OZP"/>

@@ -20,15 +20,31 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     /* ---------- VARIABLES ---------- */
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
     var currentWorkout: Workout?
+    var navigationBarTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Create editable navigation bar title
+        navigationBarTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
+        navigationBarTextField.placeholder = "Name Your Workout..."
+        navigationBarTextField.font = UIFont.systemFontOfSize(19)
+        navigationBarTextField.textColor = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+        navigationBarTextField.textAlignment = .Center
+        navigationBarTextField.addTarget(self, action: "navigationBarTextFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
 
+        self.navigationItem.titleView = navigationBarTextField
+
+        // TESTING: Add temp move to workout
         currentWorkout = Workout()
         
         let newMove = Move()
         currentWorkout?.movesList?.append(newMove)
+        currentWorkout?.movesList?.append(newMove)
+        currentWorkout?.movesList?.append(newMove)
+        currentWorkout?.movesList?.append(newMove)
         
+        // Set table view delegate/data source
         workoutEditorTableView.delegate = self
         workoutEditorTableView.dataSource = self
     
@@ -40,18 +56,24 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
         // Dispose of any resources that can be recreated.
     }
     
+    /* ---------- NAVIGATION BAR TEXT FIELD ---------- */
+    func navigationBarTextFieldDidChange() {
+        currentWorkout?.name = navigationBarTextField.text
+    }
+    
     /* ---------- TABLE VIEW DATA SOURCE ---------- */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = workoutEditorTableView.dequeueReusableCellWithIdentifier("workoutEditorTableCell") as! WorkoutEditorTableViewCell
         
-        // Add gif to imageview
-        let gif = UIImage(gifName: "Gifs/steps.gif")
-        //cell.gifImageView.setGifImage(gif, manager: gifmanager, loopCount: 20)
-        // Ad stepper and switch to imageview
+        // Add gif to cell
+        let gif = UIImage(gifName: "pushup")
+        cell.gifImageView.setGifImage(gif, manager: gifmanager, loopCount: 20)
+        
+        // Add stepper and switch to cell using UIHomeElementMaker
         UIHomeElementMaker.workoutEditorTableView = workoutEditorTableView
         UIHomeElementMaker.currentWorkout = currentWorkout
-        cell.addSubview(UIHomeElementMaker.makeRepetitionTypeSwitch())
-        cell.addSubview(UIHomeElementMaker.makeRepetitionCountStepper())
+        UIHomeElementMaker.setRepetitionTypeSwitch(cell.repetitionTypeSwitch)
+        UIHomeElementMaker.setRepetitionCountStepper(cell.repetitionQuantityStepper)
         
         return cell
     }

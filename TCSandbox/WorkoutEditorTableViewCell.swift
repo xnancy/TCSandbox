@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import DGRunkeeperSwitch
+import SnappingStepper
 
 class WorkoutEditorTableViewCell: UITableViewCell {
 
     /* ---------- OUTLETS ---------- */
     @IBOutlet weak var repetitionQuantityLabel: UILabel!
     @IBOutlet weak var gifImageView: UIImageView!
+    @IBOutlet weak var repetitionQuantityStepper: SnappingStepper!
+    @IBOutlet weak var repetitionTypeSwitch: DGRunkeeperSwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()

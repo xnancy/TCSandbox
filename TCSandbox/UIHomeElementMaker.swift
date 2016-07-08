@@ -20,73 +20,67 @@ class UIHomeElementMaker: NSObject {
     
     
     /* ---------- DGRunkeeperSwitch ---------- */
-    static func makeRepetitionTypeSwitch() -> DGRunkeeperSwitch {
-        let runkeeperSwitch = DGRunkeeperSwitch(leftTitle: repetitionTypeOptions[0], rightTitle: repetitionTypeOptions[1])
-        runkeeperSwitch.backgroundColor = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-        runkeeperSwitch.selectedBackgroundColor = .whiteColor()
-        runkeeperSwitch.titleColor = .whiteColor()
-        runkeeperSwitch.selectedTitleColor = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-        runkeeperSwitch.titleFont = UIFont(name: "HelveticaNeue-Medium", size: 13.0)
-        runkeeperSwitch.frame = CGRect(x: 200.0, y: 20.0, width: 100, height: 30.0)
-        runkeeperSwitch.autoresizingMask = [.FlexibleWidth]
-        runkeeperSwitch.addTarget(self, action: "repetitionTypeSwitchValueChanged:", forControlEvents: .ValueChanged)
-        return runkeeperSwitch
+    static func setRepetitionTypeSwitch(rSwitch: DGRunkeeperSwitch) {
+        rSwitch.leftTitle = repetitionTypeOptions[0]
+        rSwitch.rightTitle = repetitionTypeOptions[1]
+        rSwitch.backgroundColor = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+        rSwitch.selectedBackgroundColor = .whiteColor()
+        rSwitch.titleColor = .whiteColor()
+        rSwitch.selectedTitleColor = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+        rSwitch.titleFont = UIFont(name: "HelveticaNeue-Medium", size: 13.0)
+        rSwitch.autoresizingMask = [.FlexibleWidth]
+        rSwitch.addTarget(self, action: #selector(UIHomeElementMaker.repetitionTypeSwitchValueChanged(_:)), forControlEvents: .ValueChanged)
     }
     
     /* ---------- SNAPPING STEPPER ---------- */
-    static func makeRepetitionCountStepper() -> SnappingStepper {
-        let stepper = SnappingStepper(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
-        
+    static func setRepetitionCountStepper(sStepper: SnappingStepper) {
         // Configure the stepper like any other UIStepper. For example:
-        //
         
-        stepper.continuous   = true
-        stepper.autorepeat   = true
-        stepper.wraps        = true
-        stepper.minimumValue = 0
-        stepper.maximumValue = 250
-        stepper.stepValue    = 1
+        sStepper.continuous   = true
+        sStepper.autorepeat   = true
+        sStepper.wraps        = true
+        sStepper.minimumValue = 0
+        sStepper.maximumValue = 250
+        sStepper.stepValue    = 1
         
-        stepper.style                = .Rounded
-        stepper.thumbStyle           = .Rounded
-        stepper.borderColor          = UIColor(hex: 0xFFC107)
-        stepper.borderWidth          = 0.5
-        stepper.hintStyle            = .Thumb
+        sStepper.style                = .Box
+        sStepper.thumbStyle           = .Tube
+        sStepper.borderColor          = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+        sStepper.borderWidth          = 0.5
+        sStepper.hintStyle            = .Rounded
         
-        stepper.symbolFont           = UIFont(name: "TrebuchetMS-Bold", size: 20)
-        stepper.symbolFontColor      = .blackColor()
-        stepper.backgroundColor      = UIColor(hex: 0xc0392b)
-        stepper.thumbWidthRatio      = 0.4
-        stepper.thumbText            = nil
-        stepper.thumbFont            = UIFont(name: "TrebuchetMS-Bold", size: 18)
-        stepper.thumbBackgroundColor = UIColor(hex: 0xe74c3c)
-        stepper.thumbTextColor       = .blackColor()
+        sStepper.symbolFont           = UIFont(name: "TrebuchetMS-Bold", size: 20)
+        sStepper.symbolFontColor      = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+        sStepper.backgroundColor      = UIColor.whiteColor()
+        sStepper.thumbWidthRatio      = 0.4
+        sStepper.thumbText            = nil
+        sStepper.thumbFont            = UIFont(name: "TrebuchetMS-Bold", size: 18)
+        sStepper.thumbBackgroundColor = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+        sStepper.thumbTextColor       = UIColor.whiteColor()
         
-        stepper.continuous   = true
-        stepper.autorepeat   = true
-        stepper.wraps        = false
-        stepper.minimumValue = 0
-        stepper.maximumValue = 1000
-        stepper.stepValue    = 1
-        stepper.addTarget(self, action: "repetitionCountStepperValueChanged:", forControlEvents: .ValueChanged)
+        sStepper.continuous   = true
+        sStepper.autorepeat   = true
+        sStepper.wraps        = false
+        sStepper.minimumValue = 0
+        sStepper.maximumValue = 1000
+        sStepper.stepValue    = 1
+        sStepper.addTarget(self, action: "repetitionCountStepperValueChanged:", forControlEvents: .ValueChanged)
         
         // If you don't want using the traditional `addTarget:action:` pattern you can use
         // the `valueChangedBlock`
         // snappingStepper.valueChangeBlock = { (value: Double) in
         //    println("value: \(value)")
         // }
-        
-        return stepper
     }
     
     static func repetitionCountStepperValueChanged(sender: AnyObject) {
-        let cellIndexPath = workoutEditorTableView!.indexPathForCell(((sender as! SnappingStepper).superview!) as! UITableViewCell)
+        let cellIndexPath = workoutEditorTableView!.indexPathForCell(((sender as! SnappingStepper).superview?.superview!) as! UITableViewCell)
         currentWorkout?.movesList![(cellIndexPath?.row)!].quantity = Int((sender as! SnappingStepper).value)
-        ((sender as! SnappingStepper).superview! as! WorkoutEditorTableViewCell).repetitionQuantityLabel.text = String(currentWorkout?.movesList![(cellIndexPath?.row)!].quantity)
+        ((sender as! SnappingStepper).superview!.superview! as! WorkoutEditorTableViewCell).repetitionQuantityLabel.text = String(currentWorkout?.movesList![(cellIndexPath?.row)!].quantity)
     }
     
     static func repetitionTypeSwitchValueChanged(sender: AnyObject) {
-        let cellIndexPath = workoutEditorTableView!.indexPathForCell(((sender as! DGRunkeeperSwitch).superview!) as! UITableViewCell)
+        let cellIndexPath = workoutEditorTableView!.indexPathForCell(((sender as! DGRunkeeperSwitch).superview!.superview!) as! UITableViewCell)
         currentWorkout?.movesList![(cellIndexPath?.row)!].repetitionType = repetitionTypeOptions[(sender as! DGRunkeeperSwitch).selectedIndex]
     }
 
