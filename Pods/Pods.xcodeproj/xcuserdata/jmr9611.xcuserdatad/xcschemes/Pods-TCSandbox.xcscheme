@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "86BA6CC9DF4AE9FB9A599FCC446A0B89"
+               BlueprintIdentifier = "B15C8C6D4CB3140CB7FEFEC4FA0D74E8"
                BuildableName = "Pods_TCSandbox.framework"
                BlueprintName = "Pods-TCSandbox"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "86BA6CC9DF4AE9FB9A599FCC446A0B89"
+            BlueprintIdentifier = "B15C8C6D4CB3140CB7FEFEC4FA0D74E8"
             BuildableName = "Pods_TCSandbox.framework"
             BlueprintName = "Pods-TCSandbox"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "86BA6CC9DF4AE9FB9A599FCC446A0B89"
-            BuildableName = "Pods_TCSandbox.framework"
-            BlueprintName = "Pods-TCSandbox"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -6,53 +6,43 @@
 	<dict>
 		<key>DGRunkeeperSwitch.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>DynamicColor.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TCSandbox.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TCSandboxTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TCSandboxUITests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SnappingStepper.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyGif.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03EA3ECBAB81EF59223CD6006407E74A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>08F6A5AF8E89681F880EB03F167AACB7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>231EB84C1EE3E59E4426A9E6F0E194BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,22 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86BA6CC9DF4AE9FB9A599FCC446A0B89</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9C5EEF61FC1E11B3F0FDD36F00F8A300</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B15C8C6D4CB3140CB7FEFEC4FA0D74E8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B1BD2CBB5D0170DBF1EFAC2CC3F364CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

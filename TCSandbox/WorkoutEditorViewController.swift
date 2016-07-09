@@ -10,6 +10,9 @@ import UIKit
 import SnappingStepper
 import DGRunkeeperSwitch
 import SwiftyGif
+import FBSDKCoreKit
+import FBSDKLoginKit
+
 
 
 class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -24,6 +27,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Create editable navigation bar title
         navigationBarTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
@@ -80,5 +84,6 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (currentWorkout?.movesList?.count)!
-    }    
+    }
+    
 }
