@@ -7,44 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		038ED4E9C1F74F24A7EDBA0363D5ABB6 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFD4CAEF65446B2E93CCF9D428F84B4 /* UIImage+SwiftyGif.swift */; };
-		04A9D5998698BE50382C965D28809495 /* SnappingStepper+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D3AE325944437F5DE805677C99D077 /* SnappingStepper+Internal.swift */; };
-		06720CD7705F71178390FE16A75D419A /* DGRunkeeperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7B61A9A5F156780771C2B0AC0DC17 /* DGRunkeeperSwitch.swift */; };
-		0796037A66F519F5C8C957C181AC9632 /* CustomShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A0BB8382315067846D432AFAF3CE2 /* CustomShapeLayer.swift */; };
+		038ED4E9C1F74F24A7EDBA0363D5ABB6 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8139E12214811E30E1F706BC6BCF3 /* UIImage+SwiftyGif.swift */; };
+		04A9D5998698BE50382C965D28809495 /* SnappingStepper+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99E894E1E4E754AC39A6CA12CB8201 /* SnappingStepper+Internal.swift */; };
+		06720CD7705F71178390FE16A75D419A /* DGRunkeeperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC9025CB3622F32436908466AC7F64F /* DGRunkeeperSwitch.swift */; };
+		0796037A66F519F5C8C957C181AC9632 /* CustomShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F9E3A5103AB495054242C884C84E60 /* CustomShapeLayer.swift */; };
 		1516896C6C14A90DBF17755D2C5CE345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
 		162D5CD99A811710E381968CF3250E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
-		18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2558325D955718D677DBDABFE353B2D6 /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B518EA988AE51B418EC37A8D3104C49 /* SnappingStepperBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E64E2E5C007A3D651FF6DDE1DD1548 /* SnappingStepperBehavior.swift */; };
-		1D1AEA8AE1E78CDE50EFF598EE4A82F8 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A188A5D3471F640428B9AF327EC76 /* SwiftyGifManager.swift */; };
-		30D800E4F509DC9053B5D0A714F0E5FB /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB2DE736E22B4FBCDC41D644D34012 /* UIImageView+SwiftyGif.swift */; };
+		18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFC17AD83B1B094DB136378944E988D /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B518EA988AE51B418EC37A8D3104C49 /* SnappingStepperBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5731A160C1B10CCF4D70E1BE74C97 /* SnappingStepperBehavior.swift */; };
+		1D1AEA8AE1E78CDE50EFF598EE4A82F8 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A815DE36416D59D4413083C3C6E387 /* SwiftyGifManager.swift */; };
+		30D800E4F509DC9053B5D0A714F0E5FB /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEDA0D9890C6913EAD32E15634146A /* UIImageView+SwiftyGif.swift */; };
 		3FD7E94D9B6B3CB2509AD7C4D700577D /* Pods-TCSandboxUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 516243C17D8CAFC92D8EFFC17ACC0E08 /* Pods-TCSandboxUITests-dummy.m */; };
 		50D4C38178D3144288FFAD06DB4D46D9 /* Pods-TCSandbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE11CC6B46966F7A64831671C116CDDF /* Pods-TCSandbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5362F95BF7DB725BD9E28723917D8709 /* Pods-TCSandboxUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18143586CEF35B3119E44DDED5AD19F6 /* Pods-TCSandboxUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		560643B27617038512AA64E271DD78C3 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243D7300D34C5B0ECC86D0C271A007B /* HSL.swift */; };
-		5D8CC81D38FFCFD3A5745E8C2F86F40B /* DGRunkeeperSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61132EC09636F3F3C601A51ADFD59FAD /* DGRunkeeperSwitch-dummy.m */; };
+		560643B27617038512AA64E271DD78C3 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633B7C33DE1DAD5AED3958034926776 /* HSL.swift */; };
+		5D8CC81D38FFCFD3A5745E8C2F86F40B /* DGRunkeeperSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B18F0931C397712350185BAFD0B2DC7F /* DGRunkeeperSwitch-dummy.m */; };
 		5E8BB815DD73E3E2CF54643B2A191789 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */; };
-		613A5FE3751692D7C084A0A904E8F949 /* SnappingStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08642A23C57AB470B7EF49DA567DBF78 /* SnappingStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62E29425E2735EDFB2FEB127813F4D33 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC8C4B4CD29BA4FFAB91ADA1AA31802 /* DynamicColor.swift */; };
+		613A5FE3751692D7C084A0A904E8F949 /* SnappingStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6C28E44F6449C96BA300B005BD2C90 /* SnappingStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62E29425E2735EDFB2FEB127813F4D33 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C3D296E8ACB9F1C9EDA3CF668D272 /* DynamicColor.swift */; };
 		6354C9869F822DDDFED61FE26461286B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
-		6640B91B2D48BE49ABEAF8A8552523B1 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548C847D28E2DFE0AFBC4FFF6622CA6 /* StyledLabel.swift */; };
+		6640B91B2D48BE49ABEAF8A8552523B1 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C72AE57CCB34A3F3534518045C48D /* StyledLabel.swift */; };
 		6968C586D88DFDF5E886092CEF9B069C /* DynamicColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DDC93F13ED79859A8F8A4E307B73DC /* DynamicColor.framework */; };
-		6DCD1290D30BD8732000257868224767 /* ShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E341B9D6C055043E03273B2C67C5F7 /* ShapeStyle.swift */; };
-		70D539D95464081704AB1908CA2D76B4 /* SnappingStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FCA73A8900C4B2442205E85DFA733E /* SnappingStepper-dummy.m */; };
-		7A6E1EAE00D9A02AF18C7027E944CB7B /* SwiftyGif-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B121C19B2F028838AF54F4C2B90C093B /* SwiftyGif-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83B13B676574FCF9247DF4C2FB0E5263 /* UITouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8B9F449819AAC6C73C1B5C157848B /* UITouchGestureRecognizer.swift */; };
+		6DCD1290D30BD8732000257868224767 /* ShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A66118C85175DA7E9F23FA92E399 /* ShapeStyle.swift */; };
+		70D539D95464081704AB1908CA2D76B4 /* SnappingStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE7BD98246E579205DF3448BB3CE96F /* SnappingStepper-dummy.m */; };
+		7A6E1EAE00D9A02AF18C7027E944CB7B /* SwiftyGif-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B85A65B0ACB7348C616C8C185BCE8C5D /* SwiftyGif-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83B13B676574FCF9247DF4C2FB0E5263 /* UITouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7BC23997F9950EB66437EB8B83D9D /* UITouchGestureRecognizer.swift */; };
 		851E0387E4EB02E5DCCCCAADFE01445B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */; };
-		91F5DD60A0E64FD9A2CDC59DC102432A /* AutoRepeatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93F392409AC967705E0275159293C4 /* AutoRepeatHelper.swift */; };
+		91F5DD60A0E64FD9A2CDC59DC102432A /* AutoRepeatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8A9508C23CA4D44E4BD2291CC43CA /* AutoRepeatHelper.swift */; };
 		9AC59BEC4909846DA63777F9EADD1BBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
 		A5ECFB5F213D4D5F2033E6438A246758 /* Pods-TCSandbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01A2B0A84BCF8A81DBD02F6F8F1DA5 /* Pods-TCSandbox-dummy.m */; };
-		B63F56C886B511EBD4E9EFC19B8621CE /* SnappingStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0384395145461034C17309FBCD63660A /* SnappingStepper.swift */; };
+		B63F56C886B511EBD4E9EFC19B8621CE /* SnappingStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5AAB50D7C085CEEF8B72DB24B4E2E /* SnappingStepper.swift */; };
 		CB86E23DE35C17A5E8CA55E23CE8A1DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */; };
-		CC6BACAF2E2BCF29207171C8E934EFD6 /* UIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5895D9DC30B199081D65E9621F35E2 /* UIBuilder.swift */; };
-		CEDB724342476CBE063FFB437D7EE973 /* DGRunkeeperSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCAE6377C29AB1A7A6871512944CACD3 /* DGRunkeeperSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D072E2D9BFAD7C617D9A6F2830BB6672 /* SwiftyGif-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAEE9EAFACE25A3E0F179A892D0DE6C /* SwiftyGif-dummy.m */; };
+		CC6BACAF2E2BCF29207171C8E934EFD6 /* UIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380A75DA62401B15B56E7F4BB0EA7C7D /* UIBuilder.swift */; };
+		CEDB724342476CBE063FFB437D7EE973 /* DGRunkeeperSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47FCFF233983E31E0D8E6D0A692DC152 /* DGRunkeeperSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D072E2D9BFAD7C617D9A6F2830BB6672 /* SwiftyGif-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D724A61C36927394CD819A6EEA50F /* SwiftyGif-dummy.m */; };
 		D247CA1E455E1FF8FA97ACFFF9282D13 /* Pods-TCSandboxTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E226FAD8D2BDBE7F04989FAE744492F /* Pods-TCSandboxTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8DFEF4988798D00D18FA59910C5C185 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
 		DBB1636BF20D08BB80E03510E4D5F826 /* Pods-TCSandboxTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E622B9178A1271D696478AA9AB85205B /* Pods-TCSandboxTests-dummy.m */; };
-		DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20032B9FCBFE092603439955ABD2100D /* DynamicColor-dummy.m */; };
+		DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0CA236C3D1285D503FF5C86E3FABD0 /* DynamicColor-dummy.m */; };
 		EAB215B97DB22CCC5715C39DDFE1F3E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
 		EEEB710A6F2BF621D014CC1909D9540D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -144,93 +144,96 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B0C03BDA9756F395F8CB17B351E39C /* DGRunkeeperSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-prefix.pch"; sourceTree = "<group>"; };
-		01623DA911293C5AF92F4DD167E6AAE5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002621E6DF7908EFCFBC890015379C40 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		02DDC93F13ED79859A8F8A4E307B73DC /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0384395145461034C17309FBCD63660A /* SnappingStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepper.swift; path = Sources/SnappingStepper.swift; sourceTree = "<group>"; };
-		07DC540C284A1D7FFCCEF8A8EA5B7110 /* SnappingStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-prefix.pch"; sourceTree = "<group>"; };
 		07FE9EFBF00D21E91B6B5D677153D329 /* Pods-TCSandbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandbox.release.xcconfig"; sourceTree = "<group>"; };
-		08642A23C57AB470B7EF49DA567DBF78 /* SnappingStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-umbrella.h"; sourceTree = "<group>"; };
 		088DD30691A7E0C6F3D079E78F720BAE /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B06ADC759DF6C341659AF7C7AA514F8 /* Pods-TCSandbox-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCSandbox-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0B9DB10CDF38F98A1533314848B5E7A5 /* SnappingStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-prefix.pch"; sourceTree = "<group>"; };
+		0DB206ACC0A654935F94A7A72F1E4966 /* SnappingStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnappingStepper.xcconfig; sourceTree = "<group>"; };
 		0E31FF7C312023CF69BBEA57C269CECF /* Pods-TCSandboxUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TCSandboxUITests.modulemap"; sourceTree = "<group>"; };
-		1548C847D28E2DFE0AFBC4FFF6622CA6 /* StyledLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyledLabel.swift; path = Sources/StyledLabel.swift; sourceTree = "<group>"; };
+		10E821ADA664CF2B91A755BB4C620672 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		18143586CEF35B3119E44DDED5AD19F6 /* Pods-TCSandboxUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCSandboxUITests-umbrella.h"; sourceTree = "<group>"; };
+		1AFC17AD83B1B094DB136378944E988D /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
+		1C8DFBA7AD5A091E449EB966CCD61F8C /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
 		1E2E0662F9B805FE1E773462BB33EFD9 /* Pods-TCSandbox-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCSandbox-acknowledgements.plist"; sourceTree = "<group>"; };
-		20032B9FCBFE092603439955ABD2100D /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
-		21FD1C8B2A0E3FB324D0CC3B8337090B /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
-		2558325D955718D677DBDABFE353B2D6 /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
-		26C9B5516348DB9AFB0DDBB9ADCFBA57 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
-		281CB1B3AC40766055DEDFA8358A329F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		223A456C4193631DEFD9FAF40DE9948B /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		274EE0C19A8FD0AF4ABCD6BAEEBE6D02 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
 		287DFA2121087373B137CF813F3D0C60 /* Pods-TCSandboxUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCSandboxUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D6C28E44F6449C96BA300B005BD2C90 /* SnappingStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnappingStepper-umbrella.h"; sourceTree = "<group>"; };
 		2DB7EC87C20B4C6928A9F5C80A3942D2 /* Pods-TCSandboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2EC386098A56A061767820211FC7521E /* SwiftyGif.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.xcconfig; sourceTree = "<group>"; };
+		2F3C72AE57CCB34A3F3534518045C48D /* StyledLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyledLabel.swift; path = Sources/StyledLabel.swift; sourceTree = "<group>"; };
 		2FC6E7A6061FAE0223A07FE9353FC1F5 /* Pods_TCSandboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FC8C4B4CD29BA4FFAB91ADA1AA31802 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
 		32CEFFBE2CEC13522C5D931D57227DFB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33E64E2E5C007A3D651FF6DDE1DD1548 /* SnappingStepperBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepperBehavior.swift; path = Sources/SnappingStepperBehavior.swift; sourceTree = "<group>"; };
 		35C72198B4D3B949E8BFAA4CE62F86B5 /* Pods-TCSandboxTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCSandboxTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		380A75DA62401B15B56E7F4BB0EA7C7D /* UIBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBuilder.swift; path = Sources/UIBuilder.swift; sourceTree = "<group>"; };
 		3907502FBDA883F4261A7A08A5270E15 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
-		3A7E242AEFBFF15E8DC4A7BAB23E0E0D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C3D724A61C36927394CD819A6EEA50F /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
 		3E226FAD8D2BDBE7F04989FAE744492F /* Pods-TCSandboxTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCSandboxTests-umbrella.h"; sourceTree = "<group>"; };
 		3F3F789959ECA6429B8374C84E5E982E /* Pods-TCSandboxTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TCSandboxTests.modulemap"; sourceTree = "<group>"; };
-		437A188A5D3471F640428B9AF327EC76 /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
-		4838E67AC3A0D56549AD88991F39D932 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
-		4AA7B61A9A5F156780771C2B0AC0DC17 /* DGRunkeeperSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGRunkeeperSwitch.swift; path = DGRunkeeperSwitch/DGRunkeeperSwitch.swift; sourceTree = "<group>"; };
+		4180B6B795BD85C83F35A8250065F62C /* SwiftyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyGif.modulemap; sourceTree = "<group>"; };
+		439D0D855B016283D2C926FBB8C15061 /* DGRunkeeperSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGRunkeeperSwitch.modulemap; sourceTree = "<group>"; };
+		47FCFF233983E31E0D8E6D0A692DC152 /* DGRunkeeperSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-umbrella.h"; sourceTree = "<group>"; };
+		4A99E894E1E4E754AC39A6CA12CB8201 /* SnappingStepper+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SnappingStepper+Internal.swift"; path = "Sources/SnappingStepper+Internal.swift"; sourceTree = "<group>"; };
+		4EC9D40DC2DB895CA27A5ECF06848F65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50172753514CDD72AA715977203C0045 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		50577A096568847B84ECD76BDC3953DF /* DGRunkeeperSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGRunkeeperSwitch.xcconfig; sourceTree = "<group>"; };
 		516243C17D8CAFC92D8EFFC17ACC0E08 /* Pods-TCSandboxUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TCSandboxUITests-dummy.m"; sourceTree = "<group>"; };
 		520CE7C6B7AD548B6E9FCCB777A2582E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		58FCA73A8900C4B2442205E85DFA733E /* SnappingStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnappingStepper-dummy.m"; sourceTree = "<group>"; };
+		5E8DDE2AE4B7ACB143150558E645F7AF /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
+		5EFFAEB2379101FCDDE2E70358904EEB /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
+		5FC9025CB3622F32436908466AC7F64F /* DGRunkeeperSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGRunkeeperSwitch.swift; path = DGRunkeeperSwitch/DGRunkeeperSwitch.swift; sourceTree = "<group>"; };
 		6069D1AE3DEBA63D0C0587C4768E5F8D /* Pods-TCSandboxTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxTests-resources.sh"; sourceTree = "<group>"; };
-		61132EC09636F3F3C601A51ADFD59FAD /* DGRunkeeperSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGRunkeeperSwitch-dummy.m"; sourceTree = "<group>"; };
 		68B423367D8DE5A22A4CD750794C3594 /* DGRunkeeperSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGRunkeeperSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6916066EBC4BA97316433BB5CFAB1191 /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
-		6EF8C75ECF607B641EA30E3C866DC3E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72FB2DE736E22B4FBCDC41D644D34012 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		73958D94D581D8A794E9DF5B117FF811 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		752FCCDC4A14A1795C940B8EFE7D7C47 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
 		7DE97B4693AB78F64E30689EECC01D84 /* Pods-TCSandbox-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandbox-resources.sh"; sourceTree = "<group>"; };
+		80CD2E89297792BF8503B3E86A960AC5 /* DGRunkeeperSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-prefix.pch"; sourceTree = "<group>"; };
 		80D3AF600D3CA9026DDDA764BEE97B63 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8243D7300D34C5B0ECC86D0C271A007B /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
 		827AC7CB8AB7649BF12D95AA216AA630 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		843B61DE8B9D02722D0EDA42FA03205F /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		83A5AAB50D7C085CEEF8B72DB24B4E2E /* SnappingStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepper.swift; path = Sources/SnappingStepper.swift; sourceTree = "<group>"; };
 		896749D4A9E562496986823FDAB251BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8C797A3F1A61856DDEE7EA9366B5C0 /* Pods-TCSandbox-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandbox-frameworks.sh"; sourceTree = "<group>"; };
 		8E2B9221F1EECCF4F1F339EF7F364BBD /* SnappingStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnappingStepper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94310CB38699650E187A0CBF165DC016 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		94D1A641BE7B2F06FFD857C9C85297D6 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		93D8A9508C23CA4D44E4BD2291CC43CA /* AutoRepeatHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoRepeatHelper.swift; path = Sources/AutoRepeatHelper.swift; sourceTree = "<group>"; };
+		94CEDA0D9890C6913EAD32E15634146A /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		94DBF44180ADA2ED6057258F64B9C10C /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		9B0D8DDF53459A7E3B76EF0AB95D4C89 /* SwiftyGif.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.xcconfig; sourceTree = "<group>"; };
+		9C0CA236C3D1285D503FF5C86E3FABD0 /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
 		9D115EF5DFE0A9D612297FE46265B309 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9C3D296E8ACB9F1C9EDA3CF668D272 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
 		A1BAB64CBAFEEB1005548C9C542C2BD9 /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2923EF45721F694DA11061997870139 /* Pods-TCSandbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TCSandbox.modulemap"; sourceTree = "<group>"; };
 		A4426236A7CECA4C4EB70127C90A3F75 /* Pods-TCSandboxUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxUITests-frameworks.sh"; sourceTree = "<group>"; };
+		A4A815DE36416D59D4413083C3C6E387 /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
 		A92F85ACEF840CC9E9BF3C265A055B54 /* Pods-TCSandboxTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCSandboxTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AA5895D9DC30B199081D65E9621F35E2 /* UIBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBuilder.swift; path = Sources/UIBuilder.swift; sourceTree = "<group>"; };
 		AE11CC6B46966F7A64831671C116CDDF /* Pods-TCSandbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCSandbox-umbrella.h"; sourceTree = "<group>"; };
-		B121C19B2F028838AF54F4C2B90C093B /* SwiftyGif-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-umbrella.h"; sourceTree = "<group>"; };
-		B7E341B9D6C055043E03273B2C67C5F7 /* ShapeStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeStyle.swift; path = Sources/ShapeStyle.swift; sourceTree = "<group>"; };
-		B9E8BB7A333E2BDA0209970D8003C742 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		BBDF894E850FBA273C77A6CD72A50C66 /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
-		BC1A0BB8382315067846D432AFAF3CE2 /* CustomShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomShapeLayer.swift; path = Sources/CustomShapeLayer.swift; sourceTree = "<group>"; };
-		BC93F392409AC967705E0275159293C4 /* AutoRepeatHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoRepeatHelper.swift; path = Sources/AutoRepeatHelper.swift; sourceTree = "<group>"; };
-		BCAE6377C29AB1A7A6871512944CACD3 /* DGRunkeeperSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRunkeeperSwitch-umbrella.h"; sourceTree = "<group>"; };
+		AFF5731A160C1B10CCF4D70E1BE74C97 /* SnappingStepperBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnappingStepperBehavior.swift; path = Sources/SnappingStepperBehavior.swift; sourceTree = "<group>"; };
+		B18F0931C397712350185BAFD0B2DC7F /* DGRunkeeperSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGRunkeeperSwitch-dummy.m"; sourceTree = "<group>"; };
+		B85A65B0ACB7348C616C8C185BCE8C5D /* SwiftyGif-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-umbrella.h"; sourceTree = "<group>"; };
 		BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BF12B6367C8E295B0CE35ED680EADB7A /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		BEB8139E12214811E30E1F706BC6BCF3 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "SwiftyGif/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
 		C072E08B9D2125C4199EAA33A27826E5 /* Pods-TCSandbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandbox.debug.xcconfig"; sourceTree = "<group>"; };
-		C3F0CB92E9B9AEF0839BA93DC222BB0D /* SnappingStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnappingStepper.xcconfig; sourceTree = "<group>"; };
-		CBAEE9EAFACE25A3E0F179A892D0DE6C /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
-		CF2EFC7E9B8B762C9059E9D6397152BD /* SwiftyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyGif.modulemap; sourceTree = "<group>"; };
-		D0D8C2E17A6423A1C648A9E1B73E0D55 /* DGRunkeeperSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGRunkeeperSwitch.modulemap; sourceTree = "<group>"; };
-		D1E01D5DFA48C2FC251FC5E06CB0A564 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		D80E6695F3646FB2DFDE6A3BFDCFD45A /* SnappingStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnappingStepper.modulemap; sourceTree = "<group>"; };
-		D81672B2BB21890D0B05653BA9B08697 /* DGRunkeeperSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGRunkeeperSwitch.xcconfig; sourceTree = "<group>"; };
-		D9D3AE325944437F5DE805677C99D077 /* SnappingStepper+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SnappingStepper+Internal.swift"; path = "Sources/SnappingStepper+Internal.swift"; sourceTree = "<group>"; };
+		C455633065F79F862CE9F06E68BEED72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C50F19DCBC2F563457CD1E50496C2592 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		C633B7C33DE1DAD5AED3958034926776 /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
+		CAE7BD98246E579205DF3448BB3CE96F /* SnappingStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnappingStepper-dummy.m"; sourceTree = "<group>"; };
+		CFED9FF3EE35A17B7AB22A3F1C37833A /* SnappingStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnappingStepper.modulemap; sourceTree = "<group>"; };
 		DAAB18B55B380D69F8FD73D59B4654FC /* Pods-TCSandboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCSandboxTests.release.xcconfig"; sourceTree = "<group>"; };
+		E174C143CD48DF312B5DF5DF9DFDBD81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4E4E6A99E2C97D0DC7406340D4E4403 /* Pods-TCSandboxTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxTests-frameworks.sh"; sourceTree = "<group>"; };
+		E51D2426A1AF26AEE51439574F5E92B4 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
+		E5AC496850EE3E95D91E6DAECA45FE2F /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
 		E622B9178A1271D696478AA9AB85205B /* Pods-TCSandboxTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TCSandboxTests-dummy.m"; sourceTree = "<group>"; };
 		E630B740B1A3EC7FB90765FCA8A7FE10 /* Pods-TCSandboxUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCSandboxUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EAB22EE27EF7E76C701600EAEBAE2BBE /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAE8B9F449819AAC6C73C1B5C157848B /* UITouchGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITouchGestureRecognizer.swift; path = Sources/UITouchGestureRecognizer.swift; sourceTree = "<group>"; };
-		EEFD4CAEF65446B2E93CCF9D428F84B4 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "SwiftyGif/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		EBB4A66118C85175DA7E9F23FA92E399 /* ShapeStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeStyle.swift; path = Sources/ShapeStyle.swift; sourceTree = "<group>"; };
+		F3F9E3A5103AB495054242C884C84E60 /* CustomShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomShapeLayer.swift; path = Sources/CustomShapeLayer.swift; sourceTree = "<group>"; };
+		F61F9073F80DCB73E2FC5FC09F263CA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F91242C8C09857B43AA76877C51FAC63 /* Pods-TCSandboxUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCSandboxUITests-resources.sh"; sourceTree = "<group>"; };
 		FA01A2B0A84BCF8A81DBD02F6F8F1DA5 /* Pods-TCSandbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TCSandbox-dummy.m"; sourceTree = "<group>"; };
+		FDA7BC23997F9950EB66437EB8B83D9D /* UITouchGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITouchGestureRecognizer.swift; path = Sources/UITouchGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,37 +318,30 @@
 			path = "Target Support Files/Pods-TCSandboxUITests";
 			sourceTree = "<group>";
 		};
-		14CEE69C36B0658B0EF24A468EA419D7 /* Frameworks */ = {
+		081C51276F4CD0E67A0A460EE4E12124 /* GoogleInterchangeUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				BF12B6367C8E295B0CE35ED680EADB7A /* FirebaseAnalytics.framework */,
+				CDCB75A8BDEED5EE6CE101A6A8FCAF0B /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		1D3E79CFF93D29C583FCFC7FAFF2BBB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5AC496850EE3E95D91E6DAECA45FE2F /* FirebaseAuth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		15C38DE956E9D186938FA41F303A8FCA /* Frameworks */ = {
+		2086E21F97CF530F4136F6E2C783C740 /* DynamicColor */ = {
 			isa = PBXGroup;
 			children = (
-				94310CB38699650E187A0CBF165DC016 /* GoogleUtilities.framework */,
+				9D9C3D296E8ACB9F1C9EDA3CF668D272 /* DynamicColor.swift */,
+				C633B7C33DE1DAD5AED3958034926776 /* HSL.swift */,
+				3F3A76C0ADAD11767C7277C615C2F26F /* Support Files */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2062195AE61C629D91427DE625376237 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F2FC0A9004752D097A882052B4EC75F6 /* DGRunkeeperSwitch */,
-				4DB8113F0D6D3AEAE16BBA553D210DE1 /* DynamicColor */,
-				CD3AB063091898A796C4DC934863697A /* Firebase */,
-				5ACFE7EDA7AF592B82194511429D2509 /* FirebaseAnalytics */,
-				FDC6362294B641152EEA103D369E7BB8 /* FirebaseInstanceID */,
-				F18AD90C91A0833AA43141669A9A1B8D /* GoogleInterchangeUtilities */,
-				9F89D985DB231B10669EC276D6CF4FC7 /* GoogleSymbolUtilities */,
-				C502B6DAF23A9A395A5D41412F6D555D /* GoogleUtilities */,
-				FDB4515A0A9F04069B15040ECC38396D /* SnappingStepper */,
-				6B541E78C8363C06B0534FD78F24AD11 /* SwiftyGif */,
-			);
-			name = Pods;
+			path = DynamicColor;
 			sourceTree = "<group>";
 		};
 		2150923625428DF8531EF52624E75F0A /* Frameworks */ = {
@@ -355,6 +351,14 @@
 				7E99C5FEB7F8D36800E9A73DDF6F04E8 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		352005DD90AA6D5A90139A130A9AD88B /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				F1138589A099409AE6D2CCC911833E25 /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
 			sourceTree = "<group>";
 		};
 		3DB61AB02D0331511B4B243885D47E84 /* Products */ = {
@@ -371,14 +375,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DB8113F0D6D3AEAE16BBA553D210DE1 /* DynamicColor */ = {
+		3F3A76C0ADAD11767C7277C615C2F26F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2FC8C4B4CD29BA4FFAB91ADA1AA31802 /* DynamicColor.swift */,
-				8243D7300D34C5B0ECC86D0C271A007B /* HSL.swift */,
-				52C76B422334C9DA22D16A6E0AAE5F62 /* Support Files */,
+				5E8DDE2AE4B7ACB143150558E645F7AF /* DynamicColor.modulemap */,
+				E51D2426A1AF26AEE51439574F5E92B4 /* DynamicColor.xcconfig */,
+				9C0CA236C3D1285D503FF5C86E3FABD0 /* DynamicColor-dummy.m */,
+				1C8DFBA7AD5A091E449EB966CCD61F8C /* DynamicColor-prefix.pch */,
+				1AFC17AD83B1B094DB136378944E988D /* DynamicColor-umbrella.h */,
+				F61F9073F80DCB73E2FC5FC09F263CA0 /* Info.plist */,
 			);
-			path = DynamicColor;
+			name = "Support Files";
+			path = "../Target Support Files/DynamicColor";
+			sourceTree = "<group>";
+		};
+		42CB82E1DBE338ECFDCBE7739D49FB6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94DBF44180ADA2ED6057258F64B9C10C /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49851E2993EE2DBDBE8C1E5080031018 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C50F19DCBC2F563457CD1E50496C2592 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A6449EC330F10194E0E0D2CC816EFBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				002621E6DF7908EFCFBC890015379C40 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		516A3A234D3F3D20D75785B1A3A31FAD /* Targets Support Files */ = {
@@ -391,51 +423,50 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		52C76B422334C9DA22D16A6E0AAE5F62 /* Support Files */ = {
+		5BC18CFFC35BD7EDE5DEBDB8E341E022 /* DGRunkeeperSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				21FD1C8B2A0E3FB324D0CC3B8337090B /* DynamicColor.modulemap */,
-				4838E67AC3A0D56549AD88991F39D932 /* DynamicColor.xcconfig */,
-				20032B9FCBFE092603439955ABD2100D /* DynamicColor-dummy.m */,
-				6916066EBC4BA97316433BB5CFAB1191 /* DynamicColor-prefix.pch */,
-				2558325D955718D677DBDABFE353B2D6 /* DynamicColor-umbrella.h */,
-				3A7E242AEFBFF15E8DC4A7BAB23E0E0D /* Info.plist */,
+				5FC9025CB3622F32436908466AC7F64F /* DGRunkeeperSwitch.swift */,
+				5C6EA4F23A42124EC97B72E1B1EADB16 /* Support Files */,
+			);
+			path = DGRunkeeperSwitch;
+			sourceTree = "<group>";
+		};
+		5C6EA4F23A42124EC97B72E1B1EADB16 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				439D0D855B016283D2C926FBB8C15061 /* DGRunkeeperSwitch.modulemap */,
+				50577A096568847B84ECD76BDC3953DF /* DGRunkeeperSwitch.xcconfig */,
+				B18F0931C397712350185BAFD0B2DC7F /* DGRunkeeperSwitch-dummy.m */,
+				80CD2E89297792BF8503B3E86A960AC5 /* DGRunkeeperSwitch-prefix.pch */,
+				47FCFF233983E31E0D8E6D0A692DC152 /* DGRunkeeperSwitch-umbrella.h */,
+				C455633065F79F862CE9F06E68BEED72 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/DynamicColor";
+			path = "../Target Support Files/DGRunkeeperSwitch";
 			sourceTree = "<group>";
 		};
-		5ACFE7EDA7AF592B82194511429D2509 /* FirebaseAnalytics */ = {
+		65FFB4D1B6CFEE3779D60092F24DF090 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				14CEE69C36B0658B0EF24A468EA419D7 /* Frameworks */,
-			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		5E24C6F852615C5F55F64F6DDFF5B293 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				281CB1B3AC40766055DEDFA8358A329F /* Info.plist */,
-				CF2EFC7E9B8B762C9059E9D6397152BD /* SwiftyGif.modulemap */,
-				2EC386098A56A061767820211FC7521E /* SwiftyGif.xcconfig */,
-				CBAEE9EAFACE25A3E0F179A892D0DE6C /* SwiftyGif-dummy.m */,
-				BBDF894E850FBA273C77A6CD72A50C66 /* SwiftyGif-prefix.pch */,
-				B121C19B2F028838AF54F4C2B90C093B /* SwiftyGif-umbrella.h */,
+				4EC9D40DC2DB895CA27A5ECF06848F65 /* Info.plist */,
+				CFED9FF3EE35A17B7AB22A3F1C37833A /* SnappingStepper.modulemap */,
+				0DB206ACC0A654935F94A7A72F1E4966 /* SnappingStepper.xcconfig */,
+				CAE7BD98246E579205DF3448BB3CE96F /* SnappingStepper-dummy.m */,
+				0B9DB10CDF38F98A1533314848B5E7A5 /* SnappingStepper-prefix.pch */,
+				2D6C28E44F6449C96BA300B005BD2C90 /* SnappingStepper-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyGif";
+			path = "../Target Support Files/SnappingStepper";
 			sourceTree = "<group>";
 		};
-		6B541E78C8363C06B0534FD78F24AD11 /* SwiftyGif */ = {
+		782FA87ED4C56925E2E752E9252D5E0F /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				437A188A5D3471F640428B9AF327EC76 /* SwiftyGifManager.swift */,
-				EEFD4CAEF65446B2E93CCF9D428F84B4 /* UIImage+SwiftyGif.swift */,
-				72FB2DE736E22B4FBCDC41D644D34012 /* UIImageView+SwiftyGif.swift */,
-				5E24C6F852615C5F55F64F6DDFF5B293 /* Support Files */,
+				50172753514CDD72AA715977203C0045 /* FIRInstanceID.h */,
+				F3D1821DD057A2FAF0312363C6C661A2 /* Frameworks */,
 			);
-			path = SwiftyGif;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -443,7 +474,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				2150923625428DF8531EF52624E75F0A /* Frameworks */,
-				2062195AE61C629D91427DE625376237 /* Pods */,
+				B154F65D51FF69AC043FF4D8DF488436 /* Pods */,
 				3DB61AB02D0331511B4B243885D47E84 /* Products */,
 				516A3A234D3F3D20D75785B1A3A31FAD /* Targets Support Files */,
 			);
@@ -456,22 +487,6 @@
 				BD1D2DD64609927418D46809E6EAF217 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		822E2D39E3749713A46F9CDFBCDFB50F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B9E8BB7A333E2BDA0209970D8003C742 /* FirebaseInstanceID.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		87DDC454A785C3CEF2733C2EC75BD9B1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				843B61DE8B9D02722D0EDA42FA03205F /* GoogleSymbolUtilities.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		955BE584D00D1180F5A706E353533DF9 /* Pods-TCSandbox */ = {
@@ -492,18 +507,46 @@
 			path = "Target Support Files/Pods-TCSandbox";
 			sourceTree = "<group>";
 		};
-		9F89D985DB231B10669EC276D6CF4FC7 /* GoogleSymbolUtilities */ = {
+		97B33FAA1467AB207B0495D1BD309FB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				87DDC454A785C3CEF2733C2EC75BD9B1 /* Frameworks */,
+				752FCCDC4A14A1795C940B8EFE7D7C47 /* FirebaseDatabase.framework */,
 			);
-			path = GoogleSymbolUtilities;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD3D3F170DAD1D14A48EABC6A83698A9 /* Analytics */ = {
+		B154F65D51FF69AC043FF4D8DF488436 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				26C9B5516348DB9AFB0DDBB9ADCFBA57 /* Firebase.h */,
+				5BC18CFFC35BD7EDE5DEBDB8E341E022 /* DGRunkeeperSwitch */,
+				2086E21F97CF530F4136F6E2C783C740 /* DynamicColor */,
+				F91FA44070880E79203639292B0A7D6C /* Firebase */,
+				B9049D6E727C14DCCDB26AE1198265BF /* FirebaseAnalytics */,
+				DB39B3B1495F6C5731A8999018679AE7 /* FirebaseAuth */,
+				D501530B9983026351370B21C1E8F20D /* FirebaseDatabase */,
+				782FA87ED4C56925E2E752E9252D5E0F /* FirebaseInstanceID */,
+				081C51276F4CD0E67A0A460EE4E12124 /* GoogleInterchangeUtilities */,
+				352005DD90AA6D5A90139A130A9AD88B /* GoogleNetworkingUtilities */,
+				E50D99135A16307AA118FF8C3DD291C4 /* GoogleSymbolUtilities */,
+				F44A6BA77CDA716F32A884CFC9DADAA8 /* GoogleUtilities */,
+				F25DD3DE9132C2F67A3F0F70C01AA979 /* SnappingStepper */,
+				F35A8052BE160CC2037CD3CBB498083E /* SwiftyGif */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9049D6E727C14DCCDB26AE1198265BF /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				42CB82E1DBE338ECFDCBE7739D49FB6D /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		BC3C51DE6BADA31F04E2FE3AF0E53CC1 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				73958D94D581D8A794E9DF5B117FF811 /* Firebase.h */,
 			);
 			name = Analytics;
 			sourceTree = "<group>";
@@ -526,99 +569,110 @@
 			path = "Target Support Files/Pods-TCSandboxTests";
 			sourceTree = "<group>";
 		};
-		C502B6DAF23A9A395A5D41412F6D555D /* GoogleUtilities */ = {
+		CDCB75A8BDEED5EE6CE101A6A8FCAF0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				15C38DE956E9D186938FA41F303A8FCA /* Frameworks */,
-			);
-			path = GoogleUtilities;
-			sourceTree = "<group>";
-		};
-		CD3AB063091898A796C4DC934863697A /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				BD3D3F170DAD1D14A48EABC6A83698A9 /* Analytics */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		D4F8E770BDAE94AB2E7C44455B8E6B48 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D1E01D5DFA48C2FC251FC5E06CB0A564 /* GoogleInterchangeUtilities.framework */,
+				10E821ADA664CF2B91A755BB4C620672 /* GoogleInterchangeUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D64F50BECFE8261A8EEC2C6AEAEEBED0 /* Support Files */ = {
+		D501530B9983026351370B21C1E8F20D /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				D0D8C2E17A6423A1C648A9E1B73E0D55 /* DGRunkeeperSwitch.modulemap */,
-				D81672B2BB21890D0B05653BA9B08697 /* DGRunkeeperSwitch.xcconfig */,
-				61132EC09636F3F3C601A51ADFD59FAD /* DGRunkeeperSwitch-dummy.m */,
-				00B0C03BDA9756F395F8CB17B351E39C /* DGRunkeeperSwitch-prefix.pch */,
-				BCAE6377C29AB1A7A6871512944CACD3 /* DGRunkeeperSwitch-umbrella.h */,
-				01623DA911293C5AF92F4DD167E6AAE5 /* Info.plist */,
+				97B33FAA1467AB207B0495D1BD309FB5 /* Frameworks */,
+			);
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		DB39B3B1495F6C5731A8999018679AE7 /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				1D3E79CFF93D29C583FCFC7FAFF2BBB6 /* Frameworks */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		E50D99135A16307AA118FF8C3DD291C4 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				49851E2993EE2DBDBE8C1E5080031018 /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		ED385F45B524A054A97D086C98E7E23E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E174C143CD48DF312B5DF5DF9DFDBD81 /* Info.plist */,
+				4180B6B795BD85C83F35A8250065F62C /* SwiftyGif.modulemap */,
+				9B0D8DDF53459A7E3B76EF0AB95D4C89 /* SwiftyGif.xcconfig */,
+				3C3D724A61C36927394CD819A6EEA50F /* SwiftyGif-dummy.m */,
+				5EFFAEB2379101FCDDE2E70358904EEB /* SwiftyGif-prefix.pch */,
+				B85A65B0ACB7348C616C8C185BCE8C5D /* SwiftyGif-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/DGRunkeeperSwitch";
+			path = "../Target Support Files/SwiftyGif";
 			sourceTree = "<group>";
 		};
-		D74E6225BAC8425DA4F1C81B9B9BF9E6 /* Support Files */ = {
+		F1138589A099409AE6D2CCC911833E25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6EF8C75ECF607B641EA30E3C866DC3E1 /* Info.plist */,
-				D80E6695F3646FB2DFDE6A3BFDCFD45A /* SnappingStepper.modulemap */,
-				C3F0CB92E9B9AEF0839BA93DC222BB0D /* SnappingStepper.xcconfig */,
-				58FCA73A8900C4B2442205E85DFA733E /* SnappingStepper-dummy.m */,
-				07DC540C284A1D7FFCCEF8A8EA5B7110 /* SnappingStepper-prefix.pch */,
-				08642A23C57AB470B7EF49DA567DBF78 /* SnappingStepper-umbrella.h */,
+				274EE0C19A8FD0AF4ABCD6BAEEBE6D02 /* GoogleNetworkingUtilities.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SnappingStepper";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F18AD90C91A0833AA43141669A9A1B8D /* GoogleInterchangeUtilities */ = {
+		F25DD3DE9132C2F67A3F0F70C01AA979 /* SnappingStepper */ = {
 			isa = PBXGroup;
 			children = (
-				D4F8E770BDAE94AB2E7C44455B8E6B48 /* Frameworks */,
-			);
-			path = GoogleInterchangeUtilities;
-			sourceTree = "<group>";
-		};
-		F2FC0A9004752D097A882052B4EC75F6 /* DGRunkeeperSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				4AA7B61A9A5F156780771C2B0AC0DC17 /* DGRunkeeperSwitch.swift */,
-				D64F50BECFE8261A8EEC2C6AEAEEBED0 /* Support Files */,
-			);
-			path = DGRunkeeperSwitch;
-			sourceTree = "<group>";
-		};
-		FDB4515A0A9F04069B15040ECC38396D /* SnappingStepper */ = {
-			isa = PBXGroup;
-			children = (
-				BC93F392409AC967705E0275159293C4 /* AutoRepeatHelper.swift */,
-				BC1A0BB8382315067846D432AFAF3CE2 /* CustomShapeLayer.swift */,
-				B7E341B9D6C055043E03273B2C67C5F7 /* ShapeStyle.swift */,
-				0384395145461034C17309FBCD63660A /* SnappingStepper.swift */,
-				D9D3AE325944437F5DE805677C99D077 /* SnappingStepper+Internal.swift */,
-				33E64E2E5C007A3D651FF6DDE1DD1548 /* SnappingStepperBehavior.swift */,
-				1548C847D28E2DFE0AFBC4FFF6622CA6 /* StyledLabel.swift */,
-				AA5895D9DC30B199081D65E9621F35E2 /* UIBuilder.swift */,
-				EAE8B9F449819AAC6C73C1B5C157848B /* UITouchGestureRecognizer.swift */,
-				D74E6225BAC8425DA4F1C81B9B9BF9E6 /* Support Files */,
+				93D8A9508C23CA4D44E4BD2291CC43CA /* AutoRepeatHelper.swift */,
+				F3F9E3A5103AB495054242C884C84E60 /* CustomShapeLayer.swift */,
+				EBB4A66118C85175DA7E9F23FA92E399 /* ShapeStyle.swift */,
+				83A5AAB50D7C085CEEF8B72DB24B4E2E /* SnappingStepper.swift */,
+				4A99E894E1E4E754AC39A6CA12CB8201 /* SnappingStepper+Internal.swift */,
+				AFF5731A160C1B10CCF4D70E1BE74C97 /* SnappingStepperBehavior.swift */,
+				2F3C72AE57CCB34A3F3534518045C48D /* StyledLabel.swift */,
+				380A75DA62401B15B56E7F4BB0EA7C7D /* UIBuilder.swift */,
+				FDA7BC23997F9950EB66437EB8B83D9D /* UITouchGestureRecognizer.swift */,
+				65FFB4D1B6CFEE3779D60092F24DF090 /* Support Files */,
 			);
 			path = SnappingStepper;
 			sourceTree = "<group>";
 		};
-		FDC6362294B641152EEA103D369E7BB8 /* FirebaseInstanceID */ = {
+		F35A8052BE160CC2037CD3CBB498083E /* SwiftyGif */ = {
 			isa = PBXGroup;
 			children = (
-				94D1A641BE7B2F06FFD857C9C85297D6 /* FIRInstanceID.h */,
-				822E2D39E3749713A46F9CDFBCDFB50F /* Frameworks */,
+				A4A815DE36416D59D4413083C3C6E387 /* SwiftyGifManager.swift */,
+				BEB8139E12214811E30E1F706BC6BCF3 /* UIImage+SwiftyGif.swift */,
+				94CEDA0D9890C6913EAD32E15634146A /* UIImageView+SwiftyGif.swift */,
+				ED385F45B524A054A97D086C98E7E23E /* Support Files */,
 			);
-			path = FirebaseInstanceID;
+			path = SwiftyGif;
+			sourceTree = "<group>";
+		};
+		F3D1821DD057A2FAF0312363C6C661A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				223A456C4193631DEFD9FAF40DE9948B /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F44A6BA77CDA716F32A884CFC9DADAA8 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A6449EC330F10194E0E0D2CC816EFBC /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		F91FA44070880E79203639292B0A7D6C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				BC3C51DE6BADA31F04E2FE3AF0E53CC1 /* Analytics */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1005,7 +1059,7 @@
 /* Begin XCBuildConfiguration section */
 		2711ED4045E3A4C2B4F06DA54ECC99A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3F0CB92E9B9AEF0839BA93DC222BB0D /* SnappingStepper.xcconfig */;
+			baseConfigurationReference = 0DB206ACC0A654935F94A7A72F1E4966 /* SnappingStepper.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1106,7 +1160,7 @@
 		};
 		4EAFBD7452B51CA2B62271C00487978B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4838E67AC3A0D56549AD88991F39D932 /* DynamicColor.xcconfig */;
+			baseConfigurationReference = E51D2426A1AF26AEE51439574F5E92B4 /* DynamicColor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1244,7 +1298,7 @@
 		};
 		788662EB83B90E3F18010FEA113A2C21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D81672B2BB21890D0B05653BA9B08697 /* DGRunkeeperSwitch.xcconfig */;
+			baseConfigurationReference = 50577A096568847B84ECD76BDC3953DF /* DGRunkeeperSwitch.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1273,7 +1327,7 @@
 		};
 		79D8DA4FD5A9B8AB9874B39C7B86C62E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EC386098A56A061767820211FC7521E /* SwiftyGif.xcconfig */;
+			baseConfigurationReference = 9B0D8DDF53459A7E3B76EF0AB95D4C89 /* SwiftyGif.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1302,7 +1356,7 @@
 		};
 		877BD561A9E0EF6440EBABA9B63673FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4838E67AC3A0D56549AD88991F39D932 /* DynamicColor.xcconfig */;
+			baseConfigurationReference = E51D2426A1AF26AEE51439574F5E92B4 /* DynamicColor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1331,7 +1385,7 @@
 		};
 		8817E04FE9B10895034629F938C68FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3F0CB92E9B9AEF0839BA93DC222BB0D /* SnappingStepper.xcconfig */;
+			baseConfigurationReference = 0DB206ACC0A654935F94A7A72F1E4966 /* SnappingStepper.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1360,7 +1414,7 @@
 		};
 		8C0F497C73B3810A49658FAF045AB01E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EC386098A56A061767820211FC7521E /* SwiftyGif.xcconfig */;
+			baseConfigurationReference = 9B0D8DDF53459A7E3B76EF0AB95D4C89 /* SwiftyGif.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1458,7 +1512,7 @@
 		};
 		CD8A3BE4AE2CEF50203E4F7910B3CC2F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D81672B2BB21890D0B05653BA9B08697 /* DGRunkeeperSwitch.xcconfig */;
+			baseConfigurationReference = 50577A096568847B84ECD76BDC3953DF /* DGRunkeeperSwitch.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

@@ -16,6 +16,7 @@ class User: AnyObject {
     var email: String?
     var friends: [User]?
     var currentChallenges: [Challenge]?
+    var pastChallenges: [Challenge]?
     
     static var currentUser: User?
     

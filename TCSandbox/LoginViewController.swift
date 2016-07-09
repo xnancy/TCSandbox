@@ -69,7 +69,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             
             performSegueWithIdentifier("loginSegue", sender: self)
-            FBClient.saveUser()
+            FirebaseClient.saveUser()
         }
         
         else

@@ -12,6 +12,8 @@ class Challenge: AnyObject {
     var videoID: String?
     var moves: [Move]?
     var participants: [User]?
+    // userID String: videoID String
+    var userVideoIDs: [String: String]?
     var deadline: NSDate?
     var past: Bool?
 }

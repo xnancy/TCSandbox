@@ -14,6 +14,7 @@
 		9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309A1D2DAAC200F6B59F /* Workout.swift */; };
 		9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309C1D2DAB1A00F6B59F /* Move.swift */; };
 		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
+		925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */; };
 		925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E581D2D79C1000F44F7 /* AppDelegate.swift */; };
 		925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E5A1D2D79C1000F44F7 /* ViewController.swift */; };
 		925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925D8E5C1D2D79C1000F44F7 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		9214309A1D2DAAC200F6B59F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		9214309C1D2DAB1A00F6B59F /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
+		925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		925D8E551D2D79C1000F44F7 /* TCSandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCSandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D8E581D2D79C1000F44F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925D8E5A1D2D79C1000F44F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				925D8E5C1D2D79C1000F44F7 /* Main.storyboard */,
 				925D8E5F1D2D79C1000F44F7 /* Assets.xcassets */,
 				925D8E611D2D79C1000F44F7 /* LaunchScreen.storyboard */,
+				925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */,
 				925D8E641D2D79C1000F44F7 /* Info.plist */,
 			);
 			path = TCSandbox;
@@ -379,6 +382,7 @@
 			files = (
 				925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
+				925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */,
 				925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */,
 				92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */,
 			);
