@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MGB-im-TUS" id="imf-4l-Y2w">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6V-uw-Oah">
@@ -64,13 +64,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Make a Workout" id="Iff-pL-WZ6">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="P9e-qI-eTe">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="P9e-qI-eTe">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xIF-ki-Crm">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Preview"/>
                                 <connections>
                                     <segue destination="wKV-bl-Ys5" kind="presentation" id="Aor-Ex-hxv"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="4yq-u8-jsb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CPp-eL-3gb">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="didLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dr7-hJ-k3p"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -107,7 +117,7 @@
         <!--Login View Controller-->
         <scene sceneID="cCW-ww-nmr">
             <objects>
-                <viewController id="ESL-6m-KUh" customClass="LoginViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="ESL-6m-KUh" customClass="LoginViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pSm-2C-gRc"/>
                         <viewControllerLayoutGuide type="bottom" id="GeY-Ri-pam"/>
@@ -115,11 +125,20 @@
                     <view key="view" contentMode="scaleToFill" id="eN8-Fi-0an">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-lL-So5">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXU-lL-So5" firstAttribute="centerY" secondItem="eN8-Fi-0an" secondAttribute="centerY" id="ttt-Wy-sqb"/>
+                            <constraint firstItem="jXU-lL-So5" firstAttribute="centerX" secondItem="eN8-Fi-0an" secondAttribute="centerX" id="vIb-oa-2fG"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="2hj-dg-TJj" kind="presentation" identifier="loginSegue" id="gsI-QZ-aQF"/>
+                        <outlet property="aivLoadingSpinner" destination="jXU-lL-So5" id="gVg-9u-7hS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vak-x2-dXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,7 +148,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="2QK-bu-Myy">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2hj-dg-TJj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="initialViewController" automaticallyAdjustsScrollViewInsets="NO" id="2hj-dg-TJj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="LIC-hw-iX9">
@@ -176,10 +195,10 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="yoe-2W-7Md" customClass="GifsCollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="11" width="129" height="128"/>
+                                                    <rect key="frame" x="5" y="11" width="129" height="127.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="127.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jump rope" translatesAutoresizingMaskIntoConstraints="NO" id="WGi-W6-4kf">

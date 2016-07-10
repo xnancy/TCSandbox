@@ -15,12 +15,38 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
+    var loginButton: FBSDKLoginButton = FBSDKLoginButton()
+    @IBOutlet weak var aivLoadingSpinner: UIActivityIndicatorView!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        if FBSDKAccessToken.currentAccessToken() == nil
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if let user = user {
+                // User is signed in.
+                
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
+                
+                self.presentViewController(homeViewController, animated: true, completion: nil)
+            }
+            
+                else
+            {
+                // No user is signed in.
+                
+                self.loginButton.hidden = false
+                self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+                self.loginButton.center = self.view.center
+                
+                self.loginButton.delegate = self
+                
+                self.view.addSubview(self.loginButton)
+            }
+        }
+        
+        /*if FBSDKAccessToken.currentAccessToken() == nil
         {
             User.currentUser = nil
         }
@@ -34,18 +60,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 //otherwise, pull their info from firebase and initialize
                 //a new user
             }
-        }
-        
-        
-        
-        let loginButton = FBSDKLoginButton()
-        loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-        loginButton.center = self.view.center
-        
-        loginButton.delegate = self
-        
-        self.view.addSubview(loginButton)
-        
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,21 +75,27 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
         
+        self.loginButton.hidden = true
+        aivLoadingSpinner.startAnimating()
+        
         if error == nil
         {
-            //check if this user exists on firebase, if not
-            //then add them to firebase and initialize a new user
-            //otherwise, pull their info from firebase and initialize
-            //a new user
+            FirebaseClient.login()
+            FBClient.login()
+        }
             
-            
-            performSegueWithIdentifier("loginSegue", sender: self)
-            FirebaseClient.saveUser()
+            else if result.isCancelled
+        {
+            //code to handle the cancelled case
+            self.loginButton.hidden = false
+            aivLoadingSpinner.stopAnimating()
         }
         
-        else
+            else
         {
             print(error.localizedDescription)
+            self.loginButton.hidden = false
+            aivLoadingSpinner.stopAnimating()
         }
     }
     
@@ -83,6 +104,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         //USER LOGGED OUT
         User.currentUser = nil
+        FirebaseClient.logout()
+        FBClient.logout()
     }
 
 }

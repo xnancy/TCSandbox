@@ -20,6 +20,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     /* ---------- OUTLETS ---------- */
     @IBOutlet weak var workoutEditorTableView: UITableView!
     
+    
     /* ---------- VARIABLES ---------- */
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
     var currentWorkout: Workout?
@@ -81,6 +82,18 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
         
         return cell
     }
+    
+    @IBAction func didLogout(sender: AnyObject) {
+        User.currentUser = nil
+        FirebaseClient.logout()
+        FBClient.logout()
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
+        
+        self.presentViewController(loginViewController, animated: true, completion: nil)
+    }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (currentWorkout?.movesList?.count)!
