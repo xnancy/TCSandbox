@@ -34,7 +34,6 @@
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
 		92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92D985E31D2F0DC9008BF657 /* pushup.gif */; };
 		92D985EA1D2F227A008BF657 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D985E91D2F227A008BF657 /* FirebaseClient.swift */; };
-		B83C7D5A1D30551D0016FC9C /* Gifs2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C7D591D30551D0016FC9C /* Gifs2CollectionViewCell.swift */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
 		D600F4FB8CA321C8E23A66B0 /* Pods_TCSandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */; };
 		E296B86C9D9CCC0E9BA3A7FF /* Pods_TCSandboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */; };
@@ -98,7 +97,6 @@
 		92D985E31D2F0DC9008BF657 /* pushup.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pushup.gif; sourceTree = "<group>"; };
 		92D985E91D2F227A008BF657 /* FirebaseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
 		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B83C7D591D30551D0016FC9C /* Gifs2CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gifs2CollectionViewCell.swift; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -229,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */,
-				B83C7D591D30551D0016FC9C /* Gifs2CollectionViewCell.swift */,
 				92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */,
 			);
 			name = Views;
@@ -345,6 +342,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6ZD82QXX95;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -549,7 +547,6 @@
 				92D985EA1D2F227A008BF657 /* FirebaseClient.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
 				92A924AC1D30572400637263 /* Gifs.swift in Sources */,
-				B83C7D5A1D30551D0016FC9C /* Gifs2CollectionViewCell.swift in Sources */,
 				929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,6 +690,8 @@
 			baseConfigurationReference = 486A2DEC270724D45C6424D7 /* Pods-TCSandbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -701,6 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RainbowRaccoonz.TCSandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -709,6 +709,8 @@
 			baseConfigurationReference = 0E1EBCA27C2AB4BCA7406669 /* Pods-TCSandbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -717,6 +719,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RainbowRaccoonz.TCSandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
