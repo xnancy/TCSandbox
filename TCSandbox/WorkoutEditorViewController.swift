@@ -83,6 +83,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
         return cell
     }
     
+
     @IBAction func didLogout(sender: AnyObject) {
         User.currentUser = nil
         FirebaseClient.logout()

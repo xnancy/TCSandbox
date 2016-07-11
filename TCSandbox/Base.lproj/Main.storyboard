@@ -64,22 +64,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iff-pL-WZ6">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="opR-HW-JN4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yCu-Fp-FsD">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="didLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="huJ-K3-3Vy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="P9e-qI-eTe">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="xIF-ki-Crm">
                                 <rect key="frame" x="337" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="wKV-bl-Ys5" kind="push" id="9Wb-67-Giy"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="4yq-u8-jsb">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CPp-eL-3gb">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="didLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dr7-hJ-k3p"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -162,7 +162,6 @@
             </objects>
             <point key="canvasLocation" x="465" y="1043"/>
         </scene>
-        <!--Move Scroll View Controller-->
         <!--Choose Moves-->
         <scene sceneID="L2L-vc-2VV">
             <objects>
