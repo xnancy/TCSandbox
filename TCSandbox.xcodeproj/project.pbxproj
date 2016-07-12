@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		824630CC1D32FCB50004E209 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824630CB1D32FCB50004E209 /* Info.plist */; };
 		82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6653A1D2DBF9000D642CA /* LoginViewController.swift */; };
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
@@ -16,6 +15,9 @@
 		9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309C1D2DAB1A00F6B59F /* Move.swift */; };
 		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
 		925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */; };
+		925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D3C1D3444B300BAF3CC /* Info.plist */; };
+		925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */; };
+		925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */; };
 		925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E581D2D79C1000F44F7 /* AppDelegate.swift */; };
 		925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E5A1D2D79C1000F44F7 /* ViewController.swift */; };
 		925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925D8E5C1D2D79C1000F44F7 /* Main.storyboard */; };
@@ -62,7 +64,6 @@
 		4E6527A0FFB4200130D4B799 /* Pods-TCSandboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests.release.xcconfig"; sourceTree = "<group>"; };
 		679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
-		824630CB1D32FCB50004E209 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../Documents/TCSandbox/TCSandbox/Info.plist; sourceTree = "<group>"; };
 		82C6653A1D2DBF9000D642CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -72,6 +73,9 @@
 		9214309C1D2DAB1A00F6B59F /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
 		925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		925D2D3C1D3444B300BAF3CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendChallengeViewController.swift; sourceTree = "<group>"; };
+		925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		925D8E551D2D79C1000F44F7 /* TCSandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCSandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D8E581D2D79C1000F44F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925D8E5A1D2D79C1000F44F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,8 +189,8 @@
 				925D8E5C1D2D79C1000F44F7 /* Main.storyboard */,
 				925D8E5F1D2D79C1000F44F7 /* Assets.xcassets */,
 				925D8E611D2D79C1000F44F7 /* LaunchScreen.storyboard */,
-				824630CB1D32FCB50004E209 /* Info.plist */,
 				925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */,
+				925D2D3C1D3444B300BAF3CC /* Info.plist */,
 			);
 			path = TCSandbox;
 			sourceTree = "<group>";
@@ -216,6 +220,8 @@
 				925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */,
 				92A924AF1D3057B900637263 /* MoveScrollViewController.swift */,
 				82C6653A1D2DBF9000D642CA /* LoginViewController.swift */,
+				925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */,
+				925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -378,7 +384,7 @@
 			files = (
 				925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
-				824630CC1D32FCB50004E209 /* Info.plist in Resources */,
+				925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */,
 				925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */,
 				925D8E5E1D2D79C1000F44F7 /* Main.storyboard in Resources */,
 				92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */,
@@ -541,6 +547,8 @@
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
 				9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */,
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
+				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
+				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
 				92A924AC1D30572400637263 /* Gifs.swift in Sources */,
 				929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */,

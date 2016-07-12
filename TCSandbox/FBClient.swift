@@ -110,5 +110,31 @@ class FBClient: AnyObject {
             print(error.localizedDescription)
         }
     }
+    
+    /* ---------- FRIENDS ---------- */
+    // Creates a closure callback that continually updates a user's friends ID list in a user object
+    class func updateFriends(user: User) {
+        // Attach a closure to read the data at our posts reference
+        ref.childByAppendingPath("Users").childByAppendingPath(user.FBID!).childByAppendingPath("friends_list").observeEventType(.ChildAdded, withBlock: { snapshot in
+            user.friends?.append(snapshot.value as! String)
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+    }
+    
+    // Returns user object retrieved from Firebase given userID
+    class func getUserFromID (userID: String) -> User {
+        var tempUser: User?
+        ref.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            tempUser = User(dict: snapshot as! NSDictionary)
+        })
+        return tempUser!
+    }
+    
+    // Adds friendID to userID friend list
+    // Assumes: userID, friendID are valid
+    class func addFriendFromID (userID: String, friendID: String) {
+        
+    }
 
 }

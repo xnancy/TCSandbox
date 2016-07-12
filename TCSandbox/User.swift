@@ -21,16 +21,46 @@ class User: AnyObject {
     var currentChallenges: [Challenge]?
     var pastChallenges: [Challenge]?
     
-    static var currentUser: User?
+    // array of user IDs
+    var friends: [String]?
     
+    // array of current challenges
+    var currentChallenges: [String]?
+
+    // array of past challenges
+    var pastChallenges: [String]?
+    
+    static var currentUser: User?
  
-    init(FBID: String?, email: String?, profileImageURLString: String?, friends: [String])
+    /* ---------- INITIALIZERS ---------- */
+    // Empty initializer
+    init() {
+        FBID = "."
+        profileImageURLString = ""
+        email = ""
+        friends = []
+        currentChallenges = []
+        pastChallenges = []
+    }
+ 
+    // Create user object from Firebase dictionary
+    init(dict: NSDictionary)
     {
+        self.FBID = dict["id"] as! String
+        self.email = dict["email"] as! String
+        self.profileImageURLString = dict["profile_picutre_url"] as! String
+        self.friends = dict["friends_list"] as! [String]
+        self.currentChallenges = []
+        self.pastChallenges = []
+    }
+    
+    init(FBID: String, email: String, profileImageURLString: String) {
         self.FBID = FBID
         self.email = email
         self.profileImageURLString = profileImageURLString
         self.friends = friends
         self.currentChallenges = []
+        self.pastChallenges = []
     }
     
     class func logout()
@@ -49,9 +79,9 @@ class User: AnyObject {
         
     }
     
-    func addFriend(friend: String)
+    func addFriend(friendID: String)
     {
-        //self.friends?.append(friend)
+        self.friends?.append(friendID)
     }
     
     func removeFriend(friend: User)
