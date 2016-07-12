@@ -28,7 +28,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        User.updateCurrentUser()
         
         // Create editable navigation bar title
         navigationBarTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
@@ -85,9 +85,8 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
 
     @IBAction func didLogout(sender: AnyObject) {
-        User.currentUser = nil
-        FirebaseClient.logout()
-        FBClient.logout()
+        print(User.currentUser!.FBID)
+        User.logout()
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("loginViewController")

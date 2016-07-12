@@ -33,4 +33,20 @@ class FirebaseClient: AnyObject {
     {
         try! FIRAuth.auth()!.signOut()
     }
+    
+    class func addFriend(friend: String)
+    {
+        let FBID = User.currentUser?.FBID
+        
+        ref.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            //upon login everyone gets a friend array, so just check if
+            //the array has a placeholder or an actual id and respond
+            //accordingly
+            
+            
+        })  { (error) in
+            
+            print(error.localizedDescription)
+        }
+    }
 }

@@ -9,27 +9,36 @@
 import Foundation
 import FBSDKCoreKit
 import FBSDKLoginKit
+import FirebaseAuth
+import FirebaseDatabase
+import Firebase
 
 class User: AnyObject {
     var FBID: String?
     var profileImageURLString: String?
     var email: String?
-    var friends: [User]?
+    var friends: [String]?
     var currentChallenges: [Challenge]?
     var pastChallenges: [Challenge]?
     
     static var currentUser: User?
     
  
-    init(FBID: String?, email: String?, profileImageURLString: String?)
+    init(FBID: String?, email: String?, profileImageURLString: String?, friends: [String])
     {
         self.FBID = FBID
         self.email = email
         self.profileImageURLString = profileImageURLString
-        self.friends = []
+        self.friends = friends
         self.currentChallenges = []
     }
     
+    class func logout()
+    {
+        User.currentUser = nil
+        FirebaseClient.logout()
+        FBClient.logout()
+    }
     
     func upload(challenge: Challenge)
     {
@@ -41,9 +50,9 @@ class User: AnyObject {
         
     }
     
-    func addFriend(friend: User)
+    func addFriend(friend: String)
     {
-        self.friends?.append(friend)
+        //self.friends?.append(friend)
     }
     
     func removeFriend(friend: User)
@@ -56,32 +65,18 @@ class User: AnyObject {
         
     }
     
-    
-    
     class func updateCurrentUser()
     {
-        let parameters = ["fields": "email, name, id, picture.type(large)"]
-        let request = FBSDKGraphRequest(graphPath: "me", parameters: parameters, tokenString: FBSDKAccessToken.currentAccessToken().tokenString, version: nil, HTTPMethod: "GET")
-        
-        request.startWithCompletionHandler({ (connection, user, requestError) -> Void in
+        let ref = FirebaseClient.ref
+
+        let FBID = FBSDKAccessToken.currentAccessToken().userID
+        ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            let friendsList = snapshot.value!["friends_list"] as! [String]
+            let email = snapshot.value!["email"] as! String
+            let profileImageURLString = snapshot.value!["profileImageURLString"] as! String
             
-            if requestError != nil {
-                print(requestError)
-                return
-            }
-            
-            var pictureUrl = ""
-            
-            if let picture = user["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-                pictureUrl = url
-            }
-            
-            let FBID = user["id"] as! String
-            let email = user["email"] as! String
-            let profileImageURLString = pictureUrl
-            
-            
-            User.currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString)
+            let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, friends: friendsList)
+            User.currentUser = currentUser
         })
     }
 }

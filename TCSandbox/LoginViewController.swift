@@ -28,7 +28,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
-                
                 self.presentViewController(homeViewController, animated: true, completion: nil)
             }
             
@@ -45,22 +44,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 self.view.addSubview(self.loginButton)
             }
         }
-        
-        /*if FBSDKAccessToken.currentAccessToken() == nil
-        {
-            User.currentUser = nil
-        }
-        
-        else
-        {
-            if User.currentUser == nil
-            {
-                //check if this user exists on firebase, if not
-                //then add them to firebase and initialize a new user
-                //otherwise, pull their info from firebase and initialize
-                //a new user
-            }
-        }*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -101,11 +84,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        
-        //USER LOGGED OUT
-        User.currentUser = nil
-        FirebaseClient.logout()
-        FBClient.logout()
+        User.logout()
     }
 
 }

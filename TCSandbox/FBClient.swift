@@ -41,19 +41,47 @@ class FBClient: AnyObject {
             let FBID = user["id"] as! String
             let email = user["email"] as! String
             let profileImageURLString = pictureUrl
-            //checkUserIDExists(FBID)
-            //save friends too and challenges
             
-            //save information to firebase if user not currently in DB
             let user: NSDictionary = ["FBID":FBID,"email":email, "profileImageURLString":profileImageURLString]
             let profile = ref.child("Users").child(FBID)
-            profile.setValue(user)
+            profile.updateChildValues(user as [NSObject : AnyObject])
             
+            ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                let friendsExist = snapshot.hasChild("friends_list")
+
+                //FIX THIS TO HANDLE EMPTY CHALLENGES TOO
+                
+                if friendsExist
+                {
+                    //do nothing
+                    let friendsList = snapshot.value!["friends_list"] as! [String]
+                    
+                    let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, friends: friendsList)
+                    User.currentUser = currentUser
+                }
+                
+                else
+                {
+                    //initialize a new empty friends array with string
+                    //placeholder
+                    let friendsList: [String] = ["placeholder"]
+                    let updates = ["friends_list": friendsList]
+                    ref.child("Users").child(FBID).updateChildValues(updates)
+                    
+                    let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, friends: friendsList)
+                    User.currentUser = currentUser
+                }
+                
+            })  { (error) in
+                
+                print(error.localizedDescription)
+            }
         })
     }
     
     class func logout()
     {
         FBSDKAccessToken.setCurrentAccessToken(nil)
+        User.currentUser = nil
     }
 }
