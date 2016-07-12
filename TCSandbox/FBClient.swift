@@ -19,6 +19,15 @@ class FBClient: AnyObject {
 
     class func login()
     {
+        //facebook authentication in Firebase
+        let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+        FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+        }
+        
         let parameters = ["fields": "email, name, id, picture.type(large)"]
         
         // FB get current user
@@ -83,5 +92,23 @@ class FBClient: AnyObject {
     {
         FBSDKAccessToken.setCurrentAccessToken(nil)
         User.currentUser = nil
+        try! FIRAuth.auth()!.signOut()
     }
+    
+    class func addFriend(friend: String)
+    {
+        let FBID = User.currentUser?.FBID
+        
+        ref.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            //upon login everyone gets a friend array, so just check if
+            //the array has a placeholder or an actual id and respond
+            //accordingly
+            
+            
+        })  { (error) in
+            
+            print(error.localizedDescription)
+        }
+    }
+
 }

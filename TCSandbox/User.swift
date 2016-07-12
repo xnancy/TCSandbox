@@ -36,7 +36,6 @@ class User: AnyObject {
     class func logout()
     {
         User.currentUser = nil
-        FirebaseClient.logout()
         FBClient.logout()
     }
     
@@ -67,7 +66,7 @@ class User: AnyObject {
     
     class func updateCurrentUser()
     {
-        let ref = FirebaseClient.ref
+        let ref = FBClient.ref
 
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in

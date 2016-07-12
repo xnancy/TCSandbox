@@ -63,7 +63,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if error == nil
         {
-            FirebaseClient.login()
             FBClient.login()
         }
             
