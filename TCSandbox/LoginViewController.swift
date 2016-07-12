@@ -83,7 +83,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        User.logout()
+        FBClient.logout()
     }
 
 }

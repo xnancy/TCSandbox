@@ -75,8 +75,11 @@ class FBClient: AnyObject {
                     //initialize a new empty friends array with string
                     //placeholder
                     let friendsList: [String] = ["placeholder"]
-                    let updates = ["friends_list": friendsList]
-                    ref.child("Users").child(FBID).updateChildValues(updates)
+                    let currentChallenges: [String] = ["placeholder"]
+                    let pastChallenges: [String] = ["placeholder"]
+                    let challengesCompleted: Int = 0
+                    let updates = ["friends_list": friendsList, "current_challenges": currentChallenges, "past_challenges": pastChallenges, "challenges_completed": challengesCompleted]
+                    ref.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
@@ -112,7 +115,7 @@ class FBClient: AnyObject {
             friendsList.append(friend)
             let updates = ["friends_list": friendsList]
             ref.child("Users").child(FBID!).updateChildValues(updates)
-            
+            User.currentUser?.friends = friendsList
             
         })  { (error) in
             
@@ -128,13 +131,12 @@ class FBClient: AnyObject {
             
             var friendsList = snapshot.value!["friends_list"] as! [String]
             
-            let index = friendsList.indexOf(friend)
-            
-            if let index = index
+            if let index = friendsList.indexOf(friend)
             {
                 friendsList.removeAtIndex(index)
                 let updates = ["friends_list": friendsList]
                 ref.child("Users").child(FBID!).updateChildValues(updates)
+                User.currentUser?.friends = friendsList
             }
                 
                 else
@@ -146,6 +148,31 @@ class FBClient: AnyObject {
         })  { (error) in
             
             print(error.localizedDescription)
+        }
+    }
+    
+    class func uploadChallenge(challenge: Challenge)
+    {
+        //FINISH WRITING THIS
+        
+        
+        let key = ref.child("Challenges").childByAutoId().key
+        let users = challenge.getUsers()
+        
+        //ADD CHALLENGE TO EACH USER'S CURRENT CHALLENGES
+        for user in users
+        {
+            user.currentChallenges?.append(challenge)
+            
+            //also add challenge to user in firebase
+            let FBID = user.FBID
+            
+            ref.updateChildValues(["challengeID": key])
+            
+            //add the challenge to the user under this key
+            //initialize the challenge object with this key
+            //add a challenges child with this key
+
         }
     }
     

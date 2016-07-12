@@ -23,12 +23,11 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
     /* ---------- VARIABLES ---------- */
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
-    var currentWorkout: Workout?
     var navigationBarTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        User.updateCurrentUser()
+        //User.updateCurrentUser()
         
         // Create editable navigation bar title
         navigationBarTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
@@ -41,13 +40,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
         self.navigationItem.titleView = navigationBarTextField
 
         // TESTING: Add temp move to workout
-        currentWorkout = Workout()
-        
-        let newMove = Move()
-        currentWorkout?.movesList?.append(newMove)
-        currentWorkout?.movesList?.append(newMove)
-        currentWorkout?.movesList?.append(newMove)
-        currentWorkout?.movesList?.append(newMove)
+
         
         // Set table view delegate/data source
         workoutEditorTableView.delegate = self
@@ -63,7 +56,6 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
     /* ---------- NAVIGATION BAR TEXT FIELD ---------- */
     func navigationBarTextFieldDidChange() {
-        currentWorkout?.name = navigationBarTextField.text
     }
     
     /* ---------- TABLE VIEW DATA SOURCE ---------- */
@@ -76,7 +68,6 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
         
         // Add stepper and switch to cell using UIHomeElementMaker
         UIHomeElementMaker.workoutEditorTableView = workoutEditorTableView
-        UIHomeElementMaker.currentWorkout = currentWorkout
         UIHomeElementMaker.setRepetitionTypeSwitch(cell.repetitionTypeSwitch)
         UIHomeElementMaker.setRepetitionCountStepper(cell.repetitionQuantityStepper)
         
@@ -85,7 +76,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
 
     @IBAction func didLogout(sender: AnyObject) {
-        User.logout()
+        FBClient.logout()
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
@@ -95,7 +86,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (currentWorkout?.movesList?.count)!
+        return 4 //CHANGE THIS LATER TO THE NUMBER OF MOVES IN THE CURRENT WORKOUT
     }
     
 }

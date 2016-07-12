@@ -1,3 +1,4 @@
+
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
@@ -11,8 +12,6 @@
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
 		82C6654D1D2DC18D00D642CA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */; };
-		9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309A1D2DAAC200F6B59F /* Workout.swift */; };
-		9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309C1D2DAB1A00F6B59F /* Move.swift */; };
 		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
 		925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */; };
 		925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D3C1D3444B300BAF3CC /* Info.plist */; };
@@ -70,8 +69,6 @@
 		82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9214309A1D2DAAC200F6B59F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
-		9214309C1D2DAB1A00F6B59F /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
 		925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		925D2D3C1D3444B300BAF3CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,8 +238,6 @@
 		925D8E8B1D2DA8F0000F44F7 /* Data Objects */ = {
 			isa = PBXGroup;
 			children = (
-				9214309A1D2DAAC200F6B59F /* Workout.swift */,
-				9214309C1D2DAB1A00F6B59F /* Move.swift */,
 				929A02A41D2ECA8A00FC1E96 /* User.swift */,
 				929A02A61D2ECAD800FC1E96 /* Challenge.swift */,
 				929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */,
@@ -546,7 +541,6 @@
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
 				929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */,
-				9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */,
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
 				9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */,
 				929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */,

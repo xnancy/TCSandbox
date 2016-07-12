@@ -82,24 +82,25 @@ class User: AnyObject {
     
     func addFriend(friendID: String)
     {
-        self.friends?.append(friendID)
+        FBClient.addFriend(friendID)
     }
     
-    func removeFriend(friend: User)
+    func removeFriend(friendID: String)
     {
-        
+        FBClient.removeFriend(friendID)
     }
     
     func sendChallenge(challenge: Challenge, friend: User)
     {
         
     }
-    
+
     class func updateCurrentUser()
     {
         let ref = FBClient.ref
         
         let FBID = FBSDKAccessToken.currentAccessToken().userID
+        
         ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             let friendsList = snapshot.value!["friends_list"] as! [String]
             let email = snapshot.value!["email"] as! String

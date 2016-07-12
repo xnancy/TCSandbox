@@ -16,8 +16,6 @@ class UIHomeElementMaker: NSObject {
     /* ---------- VARIABLES ---------- */
     static var repetitionTypeOptions = ["secs", "reps"]
     static var workoutEditorTableView: UITableView?
-    static var currentWorkout: Workout?
-    
     
     /* ---------- DGRunkeeperSwitch ---------- */
     static func setRepetitionTypeSwitch(rSwitch: DGRunkeeperSwitch) {
@@ -75,13 +73,12 @@ class UIHomeElementMaker: NSObject {
     
     static func repetitionCountStepperValueChanged(sender: AnyObject) {
         let cellIndexPath = workoutEditorTableView!.indexPathForCell(((sender as! SnappingStepper).superview?.superview!) as! UITableViewCell)
-        currentWorkout?.movesList![(cellIndexPath?.row)!].quantity = Int((sender as! SnappingStepper).value)
-        ((sender as! SnappingStepper).superview!.superview! as! WorkoutEditorTableViewCell).repetitionQuantityLabel.text = String(currentWorkout?.movesList![(cellIndexPath?.row)!].quantity)
+
     }
     
     static func repetitionTypeSwitchValueChanged(sender: AnyObject) {
         let cellIndexPath = workoutEditorTableView!.indexPathForCell(((sender as! DGRunkeeperSwitch).superview!.superview!) as! UITableViewCell)
-        currentWorkout?.movesList![(cellIndexPath?.row)!].repetitionType = repetitionTypeOptions[(sender as! DGRunkeeperSwitch).selectedIndex]
+
     }
 
 }
