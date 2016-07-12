@@ -21,15 +21,6 @@ class User: AnyObject {
     var currentChallenges: [Challenge]?
     var pastChallenges: [Challenge]?
     
-    // array of user IDs
-    var friends: [String]?
-    
-    // array of current challenges
-    var currentChallenges: [String]?
-
-    // array of past challenges
-    var pastChallenges: [String]?
-    
     static var currentUser: User?
  
     /* ---------- INITIALIZERS ---------- */
@@ -54,7 +45,7 @@ class User: AnyObject {
         self.pastChallenges = []
     }
     
-    init(FBID: String, email: String, profileImageURLString: String) {
+    init(FBID: String, email: String, profileImageURLString: String, friends: [String]) {
         self.FBID = FBID
         self.email = email
         self.profileImageURLString = profileImageURLString
