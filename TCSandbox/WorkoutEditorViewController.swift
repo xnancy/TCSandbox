@@ -85,7 +85,6 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
 
     @IBAction func didLogout(sender: AnyObject) {
-        print(User.currentUser!.FBID)
         User.logout()
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

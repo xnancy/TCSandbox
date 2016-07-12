@@ -97,12 +97,49 @@ class FBClient: AnyObject {
     
     class func addFriend(friend: String)
     {
-        let FBID = User.currentUser?.FBID
+        let FBID = FBSDKAccessToken.currentAccessToken().userID
         
         ref.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            //upon login everyone gets a friend array, so just check if
-            //the array has a placeholder or an actual id and respond
-            //accordingly
+            
+            var friendsList = snapshot.value!["friends_list"] as! [String]
+            
+            if friendsList.contains(friend) //CHECK IF FRIEND ALREADY EXISTS
+            {
+                return
+            }
+            
+            friendsList.append(friend)
+            let updates = ["friends_list": friendsList]
+            ref.child("Users").child(FBID!).updateChildValues(updates)
+            
+            
+        })  { (error) in
+            
+            print(error.localizedDescription)
+        }
+    }
+    
+    class func removeFriend(friend: String)
+    {
+        let FBID = FBSDKAccessToken.currentAccessToken().userID
+        
+        ref.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            
+            var friendsList = snapshot.value!["friends_list"] as! [String]
+            
+            let index = friendsList.indexOf(friend)
+            
+            if let index = index
+            {
+                friendsList.removeAtIndex(index)
+                let updates = ["friends_list": friendsList]
+                ref.child("Users").child(FBID!).updateChildValues(updates)
+            }
+                
+                else
+            {
+                return
+            }
             
             
         })  { (error) in
