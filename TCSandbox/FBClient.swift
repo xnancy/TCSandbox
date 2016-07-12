@@ -15,8 +15,8 @@ import Firebase
 
 class FBClient: AnyObject {
 
-    static let dataRef = FIRDatabase.database().reference()
-
+    static let ref = FIRDatabase.database().reference()
+    
     class func login()
     {
         //facebook authentication in Firebase
@@ -60,7 +60,7 @@ class FBClient: AnyObject {
                 let friendsExist = snapshot.hasChild("friends_list")
 
                 //FIX THIS TO HANDLE EMPTY CHALLENGES TOO
-                
+                print(friendsExist)
                 if friendsExist
                 {
                     //do nothing
@@ -84,7 +84,6 @@ class FBClient: AnyObject {
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
                 }
-                
             })  { (error) in
                 
                 print(error.localizedDescription)

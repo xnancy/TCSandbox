@@ -54,7 +54,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     
     // MARK: - FACEBOOK LOGIN
-    
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
         
