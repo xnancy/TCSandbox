@@ -50,6 +50,7 @@ class FBClient: AnyObject {
             let FBID = user["id"] as! String
             let email = user["email"] as! String
             let profileImageURLString = pictureUrl
+            let name = user["name"] as! String
             
             let user: NSDictionary = ["FBID":FBID,"email":email, "profileImageURLString":profileImageURLString]
             let profile = ref.child("Users").child(FBID)
@@ -65,7 +66,7 @@ class FBClient: AnyObject {
                     //do nothing
                     let friendsList = snapshot.value!["friends_list"] as! [String]
                     
-                    let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, friends: friendsList)
+                    let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
                 }
                 
@@ -77,7 +78,7 @@ class FBClient: AnyObject {
                     let updates = ["friends_list": friendsList]
                     ref.child("Users").child(FBID).updateChildValues(updates)
                     
-                    let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, friends: friendsList)
+                    let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
                 }
                 

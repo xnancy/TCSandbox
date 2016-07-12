@@ -27,6 +27,7 @@
 		925D8E791D2D79C1000F44F7 /* TCSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E781D2D79C1000F44F7 /* TCSandboxUITests.swift */; };
 		925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */; };
 		925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */; };
+		929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929663071D3585F000300614 /* FriendsSendChallengeTableViewCell.swift */; };
 		929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A41D2ECA8A00FC1E96 /* User.swift */; };
 		929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A61D2ECAD800FC1E96 /* Challenge.swift */; };
 		929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */; };
@@ -90,6 +91,7 @@
 		925D8E7A1D2D79C1000F44F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorViewController.swift; sourceTree = "<group>"; };
 		925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorTableViewCell.swift; sourceTree = "<group>"; };
+		929663071D3585F000300614 /* FriendsSendChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsSendChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		929A02A41D2ECA8A00FC1E96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		929A02A61D2ECAD800FC1E96 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipLibrary.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */,
+				929663071D3585F000300614 /* FriendsSendChallengeTableViewCell.swift */,
 				92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */,
 			);
 			name = Views;
@@ -546,6 +549,7 @@
 				9214309B1D2DAAC200F6B59F /* Workout.swift in Sources */,
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
 				9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */,
+				929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */,
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
