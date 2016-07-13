@@ -14,13 +14,13 @@ class Challenge: AnyObject
     var participants: [String]?
     var userVideoIDs: [String: String]?
     var deadline: NSDate?
-    var gifIDs: [String]?
     var moveIDs: [String]?
+    var timeLimit: Int?
     
     
-    init(gifIDs: [String], moveIDs: [String], deadline: NSDate, participants: [String])
+    init(timeLimit: Int, moveIDs: [String], deadline: NSDate, participants: [String])
     {
-        self.gifIDs = gifIDs
+        self.timeLimit = timeLimit
         self.moveIDs = moveIDs
         self.deadline = deadline
         self.participants = participants

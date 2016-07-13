@@ -80,14 +80,14 @@ class User: AnyObject {
 
     class func updateCurrentUser()
     {
-        let ref = FBClient.ref
+        let ref = FBClient.dataRef
         
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         
         ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             let friendsList = snapshot.value!["friends_list"] as! [String]
             let email = snapshot.value!["email"] as! String
-            let profileImageURLString = snapshot.value!["profileImageURLString"] as! String
+            let profileImageURLString = snapshot.value!["profile_picture_url"] as! String
             let name = snapshot.value!["name"] as! String
             
             let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)

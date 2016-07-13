@@ -1,4 +1,3 @@
-
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
@@ -8,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82B64F751D36DED0002BFDBE /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B64F741D36DED0002BFDBE /* Video.swift */; };
 		82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6653A1D2DBF9000D642CA /* LoginViewController.swift */; };
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
@@ -64,6 +64,7 @@
 		4E6527A0FFB4200130D4B799 /* Pods-TCSandboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests.release.xcconfig"; sourceTree = "<group>"; };
 		679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		82B64F741D36DED0002BFDBE /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		82C6653A1D2DBF9000D642CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -241,6 +242,7 @@
 				929A02A41D2ECA8A00FC1E96 /* User.swift */,
 				929A02A61D2ECAD800FC1E96 /* Challenge.swift */,
 				929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */,
+				82B64F741D36DED0002BFDBE /* Video.swift */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -542,9 +544,9 @@
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
 				929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */,
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
-				9214309D1D2DAB1A00F6B59F /* Move.swift in Sources */,
 				929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */,
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
+				82B64F751D36DED0002BFDBE /* Video.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,

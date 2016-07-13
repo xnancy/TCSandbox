@@ -15,7 +15,7 @@ import Firebase
 
 class FBClient: AnyObject {
 
-    static let ref = FIRDatabase.database().reference()
+    static let dataRef = FIRDatabase.database().reference()
 
     class func login()
     {
@@ -52,11 +52,11 @@ class FBClient: AnyObject {
             let profileImageURLString = pictureUrl
             let name = user["name"] as! String
             
-            let user: NSDictionary = ["FBID":FBID,"email":email, "profileImageURLString":profileImageURLString,"name":name]
-            let profile = ref.child("Users").child(FBID)
+            let user: NSDictionary = ["FBID":FBID,"email":email, "profile_picture_url":profileImageURLString,"name":name]
+            let profile = dataRef.child("Users").child(FBID)
             profile.updateChildValues(user as [NSObject : AnyObject])
             
-            ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 let friendsExist = snapshot.hasChild("friends_list")
 
                 //FIX THIS TO HANDLE EMPTY CHALLENGES TOO
@@ -74,12 +74,12 @@ class FBClient: AnyObject {
                 {
                     //initialize a new empty friends array with string
                     //placeholder
-                    let friendsList: [String] = ["placeholder"]
+                    let friendsList: [String] = [FBID]
                     let currentChallenges: [String] = ["placeholder"]
                     let pastChallenges: [String] = ["placeholder"]
                     let challengesCompleted: Int = 0
                     let updates = ["friends_list": friendsList, "current_challenges": currentChallenges, "past_challenges": pastChallenges, "challenges_completed": challengesCompleted]
-                    ref.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
+                    dataRef.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
@@ -103,18 +103,18 @@ class FBClient: AnyObject {
     {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         
-        ref.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        dataRef.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
             var friendsList = snapshot.value!["friends_list"] as! [String]
             
-            if friendsList.contains(friend) //CHECK IF FRIEND ALREADY EXISTS
+            if friendsList.contains(friend)
             {
                 return
             }
             
             friendsList.append(friend)
             let updates = ["friends_list": friendsList]
-            ref.child("Users").child(FBID!).updateChildValues(updates)
+            dataRef.child("Users").child(FBID!).updateChildValues(updates)
             User.currentUser?.friends = friendsList
             
         })  { (error) in
@@ -127,7 +127,7 @@ class FBClient: AnyObject {
     {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         
-        ref.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        dataRef.child("Users").child(FBID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
             var friendsList = snapshot.value!["friends_list"] as! [String]
             
@@ -135,7 +135,7 @@ class FBClient: AnyObject {
             {
                 friendsList.removeAtIndex(index)
                 let updates = ["friends_list": friendsList]
-                ref.child("Users").child(FBID!).updateChildValues(updates)
+                dataRef.child("Users").child(FBID!).updateChildValues(updates)
                 User.currentUser?.friends = friendsList
             }
                 
@@ -153,25 +153,27 @@ class FBClient: AnyObject {
     
     class func uploadChallenge(challenge: Challenge)
     {
-        //UPLOAD GIFS AND MOVES TO FIREBASE TOO
+        //UPLOAD GIFS AND MOVES TO FIREBASE TOO, ALSO INCLUDE VIDEO POSSIBLY
         
-        let challengeID = ref.child("Challenges").childByAutoId().key
+        let challengeID = dataRef.child("Challenges").childByAutoId().key
         challenge.challengeID = challengeID
         
         let participants = challenge.participants
+        let addOns = challenge.moveIDs
+        let timeLimit = challenge.timeLimit
 
         
         for userID in participants!
         {
             //add challenge to user in firebase and user's current challenges
-            ref.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 
                 
                 var currentChallenges = snapshot.value!["current_challenges"] as! [String]
                 currentChallenges.append(challengeID)
                 
                 let updates = ["current_challenges": currentChallenges]
-                ref.child("Users").child(userID).updateChildValues(updates)
+                dataRef.child("Users").child(userID).updateChildValues(updates)
                 //REFRESH THE USER'S CURRENT CHALLENGES
                 
             })  { (error) in
@@ -179,8 +181,8 @@ class FBClient: AnyObject {
                 print(error.localizedDescription)
             }
             
-            ref.child("Challenges").updateChildValues(["challengeID": challengeID])
-            ref.child("Challenges").child(challengeID).updateChildValues(["participants": participants!])
+            dataRef.child("Challenges").updateChildValues(["challengeID": challengeID])
+            dataRef.child("Challenges").child(challengeID).updateChildValues(["participants": participants!, "add_on_images": addOns!, "time_limit": timeLimit!])
             
         }
     }
@@ -191,7 +193,7 @@ class FBClient: AnyObject {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         let challengeID = challenge.challengeID
         
-        ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
             var participants = snapshot.value!["participants"] as! [String]
             var currentChallenges = snapshot.value!["current_challenges"] as! [String]
@@ -201,8 +203,8 @@ class FBClient: AnyObject {
             participants.removeAtIndex(indexOfUser!)
             
             
-            ref.child("Users").child(FBID).updateChildValues(["current_challenges": currentChallenges])
-            ref.child("Challenges").child(challengeID!).updateChildValues(["participants": participants])
+            dataRef.child("Users").child(FBID).updateChildValues(["current_challenges": currentChallenges])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants])
             
         })  { (error) in
             
@@ -214,7 +216,7 @@ class FBClient: AnyObject {
     // Creates a closure callback that continually updates a user's friends ID list in a user object
     class func updateFriends(user: User) {
         // Attach a closure to read the data at our posts reference
-        ref.childByAppendingPath("Users").childByAppendingPath(user.FBID!).childByAppendingPath("friends_list").observeEventType(.ChildAdded, withBlock: { snapshot in
+        dataRef.child("Users").child(user.FBID!).child("friends_list").observeEventType(.ChildAdded, withBlock: { snapshot in
             user.friends?.append(snapshot.value as! String)
             }, withCancelBlock: { error in
                 print(error.description)
@@ -224,9 +226,16 @@ class FBClient: AnyObject {
     // Returns user object retrieved from Firebase given userID
     class func getUserFromID (userID: String) -> User {
         var tempUser: User?
-        ref.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             tempUser = User(dict: snapshot as! NSDictionary)
         })
         return tempUser!
+    }
+    
+    class func uploadVideo(videoURL: NSURL, challengeKey: String)
+    {
+        //upload video to vimeo
+        //update challenge video urls with this stream url
+        
     }
 }
