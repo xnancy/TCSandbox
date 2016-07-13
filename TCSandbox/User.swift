@@ -48,7 +48,7 @@ class User: AnyObject {
         self.friends = dict["friends_list"] as! [String]
         self.currentChallenges = dict["current_challenges"] as! [String]
         self.pastChallenges = dict["past_challenges"] as! [String]
-        self.challengesCompleted = Int(dict["challenges_completed"] as! String)!
+        self.challengesCompleted = dict["challenges_completed"] as! Int
     }
     
     // Create new user object from FB
@@ -63,21 +63,9 @@ class User: AnyObject {
         self.challengesCompleted = 0
     }
     
-    
-    class func logout()
+    func declineChallenge(challenge: Challenge)
     {
-        User.currentUser = nil
-        FBClient.logout()
-    }
-    
-    func upload(challenge: Challenge)
-    {
-        
-    }
-    
-    func remove(challenge: Challenge)
-    {
-        
+        FBClient.declineChallenge(challenge)
     }
     
     func addFriend(friendID: String)
@@ -88,11 +76,6 @@ class User: AnyObject {
     func removeFriend(friendID: String)
     {
         FBClient.removeFriend(friendID)
-    }
-    
-    func sendChallenge(challenge: Challenge, friend: User)
-    {
-        
     }
 
     class func updateCurrentUser()

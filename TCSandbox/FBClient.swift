@@ -52,7 +52,7 @@ class FBClient: AnyObject {
             let profileImageURLString = pictureUrl
             let name = user["name"] as! String
             
-            let user: NSDictionary = ["FBID":FBID,"email":email, "profileImageURLString":profileImageURLString]
+            let user: NSDictionary = ["FBID":FBID,"email":email, "profileImageURLString":profileImageURLString,"name":name]
             let profile = ref.child("Users").child(FBID)
             profile.updateChildValues(user as [NSObject : AnyObject])
             
@@ -65,7 +65,7 @@ class FBClient: AnyObject {
                 {
                     //do nothing
                     let friendsList = snapshot.value!["friends_list"] as! [String]
-                    
+
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
                 }
@@ -153,26 +153,60 @@ class FBClient: AnyObject {
     
     class func uploadChallenge(challenge: Challenge)
     {
-        //FINISH WRITING THIS
+        //UPLOAD GIFS AND MOVES TO FIREBASE TOO
         
+        let challengeID = ref.child("Challenges").childByAutoId().key
+        challenge.challengeID = challengeID
         
-        let key = ref.child("Challenges").childByAutoId().key
-        let users = challenge.getUsers()
-        
-        //ADD CHALLENGE TO EACH USER'S CURRENT CHALLENGES
-        for user in users
-        {
-            user.currentChallenges?.append(challenge)
-            
-            //also add challenge to user in firebase
-            let FBID = user.FBID
-            
-            ref.updateChildValues(["challengeID": key])
-            
-            //add the challenge to the user under this key
-            //initialize the challenge object with this key
-            //add a challenges child with this key
+        let participants = challenge.participants
 
+        
+        for userID in participants!
+        {
+            //add challenge to user in firebase and user's current challenges
+            ref.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                
+                
+                var currentChallenges = snapshot.value!["current_challenges"] as! [String]
+                currentChallenges.append(challengeID)
+                
+                let updates = ["current_challenges": currentChallenges]
+                ref.child("Users").child(userID).updateChildValues(updates)
+                //REFRESH THE USER'S CURRENT CHALLENGES
+                
+            })  { (error) in
+                
+                print(error.localizedDescription)
+            }
+            
+            ref.child("Challenges").updateChildValues(["challengeID": challengeID])
+            ref.child("Challenges").child(challengeID).updateChildValues(["participants": participants!])
+            
+        }
+    }
+    
+    class func declineChallenge(challenge: Challenge)
+    {
+        //THIS REMOVES THE USER FROM THE PARTICIPANTS AND THE CHALLENGE FROM THE USER'S CURRENT CHALLENGES
+        let FBID = FBSDKAccessToken.currentAccessToken().userID
+        let challengeID = challenge.challengeID
+        
+        ref.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            
+            var participants = snapshot.value!["participants"] as! [String]
+            var currentChallenges = snapshot.value!["current_challenges"] as! [String]
+            let indexOfChallenge = currentChallenges.indexOf(challengeID!)
+            let indexOfUser = participants.indexOf(FBID)
+            currentChallenges.removeAtIndex(indexOfChallenge!)
+            participants.removeAtIndex(indexOfUser!)
+            
+            
+            ref.child("Users").child(FBID).updateChildValues(["current_challenges": currentChallenges])
+            ref.child("Challenges").child(challengeID!).updateChildValues(["participants": participants])
+            
+        })  { (error) in
+            
+            print(error.localizedDescription)
         }
     }
     
@@ -195,11 +229,4 @@ class FBClient: AnyObject {
         })
         return tempUser!
     }
-    
-    // Adds friendID to userID friend list
-    // Assumes: userID, friendID are valid
-    class func addFriendFromID (userID: String, friendID: String) {
-        
-    }
-
 }

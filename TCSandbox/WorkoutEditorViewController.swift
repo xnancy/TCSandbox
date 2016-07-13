@@ -27,7 +27,7 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //User.updateCurrentUser()
+        User.updateCurrentUser()
         
         // Create editable navigation bar title
         navigationBarTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 22))

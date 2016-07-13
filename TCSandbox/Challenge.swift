@@ -10,24 +10,28 @@ import Foundation
 
 class Challenge: AnyObject
 {
-    var videoID: String?
+    var challengeID: String?
     var participants: [String]?
-    // userID String: videoID String
     var userVideoIDs: [String: String]?
     var deadline: NSDate?
-    var past: Bool?
+    var gifIDs: [String]?
+    var moveIDs: [String]?
     
-    init()
+    
+    init(gifIDs: [String], moveIDs: [String], deadline: NSDate, participants: [String])
     {
-        
+        self.gifIDs = gifIDs
+        self.moveIDs = moveIDs
+        self.deadline = deadline
+        self.participants = participants
     }
     
-    func addUser(userID: String)
+    func addParticipant(userID: String)
     {
         participants?.append(userID)
     }
     
-    func removeUser(userID: String)
+    func removeParticipant(userID: String)
     {
         if let index = participants!.indexOf(userID)
         {
@@ -35,23 +39,29 @@ class Challenge: AnyObject
         }
     }
     
+    func chooseDate(deadline: NSDate) //may not need this depending on when we select the date
+    {
+        self.deadline = deadline
+    }
+    
     func didPass() -> Bool
     {
-//        let dateComponents = NSDateComponents()
-//        let currentYear = dateComponents.year
-//        let currentMonth = dateComponents.month
-//        let currentDay = dateComponents.day
-//        let currentHour = dateComponents.hour
-//        let currentMin = dateComponents.minute
-//        
-//        let dueYear = deadline.
+        let currentDate = NSDate() //this should get the current date, but verify this later
+
+        if currentDate.compare(deadline!) == NSComparisonResult.OrderedAscending
+        {
+            return false
+        }
         
-        return true //CHANGE THIS
+            else
+        {
+            return true
+        }
     }
     
     func sendToUsers()
     {
-    
+        FBClient.uploadChallenge(self)
     }
     
     func getUsers() -> [User]
