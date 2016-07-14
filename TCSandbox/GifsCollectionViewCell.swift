@@ -136,9 +136,11 @@ class Gifs3CollectionViewCell: UICollectionViewCell {
         
         if selectButton.selected == true {
             self.delegate?.decrementCount()
+            self.delegate?.decrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 3)
         } else if delegate?.getCount() < 4 {
             self.delegate?.incrementCount()
+            self.delegate?.incrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 3)
         }
     }
@@ -181,9 +183,11 @@ class Gifs4CollectionViewCell: UICollectionViewCell {
         
         if selectButton.selected == true {
             self.delegate?.decrementCount()
+            self.delegate?.decrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 4)
         } else if delegate?.getCount() < 4{
             self.delegate?.incrementCount()
+            self.delegate?.incrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 4)
         }
     }
@@ -222,9 +226,11 @@ class Gifs5CollectionViewCell: UICollectionViewCell {
         let index = collectionView.indexPathForCell(self)
         if selectButton.selected == true {
             self.delegate?.decrementCount()
+            self.delegate?.decrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 5)
         } else if delegate?.getCount() < 4 {
             self.delegate?.incrementCount()
+            self.delegate?.incrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 5)
         }
     }
@@ -271,11 +277,11 @@ class Gifs6CollectionViewCell: UICollectionViewCell {
         
         if selectButton.selected == true {
             self.delegate?.decrementCount()
-            self.delegate?.decrementWorkoutCount()
+            self.delegate?.decrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 6)
         } else if delegate?.getCount() < 4 {
             self.delegate?.incrementCount()
-            self.delegate?.incrementWorkoutCount()
+            self.delegate?.incrementTagsCount()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 6)
         }
         

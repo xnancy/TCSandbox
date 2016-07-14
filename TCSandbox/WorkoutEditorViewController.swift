@@ -40,6 +40,9 @@ class WorkoutEditorViewController: UIViewController {
     //var gifsToShow: [String] = []
     var gifsToShow: [String?] = []
     var tagsToShow: [String] = []
+    var movesCount: Int!
+    var workoutCount: Int!
+    var tagsCount: Int!
     //var gifDescriptionsToShow:[String] = []
     // var gifDescriptionsToShow: [String] = []
     // var index = Int()
@@ -48,7 +51,7 @@ class WorkoutEditorViewController: UIViewController {
     var challenge: Challenge?
     
     
-    var toPass: String!
+    //var toPass: String!
     
     
     // 0 = Hip Airplane whih is ac 8
@@ -58,16 +61,87 @@ class WorkoutEditorViewController: UIViewController {
         super.viewDidLoad()
         //User.updateCurrentUser()
         // Do any additional setup after loading the view.
+        //print(movesCount)
+        //print (workoutCount)
+        //print(tagsToShow)
+        
         
         selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])!]
-        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])!]
-        selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])!]
-        selectedMoveLabel4.text = Gifs.gifDictionary[(gifsToShow[3])!]
-        //
         gifSelectedImageView1.image = UIImage(named: gifsToShow[0]!)
+        
+        
+        if workoutCount > 1 {
+        
+        if workoutCount == 2 {
+        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])!]
         gifSelectedImageView2.image = UIImage(named: gifsToShow[1]!)
+        }
+        
+        else if workoutCount == 3 {
+        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])!]
+        gifSelectedImageView2.image = UIImage(named: gifsToShow[1]!)
+        selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])!]
         gifSelectedImageView4.image = UIImage(named: gifsToShow[2]!)
+        }
+        
+        else if workoutCount == 4 {
+        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])!]
+        gifSelectedImageView2.image = UIImage(named: gifsToShow[1]!)
+        selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])!]
+        gifSelectedImageView4.image = UIImage(named: gifsToShow[2]!)
+        selectedMoveLabel4.text = Gifs.gifDictionary[(gifsToShow[3])!]
         gifSelectedImageView3.image = UIImage(named: gifsToShow[3]!)
+        }
+            
+            
+        }
+        
+        
+        
+        if tagsCount > 0 {
+        
+        if workoutCount == 1 {
+        
+            selectedMoveLabel2.text = Tags.tagDictionary[tagsToShow[0]]
+            gifSelectedImageView2.image = UIImage(named: tagsToShow[0])
+            
+            if tagsCount == 2 {
+                selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[1]]
+                gifSelectedImageView4.image = UIImage(named: tagsToShow[1])
+            }
+            else if tagsCount == 3{
+                selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[1]]
+                gifSelectedImageView4.image = UIImage(named: tagsToShow[1])
+                selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[2]]
+                gifSelectedImageView3.image = UIImage(named: tagsToShow[2])
+            }
+            
+            
+        }
+        else if workoutCount == 2 {
+            
+            selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[0]]
+            gifSelectedImageView4.image = UIImage(named: tagsToShow[0])
+            
+            if tagsCount == 2{
+                selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[1]]
+                gifSelectedImageView3.image = UIImage(named: tagsToShow[1])
+//                selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[2]]
+//                gifSelectedImageView3.image = UIImage(named: tagsToShow[2])
+
+            }
+    
+        }
+        else if workoutCount == 3 {
+            selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[0]]
+            gifSelectedImageView3.image = UIImage(named: tagsToShow[0])
+            
+        }
+        
+        }
+       
+        
+       
         
         //        */
         //print(index)

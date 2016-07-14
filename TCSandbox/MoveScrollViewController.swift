@@ -9,6 +9,8 @@ protocol MoveScrollViewControllerDelegate {
     func decrementCount()
     func incrementWorkoutCount()
     func decrementWorkoutCount()
+    func incrementTagsCount()
+    func decrementTagsCount()
     func updateTagView()
     func selectCollectionCell(index: Int, collectionView: Int)
     func updateView()
@@ -60,6 +62,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     
     var movesCount: Int = 0
     var workoutCount: Int = 0
+    var tagsCount: Int = 0
     var delegate: GifsCollectionViewCell?
     
     //MARK:
@@ -143,6 +146,23 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         
     }
     
+    func incrementTagsCount() {
+       tagsCount += 1
+        counterLabel.text = String(movesCount)
+        
+        //        self.viewDidLoad()
+        updateView()
+    }
+    
+    func decrementTagsCount() {
+        tagsCount -= 1
+        counterLabel.text = String(movesCount)
+        //        self.viewDidLoad()
+        
+        updateView()
+        
+    }
+    
     func updateView(){
         
         //let selectButton = UIButton
@@ -182,54 +202,55 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
         let svc = segue.destinationViewController as! WorkoutEditorViewController
-        svc.toPass = "\(workoutCount)"
-        //let boolean = collection1Selected
-        
-        //        for (bool i in [bool]) {
-        //            if i { print("true" } else { print "false" } }
-        ////
-        // [ 0, 1, 1]
-        // [gif0, gif1, gif2 ]
-        //    |
-        //    v
-        // ======= .....
-        // [gif1, gif2]
+        svc.movesCount = movesCount
+        svc.workoutCount = workoutCount
+        svc.tagsCount = tagsCount
+        print(tagsCount)
         
         
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{
-                //var collection1SelectedIndex : Int = collection1Selected.indexOf(boolValue)!;
-                
                 svc.gifsToShow.append(Gifs.row1[index])
-                
                 
             }
         }
         
         for (index, boolValue) in collection2Selected.enumerate(){
             if boolValue == true{
-                //var collection2SelectedIndex : Int = collection2Selected.indexOf(boolValue)!;
                 svc.gifsToShow.append(Gifs.row2[index])
                 
             }
         }
-        //
-        //
-        //        for i in 0...collection1Selected.count - 1{
-        //
-        //            if i = true  {
-        //
-        //                svc.gifsToShow.append("potatoe")
-        //            }
-        //
-        ////        }else if collection2Selected:[true]{
-        ////
-        //        }
         
-        //svc.gifsToShow =
+        for (index, boolValue) in collection3Selected.enumerate(){
+            if boolValue == true{
+                svc.tagsToShow.append(Tags.row3[index])
+                
+            }
+        }
+        
+        for (index, boolValue) in collection4Selected.enumerate(){
+            if boolValue == true{
+                svc.tagsToShow.append(Tags.row4[index])
+                
+            }
+        }
+        
+        for (index, boolValue) in collection5Selected.enumerate(){
+            if boolValue == true{
+                svc.tagsToShow.append(Tags.row5[index])
+                
+            }
+        }
+        
+        for (index, boolValue) in collection6Selected.enumerate(){
+            if boolValue == true{
+                svc.tagsToShow.append(Tags.row6[index])
+                
+            }
+        }
     }
     
     
