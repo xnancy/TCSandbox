@@ -102,7 +102,7 @@ class FBClient: AnyObject {
     {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         
-        ref.child("Users").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        dataRef.child("Users").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             var userDict = snapshot.value![FBID]
             var userFriendsList = userDict!!["friends_list"] as! [String]
             
@@ -115,8 +115,8 @@ class FBClient: AnyObject {
             let userUpdates = ["friends_list": userFriendsList]
             let friendUpdates = ["friends_list": friendFriendsList]
             
-            ref.child("Users").child(FBID).updateChildValues(userUpdates)
-            ref.child("Users").child(friendID).updateChildValues(friendUpdates)
+           dataRef.child("Users").child(FBID).updateChildValues(userUpdates)
+            dataRef.child("Users").child(friendID).updateChildValues(friendUpdates)
 
             
             User.currentUser?.friends = userFriendsList
@@ -131,7 +131,7 @@ class FBClient: AnyObject {
     {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         
-        ref.child("Users").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        dataRef.child("Users").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
             let userDictionary = snapshot.value![FBID]
             let friendDictionary = snapshot.value![friendID]
@@ -143,14 +143,14 @@ class FBClient: AnyObject {
             {
                 friendFriendsList.removeAtIndex(index)
                 let updates = ["friends_list": friendFriendsList]
-                ref.child("Users").child(friendID).updateChildValues(updates)
+               dataRef.child("Users").child(friendID).updateChildValues(updates)
             }
             
             if let index = userFriendsList.indexOf(friendID)
             {
                 userFriendsList.removeAtIndex(index)
                 let updates = ["friends_list": userFriendsList]
-                ref.child("Users").child(FBID).updateChildValues(updates)
+                dataRef.child("Users").child(FBID).updateChildValues(updates)
                 User.currentUser?.friends = userFriendsList
             }
             
@@ -205,7 +205,7 @@ class FBClient: AnyObject {
         let challengeID = challenge.challengeID
         
         dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            user.currentChallenges?.append(key)
+            
             
             var participants = snapshot.value!["participants"] as! [String]
             var currentChallenges = snapshot.value!["current_challenges"] as! [String]
@@ -240,7 +240,7 @@ class FBClient: AnyObject {
     
     // Sets user object using data retrieved from Firebase given userID
     class func getUserFromID (userID: String, user: User) {
-        ref.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+       dataRef.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             let dict = snapshot.value as! NSDictionary
             print (dict)
             user.FBID = dict["FBID"] as! String
@@ -272,7 +272,7 @@ class FBClient: AnyObject {
     /* ---------- FRIEND CELL GENERATION ---------- */
     class func generateFriendCell(friendID: String, cell: FriendsSendChallengeTableViewCell) {
         
-        ref.childByAppendingPath("Users").childByAppendingPath(friendID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        dataRef.childByAppendingPath("Users").childByAppendingPath(friendID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             let dict = snapshot.value as! NSDictionary
             let url = NSURL(string: dict["profile_picture_url"] as! String)
             cell.userProfileImageView.setImageWithURL(url!)
@@ -282,7 +282,7 @@ class FBClient: AnyObject {
     }
     
     class func generateFriendSearchCell(friendID: String, cell: searchFriendsTableViewCell) {
-        ref.childByAppendingPath("Users").childByAppendingPath(friendID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        dataRef.childByAppendingPath("Users").childByAppendingPath(friendID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             let dict = snapshot.value as! NSDictionary
             let url = NSURL(string: dict["profile_picture_url"] as! String)
             cell.profileImageView.setImageWithURL(url!)
@@ -294,7 +294,7 @@ class FBClient: AnyObject {
     /* ---------- GENERAL LISTS ---------- */
     // Fills [String: String] with list of all userID: name in database
     class func generateNonFriendUserIDList(dictionary: NSMutableDictionary, delegate: AddFriendViewControllerDelegate) {
-        ref.childByAppendingPath("Users").observeSingleEventOfType(.Value, withBlock: { snapshot in
+        dataRef.childByAppendingPath("Users").observeSingleEventOfType(.Value, withBlock: { snapshot in
             let dict = snapshot.value as! NSDictionary
             let currentUserID = FBSDKAccessToken.currentAccessToken().userID
             let friendsList = dict.valueForKey(currentUserID)?.valueForKey("friends_list") as! [String]

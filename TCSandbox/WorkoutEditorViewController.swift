@@ -15,66 +15,84 @@ import FBSDKLoginKit
 
 
 
-class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WorkoutEditorViewController: UIViewController {
     
     /* ---------- OUTLETS ---------- */
-    @IBOutlet weak var workoutEditorTableView: UITableView!
+    
+    
+    @IBOutlet weak var gifSelectedImageView1: UIImageView!
+    @IBOutlet weak var gifSelectedImageView2: UIImageView!
+    @IBOutlet weak var gifSelectedImageView3: UIImageView!
+    @IBOutlet weak var gifSelectedImageView4: UIImageView!
+    @IBOutlet weak var nameChallengeTextField: UITextField!
+    @IBOutlet weak var selectedMoveLabel1: UILabel!
+    @IBOutlet weak var selectedMoveLabel2: UILabel!
+    @IBOutlet weak var selectedMoveLabel3: UILabel!
+    @IBOutlet weak var selectedMoveLabel4: UILabel!
+    @IBOutlet weak var countdownStepper: UIStepper!
+    @IBOutlet weak var countdownLabelButton: UIButton!
+    
     
     
     /* ---------- VARIABLES ---------- */
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
-    var navigationBarTextField: UITextField!
+    //var gifsDictionary: Dictionary()
+    //var gifsToShow: [String] = []
+    var gifsToShow: [String?] = []
+    var tagsToShow: [String] = []
+    //var gifDescriptionsToShow:[String] = []
+    // var gifDescriptionsToShow: [String] = []
+    // var index = Int()
+    //var tagDescroptionToShow: [String] = []
+    
+    var challenge: Challenge?
+    
+    
+    var toPass: String!
+    
+    
+    // 0 = Hip Airplane whih is ac 8
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Create editable navigation bar title
-        navigationBarTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
-        navigationBarTextField.placeholder = "Name Your Workout..."
-        navigationBarTextField.font = UIFont.systemFontOfSize(19)
-        navigationBarTextField.textColor = UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-        navigationBarTextField.textAlignment = .Center
-        navigationBarTextField.addTarget(self, action: "navigationBarTextFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-
-        self.navigationItem.titleView = navigationBarTextField
-
-        // TESTING: Add temp move to workout
-
-        
-        // Set table view delegate/data source
-        workoutEditorTableView.delegate = self
-        workoutEditorTableView.dataSource = self
-    
+        //User.updateCurrentUser()
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])!]
+        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])!]
+        selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])!]
+        selectedMoveLabel4.text = Gifs.gifDictionary[(gifsToShow[3])!]
+        //
+        gifSelectedImageView1.image = UIImage(named: gifsToShow[0]!)
+        gifSelectedImageView2.image = UIImage(named: gifsToShow[1]!)
+        gifSelectedImageView4.image = UIImage(named: gifsToShow[2]!)
+        gifSelectedImageView3.image = UIImage(named: gifsToShow[3]!)
+        
+        //        */
+        //print(index)
+        //print(gifsToShow)
+        ///print(gifDescriptionsToShow)
+        
+        
+        //challenge = Challenge()
+        
+        //print(challenge?.challengeName)
+        // selectedMoveLabel1.text = gifsToShow[0]
     }
     
-    /* ---------- NAVIGATION BAR TEXT FIELD ---------- */
-    func navigationBarTextFieldDidChange() {
+    @IBAction func backButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
-    /* ---------- TABLE VIEW DATA SOURCE ---------- */
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = workoutEditorTableView.dequeueReusableCellWithIdentifier("workoutEditorTableCell") as! WorkoutEditorTableViewCell
-        
-        // Add gif to cell
-        let gif = UIImage(gifName: "pushup")
-        cell.gifImageView.setGifImage(gif, manager: gifmanager, loopCount: 20)
-        
-        // Add stepper and switch to cell using UIHomeElementMaker
-        UIHomeElementMaker.workoutEditorTableView = workoutEditorTableView
-        UIHomeElementMaker.setRepetitionTypeSwitch(cell.repetitionTypeSwitch)
-        UIHomeElementMaker.setRepetitionCountStepper(cell.repetitionQuantityStepper)
-        
-        return cell
-    }
     
-
     @IBAction func didLogout(sender: AnyObject) {
+        
+        User.currentUser = nil
+        //FirebaseClient.logout()
+        
         FBClient.logout()
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -84,8 +102,10 @@ class WorkoutEditorViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4 //CHANGE THIS LATER TO THE NUMBER OF MOVES IN THE CURRENT WORKOUT
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+    
     
 }

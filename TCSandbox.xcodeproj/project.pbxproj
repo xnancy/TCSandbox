@@ -25,7 +25,6 @@
 		925D8E6E1D2D79C1000F44F7 /* TCSandboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E6D1D2D79C1000F44F7 /* TCSandboxTests.swift */; };
 		925D8E791D2D79C1000F44F7 /* TCSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E781D2D79C1000F44F7 /* TCSandboxUITests.swift */; };
 		925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */; };
-		925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */; };
 		929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929663071D3585F000300614 /* FriendsSendChallengeTableViewCell.swift */; };
 		9296630A1D36AFA400300614 /* searchFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929663091D36AFA400300614 /* searchFriendsTableViewCell.swift */; };
 		929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A41D2ECA8A00FC1E96 /* User.swift */; };
@@ -89,7 +88,6 @@
 		925D8E781D2D79C1000F44F7 /* TCSandboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSandboxUITests.swift; sourceTree = "<group>"; };
 		925D8E7A1D2D79C1000F44F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorViewController.swift; sourceTree = "<group>"; };
-		925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorTableViewCell.swift; sourceTree = "<group>"; };
 		929663071D3585F000300614 /* FriendsSendChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsSendChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		929663091D36AFA400300614 /* searchFriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		929A02A41D2ECA8A00FC1E96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		925D8E8A1D2DA8EC000F44F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				925D8E8C1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift */,
 				929663071D3585F000300614 /* FriendsSendChallengeTableViewCell.swift */,
 				92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */,
 				929663091D36AFA400300614 /* searchFriendsTableViewCell.swift */,
@@ -540,7 +537,6 @@
 			files = (
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */,
-				925D8E8D1D2DA921000F44F7 /* WorkoutEditorTableViewCell.swift in Sources */,
 				925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */,
 				925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */,
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,

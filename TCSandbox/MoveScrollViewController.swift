@@ -1,12 +1,23 @@
 import UIKit
 
-protocol delegate {
-    var movesCount: Int { get set }
+//protocol delegate {
+//    var movesCount: Int { get set }
+//}
+
+protocol MoveScrollViewControllerDelegate {
+    func incrementCount()
+    func decrementCount()
+    func incrementWorkoutCount()
+    func decrementWorkoutCount()
+    func updateTagView()
+    func selectCollectionCell(index: Int, collectionView: Int)
+    func updateView()
+    func getCount() -> Int
 }
 
-class MoveScrollViewController: UIViewController {
+class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
-
+    
     //MARK: IB Outlets
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView1: UICollectionView!
@@ -16,49 +27,152 @@ class MoveScrollViewController: UIViewController {
     @IBOutlet weak var collectionView5: UICollectionView!
     @IBOutlet weak var collectionView6: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var viewChallengeButton: UIButton!
     @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var tagForbidButton: UIButton!
     
     
     private var gifs = Gifs.createGifs()
-    private var gifs2 = Gifs2.createGifs2()
-    private var gifs3 = Gifs3.createGifs3()
-    private var gifs4 = Gifs4.createGifs4()
-    private var gifs5 = Gifs5.createGifs5()
-    private var gifs6 = Gifs6.createGifs6()
+    private var gifs2 = Gifs.createGifs2()
+    private var gifs3 = Tags.createGifs3()
+    private var gifs4 = Tags.createGifs4()
+    private var gifs5 = Tags.createGifs5()
+    private var gifs6 = Tags.createGifs6()
+    
+    private struct Storyboard {
+        
+        static let CellIndentifier = "GifCell"
+        static let CellIndentifier2 = "GifCell2"
+        static let CellIndentifier3 = "GifCell3"
+        static let CellIndentifier4 = "GifCell4"
+        static let CellIndentifier5 = "GifCell5"
+        static let CellIndentifier6 = "GifCell6"
+        
+    }
+    
+    var collection1Selected: [Bool] = []
+    var collection2Selected: [Bool] = []
+    var collection3Selected: [Bool] = []
+    var collection4Selected: [Bool] = []
+    var collection5Selected: [Bool] = []
+    var collection6Selected: [Bool] = []
     
     
-    //var movesCount: Int = 0
-    //var delegate: GifsCollectionViewCell?
+    var movesCount: Int = 0
+    var workoutCount: Int = 0
+    var delegate: GifsCollectionViewCell?
     
     //MARK:
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.contentSize.height = 1750
+        scrollView.contentSize.height = 1775
+        updateView()
+        updateTagView()
+        
+        
         //print(movesCount)
         //print(counterLabel)
-        
-        
-        
         //self.counterLabel.text = "\(self.movesCount)"
-        updateCount()
+        //updateCount()
         //counterLabel! = giffy.counterLabel
         //print(giffy.counterLabel)
         // Do any additional setup after loading the view.
-    }
-    
-    
-    func updateCount(){
-       // dispatch_async(dispatch_get_main_queue()) {
-            print("called")
-            
-         //self.counterLabel.text = "\(self.movesCount)"
-            //print(self.movesCount)
-            //self.updateCount()
-            
         
-        //}
+        collection1Selected = [false, false, false, false, false]
+        collection2Selected = [false, false, false, false, false, false, false]
+        collection3Selected = [false, false, false, false, false, false, false, false, false]
+        collection4Selected = [false, false, false, false, false]
+        collection5Selected = [false, false, false, false]
+        collection6Selected = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+        
     }
+    
+    func selectCollectionCell(index: Int, collectionView: Int){
+        if collectionView == 1 {
+            collection1Selected[index] = !collection1Selected[index]
+            collectionView1.reloadData()
+        }else if collectionView == 2 {
+            collection2Selected[index] = !collection2Selected[index]
+            collectionView2.reloadData()
+        }else if collectionView == 3 {
+            collection3Selected[index] = !collection3Selected[index]
+            collectionView3.reloadData()
+        }else if collectionView == 4 {
+            collection4Selected[index] = !collection4Selected[index]
+            collectionView4.reloadData()
+        }else if collectionView == 5 {
+            collection5Selected[index] = !collection5Selected[index]
+            collectionView5.reloadData()
+        }else if collectionView == 6{
+            collection6Selected[index] = !collection6Selected[index]
+            collectionView6.reloadData()
+        }
+    }
+    
+    func incrementWorkoutCount() {
+        workoutCount += 1
+        updateView()
+        updateTagView()
+        //limitSelect()
+        
+    }
+    
+    func decrementWorkoutCount() {
+        workoutCount -= 1
+        updateView()
+        updateTagView()
+        //limitSelect()
+    }
+    
+    
+    func incrementCount() {
+        movesCount += 1
+        counterLabel.text = String(movesCount)
+        
+        //        self.viewDidLoad()
+        updateView()
+    }
+    
+    func decrementCount() {
+        movesCount -= 1
+        counterLabel.text = String(movesCount)
+        //        self.viewDidLoad()
+        
+        updateView()
+        
+    }
+    
+    func updateView(){
+        
+        //let selectButton = UIButton
+        
+        if workoutCount < 1 {
+            viewChallengeButton.hidden = true
+            counterLabel.hidden = true
+            
+        }else{
+            viewChallengeButton.hidden = false
+            counterLabel.hidden = false
+        }
+        
+    }
+    
+    
+    func updateTagView(){
+        if workoutCount < 1 {
+            tagForbidButton.hidden = false
+            
+        }else{
+            tagForbidButton.hidden = true
+        }
+    }
+    
+    func getCount() -> Int {
+        
+        return movesCount
+    }
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -66,43 +180,76 @@ class MoveScrollViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let svc = segue.destinationViewController as! WorkoutEditorViewController
+        svc.toPass = "\(workoutCount)"
+        //let boolean = collection1Selected
+        
+        //        for (bool i in [bool]) {
+        //            if i { print("true" } else { print "false" } }
+        ////
+        // [ 0, 1, 1]
+        // [gif0, gif1, gif2 ]
+        //    |
+        //    v
+        // ======= .....
+        // [gif1, gif2]
+        
+        
+        for (index, boolValue) in collection1Selected.enumerate(){
+            if boolValue == true{
+                //var collection1SelectedIndex : Int = collection1Selected.indexOf(boolValue)!;
+                
+                svc.gifsToShow.append(Gifs.row1[index])
+                
+                
+            }
+        }
+        
+        for (index, boolValue) in collection2Selected.enumerate(){
+            if boolValue == true{
+                //var collection2SelectedIndex : Int = collection2Selected.indexOf(boolValue)!;
+                svc.gifsToShow.append(Gifs.row2[index])
+                
+            }
+        }
+        //
+        //
+        //        for i in 0...collection1Selected.count - 1{
+        //
+        //            if i = true  {
+        //
+        //                svc.gifsToShow.append("potatoe")
+        //            }
+        //
+        ////        }else if collection2Selected:[true]{
+        ////
+        //        }
+        
+        //svc.gifsToShow =
+    }
     
     
+    @IBAction func tagForbidAction(sender: UIButton) {
+        
+        
+        let alertController = UIAlertController(title: "Cannot Add Tag", message:
+            "Tags must be added to one (1) move", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
-    /*@IBAction func cancelAction(sender: UIButton) {
+    
+    @IBAction func cancelAction(sender: UIButton) {
         
         dismissViewControllerAnimated(true, completion: nil)
         
         
-    }*/
-    
-    
-    
-}
-
-private struct Storyboard {
-    
-    static let CellIndentifier = "GifCell"
-    static let CellIndentifier2 = "GifCell2"
-    static let CellIndentifier3 = "GifCell3"
-    static let CellIndentifier4 = "GifCell4"
-    static let CellIndentifier5 = "GifCell5"
-    static let CellIndentifier6 = "GifCell6"
-    
-}
-
-
-extension MoveScrollViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-
+    }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
@@ -123,7 +270,7 @@ extension MoveScrollViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
+        
         if collectionView == collectionView1{
             return gifs.count
         }else if collectionView == collectionView2{
@@ -145,39 +292,53 @@ extension MoveScrollViewController: UICollectionViewDataSource, UICollectionView
         if collectionView == collectionView1{
             
             let cell = collectionView1.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier, forIndexPath: indexPath) as! GifsCollectionViewCell
-        
-                cell.gifs = self.gifs[indexPath.item]
-        
-            return cell} else if collectionView == collectionView2{
+            cell.delegate = self
+            cell.isSelected = collection1Selected[indexPath.row]
+            cell.gifs = self.gifs[indexPath.item]
+            cell.selectButton.selected = collection1Selected[indexPath.row]
+            return cell
+        } else if collectionView == collectionView2{
             
             let cell = collectionView2.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier2, forIndexPath: indexPath) as! Gifs2CollectionViewCell
-               
-               cell.gifs2 = self.gifs2[indexPath.item]
-    
-            return cell} else if collectionView == collectionView3{
-        
+            cell.delegate = self
+            cell.isSelected = collection2Selected[indexPath.row]
+            cell.gifs2 = self.gifs2[indexPath.item]
+            cell.selectButton.selected = collection2Selected[indexPath.row]
+            return cell
+        } else if collectionView == collectionView3{
+            
             let cell = collectionView3.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier3, forIndexPath: indexPath) as! Gifs3CollectionViewCell
-            
+            cell.delegate = self
+            cell.isSelected = collection3Selected[indexPath.row]
             cell.gifs3 = self.gifs3[indexPath.item]
-            
-            return cell} else if collectionView == collectionView4{
+            cell.selectButton.selected = collection3Selected[indexPath.row]
+            return cell
+        } else if collectionView == collectionView4{
             
             let cell = collectionView4.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier4, forIndexPath: indexPath) as! Gifs4CollectionViewCell
-            
+            cell.delegate = self
+            cell.isSelected = collection4Selected[indexPath.row]
             cell.gifs4 = self.gifs4[indexPath.item]
-            
-            return cell} else if collectionView == collectionView5{
+            cell.selectButton.selected = collection4Selected[indexPath.row]
+            return cell
+        } else if collectionView == collectionView5{
             
             let cell = collectionView5.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier5, forIndexPath: indexPath) as! Gifs5CollectionViewCell
-            
+            cell.delegate = self
+            cell.isSelected = collection5Selected[indexPath.row]
             cell.gifs5 = self.gifs5[indexPath.item]
-            
-            return cell} else {
+            cell.selectButton.selected = collection5Selected[indexPath.row]
+            return cell
+        } else {
             
             let cell = collectionView6.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier6, forIndexPath: indexPath) as! Gifs6CollectionViewCell
-            
+            cell.delegate = self
+            cell.isSelected = collection6Selected[indexPath.row]
             cell.gifs6 = self.gifs6[indexPath.item]
-
-            return cell}
+            cell.selectButton.selected = collection6Selected[indexPath.row]
+            return cell
         }
     }
+}
+
+

@@ -9,58 +9,52 @@
 import UIKit
 
 
-class GifsCollectionViewCell: UICollectionViewCell  {
-   
-    
+
+class GifsCollectionViewCell: UICollectionViewCell{
     
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var featuredImage:UIImageView!
     @IBOutlet weak var gifDescription:UILabel!
-
     
-    let vc = (UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MoveScrollViewController") as! MoveScrollViewController)
-    //var vc = MoveScrollViewController()
-    //let vc = self.view.superview
-    
-    
-    
-
-
-    @IBAction func didSelectMove(sender: UIButton) {
-        
-        //self.delegate?.didSelectMove()
-        
-        if selectButton.selected == true{
-            selectButton.selected = false
-            //self.vc!.movesCount! -= 1
-            //self.vc!.counterLabel.text = "\(self.vc!.movesCount)"
-          
-        }else{
-            print("adding")
-            selectButton.selected = true
-            //vc.counterLabel.text = "\(vc.movesCount)"
-            //print(vc.movesCount)
-            //vc.movesCount += 1
-            //print(movesCount)
-            vc.updateCount()
-        }
-        
-        }
-    
-    
+    var isSelected:Bool! = false
+    var delegate: MoveScrollViewControllerDelegate?
     var gifs: Gifs! {
         didSet{
             updateUI()
         }
     }
     
+    @IBAction func didSelectMove(sender: UIButton) {
+        
+        
+        let collectionView = self.superview as! UICollectionView
+        let index = collectionView.indexPathForCell(self)
+        
+        
+        
+        if selectButton.selected == true {
+            self.delegate?.decrementCount()
+            self.delegate?.decrementWorkoutCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 1)
+            
+            
+        } else if delegate?.getCount() < 4 {
+            self.delegate?.incrementCount()
+            self.delegate?.incrementWorkoutCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 1)
+            
+            
+        }
+        
+        
+    }
     
     func updateUI(){
-        
         featuredImage?.image! = gifs.featuredImage
         gifDescription?.text! = gifs.description
         
     }
+    
     
 }
 
@@ -71,30 +65,44 @@ class Gifs2CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gifDescription2:UILabel!
     @IBOutlet weak var selectButton: UIButton!
     
-    var gifs2: Gifs2! {
+    var delegate: MoveScrollViewControllerDelegate?
+    var isSelected:Bool! = false
+    var gifs2: Gifs! {
         didSet{
             updateUI()
         }
     }
     
+    override func layoutSubviews() {
+        selectButton.selected = isSelected
+    }
+    
+    
+    
     @IBAction func didSelectMove(sender: UIButton) {
         
-        if selectButton.selected == true{
-            selectButton.selected = false
-            
-        }else{
-            selectButton.selected = true
-        }
+        let collectionView = self.superview as! UICollectionView
+        let index = collectionView.indexPathForCell(self)
         
+        if selectButton.selected == true {
+            self.delegate?.decrementCount()
+            self.delegate?.decrementWorkoutCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 2)
+            
+        } else if delegate?.getCount() < 4 {
+            self.delegate?.incrementCount()
+            self.delegate?.incrementWorkoutCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 2)
+        }
         
     }
     
     
     
-   func updateUI(){
+    func updateUI(){
         
-        featuredImage2?.image! = gifs2.featuredImage2
-        gifDescription2?.text! = gifs2.description2
+        featuredImage2?.image! = gifs2.featuredImage
+        gifDescription2?.text! = gifs2.description
         
     }
     
@@ -103,37 +111,48 @@ class Gifs2CollectionViewCell: UICollectionViewCell {
 
 
 class Gifs3CollectionViewCell: UICollectionViewCell {
-   
+    
     @IBOutlet weak var featuredImage3:UIImageView!
     @IBOutlet weak var gifDescription3:UILabel!
     @IBOutlet weak var selectButton: UIButton!
     
-    var gifs3: Gifs3! {
+    var delegate: MoveScrollViewControllerDelegate?
+    var isSelected:Bool! = false
+    var gifs3: Tags! {
         didSet{
             updateUI()
         }
     }
     
-    @IBAction func didSelectMove(sender: UIButton) {
-        
-        if selectButton.selected == true{
-            selectButton.selected = false
-            
-        }else{
-            selectButton.selected = true
-        }
-        
-        
+    override func layoutSubviews() {
+        selectButton.selected = isSelected
     }
     
-    
+    @IBAction func didSelectMove(sender: UIButton) {
+        
+        let collectionView = self.superview as! UICollectionView
+        let index = collectionView.indexPathForCell(self)
+        
+        
+        if selectButton.selected == true {
+            self.delegate?.decrementCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 3)
+        } else if delegate?.getCount() < 4 {
+            self.delegate?.incrementCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 3)
+        }
+    }
     
     private func updateUI(){
         
-        featuredImage3?.image! = gifs3.featuredImage3
-        gifDescription3?.text! = gifs3.description3
+        featuredImage3?.image! = gifs3.featuredImage
+        gifDescription3?.text! = gifs3.description
         
     }
+    override func prepareForReuse() {
+        selectButton.selected = isSelected
+    }
+    
 }
 
 class Gifs4CollectionViewCell: UICollectionViewCell {
@@ -142,29 +161,41 @@ class Gifs4CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gifDescription4:UILabel!
     @IBOutlet weak var selectButton: UIButton!
     
-    
-    var gifs4: Gifs4! {
+    var delegate: MoveScrollViewControllerDelegate?
+    var isSelected:Bool! = false
+    var gifs4: Tags! {
         didSet{
             updateUI()
         }
     }
     
+    override func layoutSubviews() {
+        selectButton.selected = isSelected
+    }
+    
     @IBAction func didSelectMove(sender: UIButton) {
         
-        if selectButton.selected == true{
-            selectButton.selected = false
-            
-        }else{
-            selectButton.selected = true
+        let collectionView = self.superview as! UICollectionView
+        let index = collectionView.indexPathForCell(self)
+        
+        
+        if selectButton.selected == true {
+            self.delegate?.decrementCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 4)
+        } else if delegate?.getCount() < 4{
+            self.delegate?.incrementCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 4)
         }
-        
-        
     }
     
     private func updateUI(){
         
-        featuredImage4?.image! = gifs4.featuredImage4
-        gifDescription4?.text! = gifs4.description4
+        featuredImage4?.image! = gifs4.featuredImage
+        gifDescription4?.text! = gifs4.description
+    }
+    
+    override func prepareForReuse() {
+        selectButton.selected = isSelected
     }
 }
 
@@ -173,31 +204,44 @@ class Gifs5CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var featuredImage5:UIImageView!
     @IBOutlet weak var gifDescription5:UILabel!
     @IBOutlet weak var selectButton: UIButton!
-    
-    var gifs5: Gifs5! {
+    var delegate: MoveScrollViewControllerDelegate?
+    var isSelected:Bool! = false
+    var gifs5: Tags! {
         didSet{
             updateUI()
         }
     }
     
-    @IBAction func didSelectMove(sender: UIButton) {
-        
-        if selectButton.selected == true{
-            selectButton.selected = false
-            
-        }else{
-            selectButton.selected = true
-        }
-        
-        
+    override func layoutSubviews() {
+        selectButton.selected = isSelected
     }
     
-    
+    @IBAction func didSelectMove(sender: UIButton) {
+        
+        let collectionView = self.superview as! UICollectionView
+        let index = collectionView.indexPathForCell(self)
+        if selectButton.selected == true {
+            self.delegate?.decrementCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 5)
+        } else if delegate?.getCount() < 4 {
+            self.delegate?.incrementCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 5)
+        }
+    }
     
     private func updateUI(){
         
-        featuredImage5?.image! = gifs5.featuredImage5
-        gifDescription5?.text! = gifs5.description5
+        featuredImage5?.image! = gifs5.featuredImage
+        gifDescription5?.text! = gifs5.description
+    }
+    
+    override func prepareForReuse() {
+        if isSelected == true{
+            selectButton.selected = isSelected
+        }else{
+            selectButton.selected = false
+            isSelected = false
+        }
     }
 }
 
@@ -207,30 +251,44 @@ class Gifs6CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var featuredImage6:UIImageView!
     @IBOutlet weak var gifDescription6:UILabel!
     @IBOutlet weak var selectButton: UIButton!
-    
-    var gifs6: Gifs6! {
+    var delegate: MoveScrollViewControllerDelegate?
+    var isSelected:Bool! = false
+    var gifs6: Tags! {
         didSet{
             updateUI()
         }
     }
     
+    override func layoutSubviews() {
+        selectButton.selected = isSelected
+    }
+    
     @IBAction func didSelectMove(sender: UIButton) {
         
-        if selectButton.selected == true{
-            selectButton.selected = false
-            
-        }else{
-            selectButton.selected = true
-        }
+        let collectionView = self.superview as! UICollectionView
+        let index = collectionView.indexPathForCell(self)
         
+        
+        if selectButton.selected == true {
+            self.delegate?.decrementCount()
+            self.delegate?.decrementWorkoutCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 6)
+        } else if delegate?.getCount() < 4 {
+            self.delegate?.incrementCount()
+            self.delegate?.incrementWorkoutCount()
+            delegate?.selectCollectionCell((index?.row)!, collectionView: 6)
+        }
         
     }
     
     
-    
     private func updateUI(){
         
-        featuredImage6?.image! = gifs6.featuredImage6
-        gifDescription6?.text! = gifs6.description6
+        featuredImage6?.image! = gifs6.featuredImage
+        gifDescription6?.text! = gifs6.description
+    }
+    
+    override func prepareForReuse() {
+        selectButton.selected = isSelected
     }
 }
