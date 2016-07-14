@@ -68,6 +68,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     //MARK:
     override func viewDidLoad() {
         super.viewDidLoad()
+        FBClient.logout()
         
         scrollView.contentSize.height = 1775
         updateView()

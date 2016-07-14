@@ -106,7 +106,7 @@ class FBClient: AnyObject {
             let userDict = snapshot.value![FBID]
             var userFriendsList = userDict!!["friends_list"] as! [String]
             
-            let friendDict = snapshot.value![friendID]
+            var friendDict = snapshot.value![friendID]
             var friendFriendsList = friendDict!!["friends_list"] as! [String]
             
             userFriendsList.append(friendID)
@@ -224,22 +224,24 @@ class FBClient: AnyObject {
     
     /* ---------- FRIENDS/USERS ---------- */
     // Creates a closure callback that continually updates a user's friends ID list in a user object
-    class func updateFriends(user: User) {
+    class func updateFriends(user: User, completion: ([String]) -> Void) {
         // Attach a closure to read the data at our posts reference
-        dataRef.childByAppendingPath("Users").childByAppendingPath(user.FBID!).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        dataRef.child("Users").child(user.FBID!).observeSingleEventOfType(.Value, withBlock: { snapshot in
             user.friends = []
             for friend in snapshot.value!["friends_list"] as! [String] {
-                user.friends?.append(friend as! String)
+                user.friends?.append(friend)
             }
+            completion(user.friends!)
             }, withCancelBlock: { error in
                 print(error.description)
         })
     }
     
+    /*
     // Sets user object using data retrieved from Firebase given userID
     class func getUserFromID (userID: String, user: User) {
-        dataRef.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-            let dict = snapshot.value as! NSDictionary
+       dataRef.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        let dict = snapshot.value as! NSDictionary
             print (dict)
             user.FBID = dict["FBID"] as! String
             user.email = dict["email"] as! String
@@ -249,7 +251,7 @@ class FBClient: AnyObject {
             user.currentChallenges = dict["current_challenges"] as! [String]
             user.pastChallenges = dict["past_challenges"] as! [String]
             user.challengesCompleted = dict["challenges_completed"] as! Int  })
-    }
+    }*/
     
     // Returns user from userID
     class func getUser (userID: String) -> User{

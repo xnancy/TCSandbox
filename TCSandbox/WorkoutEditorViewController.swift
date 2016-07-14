@@ -59,6 +59,8 @@ class WorkoutEditorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FBClient.logout()
+
         //User.updateCurrentUser()
         // Do any additional setup after loading the view.
         //print(movesCount)

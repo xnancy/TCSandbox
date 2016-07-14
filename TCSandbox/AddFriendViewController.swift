@@ -31,6 +31,9 @@ class AddFriendViewController: UIViewController, UITableViewDataSource, UISearch
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Remove back button bar name
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        
         // TODO: Fill data array
         
         friendSearchTableView.dataSource = self
@@ -51,10 +54,12 @@ class AddFriendViewController: UIViewController, UITableViewDataSource, UISearch
         searchController.searchBar.sizeToFit()
         friendSearchTableView.tableHeaderView = searchController.searchBar
         
+        // Initial table data
+        filteredData = namesForIDs.allKeys as! [String]
+        friendSearchTableView.reloadData()
+        
         // Sets this view controller as presenting view controller for the search interface
         definesPresentationContext = true
-        
-        friendSearchTableView.reloadData()
     }
     
     /* ---------- TABLE VIEW DATA SOURCE ---------- */

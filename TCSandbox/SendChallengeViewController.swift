@@ -17,19 +17,26 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     
     /* ---------- VARIABLES ---------- */
     var friendIDs: [String]?
+    var challenge: Challenge?
     
     /* ---------- VIEW CONTROLLERS ---------- */
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        friendsSendChallengeTableView.delegate = self
-        friendsSendChallengeTableView.dataSource = self
+        // Remove back button bar name
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        self.friendsSendChallengeTableView.delegate = self
+        self.friendsSendChallengeTableView.dataSource = self
+        self.friendsSendChallengeTableView.allowsMultipleSelection = true
     }
     
     override func viewWillAppear(animated: Bool) {
-        FBClient.updateFriends(User.currentUser!)
-        friendIDs = User.currentUser?.friends
-        friendsSendChallengeTableView.reloadData()
+        FBClient.updateFriends(User.currentUser!, completion: {(friendsArray: [String]) in
+            User.currentUser?.friends = friendsArray
+            self.friendIDs = friendsArray
+            
+            self.friendsSendChallengeTableView.reloadData()
+        })
     }
     
     /* ---------- TABLE VIEW DATA SOURCE ---------- */
@@ -37,10 +44,25 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         print(friendIDs)
         let cell = friendsSendChallengeTableView.dequeueReusableCellWithIdentifier("friendsCell") as! FriendsSendChallengeTableViewCell
         FBClient.generateFriendCell(friendIDs![indexPath.row], cell: cell)
+        cell.userID = friendIDs![indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (friendIDs == nil) { return 0 }
         return friendIDs!.count
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = friendsSendChallengeTableView.cellForRowAtIndexPath(indexPath) as! FriendsSendChallengeTableViewCell
+        
+        if ((challenge?.participants?.contains(cell.userID!)) != nil) {
+            challenge?.removeParticipant(cell.userID!)
+        } else {
+            challenge?.addParticipant(cell.userID!)
+        }
+    }
+    
+    /* ---------- GESTURE RECOGNIZERS ---------- */
+    
 }

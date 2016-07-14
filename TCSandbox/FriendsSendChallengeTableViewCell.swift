@@ -16,5 +16,8 @@ class FriendsSendChallengeTableViewCell: UITableViewCell {
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var userChallengeCompletedLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
+    
+    var userID: String?
+    
 }
 
