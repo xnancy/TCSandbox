@@ -103,10 +103,10 @@ class FBClient: AnyObject {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         
         dataRef.child("Users").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            var userDict = snapshot.value![FBID]
+            let userDict = snapshot.value![FBID]
             var userFriendsList = userDict!!["friends_list"] as! [String]
             
-            var friendDict = snapshot.value![friendID]
+            let friendDict = snapshot.value![friendID]
             var friendFriendsList = friendDict!!["friends_list"] as! [String]
             
             userFriendsList.append(friendID)
@@ -115,7 +115,7 @@ class FBClient: AnyObject {
             let userUpdates = ["friends_list": userFriendsList]
             let friendUpdates = ["friends_list": friendFriendsList]
             
-           dataRef.child("Users").child(FBID).updateChildValues(userUpdates)
+            dataRef.child("Users").child(FBID).updateChildValues(userUpdates)
             dataRef.child("Users").child(friendID).updateChildValues(friendUpdates)
 
             
@@ -143,7 +143,7 @@ class FBClient: AnyObject {
             {
                 friendFriendsList.removeAtIndex(index)
                 let updates = ["friends_list": friendFriendsList]
-               dataRef.child("Users").child(friendID).updateChildValues(updates)
+                dataRef.child("Users").child(friendID).updateChildValues(updates)
             }
             
             if let index = userFriendsList.indexOf(friendID)
@@ -205,8 +205,6 @@ class FBClient: AnyObject {
         let challengeID = challenge.challengeID
         
         dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            
-            
             var participants = snapshot.value!["participants"] as! [String]
             var currentChallenges = snapshot.value!["current_challenges"] as! [String]
             let indexOfChallenge = currentChallenges.indexOf(challengeID!)
@@ -240,7 +238,7 @@ class FBClient: AnyObject {
     
     // Sets user object using data retrieved from Firebase given userID
     class func getUserFromID (userID: String, user: User) {
-       dataRef.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        dataRef.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             let dict = snapshot.value as! NSDictionary
             print (dict)
             user.FBID = dict["FBID"] as! String

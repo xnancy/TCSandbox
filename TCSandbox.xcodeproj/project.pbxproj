@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30161D383A05005D7171 /* myChallengesViewController.swift */; };
+		825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */; };
 		82B64F751D36DED0002BFDBE /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B64F741D36DED0002BFDBE /* Video.swift */; };
 		82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6653A1D2DBF9000D642CA /* LoginViewController.swift */; };
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
 		82C6654D1D2DC18D00D642CA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */; };
+		82C94E6D1D38063B00E84D55 /* recordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */; };
 		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
 		925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */; };
 		925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D3C1D3444B300BAF3CC /* Info.plist */; };
@@ -64,11 +67,14 @@
 		4E6527A0FFB4200130D4B799 /* Pods-TCSandboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxTests/Pods-TCSandboxTests.release.xcconfig"; sourceTree = "<group>"; };
 		679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		825C30161D383A05005D7171 /* myChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengesViewController.swift; sourceTree = "<group>"; };
+		825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		82B64F741D36DED0002BFDBE /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		82C6653A1D2DBF9000D642CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordVideoViewController.swift; sourceTree = "<group>"; };
 		91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
 		925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -222,6 +228,8 @@
 				82C6653A1D2DBF9000D642CA /* LoginViewController.swift */,
 				925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */,
 				925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */,
+				82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */,
+				825C30161D383A05005D7171 /* myChallengesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 				929663071D3585F000300614 /* FriendsSendChallengeTableViewCell.swift */,
 				92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */,
 				929663091D36AFA400300614 /* searchFriendsTableViewCell.swift */,
+				825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -345,7 +354,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6ZD82QXX95;
+						DevelopmentTeam = D8M8Q37C6Y;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -535,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */,
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */,
 				925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */,
@@ -546,10 +556,12 @@
 				929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */,
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
 				82B64F751D36DED0002BFDBE /* Video.swift in Sources */,
+				825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
 				9296630A1D36AFA400300614 /* searchFriendsTableViewCell.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
+				82C94E6D1D38063B00E84D55 /* recordVideoViewController.swift in Sources */,
 				92A924AC1D30572400637263 /* Gifs.swift in Sources */,
 				929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */,
 			);
@@ -702,7 +714,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RainbowRaccoonz.TCSandbox;
+				PRODUCT_BUNDLE_IDENTIFIER = "-309482-3eaojsdjfklo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -721,7 +733,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RainbowRaccoonz.TCSandbox;
+				PRODUCT_BUNDLE_IDENTIFIER = "-309482-3eaojsdjfklo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

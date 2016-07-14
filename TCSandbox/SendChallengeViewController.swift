@@ -29,7 +29,6 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewWillAppear(animated: Bool) {
         FBClient.updateFriends(User.currentUser!)
         friendIDs = User.currentUser?.friends
-        print(friendIDs)
         friendsSendChallengeTableView.reloadData()
     }
     

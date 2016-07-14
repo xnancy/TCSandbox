@@ -49,13 +49,13 @@ class User: AnyObject {
     // Create user object from Firebase dictionary
     init(dict: NSDictionary)
     {
-        self.FBID = dict["FBID"] as! String
-        self.email = dict["email"] as! String
-        self.name = dict["name"] as! String
-        self.profileImageURLString = dict["profile_picture_url"] as! String
-        self.friends = dict["friends_list"] as! [String]
-        self.currentChallenges = dict["current_challenges"] as! [String]
-        self.pastChallenges = dict["past_challenges"] as! [String]
+        self.FBID = dict["FBID"] as? String
+        self.email = dict["email"] as? String
+        self.name = dict["name"] as? String
+        self.profileImageURLString = dict["profile_picture_url"] as? String
+        self.friends = dict["friends_list"] as? [String]
+        self.currentChallenges = dict["current_challenges"] as? [String]
+        self.pastChallenges = dict["past_challenges"] as? [String]
         self.challengesCompleted = dict["challenges_completed"] as! Int
     }
     

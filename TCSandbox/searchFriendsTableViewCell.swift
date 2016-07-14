@@ -29,5 +29,7 @@ class searchFriendsTableViewCell: UITableViewCell {
         FBClient.addFriend(userID!)
         addButton.enabled = false
     }
+    
+    
 }
 
