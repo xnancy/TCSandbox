@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="1056"/>
+            <point key="canvasLocation" x="2203" y="1043"/>
         </scene>
         <!--Item-->
         <scene sceneID="jHG-eW-lLn">
@@ -111,7 +111,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFQ-j1-bdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="1043"/>
+            <point key="canvasLocation" x="1715" y="1043"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="cCW-ww-nmr">
@@ -156,11 +156,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="Yt5-5U-fLM" kind="relationship" relationship="viewControllers" id="DXf-Br-YM8"/>
+                        <segue destination="dCg-a1-Qfa" kind="relationship" relationship="viewControllers" id="BJj-WD-F7B"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQj-6p-F8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="465" y="1043"/>
+        </scene>
+        <!--My Challenges-->
+        <scene sceneID="35e-3C-zQL">
+            <objects>
+                <viewController id="qw0-Ls-bhc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="26V-NI-UcQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="n3q-Un-5I2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LFW-sN-KAD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Challenges" id="LF7-x1-oYd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUp-rN-uYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2203" y="1733"/>
         </scene>
         <!--Choose Moves-->
         <scene sceneID="L2L-vc-2VV">
@@ -569,6 +589,13 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-vH-xj6">
+                                                    <rect key="frame" x="179" y="127" width="146" height="117"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="P7c-mZ-5Ae" kind="show" id="b9w-wm-vSO"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </scrollView>
                                     </subviews>
@@ -608,12 +635,11 @@
                         <outlet property="collectionView6" destination="AS4-09-oCx" id="FiW-0h-bY6"/>
                         <outlet property="counterLabel" destination="3F7-nY-OUZ" id="eLN-F1-XsL"/>
                         <outlet property="scrollView" destination="Vpm-bQ-lSR" id="m4c-hl-k6a"/>
-                        <segue destination="P7c-mZ-5Ae" kind="show" id="deP-Kd-Ndo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgd-dP-eBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="1056"/>
+            <point key="canvasLocation" x="2648" y="1043"/>
         </scene>
         <!--Friends-->
         <scene sceneID="Hzh-jn-TWJ">
@@ -631,7 +657,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="j1Q-Ks-izb" customClass="FriendsSendChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsCell" rowHeight="84" id="j1Q-Ks-izb" customClass="FriendsSendChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1Q-Ks-izb" id="twd-v2-LPf">
@@ -670,15 +696,18 @@
                     <navigationItem key="navigationItem" title="Friends" id="0oS-Xk-adn">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MHu-oG-zL5">
                             <connections>
-                                <segue destination="ghj-PG-wVQ" kind="presentation" id="Ta3-Tz-CCP"/>
+                                <segue destination="ghj-PG-wVQ" kind="show" id="Ta3-Tz-CCP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="friendsSendChallengeTableView" destination="T67-xp-E14" id="uNv-lL-swJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMq-Yf-rsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2234" y="1056"/>
+            <point key="canvasLocation" x="3064" y="1043"/>
         </scene>
         <!--Add Friend View Controller-->
         <scene sceneID="1oE-HO-U95">
@@ -692,18 +721,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rv8-1W-bHt">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ghj-PG-wVQ" id="Be9-xr-Hjb"/>
-                                </connections>
-                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-6Z-G9G">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchFriendsTableViewCell" rowHeight="92" id="xuC-uV-qsz" customClass="searchFriendsTableViewCell" customModule="TCSandbox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xuC-uV-qsz" id="LOT-LO-cgh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="91.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-Xd-rvL">
+                                                    <rect key="frame" x="8" y="8" width="73" height="70.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L77-DD-fys">
+                                                    <rect key="frame" x="86" y="17" width="215" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenges Completed: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-ms-dfj">
+                                                    <rect key="frame" x="86" y="52" width="215" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHf-da-tiS">
+                                                    <rect key="frame" x="279" y="33" width="22" height="22"/>
+                                                    <connections>
+                                                        <action selector="onAddFriendButton:" destination="xuC-uV-qsz" eventType="touchUpInside" id="m3l-fV-jJv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addButton" destination="eHf-da-tiS" id="e3t-vF-Krz"/>
+                                            <outlet property="challengesCompletedLabel" destination="3lk-ms-dfj" id="XKf-d2-lTn"/>
+                                            <outlet property="nameTextLabel" destination="L77-DD-fys" id="DJV-dn-7dS"/>
+                                            <outlet property="profileImageView" destination="e4G-Xd-rvL" id="ZeM-VQ-BLp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="friendSearchTableView" destination="bC1-6Z-G9G" id="1sa-xi-4Nx"/>
                         <outlet property="searchDisplayController" destination="uNn-LC-5Nu" id="PeH-hq-g5h"/>
                     </connections>
                 </viewController>
@@ -711,14 +777,33 @@
                 <searchDisplayController id="uNn-LC-5Nu">
                     <connections>
                         <outlet property="delegate" destination="ghj-PG-wVQ" id="Hxo-8M-62s"/>
-                        <outlet property="searchBar" destination="rv8-1W-bHt" id="Aiv-Rp-i73"/>
                         <outlet property="searchContentsController" destination="ghj-PG-wVQ" id="9vT-Ee-FF2"/>
                         <outlet property="searchResultsDataSource" destination="ghj-PG-wVQ" id="Yju-rv-Jxk"/>
                         <outlet property="searchResultsDelegate" destination="ghj-PG-wVQ" id="mqN-Ke-cV2"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2648" y="1056"/>
+            <point key="canvasLocation" x="3474" y="1042"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="lpw-Tk-o7I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dCg-a1-Qfa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="nXU-kR-I1v"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V47-yj-mN5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qw0-Ls-bhc" kind="relationship" relationship="rootViewController" id="SNA-v6-kLN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJ9-wU-r98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="1733"/>
         </scene>
     </scenes>
     <resources>

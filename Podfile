@@ -12,7 +12,7 @@ pod 'SwiftyGif'
 pod 'Firebase'
 pod 'Firebase/Database' 
 pod 'Firebase/Auth'
-pod 'Firebase/Storage'
+pod 'AFNetworking'
   target 'TCSandboxTests' do
     inherit! :search_paths
     # Pods for testing
@@ -22,8 +22,7 @@ pod 'SwiftyGif'
 pod 'Firebase'
 pod 'Firebase/Database' 
 pod 'Firebase/Auth'
-pod 'Firebase/Storage'
-
+pod 'AFNetworking'
   end
 
   target 'TCSandboxUITests' do
@@ -35,6 +34,7 @@ pod 'SwiftyGif'
 pod 'Firebase'
 pod 'Firebase/Database' 
 pod 'Firebase/Auth'
+pod 'AFNetworking'
   end
 
 end

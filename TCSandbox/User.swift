@@ -18,7 +18,15 @@ class User: AnyObject {
     var name: String?
     var profileImageURLString: String?
     var email: String?
-    var friends: [String]?
+    var friends: [String]? = [] {
+        willSet {
+            print(newValue)
+        }
+        didSet {
+            print(oldValue)
+        }
+    }
+    
     var challengesCompleted: Int
     var currentChallenges: [String]?
     var pastChallenges: [String]?
@@ -41,7 +49,7 @@ class User: AnyObject {
     // Create user object from Firebase dictionary
     init(dict: NSDictionary)
     {
-        self.FBID = dict["id"] as! String
+        self.FBID = dict["FBID"] as! String
         self.email = dict["email"] as! String
         self.name = dict["name"] as! String
         self.profileImageURLString = dict["profile_picture_url"] as! String
@@ -57,7 +65,7 @@ class User: AnyObject {
         self.email = email
         self.name = name
         self.profileImageURLString = profileImageURLString
-        self.friends = friends
+        self.friends = []
         self.currentChallenges = []
         self.pastChallenges = []
         self.challengesCompleted = 0

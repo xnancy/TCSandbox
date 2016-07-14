@@ -71,8 +71,7 @@ class Challenge: AnyObject
         
         for userID in participants!
         {
-            let user = FBClient.getUserFromID(userID)
-            
+            let user = FBClient.getUser(userID)
             users.append(user)
         }
         

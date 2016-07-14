@@ -164,9 +164,7 @@ public extension UIImage{
         let displayRefreshDelayTime = displayRefreshRates.map{1.0/Float($0)}
         
         //caclulate the time when each frame should be displayed at(start at 0)
-        if (delays.count >= 1) {
-            for i in 1..<delays.count{ delays[i] += delays[i-1] }
-        }
+        for i in 1..<delays.count{ delays[i] += delays[i-1] }
         
         //find the appropriate Factors then BREAK
         for i in 0..<displayRefreshDelayTime.count{
@@ -174,11 +172,9 @@ public extension UIImage{
             let displayPosition = delays.map{Int($0/displayRefreshDelayTime[i])}
             
             var framelosecount: Float = 0
-            if (displayPosition.count >= 1) {
-                for j in 1..<displayPosition.count{
-                    if displayPosition[j] == displayPosition[j-1] {
-                        framelosecount += 1
-                    }
+            for j in 1..<displayPosition.count{
+                if displayPosition[j] == displayPosition[j-1] {
+                    framelosecount += 1
                 }
             }
             
