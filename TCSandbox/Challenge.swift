@@ -12,16 +12,17 @@ class Challenge: AnyObject
 {
     var challengeID: String?
     var participants: [String]?
-    var userVideoIDs: [String: String]?
+    var gifNames: [String]?
+    var tagNames: [String]?
     var deadline: NSDate?
-    var moveIDs: [String]?
     var timeLimit: Int?
     
     
-    init(timeLimit: Int, moveIDs: [String], deadline: NSDate, participants: [String])
+    init(timeLimit: Int, gifNames: [String], tagNames: [String], deadline: NSDate, participants: [String])
     {
         self.timeLimit = timeLimit
-        self.moveIDs = moveIDs
+        self.tagNames = tagNames
+        self.gifNames = gifNames
         self.deadline = deadline
         self.participants = participants
     }

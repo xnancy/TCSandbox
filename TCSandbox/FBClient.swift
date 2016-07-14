@@ -159,7 +159,8 @@ class FBClient: AnyObject {
         challenge.challengeID = challengeID
         
         let participants = challenge.participants
-        let addOns = challenge.moveIDs
+        let gifNames = challenge.gifNames
+        let tagNames = challenge.tagNames
         let timeLimit = challenge.timeLimit
 
         
@@ -182,7 +183,7 @@ class FBClient: AnyObject {
             }
             
             dataRef.child("Challenges").updateChildValues(["challengeID": challengeID])
-            dataRef.child("Challenges").child(challengeID).updateChildValues(["participants": participants!, "add_on_images": addOns!, "time_limit": timeLimit!])
+            dataRef.child("Challenges").child(challengeID).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!])
             
         }
     }
