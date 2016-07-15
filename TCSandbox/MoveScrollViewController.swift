@@ -32,6 +32,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     @IBOutlet weak var viewChallengeButton: UIButton!
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var tagForbidButton: UIButton!
+    @IBOutlet weak var scrollButton: UIButton!
     
     
     private var gifs = Gifs.createGifs()
@@ -170,10 +171,12 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         
         if workoutCount < 1 {
             viewChallengeButton.hidden = true
+            scrollButton.hidden = true
             counterLabel.hidden = true
             
         }else{
             viewChallengeButton.hidden = false
+            scrollButton.hidden = true
             counterLabel.hidden = false
         }
         
@@ -265,6 +268,9 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func scrollToBottom(sender: AnyObject) {
+    scrollView.setContentOffset(CGPointMake(0, max(scrollView.contentSize.height - scrollView.bounds.size.height, 0) ), animated: true)
+    }
     
     @IBAction func cancelAction(sender: UIButton) {
         

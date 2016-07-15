@@ -97,7 +97,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         }
             
             
-        }
+    }
         
         
         
@@ -141,7 +141,12 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         }
         
  //========= CHALLENGE OBJECT INIT ==============//        
+
         challenge = Challenge()
+
+//=================================================//
+    
+    
     }
     
     func convertToNSDate() -> NSDate{
@@ -157,7 +162,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         return futureDate!
     }
 
-//=================================================
+   
    
     @IBAction func backButton(sender: AnyObject) {
         
@@ -201,6 +206,10 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func editingDidEnd(sender: AnyObject) {
+        let challengeTitle = nameChallengeTextField.text
+        challenge?.challengeTitle = challengeTitle
+    }
     @IBAction func countdownValueChanged(sender: AnyObject) {
         if countdownStepper.value < 60 {
             countdownLabel.text = String(Int(countdownStepper.value))
@@ -231,9 +240,10 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         challenge?.deadline = convertToNSDate()
         challenge?.timeLimit = Int(countdownStepper.value)
-        
+
         let vc = segue.destinationViewController as! recordVideoViewController
         vc.challenge = challenge
+
     }
     
     

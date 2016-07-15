@@ -16,6 +16,7 @@ class Challenge: AnyObject
     var tagNames: [String]? = []
     var deadline: NSDate?
     var timeLimit: Int?
+    var challengeTitle: String?
     
     
     init()

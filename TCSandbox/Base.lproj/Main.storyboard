@@ -718,6 +718,14 @@
                                                         <action selector="tagForbidAction:" destination="UBq-1y-4rr" eventType="touchUpInside" id="7tk-xs-Wlh"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2Y-Vh-t0v">
+                                                    <rect key="frame" x="351" y="519" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.80614721879999995" green="0.9942232782" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="v"/>
+                                                    <connections>
+                                                        <action selector="scrollToBottom:" destination="UBq-1y-4rr" eventType="touchUpInside" id="WaG-bF-QfU"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </scrollView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Up to Four" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-zO-p4o">
@@ -792,6 +800,7 @@
                         <outlet property="collectionView5" destination="ADy-m5-Gdh" id="X6Z-VW-bNA"/>
                         <outlet property="collectionView6" destination="6qK-Rp-pIw" id="CLS-Jz-G5c"/>
                         <outlet property="counterLabel" destination="2cN-P6-OpG" id="k2N-A1-6yx"/>
+                        <outlet property="scrollButton" destination="r2Y-Vh-t0v" id="zbK-tb-0gP"/>
                         <outlet property="scrollView" destination="aaD-S2-cOW" id="e8d-X8-BAt"/>
                         <outlet property="tagForbidButton" destination="V9v-E7-KRy" id="TtB-Zu-J8t"/>
                         <outlet property="viewChallengeButton" destination="7WF-9l-uaE" id="DJk-h7-oIc"/>
@@ -908,6 +917,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="editingDidEnd:" destination="cIN-lL-ItH" eventType="editingDidEnd" id="OOR-tT-YT6"/>
+                                </connections>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C-TAG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cX-SF-LzG">
                                 <rect key="frame" x="20" y="471" width="340" height="24"/>
