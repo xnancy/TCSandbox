@@ -31,6 +31,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     override func viewWillAppear(animated: Bool) {
+        print(User.currentUser)
         FBClient.updateFriends(User.currentUser!, completion: {(friendsArray: [String]) in
             User.currentUser?.friends = friendsArray
             self.friendIDs = friendsArray
@@ -61,6 +62,14 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         } else {
             challenge?.addParticipant(cell.userID!)
         }
+    }
+    
+    
+    @IBAction func didSendChallenge(sender: AnyObject) {
+        
+        //create a new challenge
+        //upload to firebase
+        
     }
     
     /* ---------- GESTURE RECOGNIZERS ---------- */

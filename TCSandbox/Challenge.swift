@@ -18,13 +18,9 @@ class Challenge: AnyObject
     var timeLimit: Int?
     
     
-    init(timeLimit: Int, gifNames: [String], tagNames: [String], deadline: NSDate, participants: [String], challengeTitle: String)
+    init()
     {
-        self.timeLimit = timeLimit
-        self.tagNames = tagNames
-        self.gifNames = gifNames
-        self.deadline = deadline
-        self.participants = participants
+
     }
     
     func addParticipant(userID: String)

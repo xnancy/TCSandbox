@@ -59,7 +59,6 @@ class FBClient: AnyObject {
             dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 let friendsExist = snapshot.hasChild("friends_list")
 
-                //FIX THIS TO HANDLE EMPTY CHALLENGES TOO
                 print(friendsExist)
                 if friendsExist
                 {
@@ -75,10 +74,9 @@ class FBClient: AnyObject {
                     //initialize a new empty friends array with string
                     //placeholder
                     let friendsList: [String] = [FBID]
-                    let currentChallenges: [String] = ["placeholder"]
-                    let pastChallenges: [String] = ["placeholder"]
+                    let challenges: [String] = ["placeholder"]
                     let challengesCompleted: Int = 0
-                    let updates = ["friends_list": friendsList, "current_challenges": currentChallenges, "past_challenges": pastChallenges, "challenges_completed": challengesCompleted]
+                    let updates = ["friends_list": friendsList, "current_challenges": challenges, "challenges_completed": challengesCompleted]
                     dataRef.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
@@ -180,10 +178,10 @@ class FBClient: AnyObject {
             dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 
                 
-                var currentChallenges = snapshot.value!["current_challenges"] as! [String]
+                var currentChallenges = snapshot.value!["challenges"] as! [String]
                 currentChallenges.append(challengeID)
                 
-                let updates = ["current_challenges": currentChallenges]
+                let updates = ["challenges": currentChallenges]
                 dataRef.child("Users").child(userID).updateChildValues(updates)
                 //REFRESH THE USER'S CURRENT CHALLENGES
                 
@@ -206,14 +204,14 @@ class FBClient: AnyObject {
         
         dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             var participants = snapshot.value!["participants"] as! [String]
-            var currentChallenges = snapshot.value!["current_challenges"] as! [String]
+            var currentChallenges = snapshot.value!["challenges"] as! [String]
             let indexOfChallenge = currentChallenges.indexOf(challengeID!)
             let indexOfUser = participants.indexOf(FBID)
             currentChallenges.removeAtIndex(indexOfChallenge!)
             participants.removeAtIndex(indexOfUser!)
             
             
-            dataRef.child("Users").child(FBID).updateChildValues(["current_challenges": currentChallenges])
+            dataRef.child("Users").child(FBID).updateChildValues(["challenges": currentChallenges])
             dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants])
             
         })  { (error) in

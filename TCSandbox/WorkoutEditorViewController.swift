@@ -54,7 +54,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FBClient.logout()
         
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
@@ -142,11 +141,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         }
         
  //========= CHALLENGE OBJECT INIT ==============//        
-        challenge = Challenge(timeLimit: Int(countdownStepper.value), gifNames: gifsToShow, tagNames: tagsToShow, deadline: date, participants: [], challengeTitle: nameChallengeTextField.text!)
-       
-        //deadline as NSDATE??
-        //compTag as Tag??
-        
+        challenge = Challenge()
     }
     
     func convertToNSDate() -> NSDate{
@@ -183,9 +178,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func didLogout(sender: AnyObject) {
-        
-        User.currentUser = nil
-        //FirebaseClient.logout()
         
         FBClient.logout()
         
@@ -239,6 +231,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         challenge?.deadline = convertToNSDate()
         challenge?.timeLimit = Int(countdownStepper.value)
+        //challenge?.
 
 
         print(challenge?.timeLimit)
