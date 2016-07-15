@@ -33,6 +33,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var deadlineStepper: UIStepper!
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var deadlineLabel: UILabel!
+    @IBOutlet weak var secMinLabel: UILabel!
+    @IBOutlet weak var daysWeekLabel: UILabel!
     
     
     
@@ -45,8 +47,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     var movesCount: Int!
     var workoutCount: Int!
     var tagsCount: Int!
-    var timeLimit: Int! = 60
-    var deadline: Int! = 1
     
     var challenge: Challenge?
     
@@ -57,7 +57,9 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         FBClient.logout()
 
         self.nameChallengeTextField.delegate = self
-        
+        countdownLabel.text = "1:00"
+        daysWeekLabel.text = "day"
+
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WorkoutEditorViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -140,8 +142,10 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         
         
  //========= CHALLENGE OBJECT INIT ==============//        
-        //challenge = Challenge(timeLimit: timeLimit, gifNames: gifsToShow, tagNames: tagsToShow, deadline: NSDate, participants: [String])
-        
+        //challenge = Challenge(timeLimit: Int(countdownStepper.value), gifNames: gifsToShow, tagNames: tagsToShow, deadline: Int(deadlineStepper.value), participants: [String], challengeTitle: nameChallengeTextField, compTag: String?)
+       
+        //deadline as NSDATE??
+        //compTag as Tag??
         
     }
 //=================================================
@@ -179,11 +183,43 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func deadlineValueChanged(sender: AnyObject) {
         
-       deadlineLabel.text = String(Int(deadlineStepper.value))
+        if deadlineStepper.value == 1{
+            deadlineLabel.text = String(Int(deadlineStepper.value))
+            daysWeekLabel.text = "day"
+        }else if deadlineStepper.value < 7{
+            deadlineLabel.text = String(Int(deadlineStepper.value))
+            daysWeekLabel.text = "days"
+        }else if deadlineStepper.value == 7{
+            deadlineLabel.text = "1"
+            daysWeekLabel.text = "week"
+        }
+        
     }
     
     @IBAction func countdownValueChanged(sender: AnyObject) {
-        countdownLabel.text = String(Int(countdownStepper.value))
+        if countdownStepper.value < 60 {
+            countdownLabel.text = String(Int(countdownStepper.value))
+            secMinLabel.text = "s"
+        }else{
+            secMinLabel.text = ""
+        }
+        
+        if countdownStepper.value == 60{
+            countdownLabel.text = "1:00"
+        }
+        if countdownStepper.value == 75{
+            countdownLabel.text = "1:15"
+        }
+        if countdownStepper.value == 90{
+            countdownLabel.text = "1:30"
+        }
+        if countdownStepper.value == 105{
+            countdownLabel.text = "1:45"
+        }
+        if countdownStepper.value == 120{
+            countdownLabel.text = "2:00"
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
