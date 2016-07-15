@@ -47,7 +47,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     var movesCount: Int!
     var workoutCount: Int!
     var tagsCount: Int!
-    
+    var date = NSDate()
     var challenge: Challenge?
     
     
@@ -55,7 +55,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         FBClient.logout()
-
+        
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
@@ -137,17 +137,31 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
             gifSelectedImageView3.image = UIImage(named: tagsToShow[0])
         }
         
+            
+            
         }
         
-        
-        
  //========= CHALLENGE OBJECT INIT ==============//        
-        //challenge = Challenge(timeLimit: Int(countdownStepper.value), gifNames: gifsToShow, tagNames: tagsToShow, deadline: Int(deadlineStepper.value), participants: [String], challengeTitle: nameChallengeTextField, compTag: String?)
+        challenge = Challenge(timeLimit: Int(countdownStepper.value), gifNames: gifsToShow, tagNames: tagsToShow, deadline: date, participants: [], challengeTitle: nameChallengeTextField.text!)
        
         //deadline as NSDATE??
         //compTag as Tag??
         
     }
+    
+    func convertToNSDate() -> NSDate{
+        let today = NSDate()
+        let futureDate = NSCalendar.currentCalendar()
+            .dateByAddingUnit(
+                .Day,
+                value: Int(deadlineLabel.text!)!,
+                toDate: today,
+                options: []
+        )
+        
+        return futureDate!
+    }
+
 //=================================================
    
     @IBAction func backButton(sender: AnyObject) {
@@ -193,7 +207,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
             deadlineLabel.text = "1"
             daysWeekLabel.text = "week"
         }
-        
     }
     
     @IBAction func countdownValueChanged(sender: AnyObject) {
@@ -219,8 +232,20 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         if countdownStepper.value == 120{
             countdownLabel.text = "2:00"
         }
-        
     }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        challenge?.deadline = convertToNSDate()
+        challenge?.timeLimit = Int(countdownStepper.value)
+
+
+        print(challenge?.timeLimit)
+        print(challenge?.deadline)
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -53,6 +53,9 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
         //upload video to our database and associate it with the correct challenge
     }
     
+    @IBAction func backButtonAction(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
