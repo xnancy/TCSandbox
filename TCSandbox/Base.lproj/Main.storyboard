@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ESL-6m-KUh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UBq-1y-4rr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="540" y="1043"/>
         </scene>
-        <!--My Challenges-->
+        <!--My Challenges Page-->
         <scene sceneID="35e-3C-zQL">
             <objects>
-                <viewController id="qw0-Ls-bhc" customClass="myChallengesViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Challenges Page" id="qw0-Ls-bhc" customClass="myChallengesViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="26V-NI-UcQ"/>
                         <viewControllerLayoutGuide type="bottom" id="n3q-Un-5I2"/>
@@ -89,10 +89,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myChallengeCell" id="kev-WR-wmo" customClass="myChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kev-WR-wmo" id="BwG-VY-YZe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="982.5" y="1752.5"/>
         </scene>
-        <!--Friends-->
+        <!--Friend Selection Page-->
         <scene sceneID="Hzh-jn-TWJ">
             <objects>
-                <viewController id="P7c-mZ-5Ae" customClass="SendChallengeViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Friend Selection Page" id="P7c-mZ-5Ae" customClass="SendChallengeViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YzI-nM-Wix"/>
                         <viewControllerLayoutGuide type="bottom" id="Q0g-2e-dXW"/>
@@ -152,7 +152,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1Q-Ks-izb" id="twd-v2-LPf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenges Completed: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLb-v5-Z6F">
@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="2497.5" y="1091.5"/>
         </scene>
-        <!--Add Friend View Controller-->
+        <!--Add Friends Page-->
         <scene sceneID="1oE-HO-U95">
             <objects>
-                <viewController id="ghj-PG-wVQ" customClass="AddFriendViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Friends Page" id="ghj-PG-wVQ" customClass="AddFriendViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X5k-Ag-MV8"/>
                         <viewControllerLayoutGuide type="bottom" id="mvE-jF-KPU"/>
@@ -220,7 +220,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xuC-uV-qsz" id="LOT-LO-cgh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-Xd-rvL">
@@ -296,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="540" y="1753"/>
         </scene>
-        <!--Choose Moves-->
+        <!--Choose Moves Page-->
         <scene sceneID="mcV-kR-xao">
             <objects>
-                <viewController storyboardIdentifier="MoveScrollViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UBq-1y-4rr" customClass="MoveScrollViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoveScrollViewController" title="Choose Moves Page" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UBq-1y-4rr" customClass="MoveScrollViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UuH-L1-KPj"/>
                         <viewControllerLayoutGuide type="bottom" id="EcG-oL-AqF"/>
@@ -367,7 +367,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="opf-g2-ShR" customClass="GifsCollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -483,7 +483,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell3" id="kG6-z1-2E6" customClass="Gifs3CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -541,7 +541,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell4" id="03m-7G-ycs" customClass="Gifs4CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -599,7 +599,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell5" id="SP9-mq-Y03" customClass="Gifs5CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -657,7 +657,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell6" id="Luu-ON-QAg" customClass="Gifs6CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -794,10 +794,10 @@
             </objects>
             <point key="canvasLocation" x="1471.5" y="1359"/>
         </scene>
-        <!--Record Video View Controller-->
+        <!--Record Page-->
         <scene sceneID="e8n-MO-BKs">
             <objects>
-                <viewController id="Nqy-hQ-xqb" customClass="recordVideoViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Record Page" id="Nqy-hQ-xqb" customClass="recordVideoViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XCb-wt-Eu0"/>
                         <viewControllerLayoutGuide type="bottom" id="GSz-aj-FUb"/>
@@ -830,10 +830,10 @@
             </objects>
             <point key="canvasLocation" x="1966.5" y="1894.5"/>
         </scene>
-        <!--Workout Editor View Controller-->
+        <!--Preview Page-->
         <scene sceneID="zyc-JQ-HnB">
             <objects>
-                <viewController id="cIN-lL-ItH" customClass="WorkoutEditorViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Preview Page" id="cIN-lL-ItH" customClass="WorkoutEditorViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="viB-4M-ca9"/>
                         <viewControllerLayoutGuide type="bottom" id="G5s-5I-2ei"/>
@@ -844,6 +844,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fade1" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-bT-QoJ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5B-Xh-WyB">
                                 <rect key="frame" x="0.0" y="20" width="375" height="67"/>
@@ -853,9 +854,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX5-D8-9ed">
-                                <rect key="frame" x="0.0" y="28" width="46" height="23"/>
+                                <rect key="frame" x="2" y="20" width="38" height="39"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -863,71 +864,68 @@
                                     <action selector="backButton:" destination="cIN-lL-ItH" eventType="touchUpInside" id="kGM-rO-ugd"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eR9-xl-qKv">
-                                <rect key="frame" x="215" y="107" width="119" height="109"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="eR9-xl-qKv">
+                                <rect key="frame" x="204" y="100" width="151" height="140"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-Gt-EB0">
-                                <rect key="frame" x="45" y="274" width="115" height="109"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-Gt-EB0">
+                                <rect key="frame" x="21" y="292" width="149" height="135"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-gb-hKb">
-                                <rect key="frame" x="9" y="224" width="187" height="32"/>
+                                <rect key="frame" x="2" y="248" width="187" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwG-Jx-x3S">
-                                <rect key="frame" x="178" y="224" width="193" height="31"/>
+                                <rect key="frame" x="193" y="248" width="172" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buP-6u-5i1">
-                                <rect key="frame" x="9" y="391" width="187" height="28"/>
+                                <rect key="frame" x="2" y="435" width="187" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyB-BH-NRj">
-                                <rect key="frame" x="176" y="390" width="193" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name Your Challenge" clearsOnBeginEditing="YES" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-kY-lse">
-                                <rect key="frame" x="64" y="34" width="282" height="39"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name Your Challenge" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" background="titleLine" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-kY-lse">
+                                <rect key="frame" x="37" y="41" width="301" height="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C-TAG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cX-SF-LzG">
-                                <rect key="frame" x="45" y="440" width="283" height="38"/>
+                                <rect key="frame" x="20" y="471" width="340" height="24"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-Rj-i6t">
-                                <rect key="frame" x="45" y="107" width="115" height="109"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-Rj-i6t">
+                                <rect key="frame" x="20" y="100" width="150" height="140"/>
                             </imageView>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-81-wSG">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minimumValue="15" maximumValue="120" stepValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-81-wSG">
                                 <rect key="frame" x="261" y="511" width="94" height="29"/>
-                                <color key="backgroundColor" red="1" green="0.79520040930000002" blue="0.72695112159999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="countdownValueChanged:" destination="cIN-lL-ItH" eventType="valueChanged" id="fHM-vo-eau"/>
+                                </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PpX-tj-1SG">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="PpX-tj-1SG">
                                 <rect key="frame" x="261" y="562" width="94" height="29"/>
-                                <color key="backgroundColor" red="1" green="0.79520040930000002" blue="0.72695112159999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="deadlineValueChanged:" destination="cIN-lL-ItH" eventType="valueChanged" id="dyH-bd-z9r"/>
+                                </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWK-P0-Ue4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWK-P0-Ue4">
                                 <rect key="frame" x="20" y="560" width="232" height="34"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-PZ-QmO">
-                                <rect key="frame" x="215" y="274" width="119" height="109"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-PZ-QmO">
+                                <rect key="frame" x="204" y="292" width="151" height="135"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wQ-Un-n7x">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -940,18 +938,31 @@
                                     <segue destination="Nqy-hQ-xqb" kind="show" id="btn-00-zyK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yA-Q2-9ek">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yA-Q2-9ek">
                                 <rect key="frame" x="21" y="509" width="232" height="34"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyB-BH-NRj">
+                                <rect key="frame" x="182" y="434" width="193" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Rma-u6-AHi" appends="YES" id="doA-r1-gl7"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="countdownLabel" destination="1yA-Q2-9ek" id="qQz-zl-Gr4"/>
                         <outlet property="countdownStepper" destination="fPO-81-wSG" id="0nA-zd-X1E"/>
+                        <outlet property="deadlineLabel" destination="lWK-P0-Ue4" id="sXc-zQ-jDg"/>
+                        <outlet property="deadlineStepper" destination="PpX-tj-1SG" id="b8I-ia-iVS"/>
                         <outlet property="gifSelectedImageView1" destination="dHi-Rj-i6t" id="tX7-Ck-GYa"/>
                         <outlet property="gifSelectedImageView2" destination="eR9-xl-qKv" id="JJt-Pi-J8R"/>
                         <outlet property="gifSelectedImageView3" destination="X3F-PZ-QmO" id="W9C-x2-3AT"/>
@@ -964,6 +975,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTg-n0-pjn" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Rma-u6-AHi">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="cIN-lL-ItH" id="M2c-dn-dmo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1966.5" y="1091.5"/>
         </scene>
@@ -973,6 +989,7 @@
         <image name="black" width="2100" height="1500"/>
         <image name="blue" width="2100" height="1500"/>
         <image name="buttkickers" width="252" height="226"/>
+        <image name="emptygif" width="932" height="884"/>
         <image name="fade1" width="2100" height="1500"/>
         <image name="fullplank" width="256" height="211"/>
         <image name="green" width="2100" height="1500"/>
@@ -982,6 +999,7 @@
         <image name="pink" width="2100" height="1500"/>
         <image name="purple" width="2100" height="1500"/>
         <image name="pushups" width="322" height="323"/>
+        <image name="titleLine" width="2100" height="669"/>
         <image name="weightrock" width="325" height="308"/>
         <image name="yellow" width="2100" height="1500"/>
     </resources>

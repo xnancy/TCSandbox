@@ -15,7 +15,7 @@ import FBSDKLoginKit
 
 
 
-class WorkoutEditorViewController: UIViewController {
+class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     
     /* ---------- OUTLETS ---------- */
     
@@ -30,7 +30,9 @@ class WorkoutEditorViewController: UIViewController {
     @IBOutlet weak var selectedMoveLabel3: UILabel!
     @IBOutlet weak var selectedMoveLabel4: UILabel!
     @IBOutlet weak var countdownStepper: UIStepper!
-    @IBOutlet weak var countdownLabelButton: UIButton!
+    @IBOutlet weak var deadlineStepper: UIStepper!
+    @IBOutlet weak var countdownLabel: UILabel!
+    @IBOutlet weak var deadlineLabel: UILabel!
     
     
     
@@ -43,31 +45,28 @@ class WorkoutEditorViewController: UIViewController {
     var movesCount: Int!
     var workoutCount: Int!
     var tagsCount: Int!
-    var timeLimit: Int
-    //var gifDescriptionsToShow:[String] = []
-    // var gifDescriptionsToShow: [String] = []
-    // var index = Int()
-    //var tagDescroptionToShow: [String] = []
+    var timeLimit: Int! = 60
+    var deadline: Int! = 1
     
     var challenge: Challenge?
     
-    
-    //var toPass: String!
-    
-    
-    // 0 = Hip Airplane whih is ac 8
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         FBClient.logout()
 
-        //User.updateCurrentUser()
-        // Do any additional setup after loading the view.
-        //print(movesCount)
-        //print (workoutCount)
-        //print(tagsToShow)
+        self.nameChallengeTextField.delegate = self
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WorkoutEditorViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        deadlineStepper.autorepeat = true
+        deadlineStepper.maximumValue = 7
+        deadlineStepper.minimumValue = 1
+        countdownStepper.autorepeat = true
+        countdownStepper.maximumValue = 120
+        countdownStepper.minimumValue = 15
         
         selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])]
         gifSelectedImageView1.image = UIImage(named: gifsToShow[0])
@@ -140,12 +139,12 @@ class WorkoutEditorViewController: UIViewController {
         
         
         
- //========================================== CHALLENGE OBJECT INIT ============================================
-//        challenge = Challenge(timeLimit: timeLimit, gifNames: gifsToShow, tagNames: tagsToShow, deadline: NSDate, participants: [String])
+ //========= CHALLENGE OBJECT INIT ==============//        
+        //challenge = Challenge(timeLimit: timeLimit, gifNames: gifsToShow, tagNames: tagsToShow, deadline: NSDate, participants: [String])
         
         
     }
-//==============================================================================================================
+//=================================================
    
     @IBAction func backButton(sender: AnyObject) {
         
@@ -153,6 +152,17 @@ class WorkoutEditorViewController: UIViewController {
         
     }
     
+ 
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
+    
+    func textFieldShouldReturn(nameChallengeTextField: UITextField) -> Bool {
+        nameChallengeTextField.resignFirstResponder()
+        return true
+    }
     
     @IBAction func didLogout(sender: AnyObject) {
         
@@ -167,6 +177,14 @@ class WorkoutEditorViewController: UIViewController {
         self.presentViewController(loginViewController, animated: true, completion: nil)
     }
     
+    @IBAction func deadlineValueChanged(sender: AnyObject) {
+        
+       deadlineLabel.text = String(Int(deadlineStepper.value))
+    }
+    
+    @IBAction func countdownValueChanged(sender: AnyObject) {
+        countdownLabel.text = String(Int(countdownStepper.value))
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
