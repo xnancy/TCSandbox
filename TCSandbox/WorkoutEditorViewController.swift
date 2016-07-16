@@ -138,8 +138,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
             
             
         }
-        
-
         challenge = Challenge()
     }
     

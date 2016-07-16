@@ -57,7 +57,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     
     /* ---------- ACTIONS ---------- */
     @IBAction func onSegmentedControl(sender: AnyObject) {
-        myChallengesTableView
+        myChallengesTableView.reloadData()
     }
     
     /* ---------- TABLE VIEW ---------- */
