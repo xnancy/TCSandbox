@@ -11,9 +11,9 @@ import Foundation
 class Challenge: AnyObject
 {
     var challengeID: String?
-    var participants: [String]?
-    var gifNames: [String]?
-    var tagNames: [String]?
+    var participants: [String]? = []
+    var gifNames: [String]? = []
+    var tagNames: [String]? = []
     var deadline: NSDate?
     var timeLimit: Int?
     

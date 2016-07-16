@@ -31,7 +31,6 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     override func viewWillAppear(animated: Bool) {
-        print(User.currentUser)
         FBClient.updateFriends(User.currentUser!, completion: {(friendsArray: [String]) in
             User.currentUser?.friends = friendsArray
             self.friendIDs = friendsArray
@@ -42,7 +41,6 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     
     /* ---------- TABLE VIEW DATA SOURCE ---------- */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print(friendIDs)
         let cell = friendsSendChallengeTableView.dequeueReusableCellWithIdentifier("friendsCell") as! FriendsSendChallengeTableViewCell
         FBClient.generateFriendCell(friendIDs![indexPath.row], cell: cell)
         cell.userID = friendIDs![indexPath.row]
@@ -57,7 +55,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = friendsSendChallengeTableView.cellForRowAtIndexPath(indexPath) as! FriendsSendChallengeTableViewCell
         
-        if ((challenge?.participants?.contains(cell.userID!)) != nil) {
+        if (((challenge?.participants?.contains(cell.userID!))) == nil) {
             challenge?.removeParticipant(cell.userID!)
         } else {
             challenge?.addParticipant(cell.userID!)
@@ -66,10 +64,10 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     @IBAction func didSendChallenge(sender: AnyObject) {
-        
-        //create a new challenge
-        //upload to firebase
-        
+        //add gifnames
+        //add tagnames
+
+        FBClient.uploadChallenge(challenge!)
     }
     
     /* ---------- GESTURE RECOGNIZERS ---------- */

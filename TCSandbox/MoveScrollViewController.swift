@@ -40,6 +40,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     private var gifs4 = Tags.createGifs4()
     private var gifs5 = Tags.createGifs5()
     private var gifs6 = Tags.createGifs6()
+    private var gifsToSend: [Gifs]?
     
     private struct Storyboard {
         

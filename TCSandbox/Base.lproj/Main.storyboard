@@ -825,7 +825,7 @@
                                 <state key="normal" title="Upload"/>
                                 <connections>
                                     <action selector="onUploadVideo:" destination="Nqy-hQ-xqb" eventType="touchUpInside" id="oQO-Zf-TkO"/>
-                                    <segue destination="P7c-mZ-5Ae" kind="show" id="GOz-qY-p3i"/>
+                                    <segue destination="P7c-mZ-5Ae" kind="presentation" id="BGf-Ss-Sbf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-db-dfm">

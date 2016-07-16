@@ -76,7 +76,7 @@ class FBClient: AnyObject {
                     let friendsList: [String] = [FBID]
                     let challenges: [String] = ["placeholder"]
                     let challengesCompleted: Int = 0
-                    let updates = ["friends_list": friendsList, "current_challenges": challenges, "challenges_completed": challengesCompleted]
+                    let updates = ["friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted]
                     dataRef.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
@@ -161,14 +161,12 @@ class FBClient: AnyObject {
     
     class func uploadChallenge(challenge: Challenge)
     {
-        //UPLOAD GIFS AND MOVES TO FIREBASE TOO, ALSO INCLUDE VIDEO POSSIBLY
-        
         let challengeID = dataRef.child("Challenges").childByAutoId().key
         challenge.challengeID = challengeID
         
         let participants = challenge.participants
-        let gifNames = challenge.gifNames
-        let tagNames = challenge.tagNames
+        //let gifNames = challenge.gifNames
+        //let tagNames = challenge.tagNames
         let timeLimit = challenge.timeLimit
 
         
@@ -178,10 +176,11 @@ class FBClient: AnyObject {
             dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 
                 
-                var currentChallenges = snapshot.value!["challenges"] as! [String]
-                currentChallenges.append(challengeID)
+                var challenges = snapshot.value!["challenges"] as! [String]
+                challenges.append(challengeID)
+
                 
-                let updates = ["challenges": currentChallenges]
+                let updates = ["challenges": challenges]
                 dataRef.child("Users").child(userID).updateChildValues(updates)
                 //REFRESH THE USER'S CURRENT CHALLENGES
                 
@@ -189,10 +188,8 @@ class FBClient: AnyObject {
                 
                 print(error.localizedDescription)
             }
-            
             dataRef.child("Challenges").updateChildValues(["challengeID": challengeID])
-            dataRef.child("Challenges").child(challengeID).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!])
-            
+            dataRef.child("Challenges").child(challengeID).updateChildValues(["participants": participants!, "workout_gifs": "hi", "add_on_images": "hi", "time_limit": timeLimit!])
         }
     }
     
