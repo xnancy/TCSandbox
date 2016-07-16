@@ -241,6 +241,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         challenge?.deadline = convertToNSDate()
         challenge?.timeLimit = Int(countdownStepper.value)
 
+        challenge?.gifNames = gifsToShow
+        challenge?.tagNames = tagsToShow
         let vc = segue.destinationViewController as! recordVideoViewController
         vc.challenge = challenge
 

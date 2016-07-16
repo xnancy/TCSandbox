@@ -11,6 +11,7 @@ import Foundation
 class Challenge: AnyObject
 {
     var challengeID: String?
+    var challengeTitle: String?
     var participants: [String]? = []
     var gifNames: [String]? = []
     var tagNames: [String]? = []

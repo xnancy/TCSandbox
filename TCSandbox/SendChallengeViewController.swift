@@ -64,10 +64,12 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     @IBAction func didSendChallenge(sender: AnyObject) {
-        //add gifnames
-        //add tagnames
+        //ADD GIF NAMES
+        //ADD TAG NAMES
+        //ADD CHALLENGE NAME
 
         FBClient.uploadChallenge(challenge!)
+        //CHANGE VIEW CONTROLLER
     }
     
     /* ---------- GESTURE RECOGNIZERS ---------- */
