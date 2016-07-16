@@ -10,8 +10,17 @@ import UIKit
 
 class myChallengeTableViewCell: UITableViewCell {
     
+    /* ---------- OUTLETS ---------- */
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView4: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var senderNameLabel: UILabel!
+    @IBOutlet weak var challengeNameLabel: UILabel!
+    @IBOutlet weak var timeLimitLabel: UILabel!
+    
+    /* ---------- VARIABLES ---------- */
     var challengeID: String?
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

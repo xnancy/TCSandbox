@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "addFriend(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490146307.439993"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "addFriend(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490211791.166412"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "addFriend(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "declineChallenge(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "declineChallenge(_:)"
             landmarkType = "5">
             <Locations>
@@ -282,11 +282,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.955432"
+                  timestampString = "490321179.242828"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
                   offsetFromSymbolStart = "1313">
                </Location>
                <Location
@@ -297,11 +297,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.95555"
+                  timestampString = "490321179.242921"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
                   offsetFromSymbolStart = "5254">
                </Location>
                <Location
@@ -312,11 +312,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.955642"
+                  timestampString = "490321179.242988"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "221"
-                  endingLineNumber = "221"
+                  startingLineNumber = "240"
+                  endingLineNumber = "240"
                   offsetFromSymbolStart = "19">
                </Location>
             </Locations>
@@ -345,7 +345,7 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/SendChallengeViewController.swift"
-                  timestampString = "490232497.956333"
+                  timestampString = "490321179.243735"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -360,7 +360,7 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/SendChallengeViewController.swift"
-                  timestampString = "490232497.956446"
+                  timestampString = "490321179.243813"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -377,11 +377,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "declineChallenge(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -393,11 +393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "declineChallenge(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -409,11 +409,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "declineChallenge(_:)"
             landmarkType = "5">
             <Locations>
@@ -425,11 +425,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.958321"
+                  timestampString = "490321179.245457"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
                   offsetFromSymbolStart = "1313">
                </Location>
                <Location
@@ -440,11 +440,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.958428"
+                  timestampString = "490321179.245556"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
                   offsetFromSymbolStart = "5254">
                </Location>
                <Location
@@ -455,11 +455,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.958521"
+                  timestampString = "490321179.245623"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "221"
-                  endingLineNumber = "221"
+                  startingLineNumber = "240"
+                  endingLineNumber = "240"
                   offsetFromSymbolStart = "19">
                </Location>
             </Locations>
@@ -472,11 +472,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "declineChallenge(_:)"
             landmarkType = "5">
             <Locations>
@@ -488,11 +488,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.959227"
+                  timestampString = "490321179.246508"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
                   offsetFromSymbolStart = "1527">
                </Location>
                <Location
@@ -503,11 +503,11 @@
                   moduleName = "TCSandbox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
-                  timestampString = "490232497.959319"
+                  timestampString = "490321179.246597"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
                   offsetFromSymbolStart = "172">
                </Location>
             </Locations>
@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "declineChallenge(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "FBClient"
             landmarkType = "3">
          </BreakpointContent>
@@ -552,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "FBClient"
             landmarkType = "3">
          </BreakpointContent>
@@ -568,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490230923.90756"
+            timestampString = "490319178.002253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "FBClient"
             landmarkType = "3">
          </BreakpointContent>
@@ -609,6 +609,38 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TCSandbox/LoginViewController.swift"
+            timestampString = "490319178.002253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TCSandbox/myChallengesViewController.swift"
+            timestampString = "490321177.972977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,52 +10,74 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import Foundation
 
 class myChallengesViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var challengesSegmentedControl: UISegmentedControl!
-    var challengeCount: Int?
+    @IBOutlet weak var myChallengesTableView: UITableView!
+    var currentChallenges: [Challenge]?
+    var pastChallenges: [Challenge]?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        challengeCount = User.currentUser?.currentChallenges?.count
-
-        // Do any additional setup after loading the view.
+        myChallengesTableView.delegate = self
+        myChallengesTableView.dataSource = self
+        updateChallengeInfo()
     }
 
+    func updateChallengeInfo() {
+        currentChallenges = []
+        pastChallenges = []
+        var allChallenges: [Challenge]?
+        let currentDate = NSDate()
+        
+        FBClient.retrieveChallenges { (challenges: [Challenge]) in
+            // Get [Challenge] of user challenges
+            for challenge in challenges {
+                allChallenges?.append(challenge)
+            }
+            // Split by past / current
+            for challenge in allChallenges! {
+                if (challenge.deadline?.compare(currentDate) == NSComparisonResult.OrderedAscending) {
+                    self.pastChallenges?.append(challenge)
+                } else {
+                    self.currentChallenges?.append(challenge)
+                }
+            }
+            self.myChallengesTableView.reloadData()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    /* ---------- ACTIONS ---------- */
     @IBAction func onSegmentedControl(sender: AnyObject) {
-        if challengesSegmentedControl.selectedSegmentIndex == 0 {
-            challengeCount = User.currentUser?.currentChallenges?.count
-            //reload data
-        } else {
-            challengeCount = User.currentUser?.pastChallenges?.count
-            //reload data
-        }
+        myChallengesTableView
     }
     
+    /* ---------- TABLE VIEW ---------- */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let challengeCount = challengeCount
-        {
-            return challengeCount
+        if (challengesSegmentedControl.selectedSegmentIndex == 1) {
+            return (pastChallenges?.count)!
+        } else {
+            return (currentChallenges?.count)!
         }
-        
-        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
         let cell = tableView.dequeueReusableCellWithIdentifier("myChallengesCell") as? myChallengeTableViewCell
-        
-        //cell.challengeID =
-        
+        if (challengesSegmentedControl.selectedSegmentIndex == 1) {
+            cell?.senderNameLabel.text = pastChallenges![indexPath.row].senderID
+            cell?.challengeNameLabel.text = pastChallenges![indexPath.row].name
+            cell?.timeLimitLabel.text = String(pastChallenges![indexPath.row].timeLimit)
+        }
         return cell!
     }
 

@@ -10,6 +10,7 @@ import Foundation
 
 class Challenge: AnyObject
 {
+    var name: String
     var challengeID: String?
     var challengeTitle: String?
     var participants: [String]? = []
@@ -17,11 +18,30 @@ class Challenge: AnyObject
     var tagNames: [String]? = []
     var deadline: NSDate?
     var timeLimit: Int?
+    var challengeTitle: String?
+    var senderID: String?
     
+    // Complete initializer for FB retrieval
+    init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, deadline: String, senderID: String) {
+        self.name = name
+        self.gifNames = workout_gifs
+        self.tagNames = add_on_images
+        self.timeLimit = Int(time_limit)
+        self.participants = participants
+        self.challengeID = challengeID
+        self.deadline = FBClient.dateFormatter.dateFromString(deadline)
+        self.senderID = senderID
+    }
     
     init()
     {
-
+        self.name = ""
+        self.timeLimit = timeLimit
+        self.tagNames = tagNames
+        self.gifNames = gifNames
+        self.deadline = deadline
+        self.participants = participants
+        self.challengeID = ""
     }
     
     func addParticipant(userID: String)
