@@ -21,6 +21,9 @@ class FBClient: AnyObject {
     class func initializeDateFormatter() {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
     }
+    static let storageRef = FIRStorage.storage().reference()
+    
+    
     
     class func login()
     {
@@ -64,7 +67,6 @@ class FBClient: AnyObject {
             dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 let friendsExist = snapshot.hasChild("friends_list")
 
-                print(friendsExist)
                 if friendsExist
                 {
                     //do nothing
@@ -180,9 +182,7 @@ class FBClient: AnyObject {
     
     class func uploadChallenge(challenge: Challenge)
     {
-        let challengeID = dataRef.child("Challenges").childByAutoId().key
-        challenge.challengeID = challengeID
-        
+        let challengeID = challenge.challengeID
         let participants = challenge.participants
         let gifNames = challenge.gifNames
         let tagNames = challenge.tagNames
@@ -197,7 +197,7 @@ class FBClient: AnyObject {
                 
                 
                 var challenges = snapshot.value!["challenges"] as! [String]
-                challenges.append(challengeID)
+                challenges.append(challengeID!)
 
                 
                 let updates = ["challenges": challenges]
@@ -208,7 +208,7 @@ class FBClient: AnyObject {
                 
                 print(error.localizedDescription)
             }
-            dataRef.child("Challenges").child(challengeID).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!, "challengeID": challengeID, "name": challengeTitle!])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!, "challengeID": challengeID!, "name": challengeTitle!])
         }
     }
     

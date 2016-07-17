@@ -20,9 +20,6 @@ class Challenge: AnyObject
     var timeLimit: Int?
     var senderID: String?
     
-    init() {
-    }
-    
     // Complete initializer for FB retrieval
     init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, deadline: String, senderID: String) {
         self.name = name
@@ -33,6 +30,12 @@ class Challenge: AnyObject
         self.challengeID = challengeID
         self.deadline = FBClient.dateFormatter.dateFromString(deadline)
         self.senderID = senderID
+    }
+    
+    init()
+    {
+        let challengeID = FBClient.dataRef.child("Challenges").childByAutoId().key
+        self.challengeID = challengeID
     }
     
     func addParticipant(userID: String)

@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "490315611.113068"
+            timestampString = "490485967.322827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "addFriend(_:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "logout()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

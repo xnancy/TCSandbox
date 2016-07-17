@@ -9,9 +9,10 @@ target 'TCSandbox' do
 pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
 pod 'SwiftyGif'
-pod 'Firebase'
+pod 'Firebase/Core'
 pod 'Firebase/Database' 
 pod 'Firebase/Auth'
+pod 'Firebase/Storage'
 pod 'AFNetworking'
   target 'TCSandboxTests' do
     inherit! :search_paths
@@ -19,9 +20,10 @@ pod 'AFNetworking'
 pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
 pod 'SwiftyGif'
-pod 'Firebase'
+pod 'Firebase/Core'
 pod 'Firebase/Database' 
 pod 'Firebase/Auth'
+pod 'Firebase/Storage'
 pod 'AFNetworking'
   end
 
@@ -31,9 +33,10 @@ pod 'AFNetworking'
 pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
 pod 'SwiftyGif'
-pod 'Firebase'
+pod 'Firebase/Core'
 pod 'Firebase/Database' 
 pod 'Firebase/Auth'
+pod 'Firebase/Storage'
 pod 'AFNetworking'
   end
 

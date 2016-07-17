@@ -8,6 +8,9 @@
 
 import UIKit
 import MobileCoreServices
+import Firebase
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class recordVideoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -51,6 +54,23 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func onUploadVideo(sender: AnyObject) {
         //upload video to our database and associate it with the correct challenge
+        if let pickedVideo = pickedVideo
+        {
+            let userVideoRef = FBClient.storageRef.child(FBSDKAccessToken.currentAccessToken().userID)
+            let videoRef = userVideoRef.child((challenge?.challengeID)!)
+            
+            let uploadTask = videoRef.putFile(pickedVideo, metadata: nil) { metadata, error in
+                if (error != nil) {
+                    // Uh-oh, an error occurred!
+                } else {
+                    // Metadata contains file metadata such as size, content-type, and download URL.
+                    let downloadURL = metadata!.downloadURL
+                    //stream the video from the download URL on the screen?
+                }
+            }
+        }
+        
+        
     }
     
     @IBAction func backButtonAction(sender: UIButton) {
