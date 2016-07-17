@@ -183,6 +183,7 @@ class FBClient: AnyObject {
     class func uploadChallenge(challenge: Challenge)
     {
         let challengeID = challenge.challengeID
+        let senderID = FBSDKAccessToken.currentAccessToken().userID
         let participants = challenge.participants
         let gifNames = challenge.gifNames
         let tagNames = challenge.tagNames
@@ -208,7 +209,7 @@ class FBClient: AnyObject {
                 
                 print(error.localizedDescription)
             }
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!, "challengeID": challengeID!, "name": challengeTitle!])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!, "challengeID": challengeID!, "name": challengeTitle!, "senderID": senderID])
         }
     }
     
