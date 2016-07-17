@@ -102,7 +102,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myChallengeCell" rowHeight="96" id="kev-WR-wmo" customClass="myChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="96"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kev-WR-wmo" id="BwG-VY-YZe">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
@@ -876,7 +876,6 @@
                                 <state key="normal" title="Upload"/>
                                 <connections>
                                     <action selector="onUploadVideo:" destination="Nqy-hQ-xqb" eventType="touchUpInside" id="oQO-Zf-TkO"/>
-                                    <segue destination="P7c-mZ-5Ae" kind="presentation" id="BGf-Ss-Sbf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-db-dfm">
@@ -891,6 +890,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="fm1-n7-eA8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="P7c-mZ-5Ae" kind="presentation" identifier="sendChallenge" id="yXz-UZ-JEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EN-No-IKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

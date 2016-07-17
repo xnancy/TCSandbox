@@ -68,6 +68,8 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
                     //stream the video from the download URL on the screen?
                 }
             }
+            
+            performSegueWithIdentifier("sendChallenge", sender: self)
         }
         
         
@@ -80,6 +82,7 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let vc = segue.destinationViewController as! SendChallengeViewController
         
