@@ -89,4 +89,16 @@ class Challenge: AnyObject
         return users
     }
     
+    func dateToString() -> String
+    {
+        let date = self.deadline
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        
+        let string = dateFormatter.stringFromDate(date!)
+        
+        return string
+    }
+    
 }

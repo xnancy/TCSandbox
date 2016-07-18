@@ -106,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kev-WR-wmo" id="BwG-VY-YZe">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="95.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-0o-TvN">
@@ -193,7 +193,7 @@
         <!--Detail-->
         <scene sceneID="ajs-6U-v6z">
             <objects>
-                <viewController id="G8O-Y5-uPl" sceneMemberID="viewController">
+                <viewController id="G8O-Y5-uPl" customClass="ChallengeDetailViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kre-KZ-WD0"/>
                         <viewControllerLayoutGuide type="bottom" id="pzE-Kg-75t"/>
@@ -229,7 +229,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="27"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDx-0b-Lvp" id="nJK-hl-9WA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="26.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -240,6 +240,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="rIE-x3-NXC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="challengeTitleLabel" destination="Q8P-RS-65g" id="zL6-Jw-Vcq"/>
+                        <outlet property="deadlineLabel" destination="R3w-VS-NAP" id="EQA-PJ-Afm"/>
+                        <outlet property="profileImageView" destination="lkt-bI-mm7" id="ToQ-wT-7UC"/>
+                        <outlet property="videoView" destination="Hzo-ob-LyM" id="j1K-hd-gug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Las-Fk-5bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
