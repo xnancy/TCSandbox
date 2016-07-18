@@ -71,14 +71,20 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func playVideo(sender: AnyObject) {
         
-        let url = FBClient.downloadVideo(challenge!.challengeID!, userID: FBSDKAccessToken.currentAccessToken().userID)
+        var url = NSURL()
         
-        let player = AVPlayer(URL: url)
-        let movie = AVPlayerViewController()
-        movie.player = player
-        
-        self.view.addSubview(movie.view)
-        player.play()
+        FBClient.downloadVideo((challenge?.challengeID)!, userID: FBSDKAccessToken.currentAccessToken().userID, completion: {(URL: NSURL) in
+            
+            url = URL
+
+            let player = AVPlayer(URL: url)
+            let movie = AVPlayerViewController()
+            movie.player = player
+            movie.view.frame = self.view.bounds
+            
+            self.view.addSubview(movie.view)
+            player.play()
+        })
     }
     
     // MARK: - Navigation

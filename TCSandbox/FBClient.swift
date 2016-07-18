@@ -337,21 +337,17 @@ class FBClient: AnyObject {
         }
     }
     
-    class func downloadVideo(challengeID: String, userID: String) -> NSURL
+    class func downloadVideo(challengeID: String, userID: String, completion: (NSURL) -> Void)
     {
         let videoRef = storageRef.child(userID).child(challengeID)
-        var url = NSURL()
         
         videoRef.downloadURLWithCompletion { (URL, error) -> Void in
             if (error != nil) {
                 // Handle any errors
             } else {
-                // return the url
-                
-                url = URL!
+                //this isn't returning the real url because of asynch problem
+                completion(URL!)
             }
         }
-        
-        return url
     }
 }
