@@ -69,12 +69,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< 748418035321f6cc5ab6dceacc68c87baac466f7
-=======
-
-        //print(peekAndPopCount)
-        
->>>>>>> Added 3D touch elements: CollectionView Peek feathure w/options and 3D touch shortcuts. Also gifs in collectionview now play
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
@@ -168,21 +162,12 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
            
         }
         
-<<<<<<< 748418035321f6cc5ab6dceacc68c87baac466f7
-            
-            
-        }
         challenge = Challenge()
-=======
- //========= CHALLENGE OBJECT INIT ==============//
-        
-        challenge = Challenge()
-
-//=================================================//
-//gifSelectedImageView1.setGifImage(UIImage(gifName: "pushup"), manager: gifmanager, loopCount: 20)
-    
->>>>>>> Added 3D touch elements: CollectionView Peek feathure w/options and 3D touch shortcuts. Also gifs in collectionview now play
+            
     }
+    
+
+
     
     func convertToNSDate() -> NSDate{
         let today = NSDate()
