@@ -25,15 +25,18 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
         updateChallengeInfo()
+        print("View did load RUN")
     }
 
     func updateChallengeInfo() {
+        
         currentChallenges = []
         pastChallenges = []
         var allChallenges: [Challenge]?
         let currentDate = NSDate()
         
         FBClient.retrieveChallenges { (challenges: [Challenge]) in
+            print("RETRIEVING")
             // Get [Challenge] of user challenges
             for challenge in challenges {
                 allChallenges?.append(challenge)
@@ -46,8 +49,10 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
                     self.currentChallenges?.append(challenge)
                 }
             }
+            print("number of challenges: \(self.currentChallenges?.count), \(self.pastChallenges?.count)")
             self.myChallengesTableView.reloadData()
         }
+        print("UPDATE CHALLENGES RUN DONE")
     }
     
     override func didReceiveMemoryWarning() {
