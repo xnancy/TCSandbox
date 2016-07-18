@@ -17,7 +17,7 @@ class FBClient: AnyObject {
 
     static let dataRef = FIRDatabase.database().reference()
     static let dateFormatter = NSDateFormatter()
-    
+    static let navigationController = UINavigationController()
     class func initializeDateFormatter() {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
     }
@@ -186,13 +186,20 @@ class FBClient: AnyObject {
         let senderID = FBSDKAccessToken.currentAccessToken().userID
         let participants = challenge.participants
         let gifNames = challenge.gifNames
-        let tagNames = challenge.tagNames
+        let deadline = challenge.deadline
+        var tagNames = challenge.tagNames
         let timeLimit = challenge.timeLimit
+        let compTags = challenge.cTagNames
         let challengeTitle = challenge.challengeTitle
-
+        
+        if tagNames! == [] {
+            tagNames = ["placeholders"]
+            
+        }
         
         for userID in participants!
         {
+            
             //add challenge to user in firebase and user's current challenges
             dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 
@@ -209,8 +216,14 @@ class FBClient: AnyObject {
                 
                 print(error.localizedDescription)
             }
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!, "challengeID": challengeID!, "name": challengeTitle!, "senderID": senderID])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeTitle!, "senderID": senderID])
         }
+    
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = storyboard.instantiateViewControllerWithIdentifier("MyChallengesVC")
+        self.navigationController.presentViewController(homeVC, animated: false, completion: nil)
+        self.navigationController.dismissViewControllerAnimated(false, completion: nil)
+        
     }
     
     class func declineChallenge(challenge: Challenge)
@@ -233,6 +246,8 @@ class FBClient: AnyObject {
         })  { (error) in
             print(error.localizedDescription)
         }
+        
+        
     }
     
     /* ---------- FRIENDS/USERS ---------- */

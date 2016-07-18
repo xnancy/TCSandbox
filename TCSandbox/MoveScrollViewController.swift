@@ -69,10 +69,11 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     var movesCount: Int = 0
     var workoutCount: Int = 0
     var tagsCount: Int = 0
+    var peekAndPopCount: Int = 0
     //var delegate: GifsCollectionViewCell?
     var quickActionString: String!
     var quickActionString2: String!
-    var peekAndPopCount: Int = 0
+    
     
     //MARK:
     override func viewDidLoad() {
@@ -234,6 +235,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{
                 svc.gifsToShow.append(Gifs.row1[index])
+                svc.cTags.append("placeholder")
                 
             }
         }
@@ -241,35 +243,35 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         for (index, boolValue) in collection2Selected.enumerate(){
             if boolValue == true{
                 svc.gifsToShow.append(Gifs.row2[index])
-                
+                svc.cTags.append("placeholder")
             }
         }
         
         for (index, boolValue) in collection3Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.row3[index])
-                
+                svc.cTags.append("placeholder")
             }
         }
         
         for (index, boolValue) in collection4Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.row4[index])
-                
+                svc.cTags.append("placeholder")
             }
         }
         
         for (index, boolValue) in collection5Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.row5[index])
-                
+                svc.cTags.append("placeholder")
             }
         }
         
         for (index, boolValue) in collection6Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.row6[index])
-                
+                svc.cTags.append("placeholder")
             }
         }
     }

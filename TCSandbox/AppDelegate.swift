@@ -34,8 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             performShortcutDelegate = false
         }
-        
+
+        //Go BACK LATER
         return performShortcutDelegate && FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

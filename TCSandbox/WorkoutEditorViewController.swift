@@ -57,6 +57,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
     var gifsToShow: [String] = []
     var tagsToShow: [String] = []
+    var cTags: [String] = []
     var movesCount: Int!
     var workoutCount: Int!
     var tagsCount: Int!
@@ -265,6 +266,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
 
         challenge?.gifNames = gifsToShow
         challenge?.tagNames = tagsToShow
+        challenge?.cTagNames = cTags
         let vc = segue.destinationViewController as! recordVideoViewController
         vc.challenge = challenge
 

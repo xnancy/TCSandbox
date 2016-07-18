@@ -16,6 +16,7 @@ class Challenge: AnyObject
     var participants: [String]? = []
     var gifNames: [String]? = []
     var tagNames: [String]? = []
+    var cTagNames: [String]? = []
     var deadline: NSDate?
     var timeLimit: Int?
     var senderID: String?

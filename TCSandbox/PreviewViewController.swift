@@ -19,7 +19,7 @@ class PreviewViewController: UIViewController {
     
     var selectedItem: String?
     var selectedItem2: String?
-    var delegate: MoveScrollViewController?
+    var delegate: MoveScrollViewControllerDelegate?
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
     
     var previewActions: [UIPreviewActionItem]{
@@ -27,7 +27,7 @@ class PreviewViewController: UIViewController {
         
         let item1 = UIPreviewAction(title: "5x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
            self.delegate?.incrementPeekAndPopCount()
-            
+            //print(self.delegate?.peekAndPopCount)
         }
         
         let item2 = UIPreviewAction(title: "10x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
