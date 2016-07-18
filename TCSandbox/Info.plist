@@ -52,33 +52,25 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeMessage</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.tcsandbox.challenges</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>My Challenges</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>0 New Challenges</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>My Challenges</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.tcsandbox.challenges</string>
 		</dict>
 		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.tcsandbox.newchallenge</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeShare</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Make New Challenge</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.tcsandbox.newchallenge</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -88,6 +80,14 @@
 			<key>UIApplicationShortcutItemType</key>
 			<string>com.tcsandbox.addfriends</string>
 		</dict>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

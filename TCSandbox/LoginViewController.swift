@@ -29,7 +29,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 let FBID = FBSDKAccessToken.currentAccessToken().userID
                 User.updateCurrentUser()
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("MoveScrollViewController")
+                let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
                 self.presentViewController(homeViewController, animated: true, completion: nil)
             }
             

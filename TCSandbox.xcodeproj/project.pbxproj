@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30161D383A05005D7171 /* myChallengesViewController.swift */; };
 		825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */; };
-		82B64F751D36DED0002BFDBE /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B64F741D36DED0002BFDBE /* Video.swift */; };
 		82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6653A1D2DBF9000D642CA /* LoginViewController.swift */; };
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
@@ -77,7 +76,6 @@
 		8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
 		825C30161D383A05005D7171 /* myChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengesViewController.swift; sourceTree = "<group>"; };
 		825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengeTableViewCell.swift; sourceTree = "<group>"; };
-		82B64F741D36DED0002BFDBE /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		82C6653A1D2DBF9000D642CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 				929A02A41D2ECA8A00FC1E96 /* User.swift */,
 				929A02A61D2ECAD800FC1E96 /* Challenge.swift */,
 				929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */,
-				82B64F741D36DED0002BFDBE /* Video.swift */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -386,7 +383,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6ZD82QXX95;
+						DevelopmentTeam = D8M8Q37C6Y;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -595,7 +592,6 @@
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
 				929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */,
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
-				82B64F751D36DED0002BFDBE /* Video.swift in Sources */,
 				825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
@@ -754,7 +750,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caeerfeqrfqe;
+				PRODUCT_BUNDLE_IDENTIFIER = "as-kdfjaw-eirausd-fkjwpoeuirafsej";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -773,7 +769,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caeerfeqrfqe;
+				PRODUCT_BUNDLE_IDENTIFIER = "as-kdfjaw-eirausd-fkjwpoeuirafsej";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
