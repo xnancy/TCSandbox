@@ -1,13 +1,19 @@
+//
+//  MoveScrollExtensionViewController.swift
+//  TCSandbox
+//
+//  Created by Savannah McCoy on 7/16/16.
+//  Copyright © 2016 Nancy Xu. All rights reserved.
+//
+
 import UIKit
 
-//protocol delegate {
-//    var movesCount: Int { get set }
-//}
 
 protocol MoveScrollViewControllerDelegate {
     func incrementCount()
     func decrementCount()
     func incrementWorkoutCount()
+    func incrementPeekAndPopCount()
     func decrementWorkoutCount()
     func incrementTagsCount()
     func decrementTagsCount()
@@ -41,7 +47,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     private var gifs4 = Tags.createGifs4()
     private var gifs5 = Tags.createGifs5()
     private var gifs6 = Tags.createGifs6()
-    private var gifsToSend: [Gifs]?
     
     private struct Storyboard {
         
@@ -65,7 +70,10 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     var movesCount: Int = 0
     var workoutCount: Int = 0
     var tagsCount: Int = 0
-    var delegate: GifsCollectionViewCell?
+    //var delegate: GifsCollectionViewCell?
+    var quickActionString: String!
+    var quickActionString2: String!
+    var peekAndPopCount: Int = 0
     
     //MARK:
     override func viewDidLoad() {
@@ -74,13 +82,12 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         updateView()
         updateTagView()
         
+        collectionView1.delegate = self
+        collectionView1.dataSource = self
         
-        //print(movesCount)
-        //print(counterLabel)
-        //self.counterLabel.text = "\(self.movesCount)"
-        //updateCount()
-        //counterLabel! = giffy.counterLabel
-        //print(giffy.counterLabel)
+        collectionView2.delegate = self
+        collectionView2.dataSource = self
+        
         // Do any additional setup after loading the view.
         
         collection1Selected = [false, false, false, false, false]
@@ -151,22 +158,25 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
        tagsCount += 1
         counterLabel.text = String(movesCount)
         
-        //        self.viewDidLoad()
         updateView()
     }
     
     func decrementTagsCount() {
         tagsCount -= 1
         counterLabel.text = String(movesCount)
-        //        self.viewDidLoad()
         
         updateView()
         
     }
     
-    func updateView(){
+    func incrementPeekAndPopCount(){
         
-        //let selectButton = UIButton
+        peekAndPopCount += 1
+        print("called")
+        
+    }
+    
+    func updateView(){
         
         if workoutCount < 1 {
             viewChallengeButton.hidden = true
@@ -175,7 +185,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             
         }else{
             viewChallengeButton.hidden = false
-            scrollButton.hidden = true
+            scrollButton.hidden = false
             counterLabel.hidden = false
         }
         
@@ -183,6 +193,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     
     
     func updateTagView(){
+        
         if workoutCount < 1 {
             tagForbidButton.hidden = false
             
@@ -196,9 +207,18 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         return movesCount
     }
     
-    
+    override func viewDidAppear(animated: Bool) {
+        
+        if( traitCollection.forceTouchCapability == .Available){
+            
+            registerForPreviewingWithDelegate(self, sourceView: collectionView1)
+            registerForPreviewingWithDelegate(self, sourceView: collectionView2)
+
+        }
+    }
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -210,8 +230,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         svc.movesCount = movesCount
         svc.workoutCount = workoutCount
         svc.tagsCount = tagsCount
-        print(tagsCount)
-        
+        //print(peekAndPopCount)
         
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{
@@ -259,7 +278,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     
     @IBAction func tagForbidAction(sender: UIButton) {
         
-        
         let alertController = UIAlertController(title: "Cannot Add Tag", message:
             "Tags must be added to one (1) move", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
@@ -274,7 +292,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     @IBAction func cancelAction(sender: UIButton) {
         
         dismissViewControllerAnimated(true, completion: nil)
-        
         
     }
     

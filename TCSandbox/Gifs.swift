@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+
 class Gifs
 {
     // var imageName: String!
@@ -17,7 +18,7 @@ class Gifs
         
         
         "boxing": "Boxing",
-        "pullup": "Pull Ups",
+        "pullups": "Pull Ups",
         "running": "Running",
         "lifting": "Lifting",
         
@@ -27,7 +28,7 @@ class Gifs
     ]
     
     static let row1: [String] = [
-        "jump rope", "hipairplane", "pushups", "pullup"
+        "jump rope", "hipairplane", "pushups", "pullups"
     ]
     static let row2: [String] = [
         

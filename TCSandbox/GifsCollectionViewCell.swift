@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyGif
 
 
 class GifsCollectionViewCell: UICollectionViewCell{
@@ -15,7 +15,7 @@ class GifsCollectionViewCell: UICollectionViewCell{
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var featuredImage:UIImageView!
     @IBOutlet weak var gifDescription:UILabel!
-    
+    var gifmanager = SwiftyGifManager(memoryLimit: 20)
     var isSelected:Bool! = false
     var delegate: MoveScrollViewControllerDelegate?
     var gifs: Gifs! {
@@ -50,7 +50,7 @@ class GifsCollectionViewCell: UICollectionViewCell{
     }
     
     func updateUI(){
-        featuredImage?.image! = gifs.featuredImage
+        featuredImage?.image = gifs.featuredImage
         gifDescription?.text! = gifs.description
         
     }

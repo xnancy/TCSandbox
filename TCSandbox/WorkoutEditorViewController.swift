@@ -20,6 +20,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     /* ---------- OUTLETS ---------- */
     
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var gifSelectedImageView1: UIImageView!
     @IBOutlet weak var gifSelectedImageView2: UIImageView!
     @IBOutlet weak var gifSelectedImageView3: UIImageView!
@@ -35,13 +36,25 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var deadlineLabel: UILabel!
     @IBOutlet weak var secMinLabel: UILabel!
     @IBOutlet weak var daysWeekLabel: UILabel!
-    
-    
-    
+    @IBOutlet weak var badgeImage1: UIImageView!
+    @IBOutlet weak var badgeImage2: UIImageView!
+    @IBOutlet weak var badgeImage3: UIImageView!
+    @IBOutlet weak var badgeImage4: UIImageView!
+    @IBOutlet weak var barImage1: UIImageView!
+    @IBOutlet weak var barImage2: UIImageView!
+    @IBOutlet weak var barImage3: UIImageView!
+    @IBOutlet weak var barImage4: UIImageView!
+    @IBOutlet weak var badgeLabel1: UILabel!
+    @IBOutlet weak var badgeLabel2: UILabel!
+    @IBOutlet weak var badgeLabel3: UILabel!
+    @IBOutlet weak var badgeLabel4: UILabel!
+    @IBOutlet weak var barLabel1: UILabel!
+    @IBOutlet weak var barLabel2: UILabel!
+    @IBOutlet weak var barLabel3: UILabel!
+    @IBOutlet weak var barLabel4: UILabel!
+  
     /* ---------- VARIABLES ---------- */
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
-    //var gifsDictionary: Dictionary()
-    //var gifsToShow: [String] = []
     var gifsToShow: [String] = []
     var tagsToShow: [String] = []
     var movesCount: Int!
@@ -49,11 +62,19 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     var tagsCount: Int!
     var date = NSDate()
     var challenge: Challenge?
+    var fm: CGRect = UIScreen.mainScreen().bounds
+    //var peekAndPopCount: Int!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< 748418035321f6cc5ab6dceacc68c87baac466f7
+=======
+
+        //print(peekAndPopCount)
+        
+>>>>>>> Added 3D touch elements: CollectionView Peek feathure w/options and 3D touch shortcuts. Also gifs in collectionview now play
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
@@ -71,7 +92,17 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])]
         gifSelectedImageView1.image = UIImage(named: gifsToShow[0])
         
+        if movesCount == 1 {
+            
+                        
+            gifSelectedImageView2.hidden = true
+            gifSelectedImageView4.hidden = true
+            gifSelectedImageView3.hidden = true
+            
+        }
         
+        
+
         if workoutCount > 1 {
         
         if workoutCount == 2 {
@@ -133,12 +164,24 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         else if workoutCount == 3 {
             selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[0]]
             gifSelectedImageView3.image = UIImage(named: tagsToShow[0])
+            }
+           
         }
         
+<<<<<<< 748418035321f6cc5ab6dceacc68c87baac466f7
             
             
         }
         challenge = Challenge()
+=======
+ //========= CHALLENGE OBJECT INIT ==============//
+        
+        challenge = Challenge()
+
+//=================================================//
+//gifSelectedImageView1.setGifImage(UIImage(gifName: "pushup"), manager: gifmanager, loopCount: 20)
+    
+>>>>>>> Added 3D touch elements: CollectionView Peek feathure w/options and 3D touch shortcuts. Also gifs in collectionview now play
     }
     
     func convertToNSDate() -> NSDate{
@@ -164,10 +207,11 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     
  
     func dismissKeyboard() {
+        
         view.endEditing(true)
+    
     }
-    
-    
+
     
     func textFieldShouldReturn(nameChallengeTextField: UITextField) -> Bool {
         nameChallengeTextField.resignFirstResponder()
@@ -199,10 +243,12 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func editingDidEnd(sender: AnyObject) {
+
         let challengeTitle = nameChallengeTextField.text
         challenge?.challengeTitle = challengeTitle
     }
     @IBAction func countdownValueChanged(sender: AnyObject) {
+        
         if countdownStepper.value < 60 {
             countdownLabel.text = String(Int(countdownStepper.value))
             secMinLabel.text = "s"
@@ -227,9 +273,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         challenge?.deadline = convertToNSDate()
         challenge?.timeLimit = Int(countdownStepper.value)
 
@@ -239,7 +284,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         vc.challenge = challenge
 
     }
-    
     
     
     override func didReceiveMemoryWarning() {
