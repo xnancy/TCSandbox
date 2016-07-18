@@ -96,6 +96,4 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
         
         vc.challenge = challenge
     }
- 
-
 }

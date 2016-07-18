@@ -227,12 +227,10 @@ class FBClient: AnyObject {
             currentChallenges.removeAtIndex(indexOfChallenge!)
             participants.removeAtIndex(indexOfUser!)
             
-            
             dataRef.child("Users").child(FBID).updateChildValues(["challenges": currentChallenges])
             dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants])
             
         })  { (error) in
-            
             print(error.localizedDescription)
         }
     }

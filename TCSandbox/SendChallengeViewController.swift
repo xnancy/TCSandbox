@@ -62,7 +62,6 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
-    
     @IBAction func didSendChallenge(sender: AnyObject) {
         //ADD GIF NAMES
         //ADD TAG NAMES
@@ -72,6 +71,10 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         //CHANGE VIEW CONTROLLER
     }
     
+    @IBAction func onBackButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true) {
+        }
+    }
     /* ---------- GESTURE RECOGNIZERS ---------- */
     
 }

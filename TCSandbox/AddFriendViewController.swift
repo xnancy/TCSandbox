@@ -87,4 +87,10 @@ class AddFriendViewController: UIViewController, UITableViewDataSource, UISearch
     func reloadFriendTable() {
         friendSearchTableView.reloadData()
     }
+    
+    /* ---------- ACTIONS ---------- */
+    @IBAction func onBackButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true) {
+        }
+    }
 }
