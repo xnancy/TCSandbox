@@ -43,6 +43,7 @@
 		B81A457C1D3D45DF00D20C65 /* jump rope.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A45791D3D45DF00D20C65 /* jump rope.gif */; };
 		B81A457D1D3D45DF00D20C65 /* pullups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A457A1D3D45DF00D20C65 /* pullups.gif */; };
 		B81A457F1D3D45E800D20C65 /* pushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A457E1D3D45E800D20C65 /* pushups.gif */; };
+		B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */; };
 		B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70A1D3B183D000D3499 /* PreviewViewController.swift */; };
 		B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
@@ -117,6 +118,7 @@
 		B81A45791D3D45DF00D20C65 /* jump rope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "jump rope.gif"; path = "TCSandbox/jump rope.gif"; sourceTree = "<group>"; };
 		B81A457A1D3D45DF00D20C65 /* pullups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pullups.gif; path = TCSandbox/pullups.gif; sourceTree = "<group>"; };
 		B81A457E1D3D45E800D20C65 /* pushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushups.gif; path = TCSandbox/pushups.gif; sourceTree = "<group>"; };
+		B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		B864E70A1D3B183D000D3499 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollExtensionViewController.swift; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +244,7 @@
 				92A924AF1D3057B900637263 /* MoveScrollViewController.swift */,
 				B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */,
 				B864E70A1D3B183D000D3499 /* PreviewViewController.swift */,
+				B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */,
 				82C6653A1D2DBF9000D642CA /* LoginViewController.swift */,
 				925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */,
 				925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */,
@@ -580,6 +583,7 @@
 				B81A45431D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift in Sources */,
 				825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */,
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
+				B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */,
 				B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */,
 				82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */,
 				925D8E5B1D2D79C1000F44F7 /* ViewController.swift in Sources */,
