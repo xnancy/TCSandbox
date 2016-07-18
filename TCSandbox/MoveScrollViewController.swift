@@ -40,7 +40,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     @IBOutlet weak var tagForbidButton: UIButton!
     @IBOutlet weak var scrollButton: UIButton!
     
-    
     private var gifs = Gifs.createGifs()
     private var gifs2 = Gifs.createGifs2()
     private var gifs3 = Tags.createGifs3()
@@ -212,7 +211,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         if( traitCollection.forceTouchCapability == .Available){
             
             registerForPreviewingWithDelegate(self, sourceView: collectionView1)
-            registerForPreviewingWithDelegate(self, sourceView: collectionView2)
+            //registerForPreviewingWithDelegate(self, sourceView: collectionView2)
 
         }
     }
@@ -339,6 +338,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection1Selected[indexPath.row]
             cell.gifs = self.gifs[indexPath.item]
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
             cell.selectButton.selected = collection1Selected[indexPath.row]
             return cell
         } else if collectionView == collectionView2{
@@ -347,6 +348,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection2Selected[indexPath.row]
             cell.gifs2 = self.gifs2[indexPath.item]
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
             cell.selectButton.selected = collection2Selected[indexPath.row]
             return cell
         } else if collectionView == collectionView3{
@@ -355,6 +358,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection3Selected[indexPath.row]
             cell.gifs3 = self.gifs3[indexPath.item]
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
             cell.selectButton.selected = collection3Selected[indexPath.row]
             return cell
         } else if collectionView == collectionView4{
@@ -363,6 +368,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection4Selected[indexPath.row]
             cell.gifs4 = self.gifs4[indexPath.item]
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
             cell.selectButton.selected = collection4Selected[indexPath.row]
             return cell
         } else if collectionView == collectionView5{
@@ -371,6 +378,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection5Selected[indexPath.row]
             cell.gifs5 = self.gifs5[indexPath.item]
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
             cell.selectButton.selected = collection5Selected[indexPath.row]
             return cell
         } else {
@@ -379,6 +388,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection6Selected[indexPath.row]
             cell.gifs6 = self.gifs6[indexPath.item]
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
             cell.selectButton.selected = collection6Selected[indexPath.row]
             return cell
         }

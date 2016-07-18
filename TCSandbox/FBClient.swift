@@ -169,14 +169,14 @@ class FBClient: AnyObject {
     // Asynchronously retrieves challenges for the current user from the backend and performs the completion block on the result as an array of Challenge objects
     class func retrieveChallenges(completion: ([Challenge]) -> Void) {
         dataRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            let challengeIDs = snapshot.value!["Users"]!![(User.currentUser?.FBID)!]!!["challenges"] as! [String]
-            var challenges: [Challenge] = []
-            for id in challengeIDs {
-                let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
-                let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: newChallengeDictionary["time_limit"] as! String, participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String)
-                challenges.append(newChallengeObject)
-            }
-            completion(challenges)
+            //let challengeIDs = snapshot.value!["Users"]!![(User.currentUser?.FBID)!]!!["challenges"] as! [String]
+//            var challenges: [Challenge] = []
+//            //for id in challengeIDs {
+//                let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
+//                let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: newChallengeDictionary["time_limit"] as! String, participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String)
+//                challenges.append(newChallengeObject)
+//            }
+//            completion(challenges)
         }, withCancelBlock: { error in print(error.description) })
     }
     

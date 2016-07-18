@@ -89,9 +89,9 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         if movesCount == 1 {
             
                         
-            gifSelectedImageView2.hidden = true
-            gifSelectedImageView4.hidden = true
-            gifSelectedImageView3.hidden = true
+//            gifSelectedImageView2.hidden = true
+//            gifSelectedImageView4.hidden = true
+//            gifSelectedImageView3.hidden = true
             
         }
         

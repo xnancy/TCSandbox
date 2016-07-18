@@ -38,12 +38,12 @@
 		92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */; };
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
 		92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92D985E31D2F0DC9008BF657 /* pushup.gif */; };
-		B81A45401D3C209600D20C65 /* pullups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A453E1D3C209600D20C65 /* pullups.gif */; };
-		B81A45411D3C209600D20C65 /* pushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A453F1D3C209600D20C65 /* pushups.gif */; };
 		B81A45431D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45421D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift */; };
 		B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */; };
-		B8341A061D3C0FEC00154CC7 /* jump rope.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8341A051D3C0FEC00154CC7 /* jump rope.gif */; };
-		B8341A0E1D3C16CE00154CC7 /* hipairplane.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8341A0D1D3C16CE00154CC7 /* hipairplane.gif */; };
+		B81A457B1D3D45DF00D20C65 /* hipairplane.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A45781D3D45DF00D20C65 /* hipairplane.gif */; };
+		B81A457C1D3D45DF00D20C65 /* jump rope.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A45791D3D45DF00D20C65 /* jump rope.gif */; };
+		B81A457D1D3D45DF00D20C65 /* pullups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A457A1D3D45DF00D20C65 /* pullups.gif */; };
+		B81A457F1D3D45E800D20C65 /* pushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A457E1D3D45E800D20C65 /* pushups.gif */; };
 		B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70A1D3B183D000D3499 /* PreviewViewController.swift */; };
 		B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
@@ -113,12 +113,12 @@
 		92A924AF1D3057B900637263 /* MoveScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollViewController.swift; sourceTree = "<group>"; };
 		92D985E31D2F0DC9008BF657 /* pushup.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushup.gif; path = TCSandbox/pushup.gif; sourceTree = "<group>"; };
 		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B81A453E1D3C209600D20C65 /* pullups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pullups.gif; path = "../../Documents/TCSandbox Gifs/pullups.gif"; sourceTree = "<group>"; };
-		B81A453F1D3C209600D20C65 /* pushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushups.gif; path = "../../Documents/TCSandbox Gifs/pushups.gif"; sourceTree = "<group>"; };
 		B81A45421D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorExtensionViewController.swift; sourceTree = "<group>"; };
 		B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview2ViewController.swift; sourceTree = "<group>"; };
-		B8341A051D3C0FEC00154CC7 /* jump rope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "jump rope.gif"; path = "../../Documents/TCSandbox Gifs/Cardio/jump rope.gif"; sourceTree = "<group>"; };
-		B8341A0D1D3C16CE00154CC7 /* hipairplane.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hipairplane.gif; path = "../../Documents/TCSandbox Gifs/hipairplane.gif"; sourceTree = "<group>"; };
+		B81A45781D3D45DF00D20C65 /* hipairplane.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hipairplane.gif; path = TCSandbox/hipairplane.gif; sourceTree = "<group>"; };
+		B81A45791D3D45DF00D20C65 /* jump rope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "jump rope.gif"; path = "TCSandbox/jump rope.gif"; sourceTree = "<group>"; };
+		B81A457A1D3D45DF00D20C65 /* pullups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pullups.gif; path = TCSandbox/pullups.gif; sourceTree = "<group>"; };
+		B81A457E1D3D45E800D20C65 /* pushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushups.gif; path = TCSandbox/pushups.gif; sourceTree = "<group>"; };
 		B864E70A1D3B183D000D3499 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollExtensionViewController.swift; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,11 +288,11 @@
 		B84012CA1D39BEB200D99A59 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
-				B8341A051D3C0FEC00154CC7 /* jump rope.gif */,
-				B81A453E1D3C209600D20C65 /* pullups.gif */,
-				B81A453F1D3C209600D20C65 /* pushups.gif */,
-				B8341A0D1D3C16CE00154CC7 /* hipairplane.gif */,
 				92D985E31D2F0DC9008BF657 /* pushup.gif */,
+				B81A45781D3D45DF00D20C65 /* hipairplane.gif */,
+				B81A457E1D3D45E800D20C65 /* pushups.gif */,
+				B81A45791D3D45DF00D20C65 /* jump rope.gif */,
+				B81A457A1D3D45DF00D20C65 /* pullups.gif */,
 			);
 			name = Gifs;
 			sourceTree = "<group>";
@@ -423,16 +423,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8341A0E1D3C16CE00154CC7 /* hipairplane.gif in Resources */,
 				925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */,
-				B8341A061D3C0FEC00154CC7 /* jump rope.gif in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
-				B81A45401D3C209600D20C65 /* pullups.gif in Resources */,
+				B81A457B1D3D45DF00D20C65 /* hipairplane.gif in Resources */,
+				B81A457C1D3D45DF00D20C65 /* jump rope.gif in Resources */,
+				B81A457D1D3D45DF00D20C65 /* pullups.gif in Resources */,
 				925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */,
 				920A08F11D38584300A3785A /* Main.storyboard in Resources */,
 				925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */,
 				92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */,
-				B81A45411D3C209600D20C65 /* pushups.gif in Resources */,
+				B81A457F1D3D45E800D20C65 /* pushups.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

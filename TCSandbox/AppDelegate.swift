@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
             succeeded = true
             
-        }
+        } else
 
         if( shortcutItem.type == "com.tcsandbox.newchallenge" ) {
             
@@ -106,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
             succeeded = true
             
-        }
+        } else
 
         if let tabVC = self.window?.rootViewController as? UITabBarController {
             

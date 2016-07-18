@@ -26,7 +26,7 @@ class PreviewViewController: UIViewController {
         
         
         let item1 = UIPreviewAction(title: "5x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
-           
+           self.delegate?.incrementPeekAndPopCount()
             
         }
         
