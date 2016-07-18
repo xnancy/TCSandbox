@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import MediaPlayer
 import MobileCoreServices
 import Firebase
 import FBSDKCoreKit
@@ -56,27 +58,27 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
         //upload video to our database and associate it with the correct challenge
         if let pickedVideo = pickedVideo
         {
-            let userVideoRef = FBClient.storageRef.child(FBSDKAccessToken.currentAccessToken().userID)
-            let videoRef = userVideoRef.child((challenge?.challengeID)!)
-            
-            let uploadTask = videoRef.putFile(pickedVideo, metadata: nil) { metadata, error in
-                if (error != nil) {
-                    // Uh-oh, an error occurred!
-                } else {
-                    // Metadata contains file metadata such as size, content-type, and download URL.
-                    let downloadURL = metadata!.downloadURL
-                    //stream the video from the download URL on the screen?
-                }
-            }
+            FBClient.uploadVideo(pickedVideo, challenge: self.challenge!)
             
             performSegueWithIdentifier("sendChallenge", sender: self)
         }
-        
-        
     }
     
     @IBAction func backButtonAction(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    @IBAction func playVideo(sender: AnyObject) {
+        
+        let url = FBClient.downloadVideo(challenge!.challengeID!, userID: FBSDKAccessToken.currentAccessToken().userID)
+        
+        let player = AVPlayer(URL: url)
+        let movie = AVPlayerViewController()
+        movie.player = player
+        
+        self.view.addSubview(movie.view)
+        player.play()
     }
     
     // MARK: - Navigation

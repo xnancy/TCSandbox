@@ -277,12 +277,6 @@ class FBClient: AnyObject {
         return tempUser!
     }
     
-    class func uploadVideo(videoURL: NSURL, challengeKey: String)
-    {
-        //upload video to vimeo
-        //update challenge video urls with this stream url
-        
-    }
     
     /* ---------- FRIEND CELL GENERATION ---------- */
     class func generateFriendCell(friendID: String, cell: FriendsSendChallengeTableViewCell) {
@@ -321,5 +315,43 @@ class FBClient: AnyObject {
             }
             delegate.reloadFriendTable()
         })
+    }
+    
+    class func uploadVideo(pickedVideo: NSURL, challenge: Challenge)
+    {
+        
+        let userVideoRef = FBClient.storageRef.child(FBSDKAccessToken.currentAccessToken().userID)
+        let videoRef = userVideoRef.child((challenge.challengeID)!)
+        
+        let uploadTask = videoRef.putFile(pickedVideo, metadata: nil) { metadata, error in
+            if (error != nil) {
+                // Uh-oh, an error occurred!
+            } else {
+                // Metadata contains file metadata such as size, content-type, and download URL.
+                let downloadURL = metadata!.downloadURL()
+                let downloadURLString = downloadURL?.absoluteString
+
+                //save the string to the array in challenges
+                //stream the video from the download URL on the screen
+            }
+        }
+    }
+    
+    class func downloadVideo(challengeID: String, userID: String) -> NSURL
+    {
+        let videoRef = storageRef.child(userID).child(challengeID)
+        var url = NSURL()
+        
+        videoRef.downloadURLWithCompletion { (URL, error) -> Void in
+            if (error != nil) {
+                // Handle any errors
+            } else {
+                // return the url
+                
+                url = URL!
+            }
+        }
+        
+        return url
     }
 }

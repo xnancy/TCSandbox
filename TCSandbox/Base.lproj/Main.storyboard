@@ -885,6 +885,13 @@
                                     <action selector="backButtonAction:" destination="Nqy-hQ-xqb" eventType="touchUpInside" id="7mN-Eo-MNQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X6-Ae-57g">
+                                <rect key="frame" x="173" y="611" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="Nqy-hQ-xqb" eventType="touchUpInside" id="4VB-zq-fG8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
