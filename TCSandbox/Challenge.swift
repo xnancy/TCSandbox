@@ -18,6 +18,7 @@ class Challenge: AnyObject
     var deadline: NSDate?
     var timeLimit: Int?
     var senderID: String?
+    var challengeTitle: String?
     
     // Complete initializer for FB retrieval
     init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, deadline: String, senderID: String) {

@@ -194,7 +194,8 @@ class FBClient: AnyObject {
             tagNames = ["placeholders"]
             
         }
-        let challengeName = challenge.name
+        
+        let challengeName = challenge.challengeTitle
         
         for userID in participants!
         {

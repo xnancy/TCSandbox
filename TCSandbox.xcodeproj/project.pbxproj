@@ -774,11 +774,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-<<<<<<< d8b5018c2060257f6db9ecb6a693cba6d8d9b09a
-				PRODUCT_BUNDLE_IDENTIFIER = "a-klsdjfpoiqwjeflkasjdf-j";
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = TCSandbox;
->>>>>>> Working my challenges page, segue to details page
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

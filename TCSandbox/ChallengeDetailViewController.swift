@@ -25,7 +25,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var challengeTitleLabel: UILabel!
     @IBOutlet weak var deadlineLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
-    
     @IBOutlet weak var detailsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -40,7 +39,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         self.tabBarController?.tabBar.hidden = true
         
-        challengeTitleLabel.text = challenge?.name
+        challengeTitleLabel.text = challenge?.challengeTitle
         deadlineLabel.text = FBClient.dateFormatter.stringFromDate(challenge!.deadline!)
         //let sender = FBClient.getUser((challenge?.senderID)!)
         //let profileURL = NSURL(string: sender.profileImageURLString!)
