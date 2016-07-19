@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVKit
+import MediaPlayer
+import MobileCoreServices
 import SnappingStepper
 import DGRunkeeperSwitch
 import SwiftyGif
@@ -15,7 +18,7 @@ import FBSDKLoginKit
 
 
 
-class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
+class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     /* ---------- OUTLETS ---------- */
     
@@ -68,6 +71,11 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     var challenge: Challenge?
     var fm: CGRect = UIScreen.mainScreen().bounds
     //var peekAndPopCount: Int!
+    
+    var pickedVideo: NSURL?
+    
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
+
     
     
     
@@ -187,6 +195,14 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         return futureDate!
     }
 
+    @IBAction func didPressRecord(sender: AnyObject) {
+        imagePicker.sourceType = .Camera
+        imagePicker.mediaTypes = [kUTTypeMovie as String]
+        imagePicker.allowsEditing = false
+        imagePicker.delegate = self
+        
+        presentViewController(imagePicker, animated: true, completion: {})
+    }
    
    
     @IBAction func backButton(sender: AnyObject) {
@@ -279,7 +295,23 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
         challenge?.cTagNames = cTags
         let vc = segue.destinationViewController as! recordVideoViewController
         vc.challenge = challenge
+        vc.pickedVideo = pickedVideo
 
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        print("video recorded")
+        
+        if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
+        {
+            self.pickedVideo = pickedVideo
+            print(pickedVideo)
+        }
+        
+        imagePicker.dismissViewControllerAnimated(true) {
+            self.performSegueWithIdentifier("uploadSegue", sender: self)
+        }
     }
     
     

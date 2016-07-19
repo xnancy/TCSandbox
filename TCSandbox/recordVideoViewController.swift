@@ -14,9 +14,8 @@ import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class recordVideoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class recordVideoViewController: UIViewController {
     
-    let imagePicker: UIImagePickerController! = UIImagePickerController()
     var pickedVideo: NSURL?
     var challenge: Challenge?
     
@@ -30,29 +29,6 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onRecordVideo(sender: AnyObject) {
-        imagePicker.sourceType = .Camera
-        imagePicker.mediaTypes = [kUTTypeMovie as String]
-        imagePicker.allowsEditing = false
-        imagePicker.delegate = self
-        
-        presentViewController(imagePicker, animated: true, completion: {})
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        print("video recorded")
-        
-        if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
-        {
-            self.pickedVideo = pickedVideo
-            print(pickedVideo)
-        }
-        
-        imagePicker.dismissViewControllerAnimated(true) { 
-            
-        }
-    }
     
     @IBAction func onUploadVideo(sender: AnyObject) {
         //upload video to our database and associate it with the correct challenge

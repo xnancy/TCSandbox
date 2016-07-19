@@ -1017,13 +1017,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-sc-Wu9">
-                                <rect key="frame" x="163" y="125" width="49" height="30"/>
-                                <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="onRecordVideo:" destination="Nqy-hQ-xqb" eventType="touchUpInside" id="Ub5-Qs-pJv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-z6-742">
                                 <rect key="frame" x="163" y="479" width="50" height="30"/>
                                 <state key="normal" title="Upload"/>
@@ -1245,7 +1238,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Nqy-hQ-xqb" kind="presentation" modalTransitionStyle="crossDissolve" id="btn-00-zyK"/>
+                                    <action selector="didPressRecord:" destination="cIN-lL-ItH" eventType="touchUpInside" id="4pE-b3-PCp"/>
+                                    <segue destination="Nqy-hQ-xqb" kind="presentation" identifier="uploadSegue" modalTransitionStyle="crossDissolve" id="btn-00-zyK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1yA-Q2-9ek">
