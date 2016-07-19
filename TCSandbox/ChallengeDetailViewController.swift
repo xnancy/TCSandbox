@@ -17,6 +17,7 @@ import MobileCoreServices
 class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var challenge: Challenge?
+    var didRespond: Bool?
     var pickedVideo: NSURL?
 
     var user: User?
@@ -52,10 +53,13 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             
             self.view.addSubview(movie.view)
             player.play()
-        })
+  
+            })
 
         // Do any additional setup after loading the view.
 
+        
+        //CHECK HERE IF WE RESPONDED ALREADY
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,7 +69,12 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return (challenge?.gifNames?.count)! + (challenge?.tagNames?.count)!
+        if (challenge?.tagNames![0] != "placeholder") //gif will always have something, so not necessary to check this for gifs as well
+        {
+            return (challenge?.gifNames?.count)! + (challenge?.tagNames?.count)!
+        }
+        
+        return (challenge?.gifNames?.count)!
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -90,12 +99,20 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     
 
     @IBAction func didPressRespond(sender: AnyObject) {
-        imagePicker.sourceType = .Camera
-        imagePicker.mediaTypes = [kUTTypeMovie as String]
-        imagePicker.allowsEditing = false
-        imagePicker.delegate = self
-        
-        presentViewController(imagePicker, animated: true, completion: {})
+        if didRespond!
+        {
+            
+        }
+            
+            else
+        {
+            imagePicker.sourceType = .Camera
+            imagePicker.mediaTypes = [kUTTypeMovie as String]
+            imagePicker.allowsEditing = false
+            imagePicker.delegate = self
+            
+            presentViewController(imagePicker, animated: true, completion: {})
+        }
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {

@@ -228,7 +228,7 @@ class FBClient: AnyObject {
 
         
         if tagNames! == [] {
-            tagNames = ["placeholders"]
+            tagNames = ["placeholder"]
             
         }
         
