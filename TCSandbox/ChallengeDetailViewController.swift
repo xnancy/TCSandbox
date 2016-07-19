@@ -30,8 +30,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.challenge = Challenge(name: "Difficult Life", workout_gifs: ["hipairplane", "wallsit", "boxing"], add_on_images: ["fullplank"], time_limit: "\(60)", participants: ["1110800598991913", "1434597436565814"], challengeID: "-KN-7baRhQ0SP5VtsAX0", deadline: "2016-07-19T15:31:25-07:00", senderID: "1110800598991913")
-        
         detailsTableView.delegate = self
         detailsTableView.dataSource = self
         
@@ -45,19 +43,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         //let profileURL = NSURL(string: sender.profileImageURLString!)
         //profileImageView.setImageWithURL(profileURL!)
         
-        /*FBClient.downloadVideo((challenge?.challengeID)!, userID: (challenge?.senderID)!, completion: {(URL: NSURL) in
+        FBClient.downloadVideo((challenge?.challengeID)!, userID: (challenge?.senderID)!, completion: {(URL: NSURL) in
             
-            let player = AVPlayer(URL: URL)
-            let movie = AVPlayerViewController()
-            movie.player = player
-            movie.view.frame = self.videoView.bounds
-            
-            self.view.addSubview(movie.view)
-            player.play()
-        })*/
-        
-        
-        FBClient.downloadVideo("-KMzn_yTnHixHGrU-Tjl", userID: "1110800598991913", completion: {(URL: NSURL) in
             let player = AVPlayer(URL: URL)
             let movie = AVPlayerViewController()
             movie.player = player
@@ -66,6 +53,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             self.view.addSubview(movie.view)
             player.play()
         })
+
         // Do any additional setup after loading the view.
     }
 
