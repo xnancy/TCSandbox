@@ -39,6 +39,7 @@
 		92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */; };
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
 		92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92D985E31D2F0DC9008BF657 /* pushup.gif */; };
+		92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */; };
 		B81A45431D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45421D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift */; };
 		B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */; };
 		B81A457B1D3D45DF00D20C65 /* hipairplane.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A45781D3D45DF00D20C65 /* hipairplane.gif */; };
@@ -115,6 +116,7 @@
 		92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92A924AF1D3057B900637263 /* MoveScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollViewController.swift; sourceTree = "<group>"; };
 		92D985E31D2F0DC9008BF657 /* pushup.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushup.gif; path = TCSandbox/pushup.gif; sourceTree = "<group>"; };
+		92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81A45421D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorExtensionViewController.swift; sourceTree = "<group>"; };
 		B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview2ViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		925D8E571D2D79C1000F44F7 /* TCSandbox */ = {
 			isa = PBXGroup;
 			children = (
+				92FDDD3D1D3D9D520049AD36 /* Extensions */,
 				929A02AA1D2ECC8000FC1E96 /* Helper Classes */,
 				9214309E1D2DCAF000F6B59F /* API Clients */,
 				925D8E8B1D2DA8F0000F44F7 /* Data Objects */,
@@ -289,6 +292,14 @@
 				92A924AB1D30572400637263 /* Gifs.swift */,
 			);
 			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		92FDDD3D1D3D9D520049AD36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		B84012CA1D39BEB200D99A59 /* Gifs */ = {
@@ -392,7 +403,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = D8M8Q37C6Y;
+						DevelopmentTeam = D777QB9ALE;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -598,6 +609,7 @@
 				B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */,
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
+				92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */,
 				B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */,
 				929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */,
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
@@ -762,7 +774,11 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< d8b5018c2060257f6db9ecb6a693cba6d8d9b09a
 				PRODUCT_BUNDLE_IDENTIFIER = "a-klsdjfpoiqwjeflkasjdf-j";
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = TCSandbox;
+>>>>>>> Working my challenges page, segue to details page
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -781,7 +797,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "a-klsdjfpoiqwjeflkasjdf-j";
+				PRODUCT_BUNDLE_IDENTIFIER = TCSandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

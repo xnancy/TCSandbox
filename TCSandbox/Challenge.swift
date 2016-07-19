@@ -10,7 +10,6 @@ import Foundation
 
 class Challenge: AnyObject
 {
-    var name: String?
     var challengeID: String?
     var participants: [String]? = []
     var gifNames: [String]? = []
@@ -22,7 +21,7 @@ class Challenge: AnyObject
     
     // Complete initializer for FB retrieval
     init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, deadline: String, senderID: String) {
-        self.name = name
+        self.challengeTitle = name
         self.gifNames = workout_gifs
         self.tagNames = add_on_images
         self.timeLimit = Int(time_limit)

@@ -14,7 +14,6 @@ import FirebaseDatabase
 import Firebase
 
 class FBClient: AnyObject {
-
     static let dataRef = FIRDatabase.database().reference()
     static let dateFormatter = NSDateFormatter()
     static let navigationController = UINavigationController()
@@ -22,8 +21,6 @@ class FBClient: AnyObject {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
     }
     static let storageRef = FIRStorage.storage().reference()
-    
-    
     
     class func login()
     {
@@ -171,15 +168,11 @@ class FBClient: AnyObject {
         dataRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             let challengeIDs = snapshot.value!["Users"]!![(User.currentUser?.FBID)!]!!["challenges"] as! [String]
             var challenges: [Challenge] = []
-            print("reached a")
             for i in 1...challengeIDs.count - 1 {
                 let id = challengeIDs[i]
-                print("reached b")
                 let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
-                print("reached c")
                 print("\(newChallengeDictionary)")
                 let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: String(newChallengeDictionary["time_limit"]), participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String)
-                print("reached d")
                 challenges.append(newChallengeObject)
             }
             completion(challenges)
@@ -311,6 +304,31 @@ class FBClient: AnyObject {
             cell.profileImageView.setImageWithURL(url!)
             cell.nameTextLabel.text = dict["name"] as! String
             cell.challengesCompletedLabel.text = "Completed: \(dict["challenges_completed"] as! NSNumber)"
+        })
+    }
+    
+    /* ---------- CHALLENGE CELL GENERATION ---------- */
+    class func generateChallengeCell(challenge: Challenge, cell: myChallengeTableViewCell) {
+        dataRef.childByAppendingPath("Users").childByAppendingPath(challenge.senderID!).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            let dict = snapshot.value as! NSDictionary
+            let userName = dict["name"] as! String
+            let userProfileURL = NSURL(string: dict["profile_picture_url"] as! String)
+            cell.challengeNameLabel.text = challenge.challengeTitle
+            print(challenge.challengeTitle)
+            cell.profileImageView.setImageWithURL(userProfileURL!)
+            cell.senderNameLabel.text = userName
+            // Calculating timestamp for challenge
+            let minutesToDeadline = challenge.deadline?.minutes(from: NSDate())
+            let hoursToDeadline = challenge.deadline?.hours(from: NSDate())
+            let daysToDeadline = challenge.deadline?.days(from: NSDate())
+            if (minutesToDeadline < 60) {
+                cell.timeLimitLabel.text = String(minutesToDeadline!) + " mins"
+            } else if (hoursToDeadline < 24) {
+                cell.timeLimitLabel.text = String(hoursToDeadline!) + " hrs"
+            } else {
+                cell.timeLimitLabel.text = String(daysToDeadline!) + " days"
+                print(cell.timeLimitLabel.text)
+            }
         })
     }
     

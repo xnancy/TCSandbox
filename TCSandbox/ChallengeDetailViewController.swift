@@ -26,10 +26,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var deadlineLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
     
-    
     @IBOutlet weak var detailsTableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +39,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         //create self.challenge from challengeID
         
         self.tabBarController?.tabBar.hidden = true
-        
         
         challengeTitleLabel.text = challenge?.name
         deadlineLabel.text = FBClient.dateFormatter.stringFromDate(challenge!.deadline!)
@@ -62,7 +59,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         
         FBClient.downloadVideo("-KMzn_yTnHixHGrU-Tjl", userID: "1110800598991913", completion: {(URL: NSURL) in
-            
             let player = AVPlayer(URL: URL)
             let movie = AVPlayerViewController()
             movie.player = player

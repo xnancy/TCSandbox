@@ -102,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="95" width="375" height="588"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myChallengeCell" rowHeight="96" id="kev-WR-wmo" customClass="myChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myChallengesCell" rowHeight="96" id="kev-WR-wmo" customClass="myChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kev-WR-wmo" id="BwG-VY-YZe">
@@ -115,24 +115,12 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWD-dL-HpY">
-                                                    <rect key="frame" x="16" y="8" width="43" height="40"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mq3-qs-eQt">
-                                                    <rect key="frame" x="59" y="48" width="43" height="40"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u08-n5-JQ8">
-                                                    <rect key="frame" x="59" y="8" width="43" height="40"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sender Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di7-eP-2zL">
                                                     <rect key="frame" x="110" y="17" width="154" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2c-lc-REa">
-                                                    <rect key="frame" x="16" y="48" width="43" height="40"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sent you a challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFp-Ct-Ydq">
                                                     <rect key="frame" x="110" y="33" width="157" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -150,17 +138,17 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-UE-pHn">
+                                                    <rect key="frame" x="8" y="11" width="80" height="76.5"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="challengeNameLabel" destination="Awz-0o-TvN" id="tk8-qF-mq4"/>
-                                            <outlet property="imageView1" destination="mWD-dL-HpY" id="guZ-hB-Ove"/>
-                                            <outlet property="imageView2" destination="u08-n5-JQ8" id="GFy-rY-Dxl"/>
-                                            <outlet property="imageView3" destination="d2c-lc-REa" id="hZU-Ta-g7B"/>
-                                            <outlet property="imageView4" destination="Mq3-qs-eQt" id="Teg-6O-uu6"/>
+                                            <outlet property="profileImageView" destination="N7d-UE-pHn" id="XMe-XJ-bOY"/>
                                             <outlet property="senderNameLabel" destination="di7-eP-2zL" id="KX1-Gq-bWv"/>
                                             <outlet property="timeLimitLabel" destination="TYT-BG-Xxi" id="PHN-m1-wS6"/>
-                                            <segue destination="G8O-Y5-uPl" kind="push" id="0ST-fJ-yc5"/>
+                                            <segue destination="G8O-Y5-uPl" kind="push" identifier="toChallengeDetailPage" id="0ST-fJ-yc5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -170,10 +158,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Challenges" id="LF7-x1-oYd">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="afk-mx-BDe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jgz-9I-ma5">
-                                <rect key="frame" x="288" y="7" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="jgz-9I-ma5">
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="UBq-1y-4rr" kind="presentation" id="Wza-Bh-0jJ"/>
                                 </connections>

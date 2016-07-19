@@ -21,22 +21,22 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         updateChallengeInfo()
-        print("View did load RUN")
     }
 
     func updateChallengeInfo() {
-        
         currentChallenges = []
         pastChallenges = []
-        var allChallenges: [Challenge]?
+        var allChallenges: [Challenge]? = []
         let currentDate = NSDate()
         
         FBClient.retrieveChallenges { (challenges: [Challenge]) in
-            print("RETRIEVING")
             // Get [Challenge] of user challenges
             for challenge in challenges {
                 allChallenges?.append(challenge)
@@ -49,10 +49,8 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
                     self.currentChallenges?.append(challenge)
                 }
             }
-            print("number of challenges: \(self.currentChallenges?.count), \(self.pastChallenges?.count)")
             self.myChallengesTableView.reloadData()
         }
-        print("UPDATE CHALLENGES RUN DONE")
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,17 +73,29 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("myChallengesCell") as? myChallengeTableViewCell
         if (challengesSegmentedControl.selectedSegmentIndex == 1) {
-            cell?.senderNameLabel.text = pastChallenges![indexPath.row].senderID
-            cell?.challengeNameLabel.text = pastChallenges![indexPath.row].name
-            cell?.timeLimitLabel.text = String(pastChallenges![indexPath.row].timeLimit)
+            cell?.challenge = pastChallenges![indexPath.row]
+            FBClient.generateChallengeCell(pastChallenges![indexPath.row], cell: cell!)
+        } else {
+            cell?.challenge = currentChallenges![indexPath.row]
+            FBClient.generateChallengeCell(currentChallenges![indexPath.row], cell: cell!)
         }
         return cell!
     }
 
+    /*  ---------- SEGUES ---------- */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("reached 0")
+        if (segue.identifier == "toChallengeDetailPage") {
+            print("reached 00")
+            let vc = segue.destinationViewController as! ChallengeDetailViewController
+            print("reached 000")
+            vc.challenge = (sender as! myChallengeTableViewCell).challenge
+            print("reached 0000")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
