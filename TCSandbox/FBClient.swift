@@ -200,12 +200,14 @@ class FBClient: AnyObject {
         dataRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             let challengeIDs = snapshot.value!["Users"]!![(User.currentUser?.FBID)!]!!["challenges"] as! [String]
             var challenges: [Challenge] = []
-            for i in 1...challengeIDs.count - 1 {
-                let id = challengeIDs[i]
-                let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
-                print("\(newChallengeDictionary)")
-                let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: String(newChallengeDictionary["time_limit"]), participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String)
-                challenges.append(newChallengeObject)
+            if challengeIDs.count > 1 {
+                for i in 1...challengeIDs.count - 1 {
+                    let id = challengeIDs[i]
+                    let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
+                    print("\(newChallengeDictionary)")
+                    let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: String(newChallengeDictionary["time_limit"]), participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String)
+                    challenges.append(newChallengeObject)
+                }
             }
             completion(challenges)
         }, withCancelBlock: { error in print(error.description) })
@@ -230,8 +232,7 @@ class FBClient: AnyObject {
             
         }
         
-        let challengeName = challenge.challengeTitle
-        
+
         for userID in participants!
         {
             
@@ -350,8 +351,8 @@ class FBClient: AnyObject {
             let dict = snapshot.value as! NSDictionary
             let userName = dict["name"] as! String
             let userProfileURL = NSURL(string: dict["profile_picture_url"] as! String)
-            cell.challengeNameLabel.text = challenge.challengeTitle
-            print(challenge.challengeTitle)
+            cell.challengeNameLabel.text = challenge.name
+            print(challenge.name)
             cell.profileImageView.setImageWithURL(userProfileURL!)
             cell.senderNameLabel.text = userName
             // Calculating timestamp for challenge

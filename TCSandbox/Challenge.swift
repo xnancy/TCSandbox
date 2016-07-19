@@ -18,7 +18,7 @@ class Challenge: AnyObject
     var deadline: NSDate?
     var timeLimit: Int?
     var senderID: String?
-    var challengeTitle: String?
+    var name: String?
     
     // Complete initializer for FB retrieval
     init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, comp_tags: [String], deadline: String, senderID: String) {
@@ -106,4 +106,4 @@ class Challenge: AnyObject
 
     }
 
-}
+

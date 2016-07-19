@@ -37,7 +37,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         self.tabBarController?.tabBar.hidden = true
         
-        challengeTitleLabel.text = challenge?.challengeTitle
+        challengeTitleLabel.text = challenge?.name
         deadlineLabel.text = FBClient.dateFormatter.stringFromDate(challenge!.deadline!)
         //let sender = FBClient.getUser((challenge?.senderID)!)
         //let profileURL = NSURL(string: sender.profileImageURLString!)

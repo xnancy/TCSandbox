@@ -256,7 +256,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
             recordButton.enabled = true
         }
         
-        challenge?.challengeTitle = challengeName
+        challenge?.name = challengeName
 
     }
     @IBAction func countdownValueChanged(sender: AnyObject) {
