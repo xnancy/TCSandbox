@@ -358,6 +358,7 @@ class FBClient: AnyObject {
         videoRef.downloadURLWithCompletion { (URL, error) -> Void in
             if (error != nil) {
                 // Handle any errors
+                print(error?.localizedDescription)
             } else {
                 completion(URL!)
             }

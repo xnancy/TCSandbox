@@ -11,6 +11,7 @@
 		825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */; };
 		82BB15931D3D84FD0005B22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15921D3D84FD0005B22D /* ViewController.swift */; };
 		82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */; };
+		82BB15991D3DD9FE0005B22D /* respondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15981D3DD9FE0005B22D /* respondViewController.swift */; };
 		82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6653A1D2DBF9000D642CA /* LoginViewController.swift */; };
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
@@ -80,6 +81,7 @@
 		825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		82BB15921D3D84FD0005B22D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailsTableViewCell.swift; sourceTree = "<group>"; };
+		82BB15981D3DD9FE0005B22D /* respondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = respondViewController.swift; sourceTree = "<group>"; };
 		82C6653A1D2DBF9000D642CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */,
 				82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */,
 				825C30161D383A05005D7171 /* myChallengesViewController.swift */,
+				82BB15981D3DD9FE0005B22D /* respondViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -389,7 +392,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6ZD82QXX95;
+						DevelopmentTeam = D8M8Q37C6Y;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -591,6 +594,7 @@
 				82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */,
 				82BB15931D3D84FD0005B22D /* ViewController.swift in Sources */,
 				925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */,
+				82BB15991D3DD9FE0005B22D /* respondViewController.swift in Sources */,
 				B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */,
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
@@ -758,7 +762,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TCSandboxx;
+				PRODUCT_BUNDLE_IDENTIFIER = "a-klsdjfpoiqwjeflkasjdf-j";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -777,7 +781,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TCSandboxx;
+				PRODUCT_BUNDLE_IDENTIFIER = "a-klsdjfpoiqwjeflkasjdf-j";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
