@@ -32,7 +32,7 @@ class recordVideoViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func onRecordVideo(sender: AnyObject) {
         imagePicker.sourceType = .Camera
-        imagePicker.mediaTypes = [kUTTypeMovie as String] //check this at runtime
+        imagePicker.mediaTypes = [kUTTypeMovie as String]
         imagePicker.allowsEditing = false
         imagePicker.delegate = self
         

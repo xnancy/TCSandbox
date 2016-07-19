@@ -19,7 +19,11 @@ class respondViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         imagePicker.sourceType = .Camera
         imagePicker.mediaTypes = [kUTTypeMovie as String]
         imagePicker.allowsEditing = false
@@ -27,8 +31,6 @@ class respondViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         presentViewController(imagePicker, animated: true, completion: {})
 
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
