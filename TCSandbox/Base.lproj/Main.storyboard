@@ -261,7 +261,7 @@
                                 <rect key="frame" x="0.0" y="564.5" width="375" height="48.5"/>
                                 <state key="normal" title="Respond!"/>
                                 <connections>
-                                    <segue destination="eQi-sG-n3W" kind="presentation" identifier="respondSegue" id="38c-Z7-pWe"/>
+                                    <action selector="didPressRespond:" destination="G8O-Y5-uPl" eventType="touchUpInside" id="U1h-fB-PzT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -274,11 +274,12 @@
                         <outlet property="detailsTableView" destination="oZL-hn-mfx" id="fSi-hB-CVW"/>
                         <outlet property="profileImageView" destination="lkt-bI-mm7" id="ToQ-wT-7UC"/>
                         <outlet property="videoView" destination="Hzo-ob-LyM" id="j1K-hd-gug"/>
+                        <segue destination="eQi-sG-n3W" kind="presentation" identifier="responseSegue" id="pp0-J3-lkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Las-Fk-5bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982.5" y="2704.5"/>
+            <point key="canvasLocation" x="1042.5" y="2704.5"/>
         </scene>
         <!--Respond View Controller-->
         <scene sceneID="o5i-jU-NUd">
@@ -291,6 +292,15 @@
                     <view key="view" contentMode="scaleToFill" id="2lu-zG-Jtp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juy-jv-fe8">
+                                <rect key="frame" x="160" y="517" width="54" height="30"/>
+                                <state key="normal" title="Upload!"/>
+                                <connections>
+                                    <action selector="didPressUpload:" destination="eQi-sG-n3W" eventType="touchUpInside" id="7eH-ny-b7C"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

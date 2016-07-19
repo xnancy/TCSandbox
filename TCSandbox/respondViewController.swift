@@ -11,7 +11,7 @@ import AVKit
 import MediaPlayer
 import MobileCoreServices
 
-class respondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class respondViewController: UIViewController {
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     var pickedVideo: NSURL?
@@ -22,37 +22,19 @@ class respondViewController: UIViewController, UIImagePickerControllerDelegate, 
 
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        imagePicker.sourceType = .Camera
-        imagePicker.mediaTypes = [kUTTypeMovie as String]
-        imagePicker.allowsEditing = false
-        imagePicker.delegate = self
-        
-        presentViewController(imagePicker, animated: true, completion: {})
-
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    @IBAction func didPressUpload(sender: AnyObject) {
         
-        print("video recorded")
+        FBClient.uploadVideo(pickedVideo!, challenge: challenge!)
         
-        if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
-        {
-            self.pickedVideo = pickedVideo
-            print(pickedVideo)
-        }
-        
-        imagePicker.dismissViewControllerAnimated(true) {
-            
-        }
+        let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
+        self.presentViewController(homeViewController, animated: true, completion: nil)
     }
-    
 
     /*
     // MARK: - Navigation

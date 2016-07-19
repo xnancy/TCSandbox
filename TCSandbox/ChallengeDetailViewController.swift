@@ -12,10 +12,14 @@ import FBSDKLoginKit
 import Firebase
 import AVKit
 import MediaPlayer
+import MobileCoreServices
 
-class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var challenge: Challenge?
+    var pickedVideo: NSURL?
+    
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var challengeTitleLabel: UILabel!
@@ -101,14 +105,42 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     }
     
 
-    /*
+    @IBAction func didPressRespond(sender: AnyObject) {
+        imagePicker.sourceType = .Camera
+        imagePicker.mediaTypes = [kUTTypeMovie as String]
+        imagePicker.allowsEditing = false
+        imagePicker.delegate = self
+        
+        presentViewController(imagePicker, animated: true, completion: {})
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        print("video recorded")
+        
+        if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
+        {
+            self.pickedVideo = pickedVideo
+            print(pickedVideo)
+        }
+        
+        imagePicker.dismissViewControllerAnimated(true) {
+            self.performSegueWithIdentifier("responseSegue", sender: self)
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let vc = segue.destinationViewController as! respondViewController
+        
+        vc.challenge = challenge
+        vc.pickedVideo = pickedVideo
     }
-    */
+ 
 
 }
