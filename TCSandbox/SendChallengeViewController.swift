@@ -68,7 +68,9 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         //ADD CHALLENGE NAME
 
         FBClient.uploadChallenge(challenge!)
-        //CHANGE VIEW CONTROLLER
+        
+        let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
+        self.presentViewController(homeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onBackButton(sender: AnyObject) {
