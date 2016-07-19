@@ -52,6 +52,9 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var barLabel2: UILabel!
     @IBOutlet weak var barLabel3: UILabel!
     @IBOutlet weak var barLabel4: UILabel!
+    
+    
+    @IBOutlet weak var recordButton: UIButton!
   
     /* ---------- VARIABLES ---------- */
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
@@ -70,6 +73,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recordButton.enabled = false
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
@@ -231,6 +235,12 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     @IBAction func editingDidEnd(sender: AnyObject) {
 
         let challengeName = nameChallengeTextField.text
+        
+        if challengeName != ""
+        {
+            recordButton.enabled = true
+        }
+        
         challenge?.name = challengeName
     }
     @IBAction func countdownValueChanged(sender: AnyObject) {

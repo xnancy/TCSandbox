@@ -259,7 +259,6 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6V-pr-TqZ">
                                 <rect key="frame" x="0.0" y="564.5" width="375" height="48.5"/>
-                                <state key="normal" title="Respond!"/>
                                 <connections>
                                     <action selector="didPressRespond:" destination="G8O-Y5-uPl" eventType="touchUpInside" id="U1h-fB-PzT"/>
                                 </connections>
@@ -1399,6 +1398,7 @@
                         <outlet property="gifSelectedImageView3" destination="X3F-PZ-QmO" id="W9C-x2-3AT"/>
                         <outlet property="gifSelectedImageView4" destination="hsz-Gt-EB0" id="Rfd-cy-yUR"/>
                         <outlet property="nameChallengeTextField" destination="KlM-kY-lse" id="5xX-es-VKM"/>
+                        <outlet property="recordButton" destination="8wQ-Un-n7x" id="uCg-kB-Zcy"/>
                         <outlet property="secMinLabel" destination="TEV-8X-VCE" id="pKg-O1-aQX"/>
                         <outlet property="selectedMoveLabel1" destination="bNL-gb-hKb" id="BDj-JA-dcI"/>
                         <outlet property="selectedMoveLabel2" destination="bwG-Jx-x3S" id="CH8-bn-JXJ"/>
