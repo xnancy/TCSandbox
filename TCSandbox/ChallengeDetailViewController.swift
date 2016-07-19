@@ -13,10 +13,9 @@ import Firebase
 import AVKit
 import MediaPlayer
 
-class ChallengeDetailViewController: UIViewController {
+class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var challenge: Challenge?
-    
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var challengeTitleLabel: UILabel!
@@ -24,20 +23,41 @@ class ChallengeDetailViewController: UIViewController {
     @IBOutlet weak var videoView: UIView!
     
     
+    @IBOutlet weak var detailsTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.challenge = Challenge(name: "Difficult Life", workout_gifs: ["hipairplane", "wallsit", "boxing"], add_on_images: ["fullplank"], time_limit: "\(60)", participants: ["1110800598991913", "1434597436565814"], challengeID: "-KN-7baRhQ0SP5VtsAX0", deadline: "2016-07-19T15:31:25-07:00", senderID: "1110800598991913")
+        
+        detailsTableView.delegate = self
+        detailsTableView.dataSource = self
+        
+        //create self.challenge from challengeID
+        
         self.tabBarController?.tabBar.hidden = true
         
         
-        challengeTitleLabel.text = challenge?.challengeTitle
-        deadlineLabel.text = challenge?.dateToString()
-        let sender = FBClient.getUser((challenge?.senderID)!)
-        let profileURL = NSURL(string: sender.profileImageURLString!)
-        profileImageView.setImageWithURL(profileURL!)
+        challengeTitleLabel.text = challenge?.name
+        deadlineLabel.text = FBClient.dateFormatter.stringFromDate(challenge!.deadline!)
+        //let sender = FBClient.getUser((challenge?.senderID)!)
+        //let profileURL = NSURL(string: sender.profileImageURLString!)
+        //profileImageView.setImageWithURL(profileURL!)
         
-        FBClient.downloadVideo((challenge?.challengeID)!, userID: (challenge?.senderID)!, completion: {(URL: NSURL) in
+        /*FBClient.downloadVideo((challenge?.challengeID)!, userID: (challenge?.senderID)!, completion: {(URL: NSURL) in
+            
+            let player = AVPlayer(URL: URL)
+            let movie = AVPlayerViewController()
+            movie.player = player
+            movie.view.frame = self.videoView.bounds
+            
+            self.view.addSubview(movie.view)
+            player.play()
+        })*/
+        
+        
+        FBClient.downloadVideo("-KMzn_yTnHixHGrU-Tjl", userID: "1110800598991913", completion: {(URL: NSURL) in
             
             let player = AVPlayer(URL: URL)
             let movie = AVPlayerViewController()
@@ -53,6 +73,31 @@ class ChallengeDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return (challenge?.gifNames?.count)! + (challenge?.tagNames?.count)!
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        
+        let cell = detailsTableView.dequeueReusableCellWithIdentifier("detailCell") as! detailsTableViewCell
+        
+        if challenge?.gifNames!.count > indexPath.row
+        {
+            cell.exerciseLabel.text = Gifs.gifDictionary[(challenge?.gifNames![indexPath.row])!]
+        }
+        
+        else if challenge?.tagNames?.count > indexPath.row - (challenge?.gifNames?.count)!
+        {
+            cell.exerciseLabel.text = Tags.tagDictionary[(challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!]
+        }
+        
+        cell.indexLabel.text = "\(indexPath.row)"
+        
+        return cell
     }
     
 

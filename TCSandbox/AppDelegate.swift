@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     override init() {
         super.init()
+        FBClient.initializeDateFormatter()
         FIRApp.configure()
         // not really needed unless you really need it FIRDatabase.database().persistenceEnabled = true
     }

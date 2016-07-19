@@ -196,12 +196,12 @@ class FBClient: AnyObject {
         var tagNames = challenge.tagNames
         let timeLimit = challenge.timeLimit
         let compTags = challenge.cTagNames
-        let challengeTitle = challenge.challengeTitle
         
         if tagNames! == [] {
             tagNames = ["placeholders"]
             
         }
+        let challengeName = challenge.name
         
         for userID in participants!
         {
@@ -222,7 +222,8 @@ class FBClient: AnyObject {
                 
                 print(error.localizedDescription)
             }
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeTitle!, "senderID": senderID])
+
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!, "challengeID": challengeID!, "name": challengeName!, "senderID": senderID])
         }
     
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -271,30 +272,24 @@ class FBClient: AnyObject {
         })
     }
     
-    /*
-    // Sets user object using data retrieved from Firebase given userID
-    class func getUserFromID (userID: String, user: User) {
-       dataRef.childByAppendingPath("Users").childByAppendingPath(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-        let dict = snapshot.value as! NSDictionary
-            print (dict)
-            user.FBID = dict["FBID"] as! String
-            user.email = dict["email"] as! String
-            user.name = dict["name"] as! String
-            user.profileImageURLString = dict["profile_picture_url"] as! String
-            user.friends = dict["friends_list"] as! [String]
-            user.currentChallenges = dict["current_challenges"] as! [String]
-            user.pastChallenges = dict["past_challenges"] as! [String]
-            user.challengesCompleted = dict["challenges_completed"] as! Int  })
-    }*/
-    
     // Returns user from userID
-    class func getUser (userID: String) -> User{
+    /*class func getUser (userID: String) -> User{
         var tempUser: User?
         dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             tempUser = User(dict: snapshot as! NSDictionary)
         })
         return tempUser!
     }
+    
+    class func getChallenge(challengeID: String) -> Challenge
+    {
+        var tempChallenge: Challenge?
+        dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            tempChallenge = Challenge(dict: snapshot as! NSDictionary)
+        })
+        
+        return tempChallenge!
+    }*/
     
     
     /* ---------- FRIEND CELL GENERATION ---------- */
@@ -364,7 +359,6 @@ class FBClient: AnyObject {
             if (error != nil) {
                 // Handle any errors
             } else {
-                //this isn't returning the real url because of asynch problem
                 completion(URL!)
             }
         }

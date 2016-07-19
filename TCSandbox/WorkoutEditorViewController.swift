@@ -230,8 +230,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func editingDidEnd(sender: AnyObject) {
 
-        let challengeTitle = nameChallengeTextField.text
-        challenge?.challengeTitle = challengeTitle
+        let challengeName = nameChallengeTextField.text
+        challenge?.name = challengeName
     }
     @IBAction func countdownValueChanged(sender: AnyObject) {
         

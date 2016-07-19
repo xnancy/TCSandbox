@@ -12,7 +12,6 @@ class Challenge: AnyObject
 {
     var name: String?
     var challengeID: String?
-    var challengeTitle: String?
     var participants: [String]? = []
     var gifNames: [String]? = []
     var tagNames: [String]? = []
@@ -77,7 +76,7 @@ class Challenge: AnyObject
         FBClient.uploadChallenge(self)
     }
     
-    func getUsers() -> [User]
+    /*func getUsers() -> [User]
     {
         var users: [User] = []
         
@@ -88,18 +87,6 @@ class Challenge: AnyObject
         }
         
         return users
-    }
-    
-    func dateToString() -> String
-    {
-        let date = self.deadline
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        
-        let string = dateFormatter.stringFromDate(date!)
-        
-        return string
-    }
+    }*/
     
 }
