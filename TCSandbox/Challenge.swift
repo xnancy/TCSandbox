@@ -21,15 +21,29 @@ class Challenge: AnyObject
     var challengeTitle: String?
     
     // Complete initializer for FB retrieval
-    init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, deadline: String, senderID: String) {
-        self.challengeTitle = name
+    init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, comp_tags: [String], deadline: String, senderID: String) {
+        self.name = name
         self.gifNames = workout_gifs
         self.tagNames = add_on_images
+        self.cTagNames = comp_tags
         self.timeLimit = Int(time_limit)
         self.participants = participants
         self.challengeID = challengeID
         self.deadline = FBClient.dateFormatter.dateFromString(deadline)
         self.senderID = senderID
+    }
+    
+    init(dict: NSDictionary)
+    {
+        self.name = dict["name"] as? String
+        self.gifNames = dict["workout_gifs"] as? [String]
+        self.tagNames = dict["add_on_images"] as? [String]
+        self.timeLimit = dict["time_limit"] as? Int
+        self.participants = dict["participants"] as? [String]
+        self.challengeID = dict["challengeID"] as? String
+        self.deadline = dict["deadline"] as? NSDate
+        self.senderID = dict["senderID"] as? String
+
     }
     
     init()
@@ -87,6 +101,9 @@ class Challenge: AnyObject
         }
         
         return users
+
     }*/
-    
+
+    }
+
 }

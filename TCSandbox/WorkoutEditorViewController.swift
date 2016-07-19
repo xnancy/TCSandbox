@@ -250,14 +250,14 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func editingDidEnd(sender: AnyObject) {
 
-        let challengeName = nameChallengeTextField.text
-        
+        let challengeName = nameChallengeTextField.text        
         if challengeName != ""
         {
             recordButton.enabled = true
         }
         
         challenge?.challengeTitle = challengeName
+
     }
     @IBAction func countdownValueChanged(sender: AnyObject) {
         

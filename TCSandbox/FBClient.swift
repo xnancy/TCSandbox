@@ -100,6 +100,38 @@ class FBClient: AnyObject {
         try! FIRAuth.auth()!.signOut()
     }
     
+    
+    
+    class func retrieveChallengeFromID (challengeID: String, completion: (Challenge) -> Void) {
+        var tempChallenge: Challenge?
+        dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            
+            tempChallenge = Challenge(dict: snapshot.value as! NSDictionary)
+
+            completion(tempChallenge!)
+            
+            
+            
+            
+        })
+    }
+
+    
+    class func retrieveUserFromID (userID: String, completion: (User) -> Void) {
+        var user: User?
+        dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            user = User(dict: snapshot.value as! NSDictionary)
+            
+            completion(user!)
+            
+        })
+        
+    }
+
+    
+    
     class func addFriend(friendID: String)
     {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
@@ -108,7 +140,7 @@ class FBClient: AnyObject {
             let userDict = snapshot.value![FBID]
             var userFriendsList = userDict!!["friends_list"] as! [String]
             
-            var friendDict = snapshot.value![friendID]
+            let friendDict = snapshot.value![friendID]
             var friendFriendsList = friendDict!!["friends_list"] as! [String]
             
             userFriendsList.append(friendID)
@@ -189,6 +221,9 @@ class FBClient: AnyObject {
         var tagNames = challenge.tagNames
         let timeLimit = challenge.timeLimit
         let compTags = challenge.cTagNames
+
+        let challengeName = challenge.name
+
         
         if tagNames! == [] {
             tagNames = ["placeholders"]
@@ -217,7 +252,7 @@ class FBClient: AnyObject {
                 print(error.localizedDescription)
             }
 
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!, "challengeID": challengeID!, "name": challengeName!, "senderID": senderID])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID])
         }
     
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -271,6 +306,7 @@ class FBClient: AnyObject {
         var tempUser: User?
         dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             tempUser = User(dict: snapshot as! NSDictionary)
+            //print(tempUser)
         })
         return tempUser!
     }

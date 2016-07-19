@@ -18,7 +18,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     
     var challenge: Challenge?
     var pickedVideo: NSURL?
-    
+
+    var user: User?
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -29,7 +30,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         detailsTableView.delegate = self
         detailsTableView.dataSource = self
         
@@ -55,6 +55,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         })
 
         // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {

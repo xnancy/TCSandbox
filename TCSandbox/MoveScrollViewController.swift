@@ -340,7 +340,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection1Selected[indexPath.row]
             cell.gifs = self.gifs[indexPath.item]
-            cell.layer.cornerRadius = 10
+            cell.layer.cornerRadius = 5
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection1Selected[indexPath.row]
             return cell
@@ -350,7 +350,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection2Selected[indexPath.row]
             cell.gifs2 = self.gifs2[indexPath.item]
-            cell.layer.cornerRadius = 10
+            cell.layer.cornerRadius = 5
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection2Selected[indexPath.row]
             return cell
@@ -360,7 +360,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection3Selected[indexPath.row]
             cell.gifs3 = self.gifs3[indexPath.item]
-            cell.layer.cornerRadius = 10
+            cell.layer.cornerRadius = 5
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection3Selected[indexPath.row]
             return cell
@@ -370,7 +370,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection4Selected[indexPath.row]
             cell.gifs4 = self.gifs4[indexPath.item]
-            cell.layer.cornerRadius = 10
+            cell.layer.cornerRadius = 5
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection4Selected[indexPath.row]
             return cell
@@ -380,7 +380,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection5Selected[indexPath.row]
             cell.gifs5 = self.gifs5[indexPath.item]
-            cell.layer.cornerRadius = 10
+            cell.layer.cornerRadius = 5
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection5Selected[indexPath.row]
             return cell
@@ -390,7 +390,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection6Selected[indexPath.row]
             cell.gifs6 = self.gifs6[indexPath.item]
-            cell.layer.cornerRadius = 10
+            cell.layer.cornerRadius = 5
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection6Selected[indexPath.row]
             return cell
