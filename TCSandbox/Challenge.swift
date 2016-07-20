@@ -22,7 +22,7 @@ class Challenge: AnyObject
     var name: String?
     
     // Complete initializer for FB retrieval
-    init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: String, participants: [String], challengeID: String, comp_tags: [String], deadline: String, senderID: String, completedBy: [String]) {
+    init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: Int, participants: [String], challengeID: String, comp_tags: [String], deadline: String, senderID: String, completedBy: [String]) {
         self.name = name
         self.gifNames = workout_gifs
         self.tagNames = add_on_images

@@ -48,6 +48,7 @@
 		B81A457D1D3D45DF00D20C65 /* pullups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A457A1D3D45DF00D20C65 /* pullups.gif */; };
 		B81A457F1D3D45E800D20C65 /* pushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A457E1D3D45E800D20C65 /* pushups.gif */; };
 		B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */; };
+		B836A1DB1D4025CD00BFA5A1 /* boxing.gif in Resources */ = {isa = PBXBuildFile; fileRef = B836A1DA1D4025CD00BFA5A1 /* boxing.gif */; };
 		B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70A1D3B183D000D3499 /* PreviewViewController.swift */; };
 		B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
@@ -127,6 +128,7 @@
 		B81A457A1D3D45DF00D20C65 /* pullups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pullups.gif; path = TCSandbox/pullups.gif; sourceTree = "<group>"; };
 		B81A457E1D3D45E800D20C65 /* pushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushups.gif; path = TCSandbox/pushups.gif; sourceTree = "<group>"; };
 		B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
+		B836A1DA1D4025CD00BFA5A1 /* boxing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = boxing.gif; path = "../../Documents/TCSandbox Gifs/Cardio/boxing.gif"; sourceTree = "<group>"; };
 		B864E70A1D3B183D000D3499 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollExtensionViewController.swift; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,6 +312,7 @@
 			children = (
 				92D985E31D2F0DC9008BF657 /* pushup.gif */,
 				B81A45781D3D45DF00D20C65 /* hipairplane.gif */,
+				B836A1DA1D4025CD00BFA5A1 /* boxing.gif */,
 				B81A457E1D3D45E800D20C65 /* pushups.gif */,
 				B81A45791D3D45DF00D20C65 /* jump rope.gif */,
 				B81A457A1D3D45DF00D20C65 /* pullups.gif */,
@@ -406,7 +409,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = D8M8Q37C6Y;
+						DevelopmentTeam = 64UUKPWRF5;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -446,6 +449,7 @@
 				925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
 				B81A457B1D3D45DF00D20C65 /* hipairplane.gif in Resources */,
+				B836A1DB1D4025CD00BFA5A1 /* boxing.gif in Resources */,
 				B81A457C1D3D45DF00D20C65 /* jump rope.gif in Resources */,
 				B81A457D1D3D45DF00D20C65 /* pullups.gif in Resources */,
 				925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */,
@@ -778,7 +782,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "askld-fjawoiejfsl-d";
+				PRODUCT_BUNDLE_IDENTIFIER = "askld-buigbiukfjawoiejfsl-d";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -797,7 +801,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "askld-fjawoiejfsl-d";
+				PRODUCT_BUNDLE_IDENTIFIER = "askld-buigbiukfjawoiejfsl-d";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -60,7 +60,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var recordButton: UIButton!
   
     /* ---------- VARIABLES ---------- */
-    var gifmanager = SwiftyGifManager(memoryLimit: 20)
+    var gifManager = SwiftyGifManager(memoryLimit: 500)
+    var gifManager2 = SwiftyGifManager(memoryLimit: 500)
     var gifsToShow: [String] = []
     var tagsToShow: [String] = []
     var cTags: [String] = []
@@ -97,7 +98,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         countdownStepper.minimumValue = 15
         
         selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])]
-        gifSelectedImageView1.image = UIImage(named: gifsToShow[0])
+        gifSelectedImageView1.setGifImage(UIImage(gifName: gifsToShow[0]), manager: gifManager, loopCount: 20)
         
         if movesCount == 1 {
             
@@ -114,23 +115,23 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
         if workoutCount == 2 {
         selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.image = UIImage(named: gifsToShow[1])
+        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 30)
         }
         
-        else if workoutCount == 3 {
+        if workoutCount == 3 {
         selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.image = UIImage(named: gifsToShow[1])
+        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager2, loopCount: 30)
         selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
-        gifSelectedImageView4.image = UIImage(named: gifsToShow[2])
+        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager2, loopCount: 30)
         }
         
-        else if workoutCount == 4 {
+        if workoutCount == 4 {
         selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.image = UIImage(named: gifsToShow[1])
+        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 30)
         selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
-        gifSelectedImageView4.image = UIImage(named: gifsToShow[2])
+        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager2, loopCount: 30)
         selectedMoveLabel4.text = Gifs.gifDictionary[(gifsToShow[3])]
-        gifSelectedImageView3.image = UIImage(named: gifsToShow[3])
+        gifSelectedImageView3.setGifImage(UIImage(gifName: gifsToShow[3]), manager: gifManager2, loopCount: 30)
         }
             
             
