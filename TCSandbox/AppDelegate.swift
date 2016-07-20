@@ -37,7 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         //Go BACK LATER
-        return performShortcutDelegate && FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        //return performShortcutDelegate 
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
     }
     

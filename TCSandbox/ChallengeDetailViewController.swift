@@ -61,7 +61,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         // Do any additional setup after loading the view.
 
         
-        if ((challenge?.completedBy?.contains(FBSDKAccessToken.currentAccessToken().userID)) != nil)
+        if ((challenge?.completedBy?.contains(FBSDKAccessToken.currentAccessToken().userID)) != false)
         {
             didRespond = true
         }
@@ -148,7 +148,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let vc = segue.destinationViewController as! respondViewController
+        let vc = segue.destinationViewController as! SendChallengeViewController
         
         vc.challenge = challenge
         vc.pickedVideo = pickedVideo

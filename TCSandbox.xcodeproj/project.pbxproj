@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30161D383A05005D7171 /* myChallengesViewController.swift */; };
 		825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */; };
+		82B7BBDC1D401C0A00932420 /* feedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBDB1D401C0A00932420 /* feedViewController.swift */; };
 		82BB15931D3D84FD0005B22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15921D3D84FD0005B22D /* ViewController.swift */; };
 		82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */; };
 		82BB15991D3DD9FE0005B22D /* respondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15981D3DD9FE0005B22D /* respondViewController.swift */; };
@@ -80,6 +81,7 @@
 		8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
 		825C30161D383A05005D7171 /* myChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengesViewController.swift; sourceTree = "<group>"; };
 		825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengeTableViewCell.swift; sourceTree = "<group>"; };
+		82B7BBDB1D401C0A00932420 /* feedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedViewController.swift; sourceTree = "<group>"; };
 		82BB15921D3D84FD0005B22D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailsTableViewCell.swift; sourceTree = "<group>"; };
 		82BB15981D3DD9FE0005B22D /* respondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = respondViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */,
 				825C30161D383A05005D7171 /* myChallengesViewController.swift */,
 				82BB15981D3DD9FE0005B22D /* respondViewController.swift */,
+				82B7BBDB1D401C0A00932420 /* feedViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
+				82B7BBDC1D401C0A00932420 /* feedViewController.swift in Sources */,
 				9296630A1D36AFA400300614 /* searchFriendsTableViewCell.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
 				82C94E6D1D38063B00E84D55 /* recordVideoViewController.swift in Sources */,
