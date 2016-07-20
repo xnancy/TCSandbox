@@ -40,21 +40,23 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         challengeTitleLabel.text = challenge?.name
         deadlineLabel.text = FBClient.dateFormatter.stringFromDate(challenge!.deadline!)
-        //let sender = FBClient.getUser((challenge?.senderID)!)
-        //let profileURL = NSURL(string: sender.profileImageURLString!)
-        //profileImageView.setImageWithURL(profileURL!)
-        
-        FBClient.downloadVideo((challenge?.challengeID)!, userID: (challenge?.senderID)!, completion: {(URL: NSURL) in
+        var sender = User()
+        FBClient.retrieveUserFromID((challenge?.senderID)!) { (user) in
+            sender = user
+            let profileURL = NSURL(string: sender.profileImageURLString!)
+            self.profileImageView.setImageWithURL(profileURL!)
             
-            let player = AVPlayer(URL: URL)
-            let movie = AVPlayerViewController()
-            movie.player = player
-            movie.view.frame = self.videoView.bounds
-            
-            self.view.addSubview(movie.view)
-            player.play()
-  
+            FBClient.downloadVideo((self.challenge?.challengeID)!, userID: (self.challenge?.senderID)!, completion: {(URL: NSURL) in
+                
+                let player = AVPlayer(URL: URL)
+                let movie = AVPlayerViewController()
+                movie.player = player
+                movie.view.frame = self.videoView.bounds
+                
+                self.view.addSubview(movie.view)
+                player.play()
             })
+        }
 
         // Do any additional setup after loading the view.
 

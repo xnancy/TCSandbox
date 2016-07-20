@@ -66,11 +66,18 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         //ADD GIF NAMES
         //ADD TAG NAMES
         //ADD CHALLENGE NAME
+        if (challenge?.participants)! == []
+        {
+            //SEND A NOTIFICATION THAT THEY NEED TO SELECT PARTICIPANTS!
+        }
 
-        FBClient.uploadChallenge(challenge!)
-        
-        let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
-        self.presentViewController(homeViewController, animated: true, completion: nil)
+            else
+        {
+            FBClient.uploadChallenge(challenge!)
+            
+            let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
+            self.presentViewController(homeViewController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onBackButton(sender: AnyObject) {
