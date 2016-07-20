@@ -280,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juy-jv-fe8">
-                                <rect key="frame" x="160" y="517" width="54" height="30"/>
+                                <rect key="frame" x="161" y="517" width="54" height="30"/>
                                 <state key="normal" title="Upload!"/>
                                 <connections>
                                     <action selector="didPressUpload:" destination="eQi-sG-n3W" eventType="touchUpInside" id="7eH-ny-b7C"/>
@@ -1005,8 +1005,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-z6-742">
-                                <rect key="frame" x="163" y="479" width="50" height="30"/>
-                                <state key="normal" title="Upload"/>
+                                <rect key="frame" x="164" y="479" width="49" height="30"/>
+                                <state key="normal" title="Accept"/>
                                 <connections>
                                     <action selector="onUploadVideo:" destination="Nqy-hQ-xqb" eventType="touchUpInside" id="oQO-Zf-TkO"/>
                                 </connections>

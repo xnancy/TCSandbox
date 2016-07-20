@@ -200,6 +200,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         imagePicker.mediaTypes = [kUTTypeMovie as String]
         imagePicker.allowsEditing = false
         imagePicker.delegate = self
+        imagePicker.videoMaximumDuration = Double(countdownStepper.value)
         
         presentViewController(imagePicker, animated: true, completion: {})
     }

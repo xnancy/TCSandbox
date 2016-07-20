@@ -33,9 +33,7 @@ class recordVideoViewController: UIViewController {
     @IBAction func onUploadVideo(sender: AnyObject) {
         //upload video to our database and associate it with the correct challenge
         if let pickedVideo = pickedVideo
-        {
-            FBClient.uploadVideo(pickedVideo, challenge: self.challenge!)
-            
+        {            
             performSegueWithIdentifier("sendChallenge", sender: self)
         }
     }
@@ -47,20 +45,22 @@ class recordVideoViewController: UIViewController {
     
     @IBAction func playVideo(sender: AnyObject) {
         
-        var url = NSURL()
+//        var url = NSURL()
+//        
+//        FBClient.downloadVideo((challenge?.challengeID)!, userID: FBSDKAccessToken.currentAccessToken().userID, completion: {(URL: NSURL) in
+//            
+//            url = URL
+//
+//            let player = AVPlayer(URL: url)
+//            let movie = AVPlayerViewController()
+//            movie.player = player
+//            movie.view.frame = self.view.bounds
+//            
+//            self.view.addSubview(movie.view)
+//            player.play()
+//        })
         
-        FBClient.downloadVideo((challenge?.challengeID)!, userID: FBSDKAccessToken.currentAccessToken().userID, completion: {(URL: NSURL) in
-            
-            url = URL
-
-            let player = AVPlayer(URL: url)
-            let movie = AVPlayerViewController()
-            movie.player = player
-            movie.view.frame = self.view.bounds
-            
-            self.view.addSubview(movie.view)
-            player.play()
-        })
+        //allow user to playback video
     }
     
     // MARK: - Navigation
@@ -71,5 +71,6 @@ class recordVideoViewController: UIViewController {
         let vc = segue.destinationViewController as! SendChallengeViewController
         
         vc.challenge = challenge
+        vc.pickedVideo = pickedVideo
     }
 }

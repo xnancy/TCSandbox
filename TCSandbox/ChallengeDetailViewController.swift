@@ -61,7 +61,15 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         // Do any additional setup after loading the view.
 
         
-        //CHECK HERE IF WE RESPONDED ALREADY
+        if ((challenge?.completedBy?.contains(FBSDKAccessToken.currentAccessToken().userID)) != nil)
+        {
+            didRespond = true
+        }
+        
+        else
+        {
+            didRespond = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -112,6 +120,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             imagePicker.mediaTypes = [kUTTypeMovie as String]
             imagePicker.allowsEditing = false
             imagePicker.delegate = self
+            imagePicker.videoMaximumDuration = Double((challenge?.timeLimit)!)
             
             presentViewController(imagePicker, animated: true, completion: {})
         }

@@ -205,7 +205,7 @@ class FBClient: AnyObject {
                     let id = challengeIDs[i]
                     let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
                     print("\(newChallengeDictionary)")
-                    let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: String(newChallengeDictionary["time_limit"]), participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String)
+                    let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: String(newChallengeDictionary["time_limit"]), participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String, completedBy: newChallengeDictionary["completed_by"] as! [String])
                     challenges.append(newChallengeObject)
                 }
             }
@@ -223,8 +223,8 @@ class FBClient: AnyObject {
         var tagNames = challenge.tagNames
         let timeLimit = challenge.timeLimit
         let compTags = challenge.cTagNames
-
         let challengeName = challenge.name
+        let completedBy = ["placeholder"]
 
         
         if tagNames! == [] {
@@ -253,7 +253,7 @@ class FBClient: AnyObject {
                 print(error.localizedDescription)
             }
 
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID, "completed_by": completedBy])
         }
     
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -403,6 +403,11 @@ class FBClient: AnyObject {
 
                 //save the string to the array in challenges
                 //stream the video from the download URL on the screen
+                var completedBy = challenge.completedBy!
+                completedBy.append(FBSDKAccessToken.currentAccessToken().userID)
+                let updates = ["completed_by": completedBy]
+                dataRef.child("Challenges").child(challenge.challengeID!).updateChildValues(updates)
+                //update firebase
             }
         }
     }

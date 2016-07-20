@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import AFNetworking
+import AVKit
+import MediaPlayer
+import MobileCoreServices
 
 class SendChallengeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -18,6 +21,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     /* ---------- VARIABLES ---------- */
     var friendIDs: [String]?
     var challenge: Challenge?
+    var pickedVideo: NSURL?
     
     /* ---------- VIEW CONTROLLERS ---------- */
     override func viewDidLoad() {
@@ -74,6 +78,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
             else
         {
             FBClient.uploadChallenge(challenge!)
+            FBClient.uploadVideo(pickedVideo!, challenge: challenge!)
             
             let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
             self.presentViewController(homeViewController, animated: true, completion: nil)
