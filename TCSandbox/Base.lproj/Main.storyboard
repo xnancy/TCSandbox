@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UBq-1y-4rr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ESL-6m-KUh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1152,7 +1152,7 @@
                                 <rect key="frame" x="204" y="100" width="151" height="140"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-Gt-EB0">
-                                <rect key="frame" x="21" y="292" width="149" height="135"/>
+                                <rect key="frame" x="33" y="292" width="149" height="135"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-gb-hKb">
                                 <rect key="frame" x="2" y="248" width="187" height="32"/>
@@ -1183,7 +1183,7 @@
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-Rj-i6t">
-                                <rect key="frame" x="20" y="100" width="150" height="140"/>
+                                <rect key="frame" x="30" y="100" width="150" height="140"/>
                             </imageView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minimumValue="15" maximumValue="120" stepValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-81-wSG">
                                 <rect key="frame" x="261" y="511" width="94" height="29"/>
@@ -1333,6 +1333,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="8vJ-9P-pZY">
+                                <rect key="frame" x="113" y="373" width="149" height="135"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="z0L-zG-Syh">
+                                <rect key="frame" x="171" y="100" width="149" height="135"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="4Zt-Dx-cQh">
+                                <rect key="frame" x="171" y="291" width="149" height="135"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1369,6 +1378,9 @@
                         <outlet property="gifSelectedImageView2" destination="eR9-xl-qKv" id="JJt-Pi-J8R"/>
                         <outlet property="gifSelectedImageView3" destination="X3F-PZ-QmO" id="W9C-x2-3AT"/>
                         <outlet property="gifSelectedImageView4" destination="hsz-Gt-EB0" id="Rfd-cy-yUR"/>
+                        <outlet property="gifSelectedImageView5" destination="4Zt-Dx-cQh" id="ABY-n9-Reg"/>
+                        <outlet property="gifSelectedImageView6" destination="8vJ-9P-pZY" id="eV0-Vp-7Ok"/>
+                        <outlet property="gifSelectedImageView7" destination="z0L-zG-Syh" id="O2u-2V-dpl"/>
                         <outlet property="nameChallengeTextField" destination="KlM-kY-lse" id="5xX-es-VKM"/>
                         <outlet property="recordButton" destination="8wQ-Un-n7x" id="uCg-kB-Zcy"/>
                         <outlet property="secMinLabel" destination="TEV-8X-VCE" id="pKg-O1-aQX"/>
