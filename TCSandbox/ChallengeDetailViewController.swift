@@ -36,7 +36,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         //create self.challenge from challengeID
         
-        //self.tabBarController?.tabBar.hidden = true
+        self.tabBarController?.tabBar.hidden = true
         
         challengeTitleLabel.text = challenge?.name
         deadlineLabel.text = FBClient.dateFormatter.stringFromDate(challenge!.deadline!)

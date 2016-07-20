@@ -28,6 +28,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
         updateChallengeInfo()
+        self.tabBarController?.tabBar.hidden = false
     }
 
     func updateChallengeInfo() {
