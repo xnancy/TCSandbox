@@ -57,6 +57,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     // MARK: - FACEBOOK LOGIN
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
+        print(result.debugDescription)
         
         self.loginButton.hidden = true
         aivLoadingSpinner.startAnimating()
@@ -65,7 +66,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         {
             FBClient.login()
         }
-            
+        
             else if result.isCancelled
         {
             //code to handle the cancelled case

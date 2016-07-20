@@ -210,6 +210,7 @@ class FBClient: AnyObject {
                 }
             }
             completion(challenges)
+
         }, withCancelBlock: { error in print(error.description) })
     }
     

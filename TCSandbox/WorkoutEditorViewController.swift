@@ -307,6 +307,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {
             self.pickedVideo = pickedVideo
+            print("damn")
             print(pickedVideo)
         }
         
