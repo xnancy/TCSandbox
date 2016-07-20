@@ -428,4 +428,30 @@ class FBClient: AnyObject {
             }
         }
     }
+    
+    /*class func populateFeedDictionary(completion: (NSDictionary) -> Void)
+    {
+        var dictionary: NSDictionary = []
+        var friendIDs = []
+        
+        dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            friendIDs = snapshot.value!["friends_list"] as! [String]
+        })
+        
+        
+        
+        if friendIDs.count > 1 {
+            for i in 1...friendIDs.count - 1 {
+                
+                let friend = friendIDs[i] as! String
+                
+                dataRef.child("Users").child(friend).child("challenges").observeSingleEventOfType(.Value, withBlock: { snapshot in
+                    
+                    dictionary
+                })
+
+            }
+        }
+    }*/
 }

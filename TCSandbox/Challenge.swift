@@ -27,7 +27,7 @@ class Challenge: AnyObject
         self.gifNames = workout_gifs
         self.tagNames = add_on_images
         self.cTagNames = comp_tags
-        self.timeLimit = Int(time_limit)
+        self.timeLimit = time_limit
         self.participants = participants
         self.challengeID = challengeID
         self.deadline = FBClient.dateFormatter.dateFromString(deadline)
