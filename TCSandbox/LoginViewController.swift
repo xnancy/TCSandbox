@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
             FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
             if let user = user {
-                // User is signed in.
+                //User is signed in.
                 //FBClient.logout()
                 let FBID = FBSDKAccessToken.currentAccessToken().userID
                 User.updateCurrentUser()
@@ -57,9 +57,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     // MARK: - FACEBOOK LOGIN
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
-    {
-        print(result.debugDescription)
-        
+    {        
         self.loginButton.hidden = true
         aivLoadingSpinner.startAnimating()
         

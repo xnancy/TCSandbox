@@ -80,7 +80,10 @@ class FBClient: AnyObject {
                     let friendsList: [String] = [FBID]
                     let challenges: [String] = ["placeholder"]
                     let challengesCompleted: Int = 0
-                    let updates = ["friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted]
+                    let feedDictionary: NSDictionary = ["placeholder": "placeholder"]
+                    let feedChallenges: [String] = ["placeholder"]
+                    let updates = ["friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted, "feed_challenges": feedChallenges, "feed_dictionary": feedDictionary]
+                    
                     dataRef.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
@@ -106,14 +109,9 @@ class FBClient: AnyObject {
         var tempChallenge: Challenge?
         dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-            
             tempChallenge = Challenge(dict: snapshot.value as! NSDictionary)
 
             completion(tempChallenge!)
-            
-            
-            
-            
         })
     }
 
@@ -125,13 +123,11 @@ class FBClient: AnyObject {
             user = User(dict: snapshot.value as! NSDictionary)
             
             completion(user!)
-            
         })
         
     }
+    
 
-    
-    
     class func addFriend(friendID: String)
     {
         let FBID = FBSDKAccessToken.currentAccessToken().userID
@@ -160,6 +156,7 @@ class FBClient: AnyObject {
             print(error.localizedDescription)
         }
     }
+    
     
     class func removeFriend(friendID: String)
     {
@@ -249,7 +246,9 @@ class FBClient: AnyObject {
                 
                 let updates = ["challenges": challenges]
                 dataRef.child("Users").child(userID).updateChildValues(updates)
-                //REFRESH THE USER'S CURRENT CHALLENGES
+                
+                //GO THROUGH USER FRIENDS LIST INCLUDING USER AND APPEND CHALLENGE TO EACH PERSON'S FEED ARRAY/DICTIONARY
+                
                 
             })  { (error) in
                 
@@ -263,7 +262,6 @@ class FBClient: AnyObject {
         let homeVC = storyboard.instantiateViewControllerWithIdentifier("MyChallengesVC")
         self.navigationController.presentViewController(homeVC, animated: false, completion: nil)
         self.navigationController.dismissViewControllerAnimated(false, completion: nil)
-        
     }
     
     class func declineChallenge(challenge: Challenge)
@@ -286,8 +284,6 @@ class FBClient: AnyObject {
         })  { (error) in
             print(error.localizedDescription)
         }
-        
-        
     }
     
     /* ---------- FRIENDS/USERS ---------- */
@@ -304,27 +300,6 @@ class FBClient: AnyObject {
                 print(error.description)
         })
     }
-    
-    // Returns user from userID
-    /*class func getUser (userID: String) -> User{
-        var tempUser: User?
-        dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-            tempUser = User(dict: snapshot as! NSDictionary)
-            //print(tempUser)
-        })
-        return tempUser!
-    }
-    
-    class func getChallenge(challengeID: String) -> Challenge
-    {
-        var tempChallenge: Challenge?
-        dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-            tempChallenge = Challenge(dict: snapshot as! NSDictionary)
-        })
-        
-        return tempChallenge!
-    }*/
-    
     
     /* ---------- FRIEND CELL GENERATION ---------- */
     class func generateFriendCell(friendID: String, cell: FriendsSendChallengeTableViewCell) {
@@ -427,30 +402,4 @@ class FBClient: AnyObject {
             }
         }
     }
-    
-    /*class func populateFeedDictionary(completion: (NSDictionary) -> Void)
-    {
-        var dictionary: NSDictionary = []
-        var friendIDs = []
-        
-        dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-            
-            friendIDs = snapshot.value!["friends_list"] as! [String]
-        })
-        
-        
-        
-        if friendIDs.count > 1 {
-            for i in 1...friendIDs.count - 1 {
-                
-                let friend = friendIDs[i] as! String
-                
-                dataRef.child("Users").child(friend).child("challenges").observeSingleEventOfType(.Value, withBlock: { snapshot in
-                    
-                    dictionary
-                })
-
-            }
-        }
-    }*/
 }
