@@ -82,6 +82,16 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    
+    @IBAction func didTapLogout(sender: AnyObject) {
+        
+        FBClient.logout()
+        
+        self.dismissViewControllerAnimated(true) { 
+            
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

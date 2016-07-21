@@ -293,7 +293,7 @@ class FBClient: AnyObject {
     
     class func declineChallenge(challenge: Challenge)
     {
-        //THIS REMOVES THE USER FROM THE PARTICIPANTS AND THE CHALLENGE FROM THE USER'S CURRENT CHALLENGES
+        //ALSO REMOVE FROM FEED
         let FBID = FBSDKAccessToken.currentAccessToken().userID
         let challengeID = challenge.challengeID
         

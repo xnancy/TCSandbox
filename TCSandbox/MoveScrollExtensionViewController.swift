@@ -13,12 +13,6 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
     
     //PEAK
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-
-      if CGRectContainsPoint(collectionView1.frame, location) {
-        
-        print(collectionView1.frame.maxY)
-        print(collectionView1.frame.minY)
-        print(location.y)
         
         print("running1")
         guard let previewVC = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC") as? PreviewViewController
@@ -30,9 +24,7 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
         previewingContext.sourceRect = cell1.frame
         return previewVC
        
-      }
       
-     if CGRectContainsPoint(collectionView2.frame, location) {
         
         print("running2")
         guard let previewVC2 = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC2") as? Preview2ViewController
@@ -44,8 +36,6 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
         previewingContext.sourceRect = cell2.frame
         return previewVC2
 
-        }
-        return nil
     }
     
     //POP
