@@ -248,6 +248,23 @@ class FBClient: AnyObject {
                 dataRef.child("Users").child(userID).updateChildValues(updates)
                 
                 //GO THROUGH USER FRIENDS LIST INCLUDING USER AND APPEND CHALLENGE TO EACH PERSON'S FEED ARRAY/DICTIONARY
+                let friendsList = snapshot.value!["friends_list"] as! [String]
+                
+                for friendID in friendsList
+                {
+                    dataRef.child("Users").child(friendID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                        
+                        var feedChallenges = snapshot.value!["feed_challenges"] as! [String]
+                        var feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
+                        feedChallenges.append(challengeID!)
+                        feedDictionary.updateValue(dateFormatter.stringFromDate(deadline!), forKey: challengeID!)
+                        
+                        
+                        let updates = ["feed_challenges": feedChallenges, "feed_dictionary": feedDictionary]
+                        dataRef.child("Users").child(friendID).updateChildValues(updates as [NSObject : AnyObject])
+                    })
+                }
+                
                 
                 
             })  { (error) in

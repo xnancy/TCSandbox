@@ -201,7 +201,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func didPressRecord(sender: AnyObject) {
         //UIDevice.currentDevice().orientation
-    UIDevice.currentDevice().setValue(UIInterfaceOrientation.LandscapeLeft.rawValue, forKey: "orientation")
+    UIDevice.currentDevice().setValue(UIInterfaceOrientation.LandscapeRight.rawValue, forKey: "orientation")
         supportedInterfaceOrientations()
         imagePicker.sourceType = .Camera
         imagePicker.mediaTypes = [kUTTypeMovie as String]
