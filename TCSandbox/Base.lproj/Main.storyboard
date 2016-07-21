@@ -106,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kev-WR-wmo" id="BwG-VY-YZe">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-0o-TvN">
@@ -205,7 +205,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDx-0b-Lvp" id="nJK-hl-9WA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pb-Sz-9TS">
@@ -327,7 +327,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1Q-Ks-izb" id="twd-v2-LPf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenges Completed: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLb-v5-Z6F">
@@ -404,7 +404,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xuC-uV-qsz" id="LOT-LO-cgh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-Xd-rvL">
@@ -564,7 +564,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="opf-g2-ShR" customClass="GifsCollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -680,7 +680,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell3" id="kG6-z1-2E6" customClass="Gifs3CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -738,7 +738,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell4" id="03m-7G-ycs" customClass="Gifs4CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -796,7 +796,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell5" id="SP9-mq-Y03" customClass="Gifs5CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -854,7 +854,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell6" id="Luu-ON-QAg" customClass="Gifs6CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -924,7 +924,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell6" id="aKc-3C-aNm" customClass="Gifs6CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -982,7 +982,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell6" id="PtG-Y5-sg6" customClass="Gifs6CollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10.5" width="129" height="128"/>
+                                                            <rect key="frame" x="5" y="11" width="129" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
@@ -1029,6 +1029,13 @@
                                                         <outlet property="delegate" destination="UBq-1y-4rr" id="ejO-C1-0Ne"/>
                                                     </connections>
                                                 </collectionView>
+                                                <button opaque="NO" alpha="0.20000000298023224" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9v-E7-KRy">
+                                                    <rect key="frame" x="-863" y="377" width="2154" height="1320"/>
+                                                    <state key="normal" title="Button" image="black"/>
+                                                    <connections>
+                                                        <action selector="tagForbidAction:" destination="UBq-1y-4rr" eventType="touchUpInside" id="7tk-xs-Wlh"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </scrollView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Up to Four" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-zO-p4o">
@@ -1038,13 +1045,6 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" alpha="0.20000000298023224" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9v-E7-KRy">
-                                            <rect key="frame" x="-890" y="222" width="2154" height="1320"/>
-                                            <state key="normal" title="Button" image="black"/>
-                                            <connections>
-                                                <action selector="tagForbidAction:" destination="UBq-1y-4rr" eventType="touchUpInside" id="7tk-xs-Wlh"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WF-9l-uaE">
                                             <rect key="frame" x="0.0" y="618" width="375" height="50"/>
                                             <color key="backgroundColor" red="0.59700944" green="0.78923196770000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1155,7 +1155,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="463"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6FM-4H-iLK" id="Jhv-YI-wM1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="462.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="462"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REm-hL-DJI">
@@ -1256,7 +1256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBy-WM-tgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491" y="555.5"/>
+            <point key="canvasLocation" x="1482" y="554.5"/>
         </scene>
         <!--Preview Page-->
         <scene sceneID="zyc-JQ-HnB">
@@ -1390,30 +1390,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-Rj-i6t">
                                 <rect key="frame" x="46" y="112" width="134" height="134"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="EOn-4s-KU2" appends="YES" id="Vf3-8b-6WO"/>
-                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-PZ-QmO">
                                 <rect key="frame" x="187" y="294" width="141" height="134"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Umz-Nz-wC2" appends="YES" id="p9c-HZ-u9B"/>
-                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="eR9-xl-qKv">
                                 <rect key="frame" x="187" y="112" width="141" height="134"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Zga-cY-Qdk" appends="YES" id="eGd-cf-lbE"/>
-                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptygif" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-Gt-EB0">
                                 <rect key="frame" x="46" y="294" width="134" height="134"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="G1e-H2-0gA" appends="YES" id="m2a-hS-x1C"/>
-                                </connections>
                             </imageView>
                             <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge" translatesAutoresizingMaskIntoConstraints="NO" id="1b8-oP-oKp">
                                 <rect key="frame" x="156" y="102" width="30" height="30"/>
@@ -1493,6 +1481,34 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3c-Wj-QAu">
+                                <rect key="frame" x="47" y="112" width="133" height="134"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EOn-4s-KU2" appends="YES" id="lfe-N2-gYH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThR-oN-LhM">
+                                <rect key="frame" x="189" y="112" width="133" height="134"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="G1e-H2-0gA" appends="YES" id="qwq-bD-jvE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9w-BK-4V4">
+                                <rect key="frame" x="45" y="294" width="133" height="134"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EOn-4s-KU2" appends="YES" id="QuR-sv-bkn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-Gs-s0s">
+                                <rect key="frame" x="191" y="294" width="133" height="134"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EOn-4s-KU2" appends="YES" id="9sY-Ra-VeX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1545,10 +1561,26 @@
                         <action selector="dismissKeyboard:" destination="cIN-lL-ItH" id="M2c-dn-dmo"/>
                     </connections>
                 </tapGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="G1e-H2-0gA"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Umz-Nz-wC2"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Zga-cY-Qdk"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="EOn-4s-KU2"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Zga-cY-Qdk">
+                    <connections>
+                        <action selector="didHoldImage2:" destination="cIN-lL-ItH" id="g1F-eM-8Fo"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Umz-Nz-wC2">
+                    <connections>
+                        <action selector="didHoldImage4:" destination="cIN-lL-ItH" id="AWX-PO-5dW"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="G1e-H2-0gA">
+                    <connections>
+                        <action selector="didHoldImage3:" destination="cIN-lL-ItH" id="SrJ-yc-73b"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="EOn-4s-KU2">
+                    <connections>
+                        <action selector="didHoldImage1:" destination="cIN-lL-ItH" id="EN1-Xa-d0g"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1966.5" y="1091.5"/>
         </scene>
@@ -1572,7 +1604,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6TH-Sn-TDr" id="llB-cf-by5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sW7-tG-63z">
@@ -1634,6 +1666,62 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1966.5" y="1912.5"/>
+        </scene>
+        <!--Preview VC 1-->
+        <scene sceneID="MQi-7S-06r">
+            <objects>
+                <viewController storyboardIdentifier="PreviewVC2" title="Preview VC 1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fBm-cc-vs7" customClass="Preview2ViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ymn-uV-FE5"/>
+                        <viewControllerLayoutGuide type="bottom" id="xIF-Ny-XdY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YuT-fy-xAX">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="245"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="qFs-l9-FaN">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="245"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jum-SQ-nwM">
+                                <rect key="frame" x="0.0" y="216" width="280" height="29"/>
+                                <color key="backgroundColor" red="0.90128034850000005" green="0.45776764440000001" blue="0.39279310880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="bhF-2a-Gok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-uD-AkX">
+                                <rect key="frame" x="47" y="39" width="186" height="157"/>
+                            </imageView>
+                        </subviews>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qFs-l9-FaN" firstAttribute="leading" secondItem="YuT-fy-xAX" secondAttribute="leading" id="3fg-lp-gEs"/>
+                            <constraint firstItem="gfY-uD-AkX" firstAttribute="top" secondItem="ymn-uV-FE5" secondAttribute="bottom" constant="19" id="4Jf-Ne-wub"/>
+                            <constraint firstItem="gfY-uD-AkX" firstAttribute="centerX" secondItem="jum-SQ-nwM" secondAttribute="centerX" id="57U-4f-IBv"/>
+                            <constraint firstItem="jum-SQ-nwM" firstAttribute="trailing" secondItem="qFs-l9-FaN" secondAttribute="trailing" id="AIk-Cy-m7g"/>
+                            <constraint firstItem="jum-SQ-nwM" firstAttribute="leading" secondItem="qFs-l9-FaN" secondAttribute="leading" id="bfM-pm-mDF"/>
+                            <constraint firstItem="qFs-l9-FaN" firstAttribute="bottom" secondItem="xIF-Ny-XdY" secondAttribute="top" id="dcF-OR-L2U"/>
+                            <constraint firstItem="gfY-uD-AkX" firstAttribute="leading" secondItem="YuT-fy-xAX" secondAttribute="leadingMargin" constant="31" id="fLS-lL-imB"/>
+                            <constraint firstItem="jum-SQ-nwM" firstAttribute="top" secondItem="gfY-uD-AkX" secondAttribute="bottom" constant="20" id="nmq-Hr-dN0"/>
+                            <constraint firstItem="jum-SQ-nwM" firstAttribute="bottom" secondItem="xIF-Ny-XdY" secondAttribute="top" id="uBP-bT-VeR"/>
+                            <constraint firstAttribute="trailing" secondItem="jum-SQ-nwM" secondAttribute="trailing" id="uMf-Q3-lSn"/>
+                            <constraint firstItem="qFs-l9-FaN" firstAttribute="top" secondItem="YuT-fy-xAX" secondAttribute="top" id="vIC-ec-Puy"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="245" height="280"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="280" height="245"/>
+                    <connections>
+                        <outlet property="selectedGifImageView" destination="gfY-uD-AkX" id="4ib-cp-KdC"/>
+                        <outlet property="textLabel" destination="jum-SQ-nwM" id="hgN-l3-lbm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orq-YV-ihm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966" y="554.5"/>
         </scene>
     </scenes>
     <resources>

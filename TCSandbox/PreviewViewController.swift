@@ -38,7 +38,7 @@ class PreviewViewController: UIViewController {
             
         }
         
-        let item4 = UIPreviewAction(title: "More Reps Than Me", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item4 = UIPreviewAction(title: "MTM", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
             
          }
               

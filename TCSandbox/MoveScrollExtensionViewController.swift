@@ -14,22 +14,24 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
     //PEAK
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
 
-        
+      if 
         guard let previewVC = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC") as? PreviewViewController
             else{ return nil }
-        
         guard let indexPath = collectionView1?.indexPathForItemAtPoint(location) else { return nil }
-        //guard let indexPath2 = collectionView2.indexPathForItemAtPoint(location) else { return nil }
         guard let cell1 = collectionView1?.cellForItemAtIndexPath(indexPath) else { return nil }
-        //guard let cell2 = collectionView2.cellForItemAtIndexPath(indexPath) else { return nil}
-        
-            previewVC.selectedItem = String(Gifs.row1[indexPath.row])
-            //previewVC.selectedItem2 = String(Gifs.row2[indexPath.rown])
-
-            previewVC.preferredContentSize = CGSize(width: 245, height: 200)
-            previewingContext.sourceRect = cell1.frame
-        
+        previewVC.selectedItem = String(Gifs.row1[indexPath.row])
+        previewVC.preferredContentSize = CGSize(width: 245, height: 200)
+        previewingContext.sourceRect = cell1.frame
         return previewVC
+        
+        
+        
+        guard let previewVC2 = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC2") as? PreviewViewController
+            else{ return nil }
+        guard let indexPath2 = collectionView2.indexPathForItemAtPoint(location) else { return nil }
+        guard let cell2 = collectionView2.cellForItemAtIndexPath(indexPath2) else { return nil}
+        previewVC2.selectedItem2 = String(Gifs.row2[indexPath2.row])
+        return previewVC2
     
     
 

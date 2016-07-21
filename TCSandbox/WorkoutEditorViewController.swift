@@ -1,4 +1,3 @@
-//
 //  WorkoutEditorViewController.swift
 //  TCSandbox
 //
@@ -55,10 +54,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var barLabel2: UILabel!
     @IBOutlet weak var barLabel3: UILabel!
     @IBOutlet weak var barLabel4: UILabel!
-    
-    
     @IBOutlet weak var recordButton: UIButton!
-  
+    
     /* ---------- VARIABLES ---------- */
     var gifManager = SwiftyGifManager(memoryLimit: 50)
     var gifManager2 = SwiftyGifManager(memoryLimit: 50)
@@ -76,17 +73,19 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     var pickedVideo: NSURL?
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
-
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         recordButton.enabled = false
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
-
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WorkoutEditorViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -102,86 +101,86 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
         if movesCount == 1 {
             
-                        
-//            gifSelectedImageView2.hidden = true
-//            gifSelectedImageView4.hidden = true
-//            gifSelectedImageView3.hidden = true
+            
+            //            gifSelectedImageView2.hidden = true
+            //            gifSelectedImageView4.hidden = true
+            //            gifSelectedImageView3.hidden = true
             
         }
         
         
-
+        
         if workoutCount > 1 {
-        
-        if workoutCount == 2 {
-        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
-        }
-        
-        if workoutCount == 3 {
-        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
-        selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
-        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager, loopCount: 100)
-        }
-        
-        if workoutCount == 4 {
-        selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
-        selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
-        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager, loopCount: 100)
-        selectedMoveLabel4.text = Gifs.gifDictionary[(gifsToShow[3])]
-        gifSelectedImageView3.setGifImage(UIImage(gifName: gifsToShow[3]), manager: gifManager, loopCount: 100)
-        }
+            
+            if workoutCount == 2 {
+                selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
+                gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
+            }
+            
+            if workoutCount == 3 {
+                selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
+                gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
+                selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
+                gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager, loopCount: 100)
+            }
+            
+            if workoutCount == 4 {
+                selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
+                gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
+                selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
+                gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager, loopCount: 100)
+                selectedMoveLabel4.text = Gifs.gifDictionary[(gifsToShow[3])]
+                gifSelectedImageView3.setGifImage(UIImage(gifName: gifsToShow[3]), manager: gifManager, loopCount: 100)
+            }
             
             
-    }
+        }
         
         
         
         if tagsCount > 0 {
-        
-        if workoutCount == 1 {
-            selectedMoveLabel2.text = Tags.tagDictionary[tagsToShow[0]]
-            gifSelectedImageView2.image = UIImage(named: tagsToShow[0])
             
-            if tagsCount == 2 {
-                selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[1]]
-                gifSelectedImageView4.image = UIImage(named: tagsToShow[1])
-            }
+            if workoutCount == 1 {
+                selectedMoveLabel2.text = Tags.tagDictionary[tagsToShow[0]]
+                gifSelectedImageView2.image = UIImage(named: tagsToShow[0])
                 
-            else if tagsCount == 3{
-                selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[1]]
-                gifSelectedImageView4.image = UIImage(named: tagsToShow[1])
-                selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[2]]
-                gifSelectedImageView3.image = UIImage(named: tagsToShow[2])
+                if tagsCount == 2 {
+                    selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[1]]
+                    gifSelectedImageView4.image = UIImage(named: tagsToShow[1])
+                }
+                    
+                else if tagsCount == 3{
+                    selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[1]]
+                    gifSelectedImageView4.image = UIImage(named: tagsToShow[1])
+                    selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[2]]
+                    gifSelectedImageView3.image = UIImage(named: tagsToShow[2])
+                }
+                
+                
+            }
+            else if workoutCount == 2 {
+                selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[0]]
+                gifSelectedImageView4.image = UIImage(named: tagsToShow[0])
+                
+                if tagsCount == 2{
+                    selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[1]]
+                    gifSelectedImageView3.image = UIImage(named: tagsToShow[1])
+                }
+                
+            }
+            else if workoutCount == 3 {
+                selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[0]]
+                gifSelectedImageView3.image = UIImage(named: tagsToShow[0])
             }
             
-            
-        }
-        else if workoutCount == 2 {
-            selectedMoveLabel3.text = Tags.tagDictionary[tagsToShow[0]]
-            gifSelectedImageView4.image = UIImage(named: tagsToShow[0])
-            
-            if tagsCount == 2{
-                selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[1]]
-                gifSelectedImageView3.image = UIImage(named: tagsToShow[1])
-            }
-    
-        }
-        else if workoutCount == 3 {
-            selectedMoveLabel4.text = Tags.tagDictionary[tagsToShow[0]]
-            gifSelectedImageView3.image = UIImage(named: tagsToShow[0])
-            }
-           
         }
         
         challenge = Challenge()
-            
+        
     }
     
-
-
+    
+    
     
     func convertToNSDate() -> NSDate{
         let today = NSDate()
@@ -195,38 +194,43 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
         return futureDate!
     }
-
-   
-
+    
+  
+    override func shouldAutorotate() -> Bool {
+        return true
+    }
     
     @IBAction func didPressRecord(sender: AnyObject) {
         //UIDevice.currentDevice().orientation
-    UIDevice.currentDevice().setValue(UIInterfaceOrientation.LandscapeRight.rawValue, forKey: "orientation")
+        
+        shouldAutorotate()
+        
         supportedInterfaceOrientations()
         imagePicker.sourceType = .Camera
         imagePicker.mediaTypes = [kUTTypeMovie as String]
         imagePicker.allowsEditing = false
         imagePicker.delegate = self
         imagePicker.videoMaximumDuration = Double(countdownStepper.value)
-        
+        UIDevice.currentDevice().setValue(UIInterfaceOrientation.LandscapeRight.rawValue, forKey: "orientation")
         presentViewController(imagePicker, animated: true, completion: {})
         
     }
-   
-   
-    @IBAction func backButton(sender: AnyObject) {
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         
         dismissViewControllerAnimated(true, completion: nil)
+        UIDevice.currentDevice().setValue(UIInterfaceOrientation.Portrait.rawValue, forKey: "orientation")
         
     }
     
- 
+    
     func dismissKeyboard() {
         
         view.endEditing(true)
-    
+        
     }
-
+    
     
     func textFieldShouldReturn(nameChallengeTextField: UITextField) -> Bool {
         nameChallengeTextField.resignFirstResponder()
@@ -243,6 +247,119 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         self.presentViewController(loginViewController, animated: true, completion: nil)
     }
     
+    
+    @IBAction func didHoldImage1(sender: UILongPressGestureRecognizer) {
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+            
+            // 2
+            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("File Deleted")
+                
+            })
+            
+            //
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("Cancelled")
+            })
+            
+            
+            // 4
+            optionMenu.addAction(deleteAction)
+            optionMenu.addAction(cancelAction)
+            
+            // 5
+            self.presentViewController(optionMenu, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func didHoldImage2(sender: UILongPressGestureRecognizer) {
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+            
+            // 2
+            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("File Deleted")
+                
+            })
+            
+            //
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("Cancelled")
+            })
+            
+            
+            // 4
+            optionMenu.addAction(deleteAction)
+            optionMenu.addAction(cancelAction)
+            
+            // 5
+            self.presentViewController(optionMenu, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func didHoldImage3(sender: UILongPressGestureRecognizer) {
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+            
+            // 2
+            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("File Deleted")
+                
+            })
+            
+            //
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("Cancelled")
+            })
+            
+            
+            // 4
+            optionMenu.addAction(deleteAction)
+            optionMenu.addAction(cancelAction)
+            
+            // 5
+            self.presentViewController(optionMenu, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func didHoldImage4(sender: UILongPressGestureRecognizer) {
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+            
+            // 2
+            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("File Deleted")
+                
+            })
+            
+            //
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+                (alert: UIAlertAction!) -> Void in
+                print("Cancelled")
+            })
+            
+            
+            // 4
+            optionMenu.addAction(deleteAction)
+            optionMenu.addAction(cancelAction)
+            
+            // 5
+            self.presentViewController(optionMenu, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func deadlineValueChanged(sender: AnyObject) {
         
         if deadlineStepper.value == 1{
@@ -257,16 +374,23 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         }
     }
     
+    
+    @IBAction func backButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
     @IBAction func editingDidEnd(sender: AnyObject) {
-
-        let challengeName = nameChallengeTextField.text        
+        
+        let challengeName = nameChallengeTextField.text
         if challengeName != ""
         {
             recordButton.enabled = true
         }
         
         challenge?.name = challengeName
-
+        
     }
     @IBAction func countdownValueChanged(sender: AnyObject) {
         
@@ -298,14 +422,14 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
         challenge?.deadline = convertToNSDate()
         challenge?.timeLimit = Int(countdownStepper.value)
-
+        
         challenge?.gifNames = gifsToShow
         challenge?.tagNames = tagsToShow
         challenge?.cTagNames = cTags
         let vc = segue.destinationViewController as! SendChallengeViewController
         vc.challenge = challenge
         vc.pickedVideo = pickedVideo
-
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
