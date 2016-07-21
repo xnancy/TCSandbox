@@ -18,7 +18,6 @@
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
 		82C6654D1D2DC18D00D642CA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */; };
-		82C94E6D1D38063B00E84D55 /* recordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */; };
 		920A08F11D38584300A3785A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920A08EF1D38584300A3785A /* Main.storyboard */; };
 		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
 		925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */; };
@@ -91,7 +90,6 @@
 		82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordVideoViewController.swift; sourceTree = "<group>"; };
 		91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		920A08F01D38584300A3785A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 				82C6653A1D2DBF9000D642CA /* LoginViewController.swift */,
 				925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */,
 				925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */,
-				82C94E6C1D38063B00E84D55 /* recordVideoViewController.swift */,
 				825C30161D383A05005D7171 /* myChallengesViewController.swift */,
 				82BB15981D3DD9FE0005B22D /* respondViewController.swift */,
 				82B7BBDB1D401C0A00932420 /* feedViewController.swift */,
@@ -628,7 +625,6 @@
 				82B7BBDC1D401C0A00932420 /* feedViewController.swift in Sources */,
 				9296630A1D36AFA400300614 /* searchFriendsTableViewCell.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
-				82C94E6D1D38063B00E84D55 /* recordVideoViewController.swift in Sources */,
 				92A924AC1D30572400637263 /* Gifs.swift in Sources */,
 				929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */,
 				82B7BBDE1D4025E100932420 /* feedTableViewCell.swift in Sources */,

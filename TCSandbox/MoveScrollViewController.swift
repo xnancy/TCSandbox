@@ -78,12 +78,14 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     //MARK:
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize.height = 1775
+        scrollView.contentSize.height = 2715
         updateView()
         updateTagView()
         
         collectionView1.delegate = self
         collectionView1.dataSource = self
+        
+        scrollButton.layer.cornerRadius = 0.5 * scrollButton.bounds.size.width
         
         collectionView2.delegate = self
         collectionView2.dataSource = self
@@ -287,7 +289,26 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     }
     
     @IBAction func scrollToBottom(sender: AnyObject) {
-    scrollView.setContentOffset(CGPointMake(0, max(scrollView.contentSize.height - scrollView.bounds.size.height, 0) ), animated: true)
+        //var scrollViewHeight: CGFloat = scrollView.frame.size.height
+        //let scrollContentSizeHeight: CGFloat = scrollView.contentSize.height
+        
+        let scrollOffset: CGFloat = scrollView.contentOffset.y
+        if scrollOffset == 0 {
+            scrollView.setContentOffset(CGPointMake(0, max(scrollView.contentSize.height - scrollView.bounds.size.height, 0) ), animated: true)
+            scrollButton.selected = true
+        }
+        else {
+            
+            scrollView.setContentOffset(CGPointMake(0, min(scrollView.contentSize.height - scrollView.bounds.size.height, 0) ), animated: true)
+            scrollButton.selected = false
+        }
+        
+
+        
+    
+        
+        
+        
     }
     
     @IBAction func cancelAction(sender: UIButton) {

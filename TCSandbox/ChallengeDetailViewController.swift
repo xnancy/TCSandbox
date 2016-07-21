@@ -133,7 +133,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {
             self.pickedVideo = pickedVideo
-            print(pickedVideo)
+    
         }
         
         imagePicker.dismissViewControllerAnimated(true) {

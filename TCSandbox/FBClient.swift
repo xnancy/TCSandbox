@@ -355,7 +355,6 @@ class FBClient: AnyObject {
             let userName = dict["name"] as! String
             let userProfileURL = NSURL(string: dict["profile_picture_url"] as! String)
             cell.challengeNameLabel.text = challenge.name
-            print(challenge.name)
             cell.profileImageView.setImageWithURL(userProfileURL!)
             cell.senderNameLabel.text = userName
             // Calculating timestamp for challenge

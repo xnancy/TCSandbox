@@ -26,7 +26,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     /* ---------- VIEW CONTROLLERS ---------- */
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIDevice.currentDevice().setValue(UIInterfaceOrientation.Portrait.rawValue, forKey: "orientation")
         // Remove back button bar name
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
         self.friendsSendChallengeTableView.delegate = self

@@ -28,9 +28,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var gifSelectedImageView2: UIImageView!
     @IBOutlet weak var gifSelectedImageView3: UIImageView!
     @IBOutlet weak var gifSelectedImageView4: UIImageView!
-    @IBOutlet weak var gifSelectedImageView5: UIImageView!
-    @IBOutlet weak var gifSelectedImageView6: UIImageView!
-    @IBOutlet weak var gifSelectedImageView7: UIImageView!
     @IBOutlet weak var nameChallengeTextField: UITextField!
     @IBOutlet weak var selectedMoveLabel1: UILabel!
     @IBOutlet weak var selectedMoveLabel2: UILabel!
@@ -63,8 +60,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var recordButton: UIButton!
   
     /* ---------- VARIABLES ---------- */
-    var gifManager = SwiftyGifManager(memoryLimit: 100)
-    var gifManager2 = SwiftyGifManager(memoryLimit: 100)
+    var gifManager = SwiftyGifManager(memoryLimit: 50)
+    var gifManager2 = SwiftyGifManager(memoryLimit: 50)
     var gifsToShow: [String] = []
     var tagsToShow: [String] = []
     var cTags: [String] = []
@@ -101,7 +98,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         countdownStepper.minimumValue = 15
         
         selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])]
-        gifSelectedImageView1.setGifImage(UIImage(gifName: gifsToShow[0]), manager: gifManager, loopCount: -1)
+        gifSelectedImageView1.setGifImage(UIImage(gifName: gifsToShow[0]), manager: gifManager, loopCount: 100)
         
         if movesCount == 1 {
             
@@ -118,23 +115,23 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
         if workoutCount == 2 {
         selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: -1)
+        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
         }
         
         if workoutCount == 3 {
         selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager2, loopCount: -1)
+        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
         selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
-        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager2, loopCount: -1)
+        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager, loopCount: 100)
         }
         
         if workoutCount == 4 {
         selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
-        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: -1)
+        gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
         selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]
-        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager2, loopCount: -1)
+        gifSelectedImageView4.setGifImage(UIImage(gifName: gifsToShow[2]), manager: gifManager, loopCount: 100)
         selectedMoveLabel4.text = Gifs.gifDictionary[(gifsToShow[3])]
-        gifSelectedImageView3.setGifImage(UIImage(gifName: gifsToShow[3]), manager: gifManager2, loopCount: -1)
+        gifSelectedImageView3.setGifImage(UIImage(gifName: gifsToShow[3]), manager: gifManager, loopCount: 100)
         }
             
             
@@ -199,7 +196,13 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         return futureDate!
     }
 
+   
+
+    
     @IBAction func didPressRecord(sender: AnyObject) {
+        //UIDevice.currentDevice().orientation
+    UIDevice.currentDevice().setValue(UIInterfaceOrientation.LandscapeLeft.rawValue, forKey: "orientation")
+        supportedInterfaceOrientations()
         imagePicker.sourceType = .Camera
         imagePicker.mediaTypes = [kUTTypeMovie as String]
         imagePicker.allowsEditing = false
@@ -207,6 +210,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         imagePicker.videoMaximumDuration = Double(countdownStepper.value)
         
         presentViewController(imagePicker, animated: true, completion: {})
+        
     }
    
    
@@ -312,7 +316,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         {
             self.pickedVideo = pickedVideo
             print("damn")
-            print(pickedVideo)
         }
         
         imagePicker.dismissViewControllerAnimated(true) {

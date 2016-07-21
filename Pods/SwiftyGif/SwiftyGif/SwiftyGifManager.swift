@@ -57,7 +57,7 @@ public class SwiftyGifManager {
         if let index = self.displayViews.indexOf(imageView) {
 
 
-                self.displayViews.removeAtIndex(index)
+               // self.displayViews.removeAtIndex(index)
                 self.totalGifSize -= imageView.gifImage!.imageSize!
                 if self.totalGifSize < memoryLimit && !self.haveCache {
                     self.haveCache = true
