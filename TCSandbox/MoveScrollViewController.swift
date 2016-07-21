@@ -210,11 +210,11 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     }
     
     override func viewDidAppear(animated: Bool) {
-        
-        if( traitCollection.forceTouchCapability == .Available){
-            
-            registerForPreviewingWithDelegate(self, sourceView: collectionView1)
-            //registerForPreviewingWithDelegate(self, sourceView: collectionView2)
+               if( traitCollection.forceTouchCapability == .Available){
+           
+                
+                registerForPreviewingWithDelegate(self, sourceView: collectionView1)
+                registerForPreviewingWithDelegate(self, sourceView: collectionView2)
 
         }
     }

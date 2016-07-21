@@ -14,7 +14,13 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
     //PEAK
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
 
-      if 
+      if CGRectContainsPoint(collectionView1.frame, location) {
+        
+        print(collectionView1.frame.maxY)
+        print(collectionView1.frame.minY)
+        print(location.y)
+        
+        print("running1")
         guard let previewVC = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC") as? PreviewViewController
             else{ return nil }
         guard let indexPath = collectionView1?.indexPathForItemAtPoint(location) else { return nil }
@@ -23,18 +29,23 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
         previewVC.preferredContentSize = CGSize(width: 245, height: 200)
         previewingContext.sourceRect = cell1.frame
         return previewVC
+       
+      }
+      
+     if CGRectContainsPoint(collectionView2.frame, location) {
         
-        
-        
-        guard let previewVC2 = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC2") as? PreviewViewController
+        print("running2")
+        guard let previewVC2 = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC2") as? Preview2ViewController
             else{ return nil }
         guard let indexPath2 = collectionView2.indexPathForItemAtPoint(location) else { return nil }
         guard let cell2 = collectionView2.cellForItemAtIndexPath(indexPath2) else { return nil}
         previewVC2.selectedItem2 = String(Gifs.row2[indexPath2.row])
+        previewVC2.preferredContentSize = CGSize(width: 245, height: 200)
+        previewingContext.sourceRect = cell2.frame
         return previewVC2
-    
-    
 
+        }
+        return nil
     }
     
     //POP
