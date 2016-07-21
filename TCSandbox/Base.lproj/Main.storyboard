@@ -144,7 +144,6 @@
                                             <outlet property="profileImageView" destination="N7d-UE-pHn" id="XMe-XJ-bOY"/>
                                             <outlet property="senderNameLabel" destination="di7-eP-2zL" id="KX1-Gq-bWv"/>
                                             <outlet property="timeLimitLabel" destination="TYT-BG-Xxi" id="PHN-m1-wS6"/>
-                                            <outletCollection property="gestureRecognizers" destination="uhf-sC-HdA" appends="YES" id="eFg-ah-Yey"/>
                                             <segue destination="G8O-Y5-uPl" kind="push" identifier="toChallengeDetailPage" id="0ST-fJ-yc5"/>
                                         </connections>
                                     </tableViewCell>
@@ -176,7 +175,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUp-rN-uYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="uhf-sC-HdA"/>
             </objects>
             <point key="canvasLocation" x="982.5" y="1912.5"/>
         </scene>
