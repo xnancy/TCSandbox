@@ -288,15 +288,15 @@ class FBClient: AnyObject {
         let challengeID = challenge.challengeID
         
         dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            var participants = snapshot.value!["participants"] as! [String]
-            var currentChallenges = snapshot.value!["challenges"] as! [String]
-            let indexOfChallenge = currentChallenges.indexOf(challengeID!)
-            let indexOfUser = participants.indexOf(FBID)
-            currentChallenges.removeAtIndex(indexOfChallenge!)
-            participants.removeAtIndex(indexOfUser!)
+            var participants = challenge.participants
+            var challenges = snapshot.value!["challenges"] as! [String]
+            let indexOfChallenge = challenges.indexOf(challengeID!)
+            let indexOfUser = participants!.indexOf(FBID)
+            challenges.removeAtIndex(indexOfChallenge!)
+            participants!.removeAtIndex(indexOfUser!)
             
-            dataRef.child("Users").child(FBID).updateChildValues(["challenges": currentChallenges])
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants])
+            dataRef.child("Users").child(FBID).updateChildValues(["challenges": challenges])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!])
             
         })  { (error) in
             print(error.localizedDescription)

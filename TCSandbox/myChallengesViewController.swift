@@ -85,6 +85,23 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         return cell!
     }
 
+    func tableView(tableView: UITableView, to editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            if (challengesSegmentedControl.selectedSegmentIndex == 1) {
+                FBClient.declineChallenge(pastChallenges![indexPath.row])
+                pastChallenges?.removeAtIndex(indexPath.row)
+            } else {
+                FBClient.declineChallenge(currentChallenges![indexPath.row])
+                currentChallenges?.removeAtIndex(indexPath.row)
+            }
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+    
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "Decline"
+    }
     /*  ---------- SEGUES ---------- */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("reached 0")
