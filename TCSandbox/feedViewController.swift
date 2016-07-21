@@ -14,14 +14,34 @@ import MobileCoreServices
 class feedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var feedTableView: UITableView!
-    var feedDictionary: NSDictionary?
+    var feedChallenges: [String]?
+    var feedDictionary: [String: String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         feedTableView.delegate = self
         feedTableView.dataSource = self
-
+        
+        
+        FBClient.retrieveFeed { (challenges, dictionary) in
+            self.feedChallenges = challenges
+            self.feedDictionary = dictionary
+            
+            //NOW DO THE SORTING
+            
+            self.feedChallenges?.sortInPlace({ (element1, element2) -> Bool in
+                
+                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
+                {
+                    return true
+                }
+                
+                return false
+            })
+            
+            self.feedTableView.reloadData()
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -31,13 +51,18 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //change this later
+        if feedChallenges == nil
+        {
+            return 0
+        }
+        
+        return (feedChallenges?.count)!
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("feedCell") as! feedTableViewCell
         
-        FBClient.retrieveChallengeFromID("-KN9IraZxMscisQQ-F-6") { (challenge) in
+        FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
             cell.challenge = challenge
             
             cell.challengeNameLabel.text = challenge.name

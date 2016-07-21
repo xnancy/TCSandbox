@@ -256,7 +256,17 @@ class FBClient: AnyObject {
                         
                         var feedChallenges = snapshot.value!["feed_challenges"] as! [String]
                         var feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
-                        feedChallenges.append(challengeID!)
+                        
+                        if feedChallenges[0] != "placeholder"
+                        {
+                            feedChallenges.append(challengeID!)
+                        }
+                        
+                        else
+                        {
+                            feedChallenges[0] = challengeID!
+                        }
+                        
                         feedDictionary.updateValue(dateFormatter.stringFromDate(deadline!), forKey: challengeID!)
                         
                         
@@ -418,5 +428,16 @@ class FBClient: AnyObject {
                 completion(URL!)
             }
         }
+    }
+    
+    class func retrieveFeed(completion: ([String], [String: String]) -> Void)
+    {
+        dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            let feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
+            let feedChallenges = snapshot.value!["feed_challenges"] as! [String]
+
+            completion(feedChallenges, feedDictionary)
+        })
     }
 }
