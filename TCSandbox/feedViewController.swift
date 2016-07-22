@@ -19,32 +19,15 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        feedTableView.insertSubview(refreshControl, atIndex: 0)
+
         
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
-        
-        FBClient.retrieveFeed { (challenges, dictionary) in
-            self.feedChallenges = challenges
-            self.feedDictionary = dictionary
-            print(challenges)
-            print(dictionary)
-            
-            //NOW DO THE SORTING
-            
-            self.feedChallenges?.sortInPlace({ (element1, element2) -> Bool in
-                print(element1)
-                print(element2)
-                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
-                {
-                    return true
-                }
-                
-                return false
-            })
-            
-            self.feedTableView.reloadData()
-        }
+        queryRequest()
         // Do any additional setup after loading the view.
     }
 
@@ -92,6 +75,38 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.dismissViewControllerAnimated(true) { 
             
+        }
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        
+        // ... Create the NSURLRequest (myRequest) ...
+        
+        // Configure session so that completion handler is executed on main UI thread
+        
+        queryRequest()
+        refreshControl.endRefreshing()
+    }
+    
+    func queryRequest()
+    {
+        FBClient.retrieveFeed { (challenges, dictionary) in
+            self.feedChallenges = challenges
+            self.feedDictionary = dictionary
+            
+            //NOW DO THE SORTING
+            
+            self.feedChallenges?.sortInPlace({ (element1, element2) -> Bool in
+                
+                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
+                {
+                    return true
+                }
+                
+                return false
+            })
+            
+            self.feedTableView.reloadData()
         }
     }
     

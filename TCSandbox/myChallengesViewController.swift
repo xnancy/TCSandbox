@@ -23,6 +23,10 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         super.viewDidLoad()
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        myChallengesTableView.insertSubview(refreshControl, atIndex: 0)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -116,6 +120,16 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
             vc.challenge = (sender as! myChallengeTableViewCell).challenge
             print("reached 0000")
         }
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        
+        // ... Create the NSURLRequest (myRequest) ...
+        
+        // Configure session so that completion handler is executed on main UI thread
+        
+        updateChallengeInfo()
+        refreshControl.endRefreshing()
     }
     
     /*
