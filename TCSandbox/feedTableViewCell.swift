@@ -11,10 +11,10 @@ import UIKit
 class feedTableViewCell: UITableViewCell {
     
     var challenge: Challenge?
+    var participants: [String]?
     
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var challengeVideoView: UIView!
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()

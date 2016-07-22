@@ -195,7 +195,7 @@ class FBClient: AnyObject {
     // Asynchronously retrieves challenges for the current user from the backend and performs the completion block on the result as an array of Challenge objects
     class func retrieveChallenges(completion: ([Challenge]) -> Void) {
         dataRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            let challengeIDs = snapshot.value!["Users"]!![(User.currentUser?.FBID)!]!!["challenges"] as! [String]
+            let challengeIDs = snapshot.value!["Users"]!![FBSDKAccessToken.currentAccessToken().userID]!!["challenges"] as! [String]
             var challenges: [Challenge] = []
             if challengeIDs.count > 1 {
                 for i in 1...challengeIDs.count - 1 {

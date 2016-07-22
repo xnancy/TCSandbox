@@ -38,12 +38,15 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     }
 
     func updateChallengeInfo() {
-        currentChallenges = []
-        pastChallenges = []
+        
         var allChallenges: [Challenge]? = []
         let currentDate = NSDate()
         
         FBClient.retrieveChallenges { (challenges: [Challenge]) in
+            
+            var currentChallenges: [Challenge] = []
+            var pastChallenges: [Challenge] = []
+
             // Get [Challenge] of user challenges
             for challenge in challenges {
                 allChallenges?.append(challenge)
@@ -51,11 +54,15 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
             // Split by past / current
             for challenge in allChallenges! {
                 if (challenge.deadline?.compare(currentDate) == NSComparisonResult.OrderedAscending) {
-                    self.pastChallenges?.append(challenge)
+                    pastChallenges.append(challenge)
                 } else {
-                    self.currentChallenges?.append(challenge)
+                    currentChallenges.append(challenge)
                 }
             }
+            
+            self.currentChallenges = currentChallenges
+            self.pastChallenges = pastChallenges
+            
             self.myChallengesTableView.reloadData()
         }
     }
