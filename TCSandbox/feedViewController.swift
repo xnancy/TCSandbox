@@ -70,13 +70,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
             cell.challenge = challenge
-            if (cell.participants == nil)
+            if (cell.participants == nil || cell.participants![0] != challenge.senderID)
             {
                 cell.currentParticipant = challenge.senderID
             }
             
-            cell.participants = challenge.participants
-            cell.participants!.append(challenge.senderID!)
+            cell.participants = [challenge.senderID!]
+            cell.participants! += challenge.participants!
             
             cell.challengeNameLabel.text = challenge.name
             
@@ -91,8 +91,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 player.play()
             })
         }
-        print("dam")
-
         return cell
     }
     
@@ -143,7 +141,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if currentIndex == 0
         {
-            cell.currentParticipant = cell.participants![(cell.participants?.count)!]
+            cell.currentParticipant = cell.participants![(cell.participants?.count)!-1]
         }
         
         else
@@ -164,7 +162,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let currentIndex = cell.participants?.indexOf(cell.currentParticipant!)
         
-        if currentIndex == cell.participants?.count
+        if currentIndex! == (cell.participants?.count)!-1
         {
             cell.currentParticipant = cell.participants![0]
         }
