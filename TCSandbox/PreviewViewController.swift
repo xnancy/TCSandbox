@@ -23,25 +23,19 @@ class PreviewViewController: UIViewController {
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
     
     var previewActions: [UIPreviewActionItem]{
-        
-        
         let item1 = UIPreviewAction(title: "5x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
            self.delegate?.incrementPeekAndPopCount()
             //print(self.delegate?.peekAndPopCount)
         }
         
         let item2 = UIPreviewAction(title: "10x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
-            
         }
         
         let item3 = UIPreviewAction(title: "20x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
-            
         }
         
         let item4 = UIPreviewAction(title: "MTM", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
-            
          }
-              
         return [item1, item2, item3, item4]
     }
     

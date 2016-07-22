@@ -280,7 +280,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     
     
     @IBAction func tagForbidAction(sender: UIButton) {
-        
         let alertController = UIAlertController(title: "Cannot Add Tag", message:
             "Tags must be added to one (1) move", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
@@ -302,23 +301,13 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             scrollView.setContentOffset(CGPointMake(0, min(scrollView.contentSize.height - scrollView.bounds.size.height, 0) ), animated: true)
             scrollButton.selected = false
         }
-        
-
-        
-    
-        
-        
-        
     }
     
     @IBAction func cancelAction(sender: UIButton) {
-        
         dismissViewControllerAnimated(true, completion: nil)
-        
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        
         if collectionView == collectionView1{
             return 1
         }else if collectionView == collectionView2{
@@ -332,11 +321,9 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         }else{
             return 1
         }
-        
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if collectionView == collectionView1{
             return gifs.count
         }else if collectionView == collectionView2{
