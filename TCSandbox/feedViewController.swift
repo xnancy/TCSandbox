@@ -27,11 +27,14 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         FBClient.retrieveFeed { (challenges, dictionary) in
             self.feedChallenges = challenges
             self.feedDictionary = dictionary
+            print(challenges)
+            print(dictionary)
             
             //NOW DO THE SORTING
             
             self.feedChallenges?.sortInPlace({ (element1, element2) -> Bool in
-                
+                print(element1)
+                print(element2)
                 if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
                 {
                     return true
