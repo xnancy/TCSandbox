@@ -112,13 +112,10 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     }
     /*  ---------- SEGUES ---------- */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("reached 0")
+       
         if (segue.identifier == "toChallengeDetailPage") {
-            print("reached 00")
             let vc = segue.destinationViewController as! ChallengeDetailViewController
-            print("reached 000")
             vc.challenge = (sender as! myChallengeTableViewCell).challenge
-            print("reached 0000")
         }
     }
     

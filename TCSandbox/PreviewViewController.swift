@@ -13,7 +13,6 @@ class PreviewViewController: UIViewController {
 
     
     @IBOutlet weak var selectedGifImageView: UIImageView!
-    
     @IBOutlet weak var textLabel: UILabel!
     
     
@@ -34,15 +33,14 @@ class PreviewViewController: UIViewController {
         let item3 = UIPreviewAction(title: "20x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
         }
         
-        let item4 = UIPreviewAction(title: "MTM", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item4 = UIPreviewAction(title: "More Than Me", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+
          }
         return [item1, item2, item3, item4]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(selectedItem)
         
         // Do any additional setup after loading the view.
     }

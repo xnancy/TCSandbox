@@ -41,7 +41,6 @@
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
 		92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92D985E31D2F0DC9008BF657 /* pushup.gif */; };
 		92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */; };
-		B81A45431D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45421D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift */; };
 		B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */; };
 		B81A457B1D3D45DF00D20C65 /* hipairplane.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A45781D3D45DF00D20C65 /* hipairplane.gif */; };
 		B81A457C1D3D45DF00D20C65 /* jump rope.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A45791D3D45DF00D20C65 /* jump rope.gif */; };
@@ -49,6 +48,8 @@
 		B81A457F1D3D45E800D20C65 /* pushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A457E1D3D45E800D20C65 /* pushups.gif */; };
 		B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */; };
 		B85082421D415F0C007D22C9 /* boxing.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082411D415F0C007D22C9 /* boxing.gif */; };
+		B85082801D42A1CE007D22C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B850827F1D42A1CE007D22C9 /* SettingsViewController.swift */; };
+		B85082861D42B25C007D22C9 /* challengeSent.png in Resources */ = {isa = PBXBuildFile; fileRef = B85082851D42B25C007D22C9 /* challengeSent.png */; };
 		B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70A1D3B183D000D3499 /* PreviewViewController.swift */; };
 		B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
@@ -121,7 +122,6 @@
 		92D985E31D2F0DC9008BF657 /* pushup.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushup.gif; path = TCSandbox/pushup.gif; sourceTree = "<group>"; };
 		92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B81A45421D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorExtensionViewController.swift; sourceTree = "<group>"; };
 		B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview2ViewController.swift; sourceTree = "<group>"; };
 		B81A45781D3D45DF00D20C65 /* hipairplane.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hipairplane.gif; path = TCSandbox/hipairplane.gif; sourceTree = "<group>"; };
 		B81A45791D3D45DF00D20C65 /* jump rope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "jump rope.gif"; path = "TCSandbox/jump rope.gif"; sourceTree = "<group>"; };
@@ -129,6 +129,8 @@
 		B81A457E1D3D45E800D20C65 /* pushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushups.gif; path = TCSandbox/pushups.gif; sourceTree = "<group>"; };
 		B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		B85082411D415F0C007D22C9 /* boxing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = boxing.gif; path = TCSandbox/boxing.gif; sourceTree = "<group>"; };
+		B850827F1D42A1CE007D22C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B85082851D42B25C007D22C9 /* challengeSent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = challengeSent.png; path = "../../../Documents/TCS Images/challengeSent.png"; sourceTree = "<group>"; };
 		B864E70A1D3B183D000D3499 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollExtensionViewController.swift; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,7 @@
 				925D8E881D2DA8E0000F44F7 /* View Controllers */,
 				925D8E581D2D79C1000F44F7 /* AppDelegate.swift */,
 				925D8E5F1D2D79C1000F44F7 /* Assets.xcassets */,
+				B85082851D42B25C007D22C9 /* challengeSent.png */,
 				920A08EF1D38584300A3785A /* Main.storyboard */,
 				925D8E611D2D79C1000F44F7 /* LaunchScreen.storyboard */,
 				925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */,
@@ -251,13 +254,13 @@
 			children = (
 				82BB15921D3D84FD0005B22D /* ViewController.swift */,
 				925D8E861D2DA894000F44F7 /* WorkoutEditorViewController.swift */,
-				B81A45421D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift */,
 				92A924AF1D3057B900637263 /* MoveScrollViewController.swift */,
 				B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */,
 				B864E70A1D3B183D000D3499 /* PreviewViewController.swift */,
 				B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */,
 				B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */,
 				82C6653A1D2DBF9000D642CA /* LoginViewController.swift */,
+				B850827F1D42A1CE007D22C9 /* SettingsViewController.swift */,
 				925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */,
 				925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */,
 				825C30161D383A05005D7171 /* myChallengesViewController.swift */,
@@ -455,6 +458,7 @@
 				925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */,
 				920A08F11D38584300A3785A /* Main.storyboard in Resources */,
 				925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */,
+				B85082861D42B25C007D22C9 /* challengeSent.png in Resources */,
 				92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */,
 				B81A457F1D3D45E800D20C65 /* pushups.gif in Resources */,
 			);
@@ -604,7 +608,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B81A45431D3C4BA600D20C65 /* WorkoutEditorExtensionViewController.swift in Sources */,
 				825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */,
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */,
@@ -628,6 +631,7 @@
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
 				82B7BBDC1D401C0A00932420 /* feedViewController.swift in Sources */,
 				9296630A1D36AFA400300614 /* searchFriendsTableViewCell.swift in Sources */,
+				B85082801D42A1CE007D22C9 /* SettingsViewController.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
 				92A924AC1D30572400637263 /* Gifs.swift in Sources */,
 				929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */,

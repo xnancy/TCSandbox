@@ -201,7 +201,6 @@ class FBClient: AnyObject {
                 for i in 1...challengeIDs.count - 1 {
                     let id = challengeIDs[i]
                     let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
-                    print("\(newChallengeDictionary)")
                     let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: newChallengeDictionary["time_limit"] as! Int, participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String, completedBy: newChallengeDictionary["completed_by"] as! [String])
                     challenges.append(newChallengeObject)
                     

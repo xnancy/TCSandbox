@@ -17,7 +17,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     
     /* ---------- OUTLETS ---------- */
     @IBOutlet weak var friendsSendChallengeTableView: UITableView!
-    
+    @IBOutlet weak var confirmationImageView: UIImageView!
     /* ---------- VARIABLES ---------- */
     var friendIDs: [String]?
     var challenge: Challenge?
@@ -51,6 +51,20 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         return cell
     }
     
+    func popupImage() {
+        confirmationImageView.hidden = false
+        confirmationImageView.alpha = 1.0
+        // Then fades it away after 2 seconds (the cross-fade animation will take 0.5s)
+        UIView.animateWithDuration(1.0, delay: 1.0, options: [], animations: {() -> Void in
+            // Animate the alpha value of your imageView from 1.0 to 0.0 here
+            self.confirmationImageView.alpha = 0.0
+            }, completion: {(finished: Bool) -> Void in
+                // Once the animation is completed and the alpha has gone to 0.0, hide the view for good
+                self.confirmationImageView.hidden = true
+        })
+    }
+
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (friendIDs == nil) { return 0 }
         return friendIDs!.count - 1
@@ -66,10 +80,23 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
+    
+    func delay(delay: Double, closure: ()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(),
+            closure
+        )
+    }
+    
     @IBAction func didSendChallenge(sender: AnyObject) {
         //ADD GIF NAMES
         //ADD TAG NAMES
         //ADD CHALLENGE NAME
+        
         if (challenge?.participants)! == []
         {
             //SEND A NOTIFICATION THAT THEY NEED TO SELECT PARTICIPANTS!
@@ -80,8 +107,14 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
             FBClient.uploadChallenge(challenge!)
             FBClient.uploadVideo(pickedVideo!, challenge: challenge!)
             
+            
             let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
-            self.presentViewController(homeViewController, animated: true, completion: nil)
+            
+            popupImage()
+            
+            delay(1.7){
+           self.presentViewController(homeViewController, animated: false, completion: nil)
+            }
         }
     }
     

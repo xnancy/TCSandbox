@@ -17,7 +17,7 @@ import FBSDKLoginKit
 
 
 
-class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     /* ---------- OUTLETS ---------- */
     
@@ -201,7 +201,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     }
     
     @IBAction func didPressRecord(sender: AnyObject) {
-        //UIDevice.currentDevice().orientation
+        UIDevice.currentDevice().orientation
         
         shouldAutorotate()
         
@@ -439,7 +439,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {
             self.pickedVideo = pickedVideo
-            print("damn")
+
         }
         
         imagePicker.dismissViewControllerAnimated(true) {

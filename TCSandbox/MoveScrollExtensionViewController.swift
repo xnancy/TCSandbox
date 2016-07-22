@@ -13,8 +13,12 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
     
     //PEAK
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        
+     
+//        if CGRectContainsPoint(collectionView1.frame, location) {
+    
         print("running1")
+        print(location.x)
+        print(location.y)
         guard let previewVC = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC") as? PreviewViewController
             else{ return nil }
         guard let indexPath = collectionView1?.indexPathForItemAtPoint(location) else { return nil }
@@ -23,18 +27,21 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
         previewVC.preferredContentSize = CGSize(width: 245, height: 200)
         previewingContext.sourceRect = cell1.frame
         return previewVC
-       
-      
-        
-        print("running2")
-        guard let previewVC2 = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC2") as? Preview2ViewController
-            else{ return nil }
-        guard let indexPath2 = collectionView2.indexPathForItemAtPoint(location) else { return nil }
-        guard let cell2 = collectionView2.cellForItemAtIndexPath(indexPath2) else { return nil}
-        previewVC2.selectedItem2 = String(Gifs.row2[indexPath2.row])
-        previewVC2.preferredContentSize = CGSize(width: 245, height: 200)
-        previewingContext.sourceRect = cell2.frame
-        return previewVC2
+//       
+//      }else{
+//        
+//        print("running2")
+//        print(location.x)
+//        print(location.y)
+//        guard let previewVC2 = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC2") as? Preview2ViewController
+//            else{ return nil }
+//        guard let indexPath2 = collectionView2.indexPathForItemAtPoint(location) else { return nil }
+//        guard let cell2 = collectionView2.cellForItemAtIndexPath(indexPath2) else { return nil}
+//        previewVC2.selectedItem2 = String(Gifs.row2[indexPath2.row])
+//        previewVC2.preferredContentSize = CGSize(width: 245, height: 200)
+//        previewingContext.sourceRect = cell2.frame
+//        return previewVC2
+//      }
     }
     
     //POP

@@ -59,7 +59,7 @@ class GifsCollectionViewCell: UICollectionViewCell{
 }
 
 
-class Gifs2CollectionViewCell: UICollectionViewCell {
+class Gifs2CollectionViewCell: UICollectionViewCell  {
     
     @IBOutlet weak var featuredImage2:UIImageView!
     @IBOutlet weak var gifDescription2:UILabel!

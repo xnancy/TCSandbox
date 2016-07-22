@@ -21,20 +21,20 @@ class Preview2ViewController: UIViewController {
     var previewActions: [UIPreviewActionItem]{
         
         
-        let item1 = UIPreviewAction(title: "LTM", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item1 = UIPreviewAction(title: "Longer Than Me", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
             self.delegate?.incrementPeekAndPopCount()
             //print(self.delegate?.peekAndPopCount)
         }
         
-        let item2 = UIPreviewAction(title: "FTM", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item2 = UIPreviewAction(title: "Faster Than Me", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
             
         }
         
-        let item3 = UIPreviewAction(title: "HTM", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item3 = UIPreviewAction(title: "Higher Than Me", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
             
         }
         
-        let item4 = UIPreviewAction(title: "BTM", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item4 = UIPreviewAction(title: "Better Than Me", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
             
         }
         

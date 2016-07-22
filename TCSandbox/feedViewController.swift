@@ -13,11 +13,14 @@ import MobileCoreServices
 
 class feedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
     @IBOutlet weak var feedTableView: UITableView!
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
@@ -30,11 +33,18 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         queryRequest()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        //popupImage()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if feedChallenges == nil
@@ -69,14 +79,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    @IBAction func didTapLogout(sender: AnyObject) {
-        
-        FBClient.logout()
-        
-        self.dismissViewControllerAnimated(true) { 
-            
-        }
-    }
+
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
         

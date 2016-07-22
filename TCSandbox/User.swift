@@ -20,10 +20,8 @@ class User: AnyObject {
     var email: String?
     var friends: [String]? = [] {
         willSet {
-            print(newValue)
         }
         didSet {
-            print(oldValue)
         }
     }
     
