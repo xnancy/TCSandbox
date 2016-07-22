@@ -15,9 +15,11 @@ import SwiftyGif
 import FBSDKCoreKit
 import FBSDKLoginKit
 
+protocol WorkoutEditorDelegate{
+    func didPressRecord(sender: AnyObject)
+}
 
-
-class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, WorkoutEditorDelegate, UIPopoverPresentationControllerDelegate {
     
     /* ---------- OUTLETS ---------- */
     
@@ -55,6 +57,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var barLabel3: UILabel!
     @IBOutlet weak var barLabel4: UILabel!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var blurVisualEffectView: UIVisualEffectView!
     
     /* ---------- VARIABLES ---------- */
     var gifManager = SwiftyGifManager(memoryLimit: 50)
@@ -85,7 +89,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
-        
+       
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WorkoutEditorViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -200,6 +204,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         return true
     }
     
+
+    
     @IBAction func didPressRecord(sender: AnyObject) {
         UIDevice.currentDevice().orientation
         
@@ -247,119 +253,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         self.presentViewController(loginViewController, animated: true, completion: nil)
     }
     
-    
-    @IBAction func didHoldImage1(sender: UILongPressGestureRecognizer) {
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
-            
-            // 2
-            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("File Deleted")
-                
-            })
-            
-            //
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("Cancelled")
-            })
-            
-            
-            // 4
-            optionMenu.addAction(deleteAction)
-            optionMenu.addAction(cancelAction)
-            
-            // 5
-            self.presentViewController(optionMenu, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func didHoldImage2(sender: UILongPressGestureRecognizer) {
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
-            
-            // 2
-            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("File Deleted")
-                
-            })
-            
-            //
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("Cancelled")
-            })
-            
-            
-            // 4
-            optionMenu.addAction(deleteAction)
-            optionMenu.addAction(cancelAction)
-            
-            // 5
-            self.presentViewController(optionMenu, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func didHoldImage3(sender: UILongPressGestureRecognizer) {
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
-            
-            // 2
-            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("File Deleted")
-                
-            })
-            
-            //
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("Cancelled")
-            })
-            
-            
-            // 4
-            optionMenu.addAction(deleteAction)
-            optionMenu.addAction(cancelAction)
-            
-            // 5
-            self.presentViewController(optionMenu, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func didHoldImage4(sender: UILongPressGestureRecognizer) {
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
-            
-            // 2
-            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("File Deleted")
-                
-            })
-            
-            //
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
-                (alert: UIAlertAction!) -> Void in
-                print("Cancelled")
-            })
-            
-            
-            // 4
-            optionMenu.addAction(deleteAction)
-            optionMenu.addAction(cancelAction)
-            
-            // 5
-            self.presentViewController(optionMenu, animated: true, completion: nil)
-        }
-    }
-    
+       
     @IBAction func deadlineValueChanged(sender: AnyObject) {
         
         if deadlineStepper.value == 1{
@@ -426,11 +320,48 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         challenge?.gifNames = gifsToShow
         challenge?.tagNames = tagsToShow
         challenge?.cTagNames = cTags
-        let vc = segue.destinationViewController as! SendChallengeViewController
-        vc.challenge = challenge
-        vc.pickedVideo = pickedVideo
+       // let vc = segue.destinationViewController as! SendChallengeViewController
+       // vc.challenge = challenge
+       // vc.pickedVideo = pickedVideo
         
     }
+    
+    
+   
+    @IBAction func didpressConfirm(sender: AnyObject) {
+        blurVisualEffectView.hidden = false
+        let storyboard : UIStoryboard = UIStoryboard(
+            name: "Main",
+            bundle: nil)
+        let confirmationVC: ConfirmationPopOverViewController = (storyboard.instantiateViewControllerWithIdentifier("ConfirmationVC") as? ConfirmationPopOverViewController)!
+        
+        confirmationVC.modalPresentationStyle = .Popover
+        confirmationVC.preferredContentSize = CGSizeMake(400, 200)
+        
+        let popOverVC = confirmationVC.popoverPresentationController
+        popOverVC?.sourceView = view
+        popOverVC?.permittedArrowDirections = .Any
+        popOverVC?.delegate = self
+        popOverVC?.sourceRect = confirmButton.frame
+        presentViewController(
+            confirmationVC,
+            animated: true,
+            completion: nil)
+        confirmButton.hidden = true
+        
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
+        blurVisualEffectView.hidden = true
+        //confirmButton.hidden = false
+        
+    }
+    
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle{
+        return .None
+    }
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         

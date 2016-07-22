@@ -1412,8 +1412,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name Your Challenge" textAlignment="center" minimumFontSize="12" background="titleLine" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-kY-lse">
-                                <rect key="frame" x="37" y="41" width="301" height="26"/>
+                            <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edit Title ..... " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" background="titleLine" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-kY-lse">
+                                <rect key="frame" x="46" y="35" width="301" height="37"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
@@ -1444,7 +1444,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wQ-Un-n7x">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="609" width="375" height="58"/>
                                 <color key="backgroundColor" red="0.59700944" green="0.78923196770000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="RECORD">
@@ -1611,20 +1611,27 @@
                                     <outletCollection property="gestureRecognizers" destination="EOn-4s-KU2" appends="YES" id="9sY-Ra-VeX"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ljr-lO-tEj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONFIRM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bne-UZ-hzd">
-                                        <rect key="frame" x="35" y="190" width="305" height="288"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="5" height="8"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noun_100673_cc" translatesAutoresizingMaskIntoConstraints="NO" id="H6p-e0-uDy">
+                                <rect key="frame" x="310" y="37" width="25" height="22"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-BL-SAv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="47f-4Z-ctO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <gestureRecognizers/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0f-8w-6Bo">
+                                <rect key="frame" x="49" y="609" width="276" height="55"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="RECORD"/>
+                                <connections>
+                                    <action selector="didpressConfirm:" destination="cIN-lL-ItH" eventType="touchUpInside" id="QSK-m3-Mvs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1652,6 +1659,8 @@
                         <outlet property="barLabel2" destination="aG1-fY-Mm1" id="sJx-yY-mQd"/>
                         <outlet property="barLabel3" destination="NGw-zH-xla" id="b5H-P8-eIm"/>
                         <outlet property="barLabel4" destination="XbJ-Ik-ljr" id="qSI-zf-vK1"/>
+                        <outlet property="blurVisualEffectView" destination="HbI-BL-SAv" id="PcX-dj-sCz"/>
+                        <outlet property="confirmButton" destination="Z0f-8w-6Bo" id="VRH-bu-cu4"/>
                         <outlet property="countdownLabel" destination="1yA-Q2-9ek" id="qQz-zl-Gr4"/>
                         <outlet property="countdownStepper" destination="fPO-81-wSG" id="0nA-zd-X1E"/>
                         <outlet property="daysWeekLabel" destination="5rf-vu-yG6" id="V9f-Fw-3MJ"/>
@@ -1783,6 +1792,80 @@
             </objects>
             <point key="canvasLocation" x="1966.5" y="1912.5"/>
         </scene>
+        <!--Confirmation Pop Over View Controller-->
+        <scene sceneID="Kxc-44-j8M">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmationVC" id="PVx-ml-wKd" customClass="ConfirmationPopOverViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="anw-QO-oQx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z8g-Ef-dKU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4B6-yf-ZYq">
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-SQ-ZGk">
+                                <rect key="frame" x="0.0" y="0.0" width="295" height="200"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="92E-iZ-Di4">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have choosen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzn-vE-1f9">
+                                            <rect key="frame" x="27" y="17" width="144" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.5539995781" blue="0.46758915239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X70-wg-akF">
+                                            <rect key="frame" x="27" y="46" width="240" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.5539995781" blue="0.46758915239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Triple Tap Record to Confirm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdZ-xO-OT0">
+                                            <rect key="frame" x="11" y="155" width="273" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                            <color key="textColor" red="1" green="0.5539995781" blue="0.46758915239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3u-9x-KB8">
+                                            <rect key="frame" x="27" y="89" width="240" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.5539995781" blue="0.46758915239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61i-32-aO6">
+                                            <rect key="frame" x="27" y="67" width="240" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.5539995781" blue="0.46758915239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnE-HB-bLR">
+                                            <rect key="frame" x="27" y="110" width="240" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.5539995781" blue="0.46758915239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VUH-SQ-ZGk" firstAttribute="leading" secondItem="4B6-yf-ZYq" secondAttribute="leading" id="Blj-q6-haL"/>
+                            <constraint firstItem="VUH-SQ-ZGk" firstAttribute="bottom" secondItem="Z8g-Ef-dKU" secondAttribute="top" id="Grf-bX-rR5"/>
+                            <constraint firstAttribute="trailing" secondItem="VUH-SQ-ZGk" secondAttribute="trailing" id="O4s-Hy-KBb"/>
+                            <constraint firstItem="VUH-SQ-ZGk" firstAttribute="top" secondItem="4B6-yf-ZYq" secondAttribute="top" id="wJi-W1-Kx6"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="295" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aA0-9r-Sd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983.5" y="577"/>
+        </scene>
         <!--Preview VC 2-->
         <scene sceneID="MQi-7S-06r">
             <objects>
@@ -1853,6 +1936,7 @@
         <image name="fullplank" width="256" height="211"/>
         <image name="jump rope" width="397" height="298"/>
         <image name="momballroll" width="150" height="146"/>
+        <image name="noun_100673_cc" width="50" height="43"/>
         <image name="pink" width="2100" height="1500"/>
         <image name="pushups" width="322" height="323"/>
         <image name="redCircle" width="2100" height="1500"/>
