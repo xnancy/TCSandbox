@@ -413,7 +413,13 @@ class FBClient: AnyObject {
                 completedBy.append(FBSDKAccessToken.currentAccessToken().userID)
                 let updates = ["completed_by": completedBy]
                 dataRef.child("Challenges").child(challenge.challengeID!).updateChildValues(updates)
-                //update firebase
+                
+                dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                    
+                    var challengesCompleted = snapshot.value!["challenges_completed"] as! Int
+                    let updates = ["challenges_completed": challengesCompleted+1]
+                    dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).updateChildValues(updates)
+                })
             }
         }
     }

@@ -148,7 +148,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let vc = segue.destinationViewController as! SendChallengeViewController
+        let vc = segue.destinationViewController as! respondViewController
         
         vc.challenge = challenge
         vc.pickedVideo = pickedVideo
