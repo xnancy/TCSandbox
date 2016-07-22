@@ -12,6 +12,7 @@ class feedTableViewCell: UITableViewCell {
     
     var challenge: Challenge?
     var participants: [String]?
+    var currentParticipant: String?
     
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var challengeVideoView: UIView!

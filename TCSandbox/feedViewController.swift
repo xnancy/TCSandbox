@@ -70,12 +70,17 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
             cell.challenge = challenge
+            if (cell.participants == nil)
+            {
+                cell.currentParticipant = challenge.senderID
+            }
+            
             cell.participants = challenge.participants
             cell.participants!.append(challenge.senderID!)
             
             cell.challengeNameLabel.text = challenge.name
             
-            FBClient.downloadVideo(challenge.challengeID!, userID: (challenge.senderID)!, completion: {(URL: NSURL) in
+            FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
                 
                 let player = AVPlayer(URL: URL)
                 let movie = AVPlayerViewController()
@@ -86,7 +91,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 player.play()
             })
         }
-        
+        print("dam")
+
         return cell
     }
     
@@ -127,20 +133,48 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func handleSwipeLeft(gestureRecognizer: UISwipeGestureRecognizer) {
-        var point: CGPoint = gestureRecognizer.locationInView(self.feedTableView)
-        var indexPath: NSIndexPath = self.feedTableView.indexPathForRowAtPoint(point)!
+        let point: CGPoint = gestureRecognizer.locationInView(self.feedTableView)
+        let indexPath: NSIndexPath = self.feedTableView.indexPathForRowAtPoint(point)!
         // Action...
         // Action...
-        print("damn")
+        let cell = feedTableView.cellForRowAtIndexPath(indexPath) as! feedTableViewCell
+        
+        let currentIndex = cell.participants?.indexOf(cell.currentParticipant!)
+        
+        if currentIndex == 0
+        {
+            cell.currentParticipant = cell.participants![(cell.participants?.count)!]
+        }
+        
+        else
+        {
+            cell.currentParticipant = cell.participants![currentIndex!-1]
+        }
+
+        feedTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
     }
     
     
     func handleSwipeRight(gestureRecognizer: UISwipeGestureRecognizer) {
-        var point: CGPoint = gestureRecognizer.locationInView(self.feedTableView)
-        var indexPath: NSIndexPath = self.feedTableView.indexPathForRowAtPoint(point)!
+        let point: CGPoint = gestureRecognizer.locationInView(self.feedTableView)
+        let indexPath: NSIndexPath = self.feedTableView.indexPathForRowAtPoint(point)!
         // Action...
         // Action...
-        print("damn")
+        let cell = feedTableView.cellForRowAtIndexPath(indexPath) as! feedTableViewCell
+        
+        let currentIndex = cell.participants?.indexOf(cell.currentParticipant!)
+        
+        if currentIndex == cell.participants?.count
+        {
+            cell.currentParticipant = cell.participants![0]
+        }
+        
+        else
+        {
+            cell.currentParticipant = cell.participants![currentIndex!+1]
+        }
+        
+        feedTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
     }
     
 
