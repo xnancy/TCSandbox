@@ -213,8 +213,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
                if( traitCollection.forceTouchCapability == .Available){
            
                 
-                registerForPreviewingWithDelegate(self, sourceView: collectionView1)
-                registerForPreviewingWithDelegate(self, sourceView: collectionView2)
+                registerForPreviewingWithDelegate(self, sourceView: view)
+                //registerForPreviewingWithDelegate(self, sourceView: collectionView2)
 
         }
     }

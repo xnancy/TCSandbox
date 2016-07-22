@@ -1756,7 +1756,7 @@
         <image name="pink" width="2100" height="1500"/>
         <image name="pushups" width="322" height="323"/>
         <image name="redCircle" width="2100" height="1500"/>
-        <image name="titleLine" width="2100" height="669"/>
+        <image name="titleLine" width="1050" height="334"/>
         <image name="weightrock" width="325" height="308"/>
         <image name="yellow" width="2100" height="1500"/>
     </resources>
