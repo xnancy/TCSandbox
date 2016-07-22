@@ -24,17 +24,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         FBClient.initializeDateFormatter()
         
             FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
-            if let user = user {
+            let FBID = FBSDKAccessToken.currentAccessToken().userID
+            if let FBID = FBID {
                 //User is signed in.
                 //FBClient.logout()
-                let FBID = FBSDKAccessToken.currentAccessToken().userID
                 User.updateCurrentUser()
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
                 self.presentViewController(homeViewController, animated: true, completion: nil)
             }
-            
-                else
+            else
             {
                 // No user is signed in.
                 self.loginButton.hidden = false

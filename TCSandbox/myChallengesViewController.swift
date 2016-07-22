@@ -26,7 +26,9 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
+        currentChallenges = []
+        pastChallenges = []
         updateChallengeInfo()
         self.tabBarController?.tabBar.hidden = false
     }
@@ -67,8 +69,10 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     /* ---------- TABLE VIEW ---------- */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (challengesSegmentedControl.selectedSegmentIndex == 1) {
+            if (pastChallenges == nil) { return 0 }
             return (pastChallenges?.count)!
         } else {
+            if (currentChallenges == nil) { return 0 }
             return (currentChallenges?.count)!
         }
     }
@@ -85,7 +89,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         return cell!
     }
 
-    func tableView(tableView: UITableView, to editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
             if (challengesSegmentedControl.selectedSegmentIndex == 1) {

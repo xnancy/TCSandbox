@@ -396,7 +396,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.selectButton.selected = collection4Selected[indexPath.row]
             return cell
         } else if collectionView == collectionView5{
-            
             let cell = collectionView5.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier5, forIndexPath: indexPath) as! Gifs5CollectionViewCell
             cell.delegate = self
             cell.isSelected = collection5Selected[indexPath.row]
@@ -406,7 +405,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.selectButton.selected = collection5Selected[indexPath.row]
             return cell
         } else {
-            
             let cell = collectionView6.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier6, forIndexPath: indexPath) as! Gifs6CollectionViewCell
             cell.delegate = self
             cell.isSelected = collection6Selected[indexPath.row]

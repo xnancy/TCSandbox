@@ -363,7 +363,9 @@ class FBClient: AnyObject {
             let minutesToDeadline = challenge.deadline?.minutes(from: NSDate())
             let hoursToDeadline = challenge.deadline?.hours(from: NSDate())
             let daysToDeadline = challenge.deadline?.days(from: NSDate())
-            if (minutesToDeadline < 60) {
+            if (minutesToDeadline < 1) {
+                cell.timeLimitLabel.text = ""
+            } else if (minutesToDeadline < 60) {
                 cell.timeLimitLabel.text = String(minutesToDeadline!) + " mins"
             } else if (hoursToDeadline < 24) {
                 cell.timeLimitLabel.text = String(hoursToDeadline!) + " hrs"
