@@ -1,13 +1,13 @@
 import Foundation
 import UIKit
+import SwiftyGif
 
 
 class Gifs
 {
     // var imageName: String!
     
-    var featuredImage: UIImage!
-    
+    var featuredImage: String!
     var description = ""
     
     static let gifDictionary: [String: String] = [
@@ -34,7 +34,7 @@ class Gifs
         
         "wallsit","boxing", "running", "lifting", "windshieldwipers", "stepups", "jumpingjacks"    ]
     
-    init (featuredImage: UIImage!, description: String){
+    init (featuredImage: String, description: String){
         
         
         self.featuredImage = featuredImage
@@ -48,7 +48,7 @@ class Gifs
     {
         var gifs: [Gifs] = []
         for name in row1 {
-            let new = Gifs(featuredImage: UIImage(named: name)!, description: gifDictionary[name]!)
+            let new = Gifs(featuredImage: name, description: gifDictionary[name]!)
             gifs.append(new)
         }
         return gifs
@@ -57,7 +57,7 @@ class Gifs
     {
         var gifs: [Gifs] = []
         for name in row2 {
-            let new = Gifs(featuredImage: UIImage(named: name)!, description: gifDictionary[name]!)
+            let new = Gifs(featuredImage: name, description: gifDictionary[name]!)
             gifs.append(new)
         }
         return gifs

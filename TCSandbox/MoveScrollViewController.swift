@@ -82,13 +82,13 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         updateView()
         updateTagView()
         
-        collectionView1.delegate = self
-        collectionView1.dataSource = self
+        //collectionView1.delegate = self
+        //collectionView1.dataSource = self
         
         scrollButton.layer.cornerRadius = 0.5 * scrollButton.bounds.size.width
         
-        collectionView2.delegate = self
-        collectionView2.dataSource = self
+        //collectionView2.delegate = self
+        //collectionView2.dataSource = self
         
         // Do any additional setup after loading the view.
         
@@ -212,6 +212,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     override func viewDidAppear(animated: Bool) {
                if( traitCollection.forceTouchCapability == .Available){
                 registerForPreviewingWithDelegate(self, sourceView: collectionView1)
+                registerForPreviewingWithDelegate(self, sourceView: view)
                 registerForPreviewingWithDelegate(self, sourceView: collectionView2)
         }
     }

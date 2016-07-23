@@ -15,7 +15,7 @@ class GifsCollectionViewCell: UICollectionViewCell{
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var featuredImage:UIImageView!
     @IBOutlet weak var gifDescription:UILabel!
-    var gifmanager = SwiftyGifManager(memoryLimit: 20)
+    var gifManager = SwiftyGifManager(memoryLimit: 50)
     var isSelected:Bool! = false
     var delegate: MoveScrollViewControllerDelegate?
     var gifs: Gifs! {
@@ -29,7 +29,6 @@ class GifsCollectionViewCell: UICollectionViewCell{
         
         let collectionView = self.superview as! UICollectionView
         let index = collectionView.indexPathForCell(self)
-        
         
         
         if selectButton.selected == true {
@@ -49,8 +48,10 @@ class GifsCollectionViewCell: UICollectionViewCell{
         
     }
     
+    
     func updateUI(){
-        featuredImage?.image = gifs.featuredImage
+        
+        featuredImage?.setGifImage(UIImage(gifName: gifs.featuredImage), manager: gifManager, loopCount: 100)
         gifDescription?.text! = gifs.description
         
     }
@@ -101,7 +102,7 @@ class Gifs2CollectionViewCell: UICollectionViewCell  {
     
     func updateUI(){
         
-        featuredImage2?.image! = gifs2.featuredImage
+        featuredImage2?.image = UIImage(named:gifs2.featuredImage)
         gifDescription2?.text! = gifs2.description
         
     }

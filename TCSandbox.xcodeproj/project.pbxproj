@@ -39,7 +39,6 @@
 		92A924AC1D30572400637263 /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AB1D30572400637263 /* Gifs.swift */; };
 		92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */; };
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
-		92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92D985E31D2F0DC9008BF657 /* pushup.gif */; };
 		92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */; };
 		B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */; };
 		B81A457B1D3D45DF00D20C65 /* hipairplane.gif in Resources */ = {isa = PBXBuildFile; fileRef = B81A45781D3D45DF00D20C65 /* hipairplane.gif */; };
@@ -121,7 +120,6 @@
 		92A924AB1D30572400637263 /* Gifs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
 		92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92A924AF1D3057B900637263 /* MoveScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollViewController.swift; sourceTree = "<group>"; };
-		92D985E31D2F0DC9008BF657 /* pushup.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushup.gif; path = TCSandbox/pushup.gif; sourceTree = "<group>"; };
 		92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview2ViewController.swift; sourceTree = "<group>"; };
@@ -319,7 +317,6 @@
 		B84012CA1D39BEB200D99A59 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
-				92D985E31D2F0DC9008BF657 /* pushup.gif */,
 				B81A45781D3D45DF00D20C65 /* hipairplane.gif */,
 				B81A457E1D3D45E800D20C65 /* pushups.gif */,
 				B85082411D415F0C007D22C9 /* boxing.gif */,
@@ -465,7 +462,6 @@
 				920A08F11D38584300A3785A /* Main.storyboard in Resources */,
 				925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */,
 				B850828E1D42D5DD007D22C9 /* challengeSent.png in Resources */,
-				92D985E41D2F0DC9008BF657 /* pushup.gif in Resources */,
 				B81A457F1D3D45E800D20C65 /* pushups.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
