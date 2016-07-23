@@ -78,7 +78,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     //MARK:
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize.height = 2715
+        scrollView.contentSize.height = 2510
         updateView()
         updateTagView()
         

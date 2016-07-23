@@ -337,12 +337,17 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
         confirmationVC.modalPresentationStyle = .Popover
         confirmationVC.preferredContentSize = CGSizeMake(400, 200)
-        
+        confirmationVC.gifsNames = gifsToShow
+        confirmationVC.tagNames = tagsToShow
+        confirmationVC.gifCount = workoutCount
+        confirmationVC.tagCount = tagsCount
         let popOverVC = confirmationVC.popoverPresentationController
         popOverVC?.sourceView = view
         popOverVC?.permittedArrowDirections = .Any
         popOverVC?.delegate = self
         popOverVC?.sourceRect = confirmButton.frame
+    
+        
         presentViewController(
             confirmationVC,
             animated: true,
