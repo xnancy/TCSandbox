@@ -32,10 +32,10 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         queryRequest()
         
-        var gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
+        let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
         gestureLeft.direction = .Left
         self.feedTableView.addGestureRecognizer(gestureLeft)
-        var gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
+        let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
         gestureRight.delegate = self
         gestureRight.direction = .Right
         self.feedTableView.addGestureRecognizer(gestureRight)
@@ -74,9 +74,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             if (cell.participants == nil || cell.participants![0] != challenge.senderID)
             {
                 cell.currentParticipant = challenge.senderID
+                cell.participants = challenge.completedBy!
             }
-            
-            cell.participants = challenge.completedBy!
 
             cell.challengeNameLabel.text = challenge.name
             
@@ -90,8 +89,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.challengeVideoView.addSubview(movie.view)
                 player.play()
             })
-            
-            print(cell.participants)
         }
 
         return cell
@@ -152,7 +149,16 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.currentParticipant = cell.participants![currentIndex!-1]
         }
 
-        feedTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+        FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
+            
+            let player = AVPlayer(URL: URL)
+            let movie = AVPlayerViewController()
+            movie.player = player
+            movie.view.frame = cell.challengeVideoView.bounds
+            
+            cell.challengeVideoView.addSubview(movie.view)
+            player.play()
+        })
     }
     
     
@@ -173,10 +179,18 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         else
         {
             cell.currentParticipant = cell.participants![currentIndex!+1]
-            print(cell.currentParticipant)
         }
-
-        feedTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+        
+        FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
+            
+            let player = AVPlayer(URL: URL)
+            let movie = AVPlayerViewController()
+            movie.player = player
+            movie.view.frame = cell.challengeVideoView.bounds
+            
+            cell.challengeVideoView.addSubview(movie.view)
+            player.play()
+        })
     }
     
 
