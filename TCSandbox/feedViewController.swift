@@ -70,6 +70,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
             cell.challenge = challenge
+            
             if (cell.participants == nil || cell.participants![0] != challenge.senderID)
             {
                 cell.currentParticipant = challenge.senderID
@@ -77,7 +78,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             cell.participants = [challenge.senderID!]
             cell.participants! += challenge.participants!
-            
+
             cell.challengeNameLabel.text = challenge.name
             
             FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
@@ -91,6 +92,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 player.play()
             })
         }
+        
         return cell
     }
     
@@ -171,7 +173,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             cell.currentParticipant = cell.participants![currentIndex!+1]
         }
-        
+
         feedTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
     }
     
