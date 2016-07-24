@@ -11,28 +11,56 @@ class Gifs
     var description = ""
     
     static let gifDictionary: [String: String] = [
-        "jump rope": "Jump Rope",
+        "jumprope": "Jump Rope",
         "hipairplane": "Hip Airplane",
         "pushups": "Push Ups",
         "wallsit": "Wall Sit",
-        
-        
+        "airbike": "Airbike",
+        "bigarmcircles": "Big Arm Circles",
+        "buttkickers": "Butt Kickers",
+        "elevatedpushups": "Elevated Push Ups",
+        "forwardlunge": "Forward Lunge",
         "boxing": "Boxing",
         "pullups": "Pull Ups",
         "running": "Running",
-        "lifting": "Lifting",
-        
+        "leglifts": "Leg Lifts",
+        "manpushups": "Elevated Push Ups",
+        "mountainclimbers": "Mountain Climbers",
+        "plankarmraise": "Plank Arm Raise",
+        "plankpullin": "Plank Pull Ins",
+        "pliesquat": "Plie Squat",
+        "reverselunge": "Reverse Lunge",
         "windshieldwipers": "Windshield Wipers",
         "stepups": "Step Ups",
-        "jumpingjacks": "Jumping Jacks"
+        "romaniandeadlift": "Romanian Deadlift",
+        "seatedlegpullins": "Seated Leg Pullins",
+        "jumpingjacks": "Jumping Jacks",
+        "standingrow": "Standing Row",
+        "stepovers": "Side to Side Hops",
+        "superman": "Superman",
+        "tplankwithtwist": "T-Plank with Twists",
+        
+        
+        
     ]
     
     static let row1: [String] = [
-        "jump rope", "hipairplane", "pushups", "pullups"
+       
+        "hipairplane", "pushups", "pullups",
+        "buttkickers", "wallsit", "windshieldwipers", "stepups",
+        "jumpingjacks", "airbike", "reverselunge", "plankpullin", "bigarmcircles",
+        "forwardlunge", "leglifts", "manpushups","mountainclimbers",
+        "plankarmraise", "pliesquat", "romaniandeadlift","standingrow", "stepovers",
+        "seatedlegpullins", "superman", "tplankwithtwist"
+   
     ]
+    
+    static let sortedRow1 = row1.sort(<)
+    
     static let row2: [String] = [
         
-        "wallsit","boxing", "running", "lifting", "windshieldwipers", "stepups", "jumpingjacks"    ]
+        "wallsit", "running", "windshieldwipers", "stepups", "jumpingjacks"
+    ]
     
     init (featuredImage: String, description: String){
         
@@ -45,9 +73,10 @@ class Gifs
     //MARK: Private
     
     static func createGifs() -> [Gifs]
-    {
+    { 
         var gifs: [Gifs] = []
-        for name in row1 {
+
+        for name in sortedRow1 {
             let new = Gifs(featuredImage: name, description: gifDictionary[name]!)
             gifs.append(new)
         }
@@ -86,7 +115,6 @@ class Tags
         "ballmove": "Forward Lunge with Twist",
         "ballwhirl": "Big Arm Circles",
         "burpee": "Plank Pull Ins",
-        "buttkickers": "Buttkickers",
         "ropepull": "Standing Row",
         
         "stepover": "Side to Side Hops",
@@ -126,7 +154,7 @@ class Tags
     
     static let row4: [String] = [
         
-        "ballmove", "ballwhirl", "burpee", "buttkickers", "ropepull"
+        "ballmove", "ballwhirl", "burpee", "ropepull"
     ]
     static let row5: [String] = [
         

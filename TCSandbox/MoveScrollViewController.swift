@@ -82,8 +82,11 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         updateView()
         updateTagView()
         
+        print(Gifs.sortedRow1)
+        
         //collectionView1.delegate = self
         //collectionView1.dataSource = self
+        
         
         scrollButton.layer.cornerRadius = 0.5 * scrollButton.bounds.size.width
         
@@ -92,7 +95,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         
         // Do any additional setup after loading the view.
         
-        collection1Selected = [false, false, false, false, false]
+        collection1Selected = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
         collection2Selected = [false, false, false, false, false, false, false]
         collection3Selected = [false, false, false, false, false, false, false, false, false]
         collection4Selected = [false, false, false, false, false]
@@ -234,7 +237,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{
-                svc.gifsToShow.append(Gifs.row1[index])
+                svc.gifsToShow.append(Gifs.sortedRow1[index])
                 svc.cTags.append("placeholder")
                 
             }
