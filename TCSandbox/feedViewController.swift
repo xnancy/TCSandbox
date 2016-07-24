@@ -76,8 +76,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.currentParticipant = challenge.senderID
             }
             
-            cell.participants = [challenge.senderID!]
-            cell.participants! += challenge.participants!
+            cell.participants = challenge.completedBy!
 
             cell.challengeNameLabel.text = challenge.name
             
@@ -91,8 +90,10 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.challengeVideoView.addSubview(movie.view)
                 player.play()
             })
+            
+            print(cell.participants)
         }
-        
+
         return cell
     }
     
@@ -172,6 +173,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         else
         {
             cell.currentParticipant = cell.participants![currentIndex!+1]
+            print(cell.currentParticipant)
         }
 
         feedTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
