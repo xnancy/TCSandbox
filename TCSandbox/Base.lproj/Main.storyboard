@@ -1207,6 +1207,7 @@
                                         <connections>
                                             <outlet property="challengeNameLabel" destination="iYJ-fs-p1Y" id="cza-4X-ZfB"/>
                                             <outlet property="challengeVideoView" destination="REm-hL-DJI" id="lmM-NM-g9b"/>
+                                            <outlet property="videoLabel" destination="W2a-lR-idM" id="DEC-QQ-Ldc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
