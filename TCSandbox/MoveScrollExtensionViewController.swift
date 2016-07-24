@@ -16,14 +16,14 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
      
 //        if CGRectContainsPoint(collectionView1.frame, location) {
     
-        print("running1")
-        print(location.x)
-        print(location.y)
+       // print("running1")
+       // print(location.x)
+       // print(location.y)
         guard let previewVC = storyboard?.instantiateViewControllerWithIdentifier("PreviewVC") as? PreviewViewController
             else{ return nil }
         guard let indexPath = collectionView1?.indexPathForItemAtPoint(location) else { return nil }
         guard let cell1 = collectionView1?.cellForItemAtIndexPath(indexPath) else { return nil }
-        previewVC.selectedItem = String(Gifs.row1[indexPath.row])
+        previewVC.selectedItem = String(Gifs.sortedRow1[indexPath.row])
         previewVC.preferredContentSize = CGSize(width: 245, height: 200)
         previewingContext.sourceRect = cell1.frame
         return previewVC

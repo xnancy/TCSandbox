@@ -47,13 +47,11 @@
 		B850828C1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B850828B1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift */; };
 		B85082E51D4434A0007D22C9 /* airbike.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082C91D4434A0007D22C9 /* airbike.gif */; };
 		B85082E61D4434A0007D22C9 /* bigarmcircles.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082CA1D4434A0007D22C9 /* bigarmcircles.gif */; };
-		B85082E71D4434A0007D22C9 /* boxing.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082CB1D4434A0007D22C9 /* boxing.gif */; };
 		B85082E81D4434A0007D22C9 /* buttkickers.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082CC1D4434A0007D22C9 /* buttkickers.gif */; };
 		B85082E91D4434A0007D22C9 /* elevatedpushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082CD1D4434A0007D22C9 /* elevatedpushups.gif */; };
 		B85082EA1D4434A0007D22C9 /* forwardlunge.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082CE1D4434A0007D22C9 /* forwardlunge.gif */; };
 		B85082EB1D4434A0007D22C9 /* hipairplane.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082CF1D4434A0007D22C9 /* hipairplane.gif */; };
 		B85082EC1D4434A0007D22C9 /* jumpingjacks.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082D01D4434A0007D22C9 /* jumpingjacks.gif */; };
-		B85082ED1D4434A0007D22C9 /* jumprope.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082D11D4434A0007D22C9 /* jumprope.gif */; };
 		B85082EE1D4434A0007D22C9 /* leglifts.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082D21D4434A0007D22C9 /* leglifts.gif */; };
 		B85082EF1D4434A0007D22C9 /* manpushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082D31D4434A0007D22C9 /* manpushups.gif */; };
 		B85082F01D4434A0007D22C9 /* mountainclimbers.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082D41D4434A0007D22C9 /* mountainclimbers.gif */; };
@@ -64,7 +62,6 @@
 		B85082F51D4434A0007D22C9 /* pushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082D91D4434A0007D22C9 /* pushups.gif */; };
 		B85082F61D4434A0007D22C9 /* reverselunge.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082DA1D4434A0007D22C9 /* reverselunge.gif */; };
 		B85082F71D4434A0007D22C9 /* romaniandeadlift.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082DB1D4434A0007D22C9 /* romaniandeadlift.gif */; };
-		B85082F81D4434A0007D22C9 /* running.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082DC1D4434A0007D22C9 /* running.gif */; };
 		B85082F91D4434A0007D22C9 /* seatedlegpullins.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082DD1D4434A0007D22C9 /* seatedlegpullins.gif */; };
 		B85082FA1D4434A0007D22C9 /* standingrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082DE1D4434A0007D22C9 /* standingrow.gif */; };
 		B85082FB1D4434A0007D22C9 /* stepovers.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082DF1D4434A0007D22C9 /* stepovers.gif */; };
@@ -73,6 +70,118 @@
 		B85082FE1D4434A0007D22C9 /* tplankwithtwist.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082E21D4434A0007D22C9 /* tplankwithtwist.gif */; };
 		B85082FF1D4434A0007D22C9 /* wallsit.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082E31D4434A0007D22C9 /* wallsit.gif */; };
 		B85083001D4434A0007D22C9 /* windshieldwipers.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85082E41D4434A0007D22C9 /* windshieldwipers.gif */; };
+		B85083291D4459DC007D22C9 /* catch.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083011D4459DC007D22C9 /* catch.gif */; };
+		B850832A1D4459DC007D22C9 /* cheer.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083021D4459DC007D22C9 /* cheer.gif */; };
+		B850832B1D4459DC007D22C9 /* chug.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083031D4459DC007D22C9 /* chug.gif */; };
+		B850832C1D4459DC007D22C9 /* dive.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083041D4459DC007D22C9 /* dive.gif */; };
+		B850832D1D4459DC007D22C9 /* robot.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083051D4459DC007D22C9 /* robot.gif */; };
+		B850832E1D4459DC007D22C9 /* eating.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083061D4459DC007D22C9 /* eating.gif */; };
+		B850832F1D4459DC007D22C9 /* elvisdance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083071D4459DC007D22C9 /* elvisdance.gif */; };
+		B85083311D4459DC007D22C9 /* fight.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083091D4459DC007D22C9 /* fight.gif */; };
+		B85083321D4459DC007D22C9 /* fistpump.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850830A1D4459DC007D22C9 /* fistpump.gif */; };
+		B85083331D4459DC007D22C9 /* flip.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850830B1D4459DC007D22C9 /* flip.gif */; };
+		B85083341D4459DC007D22C9 /* flipOver.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850830C1D4459DC007D22C9 /* flipOver.gif */; };
+		B85083351D4459DC007D22C9 /* freeThrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850830D1D4459DC007D22C9 /* freeThrow.gif */; };
+		B85083361D4459DC007D22C9 /* haduken.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850830E1D4459DC007D22C9 /* haduken.gif */; };
+		B85083371D4459DC007D22C9 /* hammerdance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850830F1D4459DC007D22C9 /* hammerdance.gif */; };
+		B85083381D4459DC007D22C9 /* highFive.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083101D4459DC007D22C9 /* highFive.gif */; };
+		B85083391D4459DC007D22C9 /* juggle.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083111D4459DC007D22C9 /* juggle.gif */; };
+		B850833A1D4459DC007D22C9 /* jump.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083121D4459DC007D22C9 /* jump.gif */; };
+		B850833D1D4459DC007D22C9 /* kiss.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083151D4459DC007D22C9 /* kiss.gif */; };
+		B850833F1D4459DC007D22C9 /* makeItRain.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083171D4459DC007D22C9 /* makeItRain.gif */; };
+		B85083411D4459DC007D22C9 /* playinstrument.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083191D4459DC007D22C9 /* playinstrument.gif */; };
+		B85083421D4459DC007D22C9 /* punch.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850831A1D4459DC007D22C9 /* punch.gif */; };
+		B85083431D4459DC007D22C9 /* ridebike.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850831B1D4459DC007D22C9 /* ridebike.gif */; };
+		B85083441D4459DC007D22C9 /* rockOut.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850831C1D4459DC007D22C9 /* rockOut.gif */; };
+		B85083451D4459DC007D22C9 /* rockoutHardCore.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850831D1D4459DC007D22C9 /* rockoutHardCore.gif */; };
+		B85083461D4459DC007D22C9 /* singMinion.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850831E1D4459DC007D22C9 /* singMinion.gif */; };
+		B85083471D4459DC007D22C9 /* sit.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850831F1D4459DC007D22C9 /* sit.gif */; };
+		B85083481D4459DC007D22C9 /* skate.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083201D4459DC007D22C9 /* skate.gif */; };
+		B85083491D4459DC007D22C9 /* spin.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083211D4459DC007D22C9 /* spin.gif */; };
+		B850834A1D4459DC007D22C9 /* spinBball.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083221D4459DC007D22C9 /* spinBball.gif */; };
+		B850834B1D4459DC007D22C9 /* swing2.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083231D4459DC007D22C9 /* swing2.gif */; };
+		B850834C1D4459DC007D22C9 /* tackle.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083241D4459DC007D22C9 /* tackle.gif */; };
+		B850834D1D4459DC007D22C9 /* takeapicture.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083251D4459DC007D22C9 /* takeapicture.gif */; };
+		B850834E1D4459DC007D22C9 /* takeselfie.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083261D4459DC007D22C9 /* takeselfie.gif */; };
+		B850834F1D4459DC007D22C9 /* throw1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083271D4459DC007D22C9 /* throw1.gif */; };
+		B85083501D4459DC007D22C9 /* walkcool.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083281D4459DC007D22C9 /* walkcool.gif */; };
+		B85083561D446DD8007D22C9 /* makebasket.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083551D446DD8007D22C9 /* makebasket.gif */; };
+		B850835A1D446DF7007D22C9 /* dunk.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083591D446DF7007D22C9 /* dunk.gif */; };
+		B850835C1D446E07007D22C9 /* flip.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850835B1D446E07007D22C9 /* flip.gif */; };
+		B850835E1D446F83007D22C9 /* boxkangaroo.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850835D1D446F83007D22C9 /* boxkangaroo.gif */; };
+		B85083641D4473C0007D22C9 /* dunk.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083631D4473C0007D22C9 /* dunk.gif */; };
+		B85083661D44745F007D22C9 /* kick.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083651D44745F007D22C9 /* kick.gif */; };
+		B850836A1D4476EE007D22C9 /* crossover.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083691D4476EE007D22C9 /* crossover.gif */; };
+		B850836C1D447725007D22C9 /* dribble.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850836B1D447725007D22C9 /* dribble.gif */; };
+		B850836E1D4478F6007D22C9 /* running.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850836D1D4478F6007D22C9 /* running.gif */; };
+		B85083701D44790F007D22C9 /* skiprope.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850836F1D44790F007D22C9 /* skiprope.gif */; };
+		B85083721D448096007D22C9 /* running.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083711D448096007D22C9 /* running.gif */; };
+		B85083771D4480CC007D22C9 /* sideleglifts.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083731D4480CC007D22C9 /* sideleglifts.gif */; };
+		B85083791D4480CC007D22C9 /* squats.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083751D4480CC007D22C9 /* squats.gif */; };
+		B850837A1D4480CC007D22C9 /* stretch.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083761D4480CC007D22C9 /* stretch.gif */; };
+		B850837C1D448131007D22C9 /* spin1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850837B1D448131007D22C9 /* spin1.gif */; };
+		B850837E1D44816A007D22C9 /* dumbbells.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850837D1D44816A007D22C9 /* dumbbells.gif */; };
+		B85083831D44816F007D22C9 /* crunches.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850837F1D44816F007D22C9 /* crunches.gif */; };
+		B85083841D44816F007D22C9 /* cycle.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083801D44816F007D22C9 /* cycle.gif */; };
+		B85083851D44816F007D22C9 /* deadlift.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083811D44816F007D22C9 /* deadlift.gif */; };
+		B85083861D44816F007D22C9 /* jog.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083821D44816F007D22C9 /* jog.gif */; };
+		B85083971D448352007D22C9 /* deadlift.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083871D448352007D22C9 /* deadlift.gif */; };
+		B85083981D448352007D22C9 /* chairdip.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083881D448352007D22C9 /* chairdip.gif */; };
+		B85083991D448352007D22C9 /* spin1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083891D448352007D22C9 /* spin1.gif */; };
+		B850839A1D448352007D22C9 /* jog.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850838A1D448352007D22C9 /* jog.gif */; };
+		B850839B1D448352007D22C9 /* pushups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850838B1D448352007D22C9 /* pushups.gif */; };
+		B850839C1D448352007D22C9 /* cycle.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850838C1D448352007D22C9 /* cycle.gif */; };
+		B850839D1D448352007D22C9 /* sideleglifts.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850838D1D448352007D22C9 /* sideleglifts.gif */; };
+		B850839E1D448352007D22C9 /* leglifts.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850838E1D448352007D22C9 /* leglifts.gif */; };
+		B850839F1D448352007D22C9 /* crunches.gif in Resources */ = {isa = PBXBuildFile; fileRef = B850838F1D448352007D22C9 /* crunches.gif */; };
+		B85083A01D448352007D22C9 /* squats.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083901D448352007D22C9 /* squats.gif */; };
+		B85083A11D448352007D22C9 /* chinups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083911D448352007D22C9 /* chinups.gif */; };
+		B85083A21D448352007D22C9 /* stretch.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083921D448352007D22C9 /* stretch.gif */; };
+		B85083A31D448352007D22C9 /* dumbbells.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083931D448352007D22C9 /* dumbbells.gif */; };
+		B85083A41D448352007D22C9 /* jumprope1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083941D448352007D22C9 /* jumprope1.gif */; };
+		B85083A51D448352007D22C9 /* pullups.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083951D448352007D22C9 /* pullups.gif */; };
+		B85083A61D448352007D22C9 /* bench.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083961D448352007D22C9 /* bench.gif */; };
+		B85083AC1D448C24007D22C9 /* calfstretch.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083A71D448C24007D22C9 /* calfstretch.gif */; };
+		B85083AD1D448C24007D22C9 /* sittingrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083A81D448C24007D22C9 /* sittingrow.gif */; };
+		B85083AF1D448C24007D22C9 /* forwardlean.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083AA1D448C24007D22C9 /* forwardlean.gif */; };
+		B85083B01D448C24007D22C9 /* intensesquats.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083AB1D448C24007D22C9 /* intensesquats.gif */; };
+		B85083B21D449A9C007D22C9 /* pulldowns.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B11D449A9C007D22C9 /* pulldowns.gif */; };
+		B85083BE1D44A1BB007D22C9 /* bellydance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B31D44A1BB007D22C9 /* bellydance.gif */; };
+		B85083BF1D44A1BB007D22C9 /* discodance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B41D44A1BB007D22C9 /* discodance.gif */; };
+		B85083C01D44A1BB007D22C9 /* moonwalker.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B51D44A1BB007D22C9 /* moonwalker.gif */; };
+		B85083C11D44A1BB007D22C9 /* jakedance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B61D44A1BB007D22C9 /* jakedance.gif */; };
+		B85083C21D44A1BB007D22C9 /* dancebattle.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B71D44A1BB007D22C9 /* dancebattle.gif */; };
+		B85083C31D44A1BB007D22C9 /* carltondance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B81D44A1BB007D22C9 /* carltondance.gif */; };
+		B85083C41D44A1BB007D22C9 /* runningman.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083B91D44A1BB007D22C9 /* runningman.gif */; };
+		B85083C51D44A1BB007D22C9 /* twerk.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083BA1D44A1BB007D22C9 /* twerk.gif */; };
+		B85083C61D44A1BB007D22C9 /* rap.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083BB1D44A1BB007D22C9 /* rap.gif */; };
+		B85083C71D44A1BB007D22C9 /* breakdance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083BC1D44A1BB007D22C9 /* breakdance.gif */; };
+		B85083C81D44A1BB007D22C9 /* hotlineblingdance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083BD1D44A1BB007D22C9 /* hotlineblingdance.gif */; };
+		B85083CA1D44A26F007D22C9 /* poledance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083C91D44A26F007D22C9 /* poledance.gif */; };
+		B85083E11D44A559007D22C9 /* bikeparty.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083CB1D44A559007D22C9 /* bikeparty.gif */; };
+		B85083E21D44A559007D22C9 /* chocolateDipped.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083CC1D44A559007D22C9 /* chocolateDipped.gif */; };
+		B85083E31D44A559007D22C9 /* dibblebballwithhockeystick.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083CD1D44A559007D22C9 /* dibblebballwithhockeystick.gif */; };
+		B85083E41D44A559007D22C9 /* egg.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083CE1D44A559007D22C9 /* egg.gif */; };
+		B85083E51D44A559007D22C9 /* gadgets.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083CF1D44A559007D22C9 /* gadgets.gif */; };
+		B85083E61D44A559007D22C9 /* gingerbread.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D01D44A559007D22C9 /* gingerbread.gif */; };
+		B85083E71D44A559007D22C9 /* interestingGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D11D44A559007D22C9 /* interestingGif.gif */; };
+		B85083E81D44A559007D22C9 /* lowrider_gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D21D44A559007D22C9 /* lowrider_gif1.gif */; };
+		B85083E91D44A559007D22C9 /* pacman.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D31D44A559007D22C9 /* pacman.gif */; };
+		B85083EA1D44A559007D22C9 /* pacman2.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D41D44A559007D22C9 /* pacman2.gif */; };
+		B85083EB1D44A559007D22C9 /* pizzaproblems.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D51D44A559007D22C9 /* pizzaproblems.gif */; };
+		B85083EC1D44A559007D22C9 /* pokemonbowl.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D61D44A559007D22C9 /* pokemonbowl.gif */; };
+		B85083ED1D44A559007D22C9 /* pokemonhunter.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D71D44A559007D22C9 /* pokemonhunter.gif */; };
+		B85083EE1D44A559007D22C9 /* random.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D81D44A559007D22C9 /* random.gif */; };
+		B85083EF1D44A559007D22C9 /* reCat.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083D91D44A559007D22C9 /* reCat.gif */; };
+		B85083F01D44A559007D22C9 /* santamoPed.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083DA1D44A559007D22C9 /* santamoPed.gif */; };
+		B85083F11D44A559007D22C9 /* simpsons.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083DB1D44A559007D22C9 /* simpsons.gif */; };
+		B85083F21D44A559007D22C9 /* singtocats.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083DC1D44A559007D22C9 /* singtocats.gif */; };
+		B85083F31D44A559007D22C9 /* spidey.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083DD1D44A559007D22C9 /* spidey.gif */; };
+		B85083F41D44A559007D22C9 /* starwars.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083DE1D44A559007D22C9 /* starwars.gif */; };
+		B85083F51D44A559007D22C9 /* supersanta.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083DF1D44A559007D22C9 /* supersanta.gif */; };
+		B85083F61D44A559007D22C9 /* zuckBaby.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083E01D44A559007D22C9 /* zuckBaby.gif */; };
+		B85083F81D44AE3F007D22C9 /* whip.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083F71D44AE3F007D22C9 /* whip.gif */; };
+		B85083FA1D44AE44007D22C9 /* untzuntz.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083F91D44AE44007D22C9 /* untzuntz.gif */; };
 		B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70A1D3B183D000D3499 /* PreviewViewController.swift */; };
 		B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
@@ -151,13 +260,11 @@
 		B850828B1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationPopOverViewController.swift; sourceTree = "<group>"; };
 		B85082C91D4434A0007D22C9 /* airbike.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = airbike.gif; path = TCSandbox/Gifs/airbike.gif; sourceTree = "<group>"; };
 		B85082CA1D4434A0007D22C9 /* bigarmcircles.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = bigarmcircles.gif; path = TCSandbox/Gifs/bigarmcircles.gif; sourceTree = "<group>"; };
-		B85082CB1D4434A0007D22C9 /* boxing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = boxing.gif; path = TCSandbox/Gifs/boxing.gif; sourceTree = "<group>"; };
 		B85082CC1D4434A0007D22C9 /* buttkickers.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = buttkickers.gif; path = TCSandbox/Gifs/buttkickers.gif; sourceTree = "<group>"; };
 		B85082CD1D4434A0007D22C9 /* elevatedpushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = elevatedpushups.gif; path = TCSandbox/Gifs/elevatedpushups.gif; sourceTree = "<group>"; };
 		B85082CE1D4434A0007D22C9 /* forwardlunge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = forwardlunge.gif; path = TCSandbox/Gifs/forwardlunge.gif; sourceTree = "<group>"; };
 		B85082CF1D4434A0007D22C9 /* hipairplane.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hipairplane.gif; path = TCSandbox/Gifs/hipairplane.gif; sourceTree = "<group>"; };
 		B85082D01D4434A0007D22C9 /* jumpingjacks.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jumpingjacks.gif; path = TCSandbox/Gifs/jumpingjacks.gif; sourceTree = "<group>"; };
-		B85082D11D4434A0007D22C9 /* jumprope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jumprope.gif; path = TCSandbox/Gifs/jumprope.gif; sourceTree = "<group>"; };
 		B85082D21D4434A0007D22C9 /* leglifts.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leglifts.gif; path = TCSandbox/Gifs/leglifts.gif; sourceTree = "<group>"; };
 		B85082D31D4434A0007D22C9 /* manpushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = manpushups.gif; path = TCSandbox/Gifs/manpushups.gif; sourceTree = "<group>"; };
 		B85082D41D4434A0007D22C9 /* mountainclimbers.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mountainclimbers.gif; path = TCSandbox/Gifs/mountainclimbers.gif; sourceTree = "<group>"; };
@@ -168,7 +275,6 @@
 		B85082D91D4434A0007D22C9 /* pushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushups.gif; path = TCSandbox/Gifs/pushups.gif; sourceTree = "<group>"; };
 		B85082DA1D4434A0007D22C9 /* reverselunge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = reverselunge.gif; path = TCSandbox/Gifs/reverselunge.gif; sourceTree = "<group>"; };
 		B85082DB1D4434A0007D22C9 /* romaniandeadlift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = romaniandeadlift.gif; path = TCSandbox/Gifs/romaniandeadlift.gif; sourceTree = "<group>"; };
-		B85082DC1D4434A0007D22C9 /* running.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = running.gif; path = TCSandbox/Gifs/running.gif; sourceTree = "<group>"; };
 		B85082DD1D4434A0007D22C9 /* seatedlegpullins.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = seatedlegpullins.gif; path = TCSandbox/Gifs/seatedlegpullins.gif; sourceTree = "<group>"; };
 		B85082DE1D4434A0007D22C9 /* standingrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = standingrow.gif; path = TCSandbox/Gifs/standingrow.gif; sourceTree = "<group>"; };
 		B85082DF1D4434A0007D22C9 /* stepovers.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = stepovers.gif; path = TCSandbox/Gifs/stepovers.gif; sourceTree = "<group>"; };
@@ -177,6 +283,118 @@
 		B85082E21D4434A0007D22C9 /* tplankwithtwist.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = tplankwithtwist.gif; path = TCSandbox/Gifs/tplankwithtwist.gif; sourceTree = "<group>"; };
 		B85082E31D4434A0007D22C9 /* wallsit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = wallsit.gif; path = TCSandbox/Gifs/wallsit.gif; sourceTree = "<group>"; };
 		B85082E41D4434A0007D22C9 /* windshieldwipers.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = windshieldwipers.gif; path = TCSandbox/Gifs/windshieldwipers.gif; sourceTree = "<group>"; };
+		B85083011D4459DC007D22C9 /* catch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = catch.gif; path = TCSandbox/Gifs2/catch.gif; sourceTree = "<group>"; };
+		B85083021D4459DC007D22C9 /* cheer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cheer.gif; path = TCSandbox/Gifs2/cheer.gif; sourceTree = "<group>"; };
+		B85083031D4459DC007D22C9 /* chug.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = chug.gif; path = TCSandbox/Gifs2/chug.gif; sourceTree = "<group>"; };
+		B85083041D4459DC007D22C9 /* dive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dive.gif; path = TCSandbox/Gifs2/dive.gif; sourceTree = "<group>"; };
+		B85083051D4459DC007D22C9 /* robot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = robot.gif; path = TCSandbox/Gifs2/robot.gif; sourceTree = "<group>"; };
+		B85083061D4459DC007D22C9 /* eating.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = eating.gif; path = TCSandbox/Gifs2/eating.gif; sourceTree = "<group>"; };
+		B85083071D4459DC007D22C9 /* elvisdance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = elvisdance.gif; path = TCSandbox/Gifs2/elvisdance.gif; sourceTree = "<group>"; };
+		B85083091D4459DC007D22C9 /* fight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = fight.gif; path = TCSandbox/Gifs2/fight.gif; sourceTree = "<group>"; };
+		B850830A1D4459DC007D22C9 /* fistpump.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = fistpump.gif; path = TCSandbox/Gifs2/fistpump.gif; sourceTree = "<group>"; };
+		B850830B1D4459DC007D22C9 /* flip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = flip.gif; path = TCSandbox/Gifs2/flip.gif; sourceTree = "<group>"; };
+		B850830C1D4459DC007D22C9 /* flipOver.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = flipOver.gif; path = TCSandbox/Gifs2/flipOver.gif; sourceTree = "<group>"; };
+		B850830D1D4459DC007D22C9 /* freeThrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = freeThrow.gif; path = TCSandbox/Gifs2/freeThrow.gif; sourceTree = "<group>"; };
+		B850830E1D4459DC007D22C9 /* haduken.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = haduken.gif; path = TCSandbox/Gifs2/haduken.gif; sourceTree = "<group>"; };
+		B850830F1D4459DC007D22C9 /* hammerdance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hammerdance.gif; path = TCSandbox/Gifs2/hammerdance.gif; sourceTree = "<group>"; };
+		B85083101D4459DC007D22C9 /* highFive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = highFive.gif; path = TCSandbox/Gifs2/highFive.gif; sourceTree = "<group>"; };
+		B85083111D4459DC007D22C9 /* juggle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = juggle.gif; path = TCSandbox/Gifs2/juggle.gif; sourceTree = "<group>"; };
+		B85083121D4459DC007D22C9 /* jump.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jump.gif; path = TCSandbox/Gifs2/jump.gif; sourceTree = "<group>"; };
+		B85083151D4459DC007D22C9 /* kiss.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = kiss.gif; path = TCSandbox/Gifs2/kiss.gif; sourceTree = "<group>"; };
+		B85083171D4459DC007D22C9 /* makeItRain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = makeItRain.gif; path = TCSandbox/Gifs2/makeItRain.gif; sourceTree = "<group>"; };
+		B85083191D4459DC007D22C9 /* playinstrument.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = playinstrument.gif; path = TCSandbox/Gifs2/playinstrument.gif; sourceTree = "<group>"; };
+		B850831A1D4459DC007D22C9 /* punch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = punch.gif; path = TCSandbox/Gifs2/punch.gif; sourceTree = "<group>"; };
+		B850831B1D4459DC007D22C9 /* ridebike.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = ridebike.gif; path = TCSandbox/Gifs2/ridebike.gif; sourceTree = "<group>"; };
+		B850831C1D4459DC007D22C9 /* rockOut.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = rockOut.gif; path = TCSandbox/Gifs2/rockOut.gif; sourceTree = "<group>"; };
+		B850831D1D4459DC007D22C9 /* rockoutHardCore.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = rockoutHardCore.gif; path = TCSandbox/Gifs2/rockoutHardCore.gif; sourceTree = "<group>"; };
+		B850831E1D4459DC007D22C9 /* singMinion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = singMinion.gif; path = TCSandbox/Gifs2/singMinion.gif; sourceTree = "<group>"; };
+		B850831F1D4459DC007D22C9 /* sit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sit.gif; path = TCSandbox/Gifs2/sit.gif; sourceTree = "<group>"; };
+		B85083201D4459DC007D22C9 /* skate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = skate.gif; path = TCSandbox/Gifs2/skate.gif; sourceTree = "<group>"; };
+		B85083211D4459DC007D22C9 /* spin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = spin.gif; path = TCSandbox/Gifs2/spin.gif; sourceTree = "<group>"; };
+		B85083221D4459DC007D22C9 /* spinBball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = spinBball.gif; path = TCSandbox/Gifs2/spinBball.gif; sourceTree = "<group>"; };
+		B85083231D4459DC007D22C9 /* swing2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = swing2.gif; path = TCSandbox/Gifs2/swing2.gif; sourceTree = "<group>"; };
+		B85083241D4459DC007D22C9 /* tackle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = tackle.gif; path = TCSandbox/Gifs2/tackle.gif; sourceTree = "<group>"; };
+		B85083251D4459DC007D22C9 /* takeapicture.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = takeapicture.gif; path = TCSandbox/Gifs2/takeapicture.gif; sourceTree = "<group>"; };
+		B85083261D4459DC007D22C9 /* takeselfie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = takeselfie.gif; path = TCSandbox/Gifs2/takeselfie.gif; sourceTree = "<group>"; };
+		B85083271D4459DC007D22C9 /* throw1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = throw1.gif; path = TCSandbox/Gifs2/throw1.gif; sourceTree = "<group>"; };
+		B85083281D4459DC007D22C9 /* walkcool.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = walkcool.gif; path = TCSandbox/Gifs2/walkcool.gif; sourceTree = "<group>"; };
+		B85083551D446DD8007D22C9 /* makebasket.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = makebasket.gif; path = TCSandbox/Gifs2/makebasket.gif; sourceTree = "<group>"; };
+		B85083591D446DF7007D22C9 /* dunk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dunk.gif; path = TCSandbox/Gifs2/dunk.gif; sourceTree = "<group>"; };
+		B850835B1D446E07007D22C9 /* flip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = flip.gif; path = TCSandbox/Gifs2/flip.gif; sourceTree = "<group>"; };
+		B850835D1D446F83007D22C9 /* boxkangaroo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = boxkangaroo.gif; path = TCSandbox/Gifs2/boxkangaroo.gif; sourceTree = "<group>"; };
+		B85083631D4473C0007D22C9 /* dunk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dunk.gif; path = TCSandbox/Gifs2/dunk.gif; sourceTree = "<group>"; };
+		B85083651D44745F007D22C9 /* kick.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = kick.gif; path = TCSandbox/Gifs2/kick.gif; sourceTree = "<group>"; };
+		B85083691D4476EE007D22C9 /* crossover.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = crossover.gif; path = TCSandbox/Gifs2/crossover.gif; sourceTree = "<group>"; };
+		B850836B1D447725007D22C9 /* dribble.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dribble.gif; path = TCSandbox/Gifs2/dribble.gif; sourceTree = "<group>"; };
+		B850836D1D4478F6007D22C9 /* running.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = running.gif; path = TCSandbox/Gifs2/running.gif; sourceTree = "<group>"; };
+		B850836F1D44790F007D22C9 /* skiprope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = skiprope.gif; path = TCSandbox/Gifs2/skiprope.gif; sourceTree = "<group>"; };
+		B85083711D448096007D22C9 /* running.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = running.gif; path = TCSandbox/Gifs2/running.gif; sourceTree = "<group>"; };
+		B85083731D4480CC007D22C9 /* sideleglifts.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sideleglifts.gif; path = TCSandbox/Gifs/sideleglifts.gif; sourceTree = "<group>"; };
+		B85083751D4480CC007D22C9 /* squats.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = squats.gif; path = TCSandbox/Gifs/squats.gif; sourceTree = "<group>"; };
+		B85083761D4480CC007D22C9 /* stretch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = stretch.gif; path = TCSandbox/Gifs/stretch.gif; sourceTree = "<group>"; };
+		B850837B1D448131007D22C9 /* spin1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = spin1.gif; path = TCSandbox/Gifs/spin1.gif; sourceTree = "<group>"; };
+		B850837D1D44816A007D22C9 /* dumbbells.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dumbbells.gif; path = TCSandbox/Gifs/dumbbells.gif; sourceTree = "<group>"; };
+		B850837F1D44816F007D22C9 /* crunches.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = crunches.gif; path = TCSandbox/Gifs/crunches.gif; sourceTree = "<group>"; };
+		B85083801D44816F007D22C9 /* cycle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cycle.gif; path = TCSandbox/Gifs/cycle.gif; sourceTree = "<group>"; };
+		B85083811D44816F007D22C9 /* deadlift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = deadlift.gif; path = TCSandbox/Gifs/deadlift.gif; sourceTree = "<group>"; };
+		B85083821D44816F007D22C9 /* jog.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jog.gif; path = TCSandbox/Gifs/jog.gif; sourceTree = "<group>"; };
+		B85083871D448352007D22C9 /* deadlift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = deadlift.gif; path = TCSandbox/Gifs/deadlift.gif; sourceTree = "<group>"; };
+		B85083881D448352007D22C9 /* chairdip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = chairdip.gif; path = TCSandbox/Gifs/chairdip.gif; sourceTree = "<group>"; };
+		B85083891D448352007D22C9 /* spin1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = spin1.gif; path = TCSandbox/Gifs/spin1.gif; sourceTree = "<group>"; };
+		B850838A1D448352007D22C9 /* jog.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jog.gif; path = TCSandbox/Gifs/jog.gif; sourceTree = "<group>"; };
+		B850838B1D448352007D22C9 /* pushups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushups.gif; path = TCSandbox/Gifs/pushups.gif; sourceTree = "<group>"; };
+		B850838C1D448352007D22C9 /* cycle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cycle.gif; path = TCSandbox/Gifs/cycle.gif; sourceTree = "<group>"; };
+		B850838D1D448352007D22C9 /* sideleglifts.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sideleglifts.gif; path = TCSandbox/Gifs/sideleglifts.gif; sourceTree = "<group>"; };
+		B850838E1D448352007D22C9 /* leglifts.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leglifts.gif; path = TCSandbox/Gifs/leglifts.gif; sourceTree = "<group>"; };
+		B850838F1D448352007D22C9 /* crunches.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = crunches.gif; path = TCSandbox/Gifs/crunches.gif; sourceTree = "<group>"; };
+		B85083901D448352007D22C9 /* squats.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = squats.gif; path = TCSandbox/Gifs/squats.gif; sourceTree = "<group>"; };
+		B85083911D448352007D22C9 /* chinups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = chinups.gif; path = TCSandbox/Gifs/chinups.gif; sourceTree = "<group>"; };
+		B85083921D448352007D22C9 /* stretch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = stretch.gif; path = TCSandbox/Gifs/stretch.gif; sourceTree = "<group>"; };
+		B85083931D448352007D22C9 /* dumbbells.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dumbbells.gif; path = TCSandbox/Gifs/dumbbells.gif; sourceTree = "<group>"; };
+		B85083941D448352007D22C9 /* jumprope1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jumprope1.gif; path = TCSandbox/Gifs/jumprope1.gif; sourceTree = "<group>"; };
+		B85083951D448352007D22C9 /* pullups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pullups.gif; path = TCSandbox/Gifs/pullups.gif; sourceTree = "<group>"; };
+		B85083961D448352007D22C9 /* bench.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = bench.gif; path = TCSandbox/Gifs/bench.gif; sourceTree = "<group>"; };
+		B85083A71D448C24007D22C9 /* calfstretch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = calfstretch.gif; path = TCSandbox/Gifs/calfstretch.gif; sourceTree = "<group>"; };
+		B85083A81D448C24007D22C9 /* sittingrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sittingrow.gif; path = TCSandbox/Gifs/sittingrow.gif; sourceTree = "<group>"; };
+		B85083AA1D448C24007D22C9 /* forwardlean.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = forwardlean.gif; path = TCSandbox/Gifs/forwardlean.gif; sourceTree = "<group>"; };
+		B85083AB1D448C24007D22C9 /* intensesquats.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = intensesquats.gif; path = TCSandbox/Gifs/intensesquats.gif; sourceTree = "<group>"; };
+		B85083B11D449A9C007D22C9 /* pulldowns.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pulldowns.gif; path = TCSandbox/Gifs2/pulldowns.gif; sourceTree = "<group>"; };
+		B85083B31D44A1BB007D22C9 /* bellydance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = bellydance.gif; path = TCSandbox/Gifs2/bellydance.gif; sourceTree = "<group>"; };
+		B85083B41D44A1BB007D22C9 /* discodance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = discodance.gif; path = TCSandbox/Gifs2/discodance.gif; sourceTree = "<group>"; };
+		B85083B51D44A1BB007D22C9 /* moonwalker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = moonwalker.gif; path = TCSandbox/Gifs2/moonwalker.gif; sourceTree = "<group>"; };
+		B85083B61D44A1BB007D22C9 /* jakedance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jakedance.gif; path = TCSandbox/Gifs2/jakedance.gif; sourceTree = "<group>"; };
+		B85083B71D44A1BB007D22C9 /* dancebattle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dancebattle.gif; path = TCSandbox/Gifs2/dancebattle.gif; sourceTree = "<group>"; };
+		B85083B81D44A1BB007D22C9 /* carltondance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = carltondance.gif; path = TCSandbox/Gifs2/carltondance.gif; sourceTree = "<group>"; };
+		B85083B91D44A1BB007D22C9 /* runningman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = runningman.gif; path = TCSandbox/Gifs2/runningman.gif; sourceTree = "<group>"; };
+		B85083BA1D44A1BB007D22C9 /* twerk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = twerk.gif; path = TCSandbox/Gifs2/twerk.gif; sourceTree = "<group>"; };
+		B85083BB1D44A1BB007D22C9 /* rap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = rap.gif; path = TCSandbox/Gifs2/rap.gif; sourceTree = "<group>"; };
+		B85083BC1D44A1BB007D22C9 /* breakdance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = breakdance.gif; path = TCSandbox/Gifs2/breakdance.gif; sourceTree = "<group>"; };
+		B85083BD1D44A1BB007D22C9 /* hotlineblingdance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hotlineblingdance.gif; path = TCSandbox/Gifs2/hotlineblingdance.gif; sourceTree = "<group>"; };
+		B85083C91D44A26F007D22C9 /* poledance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = poledance.gif; path = TCSandbox/Gifs2/poledance.gif; sourceTree = "<group>"; };
+		B85083CB1D44A559007D22C9 /* bikeparty.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = bikeparty.gif; path = TCSandbox/Gifs3/bikeparty.gif; sourceTree = "<group>"; };
+		B85083CC1D44A559007D22C9 /* chocolateDipped.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = chocolateDipped.gif; path = TCSandbox/Gifs3/chocolateDipped.gif; sourceTree = "<group>"; };
+		B85083CD1D44A559007D22C9 /* dibblebballwithhockeystick.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dibblebballwithhockeystick.gif; path = TCSandbox/Gifs3/dibblebballwithhockeystick.gif; sourceTree = "<group>"; };
+		B85083CE1D44A559007D22C9 /* egg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = egg.gif; path = TCSandbox/Gifs3/egg.gif; sourceTree = "<group>"; };
+		B85083CF1D44A559007D22C9 /* gadgets.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gadgets.gif; path = TCSandbox/Gifs3/gadgets.gif; sourceTree = "<group>"; };
+		B85083D01D44A559007D22C9 /* gingerbread.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gingerbread.gif; path = TCSandbox/Gifs3/gingerbread.gif; sourceTree = "<group>"; };
+		B85083D11D44A559007D22C9 /* interestingGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = interestingGif.gif; path = TCSandbox/Gifs3/interestingGif.gif; sourceTree = "<group>"; };
+		B85083D21D44A559007D22C9 /* lowrider_gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = lowrider_gif1.gif; path = TCSandbox/Gifs3/lowrider_gif1.gif; sourceTree = "<group>"; };
+		B85083D31D44A559007D22C9 /* pacman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pacman.gif; path = TCSandbox/Gifs3/pacman.gif; sourceTree = "<group>"; };
+		B85083D41D44A559007D22C9 /* pacman2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pacman2.gif; path = TCSandbox/Gifs3/pacman2.gif; sourceTree = "<group>"; };
+		B85083D51D44A559007D22C9 /* pizzaproblems.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pizzaproblems.gif; path = TCSandbox/Gifs3/pizzaproblems.gif; sourceTree = "<group>"; };
+		B85083D61D44A559007D22C9 /* pokemonbowl.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pokemonbowl.gif; path = TCSandbox/Gifs3/pokemonbowl.gif; sourceTree = "<group>"; };
+		B85083D71D44A559007D22C9 /* pokemonhunter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pokemonhunter.gif; path = TCSandbox/Gifs3/pokemonhunter.gif; sourceTree = "<group>"; };
+		B85083D81D44A559007D22C9 /* random.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = random.gif; path = TCSandbox/Gifs3/random.gif; sourceTree = "<group>"; };
+		B85083D91D44A559007D22C9 /* reCat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = reCat.gif; path = TCSandbox/Gifs3/reCat.gif; sourceTree = "<group>"; };
+		B85083DA1D44A559007D22C9 /* santamoPed.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = santamoPed.gif; path = TCSandbox/Gifs3/santamoPed.gif; sourceTree = "<group>"; };
+		B85083DB1D44A559007D22C9 /* simpsons.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = simpsons.gif; path = TCSandbox/Gifs3/simpsons.gif; sourceTree = "<group>"; };
+		B85083DC1D44A559007D22C9 /* singtocats.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = singtocats.gif; path = TCSandbox/Gifs3/singtocats.gif; sourceTree = "<group>"; };
+		B85083DD1D44A559007D22C9 /* spidey.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = spidey.gif; path = TCSandbox/Gifs3/spidey.gif; sourceTree = "<group>"; };
+		B85083DE1D44A559007D22C9 /* starwars.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = starwars.gif; path = TCSandbox/Gifs3/starwars.gif; sourceTree = "<group>"; };
+		B85083DF1D44A559007D22C9 /* supersanta.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = supersanta.gif; path = TCSandbox/Gifs3/supersanta.gif; sourceTree = "<group>"; };
+		B85083E01D44A559007D22C9 /* zuckBaby.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = zuckBaby.gif; path = TCSandbox/Gifs3/zuckBaby.gif; sourceTree = "<group>"; };
+		B85083F71D44AE3F007D22C9 /* whip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = whip.gif; path = TCSandbox/Gifs2/whip.gif; sourceTree = "<group>"; };
+		B85083F91D44AE44007D22C9 /* untzuntz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = untzuntz.gif; path = TCSandbox/Gifs3/untzuntz.gif; sourceTree = "<group>"; };
 		B864E70A1D3B183D000D3499 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollExtensionViewController.swift; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -360,26 +578,135 @@
 		B84012CA1D39BEB200D99A59 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				B85083011D4459DC007D22C9 /* catch.gif */,
+				B85083021D4459DC007D22C9 /* cheer.gif */,
+				B85083031D4459DC007D22C9 /* chug.gif */,
+				B85083041D4459DC007D22C9 /* dive.gif */,
+				B85083551D446DD8007D22C9 /* makebasket.gif */,
+				B85083051D4459DC007D22C9 /* robot.gif */,
+				B85083731D4480CC007D22C9 /* sideleglifts.gif */,
+				B85083751D4480CC007D22C9 /* squats.gif */,
+				B85083761D4480CC007D22C9 /* stretch.gif */,
+				B85083F91D44AE44007D22C9 /* untzuntz.gif */,
+				B85083A71D448C24007D22C9 /* calfstretch.gif */,
+				B85083A81D448C24007D22C9 /* sittingrow.gif */,
+				B85083AA1D448C24007D22C9 /* forwardlean.gif */,
+				B85083AB1D448C24007D22C9 /* intensesquats.gif */,
+				B85083CB1D44A559007D22C9 /* bikeparty.gif */,
+				B85083F71D44AE3F007D22C9 /* whip.gif */,
+				B85083CC1D44A559007D22C9 /* chocolateDipped.gif */,
+				B85083CD1D44A559007D22C9 /* dibblebballwithhockeystick.gif */,
+				B85083CE1D44A559007D22C9 /* egg.gif */,
+				B85083CF1D44A559007D22C9 /* gadgets.gif */,
+				B85083D01D44A559007D22C9 /* gingerbread.gif */,
+				B85083D11D44A559007D22C9 /* interestingGif.gif */,
+				B85083D21D44A559007D22C9 /* lowrider_gif1.gif */,
+				B85083D31D44A559007D22C9 /* pacman.gif */,
+				B85083D41D44A559007D22C9 /* pacman2.gif */,
+				B85083D51D44A559007D22C9 /* pizzaproblems.gif */,
+				B85083D61D44A559007D22C9 /* pokemonbowl.gif */,
+				B85083D71D44A559007D22C9 /* pokemonhunter.gif */,
+				B85083D81D44A559007D22C9 /* random.gif */,
+				B85083D91D44A559007D22C9 /* reCat.gif */,
+				B85083DA1D44A559007D22C9 /* santamoPed.gif */,
+				B85083DB1D44A559007D22C9 /* simpsons.gif */,
+				B85083DC1D44A559007D22C9 /* singtocats.gif */,
+				B85083DD1D44A559007D22C9 /* spidey.gif */,
+				B85083DE1D44A559007D22C9 /* starwars.gif */,
+				B85083DF1D44A559007D22C9 /* supersanta.gif */,
+				B85083E01D44A559007D22C9 /* zuckBaby.gif */,
+				B850836B1D447725007D22C9 /* dribble.gif */,
+				B85083061D4459DC007D22C9 /* eating.gif */,
+				B85083071D4459DC007D22C9 /* elvisdance.gif */,
+				B85083631D4473C0007D22C9 /* dunk.gif */,
+				B85083871D448352007D22C9 /* deadlift.gif */,
+				B85083881D448352007D22C9 /* chairdip.gif */,
+				B85083891D448352007D22C9 /* spin1.gif */,
+				B850838A1D448352007D22C9 /* jog.gif */,
+				B850838B1D448352007D22C9 /* pushups.gif */,
+				B850838C1D448352007D22C9 /* cycle.gif */,
+				B850838D1D448352007D22C9 /* sideleglifts.gif */,
+				B850838E1D448352007D22C9 /* leglifts.gif */,
+				B850838F1D448352007D22C9 /* crunches.gif */,
+				B85083901D448352007D22C9 /* squats.gif */,
+				B85083911D448352007D22C9 /* chinups.gif */,
+				B85083921D448352007D22C9 /* stretch.gif */,
+				B85083931D448352007D22C9 /* dumbbells.gif */,
+				B85083941D448352007D22C9 /* jumprope1.gif */,
+				B85083951D448352007D22C9 /* pullups.gif */,
+				B85083961D448352007D22C9 /* bench.gif */,
+				B850837F1D44816F007D22C9 /* crunches.gif */,
+				B85083801D44816F007D22C9 /* cycle.gif */,
+				B85083811D44816F007D22C9 /* deadlift.gif */,
+				B85083821D44816F007D22C9 /* jog.gif */,
+				B850837B1D448131007D22C9 /* spin1.gif */,
+				B85083091D4459DC007D22C9 /* fight.gif */,
+				B85083B11D449A9C007D22C9 /* pulldowns.gif */,
+				B850830A1D4459DC007D22C9 /* fistpump.gif */,
+				B850837D1D44816A007D22C9 /* dumbbells.gif */,
+				B850830B1D4459DC007D22C9 /* flip.gif */,
+				B850830C1D4459DC007D22C9 /* flipOver.gif */,
+				B850830D1D4459DC007D22C9 /* freeThrow.gif */,
+				B850830E1D4459DC007D22C9 /* haduken.gif */,
+				B850830F1D4459DC007D22C9 /* hammerdance.gif */,
+				B85083101D4459DC007D22C9 /* highFive.gif */,
+				B85083111D4459DC007D22C9 /* juggle.gif */,
+				B85083651D44745F007D22C9 /* kick.gif */,
+				B85083121D4459DC007D22C9 /* jump.gif */,
+				B85083151D4459DC007D22C9 /* kiss.gif */,
+				B85083171D4459DC007D22C9 /* makeItRain.gif */,
+				B85083191D4459DC007D22C9 /* playinstrument.gif */,
+				B850831A1D4459DC007D22C9 /* punch.gif */,
+				B850831B1D4459DC007D22C9 /* ridebike.gif */,
+				B85083B31D44A1BB007D22C9 /* bellydance.gif */,
+				B85083C91D44A26F007D22C9 /* poledance.gif */,
+				B85083B41D44A1BB007D22C9 /* discodance.gif */,
+				B85083B51D44A1BB007D22C9 /* moonwalker.gif */,
+				B85083B61D44A1BB007D22C9 /* jakedance.gif */,
+				B85083B71D44A1BB007D22C9 /* dancebattle.gif */,
+				B85083B81D44A1BB007D22C9 /* carltondance.gif */,
+				B85083B91D44A1BB007D22C9 /* runningman.gif */,
+				B85083BA1D44A1BB007D22C9 /* twerk.gif */,
+				B85083BB1D44A1BB007D22C9 /* rap.gif */,
+				B85083BC1D44A1BB007D22C9 /* breakdance.gif */,
+				B85083BD1D44A1BB007D22C9 /* hotlineblingdance.gif */,
+				B850831C1D4459DC007D22C9 /* rockOut.gif */,
+				B850831D1D4459DC007D22C9 /* rockoutHardCore.gif */,
+				B850835D1D446F83007D22C9 /* boxkangaroo.gif */,
+				B850831E1D4459DC007D22C9 /* singMinion.gif */,
+				B850831F1D4459DC007D22C9 /* sit.gif */,
+				B85083201D4459DC007D22C9 /* skate.gif */,
+				B85083211D4459DC007D22C9 /* spin.gif */,
+				B85083221D4459DC007D22C9 /* spinBball.gif */,
+				B85083231D4459DC007D22C9 /* swing2.gif */,
+				B85083241D4459DC007D22C9 /* tackle.gif */,
+				B85083251D4459DC007D22C9 /* takeapicture.gif */,
+				B85083261D4459DC007D22C9 /* takeselfie.gif */,
+				B85083271D4459DC007D22C9 /* throw1.gif */,
+				B850836F1D44790F007D22C9 /* skiprope.gif */,
+				B85083281D4459DC007D22C9 /* walkcool.gif */,
+				B850836D1D4478F6007D22C9 /* running.gif */,
 				B85082C91D4434A0007D22C9 /* airbike.gif */,
+				B85083691D4476EE007D22C9 /* crossover.gif */,
 				B85082CA1D4434A0007D22C9 /* bigarmcircles.gif */,
-				B85082CB1D4434A0007D22C9 /* boxing.gif */,
+				B85083591D446DF7007D22C9 /* dunk.gif */,
+				B850835B1D446E07007D22C9 /* flip.gif */,
 				B85082CC1D4434A0007D22C9 /* buttkickers.gif */,
 				B85082CD1D4434A0007D22C9 /* elevatedpushups.gif */,
 				B85082CE1D4434A0007D22C9 /* forwardlunge.gif */,
 				B85082CF1D4434A0007D22C9 /* hipairplane.gif */,
 				B85082D01D4434A0007D22C9 /* jumpingjacks.gif */,
-				B85082D11D4434A0007D22C9 /* jumprope.gif */,
 				B85082D21D4434A0007D22C9 /* leglifts.gif */,
 				B85082D31D4434A0007D22C9 /* manpushups.gif */,
 				B85082D41D4434A0007D22C9 /* mountainclimbers.gif */,
 				B85082D51D4434A0007D22C9 /* plankarmraise.gif */,
 				B85082D61D4434A0007D22C9 /* plankpullin.gif */,
 				B85082D71D4434A0007D22C9 /* pliesquat.gif */,
+				B85083711D448096007D22C9 /* running.gif */,
 				B85082D81D4434A0007D22C9 /* pullups.gif */,
 				B85082D91D4434A0007D22C9 /* pushups.gif */,
 				B85082DA1D4434A0007D22C9 /* reverselunge.gif */,
 				B85082DB1D4434A0007D22C9 /* romaniandeadlift.gif */,
-				B85082DC1D4434A0007D22C9 /* running.gif */,
 				B85082DD1D4434A0007D22C9 /* seatedlegpullins.gif */,
 				B85082DE1D4434A0007D22C9 /* standingrow.gif */,
 				B85082DF1D4434A0007D22C9 /* stepovers.gif */,
@@ -518,39 +845,148 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B85082F81D4434A0007D22C9 /* running.gif in Resources */,
+				B85083991D448352007D22C9 /* spin1.gif in Resources */,
+				B85083661D44745F007D22C9 /* kick.gif in Resources */,
+				B85083A01D448352007D22C9 /* squats.gif in Resources */,
 				B85082E51D4434A0007D22C9 /* airbike.gif in Resources */,
 				B85082F21D4434A0007D22C9 /* plankpullin.gif in Resources */,
+				B850834E1D4459DC007D22C9 /* takeselfie.gif in Resources */,
 				B85082F41D4434A0007D22C9 /* pullups.gif in Resources */,
+				B85083321D4459DC007D22C9 /* fistpump.gif in Resources */,
+				B85083A51D448352007D22C9 /* pullups.gif in Resources */,
+				B85083841D44816F007D22C9 /* cycle.gif in Resources */,
+				B850834C1D4459DC007D22C9 /* tackle.gif in Resources */,
 				B85082F61D4434A0007D22C9 /* reverselunge.gif in Resources */,
+				B850835E1D446F83007D22C9 /* boxkangaroo.gif in Resources */,
+				B85083791D4480CC007D22C9 /* squats.gif in Resources */,
+				B850834A1D4459DC007D22C9 /* spinBball.gif in Resources */,
+				B850835A1D446DF7007D22C9 /* dunk.gif in Resources */,
+				B850837A1D4480CC007D22C9 /* stretch.gif in Resources */,
+				B85083EA1D44A559007D22C9 /* pacman2.gif in Resources */,
+				B85083561D446DD8007D22C9 /* makebasket.gif in Resources */,
+				B85083ED1D44A559007D22C9 /* pokemonhunter.gif in Resources */,
+				B850833F1D4459DC007D22C9 /* makeItRain.gif in Resources */,
 				925D8E631D2D79C1000F44F7 /* LaunchScreen.storyboard in Resources */,
+				B85083BE1D44A1BB007D22C9 /* bellydance.gif in Resources */,
+				B85083491D4459DC007D22C9 /* spin.gif in Resources */,
 				B85082EC1D4434A0007D22C9 /* jumpingjacks.gif in Resources */,
+				B85083361D4459DC007D22C9 /* haduken.gif in Resources */,
+				B85083381D4459DC007D22C9 /* highFive.gif in Resources */,
+				B85083721D448096007D22C9 /* running.gif in Resources */,
+				B850839D1D448352007D22C9 /* sideleglifts.gif in Resources */,
+				B85083EC1D44A559007D22C9 /* pokemonbowl.gif in Resources */,
+				B850836E1D4478F6007D22C9 /* running.gif in Resources */,
+				B85083EE1D44A559007D22C9 /* random.gif in Resources */,
+				B85083F51D44A559007D22C9 /* supersanta.gif in Resources */,
+				B850832B1D4459DC007D22C9 /* chug.gif in Resources */,
+				B850832F1D4459DC007D22C9 /* elvisdance.gif in Resources */,
+				B85083461D4459DC007D22C9 /* singMinion.gif in Resources */,
+				B85083441D4459DC007D22C9 /* rockOut.gif in Resources */,
+				B85083E91D44A559007D22C9 /* pacman.gif in Resources */,
+				B850839E1D448352007D22C9 /* leglifts.gif in Resources */,
 				B85082E81D4434A0007D22C9 /* buttkickers.gif in Resources */,
+				B85083331D4459DC007D22C9 /* flip.gif in Resources */,
 				B85082F71D4434A0007D22C9 /* romaniandeadlift.gif in Resources */,
-				B85082E71D4434A0007D22C9 /* boxing.gif in Resources */,
+				B85083411D4459DC007D22C9 /* playinstrument.gif in Resources */,
+				B85083E81D44A559007D22C9 /* lowrider_gif1.gif in Resources */,
+				B85083E51D44A559007D22C9 /* gadgets.gif in Resources */,
+				B850833D1D4459DC007D22C9 /* kiss.gif in Resources */,
+				B85083F81D44AE3F007D22C9 /* whip.gif in Resources */,
+				B850839C1D448352007D22C9 /* cycle.gif in Resources */,
+				B85083641D4473C0007D22C9 /* dunk.gif in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
+				B85083E71D44A559007D22C9 /* interestingGif.gif in Resources */,
+				B85083F21D44A559007D22C9 /* singtocats.gif in Resources */,
+				B85083421D4459DC007D22C9 /* punch.gif in Resources */,
+				B850832C1D4459DC007D22C9 /* dive.gif in Resources */,
+				B85083A11D448352007D22C9 /* chinups.gif in Resources */,
 				B85082F51D4434A0007D22C9 /* pushups.gif in Resources */,
+				B85083A31D448352007D22C9 /* dumbbells.gif in Resources */,
+				B85083F41D44A559007D22C9 /* starwars.gif in Resources */,
+				B85083A41D448352007D22C9 /* jumprope1.gif in Resources */,
+				B85083E11D44A559007D22C9 /* bikeparty.gif in Resources */,
+				B85083F61D44A559007D22C9 /* zuckBaby.gif in Resources */,
+				B85083311D4459DC007D22C9 /* fight.gif in Resources */,
+				B850839B1D448352007D22C9 /* pushups.gif in Resources */,
+				B85083AD1D448C24007D22C9 /* sittingrow.gif in Resources */,
 				925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */,
+				B85083431D4459DC007D22C9 /* ridebike.gif in Resources */,
+				B850834B1D4459DC007D22C9 /* swing2.gif in Resources */,
+				B85083C41D44A1BB007D22C9 /* runningman.gif in Resources */,
+				B850837C1D448131007D22C9 /* spin1.gif in Resources */,
+				B85083EF1D44A559007D22C9 /* reCat.gif in Resources */,
+				B85083AC1D448C24007D22C9 /* calfstretch.gif in Resources */,
+				B85083C61D44A1BB007D22C9 /* rap.gif in Resources */,
+				B85083BF1D44A1BB007D22C9 /* discodance.gif in Resources */,
 				B85082EB1D4434A0007D22C9 /* hipairplane.gif in Resources */,
+				B85083971D448352007D22C9 /* deadlift.gif in Resources */,
+				B85083981D448352007D22C9 /* chairdip.gif in Resources */,
+				B85083A21D448352007D22C9 /* stretch.gif in Resources */,
+				B850837E1D44816A007D22C9 /* dumbbells.gif in Resources */,
+				B85083E61D44A559007D22C9 /* gingerbread.gif in Resources */,
+				B85083831D44816F007D22C9 /* crunches.gif in Resources */,
 				B85082E91D4434A0007D22C9 /* elevatedpushups.gif in Resources */,
+				B85083771D4480CC007D22C9 /* sideleglifts.gif in Resources */,
+				B85083C71D44A1BB007D22C9 /* breakdance.gif in Resources */,
 				B85082FC1D4434A0007D22C9 /* stepups.gif in Resources */,
+				B85083B21D449A9C007D22C9 /* pulldowns.gif in Resources */,
+				B85083C31D44A1BB007D22C9 /* carltondance.gif in Resources */,
 				B85082FB1D4434A0007D22C9 /* stepovers.gif in Resources */,
+				B85083F31D44A559007D22C9 /* spidey.gif in Resources */,
+				B85083861D44816F007D22C9 /* jog.gif in Resources */,
+				B85083371D4459DC007D22C9 /* hammerdance.gif in Resources */,
+				B850839A1D448352007D22C9 /* jog.gif in Resources */,
 				B85082EF1D4434A0007D22C9 /* manpushups.gif in Resources */,
-				B85082ED1D4434A0007D22C9 /* jumprope.gif in Resources */,
+				B85083C01D44A1BB007D22C9 /* moonwalker.gif in Resources */,
+				B85083A61D448352007D22C9 /* bench.gif in Resources */,
+				B85083451D4459DC007D22C9 /* rockoutHardCore.gif in Resources */,
+				B850839F1D448352007D22C9 /* crunches.gif in Resources */,
+				B850834F1D4459DC007D22C9 /* throw1.gif in Resources */,
+				B85083B01D448C24007D22C9 /* intensesquats.gif in Resources */,
+				B850832E1D4459DC007D22C9 /* eating.gif in Resources */,
+				B850835C1D446E07007D22C9 /* flip.gif in Resources */,
 				B85082FF1D4434A0007D22C9 /* wallsit.gif in Resources */,
+				B85083C81D44A1BB007D22C9 /* hotlineblingdance.gif in Resources */,
+				B85083FA1D44AE44007D22C9 /* untzuntz.gif in Resources */,
 				B85082EE1D4434A0007D22C9 /* leglifts.gif in Resources */,
+				B850833A1D4459DC007D22C9 /* jump.gif in Resources */,
 				B85082F91D4434A0007D22C9 /* seatedlegpullins.gif in Resources */,
 				B85082E61D4434A0007D22C9 /* bigarmcircles.gif in Resources */,
+				B85083501D4459DC007D22C9 /* walkcool.gif in Resources */,
+				B85083CA1D44A26F007D22C9 /* poledance.gif in Resources */,
+				B85083EB1D44A559007D22C9 /* pizzaproblems.gif in Resources */,
+				B85083341D4459DC007D22C9 /* flipOver.gif in Resources */,
 				B85082F31D4434A0007D22C9 /* pliesquat.gif in Resources */,
+				B85083E31D44A559007D22C9 /* dibblebballwithhockeystick.gif in Resources */,
+				B85083291D4459DC007D22C9 /* catch.gif in Resources */,
+				B85083E41D44A559007D22C9 /* egg.gif in Resources */,
 				B85082EA1D4434A0007D22C9 /* forwardlunge.gif in Resources */,
+				B85083481D4459DC007D22C9 /* skate.gif in Resources */,
+				B850832D1D4459DC007D22C9 /* robot.gif in Resources */,
 				B85082FE1D4434A0007D22C9 /* tplankwithtwist.gif in Resources */,
+				B85083391D4459DC007D22C9 /* juggle.gif in Resources */,
+				B85083851D44816F007D22C9 /* deadlift.gif in Resources */,
 				B85082F01D4434A0007D22C9 /* mountainclimbers.gif in Resources */,
 				B85082FA1D4434A0007D22C9 /* standingrow.gif in Resources */,
+				B85083C51D44A1BB007D22C9 /* twerk.gif in Resources */,
+				B85083AF1D448C24007D22C9 /* forwardlean.gif in Resources */,
 				920A08F11D38584300A3785A /* Main.storyboard in Resources */,
+				B850834D1D4459DC007D22C9 /* takeapicture.gif in Resources */,
+				B85083C21D44A1BB007D22C9 /* dancebattle.gif in Resources */,
+				B850836C1D447725007D22C9 /* dribble.gif in Resources */,
 				B85083001D4434A0007D22C9 /* windshieldwipers.gif in Resources */,
+				B85083C11D44A1BB007D22C9 /* jakedance.gif in Resources */,
+				B85083351D4459DC007D22C9 /* freeThrow.gif in Resources */,
+				B85083471D4459DC007D22C9 /* sit.gif in Resources */,
+				B850836A1D4476EE007D22C9 /* crossover.gif in Resources */,
 				B85082F11D4434A0007D22C9 /* plankarmraise.gif in Resources */,
+				B85083F01D44A559007D22C9 /* santamoPed.gif in Resources */,
+				B850832A1D4459DC007D22C9 /* cheer.gif in Resources */,
+				B85083F11D44A559007D22C9 /* simpsons.gif in Resources */,
 				925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */,
+				B85083701D44790F007D22C9 /* skiprope.gif in Resources */,
 				B85082FD1D4434A0007D22C9 /* superman.gif in Resources */,
+				B85083E21D44A559007D22C9 /* chocolateDipped.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

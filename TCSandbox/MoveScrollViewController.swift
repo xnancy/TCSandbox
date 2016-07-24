@@ -34,6 +34,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     @IBOutlet weak var collectionView4: UICollectionView!
     @IBOutlet weak var collectionView5: UICollectionView!
     @IBOutlet weak var collectionView6: UICollectionView!
+    @IBOutlet weak var collectionView7: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewChallengeButton: UIButton!
     @IBOutlet weak var counterLabel: UILabel!
@@ -46,6 +47,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     private var gifs4 = Tags.createGifs4()
     private var gifs5 = Tags.createGifs5()
     private var gifs6 = Tags.createGifs6()
+    private var gifs7 = Gifs.createGifs7()
     
     private struct Storyboard {
         
@@ -55,6 +57,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         static let CellIndentifier4 = "GifCell4"
         static let CellIndentifier5 = "GifCell5"
         static let CellIndentifier6 = "GifCell6"
+        static let CellIndentifier7 = "GifCell7"
         
     }
     
@@ -64,6 +67,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     var collection4Selected: [Bool] = []
     var collection5Selected: [Bool] = []
     var collection6Selected: [Bool] = []
+    var collection7Selected: [Bool] = []
     //var delegate: UIViewControllerPreviewingDelegate { get }
     
     var movesCount: Int = 0
@@ -82,26 +86,57 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         updateView()
         updateTagView()
         
-        print(Gifs.sortedRow1)
-        
-        //collectionView1.delegate = self
-        //collectionView1.dataSource = self
-        
-        
+   
         scrollButton.layer.cornerRadius = 0.5 * scrollButton.bounds.size.width
-        
-        //collectionView2.delegate = self
-        //collectionView2.dataSource = self
+   
         
         // Do any additional setup after loading the view.
         
-        collection1Selected = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
-        collection2Selected = [false, false, false, false, false, false, false]
-        collection3Selected = [false, false, false, false, false, false, false, false, false]
+        collection1Selected = [
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false
+        ]
+        
+        
+        collection2Selected = [
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false
+        ]
+        
+        
+        collection3Selected = [
+            false, false, false, false, false,
+            false, false, false, false
+        
+        ]
+        
+        
         collection4Selected = [false, false, false, false, false]
         collection5Selected = [false, false, false, false]
         collection6Selected = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
         
+        collection7Selected = [
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false
+        ]
     }
     
     func selectCollectionCell(index: Int, collectionView: Int){
@@ -123,7 +158,11 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         }else if collectionView == 6{
             collection6Selected[index] = !collection6Selected[index]
             collectionView6.reloadData()
+        }else if collectionView == 7{
+            collection7Selected[index] = !collection7Selected[index]
+            collectionView7.reloadData()
         }
+
     }
     
     func incrementWorkoutCount() {
@@ -216,7 +255,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
                if( traitCollection.forceTouchCapability == .Available){
                 registerForPreviewingWithDelegate(self, sourceView: collectionView1)
                 registerForPreviewingWithDelegate(self, sourceView: view)
-                registerForPreviewingWithDelegate(self, sourceView: collectionView2)
+                //registerForPreviewingWithDelegate(self, sourceView: collectionView2)
         }
     }
     
@@ -319,6 +358,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             return 1
         }else if collectionView == collectionView5{
             return 1
+        }else if collectionView == collectionView6{
+            return 1
         }else{
             return 1
         }
@@ -335,8 +376,10 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             return gifs4.count
         }else if collectionView == collectionView5{
             return gifs5.count
-        }else{
+        }else if collectionView == collectionView6{
             return gifs6.count
+        }else{
+            return gifs7.count
         }
     }
     
@@ -349,7 +392,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection1Selected[indexPath.row]
             cell.gifs = self.gifs[indexPath.item]
-            cell.layer.cornerRadius = 5
+            cell.layer.cornerRadius = 2
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection1Selected[indexPath.row]
             return cell
@@ -359,7 +402,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.delegate = self
             cell.isSelected = collection2Selected[indexPath.row]
             cell.gifs2 = self.gifs2[indexPath.item]
-            cell.layer.cornerRadius = 5
+            cell.layer.cornerRadius = 2
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection2Selected[indexPath.row]
             return cell
@@ -392,7 +435,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection5Selected[indexPath.row]
             return cell
-        } else {
+        } else if collectionView == collectionView6{
             let cell = collectionView6.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier6, forIndexPath: indexPath) as! Gifs6CollectionViewCell
             cell.delegate = self
             cell.isSelected = collection6Selected[indexPath.row]
@@ -400,6 +443,15 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             cell.layer.cornerRadius = 5
             cell.layer.masksToBounds = true
             cell.selectButton.selected = collection6Selected[indexPath.row]
+            return cell
+        } else {
+            let cell = collectionView7.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIndentifier7, forIndexPath: indexPath) as! Gifs7CollectionViewCell
+            cell.delegate = self
+            cell.isSelected = collection7Selected[indexPath.row]
+            cell.gifs7 = self.gifs7[indexPath.item]
+            cell.layer.cornerRadius = 2
+            cell.layer.masksToBounds = true
+            cell.selectButton.selected = collection7Selected[indexPath.row]
             return cell
         }
     }

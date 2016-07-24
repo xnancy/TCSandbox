@@ -48,7 +48,7 @@ class PreviewViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         textLabel.text = Gifs.gifDictionary[selectedItem!]
-        selectedGifImageView.setGifImage(UIImage(gifName: selectedItem!), manager: gifmanager, loopCount: 20)
+        selectedGifImageView.setGifImage(UIImage(gifName: selectedItem!), manager: gifmanager, loopCount: 200)
         
     
     }
