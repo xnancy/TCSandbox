@@ -14,6 +14,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'AFNetworking'
+pod "KRVideoPlayer"
   target 'TCSandboxTests' do
     inherit! :search_paths
     # Pods for testing
@@ -25,6 +26,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'AFNetworking'
+pod "KRVideoPlayer"
   end
 
   target 'TCSandboxUITests' do
@@ -38,6 +40,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'AFNetworking'
+pod "KRVideoPlayer"
   end
 
 end

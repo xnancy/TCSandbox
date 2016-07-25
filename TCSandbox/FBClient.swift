@@ -447,4 +447,27 @@ class FBClient: AnyObject {
             completion(feedChallenges, feedDictionary)
         })
     }
+    
+    class func binarySearch(date: NSDate, array: [String], dictionary: [String: String]) -> Int
+    {
+        var low = 0
+        var high = array.count-1
+        
+        while low != high
+        {
+            let mid = (low+high)/2
+            
+            if (date.compare(FBClient.dateFormatter.dateFromString((dictionary[array[mid]])!)!) == NSComparisonResult.OrderedAscending)
+            {
+                low = mid + 1
+            }
+            
+            else
+            {
+                high = mid
+            }
+        }
+        
+        return low
+    }
 }

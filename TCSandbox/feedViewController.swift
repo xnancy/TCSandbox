@@ -15,6 +15,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @IBOutlet weak var feedTableView: UITableView!
+    @IBOutlet weak var toggleHomeButton: UIButton!
+    
+    
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
     
@@ -118,7 +121,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.feedChallenges?.sortInPlace({ (element1, element2) -> Bool in
                 
-                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
+                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedAscending
                 {
                     return true
                 }

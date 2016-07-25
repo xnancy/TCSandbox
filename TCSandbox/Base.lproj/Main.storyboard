@@ -1225,10 +1225,18 @@
                                 <segue destination="Yqb-P4-8n1" kind="showDetail" id="eYC-g1-c8h"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="AMO-NV-h2x">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5OL-LS-KqM">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="feedTableView" destination="eYb-Ms-gzK" id="AIY-Ss-vwm"/>
+                        <outlet property="toggleHomeButton" destination="5OL-LS-KqM" id="X3h-KM-uNW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX2-N7-6vG" userLabel="First Responder" sceneMemberID="firstResponder"/>
