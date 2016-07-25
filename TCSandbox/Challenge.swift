@@ -20,6 +20,8 @@ class Challenge: AnyObject
     var timeLimit: Int?
     var senderID: String?
     var name: String?
+    var videoURLs: [String]?
+    var videoLikes: [Int]?
     
     // Complete initializer for FB retrieval
     init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: Int, participants: [String], challengeID: String, comp_tags: [String], deadline: String, senderID: String, completedBy: [String]) {

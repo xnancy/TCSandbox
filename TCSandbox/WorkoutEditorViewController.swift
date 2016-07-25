@@ -458,9 +458,9 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         challenge?.gifNames = gifsToShow
         challenge?.tagNames = tagsToShow
         challenge?.cTagNames = cTags
-       // let vc = segue.destinationViewController as! SendChallengeViewController
-       // vc.challenge = challenge
-       // vc.pickedVideo = pickedVideo
+        let vc = segue.destinationViewController as! SendChallengeViewController
+        vc.challenge = challenge
+        vc.pickedVideo = pickedVideo
         
     }
     

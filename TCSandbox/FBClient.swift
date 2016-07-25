@@ -82,7 +82,9 @@ class FBClient: AnyObject {
                     let challengesCompleted: Int = 0
                     let feedDictionary: NSDictionary = ["placeholder": "placeholder"]
                     let feedChallenges: [String] = ["placeholder"]
-                    let updates = ["friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted, "feed_challenges": feedChallenges, "feed_dictionary": feedDictionary]
+                    let likeCount = 0
+                    let votedOn = ["placeholder"]
+                    let updates = ["friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted, "feed_challenges": feedChallenges, "feed_dictionary": feedDictionary, "like_count": likeCount, "voted_on": votedOn]
                     
                     dataRef.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
@@ -224,6 +226,7 @@ class FBClient: AnyObject {
         let compTags = challenge.cTagNames
         let challengeName = challenge.name
         let completedBy = ["placeholder"]
+        let videoLikes = [0]
 
         
         if tagNames! == [] {
@@ -281,7 +284,7 @@ class FBClient: AnyObject {
                 print(error.localizedDescription)
             }
 
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID, "completed_by": completedBy])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID, "completed_by": completedBy, "video_likes": videoLikes])
         }
     
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -410,8 +413,17 @@ class FBClient: AnyObject {
                 //stream the video from the download URL on the screen
                 var completedBy = challenge.completedBy!
                 completedBy.append(FBSDKAccessToken.currentAccessToken().userID)
-                let updates = ["completed_by": completedBy]
-                dataRef.child("Challenges").child(challenge.challengeID!).updateChildValues(updates)
+                
+                var videoLikes = challenge.videoLikes
+                videoLikes?.append(0)
+                if videoLikes == nil
+                {
+                    videoLikes = [0]
+                }
+                
+                print(videoLikes)
+                let updates = ["completed_by": completedBy, "video_likes": videoLikes!]
+                dataRef.child("Challenges").child(challenge.challengeID!).updateChildValues(updates as [NSObject : AnyObject])
                 
                 dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                     
@@ -469,5 +481,58 @@ class FBClient: AnyObject {
         }
         
         return low
+    }
+    
+    class func likeVideo(userID: String, challengeID: String, index: Int)
+    {
+        dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            var likesCount = snapshot.value!["likes_count"] as! Int
+            likesCount = likesCount + 1
+            var votedOn = snapshot.value!["voted_on"] as! [String]
+            votedOn.append(challengeID)
+            
+            dataRef.child("Users").child(userID).updateChildValues(["likes_count":likesCount, "voted_on": votedOn])
+        })
+        
+        
+        
+        dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            var likesCountArray = snapshot.value!["video_likes"] as! [Int]
+            var likesCount = likesCountArray[index]
+            likesCount = likesCount + 1
+            
+            dataRef.child("Challenges").child(challengeID).updateChildValues(["video_likes":likesCount])
+        })
+        
+        
+    }
+    
+    class func unlikeVideo(userID: String, challengeID: String, index: Int)
+    {
+        dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            var likesCount = snapshot.value!["likes_count"] as! Int
+            likesCount = likesCount - 1
+            var votedOn = snapshot.value!["voted_on"] as! [String]
+            let votedIndex = votedOn.indexOf(challengeID)
+            votedOn.removeAtIndex(votedIndex!)
+            
+            dataRef.child("Users").child(userID).updateChildValues(["likes_count":likesCount])
+        })
+        
+        
+        
+        dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            var likesCountArray = snapshot.value!["video_likes"] as! [Int]
+            var likesCount = likesCountArray[index]
+            likesCount = likesCount - 1
+            
+            dataRef.child("Challenges").child(challengeID).updateChildValues(["video_likes":likesCount])
+        })
+        
+        
     }
 }

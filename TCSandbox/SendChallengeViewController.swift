@@ -73,11 +73,12 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = friendsSendChallengeTableView.cellForRowAtIndexPath(indexPath) as! FriendsSendChallengeTableViewCell
         
-        if (((challenge?.participants?.contains(cell.userID!))) == nil) {
-            challenge?.removeParticipant(cell.userID!)
-        } else {
-            challenge?.addParticipant(cell.userID!)
-        }
+        challenge?.addParticipant(cell.userID!)
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = friendsSendChallengeTableView.cellForRowAtIndexPath(indexPath) as! FriendsSendChallengeTableViewCell
+        challenge?.removeParticipant(cell.userID!)
     }
     
     
@@ -96,7 +97,6 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         //ADD GIF NAMES
         //ADD TAG NAMES
         //ADD CHALLENGE NAME
-        
         if (challenge?.participants)! == []
         {
             //SEND A NOTIFICATION THAT THEY NEED TO SELECT PARTICIPANTS!

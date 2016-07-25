@@ -21,6 +21,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
     
+    
     override func viewDidLoad() {
         
         
@@ -83,6 +84,10 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.challengeNameLabel.text = challenge.name
             cell.videoLabel.text = "\((challenge.completedBy?.count)!) Videos"
             
+            let index = cell.participants?.indexOf(cell.currentParticipant!)
+            print(index)
+            //let videoLikes = cell.challenge?.videoLikes![index!]
+            
             FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
                 
                 let player = AVPlayer(URL: URL)
@@ -129,6 +134,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return false
             })
             
+            //sort out the correct dates here
+            
             self.feedTableView.reloadData()
         }
     }
@@ -152,6 +159,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             cell.currentParticipant = cell.participants![currentIndex!-1]
         }
+        
+        let index = cell.participants?.indexOf(cell.currentParticipant!)
+        print(index)
 
         FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
             
@@ -184,6 +194,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             cell.currentParticipant = cell.participants![currentIndex!+1]
         }
+        
+        let index = cell.participants?.indexOf(cell.currentParticipant!)
+        print(index)
         
         FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
             
