@@ -13,9 +13,10 @@ import Firebase
 import AVKit
 import MediaPlayer
 import MobileCoreServices
+import SwiftyGif
 
 class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    var gifManager = SwiftyGifManager(memoryLimit: 50)
     var challenge: Challenge?
     var didRespond: Bool?
     var pickedVideo: NSURL?
@@ -23,6 +24,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     var user: User?
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
+    @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var challengeTitleLabel: UILabel!
     @IBOutlet weak var deadlineLabel: UILabel!
@@ -103,7 +105,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         }
         
         cell.indexLabel.text = "\(indexPath.row)"
-        
+        cell.gifName = challenge?.gifNames![indexPath.row]
         return cell
     }
     
@@ -139,6 +141,12 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         imagePicker.dismissViewControllerAnimated(true) {
             self.performSegueWithIdentifier("responseSegue", sender: self)
         }
+    }
+    
+    @IBAction func onDetailCellTap(sender: UITapGestureRecognizer) {
+        let cell = sender.view as! detailsTableViewCell
+        let gifName = cell.gifName
+        gifImageView.setGifImage(UIImage(gifName: gifName!), manager: gifManager, loopCount: 100)
     }
     
     // MARK: - Navigation

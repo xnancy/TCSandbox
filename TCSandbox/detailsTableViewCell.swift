@@ -12,6 +12,7 @@ class detailsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
+    var gifName: String?
     
 
     override func awakeFromNib() {

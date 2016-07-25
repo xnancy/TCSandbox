@@ -198,14 +198,14 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oZL-hn-mfx">
-                                <rect key="frame" x="0.0" y="361" width="375" height="201"/>
+                                <rect key="frame" x="0.0" y="361" width="174" height="201"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="50" id="EDx-0b-Lvp" customClass="detailsTableViewCell" customModule="TCSandbox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="28" width="174" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDx-0b-Lvp" id="nJK-hl-9WA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pb-Sz-9TS">
@@ -223,9 +223,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.54613218891074333" blue="0.74903775051599875" alpha="0.28623670210921986" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="exerciseLabel" destination="7pb-Sz-9TS" id="GNh-UR-l4H"/>
                                             <outlet property="indexLabel" destination="kVp-7Q-L6G" id="BF4-yl-2DK"/>
+                                            <outletCollection property="gestureRecognizers" destination="S0o-HS-K2B" appends="YES" id="GF6-0G-E6j"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -255,6 +257,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-1x-Xiy">
+                                <rect key="frame" x="189" y="361" width="178" height="201"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="rIE-x3-NXC"/>
@@ -263,12 +268,18 @@
                         <outlet property="challengeTitleLabel" destination="Q8P-RS-65g" id="zL6-Jw-Vcq"/>
                         <outlet property="deadlineLabel" destination="R3w-VS-NAP" id="EQA-PJ-Afm"/>
                         <outlet property="detailsTableView" destination="oZL-hn-mfx" id="fSi-hB-CVW"/>
+                        <outlet property="gifImageView" destination="hC5-1x-Xiy" id="EM7-yt-PSK"/>
                         <outlet property="profileImageView" destination="lkt-bI-mm7" id="ToQ-wT-7UC"/>
                         <outlet property="videoView" destination="Hzo-ob-LyM" id="j1K-hd-gug"/>
                         <segue destination="eQi-sG-n3W" kind="presentation" identifier="responseSegue" id="pp0-J3-lkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Las-Fk-5bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="S0o-HS-K2B">
+                    <connections>
+                        <action selector="onDetailCellTap:" destination="G8O-Y5-uPl" id="pBe-JB-OUE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="982.5" y="2932.5"/>
         </scene>
