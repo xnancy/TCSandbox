@@ -35,13 +35,17 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         detailsTableView.delegate = self
         detailsTableView.dataSource = self
+        var niceDateFormatter1: NSDateFormatter? = NSDateFormatter()
+        var niceDateFormatter2: NSDateFormatter? = NSDateFormatter()
+        niceDateFormatter1!.dateFormat = "hh:mm"
+        niceDateFormatter2!.dateFormat = "MMMM, yyyy"
         
         //create self.challenge from challengeID
         
         self.tabBarController?.tabBar.hidden = true
         
         challengeTitleLabel.text = challenge?.name
-        deadlineLabel.text = FBClient.dateFormatter.stringFromDate(challenge!.deadline!)
+        deadlineLabel.text = niceDateFormatter1!.stringFromDate(challenge!.deadline!) + " on " + niceDateFormatter2!.stringFromDate(challenge!.deadline!)
         var sender = User()
         FBClient.retrieveUserFromID((challenge?.senderID)!) { (user) in
             sender = user
@@ -72,11 +76,25 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         {
             didRespond = false
         }
+        
+        self.detailsTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+        gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: 100)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if challenge?.gifNames!.count > indexPath.row
+        {
+            gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![indexPath.row])!), manager: gifManager, loopCount: 100)
+        }
+        else {
+            gifImageView.image = UIImage(named: (challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!)
+        }
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -103,13 +121,9 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         {
             cell.exerciseLabel.text = Tags.tagDictionary[(challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!]
         }
-        
-        cell.indexLabel.text = "\(indexPath.row)"
-        cell.gifName = challenge?.gifNames![indexPath.row]
         return cell
     }
     
-
     @IBAction func didPressRespond(sender: AnyObject) {
         if didRespond!
         {
@@ -141,12 +155,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         imagePicker.dismissViewControllerAnimated(true) {
             self.performSegueWithIdentifier("responseSegue", sender: self)
         }
-    }
-    
-    @IBAction func onDetailCellTap(sender: UITapGestureRecognizer) {
-        let cell = sender.view as! detailsTableViewCell
-        let gifName = cell.gifName
-        gifImageView.setGifImage(UIImage(gifName: gifName!), manager: gifManager, loopCount: 100)
     }
     
     // MARK: - Navigation

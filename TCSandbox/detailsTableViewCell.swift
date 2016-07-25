@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import QuartzCore
 
 class detailsTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
     var gifName: String?
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
+        layer.borderWidth = 4
+        layer.borderColor = UIColor.whiteColor().CGColor
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor.init(hex: 0x11A9DA)
+        selectedBackgroundView = bgColorView
         // Initialization code
     }
 
