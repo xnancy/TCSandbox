@@ -62,9 +62,9 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     var gifsToShow: [String] = []
     var tagsToShow: [String] = []
     var cTags: [String] = []
-    var movesCount: Int!
-    var workoutCount: Int!
-    var tagsCount: Int!
+    var movesCount: Int = 0
+    var workoutCount: Int = 0
+    var tagsCount: Int = 0
     var date = NSDate()
     var challenge: Challenge?
     var fm: CGRect = UIScreen.mainScreen().bounds
