@@ -17,6 +17,7 @@ class feedTableViewCell: UITableViewCell {
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var challengeVideoView: UIView!
     @IBOutlet weak var videoLabel: UILabel!
+    @IBOutlet weak var likesLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

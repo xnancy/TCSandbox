@@ -85,13 +85,14 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.currentParticipant = challenge.senderID
                 cell.participants = challenge.completedBy!
             }
+            
+            let index = cell.participants?.indexOf(cell.currentParticipant!)
+            let videoLikes = cell.challenge?.videoLikes![index!]
 
+            cell.likesLabel.text = "\((videoLikes)!) Votes"
             cell.challengeNameLabel.text = challenge.name
             cell.videoLabel.text = "\((challenge.completedBy?.count)!) Videos"
             
-            let index = cell.participants?.indexOf(cell.currentParticipant!)
-            print(index)
-            //let videoLikes = cell.challenge?.videoLikes![index!]
             
             FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
                 
