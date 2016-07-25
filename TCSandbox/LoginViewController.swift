@@ -25,6 +25,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
             if FBSDKAccessToken.currentAccessToken() != nil {
                 //User is signed in.
+                User.updateCurrentUser()
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
                 self.presentViewController(homeViewController, animated: true, completion: nil)

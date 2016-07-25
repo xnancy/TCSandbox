@@ -100,7 +100,120 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         gifSelectedImageView1.setGifImage(UIImage(gifName: gifsToShow[0]), manager: gifManager, loopCount: 100)
         
         
+        if cTags[0] == "5x" {
+            
+            badgeImage1.hidden = false
+            badgeLabel1.hidden = false
+            badgeLabel1.text = "5x"
+            
+        }else if cTags[0] == "10x" {
+            
+            badgeImage1.hidden = false
+            badgeLabel1.hidden = false
+            badgeLabel1.text = "10x"
+            
+        } else if cTags[0] == "20x" {
+            
+            badgeImage1.hidden = false
+            badgeLabel1.hidden = false
+            badgeLabel1.text = "20x"
+            
+        } else if cTags[0] == "MTM" {
+            
+            badgeImage1.hidden = false
+            badgeLabel1.hidden = false
+            badgeLabel1.text = "MTM"
+        }
         
+        
+        
+        
+//        
+//        if cTags[1] == "5x" {
+//            
+//            badgeImage2.hidden = false
+//            badgeLabel2.hidden = false
+//            badgeLabel2.text = "5x"
+//            
+//        }else if cTags[1] == "10x" {
+//            
+//            badgeImage2.hidden = false
+//            badgeLabel2.hidden = false
+//            badgeLabel2.text = "10x"
+//            
+//        } else if cTags[1] == "20x" {
+//            
+//            badgeImage2.hidden = false
+//            badgeLabel2.hidden = false
+//            badgeLabel2.text = "20x"
+//            
+//        } else if cTags[1] == "MTM" {
+//            
+//            badgeImage1.hidden = false
+//            badgeLabel1.hidden = false
+//            badgeLabel1.text = "MTM"
+//        }
+//        
+//        
+//        
+//        
+//        
+//        if cTags[2] == "5x" {
+//            
+//            badgeImage3.hidden = false
+//            badgeLabel3.hidden = false
+//            badgeLabel3.text = "5x"
+//            
+//        }else if cTags[2] == "10x" {
+//            
+//            badgeImage4.hidden = false
+//            badgeLabel3.hidden = false
+//            badgeLabel3.text = "10x"
+//            
+//        } else if cTags[2] == "20x" {
+//            
+//            badgeImage3.hidden = false
+//            badgeLabel3.hidden = false
+//            badgeLabel3.text = "20x"
+//            
+//        } else if cTags[2] == "MTM" {
+//            
+//            badgeImage3.hidden = false
+//            badgeLabel3.hidden = false
+//            badgeLabel3.text = "MTM"
+//        }
+//        
+//        
+//        
+//        
+//        if cTags[3] == "5x" {
+//            
+//            badgeImage4.hidden = false
+//            badgeLabel4.hidden = false
+//            badgeLabel1.text = "5x"
+//            
+//        }else if cTags[3] == "10x" {
+//            
+//            badgeImage3.hidden = false
+//            badgeLabel4.hidden = false
+//            badgeLabel4.text = "10x"
+//            
+//        } else if cTags[3] == "20x" {
+//            
+//            badgeImage4.hidden = false
+//            badgeLabel4.hidden = false
+//            badgeLabel1.text = "20x"
+//            
+//        } else if cTags[3] == "MTM" {
+//            
+//            badgeImage4.hidden = false
+//            badgeLabel4.hidden = false
+//            badgeLabel4.text = "MTM"
+//        }
+//
+//
+//        
+
         
         if movesCount == 1 {
             
