@@ -211,6 +211,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.challengeVideoView.addSubview(movie.view)
             player.play()
         })
+
     }
     
 

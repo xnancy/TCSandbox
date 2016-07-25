@@ -487,6 +487,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         confirmationVC.tagNames = tagsToShow
         confirmationVC.gifCount = workoutCount
         confirmationVC.tagCount = tagsCount
+        print(tagsCount)
+        print(workoutCount)
         let popOverVC = confirmationVC.popoverPresentationController
         popOverVC?.sourceView = view
         popOverVC?.permittedArrowDirections = .Any

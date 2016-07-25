@@ -23,14 +23,17 @@ extension WorkoutEditorViewController {
                 (alert: UIAlertAction!) -> Void in
                 print("File Deleted")
                 
-                if self.workoutCount < 1 {
+                if self.workoutCount > 1 {
                 
-                self.selectedMoveLabel1.hidden = true
-                self.gifSelectedImageView1.hidden = true
-                self.deleteButton1.hidden = true
-                self.badgeImage1.hidden = true
-                self.badgeLabel1.hidden = true
-                self.gifsToShow.removeAtIndex(0)
+                    self.selectedMoveLabel1.hidden = true
+                    self.gifSelectedImageView1.hidden = true
+                    self.deleteButton1.hidden = true
+                    self.badgeImage1.hidden = true
+                    self.badgeLabel1.hidden = true
+                    self.gifsToShow.removeAtIndex(0)
+                    self.movesCount - 1
+                    self.workoutCount - 1
+                    
                     
                 }
             })
@@ -61,6 +64,9 @@ extension WorkoutEditorViewController {
                 (alert: UIAlertAction!) -> Void in
                 print("File Deleted")
                
+                
+                
+                
                 if self.workoutCount == 1 && self.tagsCount == 1 {
                 
                     self.selectedMoveLabel2.hidden = true
@@ -69,9 +75,13 @@ extension WorkoutEditorViewController {
                     self.badgeImage2.hidden = true
                     self.badgeLabel2.hidden = true
                     self.tagsToShow.removeAtIndex(0)
+                    self.movesCount - 1
+                    self.tagsCount - 1
                     
                 
-                } else if self.workoutCount == 2 {
+                }
+                
+                if self.workoutCount == 2 {
                     
                     
                     self.selectedMoveLabel2.hidden = true
@@ -80,6 +90,9 @@ extension WorkoutEditorViewController {
                     self.badgeImage2.hidden = true
                     self.badgeLabel2.hidden = true
                     self.gifsToShow.removeAtIndex(1)
+                    
+                    self.movesCount - 1
+                    self.workoutCount - 1
                     
                 }
                 
@@ -119,8 +132,13 @@ extension WorkoutEditorViewController {
                     self.badgeImage3.hidden = true
                     self.badgeLabel3.hidden = true
                     self.gifsToShow.removeAtIndex(2)
+                    self.movesCount - 1
+                    self.workoutCount - 1
+                    
               
-                } else if self.workoutCount == 2 && self.tagsCount == 1 {
+                }
+                
+                if self.workoutCount == 2 && self.tagsCount == 1 {
                     
                     
                     self.selectedMoveLabel3.hidden = true
@@ -129,28 +147,14 @@ extension WorkoutEditorViewController {
                     self.badgeImage3.hidden = true
                     self.badgeLabel3.hidden = true
                     self.tagsToShow.removeAtIndex(0)
+                    self.movesCount - 1
+                    self.tagsCount - 1
                     
                     
-                } else if self.workoutCount == 1 && self.tagsCount == 2 {
                     
-                    
-                    self.selectedMoveLabel3.hidden = true
-                    self.gifSelectedImageView4.hidden = true
-                    self.deleteButton3.hidden = true
-                    self.badgeImage3.hidden = true
-                    self.badgeLabel3.hidden = true
-                    self.gifsToShow.removeAtIndex(1)
-                    
-                } else if self.workoutCount == 1 && self.tagsCount == 3{
-                    
-                    self.selectedMoveLabel3.hidden = true
-                    self.gifSelectedImageView4.hidden = true
-                    self.deleteButton3.hidden = true
-                    self.badgeImage3.hidden = true
-                    self.badgeLabel3.hidden = true
-                    self.gifsToShow.removeAtIndex(1)
-                    
-                } else if self.workoutCount == 2 && self.tagsCount == 2 {
+                }
+                
+                if self.workoutCount == 1 && self.tagsCount == 2 {
                     
                     
                     self.selectedMoveLabel3.hidden = true
@@ -159,6 +163,38 @@ extension WorkoutEditorViewController {
                     self.badgeImage3.hidden = true
                     self.badgeLabel3.hidden = true
                     self.gifsToShow.removeAtIndex(1)
+                    self.movesCount - 1
+                    self.workoutCount - 1
+                    
+                    
+                }
+                
+                if self.workoutCount == 1 && self.tagsCount == 3{
+                    
+                    self.selectedMoveLabel3.hidden = true
+                    self.gifSelectedImageView4.hidden = true
+                    self.deleteButton3.hidden = true
+                    self.badgeImage3.hidden = true
+                    self.badgeLabel3.hidden = true
+                    self.gifsToShow.removeAtIndex(1)
+                    self.movesCount - 1
+                    self.workoutCount - 1
+                    
+                    
+                }
+                
+                if self.workoutCount == 2 && self.tagsCount == 2 {
+                    
+                    
+                    self.selectedMoveLabel3.hidden = true
+                    self.gifSelectedImageView4.hidden = true
+                    self.deleteButton3.hidden = true
+                    self.badgeImage3.hidden = true
+                    self.badgeLabel3.hidden = true
+                    self.gifsToShow.removeAtIndex(1)
+                    self.movesCount - 1
+                    self.workoutCount - 1
+                    
                     
                 }
             })
@@ -198,6 +234,9 @@ extension WorkoutEditorViewController {
                     self.badgeImage4.hidden = true
                     self.badgeLabel4.hidden = true
                     self.gifsToShow.removeAtIndex(3)
+                    self.movesCount - 1
+                    self.workoutCount - 1
+                    
                     
                 } else if self.workoutCount == 3 && self.tagsCount == 1 {
                     
@@ -208,6 +247,8 @@ extension WorkoutEditorViewController {
                     self.badgeImage4.hidden = true
                     self.badgeLabel4.hidden = true
                     self.tagsToShow.removeAtIndex(0)
+                    self.movesCount - 1
+                    self.tagsCount - 1
 
                 } else if self.workoutCount == 2 && self.tagsCount == 2 {
                     
@@ -217,6 +258,8 @@ extension WorkoutEditorViewController {
                     self.badgeImage4.hidden = true
                     self.badgeLabel4.hidden = true
                     self.tagsToShow.removeAtIndex(1)
+                    self.movesCount - 1
+                    self.tagsCount - 1
 
                 } else if self.workoutCount == 1 && self.tagsCount == 3 {
                     
@@ -226,6 +269,8 @@ extension WorkoutEditorViewController {
                     self.badgeImage4.hidden = true
                     self.badgeLabel4.hidden = true
                     self.tagsToShow.removeAtIndex(2)
+                    self.movesCount - 1
+                    self.tagsCount - 1
 
                 }
                 
