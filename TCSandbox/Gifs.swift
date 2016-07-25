@@ -139,7 +139,7 @@ class Gifs
         "reCat": "catcatcatcatcatcat",
         "santamoPed": "Gnarly Claus",
         "simpsons": "Stretch",
-        "singtocats": "I Needa one dance...",
+        "singtocats": "I Needa One Dance...",
         "spidey": "Hangin' Around",
         "starwars": "You're Not My Dad",
         "supersanta": "Super Santa",
@@ -246,69 +246,171 @@ class Tags
     var description = ""
     
     static let tagDictionary: [String: String] = [
-        "fullplank": "Superman",
-        "leglift": "Lying Down Leg Raises",
-        "legraise": "Seated Leg Pull Ins",
-        "plankarm": "Plank With Arm Raise",
-        "plankraise": "T Plank With Twist",
-        "mompushup": "Elevated Push Ups",
-        "manpushup": "Elevated Plank",
-        "mountainclimbers": "Mountain Climbers",
-        "airbike": "Airbike",
         
-        "ballmove": "Forward Lunge with Twist",
-        "ballwhirl": "Big Arm Circles",
-        "burpee": "Plank Pull Ins",
-        "ropepull": "Standing Row",
+        "bballcourt": "Basketball Court",
+        "cafe": "Cafe",
+        "college2": "College",
+        "concert": "Concert",
+        "car": "Car",
+        "cornershop": "Market",
+        "date": "Date",
+        "dinner": "Dinner",
+        "fastfoodplace": "Fast Food Place",
+        "foodtruck": "Food Truck",
+        "gym": "Gym",
+        "forest": "Forest",
+        "home": "Home",
+        "kitchen": "Kitchen",
+        "movies": "Movies",
+        "office2": "Office",
+        "park": "Park",
+        "playground": "Playground",
+        "pool2": "Pool",
+        "restaurant1": "restaurant",
+        "river": "River",
+        "roof": "Roof",
+        "school1": "School",
+        "sf": "San Francisco",
+        "street": "Street",
+        "traffic": "Traffic",
+        "work": "Work",
+
+        "babybottle": "Baby Bottle",
+        "bed": "Bed",
+        "betterwaterbottle": "Water Bottle",
+        "birthdaycake": "birthdaycake",
+        "blender": "Blender",
+        "boat": "Boat",
+        "bucket": "bucket",
+        "burger": "burger",
+        "cat": "Cat",
+        "chair": "Chair",
+        "chicken": "Chicken",
+        "clothes": "Clothes",
+        "dog": "Dog",
+        "dranks": "Dranks",
+        "dryer": "Dryer",
+        "espresso": "Espresso",
+        "ferriswheel": "Ferris Wheel",
+        "fruit": "Fruits",
+        "glassofWater": "Water",
+        "groceries": "Groceries",
+        "hamster": "Hamster",
+        "hand_sanitizer": "Hand Sanitizer",
+        "hotdog": "Hot Dog",
+        "icecream": "Ice Cream",
+        "kite": "Kite",
+        "markers": "Markers",
+        "phone": "Phone",
+        "pigeonWalking": "Pigeon",
+        "pokemongo": "Pokeball",
+        "pot": "Pot",
+        "skates": "Skates",
+        "soda": "Soda",
+        "coffee": "Coffee",
+        "trashcans": "Trashcan",
+        "supersoaker": "Super Soaker",
+        "table": "Table",
+        "toaster": "Toaster",
+        "turtle": "Turtle",
+        "toiletpaper2": "Toilet Paper",
+        "whitevans": "White Vans",
+        "tree": "Tree",
+        "tv_stand": "TV",
+        "vacuum": "Vacuum",
+        "writingUtensils": "Writing Utensils",
+        "xboxcontroller": "Gaming Controller",
         
-        "stepover": "Side to Side Hops",
-        "weightdrop": "Romanian Deadlift",
-        "weightlift": "Reverse Lunge with Overhead Press",
-        "weightrock": "Plie Squat with V Raise",
+        "bestfriend": "Best Friend",
+        "bff": "BFF",
+        "brother": "Brother",
+        "bfgf": "Boyfriend/Girlfriend",
+        "chewie": "Chewie",
+        "damnDaniel": "Daaaaamn Daaaniel",
+        "family": "Family",
+        "famousperson": "Famous Person",
+        "grandmagrandpa": "Grandma/Grandpa",
+        "jose": "Jose",
+        "savannah": "Savannah",
+        "nancy": "Nancy",
+        "sasha": "Sasha",
+        "shaq": "Shaq",
+        "mark": "Zuck",
+        "sister1": "Sister",
+        "storeclerk": "Store Clerk",
+        "stranger": "Stranger",
+        "teacher": "Teacher",
         
+        "blindfolded": "While Blindfolded",
+        "eyesclosed": "With Eyes Closed",
+        "handsbehindback": "With Hands Behind Back",
+        "oneFoot": "While Balancing On One Foot",
+        "onehand": "With One Hand",
+        "toeStand": "Toe Stand",
+        "withChopsticks": "With Chopsticks",
+        "withsomeoneonyourback": "While Carrying Someone"
         
-        "momablift": "Ab Lift with Extended Leg",
-        "mombackballroll": "Backward Ball Roll",
-        "mombackleglift": "Backward Leg Lift",
-        "mombacklift": "Reverse Elevated Push Ups",
-        
-        "mombackplankleglift": "Reverse Plank Leg Lift",
-        "momballroll": "Forward Ball Roll",
-        "momballsquat": "Ball Squat",
-        "momcrossjump": "Cross Jump",
-        "momcrosslunge": "Cross Lunge",
-        "momgirlpushups": "Girl Push Ups",
-        
-        "momlegrock": "Leg Pull Ins",
-        "momopensquat": "Open Squat",
-        "momstepdowns": "Step Downs",
-        "momstraightcrunch": "Straight Leg Crunches",
-        "momtoetouch": "Lying Down Toe Touch",
-        "momsupermanarmraise": "Superman with Arm Raise",
-        "momweightdrop": "Deadlifts",
-        "momweightlift": "Extended Deadlifts",
-        "momweightrock": "Reverse Curls"
         
     ]
     
     
     static let row3: [String] = [
-        "fullplank", "leglift", "legraise", "plankarm", "plankraise", "mompushup", "manpushup", "mountainclimbers", "airbike"
+        "bballcourt", "cafe", "college2", "concert", "car",
+        "cornershop", "date", "dinner", "fastfoodplace", "foodtruck",
+        "gym", "forest", "home", "kitchen", "movies",
+        "office2", "park", "playground", "pool2", "restaurant1",
+        "river", "roof", "school1", "sf", "street",
+        "traffic", "work"
     ]
+    
+    static let sortedRow3 = row3.sort(<)
+    
+    
+
     
     static let row4: [String] = [
         
-        "ballmove", "ballwhirl", "burpee", "ropepull"
+        "babybottle", "bed", "betterwaterbottle", "birthdaycake", "blender",
+        "boat", "bucket", "burger", "cat", "chair",
+        "chicken", "clothes", "dog", "dranks", "dryer",
+        "espresso", "ferriswheel", "fruit", "glassofWater", "groceries",
+        "hamster", "hand_sanitizer", "hotdog", "icecream", "kite",
+        "markers", "phone", "pigeonWalking", "pokemongo", "pot",
+        "skates", "soda", "coffee", "trashcans", "supersoaker",
+        "table", "toaster", "turtle", "toiletpaper2", "whitevans",
+        "tree", "tv_stand", "vacuum", "writingUtensils", "xboxcontroller"
     ]
+    
+    static let sortedRow4 = row4.sort(<)
+    
+    
+    
+    
+    
     static let row5: [String] = [
         
-        "stepover", "weightdrop", "weightlift", "weightrock"
+        "bestfriend", "bff", "brother", "bfgf", "chewie",
+        "damnDaniel", "family", "famousperson", "grandmagrandpa", "jose",
+        "savannah", "nancy", "sasha", "shaq", "sister1",
+        "storeclerk", "stranger", "teacher", "mark"
     ]
+    
+    static let sortedRow5 = row5.sort(<)
+    
+    
+    
+    
+    
     static let row6: [String] = [
         
-        "momablift", "mombackballroll", "mombackleglift", "mombacklift", "mombackplankleglift", "momballroll", "momballsquat", "momcrossjump", "momcrosslunge", "momgirlpushups", "momlegrock", "momopensquat",  "momstepdowns", "momstraightcrunch", "momtoetouch", "momsupermanarmraise", "momweightdrop", "momweightlift", "momweightrock"
+        "blindfolded", "eyesclosed", "handsbehindback", "oneFoot", "onehand",
+        "toeStand", "withChopsticks", "withsomeoneonyourback"
         
     ]
+    
+    static let sortedRow6 = row6.sort(<)
+    
+    
     
     init (featuredImage: UIImage!, description: String){
         
@@ -322,7 +424,7 @@ class Tags
     static func createGifs3() -> [Tags]
     {
         var gifs: [Tags] = []
-        for name in row3 {
+        for name in sortedRow3 {
             let new = Tags(featuredImage: UIImage(named: name)!, description: tagDictionary[name]!)
             gifs.append(new)
         }
@@ -333,7 +435,7 @@ class Tags
     {
         
         var gifs: [Tags] = []
-        for name in row4 {
+        for name in sortedRow4 {
             let new = Tags(featuredImage: UIImage(named: name)!, description: tagDictionary[name]!)
             gifs.append(new)
         }
@@ -344,7 +446,7 @@ class Tags
     {
         
         var gifs: [Tags] = []
-        for name in row5 {
+        for name in sortedRow5 {
             let new = Tags(featuredImage: UIImage(named: name)!, description: tagDictionary[name]!)
             gifs.append(new)
         }
@@ -354,7 +456,7 @@ class Tags
     {
         
         var gifs: [Tags] = []
-        for name in row6 {
+        for name in sortedRow6 {
             let new = Tags(featuredImage: UIImage(named: name)!, description: tagDictionary[name]!)
             gifs.append(new)
         }

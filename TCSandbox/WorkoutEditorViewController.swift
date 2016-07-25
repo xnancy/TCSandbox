@@ -44,21 +44,17 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var badgeImage2: UIImageView!
     @IBOutlet weak var badgeImage3: UIImageView!
     @IBOutlet weak var badgeImage4: UIImageView!
-    @IBOutlet weak var barImage1: UIImageView!
-    @IBOutlet weak var barImage2: UIImageView!
-    @IBOutlet weak var barImage3: UIImageView!
-    @IBOutlet weak var barImage4: UIImageView!
     @IBOutlet weak var badgeLabel1: UILabel!
     @IBOutlet weak var badgeLabel2: UILabel!
     @IBOutlet weak var badgeLabel3: UILabel!
     @IBOutlet weak var badgeLabel4: UILabel!
-    @IBOutlet weak var barLabel1: UILabel!
-    @IBOutlet weak var barLabel2: UILabel!
-    @IBOutlet weak var barLabel3: UILabel!
-    @IBOutlet weak var barLabel4: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var blurVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var deleteButton1: UIButton!
+    @IBOutlet weak var deleteButton2: UIButton!
+    @IBOutlet weak var deleteButton3: UIButton!
+    @IBOutlet weak var deleteButton4: UIButton!
     
     /* ---------- VARIABLES ---------- */
     var gifManager = SwiftyGifManager(memoryLimit: 50)
@@ -84,7 +80,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        print(gifsToShow)
         recordButton.enabled = false
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
@@ -103,13 +99,41 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])]
         gifSelectedImageView1.setGifImage(UIImage(gifName: gifsToShow[0]), manager: gifManager, loopCount: 100)
         
+        
+        
+        
         if movesCount == 1 {
             
             
-            //            gifSelectedImageView2.hidden = true
-            //            gifSelectedImageView4.hidden = true
-            //            gifSelectedImageView3.hidden = true
+            gifSelectedImageView2.hidden = true
+            deleteButton2.hidden = true
+            selectedMoveLabel2.hidden = true
+            deleteButton3.hidden = true
+            gifSelectedImageView4.hidden = true
+            selectedMoveLabel3.hidden = true
+            deleteButton4.hidden = true
+            gifSelectedImageView3.hidden = true
+            selectedMoveLabel4.hidden = true
             
+        }
+        
+        else if movesCount == 2 {
+            
+            gifSelectedImageView4.hidden = true
+            selectedMoveLabel3.hidden = true
+            deleteButton3.hidden = true
+            gifSelectedImageView3.hidden = true
+            selectedMoveLabel4.hidden = true
+            deleteButton4.hidden = true
+        
+        }
+        
+        else if movesCount == 3 {
+            
+            gifSelectedImageView3.hidden = true
+            deleteButton4.hidden = true
+            selectedMoveLabel4.hidden = true
+        
         }
         
         
@@ -129,6 +153,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
             }
             
             if workoutCount == 4 {
+                
                 selectedMoveLabel2.text = Gifs.gifDictionary[(gifsToShow[1])]
                 gifSelectedImageView2.setGifImage(UIImage(gifName: gifsToShow[1]), manager: gifManager, loopCount: 100)
                 selectedMoveLabel3.text = Gifs.gifDictionary[(gifsToShow[2])]

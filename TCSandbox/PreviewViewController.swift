@@ -14,28 +14,73 @@ class PreviewViewController: UIViewController {
     
     @IBOutlet weak var selectedGifImageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
+    weak var moveScrollViewController: MoveScrollViewController?
     
     
     var selectedItem: String?
     var selectedItem2: String?
     var delegate: MoveScrollViewControllerDelegate?
+    var indexx: Int!
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
+    var movesCount: Int!
     
     var previewActions: [UIPreviewActionItem]{
-        let item1 = UIPreviewAction(title: "5x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
-           self.delegate?.incrementPeekAndPopCount()
-            //print(self.delegate?.peekAndPopCount)
+        
+        let item1 = UIPreviewAction(title: "5x", style: .Default) { (previewAction, viewController) in
+          
+            if self.movesCount < 4 {
+            
+                if let msvc = self.moveScrollViewController {
+                    msvc.compTags.append("5X")
+                    self.delegate?.incrementCount()
+                    self.delegate?.incrementWorkoutCount()
+                    self.delegate?.selectCollectionCell((self.indexx)!, collectionView: 1)
+                
+                }
+            }
         }
         
-        let item2 = UIPreviewAction(title: "10x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item2 = UIPreviewAction(title: "10x", style: .Default){ (previewAction, viewController) in
+            
+            if self.movesCount < 4 {
+                
+                if let msvc = self.moveScrollViewController {
+                    msvc.compTags.append("10X")
+                    self.delegate?.incrementCount()
+                    self.delegate?.incrementWorkoutCount()
+                    self.delegate?.selectCollectionCell((self.indexx)!, collectionView: 1)
+                    
+                }
+            }
         }
         
-        let item3 = UIPreviewAction(title: "20x", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
+        let item3 = UIPreviewAction(title: "20x", style: .Default) { (previewAction, viewController) in
+            
+            if self.movesCount < 4 {
+                
+                if let msvc = self.moveScrollViewController {
+                    msvc.compTags.append("20X")
+                    self.delegate?.incrementCount()
+                    self.delegate?.incrementWorkoutCount()
+                    self.delegate?.selectCollectionCell((self.indexx)!, collectionView: 1)
+                    
+                }
+            }
         }
         
-        let item4 = UIPreviewAction(title: "More Than Me", style: .Default) { (action:UIPreviewAction, vc: UIViewController) -> Void in
-
-         }
+        let item4 = UIPreviewAction(title: "More Than Me", style: .Default) { (previewAction, viewController) in
+            
+            if self.movesCount < 4 {
+                
+                if let msvc = self.moveScrollViewController {
+                    msvc.compTags.append("MTM")
+                    self.delegate?.incrementCount()
+                    self.delegate?.incrementWorkoutCount()
+                    self.delegate?.selectCollectionCell((self.indexx)!, collectionView: 1)
+                    
+                }
+            }
+        }
         return [item1, item2, item3, item4]
     }
     

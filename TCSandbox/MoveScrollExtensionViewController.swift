@@ -25,6 +25,9 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
         guard let cell1 = collectionView1?.cellForItemAtIndexPath(indexPath) else { return nil }
         previewVC.selectedItem = String(Gifs.sortedRow1[indexPath.row])
         previewVC.preferredContentSize = CGSize(width: 245, height: 200)
+        previewVC.moveScrollViewController = self
+        previewVC.movesCount = movesCount
+        previewVC.indexx = Int(Gifs.sortedRow1[indexPath.row])
         previewingContext.sourceRect = cell1.frame
         return previewVC
 //       

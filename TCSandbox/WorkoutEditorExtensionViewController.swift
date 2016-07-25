@@ -11,30 +11,42 @@ import UIKit
 extension WorkoutEditorViewController {
 
     
+    
+    
     @IBAction func didHoldImage1(sender: UILongPressGestureRecognizer) {
         
         if sender.state == UIGestureRecognizerState.Began {
             let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
             
-            // 2
+           
             let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("File Deleted")
                 
+                if self.workoutCount < 1 {
+                
+                self.selectedMoveLabel1.hidden = true
+                self.gifSelectedImageView1.hidden = true
+                self.deleteButton1.hidden = true
+                self.badgeImage1.hidden = true
+                self.badgeLabel1.hidden = true
+                self.gifsToShow.removeAtIndex(0)
+                    
+                }
             })
             
-            //
+           
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("Cancelled")
             })
             
             
-            // 4
+        
             optionMenu.addAction(deleteAction)
             optionMenu.addAction(cancelAction)
             
-            // 5
+        
             self.presentViewController(optionMenu, animated: true, completion: nil)
         }
     }
@@ -44,25 +56,47 @@ extension WorkoutEditorViewController {
         if sender.state == UIGestureRecognizerState.Began {
             let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
             
-            // 2
+            
             let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("File Deleted")
+               
+                if self.workoutCount == 1 && self.tagsCount == 1 {
+                
+                    self.selectedMoveLabel2.hidden = true
+                    self.gifSelectedImageView2.hidden = true
+                    self.deleteButton2.hidden = true
+                    self.badgeImage2.hidden = true
+                    self.badgeLabel2.hidden = true
+                    self.tagsToShow.removeAtIndex(0)
+                    
+                
+                } else if self.workoutCount == 2 {
+                    
+                    
+                    self.selectedMoveLabel2.hidden = true
+                    self.gifSelectedImageView2.hidden = true
+                    self.deleteButton2.hidden = true
+                    self.badgeImage2.hidden = true
+                    self.badgeLabel2.hidden = true
+                    self.gifsToShow.removeAtIndex(1)
+                    
+                }
                 
             })
             
-            //
+          
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("Cancelled")
             })
             
             
-            // 4
+         
             optionMenu.addAction(deleteAction)
             optionMenu.addAction(cancelAction)
             
-            // 5
+         
             self.presentViewController(optionMenu, animated: true, completion: nil)
         }
     }
@@ -72,25 +106,56 @@ extension WorkoutEditorViewController {
         if sender.state == UIGestureRecognizerState.Began {
             let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
             
-            // 2
+           
             let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("File Deleted")
+              
+                if self.workoutCount == 3 {
                 
+                    self.selectedMoveLabel4.hidden = true
+                    self.gifSelectedImageView3.hidden = true
+                    self.deleteButton3.hidden = true
+                    self.badgeImage3.hidden = true
+                    self.badgeLabel3.hidden = true
+                    self.gifsToShow.removeAtIndex(2)
+              
+                } else if self.workoutCount == 2 && self.tagsCount == 1 {
+                    
+                    
+                    self.selectedMoveLabel4.hidden = true
+                    self.gifSelectedImageView3.hidden = true
+                    self.deleteButton3.hidden = true
+                    self.badgeImage3.hidden = true
+                    self.badgeLabel3.hidden = true
+                    self.tagsToShow.removeAtIndex(0)
+                    
+                    
+                } else if self.workoutCount == 1 && self.tagsCount == 2 {
+                    
+                    
+                    self.selectedMoveLabel4.hidden = true
+                    self.gifSelectedImageView3.hidden = true
+                    self.deleteButton3.hidden = true
+                    self.badgeImage3.hidden = true
+                    self.badgeLabel3.hidden = true
+                    self.gifsToShow.removeAtIndex(1)
+                    
+                }
             })
             
-            //
+          
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("Cancelled")
             })
             
             
-            // 4
+            
             optionMenu.addAction(deleteAction)
             optionMenu.addAction(cancelAction)
             
-            // 5
+            
             self.presentViewController(optionMenu, animated: true, completion: nil)
         }
     }
@@ -100,25 +165,66 @@ extension WorkoutEditorViewController {
         if sender.state == UIGestureRecognizerState.Began {
             let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
             
-            // 2
+
             let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("File Deleted")
+             
+                
+                if self.workoutCount == 4 {
+                    
+                    self.selectedMoveLabel3.hidden = true
+                    self.gifSelectedImageView4.hidden = true
+                    self.deleteButton4.hidden = true
+                    self.badgeImage4.hidden = true
+                    self.badgeLabel4.hidden = true
+                    self.gifsToShow.removeAtIndex(3)
+                    
+                } else if self.workoutCount == 3 && self.tagsCount == 1 {
+                    
+                    
+                    self.selectedMoveLabel3.hidden = true
+                    self.gifSelectedImageView4.hidden = true
+                    self.deleteButton4.hidden = true
+                    self.badgeImage4.hidden = true
+                    self.badgeLabel4.hidden = true
+                    self.tagsToShow.removeAtIndex(0)
+
+                } else if self.workoutCount == 2 && self.tagsCount == 2 {
+                    
+                    self.selectedMoveLabel3.hidden = true
+                    self.gifSelectedImageView4.hidden = true
+                    self.deleteButton4.hidden = true
+                    self.badgeImage4.hidden = true
+                    self.badgeLabel4.hidden = true
+                    self.tagsToShow.removeAtIndex(1)
+
+                } else if self.workoutCount == 1 && self.tagsCount == 3 {
+                    
+                    self.selectedMoveLabel3.hidden = true
+                    self.gifSelectedImageView4.hidden = true
+                    self.deleteButton4.hidden = true
+                    self.badgeImage4.hidden = true
+                    self.badgeLabel4.hidden = true
+                    self.tagsToShow.removeAtIndex(2)
+
+                }
+                
                 
             })
             
-            //
+          
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("Cancelled")
             })
             
             
-            // 4
+           
             optionMenu.addAction(deleteAction)
             optionMenu.addAction(cancelAction)
             
-            // 5
+          
             self.presentViewController(optionMenu, animated: true, completion: nil)
         }
     }

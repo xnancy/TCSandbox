@@ -13,11 +13,11 @@ protocol MoveScrollViewControllerDelegate {
     func incrementCount()
     func decrementCount()
     func incrementWorkoutCount()
-    func incrementPeekAndPopCount()
     func decrementWorkoutCount()
     func incrementTagsCount()
     func decrementTagsCount()
     func updateTagView()
+    func appendCompTag()
     func selectCollectionCell(index: Int, collectionView: Int)
     func updateView()
     func getCount() -> Int
@@ -68,15 +68,14 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     var collection5Selected: [Bool] = []
     var collection6Selected: [Bool] = []
     var collection7Selected: [Bool] = []
-    //var delegate: UIViewControllerPreviewingDelegate { get }
+
     
     var movesCount: Int = 0
     var workoutCount: Int = 0
     var tagsCount: Int = 0
-    var peekAndPopCount: Int = 0
-    //var delegate: GifsCollectionViewCell?
     var quickActionString: String!
     var quickActionString2: String!
+    var compTags: [String] = []
     
     
     //MARK:
@@ -121,16 +120,46 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         
         collection3Selected = [
             false, false, false, false, false,
-            false, false, false, false
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false
         
         ]
         
         
-        collection4Selected = [false, false, false, false, false]
-        collection5Selected = [false, false, false, false]
-        collection6Selected = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+        collection4Selected = [
+            
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
         
+        ]
+        
+        collection5Selected = [
+            
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false
+        
+        ]
+        
+        collection6Selected = [
+            
+            false, false, false, false, false,
+            false, false, false
+        ]
+    
         collection7Selected = [
+           
             false, false, false, false, false,
             false, false, false, false, false,
             false, false, false, false, false,
@@ -213,10 +242,9 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         
     }
     
-    func incrementPeekAndPopCount(){
+    func appendCompTag() {
         
-        peekAndPopCount += 1
-        print("called")
+        compTags.append("placeholder")
         
     }
     
@@ -272,48 +300,56 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         svc.movesCount = movesCount
         svc.workoutCount = workoutCount
         svc.tagsCount = tagsCount
-        //print(peekAndPopCount)
+        svc.cTags = compTags
+        print(compTags)
         
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{
                 svc.gifsToShow.append(Gifs.sortedRow1[index])
-                svc.cTags.append("placeholder")
+                
                 
             }
         }
         
         for (index, boolValue) in collection2Selected.enumerate(){
             if boolValue == true{
-                svc.gifsToShow.append(Gifs.row2[index])
-                svc.cTags.append("placeholder")
+                svc.gifsToShow.append(Gifs.sortedRow2[index])
+                
             }
         }
         
         for (index, boolValue) in collection3Selected.enumerate(){
             if boolValue == true{
-                svc.tagsToShow.append(Tags.row3[index])
-                svc.cTags.append("placeholder")
+                svc.tagsToShow.append(Tags.sortedRow3[index])
+                
             }
         }
         
         for (index, boolValue) in collection4Selected.enumerate(){
             if boolValue == true{
-                svc.tagsToShow.append(Tags.row4[index])
-                svc.cTags.append("placeholder")
+                svc.tagsToShow.append(Tags.sortedRow4[index])
+                
             }
         }
         
         for (index, boolValue) in collection5Selected.enumerate(){
             if boolValue == true{
-                svc.tagsToShow.append(Tags.row5[index])
-                svc.cTags.append("placeholder")
+                svc.tagsToShow.append(Tags.sortedRow5[index])
+                
             }
         }
         
         for (index, boolValue) in collection6Selected.enumerate(){
             if boolValue == true{
-                svc.tagsToShow.append(Tags.row6[index])
-                svc.cTags.append("placeholder")
+                svc.gifsToShow.append(Tags.sortedRow6[index])
+                
+            }
+        }
+        
+        for (index, boolValue) in collection6Selected.enumerate(){
+            if boolValue == true{
+                svc.gifsToShow.append(Gifs.sortedRow7[index])
+                
             }
         }
     }
