@@ -66,6 +66,11 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             return 0
         }
         
+        if feedChallenges![0] == "placeholder"
+        {
+            return 0
+        }
+        
         return (feedChallenges?.count)!
     }
     
