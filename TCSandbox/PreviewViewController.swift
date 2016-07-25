@@ -14,7 +14,7 @@ class PreviewViewController: UIViewController {
     
     @IBOutlet weak var selectedGifImageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
-    weak var moveScrollViewController: MoveScrollViewController?
+ 
     
     
     var selectedItem: String?
@@ -23,19 +23,22 @@ class PreviewViewController: UIViewController {
     var indexx: Int!
     var gifmanager = SwiftyGifManager(memoryLimit: 20)
     var movesCount: Int!
+    weak var moveScrollViewController: MoveScrollViewController?
     
-    var previewActions: [UIPreviewActionItem]{
+    override func previewActionItems() -> [UIPreviewActionItem] {
         
         let item1 = UIPreviewAction(title: "5x", style: .Default) { (previewAction, viewController) in
-          
+          //print(self.movesCount)
             if self.movesCount < 4 {
             
                 if let msvc = self.moveScrollViewController {
+                    
                     msvc.compTags.append("5X")
                     self.delegate?.incrementCount()
                     self.delegate?.incrementWorkoutCount()
                     self.delegate?.selectCollectionCell((self.indexx)!, collectionView: 1)
-                
+                    //print(self.indexx)
+
                 }
             }
         }
