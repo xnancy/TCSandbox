@@ -489,12 +489,10 @@ class FBClient: AnyObject {
     {
         dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-            var likesCount = snapshot.value!["likes_count"] as! Int
+            var likesCount = snapshot.value!["like_count"] as! Int
             likesCount = likesCount + 1
-            var votedOn = snapshot.value!["voted_on"] as! [String]
-            votedOn.append(challengeID)
             
-            dataRef.child("Users").child(userID).updateChildValues(["likes_count":likesCount, "voted_on": votedOn])
+            dataRef.child("Users").child(userID).updateChildValues(["like_count":likesCount])
         })
         
         
@@ -502,10 +500,10 @@ class FBClient: AnyObject {
         dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             var likesCountArray = snapshot.value!["video_likes"] as! [Int]
-            var likesCount = likesCountArray[index]
-            likesCount = likesCount + 1
+            var likesCount = likesCountArray[index] + 1
+            likesCountArray[index] = likesCount
             
-            dataRef.child("Challenges").child(challengeID).updateChildValues(["video_likes":likesCount])
+            dataRef.child("Challenges").child(challengeID).updateChildValues(["video_likes":likesCountArray])
         })
         
         
@@ -515,13 +513,10 @@ class FBClient: AnyObject {
     {
         dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-            var likesCount = snapshot.value!["likes_count"] as! Int
+            var likesCount = snapshot.value!["like_count"] as! Int
             likesCount = likesCount - 1
-            var votedOn = snapshot.value!["voted_on"] as! [String]
-            let votedIndex = votedOn.indexOf(challengeID)
-            votedOn.removeAtIndex(votedIndex!)
             
-            dataRef.child("Users").child(userID).updateChildValues(["likes_count":likesCount])
+            dataRef.child("Users").child(userID).updateChildValues(["like_count":likesCount])
         })
         
         
@@ -529,12 +524,39 @@ class FBClient: AnyObject {
         dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             var likesCountArray = snapshot.value!["video_likes"] as! [Int]
-            var likesCount = likesCountArray[index]
-            likesCount = likesCount - 1
+            var likesCount = likesCountArray[index] - 1
+            likesCountArray[index] = likesCount
             
-            dataRef.child("Challenges").child(challengeID).updateChildValues(["video_likes":likesCount])
+            dataRef.child("Challenges").child(challengeID).updateChildValues(["video_likes":likesCountArray])
         })
         
         
+    }
+    
+    class func tappedLike(userID: String, challengeID: String, index: Int, completion: (Bool) -> Void)
+    {
+        dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            var votedOn = snapshot.value!["voted_on"] as! [String]
+            var hasLiked = false
+
+            if votedOn.contains(challengeID)
+            {
+                let votedIndex = votedOn.indexOf(challengeID)
+                votedOn.removeAtIndex(votedIndex!)
+                FBClient.unlikeVideo(userID, challengeID: challengeID, index: index)
+                hasLiked = true
+            }
+            
+            else
+            {
+                votedOn.append(challengeID)
+                FBClient.likeVideo(userID, challengeID: challengeID, index: index)
+            }
+
+            dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).updateChildValues(["voted_on":votedOn])
+
+            completion(hasLiked)
+        })
     }
 }

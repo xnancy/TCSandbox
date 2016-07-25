@@ -14,9 +14,7 @@ import MobileCoreServices
 class feedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
     
     
-    @IBOutlet weak var feedTableView: UITableView!
-    @IBOutlet weak var toggleHomeButton: UIButton!
-    
+    @IBOutlet weak var feedTableView: UITableView!    
     
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
@@ -44,7 +42,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         gestureRight.direction = .Right
         self.feedTableView.addGestureRecognizer(gestureRight)
 
-        
         // Do any additional setup after loading the view.
     }
     
@@ -79,20 +76,18 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
             cell.challenge = challenge
-            
+
             if (cell.participants == nil || cell.participants![0] != challenge.senderID)
             {
                 cell.currentParticipant = challenge.senderID
                 cell.participants = challenge.completedBy!
             }
-            
             let index = cell.participants?.indexOf(cell.currentParticipant!)
-            let videoLikes = cell.challenge?.videoLikes![index!]
-
-            cell.likesLabel.text = "\((videoLikes)!) Votes"
-            cell.challengeNameLabel.text = challenge.name
-            cell.videoLabel.text = "\((challenge.completedBy?.count)!) Videos"
+            let videoLikes = challenge.videoLikes![index!]
             
+            cell.likesLabel.text = "\(videoLikes)"
+            cell.challengeNameLabel.text = challenge.name
+            cell.videoLabel.text = "\((challenge.completedBy?.count)!)"
             
             FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
                 
@@ -132,7 +127,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.feedChallenges?.sortInPlace({ (element1, element2) -> Bool in
                 
-                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedAscending
+                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
                 {
                     return true
                 }
@@ -141,7 +136,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
             
             //sort out the correct dates here
-            
             self.feedTableView.reloadData()
         }
     }
@@ -167,7 +161,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let index = cell.participants?.indexOf(cell.currentParticipant!)
-        print(index)
+        let videoLikes = cell.challenge!.videoLikes![index!]
+        cell.likesLabel.text = "\(videoLikes)"
+
 
         FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
             
@@ -202,7 +198,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let index = cell.participants?.indexOf(cell.currentParticipant!)
-        print(index)
+        let videoLikes = cell.challenge!.videoLikes![index!]
+        cell.likesLabel.text = "\(videoLikes)"
         
         FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
             

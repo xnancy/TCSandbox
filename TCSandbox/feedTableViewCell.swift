@@ -29,5 +29,20 @@ class feedTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func didTapLike(sender: AnyObject) {
+        FBClient.tappedLike(currentParticipant!, challengeID: (challenge?.challengeID)!, index: (participants?.indexOf(currentParticipant!))!, completion: {(hasLiked) in
+            
+            if hasLiked
+            {
+                self.likesLabel.text = "\(Int(self.likesLabel.text!)! - 1)"
+            }
+                
+            else
+            {
+                self.likesLabel.text = "\(Int(self.likesLabel.text!)! + 1)"
+            }
+        })
+    }
+    
 }
