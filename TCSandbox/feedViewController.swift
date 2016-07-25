@@ -82,6 +82,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.currentParticipant = challenge.senderID
                 cell.participants = challenge.completedBy!
             }
+
             let index = cell.participants?.indexOf(cell.currentParticipant!)
             let videoLikes = challenge.videoLikes![index!]
             
@@ -136,6 +137,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
             
             //sort out the correct dates here
+
             self.feedTableView.reloadData()
         }
     }
@@ -163,7 +165,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let index = cell.participants?.indexOf(cell.currentParticipant!)
         let videoLikes = cell.challenge!.videoLikes![index!]
         cell.likesLabel.text = "\(videoLikes)"
-
 
         FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
             
@@ -200,7 +201,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let index = cell.participants?.indexOf(cell.currentParticipant!)
         let videoLikes = cell.challenge!.videoLikes![index!]
         cell.likesLabel.text = "\(videoLikes)"
-        
         FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
             
             let player = AVPlayer(URL: URL)
@@ -211,17 +211,16 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.challengeVideoView.addSubview(movie.view)
             player.play()
         })
-
     }
     
 
     /*
-    // MARK: - Navigation
+     MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+         Get the new view controller using segue.destinationViewController.
+         Pass the selected object to the new view controller.
     }
     */
 
