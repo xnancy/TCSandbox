@@ -71,7 +71,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     var date = NSDate()
     var challenge: Challenge?
     var fm: CGRect = UIScreen.mainScreen().bounds
-    //var peekAndPopCount: Int!
     
     var pickedVideo: NSURL?
     
@@ -83,7 +82,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //print(gifsToShow)
         recordButton.enabled = false
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
@@ -355,7 +353,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
 
     
-    @IBAction func didPressRecord(sender: AnyObject) {
+    
+    func didPressRecord(sender: AnyObject) {
         countdowimageview.hidden = false
         countdowimageview.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
         UIDevice.currentDevice().orientation
@@ -376,17 +375,13 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
                 self.imagePicker.startVideoCapture()
                 self.countdowimageview.hidden = true
                 self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
+                self.presentViewController(self.imagePicker, animated: true, completion: {})
+                self.imagePicker.allowsEditing = false
+                self.imagePicker.delegate = self
+                self.imagePicker.videoMaximumDuration = Double(120)
             })
             
-            self.presentViewController(self.imagePicker, animated: true, completion: {})
-            self.imagePicker.allowsEditing = false
-            self.imagePicker.delegate = self
-            self.imagePicker.videoMaximumDuration = Double(120)
-            
-            //countdownStepper.value
         }
-        
-        
         
     }
     
@@ -535,32 +530,31 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func didPressPopUp(sender: UIButton) {
         
-       showImageDialog()
+       showCustomDialog()
         
     }
     
-    func showImageDialog() {
+    func showCustomDialog() {
         
         
-        // Prepare the popup assets
-        let title = "Challenge Title"
-        let message = "You Have chosen:"
-        let image = UIImage(named: "pexels-photo-103290")
+        // Create a custom view controller
+        let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
         
         // Create the dialog
-        let popup = PopupDialog(title: title, message: message, image: image)
-       
-        // Create first button
-        let buttonOne = CancelButton(title: "RECORD") {
-            //self.label.text = "You canceled the car dialog."
+        let popup = PopupDialog(viewController: ratingVC, transitionStyle: .BounceDown, buttonAlignment: .Horizontal, gestureDismissal: false)
+        
+        // Create second button
+        let buttonTwo = DefaultButton(title: "RECORD") {
+            
+            self.didPressRecord(DefaultButton)
+        
         }
-       
+        
         // Add buttons to dialog
-        popup.addButtons([buttonOne])
+        popup.addButtons([buttonTwo])
         
         // Present dialog
-        self.presentViewController(popup, animated: true, completion: nil)
-        
+        presentViewController(popup, animated: true, completion: nil)
     }
 
     

@@ -186,6 +186,8 @@
 		B85083FA1D44AE44007D22C9 /* untzuntz.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083F91D44AE44007D22C9 /* untzuntz.gif */; };
 		B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70A1D3B183D000D3499 /* PreviewViewController.swift */; };
 		B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */; };
+		B893B55F1D4810370009A3B1 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B893B55E1D4810370009A3B1 /* RatingViewController.xib */; };
+		B893B5611D4810400009A3B1 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B893B5601D4810400009A3B1 /* RatingViewController.swift */; };
 		B8ABF0991D47D43800C5E3FA /* giffy.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8ABF0981D47D43800C5E3FA /* giffy.gif */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
 		D600F4FB8CA321C8E23A66B0 /* Pods_TCSandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */; };
@@ -402,6 +404,8 @@
 		B85083F91D44AE44007D22C9 /* untzuntz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = untzuntz.gif; path = TCSandbox/Gifs3/untzuntz.gif; sourceTree = "<group>"; };
 		B864E70A1D3B183D000D3499 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollExtensionViewController.swift; sourceTree = "<group>"; };
+		B893B55E1D4810370009A3B1 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
+		B893B5601D4810400009A3B1 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		B8ABF0981D47D43800C5E3FA /* giffy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giffy.gif; path = TCSandbox/giffy.gif; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -492,6 +496,7 @@
 				925D8E881D2DA8E0000F44F7 /* View Controllers */,
 				925D8E581D2D79C1000F44F7 /* AppDelegate.swift */,
 				925D8E5F1D2D79C1000F44F7 /* Assets.xcassets */,
+				B893B55E1D4810370009A3B1 /* RatingViewController.xib */,
 				920A08EF1D38584300A3785A /* Main.storyboard */,
 				925D8E611D2D79C1000F44F7 /* LaunchScreen.storyboard */,
 				925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */,
@@ -529,6 +534,7 @@
 				B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */,
 				B864E70A1D3B183D000D3499 /* PreviewViewController.swift */,
 				B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */,
+				B893B5601D4810400009A3B1 /* RatingViewController.swift */,
 				B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */,
 				82C6653A1D2DBF9000D642CA /* LoginViewController.swift */,
 				B850827F1D42A1CE007D22C9 /* SettingsViewController.swift */,
@@ -963,6 +969,7 @@
 				B85082F91D4434A0007D22C9 /* seatedlegpullins.gif in Resources */,
 				B85082E61D4434A0007D22C9 /* bigarmcircles.gif in Resources */,
 				B85083501D4459DC007D22C9 /* walkcool.gif in Resources */,
+				B893B55F1D4810370009A3B1 /* RatingViewController.xib in Resources */,
 				B85083CA1D44A26F007D22C9 /* poledance.gif in Resources */,
 				B85083EB1D44A559007D22C9 /* pizzaproblems.gif in Resources */,
 				B85083341D4459DC007D22C9 /* flipOver.gif in Resources */,
@@ -1156,6 +1163,7 @@
 				82BB15991D3DD9FE0005B22D /* respondViewController.swift in Sources */,
 				B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */,
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
+				B893B5611D4810400009A3B1 /* RatingViewController.swift in Sources */,
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
 				92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */,
 				82B7BBE61D47DA9100932420 /* profileCollectionView.swift in Sources */,
