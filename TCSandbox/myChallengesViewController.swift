@@ -40,7 +40,6 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     }
     
     func updateChallengeInfo() {
-        
         var allChallenges: [Challenge]? = []
         let currentDate = NSDate()
         
@@ -53,7 +52,6 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
                 }
             }
             self.currentChallenges = currentChallenges
-            
             self.myChallengesTableView.reloadData()
         }
     }
@@ -83,7 +81,6 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myChallengesCell") as? myChallengeTableViewCell
         cell?.challenge = currentChallenges![indexPath.row]
-        cell?.deadlineProgressView.progress = 0
         FBClient.generateChallengeCell(currentChallenges![indexPath.row], cell: cell!)
         return cell!
     }

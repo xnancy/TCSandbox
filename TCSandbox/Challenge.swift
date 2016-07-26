@@ -17,6 +17,7 @@ class Challenge: AnyObject
     var tagNames: [String]? = []
     var cTagNames: [String]? = []
     var deadline: NSDate?
+    var startDate: NSDate?
     var timeLimit: Int?
     var senderID: String?
     var name: String?
@@ -24,7 +25,7 @@ class Challenge: AnyObject
     var videoURLs: [String]?
     
     // Complete initializer for FB retrieval
-    init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: Int, participants: [String], challengeID: String, comp_tags: [String], deadline: String, senderID: String, completedBy: [String], videoLikes: [Int], videoURLs: [String]) {
+    init (name: String, workout_gifs: [String], add_on_images: [String], time_limit: Int, participants: [String], challengeID: String, comp_tags: [String], deadline: String, senderID: String, completedBy: [String], videoLikes: [Int], videoURLs: [String], startDate: String) {
         self.name = name
         self.gifNames = workout_gifs
         self.tagNames = add_on_images
@@ -37,6 +38,7 @@ class Challenge: AnyObject
         self.completedBy = completedBy
         self.videoLikes = videoLikes
         self.videoURLs = videoURLs
+        self.startDate = FBClient.dateFormatter.dateFromString(startDate)
     }
     
     init(dict: NSDictionary)
@@ -52,6 +54,8 @@ class Challenge: AnyObject
         self.completedBy = dict["completed_by"] as? [String]
         self.videoLikes = dict["video_likes"] as? [Int]
         self.videoURLs = dict["video_URLs"] as? [String]
+        self.startDate = FBClient.dateFormatter.dateFromString((dict["start_date"] as? String)!)
+        self.deadline = FBClient.dateFormatter.dateFromString((dict["deadline"] as? String)!)
     }
     
     init()

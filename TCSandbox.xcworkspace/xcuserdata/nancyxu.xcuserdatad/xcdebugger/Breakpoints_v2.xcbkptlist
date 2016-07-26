@@ -359,5 +359,69 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TCSandbox/FBClient.swift"
+            timestampString = "491254434.8239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
+            landmarkName = "generateChallengeCell(_:cell:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static TCSandbox.FBClient.generateNonFriendUserIDList (__ObjC.NSMutableDictionary, delegate : TCSandbox.AddFriendViewControllerDelegate) -&gt; ()"
+                  moduleName = "TCSandbox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
+                  timestampString = "491250674.359296"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "381"
+                  endingLineNumber = "381"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static TCSandbox.FBClient.(generateNonFriendUserIDList (__ObjC.NSMutableDictionary, delegate : TCSandbox.AddFriendViewControllerDelegate) -&gt; ()).(closure #1)"
+                  moduleName = "TCSandbox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nancyxu/Documents/RainbowRaccoonz/TCSandbox/TCSandbox/FBClient.swift"
+                  timestampString = "491250674.359408"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "380"
+                  endingLineNumber = "380"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TCSandbox/FBClient.swift"
+            timestampString = "491254434.8239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "retrieveChallenges(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

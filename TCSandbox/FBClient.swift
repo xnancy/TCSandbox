@@ -17,9 +17,15 @@ class FBClient: AnyObject {
     static let dataRef = FIRDatabase.database().reference()
     static let dateFormatter = NSDateFormatter()
     static let navigationController = UINavigationController()
+    static let niceDateFormatter1: NSDateFormatter? = NSDateFormatter()
+    static let niceDateFormatter2: NSDateFormatter? = NSDateFormatter()
+    
     class func initializeDateFormatter() {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        niceDateFormatter1!.dateFormat = "hh:mm"
+        niceDateFormatter2!.dateFormat = "MMMM, yyyy"
     }
+    
     static let storageRef = FIRStorage.storage().reference()
     
     class func login()
@@ -209,9 +215,9 @@ class FBClient: AnyObject {
                 for i in 1...challengeIDs.count - 1 {
                     let id = challengeIDs[i]
                     let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
-                    let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: newChallengeDictionary["time_limit"] as! Int, participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String, completedBy: newChallengeDictionary["completed_by"] as! [String], videoLikes: newChallengeDictionary["video_likes"] as! [Int], videoURLs: newChallengeDictionary["video_URLs"] as! [String])
-                    challenges.append(newChallengeObject)
                     
+                    let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: newChallengeDictionary["time_limit"] as! Int, participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String, completedBy: newChallengeDictionary["completed_by"] as! [String], videoLikes: newChallengeDictionary["video_likes"] as! [Int], videoURLs: newChallengeDictionary["video_URLs"] as! [String], startDate: newChallengeDictionary["start_date"] as! String)
+                    challenges.append(newChallengeObject)
                 }
             }
             completion(challenges)
@@ -362,27 +368,34 @@ class FBClient: AnyObject {
     /* ---------- CHALLENGE CELL GENERATION ---------- */
     class func generateChallengeCell(challenge: Challenge, cell: myChallengeTableViewCell) {
         dataRef.childByAppendingPath("Users").childByAppendingPath(challenge.senderID!).observeSingleEventOfType(.Value, withBlock: { snapshot in
-            let dict = snapshot.value as! NSDictionary
-            let userName = dict["name"] as! String
-            let userProfileURL = NSURL(string: dict["profile_picture_url"] as! String)
-            cell.challengeNameLabel.text = challenge.name
-            cell.profileImageView.setImageWithURL(userProfileURL!)
-            cell.senderNameLabel.text = userName
-            // Calculating timestamp for challenge
-            let minutesToDeadline = challenge.deadline?.minutes(from: NSDate())
-            let hoursToDeadline = challenge.deadline?.hours(from: NSDate())
-            let daysToDeadline = challenge.deadline?.days(from: NSDate())
-            if (minutesToDeadline < 1) {
-                cell.timeLimitLabel.text = ""
-            } else if (minutesToDeadline < 60) {
-                cell.timeLimitLabel.text = String(minutesToDeadline!) + " mins"
-            } else if (hoursToDeadline < 24) {
-                cell.timeLimitLabel.text = String(hoursToDeadline!) + " hrs"
-            } else {
-                cell.timeLimitLabel.text = String(daysToDeadline!) + " days"
-                print(cell.timeLimitLabel.text)
-            }
-        })
+                let dict = snapshot.value as! NSDictionary
+                let userName = dict["name"] as! String
+                let userProfileURL = NSURL(string: dict["profile_picture_url"] as! String)
+                cell.challengeNameLabel.text = challenge.name
+                cell.profileImageView.setImageWithURL(userProfileURL!)
+                cell.senderNameLabel.text = userName
+                // Calculating timestamp for challenge
+                let minutesToDeadline = challenge.deadline?.minutes(from: NSDate())
+                let hoursToDeadline = challenge.deadline?.hours(from: NSDate())
+                let daysToDeadline = challenge.deadline?.days(from: NSDate())
+                if (minutesToDeadline < 1) {
+                    cell.timeLimitLabel.text = ""
+                } else if (minutesToDeadline < 60) {
+                    cell.timeLimitLabel.text = String(minutesToDeadline!) + " mins"
+                } else if (hoursToDeadline < 24) {
+                    cell.timeLimitLabel.text = String(hoursToDeadline!) + " hrs"
+                } else {
+                    cell.timeLimitLabel.text = String(daysToDeadline!) + " days"
+                    print(cell.timeLimitLabel.text)
+                }
+                
+                cell.startDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.startDate!)) + " on " + String(niceDateFormatter2!.stringFromDate(challenge.startDate!))
+                cell.endDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.deadline!)) + " on " + String(niceDateFormatter2!.stringFromDate(challenge.deadline!))
+                print("start label text: \(cell.startDateLabel.text)")
+                let currentDate = NSDate()
+                cell.deadlineProgressView.progress = Float(currentDate.seconds(from: challenge.startDate!)) / Float((challenge.deadline?.seconds(from: challenge.startDate!))!)
+                print("progress value is: \(cell.deadlineProgressView.progress)")
+            })
     }
     
     /* ---------- GENERAL LISTS ---------- */
