@@ -33,14 +33,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.dataSource = self
         
         queryRequest()
-        
-        let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
-        gestureLeft.direction = .Left
-        self.feedTableView.addGestureRecognizer(gestureLeft)
-        let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
-        gestureRight.delegate = self
-        gestureRight.direction = .Right
-        self.feedTableView.addGestureRecognizer(gestureRight)
 
         // Do any additional setup after loading the view.
     }
@@ -101,6 +93,14 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 player.play()
             })
         }
+        
+        let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
+        gestureLeft.direction = .Left
+        cell.challengeVideoView.addGestureRecognizer(gestureLeft)
+        let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
+        gestureRight.delegate = self
+        gestureRight.direction = .Right
+        cell.challengeVideoView.addGestureRecognizer(gestureRight)
 
         return cell
     }
