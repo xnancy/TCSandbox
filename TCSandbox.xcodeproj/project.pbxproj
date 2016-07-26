@@ -13,6 +13,7 @@
 		82B7BBDE1D4025E100932420 /* feedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */; };
 		82B7BBE41D47D59200932420 /* profileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */; };
 		82B7BBE61D47DA9100932420 /* profileCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE51D47DA9100932420 /* profileCollectionView.swift */; };
+		82B7BBE81D481CF100932420 /* workoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE71D481CF100932420 /* workoutCollectionViewCell.swift */; };
 		82BB15931D3D84FD0005B22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15921D3D84FD0005B22D /* ViewController.swift */; };
 		82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */; };
 		82BB15991D3DD9FE0005B22D /* respondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15981D3DD9FE0005B22D /* respondViewController.swift */; };
@@ -224,6 +225,7 @@
 		82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedTableViewCell.swift; sourceTree = "<group>"; };
 		82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCollectionViewCell.swift; sourceTree = "<group>"; };
 		82B7BBE51D47DA9100932420 /* profileCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCollectionView.swift; sourceTree = "<group>"; };
+		82B7BBE71D481CF100932420 /* workoutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = workoutCollectionViewCell.swift; sourceTree = "<group>"; };
 		82BB15921D3D84FD0005B22D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailsTableViewCell.swift; sourceTree = "<group>"; };
 		82BB15981D3DD9FE0005B22D /* respondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = respondViewController.swift; sourceTree = "<group>"; };
@@ -558,6 +560,7 @@
 				82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */,
 				82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */,
 				82B7BBE51D47DA9100932420 /* profileCollectionView.swift */,
+				82B7BBE71D481CF100932420 /* workoutCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -823,7 +826,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 64UUKPWRF5;
+						DevelopmentTeam = D8M8Q37C6Y;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1175,6 +1178,7 @@
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
 				825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */,
 				82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */,
+				82B7BBE81D481CF100932420 /* workoutCollectionViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
 				82B7BBDC1D401C0A00932420 /* feedViewController.swift in Sources */,
@@ -1334,7 +1338,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
+				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1353,7 +1357,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
+				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

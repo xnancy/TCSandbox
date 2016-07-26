@@ -22,12 +22,15 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     
     @IBOutlet weak var profileCollectionView: UICollectionView!
+    @IBOutlet weak var workoutCollectionView: UICollectionView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
+        workoutCollectionView.delegate = self
+        workoutCollectionView.dataSource = self
         // Initialization code
     }
 
@@ -55,6 +58,21 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == workoutCollectionView
+        {
+            if challenge == nil
+            {
+                return 0
+            }
+            
+            if (challenge?.tagNames![0] != "placeholder") //gif will always have something, so not necessary to check this for gifs as well
+            {
+                return (challenge?.gifNames?.count)! + (challenge?.tagNames?.count)!
+            }
+            
+            return (challenge?.gifNames?.count)!
+        }
+        
         if participants == nil
         {
             return 0
@@ -64,16 +82,34 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        if collectionView == workoutCollectionView
+        {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("workoutCell", forIndexPath: indexPath) as! workoutCollectionViewCell
+            
+            if challenge?.gifNames!.count > indexPath.row
+            {
+                cell.workoutLabel.text = Gifs.gifDictionary[(challenge?.gifNames![indexPath.row])!]
+            }
+                
+            else if challenge?.tagNames?.count > indexPath.row - (challenge?.gifNames?.count)!
+            {
+                cell.workoutLabel.text = Tags.tagDictionary[(challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!]
+            }
+            
+            return cell
+        }
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) as! profileCollectionViewCell
-        cell.parentTableViewCell = self
-        cell.participant = participants![indexPath.row]
         
-         var url = ""
+        var url = ""
         
-         FBClient.retrievePictureForUser(participants![indexPath.row]) { (URL) in
+        FBClient.retrievePictureForUser(participants![indexPath.row]) { (URL) in
             
             url = URL
             cell.profileImageView.setImageWithURL(NSURL(string: url)!)
+            cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.height/2
+            cell.profileImageView.clipsToBounds = true
         }
         
         return cell
