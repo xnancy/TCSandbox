@@ -31,7 +31,9 @@ class feedTableViewCell: UITableViewCell {
     }
     
     @IBAction func didTapLike(sender: AnyObject) {
-        FBClient.tappedLike(currentParticipant!, challengeID: (challenge?.challengeID)!, index: (participants?.indexOf(currentParticipant!))!, completion: {(hasLiked) in
+        let index = participants?.indexOf(currentParticipant!)!
+        
+        FBClient.tappedLike(currentParticipant!, challengeID: (challenge?.challengeID)!, videoURL: (challenge?.videoURLs![index!])!, index: index!, completion: {(hasLiked) in
             
             if hasLiked
             {

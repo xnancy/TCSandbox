@@ -205,7 +205,7 @@ class FBClient: AnyObject {
                 for i in 1...challengeIDs.count - 1 {
                     let id = challengeIDs[i]
                     let newChallengeDictionary = snapshot.value!["Challenges"]!![id] as! NSDictionary
-                    let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: newChallengeDictionary["time_limit"] as! Int, participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String, completedBy: newChallengeDictionary["completed_by"] as! [String], videoLikes: newChallengeDictionary["video_likes"] as! [Int])
+                    let newChallengeObject = Challenge(name: newChallengeDictionary["name"] as! String, workout_gifs: newChallengeDictionary["workout_gifs"] as! [String], add_on_images: newChallengeDictionary["add_on_images"] as! [String], time_limit: newChallengeDictionary["time_limit"] as! Int, participants: newChallengeDictionary["participants"] as! [String], challengeID: newChallengeDictionary["challengeID"] as! String, comp_tags: newChallengeDictionary["comp_tags"] as! [String], deadline: newChallengeDictionary["deadline"] as! String, senderID: newChallengeDictionary["senderID"] as! String, completedBy: newChallengeDictionary["completed_by"] as! [String], videoLikes: newChallengeDictionary["video_likes"] as! [Int], videoURLs: newChallengeDictionary["video_URLs"] as! [String])
                     challenges.append(newChallengeObject)
                     
                 }
@@ -423,8 +423,14 @@ class FBClient: AnyObject {
                     videoLikes = [0]
                 }
                 
-                print(videoLikes)
-                let updates = ["completed_by": completedBy, "video_likes": videoLikes!]
+                var videoURLs = challenge.videoURLs
+                videoURLs?.append(downloadURLString!)
+                if videoURLs == nil
+                {
+                    videoURLs = [downloadURLString!]
+                }
+            
+                let updates: NSDictionary = ["completed_by": completedBy, "video_likes": videoLikes!, "video_URLs": videoURLs!]
                 dataRef.child("Challenges").child(challenge.challengeID!).updateChildValues(updates as [NSObject : AnyObject])
                 
                 dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
@@ -485,7 +491,7 @@ class FBClient: AnyObject {
         return low
     }
     
-    class func likeVideo(userID: String, challengeID: String, index: Int)
+    class func likeVideo(userID: String, challengeID: String, index: Int, videoURL: String)
     {
         dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
@@ -509,7 +515,7 @@ class FBClient: AnyObject {
         
     }
     
-    class func unlikeVideo(userID: String, challengeID: String, index: Int)
+    class func unlikeVideo(userID: String, challengeID: String, index: Int, videoURL: String)
     {
         dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
@@ -533,25 +539,25 @@ class FBClient: AnyObject {
         
     }
     
-    class func tappedLike(userID: String, challengeID: String, index: Int, completion: (Bool) -> Void)
+    class func tappedLike(userID: String, challengeID: String, videoURL: String, index: Int, completion: (Bool) -> Void)
     {
         dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             var votedOn = snapshot.value!["voted_on"] as! [String]
             var hasLiked = false
 
-            if votedOn.contains(challengeID)
+            if votedOn.contains(videoURL)
             {
-                let votedIndex = votedOn.indexOf(challengeID)
+                let votedIndex = votedOn.indexOf(videoURL)
                 votedOn.removeAtIndex(votedIndex!)
-                FBClient.unlikeVideo(userID, challengeID: challengeID, index: index)
+                FBClient.unlikeVideo(userID, challengeID: challengeID, index: index, videoURL: videoURL)
                 hasLiked = true
             }
             
             else
             {
-                votedOn.append(challengeID)
-                FBClient.likeVideo(userID, challengeID: challengeID, index: index)
+                votedOn.append(videoURL)
+                FBClient.likeVideo(userID, challengeID: challengeID, index: index, videoURL: videoURL)
             }
 
             dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).updateChildValues(["voted_on":votedOn])
