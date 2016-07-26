@@ -39,7 +39,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         var niceDateFormatter2: NSDateFormatter? = NSDateFormatter()
         niceDateFormatter1!.dateFormat = "hh:mm"
         niceDateFormatter2!.dateFormat = "EEEE"
-        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+
         //create self.challenge from challengeID
         
         self.tabBarController?.tabBar.hidden = true
