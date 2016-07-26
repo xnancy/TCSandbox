@@ -162,20 +162,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.currentParticipant = cell.participants![currentIndex!-1]
         }
         
-        let index = cell.participants?.indexOf(cell.currentParticipant!)
-        let videoLikes = cell.challenge!.videoLikes![index!]
-        cell.likesLabel.text = "\(videoLikes)"
-
-        FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
-            
-            let player = AVPlayer(URL: URL)
-            let movie = AVPlayerViewController()
-            movie.player = player
-            movie.view.frame = cell.challengeVideoView.bounds
-            
-            cell.challengeVideoView.addSubview(movie.view)
-            player.play()
-        })
+        feedTableView.reloadData()
     }
     
     
@@ -198,19 +185,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.currentParticipant = cell.participants![currentIndex!+1]
         }
         
-        let index = cell.participants?.indexOf(cell.currentParticipant!)
-        let videoLikes = cell.challenge!.videoLikes![index!]
-        cell.likesLabel.text = "\(videoLikes)"
-        FBClient.downloadVideo(cell.challenge!.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
-            
-            let player = AVPlayer(URL: URL)
-            let movie = AVPlayerViewController()
-            movie.player = player
-            movie.view.frame = cell.challengeVideoView.bounds
-            
-            cell.challengeVideoView.addSubview(movie.view)
-            player.play()
-        })
+        feedTableView.reloadData()
     }
     
 
