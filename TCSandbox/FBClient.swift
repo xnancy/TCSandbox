@@ -223,6 +223,7 @@ class FBClient: AnyObject {
         let challengeName = challenge.name
         let completedBy = ["placeholder"]
         let videoLikes = [0]
+        challenge.completedBy = ["placeholder"]
 
         
         if tagNames! == [] {
@@ -408,7 +409,17 @@ class FBClient: AnyObject {
                 //save the string to the array in challenges
                 //stream the video from the download URL on the screen
                 var completedBy = challenge.completedBy!
-                completedBy.append(FBSDKAccessToken.currentAccessToken().userID)
+                
+                
+                if completedBy == ["placeholder"]
+                {
+                    completedBy = [FBSDKAccessToken.currentAccessToken().userID]
+                }
+                
+                else
+                {
+                    completedBy.append(FBSDKAccessToken.currentAccessToken().userID)
+                }
                 
                 var videoLikes = challenge.videoLikes
                 videoLikes?.append(0)
