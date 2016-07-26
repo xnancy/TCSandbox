@@ -186,6 +186,7 @@
 		B85083FA1D44AE44007D22C9 /* untzuntz.gif in Resources */ = {isa = PBXBuildFile; fileRef = B85083F91D44AE44007D22C9 /* untzuntz.gif */; };
 		B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70A1D3B183D000D3499 /* PreviewViewController.swift */; };
 		B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */; };
+		B8ABF0991D47D43800C5E3FA /* giffy.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8ABF0981D47D43800C5E3FA /* giffy.gif */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
 		D600F4FB8CA321C8E23A66B0 /* Pods_TCSandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */; };
 		E296B86C9D9CCC0E9BA3A7FF /* Pods_TCSandboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */; };
@@ -401,6 +402,7 @@
 		B85083F91D44AE44007D22C9 /* untzuntz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = untzuntz.gif; path = TCSandbox/Gifs3/untzuntz.gif; sourceTree = "<group>"; };
 		B864E70A1D3B183D000D3499 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B864E70C1D3B1921000D3499 /* MoveScrollExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollExtensionViewController.swift; sourceTree = "<group>"; };
+		B8ABF0981D47D43800C5E3FA /* giffy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giffy.gif; path = TCSandbox/giffy.gif; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -591,6 +593,7 @@
 				B85083551D446DD8007D22C9 /* makebasket.gif */,
 				B85083051D4459DC007D22C9 /* robot.gif */,
 				B85083731D4480CC007D22C9 /* sideleglifts.gif */,
+				B8ABF0981D47D43800C5E3FA /* giffy.gif */,
 				B85083751D4480CC007D22C9 /* squats.gif */,
 				B85083761D4480CC007D22C9 /* stretch.gif */,
 				B85083F91D44AE44007D22C9 /* untzuntz.gif */,
@@ -814,7 +817,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = D8M8Q37C6Y;
+						DevelopmentTeam = 64UUKPWRF5;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -899,6 +902,7 @@
 				B850833D1D4459DC007D22C9 /* kiss.gif in Resources */,
 				B85083F81D44AE3F007D22C9 /* whip.gif in Resources */,
 				B850839C1D448352007D22C9 /* cycle.gif in Resources */,
+				B8ABF0991D47D43800C5E3FA /* giffy.gif in Resources */,
 				B85083641D4473C0007D22C9 /* dunk.gif in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
 				B85083E71D44A559007D22C9 /* interestingGif.gif in Resources */,
@@ -1322,7 +1326,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
+				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1341,7 +1345,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
+				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
