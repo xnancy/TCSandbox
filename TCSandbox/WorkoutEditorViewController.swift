@@ -14,6 +14,7 @@ import DGRunkeeperSwitch
 import SwiftyGif
 import FBSDKCoreKit
 import FBSDKLoginKit
+import PopupDialog
 
 protocol WorkoutEditorDelegate{
     func didPressRecord(sender: AnyObject)
@@ -56,6 +57,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var deleteButton3: UIButton!
     @IBOutlet weak var deleteButton4: UIButton!
     @IBOutlet weak var countdowimageview: UIImageView!
+    @IBOutlet weak var popupButton: UIButton!
     
     /* ---------- VARIABLES ---------- */
     var gifManager = SwiftyGifManager(memoryLimit: 50)
@@ -530,6 +532,37 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         //confirmButton.hidden = false
         
     }
+    
+    @IBAction func didPressPopUp(sender: UIButton) {
+        
+       showImageDialog()
+        
+    }
+    
+    func showImageDialog() {
+        
+        
+        // Prepare the popup assets
+        let title = "Challenge Title"
+        let message = "You Have chosen:"
+        let image = UIImage(named: "pexels-photo-103290")
+        
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: message, image: image)
+       
+        // Create first button
+        let buttonOne = CancelButton(title: "RECORD") {
+            //self.label.text = "You canceled the car dialog."
+        }
+       
+        // Add buttons to dialog
+        popup.addButtons([buttonOne])
+        
+        // Present dialog
+        self.presentViewController(popup, animated: true, completion: nil)
+        
+    }
+
     
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle{

@@ -44,6 +44,7 @@ PODS:
   - FirebaseStorage (1.0.1):
     - FirebaseAnalytics (~> 3.2)
     - GoogleNetworkingUtilities (~> 1.2)
+  - FXBlurView (1.6.4)
   - GoogleInterchangeUtilities (1.2.1):
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleNetworkingUtilities (1.2.1):
@@ -52,6 +53,8 @@ PODS:
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
   - KRVideoPlayer (1.0.1)
+  - PopupDialog (0.3.0):
+    - FXBlurView
   - SnappingStepper (2.3.0):
     - DynamicColor (~> 2.4)
   - SwiftyGif (1.2.2)
@@ -64,6 +67,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - KRVideoPlayer
+  - PopupDialog (~> 0.3.0)
   - SnappingStepper (~> 2.3.0)
   - SwiftyGif
 
@@ -77,14 +81,16 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 34301d11621a83546f39f670d256477ba6f7fcea
   FirebaseInstanceID: d014d574053a2fe84478f12f7bae96979e7051bb
   FirebaseStorage: e9c32a8d246c07eeefd78180c22736aa1b81e81b
+  FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
   GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   KRVideoPlayer: 08918da1b99cae35fd4c15b2ec2b49358d4c985f
+  PopupDialog: 6d911ffba0607b89a4d310a036bc1ced9e7e9d80
   SnappingStepper: 8472746edf41bc848e7b72db2b4fd722798f13f5
   SwiftyGif: 5b93bed65ed6df90796dff11fea231d7119da460
 
-PODFILE CHECKSUM: 7b5e600a2cf388216a2d17a1cb0d62f212920f9d
+PODFILE CHECKSUM: 93e6a7be9a5234265339681620f52d75b9928050
 
 COCOAPODS: 1.0.1

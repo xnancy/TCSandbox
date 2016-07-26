@@ -14,6 +14,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'AFNetworking'
+pod 'PopupDialog', '~> 0.3.0'
 pod "KRVideoPlayer"
   target 'TCSandboxTests' do
     inherit! :search_paths
