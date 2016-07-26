@@ -24,6 +24,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         feedTableView.insertSubview(refreshControl, atIndex: 0)
@@ -32,7 +35,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
-        queryRequest()
+        //queryRequest()
 
         // Do any additional setup after loading the view.
     }

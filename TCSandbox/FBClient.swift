@@ -46,37 +46,29 @@ class FBClient: AnyObject {
                 return
             }
             
-            var pictureUrl = ""
-            
-            if let picture = user["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-                pictureUrl = url
-            }
-            
-            let FBID = user["id"] as! String
-            let email = user["email"] as! String
-            let profileImageURLString = pictureUrl
-            let name = user["name"] as! String
-            
-            let user: NSDictionary = ["FBID":FBID,"email":email, "profile_picture_url":profileImageURLString,"name":name]
-            let profile = dataRef.child("Users").child(FBID)
-            profile.updateChildValues(user as [NSObject : AnyObject])
-            
-            dataRef.child("Users").child(FBID).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-                let friendsExist = snapshot.hasChild("friends_list")
-
-                if friendsExist
+            dataRef.child("Users").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                
+                let FBID = FBSDKAccessToken.currentAccessToken().userID
+                var pictureUrl = ""
+                
+                if let picture = user["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
+                    pictureUrl = url
+                }
+                
+                let email = user["email"] as! String
+                let profileImageURLString = pictureUrl
+                let name = user["name"] as! String
+                
+                if snapshot.hasChild(FBID)
                 {
-                    //do nothing
                     let friendsList = snapshot.value!["friends_list"] as! [String]
-
+                    
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
                 }
-                
+                    
                 else
                 {
-                    //initialize a new empty friends array with string
-                    //placeholder
                     let friendsList: [String] = [FBID]
                     let challenges: [String] = ["placeholder"]
                     let challengesCompleted: Int = 0
@@ -84,14 +76,16 @@ class FBClient: AnyObject {
                     let feedChallenges: [String] = ["placeholder"]
                     let likeCount = 0
                     let votedOn = ["placeholder"]
-                    let updates = ["friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted, "feed_challenges": feedChallenges, "feed_dictionary": feedDictionary, "like_count": likeCount, "voted_on": votedOn]
+                    let updates = ["FBID": FBID, "email": email, "name": name, "profile_picture_url": profileImageURLString, "friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted, "feed_challenges": feedChallenges, "feed_dictionary": feedDictionary, "like_count": likeCount, "voted_on": votedOn]
                     
                     dataRef.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
                 }
-            })  { (error) in
+            })
+            
+            { (error) in
                 
                 print(error.localizedDescription)
             }
@@ -459,12 +453,23 @@ class FBClient: AnyObject {
     
     class func retrieveFeed(completion: ([String], [String: String]) -> Void)
     {
-        dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        dataRef.child("Users").observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-            let feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
-            let feedChallenges = snapshot.value!["feed_challenges"] as! [String]
-
-            completion(feedChallenges, feedDictionary)
+            if snapshot.hasChild(FBSDKAccessToken.currentAccessToken().userID)
+            {
+                let feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
+                let feedChallenges = snapshot.value!["feed_challenges"] as! [String]
+                
+                completion(feedChallenges, feedDictionary)
+            }
+            
+            else
+            {
+                let feedDictionary: NSDictionary = [:]
+                let feedChallenges: [String] = []
+                
+                completion(feedChallenges, feedDictionary as! [String : String])
+            }
         })
     }
     
