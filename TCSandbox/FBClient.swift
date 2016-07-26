@@ -237,9 +237,9 @@ class FBClient: AnyObject {
         let timeLimit = challenge.timeLimit
         let compTags = challenge.cTagNames
         let challengeName = challenge.name
-        let completedBy = ["placeholder"]
+        let completedBy = [FBSDKAccessToken.currentAccessToken().userID]
         let videoLikes = [0]
-        challenge.completedBy = ["placeholder"]
+        challenge.completedBy = [FBSDKAccessToken.currentAccessToken().userID]
 
         
         if tagNames! == [] {
@@ -434,9 +434,9 @@ class FBClient: AnyObject {
                 var completedBy = challenge.completedBy!
                 
                 
-                if completedBy == ["placeholder"]
+                if completedBy == [FBSDKAccessToken.currentAccessToken().userID]
                 {
-                    completedBy = [FBSDKAccessToken.currentAccessToken().userID]
+                    
                 }
                 
                 else
