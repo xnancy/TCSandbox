@@ -367,7 +367,7 @@
                                     <segue destination="ghj-PG-wVQ" kind="modal" id="fa3-ev-kf3"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fade1" translatesAutoresizingMaskIntoConstraints="NO" id="t6e-aM-kav">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="challengeSent" translatesAutoresizingMaskIntoConstraints="NO" id="t6e-aM-kav">
                                 <rect key="frame" x="0.0" y="201" width="375" height="266"/>
                             </imageView>
                         </subviews>
@@ -399,6 +399,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3l-eC-s7G">
+                                <rect key="frame" x="18" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBackButton:" destination="ghj-PG-wVQ" eventType="touchUpInside" id="gJV-Rh-kD9"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-6Z-G9G">
                                 <rect key="frame" x="0.0" y="47" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -442,13 +449,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3l-eC-s7G">
-                                <rect key="frame" x="18" y="20" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="onBackButton:" destination="ghj-PG-wVQ" eventType="touchUpInside" id="gJV-Rh-kD9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1843,6 +1843,7 @@
         <image name="badge" width="1450" height="1450"/>
         <image name="black" width="2100" height="1500"/>
         <image name="blue" width="2100" height="1500"/>
+        <image name="challengeSent" width="554" height="600"/>
         <image name="emptygif" width="932" height="884"/>
         <image name="fade1" width="2100" height="1500"/>
         <image name="noun_100673_cc" width="50" height="43"/>

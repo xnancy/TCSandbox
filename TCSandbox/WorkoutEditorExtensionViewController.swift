@@ -90,7 +90,6 @@ extension WorkoutEditorViewController {
                     self.badgeImage2.hidden = true
                     self.badgeLabel2.hidden = true
                     self.gifsToShow.removeAtIndex(1)
-                    
                     self.movesCount -= 1
                     self.workoutCount -= 1
                     
