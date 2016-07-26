@@ -19,12 +19,15 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
+    var homeChallenges: [String]?
+    var toggled: DarwinBoolean?
     
     
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
+        toggled = false
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
@@ -54,58 +57,120 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if feedChallenges == nil
+        
+        if toggled == false
         {
-            return 0
+            if feedChallenges == nil
+            {
+                return 0
+            }
+            
+            if feedChallenges![0] == "placeholder"
+            {
+                return 0
+            }
+            
+            return (feedChallenges?.count)!
         }
         
-        if feedChallenges![0] == "placeholder"
+        else
         {
-            return 0
+            if homeChallenges == nil
+            {
+                return 0
+            }
+            
+            if homeChallenges![0] == "placeholder"
+            {
+                return 0
+            }
+            
+            return (homeChallenges?.count)!
         }
-        
-        return (feedChallenges?.count)!
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("feedCell") as! feedTableViewCell
         
-        FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
-            cell.challenge = challenge
-
-            if (cell.participants == nil || cell.participants![0] != challenge.senderID)
-            {
-                cell.currentParticipant = challenge.senderID
-                cell.participants = challenge.completedBy!
-                cell.profileCollectionView.reloadData()
+        if toggled == false
+        {
+            FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
+                cell.challenge = challenge
+                
+                if (cell.participants == nil || cell.participants![0] != challenge.senderID)
+                {
+                    cell.currentParticipant = challenge.senderID
+                    cell.participants = challenge.completedBy!
+                    cell.profileCollectionView.reloadData()
+                }
+                
+                let index = cell.participants?.indexOf(cell.currentParticipant!)
+                let videoLikes = challenge.videoLikes![index!]
+                
+                cell.likesLabel.text = "\(videoLikes)"
+                cell.challengeNameLabel.text = challenge.name
+                cell.videoLabel.text = "\((challenge.completedBy?.count)!)"
+                
+                FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
+                    
+                    let player = AVPlayer(URL: URL)
+                    let movie = AVPlayerViewController()
+                    movie.player = player
+                    movie.view.frame = cell.challengeVideoView.bounds
+                    
+                    cell.challengeVideoView.addSubview(movie.view)
+                    player.play()
+                })
             }
-
-            let index = cell.participants?.indexOf(cell.currentParticipant!)
-            let videoLikes = challenge.videoLikes![index!]
             
-            cell.likesLabel.text = "\(videoLikes)"
-            cell.challengeNameLabel.text = challenge.name
-            cell.videoLabel.text = "\((challenge.completedBy?.count)!)"
-            
-            FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
-                
-                let player = AVPlayer(URL: URL)
-                let movie = AVPlayerViewController()
-                movie.player = player
-                movie.view.frame = cell.challengeVideoView.bounds
-                
-                cell.challengeVideoView.addSubview(movie.view)
-                player.play()
-            })
+            /*let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
+             gestureLeft.direction = .Left
+             cell.challengeVideoView.addGestureRecognizer(gestureLeft)
+             let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
+             gestureRight.delegate = self
+             gestureRight.direction = .Right
+             cell.challengeVideoView.addGestureRecognizer(gestureRight)*/
         }
         
-        /*let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
-        gestureLeft.direction = .Left
-        cell.challengeVideoView.addGestureRecognizer(gestureLeft)
-        let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
-        gestureRight.delegate = self
-        gestureRight.direction = .Right
-        cell.challengeVideoView.addGestureRecognizer(gestureRight)*/
+        else
+        {
+            FBClient.retrieveChallengeFromID(homeChallenges![indexPath.row]) { (challenge) in
+                cell.challenge = challenge
+                
+                if (cell.participants == nil || cell.participants![0] != challenge.senderID)
+                {
+                    cell.currentParticipant = challenge.senderID
+                    cell.participants = challenge.completedBy!
+                    cell.profileCollectionView.reloadData()
+                }
+                
+                let index = cell.participants?.indexOf(cell.currentParticipant!)
+                let videoLikes = challenge.videoLikes![index!]
+                
+                cell.likesLabel.text = "\(videoLikes)"
+                cell.challengeNameLabel.text = challenge.name
+                cell.videoLabel.text = "\((challenge.completedBy?.count)!)"
+                
+                FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
+                    
+                    let player = AVPlayer(URL: URL)
+                    let movie = AVPlayerViewController()
+                    movie.player = player
+                    movie.view.frame = cell.challengeVideoView.bounds
+                    
+                    cell.challengeVideoView.addSubview(movie.view)
+                    player.play()
+                })
+            }
+            
+            /*let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
+             gestureLeft.direction = .Left
+             cell.challengeVideoView.addGestureRecognizer(gestureLeft)
+             let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
+             gestureRight.delegate = self
+             gestureRight.direction = .Right
+             cell.challengeVideoView.addGestureRecognizer(gestureRight)*/
+        }
 
         return cell
     }
@@ -125,13 +190,24 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func queryRequest()
     {
-        FBClient.retrieveFeed { (challenges, dictionary) in
+        FBClient.retrieveFeed { (challenges, dictionary, homeChallenges) in
             self.feedChallenges = challenges
             self.feedDictionary = dictionary
+            self.homeChallenges = homeChallenges
             
             //NOW DO THE SORTING
             
             self.feedChallenges?.sortInPlace({ (element1, element2) -> Bool in
+                
+                if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
+                {
+                    return true
+                }
+                
+                return false
+            })
+            
+            self.homeChallenges?.sortInPlace({ (element1, element2) -> Bool in
                 
                 if FBClient.dateFormatter.dateFromString(self.feedDictionary![element1]!)?.compare(FBClient.dateFormatter.dateFromString(self.feedDictionary![element2]!)!) == NSComparisonResult.OrderedDescending
                 {
@@ -191,6 +267,24 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         feedTableView.reloadData()
+    }
+    
+    
+    @IBAction func didTouchToggle(sender: AnyObject) {
+        
+        if toggled == false
+        {
+            toggled = true
+            
+            feedTableView.reloadData()
+        }
+        
+        if toggled == true
+        {
+            toggled = false
+            
+            feedTableView.reloadData()
+        }
     }
     
 

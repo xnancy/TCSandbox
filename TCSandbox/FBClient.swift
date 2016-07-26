@@ -80,9 +80,10 @@ class FBClient: AnyObject {
                     let challengesCompleted: Int = 0
                     let feedDictionary: NSDictionary = ["placeholder": "placeholder"]
                     let feedChallenges: [String] = ["placeholder"]
+                    let homeChallenges: [String] = ["placeholder"]
                     let likeCount = 0
                     let votedOn = ["placeholder"]
-                    let updates = ["FBID": FBID, "email": email, "name": name, "profile_picture_url": profileImageURLString, "friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted, "feed_challenges": feedChallenges, "feed_dictionary": feedDictionary, "like_count": likeCount, "voted_on": votedOn]
+                    let updates = ["FBID": FBID, "email": email, "name": name, "profile_picture_url": profileImageURLString, "friends_list": friendsList, "challenges": challenges, "challenges_completed": challengesCompleted, "feed_challenges": feedChallenges, "feed_dictionary": feedDictionary, "like_count": likeCount, "voted_on": votedOn, "home_challenges": homeChallenges]
                     
                     dataRef.child("Users").child(FBID).updateChildValues(updates as [NSObject : AnyObject])
                     
@@ -271,6 +272,7 @@ class FBClient: AnyObject {
                         
                         var feedChallenges = snapshot.value!["feed_challenges"] as! [String]
                         var feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
+                        var homeChallenges = snapshot.value!["home_challenges"] as! [String]
                         
                         if feedChallenges[0] != "placeholder"
                         {
@@ -282,10 +284,20 @@ class FBClient: AnyObject {
                             feedChallenges[0] = challengeID!
                         }
                         
+                        if homeChallenges[0] != "placeholder"
+                        {
+                            homeChallenges.append(challengeID!)
+                        }
+                            
+                        else
+                        {
+                            homeChallenges[0] = challengeID!
+                        }
+                        
                         feedDictionary.updateValue(dateFormatter.stringFromDate(deadline!), forKey: challengeID!)
                         
                         
-                        let updates = ["feed_challenges": feedChallenges, "feed_dictionary": feedDictionary]
+                        let updates = ["feed_challenges": feedChallenges, "feed_dictionary": feedDictionary, "home_challenges": homeChallenges]
                         dataRef.child("Users").child(friendID).updateChildValues(updates as [NSObject : AnyObject])
                     })
                 }
@@ -485,7 +497,7 @@ class FBClient: AnyObject {
         }
     }
     
-    class func retrieveFeed(completion: ([String], [String: String]) -> Void)
+    class func retrieveFeed(completion: ([String], [String: String], [String]) -> Void)
     {
         dataRef.child("Users").observeSingleEventOfType(.Value, withBlock: { snapshot in
             
@@ -493,16 +505,18 @@ class FBClient: AnyObject {
             {
                 let feedDictionary = snapshot.value![FBSDKAccessToken.currentAccessToken().userID]!!["feed_dictionary"] as! [String: String]
                 let feedChallenges = snapshot.value![FBSDKAccessToken.currentAccessToken().userID]!!["feed_challenges"] as! [String]
+                let homeChallenges = snapshot.value![FBSDKAccessToken.currentAccessToken().userID]!!["home_challenges"] as! [String]
                 
-                completion(feedChallenges, feedDictionary)
+                completion(feedChallenges, feedDictionary, homeChallenges)
             }
             
             else
             {
                 let feedDictionary: NSDictionary = [:]
                 let feedChallenges: [String] = []
+                let homeChallenges: [String] = []
                 
-                completion(feedChallenges, feedDictionary as! [String : String])
+                completion(feedChallenges, feedDictionary as! [String : String], homeChallenges)
             }
         })
     }
