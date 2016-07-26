@@ -363,7 +363,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         imagePicker.allowsEditing = false
         imagePicker.delegate = self
         imagePicker.videoMaximumDuration = Double(countdownStepper.value)
-        UIDevice.currentDevice().setValue(UIInterfaceOrientation.LandscapeRight.rawValue, forKey: "orientation")
         presentViewController(imagePicker, animated: true, completion: {})
         
     }
