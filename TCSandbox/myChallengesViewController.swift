@@ -14,13 +14,16 @@ import Foundation
 
 class myChallengesViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var challengesSegmentedControl: UISegmentedControl!
     @IBOutlet weak var myChallengesTableView: UITableView!
+    @IBOutlet weak var makeChallengePromptTextLabel: UITextView!
+    
     var currentChallenges: [Challenge]?
-    var pastChallenges: [Challenge]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
         
@@ -32,36 +35,24 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         currentChallenges = []
-        pastChallenges = []
         updateChallengeInfo()
         self.tabBarController?.tabBar.hidden = false
     }
-
+    
     func updateChallengeInfo() {
         
         var allChallenges: [Challenge]? = []
         let currentDate = NSDate()
         
         FBClient.retrieveChallenges { (challenges: [Challenge]) in
-            
-            var currentChallenges: [Challenge] = []
-            var pastChallenges: [Challenge] = []
-
-            // Get [Challenge] of user challenges
+            var currentChallenges: [Challenge]? = []
+            // Get challenges not responded to
             for challenge in challenges {
-                allChallenges?.append(challenge)
-            }
-            // Split by past / current
-            for challenge in allChallenges! {
-                if (challenge.deadline?.compare(currentDate) == NSComparisonResult.OrderedAscending) {
-                    pastChallenges.append(challenge)
-                } else {
-                    currentChallenges.append(challenge)
+                if (!(challenge.completedBy?.contains(FBSDKAccessToken.currentAccessToken().userID))! && !(challenge.deadline?.compare(currentDate) == NSComparisonResult.OrderedAscending)) {
+                    currentChallenges!.append(challenge)
                 }
             }
-            
             self.currentChallenges = currentChallenges
-            self.pastChallenges = pastChallenges
             
             self.myChallengesTableView.reloadData()
         }
@@ -79,37 +70,28 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     
     /* ---------- TABLE VIEW ---------- */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (challengesSegmentedControl.selectedSegmentIndex == 1) {
-            if (pastChallenges == nil) { return 0 }
-            return (pastChallenges?.count)!
-        } else {
-            if (currentChallenges == nil) { return 0 }
-            return (currentChallenges?.count)!
+        if (currentChallenges == nil || currentChallenges?.count == 0) {
+            tableView.hidden = true
+            makeChallengePromptTextLabel.hidden = false
+            return 0
         }
+        tableView.hidden = false
+        makeChallengePromptTextLabel.hidden = true
+        return (currentChallenges?.count)!
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myChallengesCell") as? myChallengeTableViewCell
-        if (challengesSegmentedControl.selectedSegmentIndex == 1) {
-            cell?.challenge = pastChallenges![indexPath.row]
-            FBClient.generateChallengeCell(pastChallenges![indexPath.row], cell: cell!)
-        } else {
-            cell?.challenge = currentChallenges![indexPath.row]
-            FBClient.generateChallengeCell(currentChallenges![indexPath.row], cell: cell!)
-        }
+        cell?.challenge = currentChallenges![indexPath.row]
+        FBClient.generateChallengeCell(currentChallenges![indexPath.row], cell: cell!)
         return cell!
     }
-
+    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            if (challengesSegmentedControl.selectedSegmentIndex == 1) {
-                FBClient.declineChallenge(pastChallenges![indexPath.row])
-                pastChallenges?.removeAtIndex(indexPath.row)
-            } else {
-                FBClient.declineChallenge(currentChallenges![indexPath.row])
-                currentChallenges?.removeAtIndex(indexPath.row)
-            }
+            FBClient.declineChallenge(currentChallenges![indexPath.row])
+            currentChallenges?.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
@@ -119,7 +101,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     }
     /*  ---------- SEGUES ---------- */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-       
+        
         if (segue.identifier == "toChallengeDetailPage") {
             let vc = segue.destinationViewController as! ChallengeDetailViewController
             vc.challenge = (sender as! myChallengeTableViewCell).challenge
@@ -136,14 +118,16 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         refreshControl.endRefreshing()
     }
     
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

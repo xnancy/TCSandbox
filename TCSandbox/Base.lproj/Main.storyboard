@@ -88,18 +88,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NJr-7E-aWt">
-                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
-                                <segments>
-                                    <segment title="Current"/>
-                                    <segment title="Past"/>
-                                </segments>
-                                <connections>
-                                    <action selector="onSegmentedControl:" destination="qw0-Ls-bhc" eventType="valueChanged" id="DU4-41-Dzb"/>
-                                </connections>
-                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="ou have no challenges! What do you have in mind? " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BID-Vk-2cS">
+                                <rect key="frame" x="30" y="217" width="315" height="232"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.66274509803921566" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BIz-M1-azX">
-                                <rect key="frame" x="0.0" y="95" width="375" height="588"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="588"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myChallengesCell" rowHeight="96" id="kev-WR-wmo" customClass="myChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
@@ -170,7 +167,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="challengesSegmentedControl" destination="NJr-7E-aWt" id="Krl-0d-t76"/>
+                        <outlet property="makeChallengePromptTextLabel" destination="BID-Vk-2cS" id="lx6-KK-6ZY"/>
                         <outlet property="myChallengesTableView" destination="BIz-M1-azX" id="iDP-ac-adT"/>
                     </connections>
                 </viewController>
