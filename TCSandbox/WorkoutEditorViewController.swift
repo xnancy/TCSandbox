@@ -1,10 +1,3 @@
-//  WorkoutEditorViewController.swift
-//  TCSandbox
-//
-//  Created by Nancy Xu on 7/6/16.
-//  Copyright © 2016 Nancy Xu. All rights reserved.
-//
-
 import UIKit
 import AVKit
 import MediaPlayer
@@ -50,14 +43,14 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var badgeLabel3: UILabel!
     @IBOutlet weak var badgeLabel4: UILabel!
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var blurVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var deleteButton1: UIButton!
     @IBOutlet weak var deleteButton2: UIButton!
     @IBOutlet weak var deleteButton3: UIButton!
     @IBOutlet weak var deleteButton4: UIButton!
     @IBOutlet weak var countdowimageview: UIImageView!
-    @IBOutlet weak var popupButton: UIButton!
+    @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
+
     
     /* ---------- VARIABLES ---------- */
     var gifManager = SwiftyGifManager(memoryLimit: 50)
@@ -86,7 +79,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
-       
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WorkoutEditorViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -103,126 +96,126 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         print(cTags.count)
         
         if cTags.count >= 1 {
-        
+            
             "called"
             if cTags[0] == "5X" {
-            
-            badgeImage1.hidden = false
-            badgeLabel1.hidden = false
-            badgeLabel1.text = "5X"
-            
+                
+                badgeImage1.hidden = false
+                badgeLabel1.hidden = false
+                badgeLabel1.text = "5X"
+                
             }else if cTags[0] == "10X" {
-            
-            badgeImage1.hidden = false
-            badgeLabel1.hidden = false
-            badgeLabel1.text = "10X"
-            
+                
+                badgeImage1.hidden = false
+                badgeLabel1.hidden = false
+                badgeLabel1.text = "10X"
+                
             } else if cTags[0] == "20X" {
-            
-            badgeImage1.hidden = false
-            badgeLabel1.hidden = false
-            badgeLabel1.text = "20X"
-            
+                
+                badgeImage1.hidden = false
+                badgeLabel1.hidden = false
+                badgeLabel1.text = "20X"
+                
             } else if cTags[0] == "MTM" {
-            
-            badgeImage1.hidden = false
-            badgeLabel1.hidden = false
-            badgeLabel1.text = "MTM"
+                
+                badgeImage1.hidden = false
+                badgeLabel1.hidden = false
+                badgeLabel1.text = "MTM"
             }
-        
+            
         }
-    
+        
         if cTags.count >= 2 {
-        
+            
             if cTags[1] == "5X" {
-            
-            badgeImage2.hidden = false
-            badgeLabel2.hidden = false
-            badgeLabel2.text = "5X"
-            
+                
+                badgeImage2.hidden = false
+                badgeLabel2.hidden = false
+                badgeLabel2.text = "5X"
+                
             }else if cTags[1] == "10X" {
-            
-            badgeImage2.hidden = false
-            badgeLabel2.hidden = false
-            badgeLabel2.text = "10X"
-            
+                
+                badgeImage2.hidden = false
+                badgeLabel2.hidden = false
+                badgeLabel2.text = "10X"
+                
             } else if cTags[1] == "20X" {
-            
-            badgeImage2.hidden = false
-            badgeLabel2.hidden = false
-            badgeLabel2.text = "20X"
-            
+                
+                badgeImage2.hidden = false
+                badgeLabel2.hidden = false
+                badgeLabel2.text = "20X"
+                
             } else if cTags[1] == "MTM" {
-            
-            badgeImage1.hidden = false
-            badgeLabel1.hidden = false
-            badgeLabel1.text = "MTM"
+                
+                badgeImage1.hidden = false
+                badgeLabel1.hidden = false
+                badgeLabel1.text = "MTM"
             }
-        
-        
+            
+            
         }
         
         if cTags.count >= 3 {
-        
-        
+            
+            
             if cTags[2] == "5X" {
-            
-            badgeImage3.hidden = false
-            badgeLabel3.hidden = false
-            badgeLabel3.text = "5X"
-            
+                
+                badgeImage3.hidden = false
+                badgeLabel3.hidden = false
+                badgeLabel3.text = "5X"
+                
             }else if cTags[2] == "10X" {
-            
-            badgeImage4.hidden = false
-            badgeLabel3.hidden = false
-            badgeLabel3.text = "10X"
-            
+                
+                badgeImage4.hidden = false
+                badgeLabel3.hidden = false
+                badgeLabel3.text = "10X"
+                
             } else if cTags[2] == "20X" {
-            
-            badgeImage3.hidden = false
-            badgeLabel3.hidden = false
-            badgeLabel3.text = "20X"
-            
+                
+                badgeImage3.hidden = false
+                badgeLabel3.hidden = false
+                badgeLabel3.text = "20X"
+                
             } else if cTags[2] == "MTM" {
-            
-            badgeImage3.hidden = false
-            badgeLabel3.hidden = false
-            badgeLabel3.text = "MTM"
+                
+                badgeImage3.hidden = false
+                badgeLabel3.hidden = false
+                badgeLabel3.text = "MTM"
             }
-        
+            
         }
         
         if cTags.count == 4 {
-        
-        
+            
+            
             if cTags[3] == "5X" {
-            
-            badgeImage4.hidden = false
-            badgeLabel4.hidden = false
-            badgeLabel1.text = "5X"
-            
+                
+                badgeImage4.hidden = false
+                badgeLabel4.hidden = false
+                badgeLabel1.text = "5X"
+                
             }else if cTags[3] == "10X" {
-            
-            badgeImage3.hidden = false
-            badgeLabel4.hidden = false
-            badgeLabel4.text = "10X"
-            
+                
+                badgeImage3.hidden = false
+                badgeLabel4.hidden = false
+                badgeLabel4.text = "10X"
+                
             } else if cTags[3] == "20X" {
-            
-            badgeImage4.hidden = false
-            badgeLabel4.hidden = false
-            badgeLabel1.text = "20X"
-            
+                
+                badgeImage4.hidden = false
+                badgeLabel4.hidden = false
+                badgeLabel1.text = "20X"
+                
             } else if cTags[3] == "MTM" {
-            
-            badgeImage4.hidden = false
-            badgeLabel4.hidden = false
-            badgeLabel4.text = "MTM"
+                
+                badgeImage4.hidden = false
+                badgeLabel4.hidden = false
+                badgeLabel4.text = "MTM"
             }
-
-
+            
+            
         }
-
+        
         
         if movesCount == 1 {
             
@@ -238,7 +231,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
             selectedMoveLabel4.hidden = true
             
         }
-        
+            
         else if movesCount == 2 {
             
             gifSelectedImageView4.hidden = true
@@ -247,15 +240,15 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
             gifSelectedImageView3.hidden = true
             selectedMoveLabel4.hidden = true
             deleteButton4.hidden = true
-        
+            
         }
-        
+            
         else if movesCount == 3 {
             
             gifSelectedImageView3.hidden = true
             deleteButton4.hidden = true
             selectedMoveLabel4.hidden = true
-        
+            
         }
         
         
@@ -346,28 +339,29 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         return futureDate!
     }
     
-  
+    
     override func shouldAutorotate() -> Bool {
         return true
     }
     
-
+    
     
     
     func didPressRecord(sender: AnyObject) {
+        
+        
+        
         countdowimageview.hidden = false
         countdowimageview.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
         UIDevice.currentDevice().orientation
         shouldAutorotate()
         supportedInterfaceOrientations()
+        self.secondaryBackgroundImageView.hidden = false
         
         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 5 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {
             //put your code which should be executed with a delay here
             let delayInSeconds: Int64 = 1
-            
-            self.imagePicker.sourceType = .Camera
-            self.imagePicker.mediaTypes = [kUTTypeMovie as String]
             
             let popTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * Int64(NSEC_PER_SEC))
             dispatch_after(popTime, dispatch_get_main_queue(), {() -> Void in
@@ -375,11 +369,16 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
                 self.imagePicker.startVideoCapture()
                 self.countdowimageview.hidden = true
                 self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
-                self.presentViewController(self.imagePicker, animated: true, completion: {})
-                self.imagePicker.allowsEditing = false
-                self.imagePicker.delegate = self
-                self.imagePicker.videoMaximumDuration = Double(120)
+                
+               
             })
+            
+            self.presentViewController(self.imagePicker, animated: true, completion: {})
+            self.imagePicker.allowsEditing = false
+            self.imagePicker.delegate = self
+            self.imagePicker.videoMaximumDuration = Double(120)
+            self.imagePicker.sourceType = .Camera
+            self.imagePicker.mediaTypes = [kUTTypeMovie as String]
             
         }
         
@@ -391,7 +390,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         dismissViewControllerAnimated(true, completion: nil)
         UIDevice.currentDevice().setValue(UIInterfaceOrientation.Portrait.rawValue, forKey: "orientation")
         countdowimageview.hidden = true
-
+        secondaryBackgroundImageView.hidden = true
+        
     }
     
     
@@ -417,7 +417,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         self.presentViewController(loginViewController, animated: true, completion: nil)
     }
     
-       
+    
     @IBAction func deadlineValueChanged(sender: AnyObject) {
         
         if deadlineStepper.value == 1{
@@ -491,7 +491,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     }
     
     
-   
+    
     @IBAction func didpressConfirm(sender: AnyObject) {
         blurVisualEffectView.hidden = false
         let storyboard : UIStoryboard = UIStoryboard(
@@ -511,14 +511,14 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         popOverVC?.sourceView = view
         popOverVC?.permittedArrowDirections = .Any
         popOverVC?.delegate = self
-        popOverVC?.sourceRect = confirmButton.frame
-    
+       
+        
         
         presentViewController(
             confirmationVC,
             animated: true,
             completion: nil)
-        confirmButton.hidden = true
+       
         
     }
     
@@ -530,7 +530,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func didPressPopUp(sender: UIButton) {
         
-       showCustomDialog()
+        showCustomDialog()
         
     }
     
@@ -547,7 +547,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         let buttonTwo = DefaultButton(title: "RECORD") {
             
             self.didPressRecord(DefaultButton)
-        
+            "CALLED"
         }
         
         // Add buttons to dialog
@@ -556,7 +556,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         // Present dialog
         presentViewController(popup, animated: true, completion: nil)
     }
-
+    
     
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle{
@@ -571,7 +571,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {
             self.pickedVideo = pickedVideo
-
+            
         }
         
         imagePicker.dismissViewControllerAnimated(true) {

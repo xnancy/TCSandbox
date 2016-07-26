@@ -23,7 +23,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="292" height="53"/>
                             <color key="backgroundColor" red="0.067228309810161591" green="0.66390079259872437" blue="0.85579794645309448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RATE THIS APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLW-Lu-VBj">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR CHALLENGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLW-Lu-VBj">
                             <rect key="frame" x="20" y="25" width="247" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="9BG-GS-fHk"/>
