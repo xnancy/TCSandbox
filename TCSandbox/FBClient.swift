@@ -457,8 +457,8 @@ class FBClient: AnyObject {
             
             if snapshot.hasChild(FBSDKAccessToken.currentAccessToken().userID)
             {
-                let feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
-                let feedChallenges = snapshot.value!["feed_challenges"] as! [String]
+                let feedDictionary = snapshot.value![FBSDKAccessToken.currentAccessToken().userID]!!["feed_dictionary"] as! [String: String]
+                let feedChallenges = snapshot.value![FBSDKAccessToken.currentAccessToken().userID]!!["feed_challenges"] as! [String]
                 
                 completion(feedChallenges, feedDictionary)
             }

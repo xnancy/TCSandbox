@@ -35,7 +35,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
-        //queryRequest()
+        queryRequest()
 
         // Do any additional setup after loading the view.
     }
