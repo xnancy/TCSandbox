@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 User.updateCurrentUser()
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
-                self.presentViewController(homeViewController, animated: true, completion: nil)
+                self.presentViewController(homeViewController, animated: false, completion: nil)
             }
             else
             {

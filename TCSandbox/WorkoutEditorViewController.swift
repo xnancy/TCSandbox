@@ -51,6 +51,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var countdowimageview: UIImageView!
     @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
 
+    @IBOutlet weak var secondaryView: UIView!
     
     /* ---------- VARIABLES ---------- */
     var gifManager = SwiftyGifManager(memoryLimit: 50)
@@ -349,38 +350,55 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     func didPressRecord(sender: AnyObject) {
         
-        
-        
-        countdowimageview.hidden = false
-        countdowimageview.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
-        UIDevice.currentDevice().orientation
-        shouldAutorotate()
-        supportedInterfaceOrientations()
+        //countdowimageview.hidden = false
+        self.countdowimageview.hidden = false
         self.secondaryBackgroundImageView.hidden = false
+        self.countdowimageview.setGifImage(UIImage(gifName: "giffy"), manager: self.gifManager, loopCount: 1)
+        view.transform = CGAffineTransformMakeScale(0.01, 0.01);
         
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 5 * Int64(NSEC_PER_SEC))
-        dispatch_after(time, dispatch_get_main_queue()) {
-            //put your code which should be executed with a delay here
-            let delayInSeconds: Int64 = 1
+        UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
+            // animate it to the identity transform (100% scale)
+            self.view.transform = CGAffineTransformIdentity;
+        }) { (finished) -> Void in
+            // if you want to do something once the animation finishes, put it here
             
-            let popTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * Int64(NSEC_PER_SEC))
-            dispatch_after(popTime, dispatch_get_main_queue(), {() -> Void in
+            
+            UIDevice.currentDevice().orientation
+            //shouldAutorotate()
+            //supportedInterfaceOrientations()
+            
+            
+            let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 6 * Int64(NSEC_PER_SEC))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                //put your code which should be executed with a delay here
+                let delayInSeconds: Int64 = 1
                 
-                self.imagePicker.startVideoCapture()
-                self.countdowimageview.hidden = true
-                self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
+                let popTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * Int64(NSEC_PER_SEC))
+                dispatch_after(popTime, dispatch_get_main_queue(), {() -> Void in
+                    
+                    self.imagePicker.startVideoCapture()
+                    self.countdowimageview.hidden = true
+                    self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
+                    
+                    
+                })
                 
-               
-            })
-            
-            self.presentViewController(self.imagePicker, animated: true, completion: {})
-            self.imagePicker.allowsEditing = false
-            self.imagePicker.delegate = self
-            self.imagePicker.videoMaximumDuration = Double(120)
-            self.imagePicker.sourceType = .Camera
-            self.imagePicker.mediaTypes = [kUTTypeMovie as String]
-            
+                self.presentViewController(self.imagePicker, animated: true, completion: {})
+                self.imagePicker.allowsEditing = false
+                self.imagePicker.delegate = self
+                self.imagePicker.videoMaximumDuration = Double(120)
+                self.imagePicker.sourceType = .Camera
+                self.imagePicker.mediaTypes = [kUTTypeMovie as String]
+                
+            }
+
         }
+        
+//        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.TransitionCrossDissolve , animations: {
+//            
+//            //self.countdowimageview.frame.origin.y = -1000
+//            self.view.layoutIfNeeded()
+//            }, completion: nil)
         
     }
     
@@ -529,7 +547,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     }
     
     @IBAction func didPressPopUp(sender: UIButton) {
-        
+        blurVisualEffectView.hidden = false
         showCustomDialog()
         
     }
