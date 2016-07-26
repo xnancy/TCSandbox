@@ -11,6 +11,8 @@
 		825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */; };
 		82B7BBDC1D401C0A00932420 /* feedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBDB1D401C0A00932420 /* feedViewController.swift */; };
 		82B7BBDE1D4025E100932420 /* feedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */; };
+		82B7BBE41D47D59200932420 /* profileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */; };
+		82B7BBE61D47DA9100932420 /* profileCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE51D47DA9100932420 /* profileCollectionView.swift */; };
 		82BB15931D3D84FD0005B22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15921D3D84FD0005B22D /* ViewController.swift */; };
 		82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */; };
 		82BB15991D3DD9FE0005B22D /* respondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15981D3DD9FE0005B22D /* respondViewController.swift */; };
@@ -217,6 +219,8 @@
 		825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		82B7BBDB1D401C0A00932420 /* feedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedViewController.swift; sourceTree = "<group>"; };
 		82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedTableViewCell.swift; sourceTree = "<group>"; };
+		82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCollectionViewCell.swift; sourceTree = "<group>"; };
+		82B7BBE51D47DA9100932420 /* profileCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCollectionView.swift; sourceTree = "<group>"; };
 		82BB15921D3D84FD0005B22D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailsTableViewCell.swift; sourceTree = "<group>"; };
 		82BB15981D3DD9FE0005B22D /* respondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = respondViewController.swift; sourceTree = "<group>"; };
@@ -544,6 +548,8 @@
 				825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */,
 				82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */,
 				82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */,
+				82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */,
+				82B7BBE51D47DA9100932420 /* profileCollectionView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1135,6 +1141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */,
+				82B7BBE41D47D59200932420 /* profileCollectionViewCell.swift in Sources */,
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */,
 				B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */,
@@ -1147,6 +1154,7 @@
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
 				92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */,
+				82B7BBE61D47DA9100932420 /* profileCollectionView.swift in Sources */,
 				B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */,
 				929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */,
 				B850828C1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift in Sources */,

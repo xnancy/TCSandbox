@@ -15,7 +15,7 @@ import MobileCoreServices
 class feedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
     
     
-    @IBOutlet weak var feedTableView: UITableView!    
+    @IBOutlet weak var feedTableView: UITableView!
     
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
@@ -98,13 +98,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
         }
         
-        let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
+        /*let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
         gestureLeft.direction = .Left
         cell.challengeVideoView.addGestureRecognizer(gestureLeft)
         let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
         gestureRight.delegate = self
         gestureRight.direction = .Right
-        cell.challengeVideoView.addGestureRecognizer(gestureRight)
+        cell.challengeVideoView.addGestureRecognizer(gestureRight)*/
 
         return cell
     }
