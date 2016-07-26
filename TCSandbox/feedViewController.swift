@@ -81,9 +81,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
 
             let index = cell.participants?.indexOf(cell.currentParticipant!)
-            //let videoLikes = challenge.videoLikes![index!]
+            let videoLikes = challenge.videoLikes![index!]
             
-            //cell.likesLabel.text = "\(videoLikes)"
+            cell.likesLabel.text = "\(videoLikes)"
             cell.challengeNameLabel.text = challenge.name
             cell.videoLabel.text = "\((challenge.completedBy?.count)!)"
             
