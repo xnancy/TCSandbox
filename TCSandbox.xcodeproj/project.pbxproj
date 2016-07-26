@@ -20,7 +20,6 @@
 		82C6654D1D2DC18D00D642CA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */; };
 		920A08F11D38584300A3785A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920A08EF1D38584300A3785A /* Main.storyboard */; };
 		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
-		922DC99B1D46E77B0085A53F /* feedTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 922DC99A1D46E77B0085A53F /* feedTab.png */; };
 		925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */; };
 		925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D3C1D3444B300BAF3CC /* Info.plist */; };
 		925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */; };
@@ -228,7 +227,6 @@
 		91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		920A08F01D38584300A3785A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
-		922DC99A1D46E77B0085A53F /* feedTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedTab.png; sourceTree = "<group>"; };
 		925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		925D2D3C1D3444B300BAF3CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendChallengeViewController.swift; sourceTree = "<group>"; };
@@ -454,18 +452,9 @@
 			name = "API Clients";
 			sourceTree = "<group>";
 		};
-		922DC9991D46E73D0085A53F /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				922DC99A1D46E77B0085A53F /* feedTab.png */,
-			);
-			name = Icons;
-			sourceTree = "<group>";
-		};
 		925D8E4C1D2D79C1000F44F7 = {
 			isa = PBXGroup;
 			children = (
-				922DC9991D46E73D0085A53F /* Icons */,
 				925D8E571D2D79C1000F44F7 /* TCSandbox */,
 				B84012CA1D39BEB200D99A59 /* Gifs */,
 				925D8E6C1D2D79C1000F44F7 /* TCSandboxTests */,
@@ -819,7 +808,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = D8M8Q37C6Y;
+						DevelopmentTeam = 64UUKPWRF5;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -979,7 +968,6 @@
 				B85083851D44816F007D22C9 /* deadlift.gif in Resources */,
 				B85082F01D4434A0007D22C9 /* mountainclimbers.gif in Resources */,
 				B85082FA1D4434A0007D22C9 /* standingrow.gif in Resources */,
-				922DC99B1D46E77B0085A53F /* feedTab.png in Resources */,
 				B85083C51D44A1BB007D22C9 /* twerk.gif in Resources */,
 				B85083AF1D448C24007D22C9 /* forwardlean.gif in Resources */,
 				920A08F11D38584300A3785A /* Main.storyboard in Resources */,
@@ -1326,7 +1314,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
+				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1345,7 +1333,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
+				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

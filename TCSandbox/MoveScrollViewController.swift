@@ -38,7 +38,9 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewChallengeButton: UIButton!
     @IBOutlet weak var counterLabel: UILabel!
+    
     @IBOutlet weak var tagForbidButton: UIButton!
+   
     @IBOutlet weak var scrollButton: UIButton!
     
     private var gifs = Gifs.createGifs()
@@ -83,9 +85,9 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         super.viewDidLoad()
         scrollView.contentSize.height = 2510
         updateView()
-        updateTagView()
+        //updateTagView()
         
-   
+        counterLabel.layer.cornerRadius = 0.5 * counterLabel.bounds.size.width
         scrollButton.layer.cornerRadius = 0.5 * scrollButton.bounds.size.width
    
         
@@ -267,10 +269,10 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
     func updateTagView(){
         
         if workoutCount < 1 {
-            tagForbidButton.hidden = false
+           tagForbidButton.hidden = false
             
         }else{
-            tagForbidButton.hidden = true
+        tagForbidButton.hidden = true
         }
     }
     

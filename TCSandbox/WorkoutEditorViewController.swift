@@ -354,16 +354,21 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func didPressRecord(sender: AnyObject) {
         UIDevice.currentDevice().orientation
-        
         shouldAutorotate()
-        
         supportedInterfaceOrientations()
         imagePicker.sourceType = .Camera
         imagePicker.mediaTypes = [kUTTypeMovie as String]
+        
+        
+        
+
+        
         imagePicker.allowsEditing = false
         imagePicker.delegate = self
-        imagePicker.videoMaximumDuration = Double(countdownStepper.value)
+        imagePicker.videoMaximumDuration = Double(120)
         presentViewController(imagePicker, animated: true, completion: {})
+        
+        //countdownStepper.value
         
     }
     

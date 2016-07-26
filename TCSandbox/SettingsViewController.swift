@@ -10,9 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        logOutButton.layer.cornerRadius = 5
+        logOutButton.layer.borderWidth = 1
+        logOutButton.layer.borderColor = UIColor.blackColor().CGColor
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -28,6 +35,10 @@ class SettingsViewController: UIViewController {
         self.dismissViewControllerAnimated(true) {
             
         }
+    }
+    @IBAction func backButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     /*
     // MARK: - Navigation
