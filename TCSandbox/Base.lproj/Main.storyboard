@@ -97,7 +97,7 @@
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BIz-M1-azX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="588"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.66274509803921566" blue="0.85490196078431369" alpha="0.11489762931034483" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myChallengesCell" rowHeight="137" id="kev-WR-wmo" customClass="myChallengeTableViewCell" customModule="TCSandbox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="137"/>
@@ -106,12 +106,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="136.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-0o-TvN">
-                                                    <rect key="frame" x="110" y="103" width="238" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWn-Fe-iQ9">
+                                                    <rect key="frame" x="103" y="98" width="239" height="26"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-0o-TvN">
+                                                            <rect key="frame" x="7" y="3" width="238" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.066666666666666666" green="0.66274509803921566" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sender Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di7-eP-2zL">
                                                     <rect key="frame" x="110" y="53" width="154" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
@@ -125,31 +131,40 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3d" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYT-BG-Xxi">
-                                                    <rect key="frame" x="270" y="47" width="54" height="33"/>
+                                                    <rect key="frame" x="288" y="99" width="44" height="25"/>
+                                                    <color key="backgroundColor" red="0.066666666666666666" green="0.66274509803921566" blue="0.85490196078431369" alpha="0.0" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-UE-pHn">
-                                                    <rect key="frame" x="8" y="47" width="80" height="77"/>
+                                                    <rect key="frame" x="15" y="47" width="80" height="77"/>
                                                 </imageView>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WdM-UB-Bez">
-                                                    <rect key="frame" x="26" y="32" width="290" height="2"/>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WdM-UB-Bez">
+                                                    <rect key="frame" x="13" y="31" width="329" height="8"/>
+                                                    <color key="tintColor" red="0.066666666666666666" green="0.66274509803921566" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="8" id="Hyu-hK-Zln"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="PUT-e2-cf1"/>
+                                                        <constraint firstAttribute="width" constant="329" id="ads-tB-7IK"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="329" id="xaA-Mg-n4Y"/>
+                                                    </constraints>
                                                 </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHC-DP-vwO">
-                                                    <rect key="frame" x="12" y="8" width="38" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="15" y="8" width="188" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.066666666666666666" green="0.66274509803921566" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dk6-07-6Ja">
-                                                    <rect key="frame" x="310" y="8" width="30" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dk6-07-6Ja">
+                                                    <rect key="frame" x="195" y="8" width="139" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.066666666666666666" green="0.66274509803921566" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outlet property="challengeNameLabel" destination="Awz-0o-TvN" id="tk8-qF-mq4"/>
@@ -158,6 +173,7 @@
                                             <outlet property="profileImageView" destination="N7d-UE-pHn" id="XMe-XJ-bOY"/>
                                             <outlet property="senderNameLabel" destination="di7-eP-2zL" id="KX1-Gq-bWv"/>
                                             <outlet property="startDateLabel" destination="VHC-DP-vwO" id="tkY-b0-WOT"/>
+                                            <outlet property="textBackgroundView" destination="VWn-Fe-iQ9" id="kOj-wH-fT3"/>
                                             <outlet property="timeLimitLabel" destination="TYT-BG-Xxi" id="PHN-m1-wS6"/>
                                             <segue destination="G8O-Y5-uPl" kind="push" identifier="toChallengeDetailPage" id="0ST-fJ-yc5"/>
                                         </connections>

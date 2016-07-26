@@ -30,6 +30,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         myChallengesTableView.insertSubview(refreshControl, atIndex: 0)
+        myChallengesTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(animated: Bool) {

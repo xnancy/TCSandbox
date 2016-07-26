@@ -18,12 +18,20 @@ class myChallengeTableViewCell: UITableViewCell {
     @IBOutlet weak var deadlineProgressView: UIProgressView!
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var textBackgroundView: UIView!
     
     /* ---------- VARIABLES ---------- */
     var challenge: Challenge?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        self.deadlineProgressView.layer.cornerRadius = 4
+        self.deadlineProgressView.clipsToBounds = true
+        
+        self.textBackgroundView.layer.cornerRadius = 10
+        self.textBackgroundView.clipsToBounds = true
+
         // Initialization code
     }
 

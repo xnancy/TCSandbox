@@ -60,6 +60,8 @@ class AddFriendViewController: UIViewController, UITableViewDataSource, UISearch
         
         // Sets this view controller as presenting view controller for the search interface
         definesPresentationContext = true
+        
+        updateSearchResultsForSearchController(searchController)
     }
     
     /* ---------- TABLE VIEW DATA SOURCE ---------- */

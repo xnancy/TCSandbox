@@ -366,11 +366,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TCSandbox/FBClient.swift"
-            timestampString = "491254434.8239"
+            timestampString = "491255801.309657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
             landmarkName = "generateChallengeCell(_:cell:)"
             landmarkType = "5">
             <Locations>

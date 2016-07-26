@@ -23,7 +23,7 @@ class FBClient: AnyObject {
     class func initializeDateFormatter() {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         niceDateFormatter1!.dateFormat = "hh:mm"
-        niceDateFormatter2!.dateFormat = "MMMM, yyyy"
+        niceDateFormatter2!.dateFormat = "EEEE"
     }
     
     static let storageRef = FIRStorage.storage().reference()
@@ -385,6 +385,8 @@ class FBClient: AnyObject {
                 let userProfileURL = NSURL(string: dict["profile_picture_url"] as! String)
                 cell.challengeNameLabel.text = challenge.name
                 cell.profileImageView.setImageWithURL(userProfileURL!)
+                cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.height/2
+                cell.profileImageView.clipsToBounds = true
                 cell.senderNameLabel.text = userName
                 // Calculating timestamp for challenge
                 let minutesToDeadline = challenge.deadline?.minutes(from: NSDate())
@@ -401,8 +403,8 @@ class FBClient: AnyObject {
                     print(cell.timeLimitLabel.text)
                 }
                 
-                cell.startDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.startDate!)) + " on " + String(niceDateFormatter2!.stringFromDate(challenge.startDate!))
-                cell.endDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.deadline!)) + " on " + String(niceDateFormatter2!.stringFromDate(challenge.deadline!))
+                cell.startDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.startDate!)) + " " + String(niceDateFormatter2!.stringFromDate(challenge.startDate!))
+                cell.endDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.deadline!)) + " " + String(niceDateFormatter2!.stringFromDate(challenge.deadline!))
                 print("start label text: \(cell.startDateLabel.text)")
                 let currentDate = NSDate()
                 cell.deadlineProgressView.progress = Float(currentDate.seconds(from: challenge.startDate!)) / Float((challenge.deadline?.seconds(from: challenge.startDate!))!)

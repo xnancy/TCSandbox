@@ -38,14 +38,14 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         var niceDateFormatter1: NSDateFormatter? = NSDateFormatter()
         var niceDateFormatter2: NSDateFormatter? = NSDateFormatter()
         niceDateFormatter1!.dateFormat = "hh:mm"
-        niceDateFormatter2!.dateFormat = "MMMM, yyyy"
+        niceDateFormatter2!.dateFormat = "EEEE"
         
         //create self.challenge from challengeID
         
         self.tabBarController?.tabBar.hidden = true
         
         challengeTitleLabel.text = challenge?.name
-        deadlineLabel.text = niceDateFormatter1!.stringFromDate(challenge!.deadline!) + " on " + niceDateFormatter2!.stringFromDate(challenge!.deadline!)
+        deadlineLabel.text = niceDateFormatter1!.stringFromDate(challenge!.deadline!) + " " + niceDateFormatter2!.stringFromDate(challenge!.deadline!)
         var sender = User()
         FBClient.retrieveUserFromID((challenge?.senderID)!) { (user) in
             sender = user
