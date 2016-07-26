@@ -1289,6 +1289,7 @@
                                                 </collectionView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.19704085889999212" green="0.87815629181763821" blue="1" alpha="0.57047872340070915" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="challengeNameLabel" destination="iYJ-fs-p1Y" id="cza-4X-ZfB"/>
                                             <outlet property="challengeVideoView" destination="REm-hL-DJI" id="lmM-NM-g9b"/>
@@ -1902,6 +1903,8 @@
     </scenes>
     <resources>
         <image name="Sunset-Trees-l" width="1200" height="600"/>
+        <image name="arrow" width="24" height="24"/>
+        <image name="arrowBack" width="24" height="24"/>
         <image name="badge" width="1450" height="1450"/>
         <image name="black" width="2100" height="1500"/>
         <image name="blue" width="2100" height="1500"/>

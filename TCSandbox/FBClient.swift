@@ -61,7 +61,7 @@ class FBClient: AnyObject {
                 
                 if snapshot.hasChild(FBID)
                 {
-                    let friendsList = snapshot.value!["friends_list"] as! [String]
+                    let friendsList = snapshot.value![FBID]!!["friends_list"] as! [String]
                     
                     let currentUser = User(FBID: FBID, email: email, profileImageURLString: profileImageURLString, name: name, friends: friendsList)
                     User.currentUser = currentUser
