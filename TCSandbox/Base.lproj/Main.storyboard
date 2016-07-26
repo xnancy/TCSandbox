@@ -1205,10 +1205,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REm-hL-DJI">
-                                                    <rect key="frame" x="0.0" y="39" width="375" height="254"/>
+                                                    <rect key="frame" x="0.0" y="47" width="375" height="246"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDg-JS-pbH">
-                                                            <rect key="frame" x="8" y="8" width="30" height="30"/>
+                                                            <rect key="frame" x="8" y="16" width="30" height="30"/>
                                                             <state key="normal" title="Like"/>
                                                             <state key="selected">
                                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -1218,7 +1218,7 @@
                                                             </connections>
                                                         </button>
                                                         <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jose" translatesAutoresizingMaskIntoConstraints="NO" id="D5i-ly-1Wj">
-                                                            <rect key="frame" x="316" y="0.0" width="51" height="46"/>
+                                                            <rect key="frame" x="316" y="8" width="51" height="46"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1293,6 +1293,36 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-AD-vXD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                                    <color key="backgroundColor" red="0.19704085889999212" green="0.87815629181763821" blue="1" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oan-ke-Zaa">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="Pya-nL-APc" customClass="profileCollectionViewCell" customModule="TCSandbox" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="-1.5" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9se-sy-6YI">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <color key="backgroundColor" red="0.9318553665" green="0.34556207100000003" blue="0.42929793669999999" alpha="0.16478280140000001" colorSpace="calibratedRGB"/>
+                                                            <connections>
+                                                                <outlet property="profileImageView" destination="9se-sy-6YI" id="YCU-Ri-WCj"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.19704085889999212" green="0.87815629181763821" blue="1" alpha="0.57047872340070915" colorSpace="calibratedRGB"/>
@@ -1300,6 +1330,7 @@
                                             <outlet property="challengeNameLabel" destination="iYJ-fs-p1Y" id="cza-4X-ZfB"/>
                                             <outlet property="challengeVideoView" destination="REm-hL-DJI" id="lmM-NM-g9b"/>
                                             <outlet property="likesLabel" destination="d7T-Sd-EDt" id="akP-Zy-X72"/>
+                                            <outlet property="profileCollectionView" destination="dNd-AD-vXD" id="tVK-iy-39n"/>
                                             <outlet property="videoLabel" destination="W2a-lR-idM" id="DEC-QQ-Ldc"/>
                                         </connections>
                                     </tableViewCell>

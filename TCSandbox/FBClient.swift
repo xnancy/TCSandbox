@@ -123,6 +123,16 @@ class FBClient: AnyObject {
         
     }
     
+    class func retrievePictureForUser (userID: String, completion: (String) -> Void) {
+        dataRef.child("Users").child(userID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            let url = snapshot.value!["profile_picture_url"] as! String
+            
+            completion(url)
+        })
+        
+    }
+    
 
     class func addFriend(friendID: String)
     {

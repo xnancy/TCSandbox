@@ -10,4 +10,8 @@ import UIKit
 
 class profileCollectionViewCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    var participant: String?
+    
 }

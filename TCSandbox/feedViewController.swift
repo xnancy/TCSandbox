@@ -77,6 +77,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             {
                 cell.currentParticipant = challenge.senderID
                 cell.participants = challenge.completedBy!
+                cell.profileCollectionView.reloadData()
             }
 
             let index = cell.participants?.indexOf(cell.currentParticipant!)
