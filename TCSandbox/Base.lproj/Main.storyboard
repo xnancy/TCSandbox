@@ -1150,7 +1150,7 @@
         <!--Feed-->
         <scene sceneID="0vi-VJ-rFs">
             <objects>
-                <viewController title="Feed" id="Ktr-fm-Nad" customClass="feedViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="feedViewController" title="Feed" id="Ktr-fm-Nad" customClass="feedViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b9P-zu-I51"/>
                         <viewControllerLayoutGuide type="bottom" id="sXb-gD-qlm"/>
@@ -1327,6 +1327,12 @@
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9se-sy-6YI">
                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                     </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcc-O4-S89">
+                                                                        <rect key="frame" x="2" y="0.0" width="46" height="50"/>
+                                                                        <connections>
+                                                                            <action selector="didTapCell:" destination="Pya-nL-APc" eventType="touchUpInside" id="CE3-ir-Zz9"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>

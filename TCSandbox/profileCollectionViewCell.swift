@@ -13,5 +13,16 @@ class profileCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     var participant: String?
+    var parentTableViewCell: feedTableViewCell?
     
+    
+    @IBAction func didTapCell(sender: AnyObject) {
+        
+        parentTableViewCell?.currentParticipant = participant
+        
+        let feedTableView = self.superview!.superview!.superview!.superview!.nextResponder()as! UITableView
+
+        
+        feedTableView.reloadData()
+    }
 }

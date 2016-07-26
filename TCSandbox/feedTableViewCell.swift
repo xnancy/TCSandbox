@@ -65,6 +65,8 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) as! profileCollectionViewCell
+        cell.parentTableViewCell = self
+        cell.participant = participants![indexPath.row]
         
          var url = ""
         
