@@ -279,7 +279,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             feedTableView.reloadData()
         }
         
-        if toggled == true
+        else
         {
             toggled = false
             

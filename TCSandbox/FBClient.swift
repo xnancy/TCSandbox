@@ -248,6 +248,25 @@ class FBClient: AnyObject {
             
         }
         
+        dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(
+        .Value, withBlock: { (snapshot) in
+            var homeChallenges = snapshot.value!["home_challenges"] as! [String]
+            
+            if homeChallenges[0] != "placeholder"
+            {
+                homeChallenges.append(challengeID!)
+            }
+                
+            else
+            {
+                homeChallenges[0] = challengeID!
+            }
+            
+            let updates = ["home_challenges": homeChallenges]
+            
+            dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).updateChildValues(updates as [NSObject : AnyObject])
+        })
+        
 
         for userID in participants!
         {
@@ -272,7 +291,6 @@ class FBClient: AnyObject {
                         
                         var feedChallenges = snapshot.value!["feed_challenges"] as! [String]
                         var feedDictionary = snapshot.value!["feed_dictionary"] as! [String: String]
-                        var homeChallenges = snapshot.value!["home_challenges"] as! [String]
                         
                         if feedChallenges[0] != "placeholder"
                         {
@@ -284,20 +302,11 @@ class FBClient: AnyObject {
                             feedChallenges[0] = challengeID!
                         }
                         
-                        if homeChallenges[0] != "placeholder"
-                        {
-                            homeChallenges.append(challengeID!)
-                        }
-                            
-                        else
-                        {
-                            homeChallenges[0] = challengeID!
-                        }
                         
                         feedDictionary.updateValue(dateFormatter.stringFromDate(deadline!), forKey: challengeID!)
                         
                         
-                        let updates = ["feed_challenges": feedChallenges, "feed_dictionary": feedDictionary, "home_challenges": homeChallenges]
+                        let updates = ["feed_challenges": feedChallenges, "feed_dictionary": feedDictionary]
                         dataRef.child("Users").child(friendID).updateChildValues(updates as [NSObject : AnyObject])
                     })
                 }
@@ -310,6 +319,8 @@ class FBClient: AnyObject {
             }
 
             dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID, "completed_by": completedBy, "video_likes": videoLikes, "start_date": dateFormatter.stringFromDate(NSDate())])
+            
+            
         }
     
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
