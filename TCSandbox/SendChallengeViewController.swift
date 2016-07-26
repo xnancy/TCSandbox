@@ -46,8 +46,15 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     /* ---------- TABLE VIEW DATA SOURCE ---------- */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = friendsSendChallengeTableView.dequeueReusableCellWithIdentifier("friendsCell") as! FriendsSendChallengeTableViewCell
+        
+        // Populate friends cell with info
         FBClient.generateFriendCell(friendIDs![indexPath.row + 1], cell: cell)
         cell.userID = friendIDs![indexPath.row + 1]
+        
+        // Make profile image cirucular
+        cell.userProfileImageView.layer.cornerRadius = cell.userProfileImageView.frame.size.width / 2
+        cell.userProfileImageView.clipsToBounds = true
+        
         return cell
     }
     
@@ -72,7 +79,6 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = friendsSendChallengeTableView.cellForRowAtIndexPath(indexPath) as! FriendsSendChallengeTableViewCell
-        
         challenge?.addParticipant(cell.userID!)
     }
     

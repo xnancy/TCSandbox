@@ -335,7 +335,7 @@ class FBClient: AnyObject {
             let url = NSURL(string: dict["profile_picture_url"] as! String)
             cell.userProfileImageView.setImageWithURL(url!)
             cell.userNameLabel.text = dict["name"] as! String
-            cell.userChallengeCompletedLabel.text = "\(dict["challenges_completed"] as! NSNumber)"
+            cell.userChallengeCompletedLabel.text = "Challenges Completed: \(dict["challenges_completed"] as! NSNumber)"
         })
     }
     
