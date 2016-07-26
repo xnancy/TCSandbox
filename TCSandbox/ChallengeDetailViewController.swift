@@ -79,6 +79,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         self.detailsTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
         gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: 100)
+        self.navigationItem.title = challenge!.name
+        navigationController!.navigationItem.backBarButtonItem?.title = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,7 +91,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if challenge?.gifNames!.count > indexPath.row
         {
-            gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![indexPath.row])!), manager: gifManager, loopCount: 100)
+            gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![indexPath.row])!), manager: gifManager, loopCount: -1)
+            gifImageView.startAnimatingGif()
         }
         else {
             gifImageView.image = UIImage(named: (challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!)

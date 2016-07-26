@@ -280,7 +280,7 @@ class FBClient: AnyObject {
                 print(error.localizedDescription)
             }
 
-            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID, "completed_by": completedBy, "video_likes": videoLikes])
+            dataRef.child("Challenges").child(challengeID!).updateChildValues(["participants": participants!, "workout_gifs": gifNames!, "add_on_images": tagNames!, "time_limit": timeLimit!,"comp_tags": compTags!, "challengeID": challengeID!, "deadline": FBClient.dateFormatter.stringFromDate(deadline!), "name": challengeName!, "senderID": senderID, "completed_by": completedBy, "video_likes": videoLikes, "start_date": dateFormatter.stringFromDate(NSDate())])
         }
     
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

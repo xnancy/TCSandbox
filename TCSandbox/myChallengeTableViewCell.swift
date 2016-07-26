@@ -15,6 +15,7 @@ class myChallengeTableViewCell: UITableViewCell {
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var timeLimitLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var deadlineProgressView: UIProgressView!
     
     /* ---------- VARIABLES ---------- */
     var challenge: Challenge?
