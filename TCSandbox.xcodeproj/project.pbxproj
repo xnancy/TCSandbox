@@ -41,6 +41,11 @@
 		929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A61D2ECAD800FC1E96 /* Challenge.swift */; };
 		929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */; };
 		929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929A02AB1D2ECCB000FC1E96 /* UIHomeElementMaker.swift */; };
+		929D95571D49596E00E411CC /* hourglass2.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95561D49596E00E411CC /* hourglass2.png */; };
+		929D95591D495ABD00E411CC /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D95581D495ABD00E411CC /* tabBarController.swift */; };
+		929D955B1D495AF100E411CC /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D955A1D495AF100E411CC /* ImageExtension.swift */; };
+		929D95621D496CAF00E411CC /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95601D496CAF00E411CC /* Group.png */; };
+		929D95631D496CAF00E411CC /* Globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95611D496CAF00E411CC /* Globe.png */; };
 		92A924AC1D30572400637263 /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AB1D30572400637263 /* Gifs.swift */; };
 		92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */; };
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
@@ -265,6 +270,11 @@
 		929A02A61D2ECAD800FC1E96 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipLibrary.swift; sourceTree = "<group>"; };
 		929A02AB1D2ECCB000FC1E96 /* UIHomeElementMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHomeElementMaker.swift; sourceTree = "<group>"; };
+		929D95561D49596E00E411CC /* hourglass2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourglass2.png; sourceTree = "<group>"; };
+		929D95581D495ABD00E411CC /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
+		929D955A1D495AF100E411CC /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		929D95601D496CAF00E411CC /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
+		929D95611D496CAF00E411CC /* Globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Globe.png; sourceTree = "<group>"; };
 		92A924AB1D30572400637263 /* Gifs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
 		92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92A924AF1D3057B900637263 /* MoveScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollViewController.swift; sourceTree = "<group>"; };
@@ -472,6 +482,9 @@
 			isa = PBXGroup;
 			children = (
 				9213D14C1D48177200C14156 /* hourglass.png */,
+				929D95601D496CAF00E411CC /* Group.png */,
+				929D95561D49596E00E411CC /* hourglass2.png */,
+				929D95611D496CAF00E411CC /* Globe.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -568,6 +581,7 @@
 				825C30161D383A05005D7171 /* myChallengesViewController.swift */,
 				82BB15981D3DD9FE0005B22D /* respondViewController.swift */,
 				82B7BBDB1D401C0A00932420 /* feedViewController.swift */,
+				929D95581D495ABD00E411CC /* tabBarController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -612,6 +626,7 @@
 			isa = PBXGroup;
 			children = (
 				92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */,
+				929D955A1D495AF100E411CC /* ImageExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -897,6 +912,7 @@
 				B85082F21D4434A0007D22C9 /* plankpullin.gif in Resources */,
 				B850834E1D4459DC007D22C9 /* takeselfie.gif in Resources */,
 				B85082F41D4434A0007D22C9 /* pullups.gif in Resources */,
+				929D95571D49596E00E411CC /* hourglass2.png in Resources */,
 				B85083321D4459DC007D22C9 /* fistpump.gif in Resources */,
 				B85083A51D448352007D22C9 /* pullups.gif in Resources */,
 				B85083841D44816F007D22C9 /* cycle.gif in Resources */,
@@ -958,6 +974,7 @@
 				925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */,
 				B85083431D4459DC007D22C9 /* ridebike.gif in Resources */,
 				B850834B1D4459DC007D22C9 /* swing2.gif in Resources */,
+				929D95621D496CAF00E411CC /* Group.png in Resources */,
 				B85083C41D44A1BB007D22C9 /* runningman.gif in Resources */,
 				B850837C1D448131007D22C9 /* spin1.gif in Resources */,
 				B85083EF1D44A559007D22C9 /* reCat.gif in Resources */,
@@ -968,6 +985,7 @@
 				B85083971D448352007D22C9 /* deadlift.gif in Resources */,
 				B85083981D448352007D22C9 /* chairdip.gif in Resources */,
 				B85083A21D448352007D22C9 /* stretch.gif in Resources */,
+				929D95631D496CAF00E411CC /* Globe.png in Resources */,
 				B850837E1D44816A007D22C9 /* dumbbells.gif in Resources */,
 				B85083E61D44A559007D22C9 /* gingerbread.gif in Resources */,
 				B85083831D44816F007D22C9 /* crunches.gif in Resources */,
@@ -1186,6 +1204,7 @@
 			files = (
 				825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */,
 				82B7BBE41D47D59200932420 /* profileCollectionViewCell.swift in Sources */,
+				929D955B1D495AF100E411CC /* ImageExtension.swift in Sources */,
 				B893B56C1D4865E80009A3B1 /* ChallengeSentViewController.swift in Sources */,
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */,
@@ -1211,6 +1230,7 @@
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
 				825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */,
 				82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */,
+				929D95591D495ABD00E411CC /* tabBarController.swift in Sources */,
 				82B7BBE81D481CF100932420 /* workoutCollectionViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,

@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
         // Override point for customization after application launch. 
         var performShortcutDelegate = true
-        
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
             
             print("Application launched via shortcut")

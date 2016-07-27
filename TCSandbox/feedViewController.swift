@@ -19,6 +19,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var noFeedTextView: UITextView!
     
+    @IBOutlet weak var toggleButton: UIBarButtonItem!
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
     var homeChallenges: [String]?
@@ -419,20 +420,40 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.reloadData()
     }
     
+    func toggle() {
+        if toggled == false
+        {
+            toggled = true
+            let image = UIImage(named: "group")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
+            feedTableView.reloadData()
+            
+        }
+            
+        else
+        {
+            toggled = false
+            let image = UIImage(named: "globe")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
+            feedTableView.reloadData()
+        }
+    }
     
     @IBAction func didTouchToggle(sender: AnyObject) {
         
         if toggled == false
         {
             toggled = true
-            
+            let image = UIImage(named: "group")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
             feedTableView.reloadData()
         }
         
         else
         {
             toggled = false
-            
+            let image = UIImage(named: "globe")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
             feedTableView.reloadData()
         }
     }
