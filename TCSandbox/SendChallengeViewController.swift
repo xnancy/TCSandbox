@@ -139,13 +139,13 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
             FBClient.uploadVideo(pickedVideo!, challenge: challenge!)
             
             
-            let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
+            //let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
             
             //popupImage()
             showCustomDialog()
             
-            delay(2){ print("called")
-           self.presentViewController(homeViewController, animated: true, completion: nil)
+            delay(2){
+                self.navigationController?.popToRootViewControllerAnimated(true)
             }
         }
     }

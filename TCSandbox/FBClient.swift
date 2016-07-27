@@ -510,7 +510,19 @@ class FBClient: AnyObject {
             }
         }
     }
-    
+    class func streamVideo(challengeID: String, userID: String, completion: (FIRStorageMetadata) -> Void)
+    {
+        let videoRef = storageRef.child(userID).child(challengeID)
+        
+        videoRef.metadataWithCompletion({ (metadata, error) in
+            if (error != nil) {
+                // Handle any errors
+                print(error?.localizedDescription)
+            } else {
+                completion(metadata!)
+            }
+        })
+    }
     class func retrieveFeed(completion: ([String], [String: String], [String]) -> Void)
     {
         dataRef.child("Users").observeSingleEventOfType(.Value, withBlock: { snapshot in

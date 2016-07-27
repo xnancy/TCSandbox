@@ -14,6 +14,7 @@ import AVKit
 import MediaPlayer
 import MobileCoreServices
 import SwiftyGif
+import PopupDialog
 
 var gifManager = SwiftyGifManager(memoryLimit: 1000)
 private var playbackLikelyToKeepUpContext = 0
@@ -75,12 +76,16 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             let profileURL = NSURL(string: sender.profileImageURLString!)
             self.profileImageView.setImageWithURL(profileURL!)
             
-            FBClient.downloadVideo((self.challenge?.challengeID)!, userID: (self.challenge?.senderID)!, completion: {(URL: NSURL) in
+            FBClient.streamVideo((self.challenge?.challengeID)!, userID: (self.challenge?.senderID)!, completion: {(metadata: FIRStorageMetadata) in
                 
-                let playerItem = AVPlayerItem(URL: URL)
-                self.avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
-                self.avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
-                
+                let downloadUrl = metadata.downloadURL()
+                    
+                if downloadUrl != nil{
+                    let playerItem = AVPlayerItem(URL: downloadUrl!)
+                    self.avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
+                    
+                }
+            
                 let timeInterval: CMTime = CMTimeMakeWithSeconds(0.01, 100)
                 self.timeObserver = self.avPlayer.addPeriodicTimeObserverForInterval(timeInterval,
                 queue: dispatch_get_main_queue()) { (elapsedTime: CMTime) -> Void in
@@ -332,9 +337,50 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         }
         
         imagePicker.dismissViewControllerAnimated(true) {
-            self.performSegueWithIdentifier("responseSegue", sender: self)
+                
+            FBClient.uploadVideo(self.pickedVideo!, challenge: self.challenge!)
+                
+            //let homeViewController: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
+            
+            //popupImage()
+            self.showCustomDialog()
+            
+            self.delay(2){
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            }
         }
     }
+    
+    func delay(delay: Double, closure: ()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(),
+            closure
+        )
+    }
+    
+    func showCustomDialog() {
+        
+        
+        // Create a custom view controller
+        let sentVC = ChallengeSentViewController(nibName: "ChallengeSentViewController", bundle: nil)
+        
+        // Create the dialog
+        let popup = PopupDialog(viewController: sentVC, transitionStyle: .BounceDown, buttonAlignment: .Horizontal, gestureDismissal: false)
+        
+        // Create second button
+        
+        
+        // Present dialog
+        self.presentViewController(popup, animated: true, completion: nil)
+        
+        delay(2){self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+
     
     // MARK: - Navigation
 

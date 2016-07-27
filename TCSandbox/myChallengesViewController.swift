@@ -23,6 +23,8 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
 
         tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
         myChallengesTableView.delegate = self
@@ -36,6 +38,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         currentChallenges = []
         updateChallengeInfo()
         self.tabBarController?.tabBar.hidden = false

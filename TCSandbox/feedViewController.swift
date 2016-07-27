@@ -60,6 +60,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(animated: Bool) {
         feedTableView.hidden = false
         noFeedTextView.hidden = true
+        navigationController?.setNavigationBarHidden(false, animated: true)
         queryRequest()
     }
 
