@@ -15,6 +15,8 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     var participantPictures:[String]?
     var currentParticipant: String?
     
+    
+    @IBOutlet weak var currentName: UILabel!
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var challengeVideoView: UIView!
     @IBOutlet weak var videoLabel: UILabel!

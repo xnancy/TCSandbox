@@ -118,6 +118,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let movie = AVPlayerViewController()
                     movie.player = player
                     movie.view.frame = cell.challengeVideoView.bounds
+
                     
                     cell.challengeVideoView.addSubview(movie.view)
                     player.play()
@@ -278,6 +279,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             toggled = true
             
             feedTableView.reloadData()
+            
         }
         
         else
