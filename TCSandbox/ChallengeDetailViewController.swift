@@ -35,6 +35,9 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
+        
         detailsTableView.delegate = self
         detailsTableView.dataSource = self
         var niceDateFormatter1: NSDateFormatter? = NSDateFormatter()
@@ -63,6 +66,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                 movie.view.frame = self.videoView.bounds
                 
                 self.view.addSubview(movie.view)
+
                 player.play()
             })
         }
@@ -84,7 +88,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: 100)
         gifImageView.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin, .FlexibleBottomMargin]
         self.navigationItem.title = challenge!.name
-        navigationController!.navigationItem.backBarButtonItem?.title = ""
     }
 
     override func didReceiveMemoryWarning() {

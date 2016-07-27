@@ -22,6 +22,7 @@
 		82C6654C1D2DC18D00D642CA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665491D2DC18D00D642CA /* FBSDKLoginKit.framework */; };
 		82C6654D1D2DC18D00D642CA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */; };
 		920A08F11D38584300A3785A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920A08EF1D38584300A3785A /* Main.storyboard */; };
+		9213D14D1D48177200C14156 /* hourglass.png in Resources */ = {isa = PBXBuildFile; fileRef = 9213D14C1D48177200C14156 /* hourglass.png */; };
 		921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214309F1D2DCB0900F6B59F /* FBClient.swift */; };
 		925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */; };
 		925D2D3D1D3444B300BAF3CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925D2D3C1D3444B300BAF3CC /* Info.plist */; };
@@ -239,6 +240,7 @@
 		82C6654A1D2DC18D00D642CA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		91CFCFB2B6F7ABF86C38464D /* Pods-TCSandboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		920A08F01D38584300A3785A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9213D14C1D48177200C14156 /* hourglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourglass.png; sourceTree = "<group>"; };
 		9214309F1D2DCB0900F6B59F /* FBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClient.swift; sourceTree = "<group>"; };
 		925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		925D2D3C1D3444B300BAF3CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -464,6 +466,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9213D14B1D4816D900C14156 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				9213D14C1D48177200C14156 /* hourglass.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		9214309E1D2DCAF000F6B59F /* API Clients */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +508,7 @@
 		925D8E571D2D79C1000F44F7 /* TCSandbox */ = {
 			isa = PBXGroup;
 			children = (
+				9213D14B1D4816D900C14156 /* Icons */,
 				92FDDD3D1D3D9D520049AD36 /* Extensions */,
 				929A02AA1D2ECC8000FC1E96 /* Helper Classes */,
 				9214309E1D2DCAF000F6B59F /* API Clients */,
@@ -978,6 +989,7 @@
 				B893B5671D48333D0009A3B1 /* sent.gif in Resources */,
 				B850832E1D4459DC007D22C9 /* eating.gif in Resources */,
 				B850835C1D446E07007D22C9 /* flip.gif in Resources */,
+				9213D14D1D48177200C14156 /* hourglass.png in Resources */,
 				B85082FF1D4434A0007D22C9 /* wallsit.gif in Resources */,
 				B85083C81D44A1BB007D22C9 /* hotlineblingdance.gif in Resources */,
 				B85083FA1D44AE44007D22C9 /* untzuntz.gif in Resources */,

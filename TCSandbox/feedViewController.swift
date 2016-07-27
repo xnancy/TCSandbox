@@ -29,9 +29,11 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
+        
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
+        
         toggled = false
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
