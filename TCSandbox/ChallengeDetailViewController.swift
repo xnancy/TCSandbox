@@ -269,9 +269,10 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             
             
             self.navigationController?.navigationBarHidden = true
-            countdownview.hidden = false
-            videoView.removeFromSuperview()
-            
+            self.countdownImageView.hidden = false
+            self.secondaryBackgroundImageView.hidden = false
+            //videoView.removeFromSuperview()
+            self.loadingIndicatorView.hidden = true
             self.countdownImageView.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
             view.transform = CGAffineTransformMakeScale(0.01, 0.01);
             
@@ -311,6 +312,13 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                 }
             }
         }
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        self.navigationController?.navigationBarHidden = false
+        dismissViewControllerAnimated(true, completion: nil)
+        secondaryBackgroundImageView.hidden = true
+        countdownImageView.hidden = true
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
