@@ -21,6 +21,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //FBClient.logout()
         FBClient.initializeDateFormatter()
         FBClient.logout()
             FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in

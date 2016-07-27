@@ -349,10 +349,10 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     
     func didPressRecord(sender: AnyObject) {
-        
+        self.secondaryBackgroundImageView.hidden = false
         //countdowimageview.hidden = false
         self.countdowimageview.hidden = false
-        self.secondaryBackgroundImageView.hidden = false
+        
         self.countdowimageview.setGifImage(UIImage(gifName: "giffy"), manager: self.gifManager, loopCount: 1)
         view.transform = CGAffineTransformMakeScale(0.01, 0.01);
         
@@ -511,7 +511,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     
     @IBAction func didpressConfirm(sender: AnyObject) {
-        blurVisualEffectView.hidden = false
+        //blurVisualEffectView.hidden = false
         let storyboard : UIStoryboard = UIStoryboard(
             name: "Main",
             bundle: nil)
@@ -557,15 +557,18 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
         // Create a custom view controller
         let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
-        
+        ratingVC.delegate = self
+        ratingVC.pop = 27
+        print(ratingVC.pop)
         // Create the dialog
         let popup = PopupDialog(viewController: ratingVC, transitionStyle: .BounceDown, buttonAlignment: .Horizontal, gestureDismissal: false)
+        
         
         // Create second button
         let buttonTwo = DefaultButton(title: "RECORD") {
             
             self.didPressRecord(DefaultButton)
-            "CALLED"
+            self.blurVisualEffectView.hidden = true
         }
         
         // Add buttons to dialog

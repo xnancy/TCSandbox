@@ -30,7 +30,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var deadlineLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var detailsTableView: UITableView!
-    
+    @IBOutlet weak var countdownImageView: UIImageView!
+    @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         detailsTableView.delegate = self
@@ -127,6 +128,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         }
         return cell
     }
+    @IBOutlet weak var navItem: UINavigationItem!
     
     @IBAction func didPressRespond(sender: AnyObject) {
         if didRespond!
@@ -136,20 +138,62 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             
             else
         {
-            imagePicker.sourceType = .Camera
-            imagePicker.mediaTypes = [kUTTypeMovie as String]
-            imagePicker.allowsEditing = false
-            imagePicker.delegate = self
-            imagePicker.videoMaximumDuration = Double((challenge?.timeLimit)!)
             
-            presentViewController(imagePicker, animated: true, completion: {})
+            videoView.maskView?.hidden = true
+            self.navigationController?.navigationBarHidden = true
+            self.secondaryBackgroundImageView.hidden = false
+            //countdowimageview.hidden = false
+            self.countdownImageView.hidden = false
+            videoView.hidden = true
+            
+            self.countdownImageView.setGifImage(UIImage(gifName: "giffy"), manager: self.gifManager, loopCount: 1)
+            view.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            
+            UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
+                // animate it to the identity transform (100% scale)
+                self.view.transform = CGAffineTransformIdentity;
+            }) { (finished) -> Void in
+                
+                //UIDevice.currentDevice().orientation
+                //shouldAutorotate()
+                //supportedInterfaceOrientations()
+                
+                
+                let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 6 * Int64(NSEC_PER_SEC))
+                dispatch_after(time, dispatch_get_main_queue()) {
+                    //put your code which should be executed with a delay here
+                    let delayInSeconds: Int64 = 1
+                    
+                    let popTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * Int64(NSEC_PER_SEC))
+                    dispatch_after(popTime, dispatch_get_main_queue(), {() -> Void in
+                        
+                        self.imagePicker.startVideoCapture()
+                        self.countdownImageView.hidden = true
+                        self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
+                        
+                        
+                    })
+                    
+            
+            
+            self.imagePicker.sourceType = .Camera
+            self.imagePicker.mediaTypes = [kUTTypeMovie as String]
+            self.imagePicker.allowsEditing = false
+            self.imagePicker.delegate = self
+            self.imagePicker.videoMaximumDuration = Double((self.challenge?.timeLimit)!)
+            self.videoView.hidden = true
+            
+            self.presentViewController(self.imagePicker, animated: true, completion: {})
+                }
+            }
         }
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         print("video recorded")
-        
+        secondaryBackgroundImageView.hidden = true
+        countdownImageView.hidden = true
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {
             self.pickedVideo = pickedVideo

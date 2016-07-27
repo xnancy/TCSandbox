@@ -12,6 +12,7 @@ import AFNetworking
 import AVKit
 import MediaPlayer
 import MobileCoreServices
+import PopupDialog
 
 class SendChallengeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,6 +20,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var friendsSendChallengeTableView: UITableView!
     @IBOutlet weak var confirmationImageView: UIImageView!
     /* ---------- VARIABLES ---------- */
+    @IBOutlet weak var button: UIButton!
     var friendIDs: [String]?
     var challenge: Challenge?
     var pickedVideo: NSURL?
@@ -99,10 +101,33 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
         )
     }
     
+    func showCustomDialog() {
+        
+        
+        // Create a custom view controller
+        let sentVC = ChallengeSentViewController(nibName: "ChallengeSentViewController", bundle: nil)
+        
+        // Create the dialog
+        let popup = PopupDialog(viewController: sentVC, transitionStyle: .BounceDown, buttonAlignment: .Horizontal, gestureDismissal: false)
+        
+        // Create second button
+       
+        
+        // Present dialog
+        self.presentViewController(popup, animated: true, completion: nil)
+        
+        delay(2){self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
+    
+    
+    
     @IBAction func didSendChallenge(sender: AnyObject) {
         //ADD GIF NAMES
         //ADD TAG NAMES
         //ADD CHALLENGE NAME
+        
         if (challenge?.participants)! == []
         {
             //SEND A NOTIFICATION THAT THEY NEED TO SELECT PARTICIPANTS!
@@ -116,10 +141,11 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
             
             let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
             
-            popupImage()
+            //popupImage()
+            showCustomDialog()
             
-            delay(1.7){
-           self.presentViewController(homeViewController, animated: false, completion: nil)
+            delay(2){ print("called")
+           self.presentViewController(homeViewController, animated: true, completion: nil)
             }
         }
     }

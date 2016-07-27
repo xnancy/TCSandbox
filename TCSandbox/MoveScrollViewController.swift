@@ -87,7 +87,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         updateView()
         //updateTagView()
         
-        counterLabel.layer.cornerRadius = 0.5 * counterLabel.bounds.size.width
+        counterLabel.layer.cornerRadius = 16
+        
         scrollButton.layer.cornerRadius = 0.5 * scrollButton.bounds.size.width
    
         
@@ -303,7 +304,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         svc.workoutCount = workoutCount
         svc.tagsCount = tagsCount
         svc.cTags = compTags
-        print(compTags)
+        //print(compTags)
         
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{

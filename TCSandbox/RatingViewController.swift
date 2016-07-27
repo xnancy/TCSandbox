@@ -9,12 +9,20 @@
 import UIKit
 
 class RatingViewController: UIViewController {
+    @IBOutlet weak var textLabel: UILabel!
 
     //@IBOutlet weak var cosmosStarRating: CosmosView!
    
+    var text: String!
+    var pop: Int = 0
+    var delegate: WorkoutEditorDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textLabel.text = String(pop)
+        print(pop)
+        
         // Do any additional setup after loading the view.
     }
 
