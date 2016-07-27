@@ -306,11 +306,12 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         svc.tagsCount = tagsCount
         svc.cTags = compTags
         //print(compTags)
+        print(collection6Selected)
         
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{
                 svc.gifsToShow.append(Gifs.sortedRow1[index])
-                
+               print("called1")
                 
             }
         }
@@ -318,42 +319,43 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         for (index, boolValue) in collection2Selected.enumerate(){
             if boolValue == true{
                 svc.gifsToShow.append(Gifs.sortedRow2[index])
-                
+               print("called2")
             }
         }
         
         for (index, boolValue) in collection3Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.sortedRow3[index])
-                
+               print("called3")
             }
         }
         
         for (index, boolValue) in collection4Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.sortedRow4[index])
-                
+                print("called4")
             }
         }
         
         for (index, boolValue) in collection5Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.sortedRow5[index])
-                
+               print("called5")
             }
         }
         
         for (index, boolValue) in collection6Selected.enumerate(){
             if boolValue == true{
-                svc.gifsToShow.append(Tags.sortedRow6[index])
-                
+                svc.tagsToShow.append(Tags.sortedRow6[index])
+                print(Tags.sortedRow6[index])
+                print("called6")
             }
         }
         
-        for (index, boolValue) in collection6Selected.enumerate(){
+        for (index, boolValue) in collection7Selected.enumerate(){
             if boolValue == true{
                 svc.gifsToShow.append(Gifs.sortedRow7[index])
-                
+                print("called7")
             }
         }
     }

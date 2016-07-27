@@ -330,6 +330,7 @@
         <!--Respond View Controller-->
         <scene sceneID="o5i-jU-NUd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNx-GT-xC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="eQi-sG-n3W" customClass="respondViewController" customModule="TCSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r1d-dc-896"/>
@@ -351,7 +352,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TNx-GT-xC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482.5" y="2932.5"/>
         </scene>
