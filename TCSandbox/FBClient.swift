@@ -478,6 +478,7 @@ class FBClient: AnyObject {
                 
                 var videoURLs = challenge.videoURLs
                 videoURLs?.append(downloadURLString!)
+                print(videoURLs)
                 if videoURLs == nil
                 {
                     videoURLs = [downloadURLString!]

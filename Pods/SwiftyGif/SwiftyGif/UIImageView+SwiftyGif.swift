@@ -84,6 +84,8 @@ public extension UIImageView {
                     startAnimatingGif()
                 }
             }
+            startDisplay()
+            startAnimatingGif()
         }
     }
 

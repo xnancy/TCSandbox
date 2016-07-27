@@ -21,6 +21,11 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var feedDictionary: [String: String]?
     var homeChallenges: [String]?
     var toggled: DarwinBoolean?
+    var player = AVPlayer()
+    var player2 = AVPlayer()
+    let movie = AVPlayerViewController()
+    let movie2 = AVPlayerViewController()
+
     
     
     override func viewDidLoad() {
@@ -99,92 +104,63 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if toggled == false
         {
-            FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
-                cell.challenge = challenge
-                
-                if (cell.participants == nil || cell.participants![0] != challenge.senderID)
-                {
-                    cell.currentParticipant = challenge.senderID
-                    cell.participants = challenge.completedBy!
-                    cell.profileCollectionView.reloadData()
-                    cell.workoutCollectionView.reloadData()
-                }
-                
-                let index = cell.participants?.indexOf(cell.currentParticipant!)
-                let videoLikes = challenge.videoLikes![index!]
-                
-                cell.likesLabel.text = "\(videoLikes)"
-                cell.challengeNameLabel.text = challenge.name
-
-                
-                FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
-                    
-                    let player = AVPlayer(URL: URL)
-                    let movie = AVPlayerViewController()
-                    movie.player = player
-                    movie.view.frame = cell.challengeVideoView.bounds
-
-                    
-                    cell.challengeVideoView.addSubview(movie.view)
-                    player.play()
-                })
-            }
-            
-            /*let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
-             gestureLeft.direction = .Left
-             cell.challengeVideoView.addGestureRecognizer(gestureLeft)
-             let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
-             gestureRight.delegate = self
-             gestureRight.direction = .Right
-             cell.challengeVideoView.addGestureRecognizer(gestureRight)*/
+            populateCell(cell, challenges: feedChallenges!, indexPath: indexPath)
         }
         
         else
         {
-            FBClient.retrieveChallengeFromID(homeChallenges![indexPath.row]) { (challenge) in
-                cell.challenge = challenge
-                
-                if (cell.participants == nil || cell.participants![0] != challenge.senderID)
-                {
-                    cell.currentParticipant = challenge.senderID
-                    cell.participants = challenge.completedBy!
-                    cell.profileCollectionView.reloadData()
-                }
-                
-                let index = cell.participants?.indexOf(cell.currentParticipant!)
-                let videoLikes = challenge.videoLikes![index!]
-                
-                cell.likesLabel.text = "\(videoLikes)"
-                cell.challengeNameLabel.text = challenge.name
-                
-                
-                FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
-                    
-                    let player = AVPlayer(URL: URL)
-                    let movie = AVPlayerViewController()
-                    movie.player = player
-                    movie.view.frame = cell.challengeVideoView.bounds
-                    
-                    cell.challengeVideoView.addSubview(movie.view)
-                    player.play()
-                })
-            }
-            
-            /*let gestureLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeLeft))
-             gestureLeft.direction = .Left
-             cell.challengeVideoView.addGestureRecognizer(gestureLeft)
-             let gestureRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipeRight))
-             gestureRight.delegate = self
-             gestureRight.direction = .Right
-             cell.challengeVideoView.addGestureRecognizer(gestureRight)*/
-            
+            populateCell(cell, challenges: homeChallenges!, indexPath: indexPath)
         }
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
-        
+    
+    func populateCell(cell: feedTableViewCell, challenges: [String], indexPath: NSIndexPath)
+    {
+        FBClient.retrieveChallengeFromID(challenges[indexPath.row]) { (challenge) in
+            cell.challenge = challenge
+            
+            if (cell.participants == nil || cell.participants![0] != challenge.senderID)
+            {
+                cell.currentParticipant = challenge.senderID
+                cell.participants = challenge.completedBy!
+                cell.profileCollectionView.reloadData()
+                cell.workoutCollectionView.reloadData()
+            }
+            
+            let index = cell.participants?.indexOf(cell.currentParticipant!)
+            let videoLikes = challenge.videoLikes![index!]
+            
+            cell.likesLabel.text = "\(videoLikes)"
+            cell.challengeNameLabel.text = challenge.name
+            
+            
+            FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
+                
+                if (indexPath.row%2 == 0)
+                {
+                    self.player = AVPlayer(URL: URL)
+                    self.movie.player = self.player
+                    self.movie.view.frame = cell.challengeVideoView.bounds
+                    
+                    
+                    cell.challengeVideoView.addSubview(self.movie.view)
+                    self.player.play()
+                }
+                
+                else
+                {
+                    self.player2 = AVPlayer(URL: URL)
+                    self.movie2.player = self.player2
+                    self.movie2.view.frame = cell.challengeVideoView.bounds
+                    
+                    
+                    cell.challengeVideoView.addSubview(self.movie2.view)
+                    self.player2.play()
+                }
+            })
+        }
     }
     
 

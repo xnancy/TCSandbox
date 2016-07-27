@@ -15,8 +15,9 @@ import MediaPlayer
 import MobileCoreServices
 import SwiftyGif
 
+var gifManager = SwiftyGifManager(memoryLimit: 1000)
+
 class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var gifManager = SwiftyGifManager(memoryLimit: 50)
     var challenge: Challenge?
     var didRespond: Bool?
     var pickedVideo: NSURL?
@@ -24,7 +25,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     var user: User?
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
-    @IBOutlet weak var gifImageView: UIImageView!
+    @IBOutlet weak var gifImageView: UIImageView! // = UIImageView(gifImage: UIImage(gifName: "hipairplane"), manager: gifManager)
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var challengeTitleLabel: UILabel!
     @IBOutlet weak var deadlineLabel: UILabel!
@@ -81,6 +82,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         self.detailsTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
         gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: 100)
+        gifImageView.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin, .FlexibleBottomMargin]
         self.navigationItem.title = challenge!.name
         navigationController!.navigationItem.backBarButtonItem?.title = ""
     }
@@ -146,7 +148,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             self.countdownImageView.hidden = false
             videoView.hidden = true
             
-            self.countdownImageView.setGifImage(UIImage(gifName: "giffy"), manager: self.gifManager, loopCount: 1)
+            self.countdownImageView.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
             view.transform = CGAffineTransformMakeScale(0.01, 0.01);
             
             UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
