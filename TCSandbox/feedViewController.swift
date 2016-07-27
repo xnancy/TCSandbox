@@ -92,7 +92,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("feedCell") as! feedTableViewCell
         
-        var hasContentView: Bool = cell.subviews.contains(cell.contentView)
+        let hasContentView: Bool = cell.subviews.contains(cell.contentView)
         if !hasContentView {
             cell.addSubview(cell.contentView)
         }

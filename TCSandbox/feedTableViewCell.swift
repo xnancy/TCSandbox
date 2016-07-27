@@ -44,7 +44,7 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     override func prepareForReuse() {
         super.prepareForReuse()
         // Clear contentView
-        var hasContentView: Bool = self.subviews.contains((self.contentView))
+        let hasContentView: Bool = self.subviews.contains((self.contentView))
         if hasContentView {
             self.contentView.removeFromSuperview()
         }
