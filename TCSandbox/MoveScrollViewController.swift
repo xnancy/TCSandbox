@@ -91,7 +91,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         
         scrollButton.layer.cornerRadius = 0.5 * scrollButton.bounds.size.width
    
-        
+        collectionView6.delegate = self
+        collectionView7.delegate = self
         // Do any additional setup after loading the view.
         
         collection1Selected = [

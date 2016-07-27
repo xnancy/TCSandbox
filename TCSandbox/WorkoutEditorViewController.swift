@@ -50,10 +50,14 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var deleteButton4: UIButton!
     @IBOutlet weak var countdowimageview: UIImageView!
     @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
+    @IBOutlet weak var referenceLabel: UILabel!
 
-    @IBOutlet weak var secondaryView: UIView!
+    @IBOutlet weak var titleNeededButton: UIButton!
     
     /* ---------- VARIABLES ---------- */
+    
+    
+    
     var gifManager = SwiftyGifManager(memoryLimit: 50)
     var gifManager2 = SwiftyGifManager(memoryLimit: 50)
     var gifsToShow: [String] = []
@@ -76,7 +80,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        recordButton.enabled = false
+        recordButton.enabled = true
         self.nameChallengeTextField.delegate = self
         countdownLabel.text = "1:00"
         daysWeekLabel.text = "day"
@@ -462,7 +466,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         let challengeName = nameChallengeTextField.text
         if challengeName != ""
         {
-            recordButton.enabled = true
+            titleNeededButton.hidden = true
         }
         
         challenge?.name = challengeName
@@ -509,6 +513,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     }
     
     
+
     
     @IBAction func didpressConfirm(sender: AnyObject) {
         //blurVisualEffectView.hidden = false
@@ -518,7 +523,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         let confirmationVC: ConfirmationPopOverViewController = (storyboard.instantiateViewControllerWithIdentifier("ConfirmationVC") as? ConfirmationPopOverViewController)!
         
         confirmationVC.modalPresentationStyle = .Popover
-        confirmationVC.preferredContentSize = CGSizeMake(400, 200)
+        confirmationVC.preferredContentSize = CGSizeMake(270, 50)
         confirmationVC.gifsNames = gifsToShow
         confirmationVC.tagNames = tagsToShow
         confirmationVC.gifCount = workoutCount
@@ -526,8 +531,8 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         print(tagsCount)
         print(workoutCount)
         let popOverVC = confirmationVC.popoverPresentationController
-        popOverVC?.sourceView = view
-        popOverVC?.permittedArrowDirections = .Any
+        popOverVC?.sourceView = referenceLabel
+        popOverVC?.permittedArrowDirections = .Up
         popOverVC?.delegate = self
        
         
@@ -541,13 +546,13 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     }
     
     func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
-        blurVisualEffectView.hidden = true
+        //blurVisualEffectView.hidden = true
         //confirmButton.hidden = false
         
     }
     
     @IBAction func didPressPopUp(sender: UIButton) {
-        blurVisualEffectView.hidden = false
+        //blurVisualEffectView.hidden = false
         showCustomDialog()
         
     }
@@ -561,16 +566,16 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         ratingVC.pop = 27
         print(ratingVC.pop)
         // Create the dialog
-        let popup = PopupDialog(viewController: ratingVC, transitionStyle: .BounceDown, buttonAlignment: .Horizontal, gestureDismissal: false)
+        let popup = PopupDialog(viewController: ratingVC, transitionStyle: .BounceDown, buttonAlignment: .Horizontal, gestureDismissal: true)
         
         
         // Create second button
         let buttonTwo = DefaultButton(title: "RECORD") {
             
             self.didPressRecord(DefaultButton)
-            self.blurVisualEffectView.hidden = true
+            //self.blurVisualEffectView.hidden = true
         }
-        
+    
         // Add buttons to dialog
         popup.addButtons([buttonTwo])
         

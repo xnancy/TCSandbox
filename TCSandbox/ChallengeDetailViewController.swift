@@ -39,6 +39,9 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var deadlineLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var detailsTableView: UITableView!
+    
+    @IBOutlet weak var countdownview: UIView!
+    
     @IBOutlet weak var countdownImageView: UIImageView!
     @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
     override func viewDidLoad() {
@@ -264,12 +267,10 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             else
         {
             
-            videoView.maskView?.hidden = true
+            
             self.navigationController?.navigationBarHidden = true
-            self.secondaryBackgroundImageView.hidden = false
-            //countdowimageview.hidden = false
-            self.countdownImageView.hidden = false
-            videoView.hidden = true
+            countdownview.hidden = false
+            videoView.removeFromSuperview()
             
             self.countdownImageView.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
             view.transform = CGAffineTransformMakeScale(0.01, 0.01);
@@ -304,7 +305,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             self.imagePicker.allowsEditing = false
             self.imagePicker.delegate = self
             self.imagePicker.videoMaximumDuration = Double((self.challenge?.timeLimit)!)
-            self.videoView.hidden = true
+            
             
             self.presentViewController(self.imagePicker, animated: true, completion: {})
                 }
@@ -315,8 +316,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         print("video recorded")
-        secondaryBackgroundImageView.hidden = true
-        countdownImageView.hidden = true
+        countdownview.hidden = true
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {
             self.pickedVideo = pickedVideo

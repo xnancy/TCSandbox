@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Foundation
+import PopupDialog
 
 class RatingViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
 
     //@IBOutlet weak var cosmosStarRating: CosmosView!
    
@@ -26,6 +29,9 @@ class RatingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+  
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

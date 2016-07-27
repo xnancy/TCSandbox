@@ -557,8 +557,8 @@
 				B864E70A1D3B183D000D3499 /* PreviewViewController.swift */,
 				B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */,
 				B893B5601D4810400009A3B1 /* RatingViewController.swift */,
-				B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */,
 				B893B56A1D4865E80009A3B1 /* ChallengeSentViewController.swift */,
+				B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */,
 				925D2D3E1D34492C00BAF3CC /* SendChallengeViewController.swift */,
 				82C6653A1D2DBF9000D642CA /* LoginViewController.swift */,
 				B850827F1D42A1CE007D22C9 /* SettingsViewController.swift */,
@@ -849,7 +849,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = D777QB9ALE;
+						DevelopmentTeam = 64UUKPWRF5;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1366,7 +1366,9 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TCSandbox4;
+
+				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1385,7 +1387,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TCSandbox4;
+				PRODUCT_BUNDLE_IDENTIFIER = D8M8Q37C6Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

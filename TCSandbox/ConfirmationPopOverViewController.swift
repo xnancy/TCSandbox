@@ -24,58 +24,58 @@ class ConfirmationPopOverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        middleLabel1.text = Gifs.gifDictionary[(gifsNames[0])]
-    
-
-        if gifCount > 1 {
-            
-            if gifCount == 2 {
-                middleLabel2.text = Gifs.gifDictionary[(gifsNames[1])]
-            }
-            
-            if gifCount == 3 {
-                middleLabel2.text = Gifs.gifDictionary[(gifsNames[1])]
-                topLabel.text = Gifs.gifDictionary[(gifsNames[2])]
-                
-            }
-            
-            if gifCount == 4 {
-                middleLabel2.text = Gifs.gifDictionary[(gifsNames[1])]
-                topLabel.text = Gifs.gifDictionary[(gifsNames[2])]
-                bottomLabel.text = Gifs.gifDictionary[(gifsNames[3])]
-                            }
-        }
-        
-        
-        if tagCount > 0 {
-            
-            if gifCount == 1 {
-                middleLabel2.text = Tags.tagDictionary[tagNames[0]]
-                
-                if tagCount == 2 {
-                    bottomLabel.text = Tags.tagDictionary[tagNames[1]]
-                }
-                    
-                else if tagCount == 3{
-                    topLabel.text = Tags.tagDictionary[tagNames[1]]
-                    bottomLabel.text = Tags.tagDictionary[tagNames[2]]
-                }
-                
-            }
-            else if gifCount == 2 {
-                bottomLabel.text = Tags.tagDictionary[tagNames[0]]
-                
-                if tagCount == 2{
-                    topLabel.text = Tags.tagDictionary[tagNames[1]]
-                }
-                
-            }
-            else if gifCount == 3 {
-                bottomLabel.text = Tags.tagDictionary[tagNames[0]]
-            }
-            
-        }
+//
+//        middleLabel1.text = Gifs.gifDictionary[(gifsNames[0])]
+//    
+//
+//        if gifCount > 1 {
+//            
+//            if gifCount == 2 {
+//                middleLabel2.text = Gifs.gifDictionary[(gifsNames[1])]
+//            }
+//            
+//            if gifCount == 3 {
+//                middleLabel2.text = Gifs.gifDictionary[(gifsNames[1])]
+//                topLabel.text = Gifs.gifDictionary[(gifsNames[2])]
+//                
+//            }
+//            
+//            if gifCount == 4 {
+//                middleLabel2.text = Gifs.gifDictionary[(gifsNames[1])]
+//                topLabel.text = Gifs.gifDictionary[(gifsNames[2])]
+//                bottomLabel.text = Gifs.gifDictionary[(gifsNames[3])]
+//                            }
+//        }
+//        
+//        
+//        if tagCount > 0 {
+//            
+//            if gifCount == 1 {
+//                middleLabel2.text = Tags.tagDictionary[tagNames[0]]
+//                
+//                if tagCount == 2 {
+//                    bottomLabel.text = Tags.tagDictionary[tagNames[1]]
+//                }
+//                    
+//                else if tagCount == 3{
+//                    topLabel.text = Tags.tagDictionary[tagNames[1]]
+//                    bottomLabel.text = Tags.tagDictionary[tagNames[2]]
+//                }
+//                
+//            }
+//            else if gifCount == 2 {
+//                bottomLabel.text = Tags.tagDictionary[tagNames[0]]
+//                
+//                if tagCount == 2{
+//                    topLabel.text = Tags.tagDictionary[tagNames[1]]
+//                }
+//                
+//            }
+//            else if gifCount == 3 {
+//                bottomLabel.text = Tags.tagDictionary[tagNames[0]]
+//            }
+//            
+//        }
     
    // Do any additional setup after loading the view.
     }
