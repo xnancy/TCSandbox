@@ -19,7 +19,6 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     @IBOutlet weak var currentName: UILabel!
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var challengeVideoView: UIView!
-    @IBOutlet weak var videoLabel: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     
     

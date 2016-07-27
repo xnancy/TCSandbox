@@ -110,7 +110,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 cell.likesLabel.text = "\(videoLikes)"
                 cell.challengeNameLabel.text = challenge.name
-                cell.videoLabel.text = "\((challenge.completedBy?.count)!)"
+
                 
                 FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
                     
@@ -151,7 +151,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 cell.likesLabel.text = "\(videoLikes)"
                 cell.challengeNameLabel.text = challenge.name
-                cell.videoLabel.text = "\((challenge.completedBy?.count)!)"
+                
                 
                 FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
                     
