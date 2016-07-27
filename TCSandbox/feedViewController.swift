@@ -92,6 +92,11 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("feedCell") as! feedTableViewCell
         
+        var hasContentView: Bool = cell.subviews.contains(cell.contentView)
+        if !hasContentView {
+            cell.addSubview(cell.contentView)
+        }
+        
         if toggled == false
         {
             FBClient.retrieveChallengeFromID(feedChallenges![indexPath.row]) { (challenge) in
@@ -172,11 +177,15 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
              gestureRight.delegate = self
              gestureRight.direction = .Right
              cell.challengeVideoView.addGestureRecognizer(gestureRight)*/
+            
         }
-
+        
         return cell
     }
     
+    func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
     
 
     

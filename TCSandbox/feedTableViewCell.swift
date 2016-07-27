@@ -41,6 +41,15 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        // Clear contentView
+        var hasContentView: Bool = self.subviews.contains((self.contentView))
+        if hasContentView {
+            self.contentView.removeFromSuperview()
+        }
+    }
+    
     @IBAction func didTapLike(sender: AnyObject) {
         let index = participants?.indexOf(currentParticipant!)!
         

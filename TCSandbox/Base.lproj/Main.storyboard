@@ -10,7 +10,7 @@
         <scene sceneID="jHG-eW-lLn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yt5-5U-fLM" userLabel="Item 0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="x1F-md-nW8"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feedTab" id="x1F-md-nW8"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ai-BT-8G9">
@@ -508,7 +508,7 @@
         <scene sceneID="lpw-Tk-o7I">
             <objects>
                 <navigationController storyboardIdentifier="MyChallengesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="dCg-a1-Qfa" userLabel="Item 1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nXU-kR-I1v"/>
+                    <tabBarItem key="tabBarItem" title="My Challenges" image="myChallenges" id="nXU-kR-I1v"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V47-yj-mN5">
@@ -1992,7 +1992,10 @@
         <image name="blue" width="2100" height="1500"/>
         <image name="emptygif" width="932" height="884"/>
         <image name="fade2" width="1024" height="1024"/>
+        <image name="fade3" width="600" height="1064"/>
+        <image name="feedTab" width="32" height="32"/>
         <image name="jose" width="247" height="228"/>
+        <image name="myChallenges" width="24" height="24"/>
         <image name="pink" width="2100" height="1500"/>
         <image name="titleLine" width="1050" height="334"/>
         <image name="yellow" width="2100" height="1500"/>
