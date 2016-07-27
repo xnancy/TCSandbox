@@ -27,6 +27,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var player2 = AVPlayer()
     let movie = AVPlayerViewController()
     let movie2 = AVPlayerViewController()
+    var feedCellContents: [cellContents?]?
+    var homeCellContents: [cellContents?]?
 
     
     
@@ -44,13 +46,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         feedTableView.insertSubview(refreshControl, atIndex: 0)
-
+        
         
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
         queryRequest()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -82,7 +84,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             noFeedTextView.hidden = true
             return (feedChallenges?.count)!
         }
-        
+            
         else
         {
             if (homeChallenges == nil || homeChallenges![0] == "placeholder")
@@ -105,45 +107,62 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.addSubview(cell.contentView)
         }
         
-        if toggled == false
+        if (toggled == false && indexPath.row%2 == 0 && feedCellContents![indexPath.row] != nil)
         {
-            populateCell(cell, challenges: feedChallenges!, indexPath: indexPath)
-        }
-        
-        else
-        {
-            populateCell(cell, challenges: homeChallenges!, indexPath: indexPath)
-        }
-        
-        return cell
-    }
-    
-    
-    func populateCell(cell: feedTableViewCell, challenges: [String], indexPath: NSIndexPath)
-    {
-        FBClient.retrieveChallengeFromID(challenges[indexPath.row]) { (challenge) in
-            cell.challenge = challenge
+            self.player = AVPlayer(URL: (feedCellContents![indexPath.row]?.url!)!)
+            self.movie.player = self.player
+            self.movie.view.frame = cell.challengeVideoView.bounds
             
-            if (cell.participants == nil || cell.participants![0] != challenge.senderID)
-            {
-                cell.currentParticipant = challenge.senderID
-                cell.participants = challenge.completedBy!
-                cell.profileCollectionView.reloadData()
-                cell.workoutCollectionView.reloadData()
-            }
             
-            let index = cell.participants?.indexOf(cell.currentParticipant!)
-            let videoLikes = challenge.videoLikes![index!]
+            cell.challengeVideoView.addSubview(self.movie.view)
+            self.player.play()
+            
+            let index = feedCellContents![indexPath.row]!.participants?.indexOf(feedCellContents![indexPath.row]!.currentParticipant!)
+            let videoLikes = feedCellContents![indexPath.row]!.challenge!.videoLikes![index!]
             
             cell.likesLabel.text = "\(videoLikes)"
-            cell.challengeNameLabel.text = challenge.name
+            cell.challengeNameLabel.text = feedCellContents![indexPath.row]!.challenge!.name
+            
+            cell.currentParticipant = feedCellContents![indexPath.row]!.challenge!.senderID
+            cell.participants = feedCellContents![indexPath.row]!.challenge!.completedBy!
+            
+            cell.profileCollectionView.reloadData()
+            cell.workoutCollectionView.reloadData()
+        }
+            
+        else if (toggled == false && feedCellContents![indexPath.row] != nil)
+        {
+            self.player2 = AVPlayer(URL: (feedCellContents![indexPath.row]?.url!)!)
+            self.movie2.player = self.player2
+            self.movie2.view.frame = cell.challengeVideoView.bounds
             
             
-            FBClient.downloadVideo(challenge.challengeID!, userID: (cell.currentParticipant)!, completion: {(URL: NSURL) in
+            cell.challengeVideoView.addSubview(self.movie2.view)
+            self.player2.play()
+            
+            let index = feedCellContents![indexPath.row]!.participants?.indexOf(feedCellContents![indexPath.row]!.currentParticipant!)
+            let videoLikes = feedCellContents![indexPath.row]!.challenge!.videoLikes![index!]
+            
+            cell.likesLabel.text = "\(videoLikes)"
+            cell.challengeNameLabel.text = feedCellContents![indexPath.row]!.challenge!.name
+            
+            cell.currentParticipant = feedCellContents![indexPath.row]!.challenge!.senderID
+            cell.participants = feedCellContents![indexPath.row]!.challenge!.completedBy!
+            
+            cell.profileCollectionView.reloadData()
+            cell.workoutCollectionView.reloadData()
+        }
+            
+        else if (toggled == false)
+        {
+            populateCell(feedChallenges!, indexPathRow: indexPath.row, completion: { (contents) in
+                self.feedCellContents![indexPath.row] = contents
+                cell.profileCollectionView.reloadData()
+                cell.workoutCollectionView.reloadData()
                 
                 if (indexPath.row%2 == 0)
                 {
-                    self.player = AVPlayer(URL: URL)
+                    self.player = AVPlayer(URL: (self.feedCellContents![indexPath.row]?.url!)!)
                     self.movie.player = self.player
                     self.movie.view.frame = cell.challengeVideoView.bounds
                     
@@ -154,7 +173,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 else
                 {
-                    self.player2 = AVPlayer(URL: URL)
+                    self.player2 = AVPlayer(URL: (self.feedCellContents![indexPath.row]?.url!)!)
                     self.movie2.player = self.player2
                     self.movie2.view.frame = cell.challengeVideoView.bounds
                     
@@ -162,6 +181,145 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     cell.challengeVideoView.addSubview(self.movie2.view)
                     self.player2.play()
                 }
+                
+                let index = contents.participants?.indexOf(contents.currentParticipant!)
+                let videoLikes = contents.challenge!.videoLikes![index!]
+                
+                cell.likesLabel.text = "\(videoLikes)"
+                cell.challengeNameLabel.text = contents.challenge!.name
+                
+                cell.currentParticipant = contents.challenge!.senderID
+                cell.participants = contents.challenge!.completedBy!
+                
+                cell.profileCollectionView.reloadData()
+                cell.workoutCollectionView.reloadData()
+            })
+        }
+            
+            
+        else if (indexPath.row%2 == 0 && homeCellContents![indexPath.row] != nil)
+        {
+            self.player = AVPlayer(URL: (homeCellContents![indexPath.row]?.url!)!)
+            self.movie.player = self.player
+            self.movie.view.frame = cell.challengeVideoView.bounds
+            
+            
+            cell.challengeVideoView.addSubview(self.movie.view)
+            self.player.play()
+            
+            let index = homeCellContents![indexPath.row]!.participants?.indexOf(homeCellContents![indexPath.row]!.currentParticipant!)
+            let videoLikes = homeCellContents![indexPath.row]!.challenge!.videoLikes![index!]
+            
+            cell.likesLabel.text = "\(videoLikes)"
+            cell.challengeNameLabel.text = homeCellContents![indexPath.row]!.challenge!.name
+            
+            cell.currentParticipant = homeCellContents![indexPath.row]!.challenge!.senderID
+            cell.participants = homeCellContents![indexPath.row]!.challenge!.completedBy!
+            
+            cell.profileCollectionView.reloadData()
+            cell.workoutCollectionView.reloadData()
+        }
+            
+        else if (homeCellContents![indexPath.row] != nil)
+        {
+            self.player2 = AVPlayer(URL: (homeCellContents![indexPath.row]?.url!)!)
+            self.movie2.player = self.player2
+            self.movie2.view.frame = cell.challengeVideoView.bounds
+            
+            
+            cell.challengeVideoView.addSubview(self.movie2.view)
+            self.player2.play()
+            
+            let index = homeCellContents![indexPath.row]!.participants?.indexOf(homeCellContents![indexPath.row]!.currentParticipant!)
+            let videoLikes = homeCellContents![indexPath.row]!.challenge!.videoLikes![index!]
+            
+            cell.likesLabel.text = "\(videoLikes)"
+            cell.challengeNameLabel.text = homeCellContents![indexPath.row]!.challenge!.name
+            
+            cell.currentParticipant = homeCellContents![indexPath.row]!.challenge!.senderID
+            cell.participants = homeCellContents![indexPath.row]!.challenge!.completedBy!
+            
+            cell.profileCollectionView.reloadData()
+            cell.workoutCollectionView.reloadData()
+        }
+            
+        else
+        {
+            populateCell(homeChallenges!, indexPathRow: indexPath.row, completion: { (contents) in
+                self.homeCellContents![indexPath.row] = contents
+                
+                if (indexPath.row%2 == 0)
+                {
+                    self.player = AVPlayer(URL: (self.homeCellContents![indexPath.row]?.url!)!)
+                    self.movie.player = self.player
+                    self.movie.view.frame = cell.challengeVideoView.bounds
+                    
+                    
+                    cell.challengeVideoView.addSubview(self.movie.view)
+                    self.player.play()
+                }
+                    
+                else
+                {
+                    self.player2 = AVPlayer(URL: (self.homeCellContents![indexPath.row]?.url!)!)
+                    self.movie2.player = self.player2
+                    self.movie2.view.frame = cell.challengeVideoView.bounds
+                    
+                    
+                    cell.challengeVideoView.addSubview(self.movie2.view)
+                    self.player2.play()
+                }
+                
+                let index = contents.participants?.indexOf(contents.currentParticipant!)
+                let videoLikes = contents.challenge!.videoLikes![index!]
+                
+                cell.likesLabel.text = "\(videoLikes)"
+                cell.challengeNameLabel.text = contents.challenge!.name
+                
+                cell.currentParticipant = contents.challenge!.senderID
+                cell.participants = contents.challenge!.completedBy!
+                
+                cell.profileCollectionView.reloadData()
+                cell.workoutCollectionView.reloadData()
+            })
+        }
+        
+        
+        
+        if toggled == false && indexPath.row + 1 < feedChallenges?.count
+        {
+            populateCell(feedChallenges!, indexPathRow: indexPath.row+1, completion: { (contents) in
+                self.feedCellContents![indexPath.row + 1] = contents
+            })
+        }
+            
+        else if indexPath.row + 1 < homeChallenges?.count
+        {
+            populateCell(homeChallenges!, indexPathRow: indexPath.row+1, completion: { (contents) in
+                self.homeCellContents![indexPath.row + 1] = contents
+            })
+        }
+
+        return cell
+    }
+
+    
+    func populateCell(challenges: [String], indexPathRow: Int, completion: (cellContents) -> Void)
+    {
+        let cellContentsToAdd: cellContents = cellContents()
+        
+        FBClient.retrieveChallengeFromID(challenges[indexPathRow]) { (challenge) in
+            
+            cellContentsToAdd.challenge = challenge
+            
+            cellContentsToAdd.currentParticipant = challenge.senderID
+            cellContentsToAdd.participants = challenge.completedBy!
+            
+            FBClient.downloadVideo(challenge.challengeID!, userID: (cellContentsToAdd.currentParticipant)!, completion: {(URL: NSURL) in
+                
+                cellContentsToAdd.url = URL
+                
+                completion(cellContentsToAdd)
             })
         }
     }
@@ -184,6 +342,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.feedChallenges = challenges
             self.feedDictionary = dictionary
             self.homeChallenges = homeChallenges
+            self.feedCellContents = [cellContents?](count: (self.feedChallenges!.count), repeatedValue: nil)
+            self.homeCellContents = [cellContents?](count: (self.homeChallenges!.count), repeatedValue: nil)
             
             //NOW DO THE SORTING
             
@@ -267,7 +427,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             toggled = true
             
             feedTableView.reloadData()
-            
         }
         
         else
