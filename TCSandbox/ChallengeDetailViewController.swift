@@ -324,7 +324,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         print("video recorded")
-        countdownview.hidden = true
+        //countdownview.hidden = true
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {
             self.pickedVideo = pickedVideo
