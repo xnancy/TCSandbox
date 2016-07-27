@@ -21,7 +21,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //FBClient.logout()
+        FBClient.logout()
         FBClient.initializeDateFormatter()
         FBClient.logout()
             FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
@@ -50,7 +50,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     
     // MARK: - FACEBOOK LOGIN
@@ -63,7 +62,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         {
             FBClient.login()
         }
-        
             else if result.isCancelled
         {
             //code to handle the cancelled case
@@ -78,7 +76,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             aivLoadingSpinner.stopAnimating()
         }
     }
-    
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         FBClient.logout()

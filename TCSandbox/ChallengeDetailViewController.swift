@@ -16,13 +16,21 @@ import MobileCoreServices
 import SwiftyGif
 
 var gifManager = SwiftyGifManager(memoryLimit: 1000)
+private var playbackLikelyToKeepUpContext = 0
 
 class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var challenge: Challenge?
     var didRespond: Bool?
     var pickedVideo: NSURL?
-
+    let invisibleVideoButton = UIButton()
+    let avPlayer = AVPlayer()
+    var avPlayerLayer: AVPlayerLayer!
+    var timeObserver: AnyObject!
+    let seekSlider = UISlider()
+    var playerRateBeforeSeek: Float = 0
+    let timeRemainingLabel = UILabel()
     var user: User?
+    let loadingIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
     @IBOutlet weak var gifImageView: UIImageView! // = UIImageView(gifImage: UIImage(gifName: "hipairplane"), manager: gifManager)
@@ -35,6 +43,12 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /* AV PLAYER */
+        videoView.backgroundColor = UIColor.blackColor()
+        avPlayerLayer = AVPlayerLayer(player: avPlayer)
+        videoView.layer.insertSublayer(avPlayerLayer, atIndex: 0)
+        
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
@@ -60,14 +74,16 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             
             FBClient.downloadVideo((self.challenge?.challengeID)!, userID: (self.challenge?.senderID)!, completion: {(URL: NSURL) in
                 
-                let player = AVPlayer(URL: URL)
-                let movie = AVPlayerViewController()
-                movie.player = player
-                movie.view.frame = self.videoView.bounds
+                let playerItem = AVPlayerItem(URL: URL)
+                self.avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
+                self.avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
                 
-                self.view.addSubview(movie.view)
-
-                player.play()
+                let timeInterval: CMTime = CMTimeMakeWithSeconds(0.01, 100)
+                self.timeObserver = self.avPlayer.addPeriodicTimeObserverForInterval(timeInterval,
+                queue: dispatch_get_main_queue()) { (elapsedTime: CMTime) -> Void in
+                    // print("elapsedTime now:", CMTimeGetSeconds(elapsedTime))
+                    self.observeTime(elapsedTime)
+                }
             })
         }
 
@@ -88,8 +104,112 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: 100)
         gifImageView.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin, .FlexibleBottomMargin]
         self.navigationItem.title = challenge!.name
+        
+        videoView.addSubview(invisibleVideoButton)
+        invisibleVideoButton.addTarget(self, action: #selector(invisibleVideoButtonTapped),
+                                  forControlEvents: .TouchUpInside)
+        timeRemainingLabel.textColor = .whiteColor()
+        videoView.addSubview(timeRemainingLabel)
+        videoView.addSubview(seekSlider)
+        seekSlider.addTarget(self, action: #selector(sliderBeganTracking),
+                             forControlEvents: .TouchDown)
+        seekSlider.addTarget(self, action: #selector(sliderEndedTracking),
+                             forControlEvents: [.TouchUpInside, .TouchUpOutside])
+        seekSlider.addTarget(self, action: #selector(sliderValueChanged),
+                             forControlEvents: .ValueChanged)
+        loadingIndicatorView.hidesWhenStopped = true
+        view.addSubview(loadingIndicatorView)
+        avPlayer.addObserver(self, forKeyPath: "currentItem.playbackLikelyToKeepUp",
+                             options: .New, context: &playbackLikelyToKeepUpContext)
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        avPlayer.play() // Start the playback
+        loadingIndicatorView.startAnimating()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        // Layout subviews manually
+        avPlayerLayer.frame = videoView.bounds
+        invisibleVideoButton.frame = videoView.bounds
+        let controlsHeight: CGFloat = 50
+        let controlsY: CGFloat = videoView.bounds.size.height - controlsHeight
+        timeRemainingLabel.frame = CGRect(x: 5, y: controlsY, width: 60, height: controlsHeight)
+        seekSlider.frame = CGRect(x: timeRemainingLabel.frame.origin.x + timeRemainingLabel.bounds.size.width,
+                                  y: controlsY, width: view.bounds.size.width - timeRemainingLabel.bounds.size.width - 25, height: controlsHeight)
+        loadingIndicatorView.center = CGPoint(x: CGRectGetMidX(videoView.bounds), y: CGRectGetMidY(videoView.bounds))
+    }
+    
+    deinit {
+        avPlayer.removeTimeObserver(timeObserver)
+        avPlayer.removeObserver(self, forKeyPath: "currentItem.playbackLikelyToKeepUp")
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?,
+                                         change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        
+        if context == &playbackLikelyToKeepUpContext {
+            if avPlayer.currentItem!.playbackLikelyToKeepUp {
+                loadingIndicatorView.stopAnimating()
+            } else {
+                loadingIndicatorView.startAnimating()
+            }
+        }
+    }
+    
+    private func updateTimeLabel(elapsedTime elapsedTime: Float64, duration: Float64) {
+        let timeRemaining: Float64 = CMTimeGetSeconds(avPlayer.currentItem!.duration) - elapsedTime
+        timeRemainingLabel.text = String(format: "%02d:%02d", ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
+    }
+    
+    func sliderBeganTracking(slider: UISlider) {
+        playerRateBeforeSeek = avPlayer.rate
+        avPlayer.pause()
+    }
+    
+    func sliderEndedTracking(slider: UISlider) {
+        let videoDuration = CMTimeGetSeconds(avPlayer.currentItem!.duration)
+        let elapsedTime: Float64 = videoDuration * Float64(seekSlider.value)
+        updateTimeLabel(elapsedTime: elapsedTime, duration: videoDuration)
+        
+        avPlayer.seekToTime(CMTimeMakeWithSeconds(elapsedTime, 100)) { (completed: Bool) -> Void in
+            if self.playerRateBeforeSeek > 0 {
+                self.avPlayer.play()
+            }
+        }
+    }
+    
+    func sliderValueChanged(slider: UISlider) {
+        let videoDuration = CMTimeGetSeconds(avPlayer.currentItem!.duration)
+        let elapsedTime: Float64 = videoDuration * Float64(seekSlider.value)
+        updateTimeLabel(elapsedTime: elapsedTime, duration: videoDuration)
+    }
+    
+    private func observeTime(elapsedTime: CMTime) {
+        let duration = CMTimeGetSeconds(avPlayer.currentItem!.duration)
+        if isfinite(duration) {
+            let elapsedTime = CMTimeGetSeconds(elapsedTime)
+            updateTimeLabel(elapsedTime: elapsedTime, duration: duration)
+            updateSeekerSlider(elapsedTime, duration: duration)
+        }
+    }
+    
+    func updateSeekerSlider(elapsedTime: Float64, duration: Float64) {
+        seekSlider.value = Float(elapsedTime / duration)
+    }
+    
+    func invisibleVideoButtonTapped(sender: UIButton) {
+        let playerIsPlaying = avPlayer.rate > 0
+        if playerIsPlaying {
+            avPlayer.pause()
+        } else {
+            avPlayer.play()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -178,8 +298,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                         
                         
                     })
-                    
-            
             
             self.imagePicker.sourceType = .Camera
             self.imagePicker.mediaTypes = [kUTTypeMovie as String]

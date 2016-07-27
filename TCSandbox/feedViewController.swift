@@ -17,6 +17,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var feedTableView: UITableView!
     
+    @IBOutlet weak var noFeedTextView: UITextView!
+    
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
     var homeChallenges: [String]?
@@ -30,7 +32,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        feedTableView.hidden = false
+        noFeedTextView.hidden = true
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
@@ -52,7 +55,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(animated: Bool) {
-        //popupImage()
+        feedTableView.hidden = false
+        noFeedTextView.hidden = true
+        queryRequest()
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,31 +72,27 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if toggled == false
         {
-            if feedChallenges == nil
+            if (feedChallenges == nil || feedChallenges![0] == "placeholder")
             {
+                feedTableView.hidden = true
+                noFeedTextView.hidden = false
                 return 0
             }
-            
-            if feedChallenges![0] == "placeholder"
-            {
-                return 0
-            }
-            
+            feedTableView.hidden = false
+            noFeedTextView.hidden = true
             return (feedChallenges?.count)!
         }
         
         else
         {
-            if homeChallenges == nil
+            if (homeChallenges == nil || homeChallenges![0] == "placeholder")
             {
+                feedTableView.hidden = true
+                noFeedTextView.hidden = false
                 return 0
             }
-            
-            if homeChallenges![0] == "placeholder"
-            {
-                return 0
-            }
-            
+            feedTableView.hidden = false
+            noFeedTextView.hidden = true
             return (homeChallenges?.count)!
         }
     }

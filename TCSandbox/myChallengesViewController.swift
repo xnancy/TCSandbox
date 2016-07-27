@@ -23,7 +23,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
         tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
