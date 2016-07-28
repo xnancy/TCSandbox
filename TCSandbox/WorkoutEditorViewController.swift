@@ -8,6 +8,8 @@ import SwiftyGif
 import FBSDKCoreKit
 import FBSDKLoginKit
 import PopupDialog
+import CircleMenu
+import KDIntroView
 
 protocol WorkoutEditorDelegate{
     func didPressRecord(sender: AnyObject)

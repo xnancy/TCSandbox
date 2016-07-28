@@ -175,7 +175,7 @@ class Gifs
         "spinBball", "swing2", "tackle", "takeapicture", "takeselfie",
         "throw1", "walkcool", "dribble", "bellydance", "discodance",
         "moonwalker", "jakedance", "dancebattle", "carltondance", "runningman",
-        "twerk", "rap", "poledance", "whip", "hotlineblingdance"
+        "twerk", "rap", "poledance", "whip", "hotlineblingdance", "makeItRain"
     ]
     
     static let sortedRow2 = row2.sort(<)

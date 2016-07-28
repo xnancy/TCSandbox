@@ -15,6 +15,7 @@ import MediaPlayer
 import MobileCoreServices
 import SwiftyGif
 import PopupDialog
+import SwiftGifOrigin
 
 var gifManager = SwiftyGifManager(memoryLimit: 1000)
 private var playbackLikelyToKeepUpContext = 0
