@@ -97,7 +97,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         }
         
         self.detailsTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
-        gifImageView.image = UIImage.gifWithName((challenge?.gifNames![0])!)
+        //gifImageView.image = UIImage.gifWithName((challenge?.gifNames![0])!)
         
         gifImageView.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin, .FlexibleBottomMargin]
         self.navigationItem.title = challenge!.name
@@ -165,8 +165,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             
             else
         {
-            
-            
             self.navigationController?.navigationBarHidden = true
             self.countdownImageView.hidden = false
             self.secondaryBackgroundImageView.hidden = false
@@ -180,11 +178,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                 self.view.transform = CGAffineTransformIdentity;
             }) { (finished) -> Void in
                 
-                //UIDevice.currentDevice().orientation
-                //shouldAutorotate()
-                //supportedInterfaceOrientations()
-                
-                
                 let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 6 * Int64(NSEC_PER_SEC))
                 dispatch_after(time, dispatch_get_main_queue()) {
                     //put your code which should be executed with a delay here
@@ -192,7 +185,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                     
                     let popTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * Int64(NSEC_PER_SEC))
                     dispatch_after(popTime, dispatch_get_main_queue(), {() -> Void in
-                        
                         self.imagePicker.startVideoCapture()
                         self.countdownImageView.hidden = true
                         self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
@@ -201,8 +193,9 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                     })
             
             self.imagePicker.sourceType = .Camera
+            self.imagePicker.showsCameraControls = true
             self.imagePicker.mediaTypes = [kUTTypeMovie as String]
-            self.imagePicker.allowsEditing = false
+            self.imagePicker.allowsEditing = true
             self.imagePicker.delegate = self
             self.imagePicker.videoMaximumDuration = Double((self.challenge?.timeLimit)!)
             
