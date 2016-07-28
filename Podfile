@@ -9,6 +9,9 @@ target 'TCSandbox' do
 pod 'SnappingStepper', '~> 2.3.0'
 pod "DGRunkeeperSwitch", "~> 1.1"
 pod 'SwiftyGif'
+pod 'SwiftGifOrigin', '~> 1.5'
+pod 'KDIntroView'
+pod 'CircleMenu', '~> 1.0'
 pod 'Firebase/Core'
 pod 'Firebase/Database' 
 pod 'Firebase/Auth'
