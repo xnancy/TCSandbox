@@ -23,13 +23,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
     var homeChallenges: [String]?
-    var toggled: DarwinBoolean?
+    static var toggled: DarwinBoolean?
     var player = AVPlayer()
     var player2 = AVPlayer()
     let movie = AVPlayerViewController()
     let movie2 = AVPlayerViewController()
-    var feedCellContents: [cellContents?]?
-    var homeCellContents: [cellContents?]?
+    static var feedCellContents: [cellContents?]?
+    static var homeCellContents: [cellContents?]?
 
     
     
@@ -40,7 +40,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
-        toggled = false
+        feedViewController.toggled = false
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
@@ -74,7 +74,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if toggled == false
+        if feedViewController.toggled == false
         {
             if (feedChallenges == nil || feedChallenges![0] == "placeholder")
             {
@@ -109,9 +109,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.addSubview(cell.contentView)
         }
         
-        if (toggled == false && indexPath.row%2 == 0 && feedCellContents![indexPath.row] != nil)
+        if (feedViewController.toggled == false && indexPath.row%2 == 0 && feedViewController.feedCellContents![indexPath.row] != nil)
         {
-            self.player = AVPlayer(URL: (feedCellContents![indexPath.row]?.url!)!)
+            self.player = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
             self.movie.player = self.player
             self.movie.view.frame = cell.challengeVideoView.bounds
             
@@ -119,22 +119,12 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.challengeVideoView.addSubview(self.movie.view)
             self.player.play()
             
-            let index = feedCellContents![indexPath.row]!.participants?.indexOf(feedCellContents![indexPath.row]!.currentParticipant!)
-            let videoLikes = feedCellContents![indexPath.row]!.challenge!.videoLikes![index!]
-            
-            cell.likesLabel.text = "\(videoLikes)"
-            cell.challengeNameLabel.text = feedCellContents![indexPath.row]!.challenge!.name
-            
-            cell.currentParticipant = feedCellContents![indexPath.row]!.challenge!.senderID
-            cell.participants = feedCellContents![indexPath.row]!.challenge!.completedBy!
-            
-            cell.profileCollectionView.reloadData()
-            cell.workoutCollectionView.reloadData()
+            self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
-        else if (toggled == false && feedCellContents![indexPath.row] != nil)
+        else if (feedViewController.toggled == false && feedViewController.feedCellContents![indexPath.row] != nil)
         {
-            self.player2 = AVPlayer(URL: (feedCellContents![indexPath.row]?.url!)!)
+            self.player2 = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
             self.movie2.player = self.player2
             self.movie2.view.frame = cell.challengeVideoView.bounds
             
@@ -142,29 +132,19 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.challengeVideoView.addSubview(self.movie2.view)
             self.player2.play()
             
-            let index = feedCellContents![indexPath.row]!.participants?.indexOf(feedCellContents![indexPath.row]!.currentParticipant!)
-            let videoLikes = feedCellContents![indexPath.row]!.challenge!.videoLikes![index!]
-            
-            cell.likesLabel.text = "\(videoLikes)"
-            cell.challengeNameLabel.text = feedCellContents![indexPath.row]!.challenge!.name
-            
-            cell.currentParticipant = feedCellContents![indexPath.row]!.challenge!.senderID
-            cell.participants = feedCellContents![indexPath.row]!.challenge!.completedBy!
-            
-            cell.profileCollectionView.reloadData()
-            cell.workoutCollectionView.reloadData()
+            self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
-        else if (toggled == false)
+        else if (feedViewController.toggled == false)
         {
             populateCell(feedChallenges!, indexPathRow: indexPath.row, completion: { (contents) in
-                self.feedCellContents![indexPath.row] = contents
+                feedViewController.feedCellContents![indexPath.row] = contents
                 cell.profileCollectionView.reloadData()
                 cell.workoutCollectionView.reloadData()
                 
                 if (indexPath.row%2 == 0)
                 {
-                    self.player = AVPlayer(URL: (self.feedCellContents![indexPath.row]?.url!)!)
+                    self.player = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
                     self.movie.player = self.player
                     self.movie.view.frame = cell.challengeVideoView.bounds
                     
@@ -175,7 +155,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 else
                 {
-                    self.player2 = AVPlayer(URL: (self.feedCellContents![indexPath.row]?.url!)!)
+                    self.player2 = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
                     self.movie2.player = self.player2
                     self.movie2.view.frame = cell.challengeVideoView.bounds
                     
@@ -184,24 +164,14 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.player2.play()
                 }
                 
-                let index = contents.participants?.indexOf(contents.currentParticipant!)
-                let videoLikes = contents.challenge!.videoLikes![index!]
-                
-                cell.likesLabel.text = "\(videoLikes)"
-                cell.challengeNameLabel.text = contents.challenge!.name
-                
-                cell.currentParticipant = contents.challenge!.senderID
-                cell.participants = contents.challenge!.completedBy!
-                
-                cell.profileCollectionView.reloadData()
-                cell.workoutCollectionView.reloadData()
+                self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
             })
         }
             
             
-        else if (indexPath.row%2 == 0 && homeCellContents![indexPath.row] != nil)
+        else if (indexPath.row%2 == 0 && feedViewController.homeCellContents![indexPath.row] != nil)
         {
-            self.player = AVPlayer(URL: (homeCellContents![indexPath.row]?.url!)!)
+            self.player = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
             self.movie.player = self.player
             self.movie.view.frame = cell.challengeVideoView.bounds
             
@@ -209,22 +179,12 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.challengeVideoView.addSubview(self.movie.view)
             self.player.play()
             
-            let index = homeCellContents![indexPath.row]!.participants?.indexOf(homeCellContents![indexPath.row]!.currentParticipant!)
-            let videoLikes = homeCellContents![indexPath.row]!.challenge!.videoLikes![index!]
-            
-            cell.likesLabel.text = "\(videoLikes)"
-            cell.challengeNameLabel.text = homeCellContents![indexPath.row]!.challenge!.name
-            
-            cell.currentParticipant = homeCellContents![indexPath.row]!.challenge!.senderID
-            cell.participants = homeCellContents![indexPath.row]!.challenge!.completedBy!
-            
-            cell.profileCollectionView.reloadData()
-            cell.workoutCollectionView.reloadData()
+            self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
-        else if (homeCellContents![indexPath.row] != nil)
+        else if (feedViewController.homeCellContents![indexPath.row] != nil)
         {
-            self.player2 = AVPlayer(URL: (homeCellContents![indexPath.row]?.url!)!)
+            self.player2 = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
             self.movie2.player = self.player2
             self.movie2.view.frame = cell.challengeVideoView.bounds
             
@@ -232,27 +192,17 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.challengeVideoView.addSubview(self.movie2.view)
             self.player2.play()
             
-            let index = homeCellContents![indexPath.row]!.participants?.indexOf(homeCellContents![indexPath.row]!.currentParticipant!)
-            let videoLikes = homeCellContents![indexPath.row]!.challenge!.videoLikes![index!]
-            
-            cell.likesLabel.text = "\(videoLikes)"
-            cell.challengeNameLabel.text = homeCellContents![indexPath.row]!.challenge!.name
-            
-            cell.currentParticipant = homeCellContents![indexPath.row]!.challenge!.senderID
-            cell.participants = homeCellContents![indexPath.row]!.challenge!.completedBy!
-            
-            cell.profileCollectionView.reloadData()
-            cell.workoutCollectionView.reloadData()
+            self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
         else
         {
             populateCell(homeChallenges!, indexPathRow: indexPath.row, completion: { (contents) in
-                self.homeCellContents![indexPath.row] = contents
+                feedViewController.homeCellContents![indexPath.row] = contents
                 
                 if (indexPath.row%2 == 0)
                 {
-                    self.player = AVPlayer(URL: (self.homeCellContents![indexPath.row]?.url!)!)
+                    self.player = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
                     self.movie.player = self.player
                     self.movie.view.frame = cell.challengeVideoView.bounds
                     
@@ -263,7 +213,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                 else
                 {
-                    self.player2 = AVPlayer(URL: (self.homeCellContents![indexPath.row]?.url!)!)
+                    self.player2 = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
                     self.movie2.player = self.player2
                     self.movie2.view.frame = cell.challengeVideoView.bounds
                     
@@ -272,33 +222,23 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.player2.play()
                 }
                 
-                let index = contents.participants?.indexOf(contents.currentParticipant!)
-                let videoLikes = contents.challenge!.videoLikes![index!]
-                
-                cell.likesLabel.text = "\(videoLikes)"
-                cell.challengeNameLabel.text = contents.challenge!.name
-                
-                cell.currentParticipant = contents.challenge!.senderID
-                cell.participants = contents.challenge!.completedBy!
-                
-                cell.profileCollectionView.reloadData()
-                cell.workoutCollectionView.reloadData()
+                self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
             })
         }
         
         
         
-        if toggled == false && indexPath.row + 1 < feedChallenges?.count
+        if feedViewController.toggled == false && indexPath.row + 1 < feedChallenges?.count
         {
             populateCell(feedChallenges!, indexPathRow: indexPath.row+1, completion: { (contents) in
-                self.feedCellContents![indexPath.row + 1] = contents
+                feedViewController.feedCellContents![indexPath.row + 1] = contents
             })
         }
             
         else if indexPath.row + 1 < homeChallenges?.count
         {
             populateCell(homeChallenges!, indexPathRow: indexPath.row+1, completion: { (contents) in
-                self.homeCellContents![indexPath.row + 1] = contents
+                feedViewController.homeCellContents![indexPath.row + 1] = contents
             })
         }
 
@@ -326,13 +266,24 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func setCellProperties(cell: feedTableViewCell, contents: cellContents, indexPathRow: Int)
+    {
+        let index = contents.participants?.indexOf(contents.currentParticipant!)
+        let videoLikes = contents.challenge!.videoLikes![index!]
+        
+        cell.likesLabel.text = "\(videoLikes)"
+        cell.challengeNameLabel.text = contents.challenge!.name
+        
+        cell.currentParticipant = contents.challenge!.senderID
+        cell.participants = contents.challenge!.completedBy!
+        
+        cell.profileCollectionView.reloadData()
+        cell.workoutCollectionView.reloadData()
+    }
+    
 
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
-        
-        // ... Create the NSURLRequest (myRequest) ...
-        
-        // Configure session so that completion handler is executed on main UI thread
         
         queryRequest()
         refreshControl.endRefreshing()
@@ -344,8 +295,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.feedChallenges = challenges
             self.feedDictionary = dictionary
             self.homeChallenges = homeChallenges
-            self.feedCellContents = [cellContents?](count: (self.feedChallenges!.count), repeatedValue: nil)
-            self.homeCellContents = [cellContents?](count: (self.homeChallenges!.count), repeatedValue: nil)
+            feedViewController.feedCellContents = [cellContents?](count: (self.feedChallenges!.count), repeatedValue: nil)
+            feedViewController.homeCellContents = [cellContents?](count: (self.homeChallenges!.count), repeatedValue: nil)
             
             //NOW DO THE SORTING
             
@@ -375,56 +326,10 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
-    func handleSwipeLeft(gestureRecognizer: UISwipeGestureRecognizer) {
-        let point: CGPoint = gestureRecognizer.locationInView(self.feedTableView)
-        let indexPath: NSIndexPath = self.feedTableView.indexPathForRowAtPoint(point)!
-        // Action...
-        // Action...
-        let cell = feedTableView.cellForRowAtIndexPath(indexPath) as! feedTableViewCell
-        
-        let currentIndex = cell.participants?.indexOf(cell.currentParticipant!)
-        
-        if currentIndex == 0
-        {
-            cell.currentParticipant = cell.participants![(cell.participants?.count)!-1]
-        }
-        
-        else
-        {
-            cell.currentParticipant = cell.participants![currentIndex!-1]
-        }
-        
-        feedTableView.reloadData()
-    }
-    
-    
-    func handleSwipeRight(gestureRecognizer: UISwipeGestureRecognizer) {
-        let point: CGPoint = gestureRecognizer.locationInView(self.feedTableView)
-        let indexPath: NSIndexPath = self.feedTableView.indexPathForRowAtPoint(point)!
-        // Action...
-        // Action...
-        let cell = feedTableView.cellForRowAtIndexPath(indexPath) as! feedTableViewCell
-        
-        let currentIndex = cell.participants?.indexOf(cell.currentParticipant!)
-        
-        if currentIndex! == (cell.participants?.count)!-1
-        {
-            cell.currentParticipant = cell.participants![0]
-        }
-        
-        else
-        {
-            cell.currentParticipant = cell.participants![currentIndex!+1]
-        }
-        
-        feedTableView.reloadData()
-    }
-    
     func toggle() {
-        if toggled == false
+        if feedViewController.toggled == false
         {
-            toggled = true
+            feedViewController.toggled = true
             let image = UIImage(named: "group")
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
             feedTableView.reloadData()
@@ -433,7 +338,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         else
         {
-            toggled = false
+            feedViewController.toggled = false
             let image = UIImage(named: "globe")
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
             feedTableView.reloadData()
@@ -442,9 +347,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func didTouchToggle(sender: AnyObject) {
         
-        if toggled == false
+        if feedViewController.toggled == false
         {
-            toggled = true
+            feedViewController.toggled = true
             let image = UIImage(named: "group")
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
             feedTableView.reloadData()
@@ -452,10 +357,33 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         else
         {
-            toggled = false
+            feedViewController.toggled = false
             let image = UIImage(named: "globe")
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(toggle))
             feedTableView.reloadData()
+        }
+    }
+    
+    class func setCellContentsURL(index: Int, participant: String, completion: (Void) -> Void)
+    {
+        if (feedViewController.toggled == false)
+        {
+            feedViewController.feedCellContents![index]?.currentParticipant = participant
+            
+            FBClient.downloadVideo((feedViewController.feedCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (URL) in
+                feedViewController.feedCellContents![index]!.url = URL
+                completion()
+            })
+        }
+        
+        else
+        {
+            feedViewController.homeCellContents![index]?.currentParticipant = participant
+            
+            FBClient.downloadVideo((feedViewController.homeCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (URL) in
+                feedViewController.homeCellContents![index]!.url = URL
+                completion()
+            })
         }
     }
     

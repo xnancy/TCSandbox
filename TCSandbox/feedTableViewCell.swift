@@ -112,12 +112,12 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) as! profileCollectionViewCell
         
-        var url = ""
+        cell.parentTableViewCell = self
+        cell.participant = participants![indexPath.row]
         
         FBClient.retrievePictureForUser(participants![indexPath.row]) { (URL) in
             
-            url = URL
-            cell.profileImageView.setImageWithURL(NSURL(string: url)!)
+            cell.profileImageView.setImageWithURL(NSURL(string: URL)!)
             cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.height/2
             cell.profileImageView.clipsToBounds = true
         }

@@ -20,9 +20,13 @@ class profileCollectionViewCell: UICollectionViewCell {
         
         parentTableViewCell?.currentParticipant = participant
         
-        let feedTableView = self.superview!.superview!.superview!.superview!.nextResponder()as! UITableView
-
+        let feedTableView = self.superview!.superview!.superview!.superview!.nextResponder() as! UITableView
         
-        feedTableView.reloadData()
+        
+        let index = feedTableView.indexPathForCell(parentTableViewCell!)
+        
+        feedViewController.setCellContentsURL((index?.row)!, participant: self.participant!, completion: {
+            feedTableView.reloadData()
+        })
     }
 }
