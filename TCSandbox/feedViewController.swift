@@ -332,7 +332,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             for index in 0...(self.homeChallenges?.count)!-1
             {
                 self.populateCell(self.homeChallenges!, indexPathRow: index, completion: { (cellContents) in
-                    feedViewController.feedCellContents![index] = cellContents
+                    feedViewController.homeCellContents![index] = cellContents
                 })
             }
 
