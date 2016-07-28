@@ -25,6 +25,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     var pickedVideo: NSURL?
     var user: User?
     let imagePicker: UIImagePickerController! = UIImagePickerController()
+    var videoController: CustomVideoPlayerViewController?
     
     @IBOutlet weak var gifImageView: UIImageView! // = UIImageView(gifImage: UIImage(gifName: "hipairplane"), manager: gifManager)
     @IBOutlet weak var profileImageView: UIImageView!
@@ -71,13 +72,12 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                 let downloadUrl = metadata.downloadURL()
                 
                 if downloadUrl != nil{
-                    let videoController = CustomVideoPlayerViewController()
-                    videoController.videoURL = downloadUrl
-                    self.addChildViewController(videoController)
-                    videoController.view.frame = self.videoView.frame
-                        self.view.addSubview(videoController.view)
-                    videoController.didMoveToParentViewController(self)
-                    
+                    self.videoController = CustomVideoPlayerViewController()
+                    self.videoController!.videoURL = downloadUrl
+                    self.addChildViewController(self.videoController!)
+                    self.videoController!.view.frame = self.videoView.frame
+                        self.view.addSubview(self.videoController!.view)
+                    self.videoController!.didMoveToParentViewController(self)
                 }
             
             })
@@ -105,6 +105,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        videoController?.view.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -168,8 +169,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             self.navigationController?.navigationBarHidden = true
             self.countdownImageView.hidden = false
             self.secondaryBackgroundImageView.hidden = false
-            //videoView.removeFromSuperview()
             videoView.hidden = true
+            videoController?.view.hidden = true
             self.countdownImageView.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
             view.transform = CGAffineTransformMakeScale(0.01, 0.01);
             
