@@ -113,11 +113,6 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("workoutCell", forIndexPath: indexPath) as! workoutCollectionViewCell
             
-            let hasContentView: Bool = cell.subviews.contains(cell.contentView)
-            if !hasContentView {
-                cell.addSubview(cell.contentView)
-            }
-            
             if challenge?.gifNames!.count > indexPath.row
             {
                 cell.workoutLabel.text = Gifs.gifDictionary[(challenge?.gifNames![indexPath.row])!]
@@ -133,10 +128,6 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) as! profileCollectionViewCell
         
-        let hasContentView: Bool = cell.subviews.contains(cell.contentView)
-        if !hasContentView {
-            cell.addSubview(cell.contentView)
-        }
         
         cell.parentTableViewCell = self
         cell.participant = participants![indexPath.row]
@@ -150,5 +141,4 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         
         return cell
     }
-    
 }

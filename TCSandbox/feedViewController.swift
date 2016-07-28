@@ -236,7 +236,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         return cell
     }
-
     
     func populateCell(challenges: [String], indexPathRow: Int, completion: (cellContents) -> Void)
     {

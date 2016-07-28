@@ -29,4 +29,10 @@ class profileCollectionViewCell: UICollectionViewCell {
             feedTableView.reloadData()
         })
     }
+    
+    override func prepareForReuse() {
+        self.profileImageView.image = nil
+        self.participant = nil
+        self.parentTableViewCell = nil
+    }
 }
