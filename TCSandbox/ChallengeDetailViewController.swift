@@ -57,7 +57,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         videoView.layer.insertSublayer(avPlayerLayer, atIndex: 0)
         
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
         detailsTableView.delegate = self
@@ -311,8 +311,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                         self.imagePicker.startVideoCapture()
                         self.countdownImageView.hidden = true
                         self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
-                        
-                        
                     })
             
             self.imagePicker.sourceType = .Camera
@@ -320,8 +318,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             self.imagePicker.allowsEditing = false
             self.imagePicker.delegate = self
             self.imagePicker.videoMaximumDuration = Double((self.challenge?.timeLimit)!)
-            
-            
+         
             self.presentViewController(self.imagePicker, animated: true, completion: {})
                 }
             }

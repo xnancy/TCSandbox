@@ -22,9 +22,9 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x9ED2D2)
+        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x57C3BB)
 
-        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x9ED2D2)
+        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x57C3BB)
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
         
@@ -39,14 +39,28 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         navigationController?.setNavigationBarHidden(false, animated: true)
         currentChallenges = []
         updateChallengeInfo()
+        makeChallengePromptTextLabel.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
         self.tabBarController?.tabBar.hidden = false
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        makeChallengePromptTextLabel.removeObserver(self, forKeyPath: "contentSize")
+    }
+    
+    /// Force the text in a UITextView to always center itself.
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        let textView = object as! UITextView
+        var topCorrect = (textView.bounds.size.height - textView.contentSize.height * textView.zoomScale) / 2
+        topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
+        textView.contentInset.top = topCorrect
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if(indexPath.row % 2 == 0) {
             cell.backgroundColor = UIColor.whiteColor()
         } else {
-            cell.backgroundColor = UIColor(white: 0x9ED2D2, alpha: 0.3)
+            cell.backgroundColor = UIColor(white: 0x57C3BB, alpha: 0.3)
         }
     }
     

@@ -41,9 +41,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
         feedViewController.toggled = false
-        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x9ED2D2)
-        navigationController?.navigationBar.tintColor = UIColor.grayColor()
-        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x9ED2D2)
+        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x57C3BB)
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x57C3BB)
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         feedTableView.insertSubview(refreshControl, atIndex: 0)
@@ -68,9 +68,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

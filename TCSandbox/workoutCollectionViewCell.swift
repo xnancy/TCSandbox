@@ -11,4 +11,9 @@ import UIKit
 class workoutCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var workoutLabel: UILabel!
+    
+    override func awakeFromNib() {
+        workoutLabel.layer.cornerRadius = 10
+        workoutLabel.clipsToBounds = true
+    }
 }

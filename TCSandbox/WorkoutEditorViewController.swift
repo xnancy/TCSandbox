@@ -351,9 +351,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         return true
     }
     
-    
-    
-    
     func didPressRecord(sender: AnyObject) {
         self.secondaryBackgroundImageView.hidden = false
         //countdowimageview.hidden = false
@@ -512,6 +509,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         vc.challenge = challenge
         vc.pickedVideo = pickedVideo
         
+        secondaryBackgroundImageView.hidden = true
     }
     
     
@@ -591,7 +589,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         return .None
     }
     
-    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         print("video recorded")
@@ -606,7 +603,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
             self.performSegueWithIdentifier("uploadSegue", sender: self)
         }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
