@@ -46,8 +46,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         if(indexPath.row % 2 == 0) {
             cell.backgroundColor = UIColor.whiteColor()
         } else {
-            cell.backgroundColor = UIColor(hex: 0x9ED2D2)
-            cell.backgroundView?.alpha = 0.2
+            cell.backgroundColor = UIColor(white: 0x9ED2D2, alpha: 0.3)
         }
     }
     

@@ -24,7 +24,7 @@ class detailsTableViewCell: UITableViewCell {
         layer.cornerRadius = 10
         layer.masksToBounds = true
         layer.borderWidth = 4
-        layer.borderColor = UIColor.whiteColor().CGColor
+        layer.borderColor = UIColor(white: 0x000000, alpha: 0).CGColor
         let bgColorView = UIView()
         bgColorView.backgroundColor = UIColor.init(hex: 0x11A9DA)
         selectedBackgroundView = bgColorView
@@ -35,6 +35,6 @@ class detailsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        exerciseLabel.textColor = UIColor.blackColor()
     }
-
 }

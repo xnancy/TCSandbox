@@ -37,13 +37,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         feedTableView.hidden = false
         noFeedTextView.hidden = true
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
         feedViewController.toggled = false
-        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
+        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x9ED2D2)
+        navigationController?.navigationBar.tintColor = UIColor.grayColor()
+        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x9ED2D2)
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         feedTableView.insertSubview(refreshControl, atIndex: 0)

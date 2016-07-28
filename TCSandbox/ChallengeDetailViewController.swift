@@ -48,12 +48,15 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.layer.masksToBounds = true
+
         /* AV PLAYER */
         videoView.backgroundColor = UIColor.blackColor()
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         videoView.layer.insertSublayer(avPlayerLayer, atIndex: 0)
         
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
         detailsTableView.delegate = self
