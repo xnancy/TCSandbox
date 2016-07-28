@@ -320,7 +320,19 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return false
             })
             
-            //sort out the correct dates here
+            for index in 0...(self.feedChallenges?.count)!-1
+            {
+                self.populateCell(self.feedChallenges!, indexPathRow: index, completion: { (cellContents) in
+                    feedViewController.feedCellContents![index] = cellContents
+                })
+            }
+            
+            for index in 0...(self.homeChallenges?.count)!-1
+            {
+                self.populateCell(self.homeChallenges!, indexPathRow: index, completion: { (cellContents) in
+                    feedViewController.feedCellContents![index] = cellContents
+                })
+            }
 
             self.feedTableView.reloadData()
         }
