@@ -112,7 +112,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         }
         
         self.detailsTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
-        gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: 100)
+        gifImageView.image = UIImage.gifWithName((challenge?.gifNames![0])!)
+        
         gifImageView.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin, .FlexibleBottomMargin]
         self.navigationItem.title = challenge!.name
         

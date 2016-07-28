@@ -39,7 +39,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         noFeedTextView.hidden = true
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
-        
         feedViewController.toggled = false
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x57C3BB)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -47,8 +46,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         feedTableView.insertSubview(refreshControl, atIndex: 0)
-        
-        
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
@@ -60,7 +57,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(animated: Bool) {
         feedTableView.hidden = false
         noFeedTextView.hidden = true
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         queryRequest()
     }
 

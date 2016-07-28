@@ -36,7 +36,8 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        
         currentChallenges = []
         updateChallengeInfo()
         makeChallengePromptTextLabel.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
