@@ -26,13 +26,13 @@ class profileCollectionViewCell: UICollectionViewCell {
         let index = feedTableView.indexPathForCell(parentTableViewCell!)
         
         feedViewController.setCellContentsURL((index?.row)!, participant: self.participant!, completion: {
-            feedTableView.reloadData()
+            feedTableView.reloadRowsAtIndexPaths([index!], withRowAnimation: .None)
         })
     }
     
     override func prepareForReuse() {
-        self.profileImageView.image = nil
-        self.participant = nil
-        self.parentTableViewCell = nil
+        profileImageView.image = nil
+        parentTableViewCell = nil
+        participant = nil
     }
 }

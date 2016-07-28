@@ -106,11 +106,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         if (feedViewController.toggled == false && indexPath.row%2 == 0 && feedViewController.feedCellContents![indexPath.row] != nil)
         {
             self.player = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
-            self.movie.player = self.player
-            self.movie.view.frame = cell.challengeVideoView.bounds
-            
-            
-            cell.challengeVideoView.addSubview(self.movie.view)
+            playVideo(player, cell: cell)
             
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -118,11 +114,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         else if (feedViewController.toggled == false && feedViewController.feedCellContents![indexPath.row] != nil)
         {
             self.player2 = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
-            self.movie2.player = self.player2
-            self.movie2.view.frame = cell.challengeVideoView.bounds
-            
-            
-            cell.challengeVideoView.addSubview(self.movie2.view)
+            playVideo(player2, cell: cell)
             
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -131,27 +123,18 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             populateCell(feedChallenges!, indexPathRow: indexPath.row, completion: { (contents) in
                 feedViewController.feedCellContents![indexPath.row] = contents
-                cell.profileCollectionView.reloadData()
-                cell.workoutCollectionView.reloadData()
                 
                 if (indexPath.row%2 == 0)
                 {
                     self.player = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
-                    self.movie.player = self.player
-                    self.movie.view.frame = cell.challengeVideoView.bounds
-                    
-                    
-                    cell.challengeVideoView.addSubview(self.movie.view)
+                    self.playVideo(self.player, cell: cell)
                 }
                 
                 else
                 {
                     self.player2 = AVPlayer(URL: (feedViewController.feedCellContents![indexPath.row]?.url!)!)
-                    self.movie2.player = self.player2
-                    self.movie2.view.frame = cell.challengeVideoView.bounds
-                    
-                    
-                    cell.challengeVideoView.addSubview(self.movie2.view)
+                    self.playVideo(self.player2, cell: cell)
+
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
@@ -162,11 +145,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         else if (indexPath.row%2 == 0 && feedViewController.homeCellContents![indexPath.row] != nil)
         {
             self.player = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
-            self.movie.player = self.player
-            self.movie.view.frame = cell.challengeVideoView.bounds
-            
-            
-            cell.challengeVideoView.addSubview(self.movie.view)
+            self.playVideo(self.player, cell: cell)
+
             
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -174,11 +154,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         else if (feedViewController.homeCellContents![indexPath.row] != nil)
         {
             self.player2 = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
-            self.movie2.player = self.player2
-            self.movie2.view.frame = cell.challengeVideoView.bounds
-            
-            
-            cell.challengeVideoView.addSubview(self.movie2.view)
+            self.playVideo(self.player2, cell: cell)
+
             
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -191,43 +168,20 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if (indexPath.row%2 == 0)
                 {
                     self.player = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
-                    self.movie.player = self.player
-                    self.movie.view.frame = cell.challengeVideoView.bounds
-                    
-                    
-                    cell.challengeVideoView.addSubview(self.movie.view)
+                    self.playVideo(self.player, cell: cell)
                 }
                     
                 else
                 {
                     self.player2 = AVPlayer(URL: (feedViewController.homeCellContents![indexPath.row]?.url!)!)
-                    self.movie2.player = self.player2
-                    self.movie2.view.frame = cell.challengeVideoView.bounds
-                    
-                    
-                    cell.challengeVideoView.addSubview(self.movie2.view)
+                    self.playVideo(self.player2, cell: cell)
+
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
             })
         }
         
-        
-        
-        if feedViewController.toggled == false && indexPath.row + 1 < feedChallenges?.count
-        {
-            populateCell(feedChallenges!, indexPathRow: indexPath.row+1, completion: { (contents) in
-                feedViewController.feedCellContents![indexPath.row + 1] = contents
-            })
-        }
-            
-        else if indexPath.row + 1 < homeChallenges?.count
-        {
-            populateCell(homeChallenges!, indexPathRow: indexPath.row+1, completion: { (contents) in
-                feedViewController.homeCellContents![indexPath.row + 1] = contents
-            })
-        }
-
         return cell
     }
     
@@ -241,6 +195,17 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             cellContentsToAdd.currentParticipant = challenge.senderID
             cellContentsToAdd.participants = challenge.completedBy!
+            
+            var pictureArray: [String] = []
+            
+            for userID in challenge.completedBy!
+            {
+                FBClient.retrieveUserFromID(userID, completion: { (user) in
+                    pictureArray.append(user.profileImageURLString!)
+                })
+            }
+            
+            cellContentsToAdd.participantPictures = pictureArray
             
             FBClient.streamVideo(challenge.challengeID!, userID: (cellContentsToAdd.currentParticipant)!, completion: {(metadata) in
                 
@@ -273,6 +238,22 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.workoutCollectionView.reloadData()
     }
     
+    func playVideo(player: AVPlayer, cell: feedTableViewCell)
+    {
+        if player == self.player
+        {
+            self.movie.player = self.player
+            self.movie.view.frame = cell.challengeVideoView.bounds
+            cell.challengeVideoView.addSubview(self.movie.view)
+        }
+        
+        else
+        {
+            self.movie2.player = self.player2
+            self.movie2.view.frame = cell.challengeVideoView.bounds
+            cell.challengeVideoView.addSubview(self.movie2.view)
+        }
+    }
 
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
