@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class profileCollectionViewCell: UICollectionViewCell {
     
@@ -25,14 +26,10 @@ class profileCollectionViewCell: UICollectionViewCell {
         
         let index = feedTableView.indexPathForCell(parentTableViewCell!)
         
-        feedViewController.setCellContentsURL((index?.row)!, participant: self.participant!, completion: {
+        feedViewController.setCellContentsURL((index?.row)!, participant: self.participant!, completion: {URL in
             feedTableView.reloadRowsAtIndexPaths([index!], withRowAnimation: .None)
+            
+            feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: URL))
         })
-    }
-    
-    override func prepareForReuse() {
-        profileImageView.image = nil
-        parentTableViewCell = nil
-        participant = nil
     }
 }
