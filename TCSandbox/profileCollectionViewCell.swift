@@ -27,9 +27,7 @@ class profileCollectionViewCell: UICollectionViewCell {
         let index = feedTableView.indexPathForCell(parentTableViewCell!)
         
         feedViewController.setCellContentsURL((index?.row)!, participant: self.participant!, completion: {URL in
-            feedTableView.reloadRowsAtIndexPaths([index!], withRowAnimation: .None)
-            
-            feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: URL))
+        feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: URL))
         })
     }
 }

@@ -264,17 +264,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func queryRequest()
     {
-        if (feedViewController.toggled == false && self.feedChallenges == nil)
-        {
-            return
-        }
-        
-        else if self.homeChallenges == nil
-        {
-            return
-        }
-        
         FBClient.retrieveFeed { (challenges, dictionary, homeChallenges) in
+            
             self.feedChallenges = challenges
             self.feedDictionary = dictionary
             self.homeChallenges = homeChallenges
@@ -365,22 +356,45 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             feedViewController.feedCellContents![index]?.currentParticipant = participant
             
-            FBClient.streamVideo((feedViewController.feedCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
-                feedViewController.feedCellContents![index]!.url = metadata.downloadURL()
-                feedViewController.feedCellContents![index]!.currentParticipant = participant
-                completion(metadata.downloadURL()!)
-            })
+            //check if the url is already cached in contents.challenges.urls
+            let contents = feedViewController.feedCellContents![index]
+            let videoIndex = contents?.challenge?.completedBy?.indexOf(participant)
+            
+            if contents?.challenge?.completedBy?.indexOf(participant) != nil
+            {
+                feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+            }
+                
+            else
+            {
+                FBClient.streamVideo((feedViewController.feedCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
+                    feedViewController.feedCellContents![index]!.url = metadata.downloadURL()!
+                    feedViewController.feedCellContents![index]!.currentParticipant = participant
+                    completion(metadata.downloadURL()!)
+                })
+            }
         }
-        
+            
         else
         {
             feedViewController.homeCellContents![index]?.currentParticipant = participant
             
-            FBClient.streamVideo((feedViewController.homeCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
-                feedViewController.homeCellContents![index]!.url = metadata.downloadURL()
-                feedViewController.homeCellContents![index]!.currentParticipant = participant
-                completion(metadata.downloadURL()!)
-            })
+            let contents = feedViewController.homeCellContents![index]
+            let videoIndex = contents?.challenge?.completedBy?.indexOf(participant)
+            
+            if contents?.challenge?.completedBy?.indexOf(participant) != nil
+            {
+                feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+            }
+                
+            else
+            {
+                FBClient.streamVideo((feedViewController.homeCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
+                    feedViewController.homeCellContents![index]!.url = metadata.downloadURL()!
+                    feedViewController.homeCellContents![index]!.currentParticipant = participant
+                    completion(metadata.downloadURL()!)
+                })
+            }
         }
     }
     
