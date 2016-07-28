@@ -268,6 +268,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func setCellProperties(cell: feedTableViewCell, contents: cellContents, indexPathRow: Int)
     {
+        cell.challenge = contents.challenge
+        
         let index = contents.participants?.indexOf(contents.currentParticipant!)
         let videoLikes = contents.challenge!.videoLikes![index!]
         
