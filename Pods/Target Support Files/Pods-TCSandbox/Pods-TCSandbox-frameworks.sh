@@ -85,27 +85,21 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CircleMenu/CircleMenu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DGRunkeeperSwitch/DGRunkeeperSwitch.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DynamicColor/DynamicColor.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FXBlurView/FXBlurView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/KDIntroView/KDIntroView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRVideoPlayer/KRVideoPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PopupDialog/PopupDialog.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnappingStepper/SnappingStepper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftGifOrigin/SwiftGifOrigin.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyGif/SwiftyGif.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CircleMenu/CircleMenu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DGRunkeeperSwitch/DGRunkeeperSwitch.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DynamicColor/DynamicColor.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FXBlurView/FXBlurView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/KDIntroView/KDIntroView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRVideoPlayer/KRVideoPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PopupDialog/PopupDialog.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnappingStepper/SnappingStepper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftGifOrigin/SwiftGifOrigin.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyGif/SwiftyGif.framework"
 fi

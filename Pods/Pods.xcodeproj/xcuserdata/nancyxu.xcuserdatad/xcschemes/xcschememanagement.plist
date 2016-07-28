@@ -11,11 +11,6 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>CircleMenu.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>14</integer>
-		</dict>
 		<key>DGRunkeeperSwitch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,16 +34,6 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
-		</dict>
-		<key>KDIntroView-KDIntroView.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
-		</dict>
-		<key>KDIntroView.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>15</integer>
 		</dict>
 		<key>KRVideoPlayer-KRVideoPlayer.xcscheme</key>
 		<dict>
@@ -93,11 +78,6 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
-		<key>SwiftGifOrigin.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>17</integer>
-		</dict>
 		<key>SwiftyGif.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -123,17 +103,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F1F676C18636D15AC6FD012D3474CA2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>27533A6098E2BDD80827924FA8F4E742</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -163,32 +133,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66C721DECBCE93EDD2FEC5B7BA203D5C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6FA541562118CC966F08F69F23EA1E05</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7BEAD9146336CA7D3C1C9C6A8A0C3D9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83D04ECFB6133A78972BF0E3F878CAC9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9A4B8B630E8B1651FC947DD52038A14D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9B19BA91AE2379D0D2B2420DEE0AF1CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -204,11 +154,6 @@
 			<true/>
 		</dict>
 		<key>AFF971BDFEA07BCDC4AB725E220538F5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B2F72A4CF293ECB110C50406D2D195EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -234,11 +179,6 @@
 			<true/>
 		</dict>
 		<key>EC375C393EF26BE5FCD989A55C44D81D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EE369ADF572E40717D29D35C8E1FF5C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

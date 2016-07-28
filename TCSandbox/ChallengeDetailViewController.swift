@@ -15,7 +15,6 @@ import MediaPlayer
 import MobileCoreServices
 import SwiftyGif
 import PopupDialog
-import SwiftGifOrigin
 
 var gifManager = SwiftyGifManager(memoryLimit: 1000)
 private var playbackLikelyToKeepUpContext = 0
@@ -311,6 +310,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                         self.imagePicker.startVideoCapture()
                         self.countdownImageView.hidden = true
                         self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
+                        
+                        
                     })
             
             self.imagePicker.sourceType = .Camera
@@ -318,7 +319,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             self.imagePicker.allowsEditing = false
             self.imagePicker.delegate = self
             self.imagePicker.videoMaximumDuration = Double((self.challenge?.timeLimit)!)
-         
+            
+            
             self.presentViewController(self.imagePicker, animated: true, completion: {})
                 }
             }
