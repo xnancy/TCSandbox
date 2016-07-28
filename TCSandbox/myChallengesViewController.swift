@@ -22,11 +22,9 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x11A9DA)
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
+        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x9ED2D2)
 
-        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x11A9DA)
+        tabBarController?.tabBar.barTintColor = UIColor(hex: 0x9ED2D2)
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
         
@@ -42,6 +40,15 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         currentChallenges = []
         updateChallengeInfo()
         self.tabBarController?.tabBar.hidden = false
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor.whiteColor()
+        } else {
+            cell.backgroundColor = UIColor(hex: 0x9ED2D2)
+            cell.backgroundView?.alpha = 0.2
+        }
     }
     
     func updateChallengeInfo() {

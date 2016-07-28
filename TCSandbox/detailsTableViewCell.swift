@@ -14,9 +14,13 @@ class detailsTableViewCell: UITableViewCell {
     @IBOutlet weak var exerciseLabel: UILabel!
     var gifName: String?
     
+    @IBOutlet weak var cTagTextLable: UILabel!
 
+    @IBOutlet weak var cTagImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        cTagImageView.hidden = true
+        cTagTextLable.hidden = true
         layer.cornerRadius = 10
         layer.masksToBounds = true
         layer.borderWidth = 4

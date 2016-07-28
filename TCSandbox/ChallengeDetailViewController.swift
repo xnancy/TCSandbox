@@ -253,6 +253,11 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         if challenge?.gifNames!.count > indexPath.row
         {
             cell.exerciseLabel.text = Gifs.gifDictionary[(challenge?.gifNames![indexPath.row])!]
+            if (challenge?.cTagNames![indexPath.row] != "placeholder") {
+                cell.cTagTextLable.hidden = false
+                cell.cTagImageView.hidden = false
+                cell.cTagTextLable.text = challenge?.cTagNames![indexPath.row]
+            }
         }
         
         else if challenge?.tagNames?.count > indexPath.row - (challenge?.gifNames?.count)!
