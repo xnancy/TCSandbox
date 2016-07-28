@@ -362,7 +362,15 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if contents?.challenge?.completedBy?.indexOf(participant) != nil
             {
-                feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+                if index%2 == 0
+                {
+                    feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+                }
+                
+                else
+                {
+                    feedViewController.player2.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+                }
             }
                 
             else
@@ -384,7 +392,15 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if contents?.challenge?.completedBy?.indexOf(participant) != nil
             {
-                feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+                if index%2 == 0
+                {
+                    feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+                }
+                
+                else
+                {
+                    feedViewController.player2.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+                }
             }
                 
             else
