@@ -52,17 +52,33 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     @IBAction func didTapLike(sender: AnyObject) {
         let index = participants?.indexOf(currentParticipant!)!
+        let feedTableView: UITableView = (self.superview!.superview as! UITableView)
+        let cellIndex = feedTableView.indexPathForCell(self)
         
         FBClient.tappedLike(currentParticipant!, challengeID: (challenge?.challengeID)!, videoURL: (challenge?.videoURLs![index!])!, index: index!, completion: {(hasLiked) in
             
-            if hasLiked
+            if hasLiked && feedViewController.toggled == false
             {
                 self.likesLabel.text = "\(Int(self.likesLabel.text!)! - 1)"
+                feedViewController.feedCellContents![(cellIndex?.row)!]!.challenge!.videoLikes![index!] -= 1
             }
                 
+            else if feedViewController.toggled == false
+            {
+                self.likesLabel.text = "\(Int(self.likesLabel.text!)! + 1)"
+                feedViewController.feedCellContents![(cellIndex?.row)!]!.challenge!.videoLikes![index!] += 1
+            }
+            
+            else if hasLiked
+            {
+                self.likesLabel.text = "\(Int(self.likesLabel.text!)! - 1)"
+                feedViewController.homeCellContents![(cellIndex?.row)!]!.challenge!.videoLikes![index!] -= 1
+            }
+            
             else
             {
                 self.likesLabel.text = "\(Int(self.likesLabel.text!)! + 1)"
+                feedViewController.homeCellContents![(cellIndex?.row)!]!.challenge!.videoLikes![index!] += 1
             }
         })
     }
@@ -97,6 +113,11 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("workoutCell", forIndexPath: indexPath) as! workoutCollectionViewCell
             
+            let hasContentView: Bool = cell.subviews.contains(cell.contentView)
+            if !hasContentView {
+                cell.addSubview(cell.contentView)
+            }
+            
             if challenge?.gifNames!.count > indexPath.row
             {
                 cell.workoutLabel.text = Gifs.gifDictionary[(challenge?.gifNames![indexPath.row])!]
@@ -111,6 +132,11 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         }
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) as! profileCollectionViewCell
+        
+        let hasContentView: Bool = cell.subviews.contains(cell.contentView)
+        if !hasContentView {
+            cell.addSubview(cell.contentView)
+        }
         
         cell.parentTableViewCell = self
         cell.participant = participants![indexPath.row]

@@ -117,7 +117,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             
             cell.challengeVideoView.addSubview(self.movie.view)
-            self.player.play()
             
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -130,7 +129,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             
             cell.challengeVideoView.addSubview(self.movie2.view)
-            self.player2.play()
             
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -150,7 +148,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     
                     cell.challengeVideoView.addSubview(self.movie.view)
-                    self.player.play()
                 }
                 
                 else
@@ -161,7 +158,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     
                     cell.challengeVideoView.addSubview(self.movie2.view)
-                    self.player2.play()
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
@@ -177,7 +173,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             
             cell.challengeVideoView.addSubview(self.movie.view)
-            self.player.play()
             
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -190,7 +185,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             
             cell.challengeVideoView.addSubview(self.movie2.view)
-            self.player2.play()
             
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -208,7 +202,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     
                     cell.challengeVideoView.addSubview(self.movie.view)
-                    self.player.play()
                 }
                     
                 else
@@ -219,7 +212,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     
                     cell.challengeVideoView.addSubview(self.movie2.view)
-                    self.player2.play()
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
@@ -257,9 +249,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cellContentsToAdd.currentParticipant = challenge.senderID
             cellContentsToAdd.participants = challenge.completedBy!
             
-            FBClient.downloadVideo(challenge.challengeID!, userID: (cellContentsToAdd.currentParticipant)!, completion: {(URL: NSURL) in
+            FBClient.streamVideo(challenge.challengeID!, userID: (cellContentsToAdd.currentParticipant)!, completion: {(metadata) in
                 
-                cellContentsToAdd.url = URL
+                cellContentsToAdd.url = metadata.downloadURL()
                 
                 completion(cellContentsToAdd)
             })
@@ -270,13 +262,18 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         cell.challenge = contents.challenge
         
+        if (contents.currentParticipant == nil)
+        {
+            contents.currentParticipant = contents.challenge?.senderID
+        }
+        
         let index = contents.participants?.indexOf(contents.currentParticipant!)
         let videoLikes = contents.challenge!.videoLikes![index!]
         
         cell.likesLabel.text = "\(videoLikes)"
         cell.challengeNameLabel.text = contents.challenge!.name
         
-        cell.currentParticipant = contents.challenge!.senderID
+        cell.currentParticipant = contents.currentParticipant
         cell.participants = contents.challenge!.completedBy!
         
         cell.profileCollectionView.reloadData()
@@ -384,8 +381,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             feedViewController.feedCellContents![index]?.currentParticipant = participant
             
-            FBClient.downloadVideo((feedViewController.feedCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (URL) in
-                feedViewController.feedCellContents![index]!.url = URL
+            FBClient.streamVideo((feedViewController.feedCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
+                feedViewController.feedCellContents![index]!.url = metadata.downloadURL()
+                feedViewController.feedCellContents![index]!.currentParticipant = participant
                 completion()
             })
         }
@@ -394,8 +392,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             feedViewController.homeCellContents![index]?.currentParticipant = participant
             
-            FBClient.downloadVideo((feedViewController.homeCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (URL) in
-                feedViewController.homeCellContents![index]!.url = URL
+            FBClient.streamVideo((feedViewController.homeCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
+                feedViewController.homeCellContents![index]!.url = metadata.downloadURL()
+                feedViewController.homeCellContents![index]!.currentParticipant = participant
                 completion()
             })
         }

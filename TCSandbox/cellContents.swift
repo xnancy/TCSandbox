@@ -15,7 +15,6 @@ class cellContents: NSObject
     var participantPictures: [String]?
     var currentParticipant: String?
     var currentName: String?
-    var likesCount: Int?
     var url: NSURL?
     
     
