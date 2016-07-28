@@ -47,6 +47,7 @@
 		929D95621D496CAF00E411CC /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95601D496CAF00E411CC /* Group.png */; };
 		929D95631D496CAF00E411CC /* Globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95611D496CAF00E411CC /* Globe.png */; };
 		929D95651D4A959500E411CC /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95641D4A959500E411CC /* fire.png */; };
+		929D95671D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D95661D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift */; };
 		92A924AC1D30572400637263 /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AB1D30572400637263 /* Gifs.swift */; };
 		92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */; };
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
@@ -277,6 +278,7 @@
 		929D95601D496CAF00E411CC /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
 		929D95611D496CAF00E411CC /* Globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Globe.png; sourceTree = "<group>"; };
 		929D95641D4A959500E411CC /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		929D95661D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		92A924AB1D30572400637263 /* Gifs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
 		92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92A924AF1D3057B900637263 /* MoveScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollViewController.swift; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 		925D8E8B1D2DA8F0000F44F7 /* Data Objects */ = {
 			isa = PBXGroup;
 			children = (
+				929D95661D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift */,
 				929A02A41D2ECA8A00FC1E96 /* User.swift */,
 				929A02A61D2ECAD800FC1E96 /* Challenge.swift */,
 				929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */,
@@ -1237,6 +1240,7 @@
 				929D95591D495ABD00E411CC /* tabBarController.swift in Sources */,
 				82B7BBE81D481CF100932420 /* workoutCollectionViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
+				929D95671D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
 				9296630A1D36AFA400300614 /* searchFriendsTableViewCell.swift in Sources */,
 				B85082801D42A1CE007D22C9 /* SettingsViewController.swift in Sources */,

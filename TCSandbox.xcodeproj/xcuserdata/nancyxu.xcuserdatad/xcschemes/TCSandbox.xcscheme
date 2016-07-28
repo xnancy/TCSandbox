@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "925D8E681D2D79C1000F44F7"
-               BuildableName = "TCSandboxTests.xctest"
-               BlueprintName = "TCSandboxTests"
-               ReferencedContainer = "container:TCSandbox.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "925D8E731D2D79C1000F44F7"
-               BuildableName = "TCSandboxUITests.xctest"
-               BlueprintName = "TCSandboxUITests"
-               ReferencedContainer = "container:TCSandbox.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
