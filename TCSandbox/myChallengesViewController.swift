@@ -38,6 +38,9 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
         
+        feedViewController.videoController1.stopVideo()
+        feedViewController.videoController2.stopVideo()
+        
         currentChallenges = []
         updateChallengeInfo()
         makeChallengePromptTextLabel.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)

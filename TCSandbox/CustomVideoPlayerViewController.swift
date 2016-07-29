@@ -154,6 +154,11 @@ class CustomVideoPlayerViewController: UIViewController {
         }
     }
     
+    func stopVideo()
+    {
+        avPlayer.pause()
+    }
+    
     // Force the view into landscape mode (which is how most video media is consumed.)
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Landscape
