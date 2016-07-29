@@ -131,7 +131,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         {
             return (challenge?.gifNames?.count)! + (challenge?.tagNames?.count)!
         }
-        
+                
         return (challenge?.gifNames?.count)!
     }
     
