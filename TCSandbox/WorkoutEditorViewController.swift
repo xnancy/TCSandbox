@@ -74,9 +74,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
