@@ -17,6 +17,7 @@ class detailsTableViewCell: UITableViewCell {
     @IBOutlet weak var cTagTextLable: UILabel!
 
     @IBOutlet weak var cTagImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         cTagImageView.hidden = true

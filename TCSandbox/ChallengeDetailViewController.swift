@@ -29,6 +29,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     var videoController: CustomVideoPlayerViewController?
     
     @IBOutlet weak var gifImageView: UIImageView! // = UIImageView(gifImage: UIImage(gifName: "hipairplane"), manager: gifManager)
+    @IBOutlet weak var tagImageView: UIImageView!
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var challengeTitleLabel: UILabel!
     @IBOutlet weak var deadlineLabel: UILabel!
@@ -118,13 +120,13 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if challenge?.gifNames!.count > indexPath.row
         {
-            print("damn")
+            tagImageView.alpha = 0.0
             gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![indexPath.row])!), manager: gifManager, loopCount: -1)
             gifImageView.startAnimatingGif()
         }
         else {
-            gifImageView.image = nil
-            gifImageView.image = UIImage(named: (challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!)
+            tagImageView.alpha = 1.0
+            tagImageView.image = UIImage(named: (challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!)
         }
         
     }

@@ -357,6 +357,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.82352941176470584" blue="0.82352941176470584" alpha="0.2734375" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjr-7t-Nc8">
+                                <rect key="frame" x="196" y="408" width="171" height="179"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -371,6 +374,7 @@
                         <outlet property="navItem" destination="rIE-x3-NXC" id="30d-80-bvg"/>
                         <outlet property="profileImageView" destination="lkt-bI-mm7" id="ToQ-wT-7UC"/>
                         <outlet property="secondaryBackgroundImageView" destination="21m-Dn-qdj" id="7VI-Dg-fY8"/>
+                        <outlet property="tagImageView" destination="mjr-7t-Nc8" id="Q1g-sq-Pna"/>
                         <outlet property="videoView" destination="Hzo-ob-LyM" id="j1K-hd-gug"/>
                         <segue destination="eQi-sG-n3W" kind="presentation" identifier="responseSegue" id="pp0-J3-lkl"/>
                     </connections>
