@@ -48,7 +48,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.insertSubview(refreshControl, atIndex: 0)
         feedTableView.delegate = self
         feedTableView.dataSource = self
-        
+        feedTableView.tableFooterView = UIView()
+
         queryRequest()
         
         // Do any additional setup after loading the view.
@@ -57,7 +58,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(animated: Bool) {
         feedTableView.hidden = false
         noFeedTextView.hidden = true
-//        navigationController?.setNavigationBarHidden(true, animated: true)
+//      navigationController?.setNavigationBarHidden(true, animated: true)
         queryRequest()
     }
 

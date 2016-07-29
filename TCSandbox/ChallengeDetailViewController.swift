@@ -76,7 +76,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                     self.videoController!.videoURL = downloadUrl
                     self.addChildViewController(self.videoController!)
                     self.videoController!.view.frame = self.videoView.frame
-                        self.view.addSubview(self.videoController!.view)
+                    self.view.addSubview(self.videoController!.view)
                     self.videoController!.didMoveToParentViewController(self)
                 }
             
@@ -97,15 +97,16 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         }
         
         self.detailsTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
-        //gifImageView.image = UIImage.gifWithName((challenge?.gifNames![0])!)
-        
         gifImageView.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin, .FlexibleBottomMargin]
+        gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: -1)
+        gifImageView.startAnimatingGif()
         self.navigationItem.title = challenge!.name
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        videoController?.view.hidden = true
+        videoController?.view.hidden = false
+        videoView.hidden = false
     }
     
     override func didReceiveMemoryWarning() {

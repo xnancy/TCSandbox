@@ -92,6 +92,10 @@ class CustomVideoPlayerViewController: UIViewController {
 
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
     func invisibleButtonTapped(sender: UIButton) {
         let playerIsPlaying = avPlayer.rate > 0
         if playerIsPlaying {

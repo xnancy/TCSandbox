@@ -42,6 +42,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         updateChallengeInfo()
         makeChallengePromptTextLabel.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.New, context: nil)
         self.tabBarController?.tabBar.hidden = false
+        makeChallengePromptTextLabel.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
