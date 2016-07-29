@@ -558,8 +558,9 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         // Create a custom view controller
         let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
         ratingVC.delegate = self
-        ratingVC.pop = 27
-        print(ratingVC.pop)
+        ratingVC.timeLimit = Int(countdownStepper.value)
+        ratingVC.gifnames = gifsToShow
+        ratingVC.tagnames = tagsToShow
         // Create the dialog
         let popup = PopupDialog(viewController: ratingVC, transitionStyle: .BounceDown, buttonAlignment: .Horizontal, gestureDismissal: true)
         

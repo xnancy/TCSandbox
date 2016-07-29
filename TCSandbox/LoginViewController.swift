@@ -130,10 +130,8 @@ class LoginViewController: UIViewController,
     
     @IBAction func fbLoginInitiate() {
         let loginManager = FBSDKLoginManager()
-    
+        self.loadingScreenGifImage.hidden = false
         loginManager.logInWithReadPermissions(["public_profile", "email"], handler: {(result:FBSDKLoginManagerLoginResult!, error:NSError!) -> Void in
-            
-            self.loadingScreenGifImage.hidden = false
             
             if (error != nil) {
                 // Process error
