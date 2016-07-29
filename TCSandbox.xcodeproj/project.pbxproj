@@ -52,6 +52,10 @@
 		92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */; };
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
 		92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */; };
+		B801AD281D4BF3F500FCC586 /* AlertChildPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801AD251D4BF3F500FCC586 /* AlertChildPageViewController.swift */; };
+		B801AD291D4BF3F500FCC586 /* AlertChildPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B801AD261D4BF3F500FCC586 /* AlertChildPageViewController.xib */; };
+		B801AD2A1D4BF3F500FCC586 /* AlertPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801AD271D4BF3F500FCC586 /* AlertPageViewController.swift */; };
+		B801AD2C1D4BF42700FCC586 /* AlertOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801AD2B1D4BF42700FCC586 /* AlertOnboarding.swift */; };
 		B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */; };
 		B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */; };
 		B82004B21D4AB8910081D856 /* race2.gif in Resources */ = {isa = PBXBuildFile; fileRef = B82004AD1D4AB8910081D856 /* race2.gif */; };
@@ -64,10 +68,6 @@
 		B82004BD1D4AB89B0081D856 /* zombie.gif in Resources */ = {isa = PBXBuildFile; fileRef = B82004B91D4AB89B0081D856 /* zombie.gif */; };
 		B82004BE1D4AB89B0081D856 /* lavarocket.gif in Resources */ = {isa = PBXBuildFile; fileRef = B82004BA1D4AB89B0081D856 /* lavarocket.gif */; };
 		B82004C01D4AFEF10081D856 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = B82004BF1D4AFEF10081D856 /* loading.gif */; };
-		B82004D91D4B1AB50081D856 /* AlertOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82004D51D4B1AB50081D856 /* AlertOnboarding.swift */; };
-		B82004DA1D4B1AB50081D856 /* AlertChildPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82004D61D4B1AB50081D856 /* AlertChildPageViewController.swift */; };
-		B82004DB1D4B1AB50081D856 /* AlertPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82004D71D4B1AB50081D856 /* AlertPageViewController.swift */; };
-		B82004DC1D4B1AB50081D856 /* AlertChildPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82004D81D4B1AB50081D856 /* AlertChildPageViewController.xib */; };
 		B85082801D42A1CE007D22C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B850827F1D42A1CE007D22C9 /* SettingsViewController.swift */; };
 		B850828A1D42BFBC007D22C9 /* WorkoutEditorExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85082891D42BFBC007D22C9 /* WorkoutEditorExtensionViewController.swift */; };
 		B850828C1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B850828B1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift */; };
@@ -299,6 +299,10 @@
 		92A924AF1D3057B900637263 /* MoveScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollViewController.swift; sourceTree = "<group>"; };
 		92FDDD3E1D3D9D640049AD36 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B801AD251D4BF3F500FCC586 /* AlertChildPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertChildPageViewController.swift; sourceTree = "<group>"; };
+		B801AD261D4BF3F500FCC586 /* AlertChildPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertChildPageViewController.xib; sourceTree = "<group>"; };
+		B801AD271D4BF3F500FCC586 /* AlertPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPageViewController.swift; sourceTree = "<group>"; };
+		B801AD2B1D4BF42700FCC586 /* AlertOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertOnboarding.swift; sourceTree = "<group>"; };
 		B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview2ViewController.swift; sourceTree = "<group>"; };
 		B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		B82004AD1D4AB8910081D856 /* race2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = race2.gif; path = TCSandbox/Gifs2/race2.gif; sourceTree = "<group>"; };
@@ -311,10 +315,6 @@
 		B82004B91D4AB89B0081D856 /* zombie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = zombie.gif; path = TCSandbox/Gifs3/zombie.gif; sourceTree = "<group>"; };
 		B82004BA1D4AB89B0081D856 /* lavarocket.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = lavarocket.gif; path = TCSandbox/Gifs3/lavarocket.gif; sourceTree = "<group>"; };
 		B82004BF1D4AFEF10081D856 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = TCSandbox/loading.gif; sourceTree = "<group>"; };
-		B82004D51D4B1AB50081D856 /* AlertOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertOnboarding.swift; path = "../../../Downloads/AlertOnboarding-master/AlertOnboarding/AlertOnboarding.swift"; sourceTree = "<group>"; };
-		B82004D61D4B1AB50081D856 /* AlertChildPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertChildPageViewController.swift; path = "../../../Downloads/AlertOnboarding-master/AlertOnboarding/AlertChildPageViewController.swift"; sourceTree = "<group>"; };
-		B82004D71D4B1AB50081D856 /* AlertPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertPageViewController.swift; path = "../../../Downloads/AlertOnboarding-master/AlertOnboarding/AlertPageViewController.swift"; sourceTree = "<group>"; };
-		B82004D81D4B1AB50081D856 /* AlertChildPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlertChildPageViewController.xib; path = "../../../Downloads/AlertOnboarding-master/AlertOnboarding/AlertChildPageViewController.xib"; sourceTree = "<group>"; };
 		B850827F1D42A1CE007D22C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B85082891D42BFBC007D22C9 /* WorkoutEditorExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditorExtensionViewController.swift; sourceTree = "<group>"; };
 		B850828B1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationPopOverViewController.swift; sourceTree = "<group>"; };
@@ -569,10 +569,10 @@
 				925D8E5F1D2D79C1000F44F7 /* Assets.xcassets */,
 				920A08EF1D38584300A3785A /* Main.storyboard */,
 				B893B55E1D4810370009A3B1 /* RatingViewController.xib */,
-				B82004D51D4B1AB50081D856 /* AlertOnboarding.swift */,
-				B82004D71D4B1AB50081D856 /* AlertPageViewController.swift */,
-				B82004D61D4B1AB50081D856 /* AlertChildPageViewController.swift */,
-				B82004D81D4B1AB50081D856 /* AlertChildPageViewController.xib */,
+				B801AD2B1D4BF42700FCC586 /* AlertOnboarding.swift */,
+				B801AD251D4BF3F500FCC586 /* AlertChildPageViewController.swift */,
+				B801AD261D4BF3F500FCC586 /* AlertChildPageViewController.xib */,
+				B801AD271D4BF3F500FCC586 /* AlertPageViewController.swift */,
 				B893B56B1D4865E80009A3B1 /* ChallengeSentViewController.xib */,
 				925D8E611D2D79C1000F44F7 /* LaunchScreen.storyboard */,
 				925D2D391D306A3700BAF3CC /* GoogleService-Info.plist */,
@@ -956,7 +956,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85083991D448352007D22C9 /* spin1.gif in Resources */,
-				B82004DC1D4B1AB50081D856 /* AlertChildPageViewController.xib in Resources */,
 				B893B56F1D487E6E0009A3B1 /* done.gif in Resources */,
 				B85083661D44745F007D22C9 /* kick.gif in Resources */,
 				B85083A01D448352007D22C9 /* squats.gif in Resources */,
@@ -1064,6 +1063,7 @@
 				B85083451D4459DC007D22C9 /* rockoutHardCore.gif in Resources */,
 				B850839F1D448352007D22C9 /* crunches.gif in Resources */,
 				B850834F1D4459DC007D22C9 /* throw1.gif in Resources */,
+				B801AD291D4BF3F500FCC586 /* AlertChildPageViewController.xib in Resources */,
 				B82004B61D4AB8910081D856 /* sleep.gif in Resources */,
 				B85083B01D448C24007D22C9 /* intensesquats.gif in Resources */,
 				B82004BB1D4AB89B0081D856 /* fantasticfour.gif in Resources */,
@@ -1267,11 +1267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */,
-				B82004DA1D4B1AB50081D856 /* AlertChildPageViewController.swift in Sources */,
+				B801AD2C1D4BF42700FCC586 /* AlertOnboarding.swift in Sources */,
 				82B7BBE41D47D59200932420 /* profileCollectionViewCell.swift in Sources */,
 				929D955B1D495AF100E411CC /* ImageExtension.swift in Sources */,
 				B893B56C1D4865E80009A3B1 /* ChallengeSentViewController.swift in Sources */,
-				B82004D91D4B1AB50081D856 /* AlertOnboarding.swift in Sources */,
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */,
 				B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */,
@@ -1286,6 +1285,7 @@
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
 				B893B5611D4810400009A3B1 /* RatingViewController.swift in Sources */,
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
+				B801AD2A1D4BF3F500FCC586 /* AlertPageViewController.swift in Sources */,
 				92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */,
 				82B7BBE61D47DA9100932420 /* profileCollectionView.swift in Sources */,
 				B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */,
@@ -1293,8 +1293,8 @@
 				B850828C1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift in Sources */,
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
 				929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */,
+				B801AD281D4BF3F500FCC586 /* AlertChildPageViewController.swift in Sources */,
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
-				B82004DB1D4B1AB50081D856 /* AlertPageViewController.swift in Sources */,
 				825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */,
 				82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */,
 				929D95591D495ABD00E411CC /* tabBarController.swift in Sources */,
