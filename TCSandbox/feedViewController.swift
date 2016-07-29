@@ -35,7 +35,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        User.updateCurrentUser()
         feedTableView.hidden = false
         print("called1")
         noFeedTextView.hidden = true

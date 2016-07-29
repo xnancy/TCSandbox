@@ -129,6 +129,7 @@ class LoginViewController: UIViewController,
                 //Success
                 if result.grantedPermissions.contains("email") && result.grantedPermissions.contains("public_profile") {
                     //Do work
+                    FBClient.login()
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
                     self.presentViewController(homeViewController, animated: false, completion: nil)
@@ -158,7 +159,6 @@ class LoginViewController: UIViewController,
                 if ((error) != nil) {
                     //Handle error
                 } else {
-                    
                     //Handle Profile Photo URL String
                     let userId =  result["id"] as! String
                     //let profilePictureUrl = "https://graph.facebook.com/\(id)/picture?type=large"
