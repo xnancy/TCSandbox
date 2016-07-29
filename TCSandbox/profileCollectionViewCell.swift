@@ -34,14 +34,14 @@ class profileCollectionViewCell: UICollectionViewCell {
         if (index?.row)!%2 == 0
         {
             feedViewController.setCellContentsURL((index?.row)!, participant: self.participant!, completion: {URL in
-                feedViewController.player.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: URL))
+            feedViewController.videoController1.setVideo(URL)
             })
         }
         
         else
         {
             feedViewController.setCellContentsURL((index?.row)!, participant: self.participant!, completion: {URL in
-                feedViewController.player2.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: URL))
+            feedViewController.videoController2.setVideo(URL)
             })
         }
     }

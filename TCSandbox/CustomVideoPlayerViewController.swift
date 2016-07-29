@@ -4,7 +4,7 @@ import AVFoundation
 private var playbackLikelyToKeepUpContext = 0
 
 class CustomVideoPlayerViewController: UIViewController {
-    let avPlayer = AVPlayer()
+    var avPlayer = AVPlayer()
     var avPlayerLayer: AVPlayerLayer!
     let invisibleButton = UIButton()
     var timeObserver: AnyObject!
@@ -17,6 +17,8 @@ class CustomVideoPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blackColor()
+        seekSlider.thumbTintColor = UIColor(hex: 0x57C3BB)
+        seekSlider.minimumTrackTintColor = UIColor(hex: 0x57C3BB)
         
         // An AVPlayerLayer is a CALayer instance to which the AVPlayer can
         // direct its visual output. Without it, the user will see nothing.
@@ -52,6 +54,12 @@ class CustomVideoPlayerViewController: UIViewController {
         view.addSubview(loadingIndicatorView)
         avPlayer.addObserver(self, forKeyPath: "currentItem.playbackLikelyToKeepUp",
                              options: .New, context: &playbackLikelyToKeepUpContext)
+    }
+    
+    func setVideo(url: NSURL) {
+        let playerItem = AVPlayerItem(URL: url)
+        videoURL = url
+        avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
     }
     
     deinit {
