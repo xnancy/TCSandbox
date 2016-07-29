@@ -111,9 +111,8 @@ class FBClient: AnyObject {
     class func retrieveChallengeFromID (challengeID: String, completion: (Challenge) -> Void) {
         var tempChallenge: Challenge?
         dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-            
             tempChallenge = Challenge(dict: snapshot.value as! NSDictionary)
-
+            print("challenge is: \(snapshot.value as! NSDictionary))")
             completion(tempChallenge!)
         })
     }

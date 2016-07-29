@@ -189,7 +189,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func populateCell(challenges: [String], indexPathRow: Int, completion: (cellContents) -> Void)
     {
         let cellContentsToAdd: cellContents = cellContents()
-        
         FBClient.retrieveChallengeFromID(challenges[indexPathRow]) { (challenge) in
             
             cellContentsToAdd.challenge = challenge
@@ -308,16 +307,20 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             for index in 0...(self.feedChallenges?.count)!-1
             {
-                self.populateCell(self.feedChallenges!, indexPathRow: index, completion: { (cellContents) in
-                    feedViewController.feedCellContents![index] = cellContents
-                })
+                if (!(self.feedChallenges![0] == "placeholder" && self.feedChallenges?.count == 1)) {
+                    self.populateCell(self.feedChallenges!, indexPathRow: index, completion: { (cellContents) in
+                        feedViewController.feedCellContents![index] = cellContents
+                    })
+                }
             }
             
             for index in 0...(self.homeChallenges?.count)!-1
             {
-                self.populateCell(self.homeChallenges!, indexPathRow: index, completion: { (cellContents) in
-                    feedViewController.homeCellContents![index] = cellContents
-                })
+                if (!(self.homeChallenges![0] == "placeholder" && self.homeChallenges?.count == 1)) {
+                    self.populateCell(self.homeChallenges!, indexPathRow: index, completion: { (cellContents) in
+                        feedViewController.homeCellContents![index] = cellContents
+                    })
+                }
             }
 
             self.feedTableView.reloadData()
