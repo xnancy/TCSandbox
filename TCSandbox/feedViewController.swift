@@ -199,20 +199,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             var pictureArray: [String] = []
             cellContentsToAdd.participantPictures = pictureArray
             
-            for userID in challenge.completedBy!
-            {
-                FBClient.retrieveUserFromID(userID, completion: { (user) in
-                    
-                    if userID == challenge.senderID
-                    {
-                        cellContentsToAdd.senderName = user.name!
-                    }
-                    
-                    cellContentsToAdd.participantPictures!.append(user.profileImageURLString!)
-                })
-            }
-
-            
             FBClient.streamVideo(challenge.challengeID!, userID: (cellContentsToAdd.currentParticipant)!, completion: {(metadata) in
                 
                 cellContentsToAdd.url = metadata.downloadURL()
@@ -236,8 +222,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.likesLabel.text = "\(videoLikes)"
         cell.challengeNameLabel.text = contents.challenge!.name
-        cell.creatorNameLabel.text = contents.senderName!
-        cell.currentName.text = contents.senderName!
+        
+        FBClient.retrieveUserFromID(cell.challenge!.senderID!, completion: { (user) in
+            
+            contents.senderName = user.name!
+            cell.creatorNameLabel.text = contents.senderName!
+            cell.currentName.text = contents.senderName!
+        })
         
         cell.currentParticipant = contents.currentParticipant
         cell.participants = contents.challenge!.completedBy!
