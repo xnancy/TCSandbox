@@ -32,9 +32,12 @@ class SettingsViewController: UIViewController {
         
         FBClient.logout()
         
-        self.dismissViewControllerAnimated(true) {
-            
-        }
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
+        
+        self.modalTransitionStyle = .FlipHorizontal
+        self.presentViewController(loginViewController, animated: true, completion: { _ in })
+        
     }
     @IBAction func backButton(sender: AnyObject) {
         
