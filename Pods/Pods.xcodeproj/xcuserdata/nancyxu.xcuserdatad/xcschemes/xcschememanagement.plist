@@ -11,6 +11,21 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>AlertOnboarding-AlertOnboardingXib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
+		<key>AlertOnboarding.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
+		<key>CircleMenu.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>DGRunkeeperSwitch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -36,6 +51,16 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>KDIntroView-KDIntroView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
+		<key>KDIntroView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
 		</dict>
 		<key>KRVideoPlayer-KRVideoPlayer.xcscheme</key>
 		<dict>
@@ -84,6 +109,11 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
+		<key>SwiftGifOrigin.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>SwiftyGif.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -99,6 +129,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>037E186C39FCBD6DAC893F300256D79D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>054F2F2349D58AF17412851B30649F05</key>
 		<dict>
 			<key>primary</key>
@@ -110,6 +145,21 @@
 			<true/>
 		</dict>
 		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CD314AE1A72E3B32CF0F16DC36DA426</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>27533A6098E2BDD80827924FA8F4E742</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>318CABB2926407836FFDEB5F57FADC72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -139,12 +189,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6FA541562118CC966F08F69F23EA1E05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7BEAD9146336CA7D3C1C9C6A8A0C3D9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9A4B8B630E8B1651FC947DD52038A14D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9B19BA91AE2379D0D2B2420DEE0AF1CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0D73C0FE25380BB6875B175B4BDCCF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -169,7 +234,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B463946B3D9AEF43DB1D989A65FB498A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CD378EDFF42487A7E1BB47D45223953B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E04E648CC8EEA8D506C109A6A00F7FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E24FE047AD8560F962102C547606DC68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
