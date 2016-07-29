@@ -35,6 +35,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        User.updateCurrentUser()
         feedTableView.hidden = false
         print("called1")
         noFeedTextView.hidden = true
@@ -75,7 +76,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if feedViewController.toggled == false
         {
-            if (feedChallenges == nil || feedChallenges![0] == "placeholder")
+            if (feedChallenges == nil || feedChallenges! == [] || feedChallenges![0] == "placeholder")
             {
                 feedTableView.hidden = true
                 noFeedTextView.hidden = false
@@ -90,7 +91,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         else
         {
-            if (homeChallenges == nil || homeChallenges![0] == "placeholder")
+            if (homeChallenges == nil || homeChallenges! == [] || homeChallenges![0] == "placeholder")
             {
                 feedTableView.hidden = true
                 noFeedTextView.hidden = false
@@ -303,21 +304,27 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return false
             })
             
-            for index in 0...(self.feedChallenges?.count)!-1
+            if ((self.feedChallenges! != [] && self.feedChallenges![0] != "placeholder" && self.feedChallenges?.count != 1))
             {
-                if (!(self.feedChallenges![0] == "placeholder" && self.feedChallenges?.count == 1)) {
+                for index in 0...(self.feedChallenges?.count)!-1
+                {
+                    
                     self.populateCell(self.feedChallenges!, indexPathRow: index, completion: { (cellContents) in
                         feedViewController.feedCellContents![index] = cellContents
                     })
+                    
                 }
             }
             
-            for index in 0...(self.homeChallenges?.count)!-1
+            if ((self.homeChallenges! != [] && self.homeChallenges![0] != "placeholder" && self.homeChallenges?.count == 1))
             {
-                if (!(self.homeChallenges![0] == "placeholder" && self.homeChallenges?.count == 1)) {
+                for index in 0...(self.homeChallenges?.count)!-1
+                {
+                    
                     self.populateCell(self.homeChallenges!, indexPathRow: index, completion: { (cellContents) in
                         feedViewController.homeCellContents![index] = cellContents
                     })
+                    
                 }
             }
 

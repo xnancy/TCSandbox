@@ -118,10 +118,12 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if challenge?.gifNames!.count > indexPath.row
         {
+            print("damn")
             gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![indexPath.row])!), manager: gifManager, loopCount: -1)
             gifImageView.startAnimatingGif()
         }
         else {
+            gifImageView.image = nil
             gifImageView.image = UIImage(named: (challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!)
         }
         

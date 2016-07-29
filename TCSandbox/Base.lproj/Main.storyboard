@@ -1301,6 +1301,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your feed looks empty...  Try adding some friends!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-oN-2yH">
+                                <rect key="frame" x="0.0" y="199" width="375" height="205"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.3411764705882353" green="0.76470588235294112" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <tableView contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="496" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eYb-Ms-gzK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="635"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1442,13 +1449,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your feed looks empty...  Try adding some friends!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-oN-2yH">
-                                <rect key="frame" x="0.0" y="199" width="375" height="205"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.3411764705882353" green="0.76470588235294112" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" title="Home" prompt="" id="VyJ-DX-7p8">

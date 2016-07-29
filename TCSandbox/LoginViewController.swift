@@ -129,7 +129,6 @@ class LoginViewController: UIViewController,
                 //Success
                 if result.grantedPermissions.contains("email") && result.grantedPermissions.contains("public_profile") {
                     //Do work
-                    User.updateCurrentUser()
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
                     self.presentViewController(homeViewController, animated: false, completion: nil)
