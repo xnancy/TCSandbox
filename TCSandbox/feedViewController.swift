@@ -104,6 +104,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
             cell.addSubview(feedViewController.videoController1.view)
             feedViewController.videoController1.didMoveToParentViewController(self)
+            feedViewController.videoController1.stopVideo()
 
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -115,6 +116,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
             cell.addSubview(feedViewController.videoController2.view)
             feedViewController.videoController2.didMoveToParentViewController(self)
+            feedViewController.videoController2.stopVideo()
+
 
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -131,6 +134,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
                     cell.addSubview(feedViewController.videoController1.view)
                     feedViewController.videoController1.didMoveToParentViewController(self)
+                    feedViewController.videoController1.stopVideo()
+
                 }
                 
                 else
@@ -140,6 +145,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
                     cell.addSubview(feedViewController.videoController2.view)
                     feedViewController.videoController2.didMoveToParentViewController(self)
+                    feedViewController.videoController2.stopVideo()
+
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
@@ -152,6 +159,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
             cell.addSubview(feedViewController.videoController1.view)
             feedViewController.videoController1.didMoveToParentViewController(self)
+            feedViewController.videoController1.stopVideo()
+
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
@@ -162,6 +171,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
             cell.addSubview(feedViewController.videoController2.view)
             feedViewController.videoController2.didMoveToParentViewController(self)
+            feedViewController.videoController2.stopVideo()
+
             
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -178,6 +189,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
                     cell.addSubview(feedViewController.videoController1.view)
                     feedViewController.videoController1.didMoveToParentViewController(self)
+                    feedViewController.videoController1.stopVideo()
+
                 }
                     
                 else
@@ -187,6 +200,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
                     cell.addSubview(feedViewController.videoController2.view)
                     feedViewController.videoController2.didMoveToParentViewController(self)
+                    feedViewController.videoController2.stopVideo()
+
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
