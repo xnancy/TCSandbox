@@ -33,10 +33,15 @@ class SettingsViewController: UIViewController {
         FBClient.logout()
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
-        
-        self.modalTransitionStyle = .FlipHorizontal
-        self.presentViewController(loginViewController, animated: true, completion: { _ in })
+        let src: UIViewController = self
+        let dst: UIViewController = storyboard.instantiateViewControllerWithIdentifier("loginViewController")
+        UIView.beginAnimations("LeftFlip", context: nil)
+        UIView.setAnimationDuration(0.8)
+        UIView.setAnimationCurve(.EaseInOut)
+        UIView.setAnimationTransition(.FlipFromLeft, forView: src.view.superview!, cache: true)
+        UIView.commitAnimations()
+        src.presentViewController(dst, animated: false, completion: { _ in })
+
         
     }
     @IBAction func backButton(sender: AnyObject) {
