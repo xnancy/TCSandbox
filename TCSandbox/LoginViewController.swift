@@ -27,11 +27,27 @@ class LoginViewController: UIViewController,
     @IBOutlet weak var loadingScreenGifImage: UIImageView!
     override func viewDidLoad()
     {
-        super.viewDidLoad()
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if FBSDKAccessToken.currentAccessToken() != nil {
+                //User is signed in.
+                User.updateCurrentUser()
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
+                self.presentViewController(homeViewController, animated: false, completion: nil)
+            }
+            else
+            {
+                
+            }
+            
+            super.viewDidLoad()
+            
+            self.loadingScreenGifImage.setGifImage(UIImage(gifName: "loading"), manager: self.gifManager, loopCount: -1)
+            self.alertView = AlertOnboarding(arrayOfImage: self.arrayOfImage, arrayOfTitle: self.arrayOfTitle, arrayOfDescription: self.arrayOfDescription)
+            self.alertView.delegate = self
+            
+        }
 
-        loadingScreenGifImage.setGifImage(UIImage(gifName: "loading"), manager: gifManager, loopCount: -1)
-        alertView = AlertOnboarding(arrayOfImage: arrayOfImage, arrayOfTitle: arrayOfTitle, arrayOfDescription: arrayOfDescription)
-        alertView.delegate = self
  
 
     }
