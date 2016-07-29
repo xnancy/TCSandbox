@@ -16,6 +16,8 @@ class cellContents: NSObject
     var currentParticipant: String?
     var currentName: String?
     var url: NSURL?
+    var senderName: String?
+    var participantNames: [String]?
     
     
     override init()

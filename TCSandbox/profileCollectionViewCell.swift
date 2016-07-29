@@ -25,6 +25,9 @@ class profileCollectionViewCell: UICollectionViewCell {
         
         
         let index = feedTableView.indexPathForCell(parentTableViewCell!)
+        let participantIndex = parentTableViewCell?.challenge?.completedBy!.indexOf(participant!)
+        
+         parentTableViewCell?.currentName.text = feedViewController.feedCellContents![(index?.row)!]!.participantNames![participantIndex!]
         
         if (index?.row)!%2 == 0
         {
@@ -39,5 +42,11 @@ class profileCollectionViewCell: UICollectionViewCell {
                 feedViewController.player2.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: URL))
             })
         }
+    }
+    
+    override func prepareForReuse() {
+        profileImageView.image = nil
+        participant = nil
+        parentTableViewCell = nil
     }
 }

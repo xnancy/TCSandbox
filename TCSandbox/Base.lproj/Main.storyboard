@@ -1399,6 +1399,7 @@
                                         <connections>
                                             <outlet property="challengeNameLabel" destination="iYJ-fs-p1Y" id="cza-4X-ZfB"/>
                                             <outlet property="challengeVideoView" destination="REm-hL-DJI" id="lmM-NM-g9b"/>
+                                            <outlet property="creatorNameLabel" destination="jl4-vY-GsZ" id="hwb-Yi-yOZ"/>
                                             <outlet property="currentName" destination="aZK-Nz-tPz" id="7TA-JQ-vyG"/>
                                             <outlet property="likesLabel" destination="d7T-Sd-EDt" id="akP-Zy-X72"/>
                                             <outlet property="profileCollectionView" destination="dNd-AD-vXD" id="tVK-iy-39n"/>

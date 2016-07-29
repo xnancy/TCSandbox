@@ -20,6 +20,7 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var challengeVideoView: UIView!
     @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var creatorNameLabel: UILabel!
     
     
     @IBOutlet weak var profileCollectionView: UICollectionView!
