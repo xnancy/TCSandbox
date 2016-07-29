@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AlertOnboarding (1.7)
   - CircleMenu (1.0.7)
   - DGRunkeeperSwitch (1.1.1)
   - DynamicColor (2.4.0)
@@ -64,6 +65,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AlertOnboarding
   - CircleMenu (~> 1.0)
   - DGRunkeeperSwitch (~> 1.1)
   - Firebase/Auth
@@ -79,6 +81,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AlertOnboarding: 8b12f5f5de9391da95b27aa880ba717dd6ded693
   CircleMenu: ddd8000fe2774497c367b8f6fcc2354a9a28f4db
   DGRunkeeperSwitch: da12f199532a99958a1e87ec0a5af61efdba11ec
   DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
@@ -100,6 +103,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: 893ebcceabe215a00b607328b5322b4e228347e5
   SwiftyGif: 5b93bed65ed6df90796dff11fea231d7119da460
 
-PODFILE CHECKSUM: 6a31230ed4387cabf1904161337d3a73507c9cb3
+PODFILE CHECKSUM: 1d75fe782aecc2d9d5db3de24dd231b382db4ed0
 
 COCOAPODS: 1.0.1

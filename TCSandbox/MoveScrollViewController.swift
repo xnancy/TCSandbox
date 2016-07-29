@@ -118,7 +118,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             false, false, false, false, false,
             false, false, false, false, false,
             false, false, false, false, false,
-            false, false
+            false, false, false, false,
+            false, false, false,
         ]
         
         
@@ -128,7 +129,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             false, false, false, false, false,
             false, false, false, false, false,
             false, false, false, false, false,
-            false, false
+            false, false, false, false
         
         ]
         
@@ -144,6 +145,9 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             false, false, false, false, false,
             false, false, false, false, false,
             false, false, false, false, false,
+            false, false, false, false, false,
+            false, false, false, false,
+            
         
         ]
         
@@ -152,7 +156,7 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             false, false, false, false, false,
             false, false, false, false, false,
             false, false, false, false, false,
-            false, false, false, false
+            false, false, false, false, false
         
         ]
         
@@ -168,7 +172,8 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
             false, false, false, false, false,
             false, false, false, false, false,
             false, false, false, false, false,
-            false, false, false
+            false, false, false, false, false,
+            false, false
         ]
     }
     

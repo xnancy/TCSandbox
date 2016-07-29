@@ -265,6 +265,11 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func queryRequest()
     {
+        if feedChallenges == nil
+        {
+            return
+        }
+        
         FBClient.retrieveFeed { (challenges, dictionary, homeChallenges) in
             
             self.feedChallenges = challenges

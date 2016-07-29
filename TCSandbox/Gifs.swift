@@ -119,7 +119,11 @@ class Gifs
         "rap": "Rap",
         "breakdance": "Break Dance",
         "poledance": "Pole Dance",
-        
+        "race2": "Race",
+        "crawl": "Crawl",
+        "popawheelie": "Pop a Wheelie",
+        "ride": "Ride",
+        "sleep": "Sleep",
         
         
         "bikeparty": "Bike Party",
@@ -143,7 +147,12 @@ class Gifs
         "spidey": "Hangin' Around",
         "starwars": "You're Not My Dad",
         "supersanta": "Super Santa",
-        "zuckBaby": "Zuck's Baby Makin' It Rain"
+        "zuckBaby": "Zuck's Baby Makin' It Rain",
+        "fantasticfour": "Fantastic Four",
+        "lavarocket": "Lavarocket",
+        "zombie": "Zombies",
+        "xmasparty": "X-mas Party"
+        
         
         
         
@@ -175,7 +184,9 @@ class Gifs
         "spinBball", "swing2", "tackle", "takeapicture", "takeselfie",
         "throw1", "walkcool", "dribble", "bellydance", "discodance",
         "moonwalker", "jakedance", "dancebattle", "carltondance", "runningman",
-        "twerk", "rap", "poledance", "whip", "hotlineblingdance"
+        "twerk", "rap", "poledance", "whip", "hotlineblingdance",
+        "makeItRain", "race2", "crawl", "popawheelie", "ride",
+        "sleep"
     ]
     
     static let sortedRow2 = row2.sort(<)
@@ -187,7 +198,8 @@ class Gifs
         "gingerbread", "interestingGif", "lowrider_gif1", "pacman", "pizzaproblems",
         "pokemonbowl", "pokemonhunter", "random", "reCat", "santamoPed",
         "simpsons", "singtocats", "spidey", "starwars", "supersanta",
-        "zuckBaby", "pacman2", "untzuntz"
+        "zuckBaby", "pacman2", "untzuntz", "fantasticfour", "lavarocket",
+        "zombie", "xmasparty"
     ]
     
     static let sortedRow7 = row7.sort(<)
@@ -274,6 +286,9 @@ class Tags
         "street": "Street",
         "traffic": "Traffic",
         "work": "Work",
+        "church": "Church",
+        "party": "Party",
+        
 
         "babybottle": "Baby Bottle",
         "bed": "Bed",
@@ -320,7 +335,17 @@ class Tags
         "vacuum": "Vacuum",
         "writingUtensils": "Writing Utensils",
         "xboxcontroller": "Gaming Controller",
+        "hat": "Hat",
+        "laptop": "Laptop",
+        "money": "Money",
+        "plunger": "Plunger",
+        "tissue": "Tissue",
+        "toilet": "Toilet",
+        "balloon": "Balloon",
+        "beachball": "Beachball",
+        "chipsanddips": "Chips and Dip",
         
+        "abe": "Abraham Lincoln",
         "bestfriend": "Best Friend",
         "bff": "BFF",
         "brother": "Brother",
@@ -360,7 +385,7 @@ class Tags
         "gym", "forest", "home", "kitchen", "movies",
         "office2", "park", "playground", "pool2", "restaurant1",
         "river", "roof", "school1", "sf", "street",
-        "traffic", "work"
+        "traffic", "work", "church", "party"
     ]
     
     static let sortedRow3 = row3.sort(<)
@@ -378,7 +403,9 @@ class Tags
         "markers", "phone", "pigeonWalking", "pokemongo", "pot",
         "skates", "soda", "coffee", "trashcans", "supersoaker",
         "table", "toaster", "turtle", "toiletpaper2", "whitevans",
-        "tree", "tv_stand", "vacuum", "writingUtensils", "xboxcontroller"
+        "tree", "tv_stand", "vacuum", "writingUtensils", "xboxcontroller",
+        "hat", "laptop", "money", "plunger", "tissue",
+        "toilet", "balloon", "beachball", "chipsanddips"
     ]
     
     static let sortedRow4 = row4.sort(<)
@@ -392,7 +419,7 @@ class Tags
         "bestfriend", "bff", "brother", "bfgf", "chewie",
         "damnDaniel", "family", "famousperson", "grandmagrandpa", "jose",
         "savannah", "nancy", "sasha", "shaq", "sister1",
-        "storeclerk", "stranger", "teacher", "mark"
+        "storeclerk", "stranger", "teacher", "mark", "abe"
     ]
     
     static let sortedRow5 = row5.sort(<)

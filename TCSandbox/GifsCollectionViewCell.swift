@@ -143,6 +143,7 @@ class Gifs7CollectionViewCell: UICollectionViewCell{
         } else if delegate?.getCount() < 4 {
             self.delegate?.incrementCount()
             self.delegate?.incrementWorkoutCount()
+            self.delegate?.appendCompTag()
             delegate?.selectCollectionCell((index?.row)!, collectionView: 7)
             
             
