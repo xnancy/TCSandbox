@@ -25,9 +25,11 @@ class profileCollectionViewCell: UICollectionViewCell {
         
         
         let index = feedTableView.indexPathForCell(parentTableViewCell!)
-        let participantIndex = parentTableViewCell?.challenge?.completedBy!.indexOf(participant!)
         
-         parentTableViewCell?.currentName.text = feedViewController.feedCellContents![(index?.row)!]!.participantNames![participantIndex!]
+        FBClient.retrieveUserFromID(participant!, completion: { (user) in
+            
+            self.parentTableViewCell?.currentName.text = user.name
+        })
         
         if (index?.row)!%2 == 0
         {

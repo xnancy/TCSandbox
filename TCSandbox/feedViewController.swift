@@ -197,9 +197,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cellContentsToAdd.participants = challenge.completedBy!
             
             var pictureArray: [String] = []
-            var participantNames: [String] = []
             cellContentsToAdd.participantPictures = pictureArray
-            cellContentsToAdd.participantNames = participantNames
             
             for userID in challenge.completedBy!
             {
@@ -210,7 +208,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                         cellContentsToAdd.senderName = user.name!
                     }
                     
-                    cellContentsToAdd.participantNames!.append(user.name!)
                     cellContentsToAdd.participantPictures!.append(user.profileImageURLString!)
                 })
             }
