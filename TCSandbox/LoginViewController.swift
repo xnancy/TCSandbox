@@ -38,36 +38,36 @@ class LoginViewController: UIViewController,
         
         
         
-        //
-//        FBClient.logout()
-//        FBClient.initializeDateFormatter()
-//            FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
-//            if FBSDKAccessToken.currentAccessToken() != nil {
-//                //User is signed in.
-//                //User.updateCurrentUser()
-//                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
-//                self.presentViewController(homeViewController, animated: false, completion: nil)
-//            }
-//            else
-//            {
-//                // No user is signed in.
-//                self.loginButton.hidden = false
-////                let loginView : FBSDKLoginButton = FBSDKLoginButton()
-////                self.view.addSubview(loginView)
-////                loginView.center = self.btnSignUpwithFaceBook.center
-////                loginView.frame.size.width = self.btnSignUpwithFaceBook.frame.width
-////                loginView.frame.size.height = self.btnSignUpwithFaceBook.frame.height
-////                loginView.frame.origin.x = self.btnSignUpwithFaceBook.frame.origin.x
-////                loginView.frame.origin.y = self.btnSignUpwithFaceBook.frame.origin.y
-//                self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-//                self.loginButton.center = self.view.center
-//        
-//                self.loginButton.delegate = self
-//                
-//                self.view.addSubview(self.loginButton)
-//            }
-//        }
+        
+        FBClient.logout()
+        FBClient.initializeDateFormatter()
+            FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if FBSDKAccessToken.currentAccessToken() != nil {
+                //User is signed in.
+                //User.updateCurrentUser()
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
+                self.presentViewController(homeViewController, animated: false, completion: nil)
+            }
+            else
+            {
+                // No user is signed in.
+                self.loginButton.hidden = false
+//                let loginView : FBSDKLoginButton = FBSDKLoginButton()
+//                self.view.addSubview(loginView)
+//                loginView.center = self.btnSignUpwithFaceBook.center
+//                loginView.frame.size.width = self.btnSignUpwithFaceBook.frame.width
+//                loginView.frame.size.height = self.btnSignUpwithFaceBook.frame.height
+//                loginView.frame.origin.x = self.btnSignUpwithFaceBook.frame.origin.x
+//                loginView.frame.origin.y = self.btnSignUpwithFaceBook.frame.origin.y
+                self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+                self.loginButton.center = self.view.center
+        
+                self.loginButton.delegate = self
+                
+                self.view.addSubview(self.loginButton)
+            }
+        }
     }
     var alertView: AlertOnboarding!
     

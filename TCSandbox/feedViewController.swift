@@ -36,6 +36,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         feedTableView.hidden = false
+        print("called1")
         noFeedTextView.hidden = true
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
@@ -51,7 +52,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.tableFooterView = UIView()
         self.addChildViewController(feedViewController.videoController1)
         self.addChildViewController(feedViewController.videoController2)
-        
         queryRequest()
         
         // Do any additional setup after loading the view.
@@ -61,8 +61,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.hidden = false
         noFeedTextView.hidden = true
         navigationController?.setNavigationBarHidden(false, animated: true)
-
+        print("called3")
         queryRequest()
+        print("called55")
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,7 +79,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             {
                 feedTableView.hidden = true
                 noFeedTextView.hidden = false
+                 print("called4")
                 return 0
+               
             }
             feedTableView.hidden = false
             noFeedTextView.hidden = true
@@ -91,7 +94,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             {
                 feedTableView.hidden = true
                 noFeedTextView.hidden = false
+                print("called5")
                 return 0
+                
             }
             feedTableView.hidden = false
             noFeedTextView.hidden = true
@@ -105,6 +110,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let hasContentView: Bool = cell.subviews.contains(cell.contentView)
         if !hasContentView {
             cell.addSubview(cell.contentView)
+            print("called6")
         }
         
         if (feedViewController.toggled == false && indexPath.row%2 == 0 && feedViewController.feedCellContents![indexPath.row] != nil)
@@ -114,7 +120,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
             cell.addSubview(feedViewController.videoController1.view)
             feedViewController.videoController1.didMoveToParentViewController(self)
-            
+
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
@@ -125,7 +131,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
             cell.addSubview(feedViewController.videoController2.view)
             feedViewController.videoController2.didMoveToParentViewController(self)
-            
+
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
@@ -249,7 +255,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.creatorNameLabel.text = contents.senderName!
             cell.currentName.text = contents.senderName!
         })
-        
+
         cell.currentParticipant = contents.currentParticipant
         cell.participants = contents.challenge!.completedBy!
         
@@ -265,15 +271,12 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func queryRequest()
     {
-        if feedChallenges == nil
-        {
-            return
-        }
         
         FBClient.retrieveFeed { (challenges, dictionary, homeChallenges) in
             
             self.feedChallenges = challenges
             self.feedDictionary = dictionary
+            print("called10")
             self.homeChallenges = homeChallenges
             feedViewController.feedCellContents = [cellContents?](count: (self.feedChallenges!.count), repeatedValue: nil)
             feedViewController.homeCellContents = [cellContents?](count: (self.homeChallenges!.count), repeatedValue: nil)
