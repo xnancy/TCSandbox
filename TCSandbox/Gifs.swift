@@ -124,6 +124,7 @@ class Gifs
         "popawheelie": "Pop a Wheelie",
         "ride": "Ride",
         "sleep": "Sleep",
+        "scream": "Scream",
         
         
         "bikeparty": "Bike Party",
@@ -186,7 +187,7 @@ class Gifs
         "moonwalker", "jakedance", "dancebattle", "carltondance", "runningman",
         "twerk", "rap", "poledance", "whip", "hotlineblingdance",
         "makeItRain", "race2", "crawl", "popawheelie", "ride",
-        "sleep"
+        "sleep", "scream"
     ]
     
     static let sortedRow2 = row2.sort(<)
