@@ -25,11 +25,14 @@ class profileCollectionViewCell: UICollectionViewCell {
         
         
         let index = feedTableView.indexPathForCell(parentTableViewCell!)
+        let participantIndex = self.parentTableViewCell?.challenge?.completedBy?.indexOf(participant!)
         
         FBClient.retrieveUserFromID(participant!, completion: { (user) in
             
             self.parentTableViewCell?.currentName.text = user.name
         })
+        
+        parentTableViewCell?.likesLabel.text = "\((feedViewController.feedCellContents![(index?.row)!]!.challenge?.videoLikes![participantIndex!])!)"
         
         if (index?.row)!%2 == 0
         {
