@@ -100,9 +100,8 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         }
         
         self.detailsTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
-        gifImageView.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin, .FlexibleBottomMargin]
-        gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![0])!), manager: gifManager, loopCount: -1)
-        gifImageView.startAnimatingGif()
+        
+        gifImageView.image = UIImage.gifWithName((challenge?.gifNames![0])!)
         self.navigationItem.title = challenge!.name
     }
 
@@ -121,8 +120,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         if challenge?.gifNames!.count > indexPath.row
         {
             tagImageView.alpha = 0.0
-            gifImageView.setGifImage(UIImage(gifName: (challenge?.gifNames![indexPath.row])!), manager: gifManager, loopCount: -1)
-            gifImageView.startAnimatingGif()
+            gifImageView.image = UIImage.gifWithName((challenge?.gifNames![indexPath.row])!)!
         }
         else {
             tagImageView.alpha = 1.0

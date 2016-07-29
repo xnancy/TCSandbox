@@ -16,13 +16,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @IBOutlet weak var feedTableView: UITableView!
-    
     @IBOutlet weak var noFeedTextView: UITextView!
-    
     @IBOutlet weak var toggleButton: UIBarButtonItem!
+    
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
     var homeChallenges: [String]?
+    
     static var toggled: DarwinBoolean?
     
     static var videoController1: CustomVideoPlayerViewController! = CustomVideoPlayerViewController()
@@ -30,87 +30,71 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     static var feedCellContents: [cellContents?]?
     static var homeCellContents: [cellContents?]?
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         feedTableView.hidden = false
-        print("called1")
         noFeedTextView.hidden = true
+        
+        /* Navigation Controller Settings */
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         feedViewController.toggled = false
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x57C3BB)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         tabBarController?.tabBar.barTintColor = UIColor(hex: 0x57C3BB)
+        
+        /* Refresh Control */
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         feedTableView.insertSubview(refreshControl, atIndex: 0)
+        
+        /* Feed Table View delegate/data source/footer */
         feedTableView.delegate = self
         feedTableView.dataSource = self
         feedTableView.tableFooterView = UIView()
+        
+        /* Video Controllers in View */
         self.addChildViewController(feedViewController.videoController1)
         self.addChildViewController(feedViewController.videoController2)
-        queryRequest()
         
-        // Do any additional setup after loading the view.
+        /* Load table w/ query */
+        queryRequest()
     }
     
     override func viewWillAppear(animated: Bool) {
         feedTableView.hidden = false
         noFeedTextView.hidden = true
         navigationController?.setNavigationBarHidden(false, animated: true)
-        print("called3")
         queryRequest()
-        print("called55")
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if feedViewController.toggled == false
-        {
+        feedTableView.hidden = false
+        noFeedTextView.hidden = true
+        if feedViewController.toggled == false {
             if (feedChallenges == nil || feedChallenges! == [] || feedChallenges![0] == "placeholder")
             {
                 feedTableView.hidden = true
                 noFeedTextView.hidden = false
-                 print("called4")
                 return 0
-               
             }
-            feedTableView.hidden = false
-            noFeedTextView.hidden = true
             return (feedChallenges?.count)!
-        }
-            
-        else
-        {
+        } else {
             if (homeChallenges == nil || homeChallenges! == [] || homeChallenges![0] == "placeholder")
             {
                 feedTableView.hidden = true
                 noFeedTextView.hidden = false
-                print("called5")
                 return 0
-                
             }
-            feedTableView.hidden = false
-            noFeedTextView.hidden = true
             return (homeChallenges?.count)!
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("feedCell") as! feedTableViewCell
-        
-        let hasContentView: Bool = cell.subviews.contains(cell.contentView)
-        if !hasContentView {
+        if !cell.subviews.contains(cell.contentView) {
             cell.addSubview(cell.contentView)
-            print("called6")
         }
         
         if (feedViewController.toggled == false && indexPath.row%2 == 0 && feedViewController.feedCellContents![indexPath.row] != nil)
@@ -431,15 +415,4 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
     }
-
-    /*
-     MARK: - Navigation
-
-     In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-         Get the new view controller using segue.destinationViewController.
-         Pass the selected object to the new view controller.
-    }
-    */
-
 }
