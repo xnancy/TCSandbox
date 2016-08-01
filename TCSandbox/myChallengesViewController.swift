@@ -11,23 +11,26 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 import Foundation
+import SwiftyGif
 
 class myChallengesViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var myChallengesTableView: UITableView!
     @IBOutlet weak var makeChallengePromptTextLabel: UITextView!
+    @IBOutlet weak var loadingGifImageView: UIImageView!
     
     var currentChallenges: [Challenge]?
+    var gifManager = SwiftyGifManager(memoryLimit: 50)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x57C3BB)
-
+        loadingGifImageView.hidden = false
         tabBarController?.tabBar.barTintColor = UIColor(hex: 0x57C3BB)
         myChallengesTableView.delegate = self
         myChallengesTableView.dataSource = self
-        
+        loadingGifImageView.setGifImage(UIImage(gifName: "loadinggif"), manager: gifManager, loopCount: -1)
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         myChallengesTableView.insertSubview(refreshControl, atIndex: 0)
@@ -64,6 +67,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if(indexPath.row % 2 == 0) {
             cell.backgroundColor = UIColor.whiteColor()
+            loadingGifImageView.hidden = true
         } else {
             cell.backgroundColor = UIColor(white: 0x57C3BB, alpha: 0.3)
         }

@@ -22,7 +22,7 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     @IBOutlet weak var challengeVideoView: UIView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var creatorNameLabel: UILabel!
-    @IBOutlet weak var loadingImageView: UIImageView!
+    @IBOutlet weak var loadinggifImageView: UIImageView!
    
     
     
@@ -31,13 +31,13 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        loadinggifImageView.hidden = false
         //layoutMargins = UIEdgeInsetsMake(8, 8, 8, 8)
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
         workoutCollectionView.delegate = self
         workoutCollectionView.dataSource = self
-        loadingImageView.setGifImage(UIImage(gifName: "loadinggif"), manager: gifManager, loopCount: 1)
+        loadinggifImageView.setGifImage(UIImage(gifName: "loadinggif"), manager: gifManager, loopCount: -1)
         // Initialization code
     }
 

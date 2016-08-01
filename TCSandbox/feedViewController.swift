@@ -19,6 +19,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var noFeedTextView: UITextView!
     @IBOutlet weak var toggleButton: UIBarButtonItem!
+   
     
     var feedChallenges: [String]?
     var feedDictionary: [String: String]?
@@ -34,9 +35,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        feedTableView.hidden = false
         noFeedTextView.hidden = true
         
+       
         
         /* Navigation Controller Settings */
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]

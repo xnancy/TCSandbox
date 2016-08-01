@@ -18,6 +18,9 @@
             <string>ADAM.CGPRO</string>
             <string>ADAM.CGPRO</string>
             <string>ADAM.CGPRO</string>
+            <string>ADAM.CGPRO</string>
+            <string>ADAM.CGPRO</string>
+            <string>ADAM.CGPRO</string>
         </mutableArray>
         <mutableArray key="ufonts.com_din-light.ttf">
             <string>DIN-Light</string>
@@ -174,6 +177,10 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCl-ZW-rie">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="127" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BIz-M1-azX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="588"/>
                                 <color key="backgroundColor" red="0.3411764705882353" green="0.76470588235294112" blue="0.73333333333333328" alpha="0.21346982758620689" colorSpace="calibratedRGB"/>
@@ -274,6 +281,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="loadingGifImageView" destination="tCl-ZW-rie" id="lrP-xu-LqC"/>
                         <outlet property="makeChallengePromptTextLabel" destination="BID-Vk-2cS" id="lx6-KK-6ZY"/>
                         <outlet property="myChallengesTableView" destination="BIz-M1-azX" id="iDP-ac-adT"/>
                     </connections>
@@ -314,17 +322,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge" translatesAutoresizingMaskIntoConstraints="NO" id="ddB-f6-0hq">
-                                                    <rect key="frame" x="139" y="0.0" width="26" height="26"/>
+                                                    <rect key="frame" x="135" y="10" width="26" height="26"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-gT-5Rx">
-                                                    <rect key="frame" x="145" y="4" width="20" height="17"/>
+                                                    <rect key="frame" x="142" y="14" width="20" height="17"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pb-Sz-9TS">
                                                     <rect key="frame" x="19" y="14" width="133" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -366,7 +374,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Best Video Title Ever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8P-RS-65g">
                                 <rect key="frame" x="66" y="368" width="301" height="26"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1087,8 +1095,8 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Up to Four" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-zO-p4o">
                                             <rect key="frame" x="0.0" y="20" width="375" height="46"/>
                                             <color key="backgroundColor" red="0.3411764705882353" green="0.76470588235294112" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" red="0.067228309810161591" green="0.66390079259872437" blue="0.85579794645309448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WF-9l-uaE">
@@ -1270,9 +1278,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="364" height="426.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9b-d6-h8g">
-                                                    <rect key="frame" x="0.0" y="9" width="346" height="247"/>
-                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDg-JS-pbH">
                                                     <rect key="frame" x="60" y="378" width="22" height="21"/>
                                                     <color key="tintColor" red="0.3411764705882353" green="0.76470588235294112" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
@@ -1286,6 +1291,12 @@
                                                 </button>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REm-hL-DJI">
                                                     <rect key="frame" x="0.0" y="0.0" width="364" height="256"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-8V-qjx">
+                                                            <rect key="frame" x="0.0" y="-9" width="364" height="275"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X0R-EK-TG7">
@@ -1391,14 +1402,14 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZK-Nz-tPz">
-                                                    <rect key="frame" x="45" y="20" width="162" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZK-Nz-tPz">
+                                                    <rect key="frame" x="9" y="10" width="162" height="21"/>
                                                     <color key="tintColor" red="0.3411764705882353" green="0.76470588235294112" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="DIN-Light" family="DIN Light" pointSize="12"/>
                                                     <color key="textColor" red="0.3411764705882353" green="0.76470588235294112" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jose" translatesAutoresizingMaskIntoConstraints="NO" id="D5i-ly-1Wj">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jose" translatesAutoresizingMaskIntoConstraints="NO" id="D5i-ly-1Wj">
                                                     <rect key="frame" x="7" y="11" width="41" height="37"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCA-V9-j9z">
@@ -1416,7 +1427,7 @@
                                             <outlet property="creatorNameLabel" destination="jl4-vY-GsZ" id="hwb-Yi-yOZ"/>
                                             <outlet property="currentName" destination="aZK-Nz-tPz" id="7TA-JQ-vyG"/>
                                             <outlet property="likesLabel" destination="d7T-Sd-EDt" id="akP-Zy-X72"/>
-                                            <outlet property="loadingImageView" destination="R9b-d6-h8g" id="2mX-Wi-38Z"/>
+                                            <outlet property="loadinggifImageView" destination="GTZ-8V-qjx" id="J3f-Fk-Jjf"/>
                                             <outlet property="profileCollectionView" destination="dNd-AD-vXD" id="tVK-iy-39n"/>
                                             <outlet property="workoutCollectionView" destination="X0R-EK-TG7" id="7Cu-eJ-FAg"/>
                                         </connections>
@@ -1586,7 +1597,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edit Title ..... " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" background="titleLine" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-kY-lse">
+                            <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edit Title ..... " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="12" background="line" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-kY-lse">
                                 <rect key="frame" x="46" y="35" width="301" height="37"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1897,8 +1908,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8M-BO-tV4">
-                                        <rect key="frame" x="132" y="28" width="110" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <rect key="frame" x="132" y="28" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2056,10 +2067,10 @@
         <image name="globe" width="32" height="32"/>
         <image name="hourglass2.png" width="24" height="24"/>
         <image name="jose" width="247" height="228"/>
+        <image name="line" width="1791" height="245"/>
         <image name="loginfade" width="836" height="1500"/>
         <image name="loginfade1" width="836" height="1500"/>
         <image name="pink" width="2100" height="1500"/>
-        <image name="titleLine" width="1050" height="334"/>
         <image name="yellow" width="2100" height="1500"/>
     </resources>
 </document>
