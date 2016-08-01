@@ -12,6 +12,7 @@ import AVFoundation
 import MediaPlayer
 import MobileCoreServices
 
+
 class feedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
     
     
@@ -36,12 +37,13 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.hidden = false
         noFeedTextView.hidden = true
         
+        
         /* Navigation Controller Settings */
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.blackColor()]
         navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         feedViewController.toggled = false
-        navigationController?.navigationBar.barTintColor = UIColor(hex: 0x57C3BB)
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        //navigationController?.navigationBar.barTintColor = UIColor(hex: 0x57C3BB)
+        //navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         tabBarController?.tabBar.barTintColor = UIColor(hex: 0x57C3BB)
         
         /* Refresh Control */
@@ -62,13 +64,18 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         queryRequest()
     }
     
+    
+    
+    
     override func viewWillAppear(animated: Bool) {
         feedTableView.hidden = false
         noFeedTextView.hidden = true
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: false)
         queryRequest()
     }
     
+    
+       
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         feedTableView.hidden = false
         noFeedTextView.hidden = true
@@ -329,6 +336,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.feedTableView.reloadData()
         }
     }
+    
+    
     
     func toggle() {
         if feedViewController.toggled == false

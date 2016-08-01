@@ -19,7 +19,7 @@ class ChallengeSentViewController: UIViewController {
         super.viewDidLoad()
 
         
-        self.gifImageView.setGifImage(UIImage(gifName: "done"), manager: self.gifManager, loopCount: 1)
+        self.gifImageView.setGifImage(UIImage(gifName: "done1"), manager: self.gifManager, loopCount: 1)
         // Do any additional setup after loading the view.
     }
 

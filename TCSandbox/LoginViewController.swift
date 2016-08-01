@@ -25,11 +25,23 @@ class LoginViewController: UIViewController,
     @IBOutlet weak var btnSignUpwithFaceBook: UIButton!
     @IBOutlet weak var btnRegisterwithFaceBook: UIButton!
     @IBOutlet weak var loadingScreenGifImage: UIImageView!
-    override func viewDidLoad()
-    {
+   
+    
+    override func viewDidLoad(){
+      
+     
+        btnSignUpwithFaceBook.layer.cornerRadius = 0.5
+        btnSignUpwithFaceBook.backgroundColor = UIColor.clearColor()
+        btnSignUpwithFaceBook.layer.cornerRadius = 5
+        btnSignUpwithFaceBook.layer.borderWidth = 1
+        btnSignUpwithFaceBook.layer.borderColor = UIColor.grayColor().CGColor
+        
+        
+        
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
             if FBSDKAccessToken.currentAccessToken() != nil {
                 //User is signed in.
+                super.viewDidLoad()
                 User.updateCurrentUser()
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
@@ -40,20 +52,21 @@ class LoginViewController: UIViewController,
                 
             }
             
-            super.viewDidLoad()
             
-            self.loadingScreenGifImage.setGifImage(UIImage(gifName: "loading"), manager: self.gifManager, loopCount: -1)
+            
+            self.loadingScreenGifImage.setGifImage(UIImage(gifName: "loadinggif"), manager: self.gifManager, loopCount: -1)
             self.alertView = AlertOnboarding(arrayOfImage: self.arrayOfImage, arrayOfTitle: self.arrayOfTitle, arrayOfDescription: self.arrayOfDescription)
             self.alertView.delegate = self
             
         }
-
+        
+        
  
 
     }
     var alertView: AlertOnboarding!
     
-    var arrayOfImage = ["crawl", "done", "zombie", "scream"]
+    var arrayOfImage = ["done1", "add", "things", "share"]
     var arrayOfTitle = ["CREATE AN ACCOUNT", "ADD YOUR FRIENDS", "CREATE A CHALLENGE", "RECORD AND SHARE"]
     var arrayOfDescription = [
         
@@ -72,7 +85,27 @@ class LoginViewController: UIViewController,
         return UIStatusBarStyle.LightContent;
     }
     
- 
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
     
     @IBAction func onTouch(sender: AnyObject) {
         
@@ -87,11 +120,11 @@ class LoginViewController: UIViewController,
          
          
         */
-         self.alertView.colorPageIndicator = UIColor.grayColor()
-         self.alertView.colorCurrentPageIndicator = UIColor.blueColor()
+         self.alertView.colorPageIndicator = hexStringToUIColor("#d3d3d3")
+         self.alertView.colorCurrentPageIndicator = hexStringToUIColor("#e4e6ea")
          self.alertView.colorTitleLabel = UIColor.whiteColor()
          self.alertView.colorDescriptionLabel = UIColor.whiteColor()
-         self.alertView.percentageRatioHeight = 0.94
+         self.alertView.percentageRatioHeight = 0.92
          self.alertView.percentageRatioWidth = 0.9
         
          self.alertView.show()
@@ -144,8 +177,8 @@ class LoginViewController: UIViewController,
                 self.removeFbData()
             } else {
                 //Success
+                self.view.bringSubviewToFront(self.loadingScreenGifImage)
                 if result.grantedPermissions.contains("email") && result.grantedPermissions.contains("public_profile") {
-                    //Do work
                     FBClient.login()
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")

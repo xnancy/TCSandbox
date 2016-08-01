@@ -56,6 +56,19 @@
 		B801AD291D4BF3F500FCC586 /* AlertChildPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B801AD261D4BF3F500FCC586 /* AlertChildPageViewController.xib */; };
 		B801AD2A1D4BF3F500FCC586 /* AlertPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801AD271D4BF3F500FCC586 /* AlertPageViewController.swift */; };
 		B801AD2C1D4BF42700FCC586 /* AlertOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801AD2B1D4BF42700FCC586 /* AlertOnboarding.swift */; };
+		B801AD2F1D4D420B00FCC586 /* ADAM.CG PRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = B801AD2E1D4D41A300FCC586 /* ADAM.CG PRO.otf */; };
+		B801AD301D4D420C00FCC586 /* ADAM.CG PRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = B801AD2E1D4D41A300FCC586 /* ADAM.CG PRO.otf */; };
+		B801AD311D4D420C00FCC586 /* ADAM.CG PRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = B801AD2E1D4D41A300FCC586 /* ADAM.CG PRO.otf */; };
+		B801AD321D4D420F00FCC586 /* ufonts.com_din-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B801AD2D1D4D40B200FCC586 /* ufonts.com_din-light.ttf */; };
+		B801AD331D4D420F00FCC586 /* ufonts.com_din-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B801AD2D1D4D40B200FCC586 /* ufonts.com_din-light.ttf */; };
+		B801AD341D4D421000FCC586 /* ufonts.com_din-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B801AD2D1D4D40B200FCC586 /* ufonts.com_din-light.ttf */; };
+		B801AD461D4D636400FCC586 /* done1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD411D4D636400FCC586 /* done1.gif */; };
+		B801AD471D4D636400FCC586 /* loading3.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD421D4D636400FCC586 /* loading3.gif */; };
+		B801AD481D4D636400FCC586 /* loadinggif.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD431D4D636400FCC586 /* loadinggif.gif */; };
+		B801AD491D4D636400FCC586 /* share.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD441D4D636400FCC586 /* share.gif */; };
+		B801AD4A1D4D636400FCC586 /* things.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD451D4D636400FCC586 /* things.gif */; };
+		B801AD4C1D4D641B00FCC586 /* add.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD4B1D4D641B00FCC586 /* add.gif */; };
+		B801AD4E1D4DAD0300FCC586 /* pulltorefresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD4D1D4DAD0300FCC586 /* pulltorefresh.gif */; };
 		B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */; };
 		B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */; };
 		B82004B21D4AB8910081D856 /* race2.gif in Resources */ = {isa = PBXBuildFile; fileRef = B82004AD1D4AB8910081D856 /* race2.gif */; };
@@ -303,6 +316,15 @@
 		B801AD261D4BF3F500FCC586 /* AlertChildPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertChildPageViewController.xib; sourceTree = "<group>"; };
 		B801AD271D4BF3F500FCC586 /* AlertPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPageViewController.swift; sourceTree = "<group>"; };
 		B801AD2B1D4BF42700FCC586 /* AlertOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertOnboarding.swift; sourceTree = "<group>"; };
+		B801AD2D1D4D40B200FCC586 /* ufonts.com_din-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_din-light.ttf"; sourceTree = "<group>"; };
+		B801AD2E1D4D41A300FCC586 /* ADAM.CG PRO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ADAM.CG PRO.otf"; sourceTree = "<group>"; };
+		B801AD411D4D636400FCC586 /* done1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = done1.gif; path = TCSandbox/Gifs3/done1.gif; sourceTree = "<group>"; };
+		B801AD421D4D636400FCC586 /* loading3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading3.gif; path = TCSandbox/Gifs3/loading3.gif; sourceTree = "<group>"; };
+		B801AD431D4D636400FCC586 /* loadinggif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loadinggif.gif; path = TCSandbox/Gifs3/loadinggif.gif; sourceTree = "<group>"; };
+		B801AD441D4D636400FCC586 /* share.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = share.gif; path = TCSandbox/Gifs3/share.gif; sourceTree = "<group>"; };
+		B801AD451D4D636400FCC586 /* things.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = things.gif; path = TCSandbox/Gifs3/things.gif; sourceTree = "<group>"; };
+		B801AD4B1D4D641B00FCC586 /* add.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = add.gif; path = TCSandbox/Gifs3/add.gif; sourceTree = "<group>"; };
+		B801AD4D1D4DAD0300FCC586 /* pulltorefresh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pulltorefresh.gif; path = TCSandbox/Gifs3/pulltorefresh.gif; sourceTree = "<group>"; };
 		B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview2ViewController.swift; sourceTree = "<group>"; };
 		B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		B82004AD1D4AB8910081D856 /* race2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = race2.gif; path = TCSandbox/Gifs2/race2.gif; sourceTree = "<group>"; };
@@ -569,6 +591,8 @@
 				925D8E5F1D2D79C1000F44F7 /* Assets.xcassets */,
 				920A08EF1D38584300A3785A /* Main.storyboard */,
 				B893B55E1D4810370009A3B1 /* RatingViewController.xib */,
+				B801AD2D1D4D40B200FCC586 /* ufonts.com_din-light.ttf */,
+				B801AD2E1D4D41A300FCC586 /* ADAM.CG PRO.otf */,
 				B801AD2B1D4BF42700FCC586 /* AlertOnboarding.swift */,
 				B801AD251D4BF3F500FCC586 /* AlertChildPageViewController.swift */,
 				B801AD261D4BF3F500FCC586 /* AlertChildPageViewController.xib */,
@@ -679,7 +703,13 @@
 				B893B5661D48333D0009A3B1 /* sent.gif */,
 				B85083011D4459DC007D22C9 /* catch.gif */,
 				B85083021D4459DC007D22C9 /* cheer.gif */,
+				B801AD4D1D4DAD0300FCC586 /* pulltorefresh.gif */,
 				B85083031D4459DC007D22C9 /* chug.gif */,
+				B801AD411D4D636400FCC586 /* done1.gif */,
+				B801AD421D4D636400FCC586 /* loading3.gif */,
+				B801AD431D4D636400FCC586 /* loadinggif.gif */,
+				B801AD441D4D636400FCC586 /* share.gif */,
+				B801AD451D4D636400FCC586 /* things.gif */,
 				B85083041D4459DC007D22C9 /* dive.gif */,
 				B85083551D446DD8007D22C9 /* makebasket.gif */,
 				B85083051D4459DC007D22C9 /* robot.gif */,
@@ -761,6 +791,7 @@
 				B850830F1D4459DC007D22C9 /* hammerdance.gif */,
 				B85083101D4459DC007D22C9 /* highFive.gif */,
 				B85083111D4459DC007D22C9 /* juggle.gif */,
+				B801AD4B1D4D641B00FCC586 /* add.gif */,
 				B85083651D44745F007D22C9 /* kick.gif */,
 				B85083121D4459DC007D22C9 /* jump.gif */,
 				B85083151D4459DC007D22C9 /* kiss.gif */,
@@ -955,6 +986,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B801AD4C1D4D641B00FCC586 /* add.gif in Resources */,
 				B85083991D448352007D22C9 /* spin1.gif in Resources */,
 				B893B56F1D487E6E0009A3B1 /* done.gif in Resources */,
 				B85083661D44745F007D22C9 /* kick.gif in Resources */,
@@ -1003,6 +1035,7 @@
 				B85082E81D4434A0007D22C9 /* buttkickers.gif in Resources */,
 				B85083331D4459DC007D22C9 /* flip.gif in Resources */,
 				B85082F71D4434A0007D22C9 /* romaniandeadlift.gif in Resources */,
+				B801AD491D4D636400FCC586 /* share.gif in Resources */,
 				B85083411D4459DC007D22C9 /* playinstrument.gif in Resources */,
 				B85083E81D44A559007D22C9 /* lowrider_gif1.gif in Resources */,
 				B85083E51D44A559007D22C9 /* gadgets.gif in Resources */,
@@ -1055,7 +1088,9 @@
 				B85082FB1D4434A0007D22C9 /* stepovers.gif in Resources */,
 				B85083F31D44A559007D22C9 /* spidey.gif in Resources */,
 				B85083861D44816F007D22C9 /* jog.gif in Resources */,
+				B801AD481D4D636400FCC586 /* loadinggif.gif in Resources */,
 				B85083371D4459DC007D22C9 /* hammerdance.gif in Resources */,
+				B801AD4A1D4D636400FCC586 /* things.gif in Resources */,
 				B850839A1D448352007D22C9 /* jog.gif in Resources */,
 				B85082EF1D4434A0007D22C9 /* manpushups.gif in Resources */,
 				B85083C01D44A1BB007D22C9 /* moonwalker.gif in Resources */,
@@ -1076,6 +1111,7 @@
 				B85083FA1D44AE44007D22C9 /* untzuntz.gif in Resources */,
 				B85082EE1D4434A0007D22C9 /* leglifts.gif in Resources */,
 				B82004B41D4AB8910081D856 /* popawheelie.gif in Resources */,
+				B801AD461D4D636400FCC586 /* done1.gif in Resources */,
 				B850833A1D4459DC007D22C9 /* jump.gif in Resources */,
 				B85082F91D4434A0007D22C9 /* seatedlegpullins.gif in Resources */,
 				B85082E61D4434A0007D22C9 /* bigarmcircles.gif in Resources */,
@@ -1095,18 +1131,22 @@
 				B85083391D4459DC007D22C9 /* juggle.gif in Resources */,
 				B85083851D44816F007D22C9 /* deadlift.gif in Resources */,
 				B893B56D1D4865E80009A3B1 /* ChallengeSentViewController.xib in Resources */,
+				B801AD471D4D636400FCC586 /* loading3.gif in Resources */,
 				B85082F01D4434A0007D22C9 /* mountainclimbers.gif in Resources */,
 				B85082FA1D4434A0007D22C9 /* standingrow.gif in Resources */,
 				B85083C51D44A1BB007D22C9 /* twerk.gif in Resources */,
+				B801AD2F1D4D420B00FCC586 /* ADAM.CG PRO.otf in Resources */,
 				B85083AF1D448C24007D22C9 /* forwardlean.gif in Resources */,
 				920A08F11D38584300A3785A /* Main.storyboard in Resources */,
 				B850834D1D4459DC007D22C9 /* takeapicture.gif in Resources */,
 				B85083C21D44A1BB007D22C9 /* dancebattle.gif in Resources */,
 				B850836C1D447725007D22C9 /* dribble.gif in Resources */,
 				B85083001D4434A0007D22C9 /* windshieldwipers.gif in Resources */,
+				B801AD4E1D4DAD0300FCC586 /* pulltorefresh.gif in Resources */,
 				B85083C11D44A1BB007D22C9 /* jakedance.gif in Resources */,
 				B85083351D4459DC007D22C9 /* freeThrow.gif in Resources */,
 				B82004BD1D4AB89B0081D856 /* zombie.gif in Resources */,
+				B801AD321D4D420F00FCC586 /* ufonts.com_din-light.ttf in Resources */,
 				B85083471D4459DC007D22C9 /* sit.gif in Resources */,
 				B850836A1D4476EE007D22C9 /* crossover.gif in Resources */,
 				B85082F11D4434A0007D22C9 /* plankarmraise.gif in Resources */,
@@ -1126,6 +1166,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B801AD301D4D420C00FCC586 /* ADAM.CG PRO.otf in Resources */,
+				B801AD331D4D420F00FCC586 /* ufonts.com_din-light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,6 +1175,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B801AD311D4D420C00FCC586 /* ADAM.CG PRO.otf in Resources */,
+				B801AD341D4D421000FCC586 /* ufonts.com_din-light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

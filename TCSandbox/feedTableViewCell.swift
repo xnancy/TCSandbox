@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -14,13 +15,15 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     var participants: [String]?
     var participantPictures:[String]?
     var currentParticipant: String?
-    
+    var gifManager = SwiftyGifManager(memoryLimit: 50)
     
     @IBOutlet weak var currentName: UILabel!
     @IBOutlet weak var challengeNameLabel: UILabel!
     @IBOutlet weak var challengeVideoView: UIView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var creatorNameLabel: UILabel!
+    @IBOutlet weak var loadingImageView: UIImageView!
+   
     
     
     @IBOutlet weak var profileCollectionView: UICollectionView!
@@ -29,10 +32,12 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        //layoutMargins = UIEdgeInsetsMake(8, 8, 8, 8)
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
         workoutCollectionView.delegate = self
         workoutCollectionView.dataSource = self
+        loadingImageView.setGifImage(UIImage(gifName: "loadinggif"), manager: gifManager, loopCount: 1)
         // Initialization code
     }
 
@@ -41,6 +46,8 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
 
         // Configure the view for the selected state
     }
+    
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -123,7 +130,7 @@ class feedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
             {
                 cell.workoutLabel.text = Tags.tagDictionary[(challenge?.tagNames![indexPath.row-(challenge?.gifNames?.count)!])!]
             }
-            
+            cell.layer.cornerRadius = 6
             return cell
         }
         

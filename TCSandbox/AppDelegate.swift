@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+
         //FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
         // Override point for customization after application launch. 
         var performShortcutDelegate = true
