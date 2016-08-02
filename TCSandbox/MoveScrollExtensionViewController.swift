@@ -30,7 +30,6 @@ extension MoveScrollViewController: UIViewControllerPreviewingDelegate {
         previewVC.movesCount = movesCount
         previewVC.indexx = indexPath.row
         previewingContext.sourceRect = cell1.frame
-        print(indexPath.row)
         return previewVC
 //       
         

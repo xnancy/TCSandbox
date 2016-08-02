@@ -9,14 +9,9 @@
 /* Begin PBXBuildFile section */
 		825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30161D383A05005D7171 /* myChallengesViewController.swift */; };
 		825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */; };
-		82B7BBDE1D4025E100932420 /* feedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */; };
-		82B7BBE41D47D59200932420 /* profileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */; };
 		82B7BBE61D47DA9100932420 /* profileCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE51D47DA9100932420 /* profileCollectionView.swift */; };
 		82B7BBE81D481CF100932420 /* workoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE71D481CF100932420 /* workoutCollectionViewCell.swift */; };
-		82B7BBEA1D495A6F00932420 /* cellContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBE91D495A6F00932420 /* cellContents.swift */; };
-		82B7BBEB1D495E1C00932420 /* feedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7BBDB1D401C0A00932420 /* feedViewController.swift */; };
 		82BB15931D3D84FD0005B22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15921D3D84FD0005B22D /* ViewController.swift */; };
-		82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */; };
 		82BB15991D3DD9FE0005B22D /* respondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB15981D3DD9FE0005B22D /* respondViewController.swift */; };
 		82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6653A1D2DBF9000D642CA /* LoginViewController.swift */; };
 		82C6654B1D2DC18D00D642CA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */; };
@@ -47,7 +42,6 @@
 		929D95621D496CAF00E411CC /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95601D496CAF00E411CC /* Group.png */; };
 		929D95631D496CAF00E411CC /* Globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95611D496CAF00E411CC /* Globe.png */; };
 		929D95651D4A959500E411CC /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 929D95641D4A959500E411CC /* fire.png */; };
-		929D95671D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D95661D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift */; };
 		92A924AC1D30572400637263 /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AB1D30572400637263 /* Gifs.swift */; };
 		92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */; };
 		92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A924AF1D3057B900637263 /* MoveScrollViewController.swift */; };
@@ -69,6 +63,7 @@
 		B801AD4A1D4D636400FCC586 /* things.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD451D4D636400FCC586 /* things.gif */; };
 		B801AD4C1D4D641B00FCC586 /* add.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD4B1D4D641B00FCC586 /* add.gif */; };
 		B801AD4E1D4DAD0300FCC586 /* pulltorefresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD4D1D4DAD0300FCC586 /* pulltorefresh.gif */; };
+		B801AD501D4FCC7B00FCC586 /* loadinganimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = B801AD4F1D4FCC7B00FCC586 /* loadinganimation.gif */; };
 		B81A45451D3C4BD700D20C65 /* Preview2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */; };
 		B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */; };
 		B82004B21D4AB8910081D856 /* race2.gif in Resources */ = {isa = PBXBuildFile; fileRef = B82004AD1D4AB8910081D856 /* race2.gif */; };
@@ -230,7 +225,13 @@
 		B893B56C1D4865E80009A3B1 /* ChallengeSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B893B56A1D4865E80009A3B1 /* ChallengeSentViewController.swift */; };
 		B893B56D1D4865E80009A3B1 /* ChallengeSentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B893B56B1D4865E80009A3B1 /* ChallengeSentViewController.xib */; };
 		B893B56F1D487E6E0009A3B1 /* done.gif in Resources */ = {isa = PBXBuildFile; fileRef = B893B56E1D487E6E0009A3B1 /* done.gif */; };
-		B8ABF0991D47D43800C5E3FA /* giffy.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8ABF0981D47D43800C5E3FA /* giffy.gif */; };
+		B89A04741D5120E40074A8F2 /* cellContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A04731D5120E40074A8F2 /* cellContents.swift */; };
+		B89A04761D5120F30074A8F2 /* CustomVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A04751D5120F30074A8F2 /* CustomVideoPlayerViewController.swift */; };
+		B89A04781D5120FE0074A8F2 /* detailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A04771D5120FE0074A8F2 /* detailsTableViewCell.swift */; };
+		B89A047A1D5121070074A8F2 /* feedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A04791D5121070074A8F2 /* feedTableViewCell.swift */; };
+		B89A047C1D5121120074A8F2 /* profileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A047B1D5121120074A8F2 /* profileCollectionViewCell.swift */; };
+		B89A047E1D51214F0074A8F2 /* feedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A047D1D51214F0074A8F2 /* feedViewController.swift */; };
+		B89A04801D51326B0074A8F2 /* giffy.gif in Resources */ = {isa = PBXBuildFile; fileRef = B89A047F1D51326B0074A8F2 /* giffy.gif */; };
 		C9C7AF1924C9888F8E1B6C96 /* Pods_TCSandboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A5AA452630FBE899C9E7D /* Pods_TCSandboxUITests.framework */; };
 		D600F4FB8CA321C8E23A66B0 /* Pods_TCSandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE96D5B85BC04853A84D53E6 /* Pods_TCSandbox.framework */; };
 		E296B86C9D9CCC0E9BA3A7FF /* Pods_TCSandboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */; };
@@ -262,14 +263,9 @@
 		8157BE4C0B12BE68A7F57284 /* Pods-TCSandboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSandboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSandboxUITests/Pods-TCSandboxUITests.release.xcconfig"; sourceTree = "<group>"; };
 		825C30161D383A05005D7171 /* myChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengesViewController.swift; sourceTree = "<group>"; };
 		825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myChallengeTableViewCell.swift; sourceTree = "<group>"; };
-		82B7BBDB1D401C0A00932420 /* feedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedViewController.swift; sourceTree = "<group>"; };
-		82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedTableViewCell.swift; sourceTree = "<group>"; };
-		82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCollectionViewCell.swift; sourceTree = "<group>"; };
 		82B7BBE51D47DA9100932420 /* profileCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCollectionView.swift; sourceTree = "<group>"; };
 		82B7BBE71D481CF100932420 /* workoutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = workoutCollectionViewCell.swift; sourceTree = "<group>"; };
-		82B7BBE91D495A6F00932420 /* cellContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellContents.swift; sourceTree = "<group>"; };
 		82BB15921D3D84FD0005B22D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailsTableViewCell.swift; sourceTree = "<group>"; };
 		82BB15981D3DD9FE0005B22D /* respondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = respondViewController.swift; sourceTree = "<group>"; };
 		82C6653A1D2DBF9000D642CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C665481D2DC18D00D642CA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -306,7 +302,6 @@
 		929D95601D496CAF00E411CC /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
 		929D95611D496CAF00E411CC /* Globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Globe.png; sourceTree = "<group>"; };
 		929D95641D4A959500E411CC /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
-		929D95661D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		92A924AB1D30572400637263 /* Gifs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
 		92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92A924AF1D3057B900637263 /* MoveScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveScrollViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +320,7 @@
 		B801AD451D4D636400FCC586 /* things.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = things.gif; path = TCSandbox/Gifs3/things.gif; sourceTree = "<group>"; };
 		B801AD4B1D4D641B00FCC586 /* add.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = add.gif; path = TCSandbox/Gifs3/add.gif; sourceTree = "<group>"; };
 		B801AD4D1D4DAD0300FCC586 /* pulltorefresh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pulltorefresh.gif; path = TCSandbox/Gifs3/pulltorefresh.gif; sourceTree = "<group>"; };
+		B801AD4F1D4FCC7B00FCC586 /* loadinganimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loadinganimation.gif; path = TCSandbox/Gifs3/loadinganimation.gif; sourceTree = "<group>"; };
 		B81A45441D3C4BD700D20C65 /* Preview2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview2ViewController.swift; sourceTree = "<group>"; };
 		B81A45801D3D4E9900D20C65 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		B82004AD1D4AB8910081D856 /* race2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = race2.gif; path = TCSandbox/Gifs2/race2.gif; sourceTree = "<group>"; };
@@ -486,7 +482,13 @@
 		B893B56A1D4865E80009A3B1 /* ChallengeSentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeSentViewController.swift; sourceTree = "<group>"; };
 		B893B56B1D4865E80009A3B1 /* ChallengeSentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeSentViewController.xib; sourceTree = "<group>"; };
 		B893B56E1D487E6E0009A3B1 /* done.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = done.gif; path = TCSandbox/done.gif; sourceTree = "<group>"; };
-		B8ABF0981D47D43800C5E3FA /* giffy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giffy.gif; path = TCSandbox/giffy.gif; sourceTree = "<group>"; };
+		B89A04731D5120E40074A8F2 /* cellContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellContents.swift; sourceTree = SOURCE_ROOT; };
+		B89A04751D5120F30074A8F2 /* CustomVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerViewController.swift; sourceTree = SOURCE_ROOT; };
+		B89A04771D5120FE0074A8F2 /* detailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		B89A04791D5121070074A8F2 /* feedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		B89A047B1D5121120074A8F2 /* profileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		B89A047D1D51214F0074A8F2 /* feedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedViewController.swift; sourceTree = SOURCE_ROOT; };
+		B89A047F1D51326B0074A8F2 /* giffy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giffy.gif; sourceTree = "<group>"; };
 		F550347C0FB992F7DFD4F86A /* Pods_TCSandboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCSandboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -643,7 +645,7 @@
 				925D2D401D344ACC00BAF3CC /* AddFriendViewController.swift */,
 				825C30161D383A05005D7171 /* myChallengesViewController.swift */,
 				82BB15981D3DD9FE0005B22D /* respondViewController.swift */,
-				82B7BBDB1D401C0A00932420 /* feedViewController.swift */,
+				B89A047D1D51214F0074A8F2 /* feedViewController.swift */,
 				929D95581D495ABD00E411CC /* tabBarController.swift */,
 			);
 			name = "View Controllers";
@@ -656,9 +658,9 @@
 				92A924AD1D30579800637263 /* GifsCollectionViewCell.swift */,
 				929663091D36AFA400300614 /* searchFriendsTableViewCell.swift */,
 				825C30181D383C82005D7171 /* myChallengeTableViewCell.swift */,
-				82BB15961D3D9BF90005B22D /* detailsTableViewCell.swift */,
-				82B7BBDD1D4025E100932420 /* feedTableViewCell.swift */,
-				82B7BBE31D47D59200932420 /* profileCollectionViewCell.swift */,
+				B89A04771D5120FE0074A8F2 /* detailsTableViewCell.swift */,
+				B89A04791D5121070074A8F2 /* feedTableViewCell.swift */,
+				B89A047B1D5121120074A8F2 /* profileCollectionViewCell.swift */,
 				82B7BBE51D47DA9100932420 /* profileCollectionView.swift */,
 				82B7BBE71D481CF100932420 /* workoutCollectionViewCell.swift */,
 			);
@@ -668,11 +670,11 @@
 		925D8E8B1D2DA8F0000F44F7 /* Data Objects */ = {
 			isa = PBXGroup;
 			children = (
-				929D95661D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift */,
+				B89A04751D5120F30074A8F2 /* CustomVideoPlayerViewController.swift */,
 				929A02A41D2ECA8A00FC1E96 /* User.swift */,
 				929A02A61D2ECAD800FC1E96 /* Challenge.swift */,
 				929A02A81D2ECB3B00FC1E96 /* ClipLibrary.swift */,
-				82B7BBE91D495A6F00932420 /* cellContents.swift */,
+				B89A04731D5120E40074A8F2 /* cellContents.swift */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -701,8 +703,10 @@
 				B893B56E1D487E6E0009A3B1 /* done.gif */,
 				B862D6B41D4BE7500005796B /* scream.gif */,
 				B893B5661D48333D0009A3B1 /* sent.gif */,
+				B801AD4F1D4FCC7B00FCC586 /* loadinganimation.gif */,
 				B85083011D4459DC007D22C9 /* catch.gif */,
 				B85083021D4459DC007D22C9 /* cheer.gif */,
+				B89A047F1D51326B0074A8F2 /* giffy.gif */,
 				B801AD4D1D4DAD0300FCC586 /* pulltorefresh.gif */,
 				B85083031D4459DC007D22C9 /* chug.gif */,
 				B801AD411D4D636400FCC586 /* done1.gif */,
@@ -714,7 +718,6 @@
 				B85083551D446DD8007D22C9 /* makebasket.gif */,
 				B85083051D4459DC007D22C9 /* robot.gif */,
 				B85083731D4480CC007D22C9 /* sideleglifts.gif */,
-				B8ABF0981D47D43800C5E3FA /* giffy.gif */,
 				B85083751D4480CC007D22C9 /* squats.gif */,
 				B85083761D4480CC007D22C9 /* stretch.gif */,
 				B85083F91D44AE44007D22C9 /* untzuntz.gif */,
@@ -949,7 +952,7 @@
 				TargetAttributes = {
 					925D8E541D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = D8M8Q37C6Y;
+						DevelopmentTeam = 6ZD82QXX95;
 					};
 					925D8E681D2D79C1000F44F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1043,7 +1046,6 @@
 				B85083F81D44AE3F007D22C9 /* whip.gif in Resources */,
 				B850839C1D448352007D22C9 /* cycle.gif in Resources */,
 				B82004B51D4AB8910081D856 /* ride.gif in Resources */,
-				B8ABF0991D47D43800C5E3FA /* giffy.gif in Resources */,
 				B85083641D4473C0007D22C9 /* dunk.gif in Resources */,
 				925D8E601D2D79C1000F44F7 /* Assets.xcassets in Resources */,
 				B85083E71D44A559007D22C9 /* interestingGif.gif in Resources */,
@@ -1090,6 +1092,7 @@
 				B85083861D44816F007D22C9 /* jog.gif in Resources */,
 				B801AD481D4D636400FCC586 /* loadinggif.gif in Resources */,
 				B85083371D4459DC007D22C9 /* hammerdance.gif in Resources */,
+				B801AD501D4FCC7B00FCC586 /* loadinganimation.gif in Resources */,
 				B801AD4A1D4D636400FCC586 /* things.gif in Resources */,
 				B850839A1D448352007D22C9 /* jog.gif in Resources */,
 				B85082EF1D4434A0007D22C9 /* manpushups.gif in Resources */,
@@ -1158,6 +1161,7 @@
 				925D2D3A1D306A3700BAF3CC /* GoogleService-Info.plist in Resources */,
 				B85083701D44790F007D22C9 /* skiprope.gif in Resources */,
 				B85082FD1D4434A0007D22C9 /* superman.gif in Resources */,
+				B89A04801D51326B0074A8F2 /* giffy.gif in Resources */,
 				B85083E21D44A559007D22C9 /* chocolateDipped.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1312,15 +1316,14 @@
 			files = (
 				825C30171D383A05005D7171 /* myChallengesViewController.swift in Sources */,
 				B801AD2C1D4BF42700FCC586 /* AlertOnboarding.swift in Sources */,
-				82B7BBE41D47D59200932420 /* profileCollectionViewCell.swift in Sources */,
 				929D955B1D495AF100E411CC /* ImageExtension.swift in Sources */,
+				B89A04761D5120F30074A8F2 /* CustomVideoPlayerViewController.swift in Sources */,
 				B893B56C1D4865E80009A3B1 /* ChallengeSentViewController.swift in Sources */,
 				921430A01D2DCB0900F6B59F /* FBClient.swift in Sources */,
 				B81A45811D3D4E9900D20C65 /* ChallengeDetailViewController.swift in Sources */,
+				B89A047E1D51214F0074A8F2 /* feedViewController.swift in Sources */,
 				B864E70B1D3B183D000D3499 /* PreviewViewController.swift in Sources */,
-				82B7BBEB1D495E1C00932420 /* feedViewController.swift in Sources */,
 				82C6653B1D2DBF9000D642CA /* LoginViewController.swift in Sources */,
-				82B7BBEA1D495A6F00932420 /* cellContents.swift in Sources */,
 				82BB15931D3D84FD0005B22D /* ViewController.swift in Sources */,
 				B850828A1D42BFBC007D22C9 /* WorkoutEditorExtensionViewController.swift in Sources */,
 				925D8E871D2DA894000F44F7 /* WorkoutEditorViewController.swift in Sources */,
@@ -1328,6 +1331,7 @@
 				B864E70D1D3B1921000D3499 /* MoveScrollExtensionViewController.swift in Sources */,
 				929A02A51D2ECA8A00FC1E96 /* User.swift in Sources */,
 				B893B5611D4810400009A3B1 /* RatingViewController.swift in Sources */,
+				B89A04741D5120E40074A8F2 /* cellContents.swift in Sources */,
 				92A924B01D3057B900637263 /* MoveScrollViewController.swift in Sources */,
 				B801AD2A1D4BF3F500FCC586 /* AlertPageViewController.swift in Sources */,
 				92FDDD3F1D3D9D640049AD36 /* DateExtension.swift in Sources */,
@@ -1336,22 +1340,22 @@
 				929A02A91D2ECB3B00FC1E96 /* ClipLibrary.swift in Sources */,
 				B850828C1D42C2E2007D22C9 /* ConfirmationPopOverViewController.swift in Sources */,
 				929A02AC1D2ECCB000FC1E96 /* UIHomeElementMaker.swift in Sources */,
+				B89A047C1D5121120074A8F2 /* profileCollectionViewCell.swift in Sources */,
 				929663081D3585F000300614 /* FriendsSendChallengeTableViewCell.swift in Sources */,
 				B801AD281D4BF3F500FCC586 /* AlertChildPageViewController.swift in Sources */,
 				92A924AE1D30579800637263 /* GifsCollectionViewCell.swift in Sources */,
 				825C30191D383C82005D7171 /* myChallengeTableViewCell.swift in Sources */,
-				82BB15971D3D9BF90005B22D /* detailsTableViewCell.swift in Sources */,
 				929D95591D495ABD00E411CC /* tabBarController.swift in Sources */,
 				82B7BBE81D481CF100932420 /* workoutCollectionViewCell.swift in Sources */,
+				B89A047A1D5121070074A8F2 /* feedTableViewCell.swift in Sources */,
 				925D2D411D344ACC00BAF3CC /* AddFriendViewController.swift in Sources */,
-				929D95671D4AA7DC00E411CC /* CustomVideoPlayerViewController.swift in Sources */,
 				925D2D3F1D34492C00BAF3CC /* SendChallengeViewController.swift in Sources */,
 				9296630A1D36AFA400300614 /* searchFriendsTableViewCell.swift in Sources */,
 				B85082801D42A1CE007D22C9 /* SettingsViewController.swift in Sources */,
 				925D8E591D2D79C1000F44F7 /* AppDelegate.swift in Sources */,
 				92A924AC1D30572400637263 /* Gifs.swift in Sources */,
 				929A02A71D2ECAD800FC1E96 /* Challenge.swift in Sources */,
-				82B7BBDE1D4025E100932420 /* feedTableViewCell.swift in Sources */,
+				B89A04781D5120FE0074A8F2 /* detailsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1502,7 +1506,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
+				PRODUCT_BUNDLE_IDENTIFIER = TCSandbox5cvx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1521,7 +1525,7 @@
 				);
 				INFOPLIST_FILE = TCSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = damndamndamn;
+				PRODUCT_BUNDLE_IDENTIFIER = TCSandbox5cvx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

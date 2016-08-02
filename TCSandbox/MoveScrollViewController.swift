@@ -310,8 +310,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         svc.workoutCount = workoutCount
         svc.tagsCount = tagsCount
         svc.cTags = compTags
-        //print(compTags)
-        print(collection6Selected)
         
         for (index, boolValue) in collection1Selected.enumerate(){
             if boolValue == true{
@@ -352,7 +350,6 @@ class MoveScrollViewController: UIViewController, MoveScrollViewControllerDelega
         for (index, boolValue) in collection6Selected.enumerate(){
             if boolValue == true{
                 svc.tagsToShow.append(Tags.sortedRow6[index])
-                print(Tags.sortedRow6[index])
                 print("called6")
             }
         }

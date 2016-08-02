@@ -112,7 +112,6 @@ class FBClient: AnyObject {
         var tempChallenge: Challenge?
         dataRef.child("Challenges").child(challengeID).observeSingleEventOfType(.Value, withBlock: { snapshot in
             tempChallenge = Challenge(dict: snapshot.value as! NSDictionary)
-            print("challenge is: \(snapshot.value as! NSDictionary))")
             completion(tempChallenge!)
         })
     }
@@ -210,7 +209,6 @@ class FBClient: AnyObject {
         dataRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             let challengeIDs = snapshot.value!["Users"]!![FBSDKAccessToken.currentAccessToken().userID]!!["challenges"] as! [String]
             var challenges: [Challenge] = []
-            print("challenge IDs count is: \(challengeIDs.count))")
             if challengeIDs.count > 1 {
                 for i in 1...challengeIDs.count - 1 {
                     let id = challengeIDs[i]
@@ -410,15 +408,12 @@ class FBClient: AnyObject {
                     cell.timeLimitLabel.text = String(hoursToDeadline!) + " hrs"
                 } else {
                     cell.timeLimitLabel.text = String(daysToDeadline!) + " days"
-                    print(cell.timeLimitLabel.text)
                 }
                 
                 cell.startDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.startDate!)) + " " + String(niceDateFormatter2!.stringFromDate(challenge.startDate!))
                 cell.endDateLabel.text = String(niceDateFormatter1!.stringFromDate(challenge.deadline!)) + " " + String(niceDateFormatter2!.stringFromDate(challenge.deadline!))
-                print("start label text: \(cell.startDateLabel.text)")
                 let currentDate = NSDate()
                 cell.deadlineProgressView.progress = Float(currentDate.seconds(from: challenge.startDate!)) / Float((challenge.deadline?.seconds(from: challenge.startDate!))!)
-                print("progress value is: \(cell.deadlineProgressView.progress)")
             })
     }
     
@@ -477,7 +472,6 @@ class FBClient: AnyObject {
                 
                 var videoURLs = challenge.videoURLs
                 videoURLs?.append(downloadURLString!)
-                print(videoURLs)
                 if videoURLs == nil
                 {
                     videoURLs = [downloadURLString!]

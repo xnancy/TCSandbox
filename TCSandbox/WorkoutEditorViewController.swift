@@ -95,7 +95,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         selectedMoveLabel1.text = Gifs.gifDictionary[(gifsToShow[0])]
         gifSelectedImageView1.setGifImage(UIImage(gifName: gifsToShow[0]), manager: gifManager, loopCount: 100)
         
-        print(cTags.count)
         
         if cTags.count >= 1 {
             
@@ -523,8 +522,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         confirmationVC.tagNames = tagsToShow
         confirmationVC.gifCount = workoutCount
         confirmationVC.tagCount = tagsCount
-        print(tagsCount)
-        print(workoutCount)
         let popOverVC = confirmationVC.popoverPresentationController
         popOverVC?.sourceView = referenceLabel
         popOverVC?.permittedArrowDirections = .Up
@@ -587,7 +584,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        print("video recorded")
         
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {

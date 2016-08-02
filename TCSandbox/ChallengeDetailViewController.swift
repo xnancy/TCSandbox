@@ -172,7 +172,6 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
         {
             self.navigationController?.navigationBarHidden = true
             self.countdownImageView.hidden = false
-            self.secondaryBackgroundImageView.hidden = false
             videoView.hidden = true
             videoController?.view.hidden = true
             self.countdownImageView.setGifImage(UIImage(gifName: "giffy"), manager: gifManager, loopCount: 1)
@@ -214,13 +213,11 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         self.navigationController?.navigationBarHidden = false
         dismissViewControllerAnimated(true, completion: nil)
-        secondaryBackgroundImageView.hidden = true
         countdownImageView.hidden = true
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        print("video recorded")
         //countdownview.hidden = true
         if let pickedVideo: NSURL = (info[UIImagePickerControllerMediaURL] as? NSURL)
         {

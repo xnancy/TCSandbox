@@ -31,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var performShortcutDelegate = true
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
             
-            print("Application launched via shortcut")
             self.shortcutItem = shortcutItem
             
             performShortcutDelegate = false
@@ -64,11 +63,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         //FBSDKAppEvents.activateApp()
-        print("Application did become active")
         
         guard let shortcut = shortcutItem else { return }
         
-        print("- Shortcut property has been set")
         
         handleShortcut(shortcut)
         
@@ -80,17 +77,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
-        print("Handling shortcut")
         
         var succeeded = false
         
         if( shortcutItem.type == "com.tcsandbox.addfriends" ) {
 
-            print("- Handling \(shortcutItem.type)")
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addFriendsVC = sb.instantiateViewControllerWithIdentifier("AddFriendsVC") as! AddFriendViewController
             let root = UIApplication.sharedApplication().keyWindow?.rootViewController
-            print("addfriends tapped")
             root?.presentViewController(addFriendsVC, animated: false, completion: {
             })
             succeeded = true
@@ -103,7 +97,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let MakeChallengeVC = sb.instantiateViewControllerWithIdentifier("MoveScrollViewController") as! MoveScrollViewController
             let root = UIApplication.sharedApplication().keyWindow?.rootViewController
-            print("newchallenges tapped")
             root?.presentViewController(MakeChallengeVC, animated: false, completion: {
             })
             succeeded = true
@@ -126,7 +119,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
         
-        print("Application performActionForShortcutItem")
         completionHandler( handleShortcut(shortcutItem) )
         
     }

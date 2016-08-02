@@ -43,9 +43,10 @@ class LoginViewController: UIViewController,
                 //User is signed in.
                 super.viewDidLoad()
                 User.updateCurrentUser()
+                "caaallled"
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
-                self.presentViewController(homeViewController, animated: false, completion: nil)
+                self.performSegueWithIdentifier("loggedIn", sender: nil)
             }
             else
             {
@@ -136,22 +137,20 @@ class LoginViewController: UIViewController,
     //--------------------------------------------------------
     
     func alertOnboardingSkipped(currentStep: Int, maxStep: Int) {
-        //print("Onboarding skipped the \(currentStep) step and the max step he saw was the number \(maxStep)")
+      
     }
     
     func alertOnboardingCompleted() {
-        //print("Onboarding completed!")
+        
     }
     
     func alertOnboardingNext(nextStep: Int) {
-        //print("Next step triggered! \(nextStep)")
+        
     }
 
    
     override func viewDidAppear(animated: Bool) {
-        //setup(["1View","2View","3View","4View","5View"])
-        
-        //view.bringSubviewToFront(beginButtonView)
+       
     }
     
     
@@ -182,7 +181,7 @@ class LoginViewController: UIViewController,
                     FBClient.login()
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let homeViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("initialViewController")
-                    self.presentViewController(homeViewController, animated: false, completion: nil)
+                    self.presentViewController(homeViewController, animated: true, completion: nil)
                     //self.fetchFacebookProfile()
                 } else {
                     //Handle error

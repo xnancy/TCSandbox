@@ -19,11 +19,7 @@ class RatingViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var secMinLabel: UILabel!
-    
-    @IBOutlet weak var colorImageView1: UIImageView!
-    @IBOutlet weak var colorImageView2: UIImageView!
-    @IBOutlet weak var colorImageView3: UIImageView!
-    @IBOutlet weak var colorImageView4: UIImageView!
+   
     
     
     
@@ -135,23 +131,20 @@ class RatingViewController: UIViewController {
             textLabel2.hidden = true
             textLabel3.hidden = true
             textLabel4.hidden = true
-            colorImageView2.hidden = true
-            colorImageView3.hidden = true
-            colorImageView4.hidden = true
+           
 
         }else if gifnames.count + tagnames.count == 2{
             
         
             textLabel3.hidden = true
             textLabel4.hidden = true
-            colorImageView3.hidden = true
-            colorImageView4.hidden = true
+            
             
         }else if gifnames.count + tagnames.count == 3{
         
             
             textLabel4.hidden = true
-            colorImageView4.hidden = true
+           
             
             
             
