@@ -23,6 +23,5 @@ class cellContents: NSObject
     
     override init()
     {
-        
     }
 }
