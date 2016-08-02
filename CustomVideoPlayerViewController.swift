@@ -56,15 +56,13 @@ class CustomVideoPlayerViewController: UIViewController {
                              options: .New, context: &playbackLikelyToKeepUpContext)
     }
     
-    func setVideo(playerItem: AVPlayerItem) {
-        let qualityOfServiceClass = QOS_CLASS_BACKGROUND
-        let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
-        dispatch_async(backgroundQueue, {
-            self.avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            })
-        })
+    func setVideo(url: NSURL) {
+        let playerItem = AVPlayerItem(URL: url)
+        videoURL = url
+        avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
+        seekSlider.value = 0
+        let timeRemaining: Float64 = CMTimeGetSeconds(avPlayer.currentItem!.duration)
+        timeRemainingLabel.text = "00:00"
     }
     
     deinit {

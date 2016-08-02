@@ -30,6 +30,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     static var videoController1: CustomVideoPlayerViewController! = CustomVideoPlayerViewController()
     static var videoController2: CustomVideoPlayerViewController! = CustomVideoPlayerViewController()
+    static var videoController3: CustomVideoPlayerViewController! = CustomVideoPlayerViewController()
     
     static var feedCellContents: [cellContents?]?
     static var homeCellContents: [cellContents?]?
@@ -71,8 +72,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.setNavigationBarHidden(true, animated: false)
         queryRequest()
     }
-    
-    
        
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         feedTableView.hidden = false
@@ -105,27 +104,19 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if (feedViewController.toggled == false && indexPath.row%2 == 0 && feedViewController.feedCellContents![indexPath.row] != nil)
         {
-            print("SWITCH 1")
-            let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)!
-            feedViewController.videoController1.setVideo(feedUrl)
-            feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
-            cell.addSubview(feedViewController.videoController1.view)
-            //feedViewController.videoController1.didMoveToParentViewController(self)
-            feedViewController.videoController1.stopVideo()
-
+            let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.url!)!
+            addVideo(feedViewController.videoController1, url: feedUrl, row: indexPath.row, cell: cell)
+            self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
+        } else if (feedViewController.toggled == false && indexPath.row%2 == 1 && feedViewController.feedCellContents![indexPath.row] != nil)
+        {
+            let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.url!)!
+            addVideo(feedViewController.videoController3, url: feedUrl, row: indexPath.row, cell: cell)
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
-            
         else if (feedViewController.toggled == false && feedViewController.feedCellContents![indexPath.row] != nil)
         {
-            print("SWITCH 2")
-            let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)!
-            feedViewController.videoController2.setVideo(feedUrl)
-            feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
-            cell.addSubview(feedViewController.videoController2.view)
-            //feedViewController.videoController2.didMoveToParentViewController(self)
-            feedViewController.videoController2.stopVideo()
-
+            let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.url!)!
+            addVideo(feedViewController.videoController2, url: feedUrl, row: indexPath.row, cell: cell)
 
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
@@ -137,26 +128,17 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 if (indexPath.row%2 == 0)
                 {
-                    print("SWITCH 3")
-                    let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)!
-                    feedViewController.videoController1.setVideo(feedUrl)
-                    feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
-                    cell.addSubview(feedViewController.videoController1.view)
-                    //feedViewController.videoController1.didMoveToParentViewController(self)
-                    feedViewController.videoController1.stopVideo()
-
+                    let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.url!)!
+                    self.addVideo(feedViewController.videoController1, url: feedUrl, row: indexPath.row, cell: cell)
+                } else if (indexPath.row%2 == 1)
+                {
+                    let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.url!)!
+                    self.addVideo(feedViewController.videoController3, url: feedUrl, row: indexPath.row, cell: cell)
                 }
-                
                 else
                 {
-                    print("SWITCH 4")
-                    let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)!
-                    feedViewController.videoController2.setVideo(feedUrl)
-                    feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
-                    cell.addSubview(feedViewController.videoController2.view)
-                    //feedViewController.videoController2.didMoveToParentViewController(self)
-                    feedViewController.videoController2.stopVideo()
-
+                    let feedUrl = (feedViewController.feedCellContents![indexPath.row]?.url!)!
+                    self.addVideo(feedViewController.videoController2, url: feedUrl, row: indexPath.row, cell: cell)
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
@@ -164,30 +146,24 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         else if (indexPath.row%2 == 0 && feedViewController.homeCellContents![indexPath.row] != nil)
         {
-            print("SWITCH 5")
-            let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
-            feedViewController.videoController1.setVideo(homeUrl)
-            feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
-            cell.addSubview(feedViewController.videoController1.view)
-            //feedViewController.videoController1.didMoveToParentViewController(self)
-            feedViewController.videoController1.stopVideo()
+            let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.url!)!
+            addVideo(feedViewController.videoController1, url: homeUrl, row: indexPath.row, cell: cell)
 
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
-        }
-            
-        else if (feedViewController.homeCellContents![indexPath.row] != nil)
+        } else if (indexPath.row%2 == 1 && feedViewController.homeCellContents![indexPath.row] != nil)
         {
-            print("SWITCH 6")
-            let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
-            feedViewController.videoController2.setVideo(homeUrl)
-            feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
-            cell.addSubview(feedViewController.videoController2.view)
-            //feedViewController.videoController2.didMoveToParentViewController(self)
-            feedViewController.videoController2.stopVideo()
+            let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.url!)!
+            addVideo(feedViewController.videoController3, url: homeUrl, row: indexPath.row, cell: cell)
             
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
+        else if (feedViewController.homeCellContents![indexPath.row] != nil)
+        {
+            let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.url!)!
+            addVideo(feedViewController.videoController2, url: homeUrl, row: indexPath.row, cell: cell)
             
+            self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
+        }
         else
         {
             populateCell(homeChallenges!, indexPathRow: indexPath.row, completion: { (contents) in
@@ -195,31 +171,22 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 if (indexPath.row%2 == 0)
                 {
-                    print("SWITCH 7")
-                    let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
-                    feedViewController.videoController1.setVideo(homeUrl)
-                    feedViewController.videoController1.view.frame = cell.challengeVideoView.frame
-                    cell.addSubview(feedViewController.videoController1.view)
-                    //feedViewController.videoController1.didMoveToParentViewController(self)
-                    feedViewController.videoController1.stopVideo()
-
+                    let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.url!)!
+                    self.addVideo(feedViewController.videoController1, url: homeUrl, row: indexPath.row, cell: cell)
+                } else if (indexPath.row%2 == 1)
+                {
+                    let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.url!)!
+                    self.addVideo(feedViewController.videoController3, url: homeUrl, row: indexPath.row, cell: cell)
                 }
-                    
                 else
                 {
-                    let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
-                    feedViewController.videoController2.setVideo(homeUrl)
-                    feedViewController.videoController2.view.frame = cell.challengeVideoView.frame
-                    cell.addSubview(feedViewController.videoController2.view)
-                    //feedViewController.videoController2.didMoveToParentViewController(self)
-                    feedViewController.videoController2.stopVideo()
-
+                    let homeUrl = (feedViewController.homeCellContents![indexPath.row]?.url!)!
+                    self.addVideo(feedViewController.videoController2, url: homeUrl, row: indexPath.row, cell: cell)
                 }
                 
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
             })
         }
-
         return cell
     }
     
@@ -242,6 +209,15 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 completion(cellContentsToAdd)
             })
         }
+    }
+    
+    func addVideo (videoController: CustomVideoPlayerViewController, url: NSURL, row: Int, cell: feedTableViewCell) {
+        videoController.setVideo(url)
+        videoController.view.frame = cell.challengeVideoView.frame
+        cell.addSubview(videoController.view)
+        videoController.didMoveToParentViewController(self)
+        videoController.stopVideo()
+        //videoController.timeRemainingLabel.text = String(format: "%02d:%02d", ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
     }
     
     func setCellProperties(cell: feedTableViewCell, contents: cellContents, indexPathRow: Int)
@@ -394,16 +370,15 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             {
                 if index%2 == 0
                 {
-                    videoController1.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
+                    videoController1.setVideo(NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!)
+                } else if (index % 2 == 1) {
+                    videoController3.setVideo(NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!)
                 }
                 else
                 {
                     videoController2.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
                 }
-            }
-                
-            else
-            {
+            } else {
                 FBClient.streamVideo((feedViewController.feedCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
                     feedViewController.feedCellContents![index]!.url = metadata.downloadURL()!
                     feedViewController.feedCellContents![index]!.currentParticipant = participant
@@ -423,14 +398,16 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             {
                 if index%2 == 0
                 {
-                    videoController1.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))                }
+                    videoController1.setVideo(NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!)
+                } else if index%2 == 1
+                {
+                    videoController3.setVideo(NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!)
+                }
                 else
                 {
-                    videoController2.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))                }
-            }
-                
-            else
-            {
+                    videoController2.setVideo(NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!)
+                }
+            } else {
                 FBClient.streamVideo((feedViewController.feedCellContents![index]?.challenge?.challengeID)!, userID: participant, completion: { (metadata) in
                     feedViewController.feedCellContents![index]!.url = metadata.downloadURL()!
                     feedViewController.feedCellContents![index]!.currentParticipant = participant
