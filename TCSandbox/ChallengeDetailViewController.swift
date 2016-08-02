@@ -202,7 +202,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
             self.imagePicker.mediaTypes = [kUTTypeMovie as String]
             self.imagePicker.allowsEditing = true
             self.imagePicker.delegate = self
-            self.imagePicker.videoMaximumDuration = Double((self.challenge?.timeLimit)!)
+            self.imagePicker.videoMaximumDuration = Double(120)
             
             
             self.presentViewController(self.imagePicker, animated: true, completion: {})

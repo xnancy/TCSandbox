@@ -43,7 +43,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var badgeLabel3: UILabel!
     @IBOutlet weak var badgeLabel4: UILabel!
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var blurVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var deleteButton1: UIButton!
     @IBOutlet weak var deleteButton2: UIButton!
     @IBOutlet weak var deleteButton3: UIButton!
@@ -51,7 +50,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var countdowimageview: UIImageView!
     @IBOutlet weak var secondaryBackgroundImageView: UIImageView!
     @IBOutlet weak var referenceLabel: UILabel!
-
     @IBOutlet weak var titleNeededButton: UIButton!
     
     /* ---------- VARIABLES ---------- */
@@ -375,7 +373,7 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
                     
                     self.imagePicker.startVideoCapture()
                     self.countdowimageview.hidden = true
-                    self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 15)
+                    self.imagePicker.performSelector(#selector(self.imagePicker.stopVideoCapture), withObject: nil, afterDelay: 120)
                     
                     
                 })
@@ -510,7 +508,6 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
 
     
     @IBAction func didpressConfirm(sender: AnyObject) {
-        //blurVisualEffectView.hidden = false
         let storyboard : UIStoryboard = UIStoryboard(
             name: "Main",
             bundle: nil)
@@ -537,14 +534,9 @@ class WorkoutEditorViewController: UIViewController, UITextFieldDelegate, UIImag
         
     }
     
-    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
-        //blurVisualEffectView.hidden = true
-        //confirmButton.hidden = false
-        
-    }
+   
     
     @IBAction func didPressPopUp(sender: UIButton) {
-        //blurVisualEffectView.hidden = false
         showCustomDialog()
         
     }
