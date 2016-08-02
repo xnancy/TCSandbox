@@ -77,6 +77,7 @@ class ChallengeDetailViewController: UIViewController, UITableViewDelegate, UITa
                 if downloadUrl != nil{
                     self.videoController = CustomVideoPlayerViewController()
                     self.videoController!.videoURL = downloadUrl
+                    self.videoController?.setVideo(AVPlayerItem(URL: downloadUrl!))
                     self.addChildViewController(self.videoController!)
                     self.videoController!.view.frame = self.videoView.frame
                     self.view.addSubview(self.videoController!.view)
