@@ -56,9 +56,7 @@ class CustomVideoPlayerViewController: UIViewController {
                              options: .New, context: &playbackLikelyToKeepUpContext)
     }
     
-    func setVideo(url: NSURL) {
-        let playerItem = AVPlayerItem(URL: url)
-        videoURL = url
+    func setVideo(playerItem: AVPlayerItem) {
         avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
         seekSlider.value = 0
         let timeRemaining: Float64 = CMTimeGetSeconds(avPlayer.currentItem!.duration)
