@@ -30,7 +30,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     static var videoController1: CustomVideoPlayerViewController! = CustomVideoPlayerViewController()
     static var videoController2: CustomVideoPlayerViewController! = CustomVideoPlayerViewController()
-    static var videoController3: CustomVideoPlayerViewController! = CustomVideoPlayerViewController()
     
     static var feedCellContents: [cellContents?]?
     static var homeCellContents: [cellContents?]?
@@ -107,17 +106,12 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let feedItem = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)
             addVideo(feedViewController.videoController1, playerItem: feedItem!, row: indexPath.row, cell: cell)
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
-        } else if (feedViewController.toggled == false && indexPath.row%2 == 1 && feedViewController.feedCellContents![indexPath.row] != nil)
-        {
-            let feedItem = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)
-            addVideo(feedViewController.videoController3, playerItem: feedItem!, row: indexPath.row, cell: cell)
-            self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
-        else if (feedViewController.toggled == false && feedViewController.feedCellContents![indexPath.row] != nil)
+        
+        else if (feedViewController.toggled == false && indexPath.row%2 == 1 && feedViewController.feedCellContents![indexPath.row] != nil)
         {
             let feedItem = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)
             addVideo(feedViewController.videoController2, playerItem: feedItem!, row: indexPath.row, cell: cell)
-
             self.setCellProperties(cell, contents: feedViewController.feedCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
             
@@ -130,12 +124,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 {
                     let feedItem = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)
                     self.addVideo(feedViewController.videoController1, playerItem: feedItem!, row: indexPath.row, cell: cell)
-                } else if (indexPath.row%2 == 1)
-                {
-                    let feedItem = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)
-                    self.addVideo(feedViewController.videoController3, playerItem: feedItem!, row: indexPath.row, cell: cell)
-                }
-                else
+                } else
                 {
                     let feedItem = (feedViewController.feedCellContents![indexPath.row]?.playerItem!)
                     self.addVideo(feedViewController.videoController2, playerItem: feedItem!, row: indexPath.row, cell: cell)
@@ -144,26 +133,23 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.setCellProperties(cell, contents: contents, indexPathRow: indexPath.row)
             })
         }
+            
         else if (indexPath.row%2 == 0 && feedViewController.homeCellContents![indexPath.row] != nil)
         {
             let homeItem = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
             addVideo(feedViewController.videoController1, playerItem: homeItem, row: indexPath.row, cell: cell)
 
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
-        } else if (indexPath.row%2 == 1 && feedViewController.homeCellContents![indexPath.row] != nil)
-        {
-            let homeItem = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
-            addVideo(feedViewController.videoController3, playerItem: homeItem, row: indexPath.row, cell: cell)
-            
-            self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
-        else if (feedViewController.homeCellContents![indexPath.row] != nil)
+        
+        else if (indexPath.row%2 == 1 && feedViewController.homeCellContents![indexPath.row] != nil)
         {
             let homeItem = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
             addVideo(feedViewController.videoController2, playerItem: homeItem, row: indexPath.row, cell: cell)
             
             self.setCellProperties(cell, contents: feedViewController.homeCellContents![indexPath.row]!, indexPathRow: indexPath.row)
         }
+            
         else
         {
             populateCell(homeChallenges!, indexPathRow: indexPath.row, completion: { (contents) in
@@ -173,12 +159,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 {
                     let homeItem = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
                     self.addVideo(feedViewController.videoController1, playerItem: homeItem, row: indexPath.row, cell: cell)
-                } else if (indexPath.row%2 == 1)
-                {
-                    let homeItem = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
-                    self.addVideo(feedViewController.videoController3, playerItem: homeItem, row: indexPath.row, cell: cell)
-                }
-                else
+                } else
                 {
                     let homeItem = (feedViewController.homeCellContents![indexPath.row]?.playerItem!)!
                     self.addVideo(feedViewController.videoController2, playerItem: homeItem, row: indexPath.row, cell: cell)
@@ -371,9 +352,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if index%2 == 0
                 {
                     videoController1.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
-                } else if (index % 2 == 1) {
-                    videoController3.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
                 }
+                    
                 else
                 {
                     videoController2.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
@@ -399,10 +379,8 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if index%2 == 0
                 {
                     videoController1.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
-                } else if index%2 == 1
-                {
-                    videoController3.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))
                 }
+                    
                 else
                 {
                     videoController2.setVideo(AVPlayerItem(URL: NSURL(string: (contents!.challenge?.videoURLs![videoIndex!])!)!))

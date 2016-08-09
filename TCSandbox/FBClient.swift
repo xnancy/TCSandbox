@@ -251,7 +251,10 @@ class FBClient: AnyObject {
             
             if homeChallenges[0] != "placeholder"
             {
-                homeChallenges.append(challengeID!)
+                if homeChallenges.contains(challengeID!) == false
+                {
+                    homeChallenges.append(challengeID!)
+                }
             }
                 
             else
@@ -291,7 +294,10 @@ class FBClient: AnyObject {
                         
                         if feedChallenges[0] != "placeholder"
                         {
-                            feedChallenges.append(challengeID!)
+                            if feedChallenges.contains(challengeID!) == false
+                            {
+                                feedChallenges.append(challengeID!)
+                            }
                         }
                         
                         else
