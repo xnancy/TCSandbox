@@ -105,6 +105,7 @@ class myChallengesViewController: UIViewController,UITableViewDataSource, UITabl
         if (currentChallenges == nil || currentChallenges?.count == 0) {
             tableView.hidden = true
             makeChallengePromptTextLabel.hidden = false
+            loadingGifImageView.hidden = true
             return 0
         }
         tableView.hidden = false
