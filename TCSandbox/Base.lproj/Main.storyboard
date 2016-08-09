@@ -491,6 +491,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="friendsSendChallengeTableView" destination="T67-xp-E14" id="uNv-lL-swJ"/>
+                        <outlet property="sendChallengeButton" destination="lVJ-0K-60a" id="FAu-vg-ddf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMq-Yf-rsA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -246,16 +246,13 @@ class FBClient: AnyObject {
         }
         
         dataRef.child("Users").child(FBSDKAccessToken.currentAccessToken().userID).observeSingleEventOfType(
-        .Value, withBlock: { (snapshot) in
-            var homeChallenges = snapshot.value!["home_challenges"] as! [String]
-            
-            if homeChallenges[0] != "placeholder"
-            {
-                if homeChallenges.contains(challengeID!) == false
+            .Value, withBlock: { (snapshot) in
+                var homeChallenges = snapshot.value!["home_challenges"] as! [String]
+                
+                if homeChallenges[0] != "placeholder"
                 {
                     homeChallenges.append(challengeID!)
                 }
-            }
                 
             else
             {
@@ -294,12 +291,9 @@ class FBClient: AnyObject {
                         
                         if feedChallenges[0] != "placeholder"
                         {
-                            if feedChallenges.contains(challengeID!) == false
-                            {
-                                feedChallenges.append(challengeID!)
-                            }
+                            feedChallenges.append(challengeID!)
                         }
-                        
+                            
                         else
                         {
                             feedChallenges[0] = challengeID!

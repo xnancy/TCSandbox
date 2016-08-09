@@ -97,11 +97,6 @@ class Challenge: AnyObject
         }
     }
     
-    func sendToUsers()
-    {
-        FBClient.uploadChallenge(self)
-    }
-    
     /*func getUsers() -> [User]
     {
         var users: [User] = []

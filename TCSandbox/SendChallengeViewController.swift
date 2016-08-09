@@ -21,6 +21,7 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var confirmationImageView: UIImageView!
     /* ---------- VARIABLES ---------- */
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var sendChallengeButton: UIButton!
     var friendIDs: [String]?
     var challenge: Challenge?
     var pickedVideo: NSURL?
@@ -135,9 +136,9 @@ class SendChallengeViewController: UIViewController, UITableViewDelegate, UITabl
 
             else
         {
+            sendChallengeButton.enabled = false
             FBClient.uploadChallenge(challenge!)
             FBClient.uploadVideo(pickedVideo!, challenge: challenge!)
-            
             
             let homeViewController: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("initialViewController")
             
